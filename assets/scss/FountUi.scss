@@ -1,0 +1,14 @@
+@import 'base/reset'; 
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixin'; 
+/* LAYOUT CSS */
+@import "layout/Layout";
+
+
+#wrap{
+    font-size:0; 
+    @include vp(max-width, 750px);    
+    margin:0 auto; 
+} 
+     

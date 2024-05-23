@@ -1,0 +1,301 @@
+@import '../base/variables';
+@import '../base/mixin'; 
+
+/*header*/
+header{
+    @include vp(height, 546px);    
+    background:#f6f6f6 url("/assets/images/header_bg.png" ) 0 0 no-repeat; 
+    @include vp(background-size, auto 546px); 
+    .header_inner{
+        @include vp(padding, 0 42px);   
+        .header_top{
+            @include vp(padding-top, 116px);   
+            display: flex;
+            .btn_hamburger{
+                display: block;
+                @include vp(width, 54px);   
+            }
+            .utility_contents{
+                margin-left:auto;
+                display: flex;
+                .btn_search{
+                    display: block;
+                    @include vp(width, 54px);   
+                    @include vp(margin-right, 17px);   
+                    
+                }
+                .btn_alarm{
+                    display: block;
+                    @include vp(width, 54px);   
+                }
+            }
+        }
+        h1{
+            display: block;
+            @include vp(width, 320px);
+            @include vp(margin, 22px auto 0);
+        }
+
+        .header_switchbox{
+            position: relative;
+            z-index: 3;
+            @include vp(width, 490px);
+            @include vp(height, 80px);
+            @include vp(margin, 44px auto 0);
+            .switch_round{
+                position: relative;
+                width: 100%;
+                height: inherit;
+                @include vp(border, 1px solid #eee);
+                @include vp(border-radius, 100px);
+                background: #eee;
+
+                a{
+                    display: block;
+                    position: relative;
+                    float: left;
+                    @include vp(font-size, 30px);
+                    @include vp(line-height, 77px);
+                    font-weight: 600;
+                    color: #000;
+                    opacity: .3;
+                    width: 50%;
+                    height: 100%;
+                    // margin-top: 11px;
+                    text-align: center;
+                    z-index: 4;
+                    &.on{
+                        color: #fff;
+                        opacity: 1;
+                    }
+                }
+                .round_bar{
+                    position: absolute;
+                    @include vp(top, 1px);
+                    @include vp(left, 1px);
+                    @include vp(width, 244px);
+                    @include vp(height, 77px);
+                    @include vp(border-radius, 100px);
+                    background: $green;
+                    @include vp(border, 1px solid $green);
+
+                }
+            }
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+
+
+    }
+    &.home{
+    }
+}
+
+
+.sections{
+    background: #f6f6f6;
+    .section_inner{
+        position: relative;
+        @include vp(padding, 0 20px); 
+        .menu_btn-list{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            @include vp(gap, 22px); 
+            @include vp(max-width, 670px);
+            margin:0 auto; 
+            @include vp(padding-bottom, 104px); 
+            width: 100%;
+            @include vp(transform, translateY(-30px)); 
+            z-index: 20;
+            >li{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                @include vp(width, 324px); 
+                @include vp(height, 324px); 
+                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05)); 
+                @include vp(border-radius, 40px); 
+                background: #fff;
+                a{ 
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: inherit;
+                    height:inherit;
+                    @include vp( font-size, 32px); 
+                    color: $black;
+                    font-weight: 600;
+                    text-align: center;
+                    &::before{
+                        content: '';
+                        display: block;
+                        @include vp(margin-bottom, 34px); 
+                        @include vp(width, 110px); 
+                        @include vp(height, 110px); 
+                    
+                    }
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        @include vp(top, 40px); 
+                        @include vp(right, 40px); 
+                        @include vp(width, 32px); 
+                        @include vp(height, 32px); 
+                        background: url("/assets/images/btn/btn_plus.png") 0 0 no-repeat;
+                        @include vp(background-size, 32px auto); 
+                    }
+                }
+                &.parther{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+                &.customer{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons/icon__Customer.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+                &.disaster{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons/icon_disaster.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+                &.fire{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons/icon_fire.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+                &.different{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons//icon_different_thing.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+                &.safety{
+                    a{
+                        &:before{
+                            background: url("/assets/images/icons/icon_food_ safety.png") 0 0 no-repeat;
+                            @include vp(background-size, 110px auto); 
+                        }
+                    }
+                }
+            }
+       
+        }
+        .menu_view_list{
+            position: absolute;
+            top:0;
+            @include vp(left, 40px); 
+            @include vp(width, 670px); 
+            z-index: 10;
+            opacity: 0;
+            >li{
+                position: relative;
+                @include vp(transform, translateY(-30px)); 
+                @include vp(width, 324px); 
+                @include vp(height, 324px); 
+                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.1)); 
+                background: #fff;
+                border-radius: 40px;
+                transition:width .35s, height .35s;
+                .btn_close{
+                    position: absolute;
+                    @include vp(top, 32px); 
+                    @include vp(right, 32px); 
+                    @include vp(width, 46px); 
+                    @include vp(height, 46px); 
+                    background: url("/assets/images/btn/btn_close.png") 0 0 no-repeat;
+                    @include vp(background-size, 46px auto); 
+                    opacity: 0;
+                }
+                .inner{
+                    opacity: 0;
+                    @include vp(padding, 68px 60px 0 60px); 
+                    .title_box{
+                        display: flex;
+                        align-items: end;
+                        @include vp(padding-bottom, 32px); 
+                        @include vp(border-bottom, 1px solid #333); 
+                        h3{
+                            position: relative;
+                            @include vp(padding-left, 68px); 
+                            @include vp(font-size, 32px); 
+                            font-weight: 600;
+                         
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                @include vp(top, -10px); 
+                                left:0;
+                                display: block;
+                                @include vp(width, 48px); 
+                                @include vp(height, 48px); 
+                                background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px auto); 
+                            }
+                        }
+                        span{
+                            @include vp(padding-left, 20px); 
+                            @include vp(font-size, 24px); 
+                            font-weight: 400;
+                            color: #888;
+                            opacity: .6;
+                        }
+                    }
+                    .scroll_box{
+                        .type_list{
+                            display: flex;
+                            flex-wrap: wrap;
+                            @include vp(margin-top, 50px); 
+                            li{
+                                @include vp(width, 130px); 
+                                @include vp(margin-right, 70px); 
+                                @include vp(margin-bottom, 38px); 
+                                @include vp(font-size, 26px); 
+                                a{
+                                    display: block;
+                                    text-align: left;
+                                    color: $black;
+                                    font-weight: 400;
+                                }
+                                &:nth-child(3n) {
+                                    margin-right: 0; 
+                                }
+                            }
+                        }
+                    }
+                }
+                &.on{
+                    @include vp(width, 670px); 
+                    @include vp(height, 394px); 
+                }
+            }
+        }
+      
+    }
+    &.home{
+
+    }
+}
