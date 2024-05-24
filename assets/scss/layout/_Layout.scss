@@ -149,14 +149,14 @@ header{
                         @include vp(right, 40px); 
                         @include vp(width, 32px); 
                         @include vp(height, 32px); 
-                        background: url("/images/btn/btn_plus.png") 0 0 no-repeat;
+                        background: url("/assets/images/btn/btn_plus.png") 0 0 no-repeat;
                         @include vp(background-size, 32px auto); 
                     }
                 }
                 &.parther{
                     a{
                         &:before{
-                            background: url("/images/icons/icon_Partner.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -164,7 +164,7 @@ header{
                 &.customer{
                     a{
                         &:before{
-                            background: url("/images/icons/icon__Customer.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons/icon__Customer.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -172,7 +172,7 @@ header{
                 &.disaster{
                     a{
                         &:before{
-                            background: url("/images/icons/icon_disaster.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons/icon_disaster.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -180,7 +180,7 @@ header{
                 &.fire{
                     a{
                         &:before{
-                            background: url("/images/icons/icon_fire.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons/icon_fire.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -188,7 +188,7 @@ header{
                 &.different{
                     a{
                         &:before{
-                            background: url("/images/icons//icon_different_thing.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons//icon_different_thing.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -196,7 +196,7 @@ header{
                 &.safety{
                     a{
                         &:before{
-                            background: url("/images/icons/icon_food_ safety.png") 0 0 no-repeat;
+                            background: url("/assets/images/icons/icon_food_ safety.png") 0 0 no-repeat;
                             @include vp(background-size, 110px auto); 
                         }
                     }
@@ -226,7 +226,7 @@ header{
                     @include vp(right, 32px); 
                     @include vp(width, 46px); 
                     @include vp(height, 46px); 
-                    background: url("/images/btn/btn_close.png") 0 0 no-repeat;
+                    background: url("/assets/images/btn/btn_close.png") 0 0 no-repeat;
                     @include vp(background-size, 46px auto); 
                     opacity: 0;
                 }
@@ -252,7 +252,7 @@ header{
                                 display: block;
                                 @include vp(width, 48px); 
                                 @include vp(height, 48px); 
-                                background: url("/images/icons/icon_Partner.png") 0 0 no-repeat;
+                                background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
                                 @include vp(background-size, 48px auto); 
                             }
                         }
