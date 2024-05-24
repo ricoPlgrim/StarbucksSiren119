@@ -1,0 +1,97 @@
+@import '../base/variables';
+@import '../base/mixin'; 
+
+/*header*/
+header{
+ 
+    .header_inner{
+        @include vp(padding, 0 42px);   
+        .header_top{
+            @include vp(padding-top, 116px);   
+            display: flex;
+            .btn_hamburger{
+                display: block;
+                @include vp(width, 54px);    
+            }
+            .utility_contents{
+                margin-left:auto;
+                display: flex;
+                .btn_search{
+                    display: block;
+                    @include vp(width, 54px);   
+                    @include vp(margin-right, 17px);   
+                    
+                }
+                .btn_alarm{
+                    display: block;
+                    @include vp(width, 54px);   
+                }
+            }
+        }
+        h1{
+            display: block;
+            @include vp(width, 320px);
+            @include vp(margin, 22px auto 0);
+        }
+
+        .header_switchbox{
+            position: relative;
+            z-index: 3;
+            @include vp(width, 490px);
+            @include vp(height, 80px);
+            @include vp(margin, 44px auto 0);
+            .switch_round{
+                position: relative;
+                width: 100%;
+                height: inherit;
+                @include vp(border, 1px solid #eee);
+                @include vp(border-radius, 100px);
+                background: #eee;
+
+                a{
+                    display: block;
+                    position: relative;
+                    float: left;
+                    @include vp(font-size, 30px);
+                    @include vp(line-height, 77px);
+                    font-weight: 600;
+                    color: #000;
+                    opacity: .3;
+                    width: 50%;
+                    height: 100%;
+                    // margin-top: 11px;
+                    text-align: center;
+                    z-index: 4;
+                    &.on{
+                        color: #fff;
+                        opacity: 1;
+                    }
+                }
+                .round_bar{
+                    position: absolute;
+                    @include vp(top, 1px);
+                    @include vp(left, 1px);
+                    @include vp(width, 244px);
+                    @include vp(height, 77px);
+                    @include vp(border-radius, 100px);
+                    background: $green;
+                    @include vp(border, 1px solid $green);
+
+                }
+            }
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        }
+
+
+    }
+    &.home{
+        @include vp(height, 546px);    
+        background:#f6f6f6 url("../images/header_bg.png" ) 0 0 no-repeat; 
+        @include vp(background-size, auto 546px); 
+    }
+}
+

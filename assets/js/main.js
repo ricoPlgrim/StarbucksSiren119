@@ -4,25 +4,24 @@ var _w;
 var _menuBtnlist;
 var _main;
 
-var frountUi = {
+var mainUi = {
 
     init: function () {
-        frountUi.loadEvent();
+        mainUi.loadEvent();
     },
     create: function(){
         _w = $( window );
-        _menuIndex = null;
         _main = $( "main" );
         _menuBtnlist = _main.find( ".menu_btn-list" ).find( "li" );
     },
     addEvent: function(){
-        frountUi.resizeEvent( null );
-        _w.on( "resize", frountUi.resizeEvent );
-        _menuBtnlist.on( "click", frountUi.menuBtnListClick );
+        mainUi.resizeEvent( null );
+        _w.on( "resize", mainUi.resizeEvent );
+        _menuBtnlist.on( "click", mainUi.menuBtnListClick );
     },
     loadEvent: function () {
-        frountUi.create();
-        frountUi.addEvent();
+        mainUi.create();
+        mainUi.addEvent();
     },
 
     resizeEvent: function(){
@@ -32,26 +31,40 @@ var frountUi = {
     menuBtnListClick: function(){
         var index = $( this ).index();
         var menuView = _main.find( ".menu_view_list" );
-        var menuViewList = menuView.find( "li" );
+        var menuViewList = menuView.find( "li.menu_view_item" );
+
+        console.log( menuViewList.length );
         var textBox = menuView.find( ".inner" );
         var btnClose =  menuViewList.eq(index).find( ".btn_close" );
-        _menuIndex = index;
         menuView.css({
             "z-index" : 30,
             "opacity": 1
         });
 
         btnClose.css( "opacity", 1 );
-        menuViewList.eq(index).addClass(  "on" ).siblings().removeClass( "on" );
+        menuViewList.removeClass( "on");
+        menuViewList.eq(index).addClass(  "on" );
 
+        console.log(menuViewList.eq(index)[0]);
+
+        menuView.removeClass( "on" );
         gsap.set( textBox, { opacity: 0 })
         gsap.to( textBox, .75,  { opacity: 1,  delay:.25  });
 
-        btnClose.on( "click", menuBtnClose )
+        btnClose.on("click", main.menuBtnClose);
     },
 
     menuBtnClose: function(){
-        console.log( "??" );
+        var index = $( this );
+        var menuView = index.parents( ".menu_view_list" );
+        index.css( "opacity", 0 );
+        index.next().css( "opacity", 0 );
+        index.parent( "li.on" ).removeClass( "on" );
+        setTimeout( function() {
+            menuView.css({
+                "z-index" : 10,
+            });
+        },300);
     }
     
 };
@@ -59,5 +72,5 @@ var frountUi = {
 
 
 $(function () {
-    frountUi.init();
+    mainUi.init();
 });
