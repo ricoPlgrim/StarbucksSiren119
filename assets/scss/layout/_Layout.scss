@@ -4,7 +4,7 @@
 /*header*/
 header{
     @include vp(height, 546px);    
-    background:#f6f6f6 url("../images/header_bg.png" ) 0 0 no-repeat; 
+    background:#f6f6f6 url("/images/header_bg.png" ) 0 0 no-repeat; 
     @include vp(background-size, auto 546px); 
     .header_inner{
         @include vp(padding, 0 42px);   
