@@ -647,7 +647,7 @@ body {
 /*header*/
 header {
   height: 546px;
-  background: #f6f6f6 url("assets/images/header_bg.png") 0 0 no-repeat;
+  background: #f6f6f6 url("../assets/images/header_bg.png") 0 0 no-repeat;
   background-size: auto 546px;
 }
 @media screen and (max-width: 750px) {
@@ -991,7 +991,7 @@ header .header_inner .header_switchbox::after {
   right: 40px;
   width: 32px;
   height: 32px;
-  background: url("assets/images/btn/btn_plus.png") 0 0 no-repeat;
+  background: url("/assets/images/btn/btn_plus.png") 0 0 no-repeat;
   background-size: 32px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1020,7 +1020,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.parther a:before {
-  background: url("assets/images/icons/icon_Partner.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1029,7 +1029,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.customer a:before {
-  background: url("assets/images/icons/icon__Customer.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon__Customer.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1038,7 +1038,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.disaster a:before {
-  background: url("assets/images/icons/icon_disaster.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon_disaster.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1047,7 +1047,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.fire a:before {
-  background: url("assets/images/icons/icon_fire.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon_fire.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1056,7 +1056,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.different a:before {
-  background: url("assets/images/icons//icon_different_thing.png") 0 0 no-repeat;
+  background: url("/assets/images/icons//icon_different_thing.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1065,7 +1065,7 @@ header .header_inner .header_switchbox::after {
   }
 }
 .sections .section_inner .menu_btn-list > li.safety a:before {
-  background: url("assets/images/icons/icon_food_ safety.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon_food_ safety.png") 0 0 no-repeat;
   background-size: 110px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1132,7 +1132,7 @@ header .header_inner .header_switchbox::after {
   right: 32px;
   width: 46px;
   height: 46px;
-  background: url("assets/images/btn/btn_close.png") 0 0 no-repeat;
+  background: url("/assets/images/btn/btn_close.png") 0 0 no-repeat;
   background-size: 46px auto;
   opacity: 0;
 }
@@ -1214,7 +1214,7 @@ header .header_inner .header_switchbox::after {
   display: block;
   width: 48px;
   height: 48px;
-  background: url("assets/images/icons/icon_Partner.png") 0 0 no-repeat;
+  background: url("/assets/images/icons/icon_Partner.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
