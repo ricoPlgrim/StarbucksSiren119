@@ -225,7 +225,11 @@
                 &:nth-child(3),
                 &:nth-child(4){
                     // @include vp(transform, translateY(316px)); 
-                    @include vp(margin-top, 346px ); 
+                    // @include vp(margin-top, 346px ); 
+                    transform: translateY(346px);
+                    @include breakpoint {
+                        transform: translateY(46.13333333333333vw);
+                      }
                     
                 }
                 &:nth-child(5),
