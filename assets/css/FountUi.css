@@ -647,7 +647,7 @@ body {
 /*header*/
 header {
   height: 546px;
-  background: #f6f6f6 url("/images/header_bg.png") 0 0 no-repeat;
+  background: #f6f6f6 url("../images/header_bg.png") 0 0 no-repeat;
   background-size: auto 546px;
 }
 @media screen and (max-width: 750px) {
