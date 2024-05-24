@@ -51,7 +51,7 @@ var mainUi = {
         gsap.set( textBox, { opacity: 0 })
         gsap.to( textBox, .75,  { opacity: 1,  delay:.25  });
 
-        btnClose.on("click", main.menuBtnClose);
+        btnClose.on("click", mainUi.menuBtnClose);
     },
 
     menuBtnClose: function(){
@@ -66,7 +66,6 @@ var mainUi = {
             });
         },300);
     }
-    
 };
 
 
