@@ -1,26 +1,35 @@
 
 @import 'base/variables';
 @import 'base/mixin'; 
+
 .sections{
     background: #f6f6f6;
     .section_inner{
         position: relative;
-        @include vp(padding, 0 20px); 
+        @include vp(padding, 0px 20px); 
+
+
+
+        // @include vp(padding, 0 20px); 
         .menu_btn-list{
             position: relative;
-            display: flex;
+            display: flex; 
             flex-wrap: wrap;
+            width: 100%;
             @include vp(gap, 22px); 
             @include vp(max-width, 670px);
-            margin:0 auto; 
             @include vp(padding-bottom, 104px); 
-            width: 100%;
-            @include vp(transform, translateY(-30px)); 
-            z-index: 20;
+            
+            transform: translateY(-30px);
+            @include breakpoint {
+              transform: translateY(-4vw);
+            }
+            margin:0 auto;
+            z-index: 20; 
             >li{
                 position: relative;
                 display: flex;
-                justify-content: center;
+                justify-content: center;  
                 align-items: center;
                 cursor: pointer;
                 @include vp(width, 324px); 
@@ -120,13 +129,14 @@
             >li{
                 display: none;
                 position: relative;
-                @include vp(transform, translateY(-30px)); 
+                // @include vp(transform, translateY(-30px)); 
+                @include vp(margin-top, -30px );  
                 @include vp(width, 324px); 
                 @include vp(height, 324px); 
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.1)); 
                 background: #fff;
-                border-radius: 40px;
-                transition:width .35s, height .35s;
+                @include vp(border-radius, 40px); 
+                // transition:width .35s, height .35s;
                 .btn_close{
                     position: absolute;
                     @include vp(top, 32px); 
@@ -144,6 +154,7 @@
                         display: flex;
                         align-items: end;
                         @include vp(padding-bottom, 32px); 
+                        @include vp(margin-bottom, 50px); 
                         @include vp(border-bottom, 1px solid #333); 
                         h3{
                             position: relative;
@@ -167,20 +178,36 @@
                             @include vp(padding-left, 20px); 
                             @include vp(font-size, 24px); 
                             font-weight: 400;
-                            color: #888;
+                            color: #888; 
                             opacity: .6;
                         }
                     }
                     .scroll_box{
+                        @include vp(max-height, 207px); 
+                        overflow-y: auto;
+                        &::-webkit-scrollbar {
+                            @include vp(max-height, 5px);  
+                            @include vp(width, 8px);  
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background: rgb(103, 103, 103);
+                            @include vp(border-radius, 10px); 
+                        }
+                        &::-webkit-scrollbar-track {
+                            background: transparent;
+                            // background: rgba(220, 20, 60, .1); 
+                        }
                         .type_list{
                             display: flex;
                             flex-wrap: wrap;
-                            @include vp(margin-top, 50px); 
+                          
                             li{
-                                @include vp(width, 130px); 
-                                @include vp(margin-right, 70px); 
+                                flex: 0 0 33.3333%;
+                                // @include vp(width, 130px); 
+                                // @include vp(margin-right, 70px); 
                                 @include vp(margin-bottom, 38px); 
                                 @include vp(font-size, 26px); 
+                                word-break: keep-all;
                                 a{
                                     display: block;
                                     text-align: left;
@@ -192,7 +219,19 @@
                                 }
                             }
                         }
+                    
                     }
+                }
+                &:nth-child(3),
+                &:nth-child(4){
+                    // @include vp(transform, translateY(316px)); 
+                    @include vp(margin-top, 346px ); 
+                    
+                }
+                &:nth-child(5),
+                &:nth-child(6){
+                    // @include vp(transform, translateY(662px)); 
+                    @include vp(margin-top, 692px );  
                 }
                 &.on{
                     display: block;

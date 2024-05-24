@@ -44,12 +44,9 @@ var mainUi = {
         btnClose.css( "opacity", 1 );
         menuViewList.removeClass( "on");
         menuViewList.eq(index).addClass(  "on" );
-
-        console.log(menuViewList.eq(index)[0]);
-
         menuView.removeClass( "on" );
         gsap.set( textBox, { opacity: 0 })
-        gsap.to( textBox, .75,  { opacity: 1,  delay:.25  });
+        gsap.to( textBox, .15,  { opacity: 1, });
 
         btnClose.on("click", mainUi.menuBtnClose);
     },
@@ -64,7 +61,7 @@ var mainUi = {
             menuView.css({
                 "z-index" : 10,
             });
-        },300);
+        },100);
     }
 };
 

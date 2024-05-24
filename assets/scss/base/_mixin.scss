@@ -86,4 +86,12 @@ $vw-px-only: false !default;
     @media screen and (max-width: 750px) {
         #{$property}: vw($value); // Override with vw value in media query
     }
-}
+} 
+
+
+//transform 사용할경우
+@mixin breakpoint {
+    @media screen and (max-width: $mobile) {
+      @content;
+    }
+  }
