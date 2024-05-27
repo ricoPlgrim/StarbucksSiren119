@@ -747,6 +747,7 @@ header .header_inner .header_switchbox .switch_round {
   border: 1px solid #eee;
   border-radius: 100px;
   background: #eee;
+  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_switchbox .switch_round {
@@ -793,8 +794,10 @@ header .header_inner .header_switchbox .switch_round .round_bar {
   width: 244px;
   height: 77px;
   border-radius: 100px;
-  background: #00A862;
-  border: 1px solid #00A862;
+  background: #000;
+  border: 1px solid #000;
+  -webkit-transition: left 0.35s ease-in-out;
+  transition: left 0.35s ease-in-out;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_switchbox .switch_round .round_bar {
@@ -823,7 +826,23 @@ header .header_inner .header_switchbox .switch_round .round_bar {
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_switchbox .switch_round .round_bar {
-    border: 0.1333333333vw solid #00A862;
+    border: 0.1333333333vw solid #000;
+  }
+}
+header .header_inner .header_switchbox .switch_round.left .round_bar {
+  left: 1px;
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_switchbox .switch_round.left .round_bar {
+    left: 0.1333333333vw;
+  }
+}
+header .header_inner .header_switchbox .switch_round.right .round_bar {
+  left: 242px;
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_switchbox .switch_round.right .round_bar {
+    left: 32.2666666667vw;
   }
 }
 header .header_inner .header_switchbox::after {
@@ -833,8 +852,8 @@ header .header_inner .header_switchbox::after {
 }
 header.home {
   height: 546px;
-  background: #f6f6f6 url("../images/header_bg.png") 0 0 no-repeat;
-  background-size: auto 546px;
+  background-color: #006241;
+  border-radius: 0 0 40px 40px;
 }
 @media screen and (max-width: 750px) {
   header.home {
@@ -843,7 +862,7 @@ header.home {
 }
 @media screen and (max-width: 750px) {
   header.home {
-    background-size: auto 72.8vw;
+    border-radius: 0 0 5.3333333333vw 5.3333333333vw;
   }
 }
 
@@ -856,4 +875,319 @@ header.home {
   #wrap {
     max-width: 100vw;
   }
+}
+
+.bottom_sheet {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  max-width: 750px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet {
+    max-width: 100vw;
+  }
+}
+.bottom_sheet .sheet_content {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  background: #F8F8F8;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content {
+    border-radius: 2.6666666667vw 2.6666666667vw 0 0;
+  }
+}
+.bottom_sheet .sheet_content .sheet_top {
+  position: relative;
+}
+.bottom_sheet .sheet_content .sheet_top .btn_sheet_close {
+  width: 100%;
+  height: 40px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close {
+    height: 5.3333333333vw;
+  }
+}
+.bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 100px;
+  width: 68px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.38);
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+    border-radius: 13.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+    width: 9.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+    height: 1.0666666667vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents {
+  padding: 0 40px 56px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents {
+    padding: 0 5.3333333333vw 7.4666666667vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.bottom_sheet .sheet_content .date_contents .date_list li {
+  width: 160px;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li {
+    width: 21.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li {
+    border-radius: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li {
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_list li button {
+  width: inherit;
+  padding: 30px 22px;
+  font-size: 26px;
+  line-height: normal;
+  background: none;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li button {
+    padding: 4vw 2.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li button {
+    font-size: 3.4666666667vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_list li.on {
+  background: #00A862;
+  border: 2px solid #00A862;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_list li.on {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_list li.on button {
+  color: #fff;
+}
+.bottom_sheet .sheet_content .date_contents .date_setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 22px;
+  gap: 14px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting {
+    margin-top: 2.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting {
+    gap: 1.8666666667vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_setting .date_start,
+.bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+  position: relative;
+  width: 330px;
+  height: 76px;
+  padding: 22px 40px;
+  border-radius: 4px;
+  background: #EEE;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+    width: 44vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+    height: 10.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+    padding: 2.9333333333vw 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+    border-radius: 0.5333333333vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_setting .date_start span,
+.bottom_sheet .sheet_content .date_contents .date_setting .date_end span {
+  font-family: "Pretendard Variable";
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.6;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start span,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end span {
+    font-size: 3.4666666667vw;
+  }
+}
+.bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+.bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 37px;
+  border: 0;
+  background: url("../images/icons/icon_calendar.png") 0 0 no-repeat;
+  background-size: 32px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+    top: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+    right: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+    width: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+    height: 4.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+    background-size: 4.2666666667vw auto;
+  }
+}
+.bottom_sheet .sheet_content .type_cointents {
+  position: relative;
+}
+.bottom_sheet .sheet_content .type_cointents .type_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.bottom_sheet .sheet_content .type_cointents .type_list li {
+  width: 188px;
+  height: 88px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .type_list li {
+    width: 25.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .type_list li {
+    height: 11.7333333333vw;
+  }
+}
+.bottom_sheet .sheet_content .type_cointents .type_list li button {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  opacity: 0.4;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .type_list li button {
+    font-size: 4vw;
+  }
+}
+.bottom_sheet .sheet_content .type_cointents .type_list li.on button {
+  opacity: 1;
+}
+.bottom_sheet .sheet_content .type_cointents .bar {
+  position: absolute;
+  left: 0;
+  top: 82px;
+  width: 188px;
+  height: 6px;
+  background: #00A862;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .bar {
+    top: 10.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .bar {
+    width: 25.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_content .type_cointents .bar {
+    height: 0.8vw;
+  }
+}
+.bottom_sheet .dimd {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  z-index: -1;
 }

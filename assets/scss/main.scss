@@ -2,14 +2,18 @@
 @import 'base/variables';
 @import 'base/mixin'; 
 
-.sections{
+#wrap{
     background: #f6f6f6;
+}
+.sections{
     .section_inner{
         position: relative;
-        @include vp(padding, 0px 20px); 
-
-
-
+        @include vp(padding, 0px 40px); 
+        transform: translateY(-40px);
+        @include breakpoint {
+          transform: translateY(-5.333333333333333vw);
+        }
+     
         // @include vp(padding, 0 20px); 
         .menu_btn-list{
             position: relative;
@@ -20,10 +24,7 @@
             @include vp(max-width, 670px);
             @include vp(padding-bottom, 104px); 
             
-            transform: translateY(-30px);
-            @include breakpoint {
-              transform: translateY(-4vw);
-            }
+        
             margin:0 auto;
             z-index: 20; 
             >li{
@@ -119,6 +120,7 @@
             }
        
         }
+
         .menu_view_list{
             position: absolute;
             top:0;
@@ -244,10 +246,251 @@
                 }
             }
         }
-      
+        
+        .setting_contents{
+            width: 100%;
+            @include vp(height, 212px); 
+            background: $white;
+            @include vp(border-radius, 40px); 
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+            .setting_top{
+                display: flex;
+                // justify-content: space-around;
+                @include vp(padding, 40px 40px 28px 40px); 
+                .setting_check_box{
+                    label {
+                        display: flex;
+                        align-items: center;
+                        @include vp(font-size, 26px); 
+                        font-weight: 400;
+                        color: $black;
+                        opacity: .87;
+                        cursor: pointer;
+                        input[type="checkbox"] { 
+                          @include vp(padding-left, 64px); 
+                          @include vp(width, 44px); 
+                          @include vp(height, 44px); 
+                          cursor: pointer;
+                          outline: none;
+                          appearance: none;
+                          background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
+                          @include vp(background-size, 44px auto); 
+                        }
+                      }
+                }
+                a{
+                    position: relative;
+                    margin-left: auto;
+                    @include vp(font-size, 26px); 
+                    font-weight: 400;
+                    color: $black;
+                    @include vp(width, 151px); 
+                    text-align: right;
+                    @include vp(border-bottom, 2px solid #1C1B1F);  
+                    &::after{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        content: '';
+                        display: block;
+                        @include vp(width, 40px); 
+                        @include vp(height, 40px );  
+                        background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
+                        @include vp(background-size, 40px auto); 
+                    }
+                }
+            }
+            .btn_group{
+                position: relative;
+                @include vp(padding-left, 34px ); 
+                .btn_list{
+                    position: relative;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                    @include vp(gap, 6px );  
+                    @include vp(height, 75px );  
+                    align-items: center;
+                    overflow-scrolling: auto;
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    @include vp(padding-right, 34px ); 
+                    
+                    li{
+                        flex: 0 0 auto;
+                        a{
+                            position: relative;
+                            @include vp(font-size, 24px); 
+                            @include vp(line-height, 32px); 
+                            @include vp(padding, 14px 56px 14px  24px); 
+                            @include vp(border-radius, 40px); 
+                            @include vp(border, 1px solid $gray ); 
+                            font-weight: 600;
+                            color: $black;
+                            opacity: .7;
+                       
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                @include vp(top, 24px); 
+                                @include vp(right, 24px); 
+                                @include vp(width, 21px); 
+                                @include vp(height, 13px); 
+                                background: url("../images/btn/btn_select.png") 0 0 no-repeat;
+                                @include vp(background-size, 21px auto); 
+                            }
+                        }
+                    }
+                }
+                &:after{
+                    content: '';
+                    position: absolute;
+                    @include vp(top, -18px); 
+                    right:0;
+                    @include vp(width, 126px); 
+                    @include vp(height, 80px); 
+                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
+                }
+            }
+        }
+        .accident_content{
+            @include vp(margin-top, 20px); 
+            .accident_list{
+                >li{
+                    position: relative;
+                    @include vp(margin-top, 20px);  
+                    @include vp(height, 228px); 
+                    @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05)); 
+                    background: #fff;
+                    @include vp(border-radius, 40px); 
+                    a{
+                        position: relative;
+                        display: block;
+                        @include vp(padding, 40px);
+                        box-sizing: border-box; 
+                        dl{
+                            dt{
+                                display: flex;
+                                .accident_type{
+                                    @include vp(padding-right, 20px);
+                                    li{
+                                        @include vp(font-size, 24px); 
+                                        font-weight: 400;
+                                        &.red{
+                                            color:#F00
+                                        }
+                                        &.green{
+                                            color: #00A862;
+                                        }
+                                    }
+                                }
+                                p{
+                                    color: $black;
+                                    @include vp(font-size, 24px); 
+                                    font-weight: 400;
+                                }
+                            }
+                            dd{
+                                @include vp(padding-top, 40px); 
+                                display: flex;
+                                align-items: center;
+                                span{
+                                    @include vp(font-size, 30px); 
+                                    @include vp(line-height, 32px); 
+                                    color: $black;
+                                    opacity: .8;
+                                    font-weight: 600;
+                                    &:last-child{
+                                        position: relative;
+                                        display: inline-block;
+                                        @include vp(padding-left, 32px); 
+                                        @include vp(width, 308px); 
+                                        text-overflow: ellipsis;
+                                        overflow: hidden;
+                                        white-space: nowrap;
+                                        word-break: normal; 
+                                        text-overflow: ellipsis;
+
+                                        &:after{
+                                            content: ''; 
+                                            @include vp(width,3px);
+                                            position: absolute;
+                                            @include vp(top, 3px); 
+                                            @include vp(left, 16px); 
+                                            @include vp(height,28px);
+                                            background: #888; 
+                                        }
+                                    }
+                                }
+                                &.last{
+                                    span{
+                                        color: #888;
+                                        @include vp(font-size, 24px); 
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        line-height: normal;
+                                        @include vp(padding-left, 20px); 
+                                        &:last-child{
+                                            width: auto;
+                                            &::after{
+                                                content: none;
+                                            }
+                                        }
+                                        &.write{
+                                            display: flex;
+                                            &:before{
+                                                display: inline-block;
+                                                @include vp(margin-right, 8px ); 
+                                                content: '';
+                                                @include vp(width, 30px); 
+                                                @include vp(height, 28px); 
+                                                background: url("../images/icons/icon_rate_review.png") 0 0 no-repeat;
+                                                @include vp(background-size, 30px auto); 
+                                            }
+                                        }
+                                        &.lead{
+                                            @include vp(padding-left, 24px); 
+                                        }
+                                        &:first-child{ padding-left:0; }
+                                    }
+                                }
+                            }
+                        }
+                        .photo_box{
+                            position: absolute;
+                            @include vp(width, 148px); 
+                            @include vp(height, 148px); 
+                            @include vp(top, 40px); 
+                            @include vp(right, 40px); 
+                            @include vp( border-radius, 6px); 
+                            overflow: hidden;
+                        }
+                    }
+                    .btn_bookmark{
+                        position: absolute;
+                        @include vp(top, -10px); 
+                        @include vp(right, 37px); 
+                        @include vp(width, 60px); 
+                        @include vp(height, 86px); 
+                        background: url("../images/btn/btn_bookmark_off.png") 0 0 no-repeat;
+                        @include vp(background-size, 60px auto); 
+                        &.on{
+                            background: url("../images/btn/btn_bookmark_on.png") 0 0 no-repeat;
+                            @include vp(background-size, 60px auto); 
+                        }
+                    }
+                }
+            }
+        }
     }
     &.home{
 
     }
-}
+    section{
+        display: none; 
+        &.on{
+            display: block;
+        }
+    }
+} 
  

@@ -3,7 +3,6 @@
 
 /*header*/
 header{
- 
     .header_inner{
         @include vp(padding, 0 42px);   
         .header_top{
@@ -47,6 +46,7 @@ header{
                 @include vp(border, 1px solid #eee);
                 @include vp(border-radius, 100px);
                 background: #eee;
+                overflow: hidden;
 
                 a{
                     display: block;
@@ -74,9 +74,19 @@ header{
                     @include vp(width, 244px);
                     @include vp(height, 77px);
                     @include vp(border-radius, 100px);
-                    background: $green;
-                    @include vp(border, 1px solid $green);
-
+                    background: $black; 
+                    @include vp(border, 1px solid $black);
+                    transition: left 0.35s ease-in-out; 
+                }
+                &.left{
+                    .round_bar{
+                        @include vp(left, 1px);
+                    }
+                }
+                &.right{
+                    .round_bar{
+                        @include vp(left, 242px);
+                    }
                 }
             }
             &::after{
@@ -90,8 +100,9 @@ header{
     }
     &.home{
         @include vp(height, 546px);    
-        background:#f6f6f6 url("../images/header_bg.png" ) 0 0 no-repeat; 
-        @include vp(background-size, auto 546px); 
+        background-color: $thickGreen;
+        @include vp(border-radius, 0 0 40px 40px); 
+        
     }
 }
 
