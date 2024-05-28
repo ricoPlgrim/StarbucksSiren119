@@ -301,14 +301,14 @@
                     @include vp(border-bottom, 2px solid #1C1B1F);  
                     &::after{
                         position: absolute;
-                        top:0;
+                        @include vp(top, 10px); 
                         left:0;
                         content: '';
                         display: block;
-                        @include vp(width, 40px); 
-                        @include vp(height, 40px );  
+                        @include vp(width, 23px); 
+                        @include vp(height, 27px );  
                         background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-                        @include vp(background-size, 40px auto); 
+                        @include vp(background-size, 23px auto); 
                     }
                 }
             }
