@@ -166,3 +166,25 @@
 
 
 }
+
+
+.scroll_top_box{
+    display: none;
+    position: fixed;
+    @include vp(width, 112px);     
+    @include vp(height, 112px);     
+    @include vp(bottom, 82px);     
+    // @include vp(right, 42px);     
+    right: 50%;
+    transform: translateX(348px);
+    @include breakpoint {
+        transform: translateX(46.4vw);
+      }
+    a{
+        display: block;
+        width: inherit;
+        height: inherit;
+        background:url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
+        @include vp(background-size, 112px auto); 
+    }
+}

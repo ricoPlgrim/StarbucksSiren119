@@ -1,119 +1,146 @@
 @import '../base/variables';
-@import '../base/mixin'; 
+@import '../base/mixin';
 
 /*header*/
-header{
-    .header_inner{
-        @include vp(padding, 0 42px);   
-        .header_top{
-            position: fixed;
-            @include vp(top, 112px);    
-            left:50%;
-            transform: translateX(-50%);
-            @include vp(padding, 0 42px);   
+header {
+    .header_inner {
+        @include vp(padding, 0 42px);
+
+        .header_top {
+            // position: fixed;
             display: flex;
-            @include vp(width, 750px);    
-            @include vp(max-width, 750px);    
-            z-index: 1000;
+            @include vp(padding-top, 112px);
+
+            // left:50%;
+            // transform: translateX(-50%);
             // background: $thickGreen;
-            .btn_hamburger{
+            .btn_hamburger {
                 display: block;
-                @include vp(width, 54px);    
+                @include vp(width, 54px);
             }
-            .utility_contents{
-                margin-left:auto;
+
+            .utility_contents {
+                margin-left: auto;
                 display: flex;
-                .btn_search{
+
+                .btn_search {
                     display: block;
-                    @include vp(width, 54px);   
-                    @include vp(margin-right, 17px);   
-                    
+                    @include vp(width, 54px);
+                    @include vp(margin-right, 17px);
+
                 }
-                .btn_alarm{
+
+                .btn_alarm {
                     display: block;
-                    @include vp(width, 54px);   
+                    @include vp(width, 54px);
                 }
             }
         }
-        h1{
+
+        h1 {
             display: block;
             @include vp(width, 320px);
-            @include vp(margin, 0 auto );
-            @include vp(padding-top, 200px );
+            @include vp(margin, 0 auto);
+            @include vp(padding-top, 40px);
 
         }
 
-        .header_switchbox{
-            position: relative;
-            z-index: 3;
-            @include vp(width, 490px);
-            @include vp(height, 80px);
-            @include vp(margin, 44px auto 0);
-            .switch_round{
+        .header_sticky {
+            .header_switchbox {
                 position: relative;
-                width: 100%;
-                height: inherit;
-                @include vp(border, 1px solid #eee);
-                @include vp(border-radius, 100px);
-                background: #eee;
-                overflow: hidden;
+                z-index: 3;
+                @include vp(width, 490px);
+                @include vp(height, 80px);
+                @include vp(margin, 44px auto 0);
 
-                a{
-                    display: block;
+                .switch_round {
                     position: relative;
-                    float: left;
-                    @include vp(font-size, 30px);
-                    @include vp(line-height, 77px);
-                    font-weight: 600;
-                    color: #000;
-                    opacity: .3;
-                    width: 50%;
-                    height: 100%;
-                    // margin-top: 11px;
-                    text-align: center;
-                    z-index: 4;
-                    &.on{
-                        color: #fff;
-                        opacity: 1;
-                    }
-                }
-                .round_bar{
-                    position: absolute;
-                    @include vp(top, 1px);
-                    @include vp(left, 1px);
-                    @include vp(width, 244px);
-                    @include vp(height, 77px);
+                    width: 100%;
+                    height: inherit;
+                    @include vp(border, 1px solid #eee);
                     @include vp(border-radius, 100px);
-                    background: $black; 
-                    @include vp(border, 1px solid $black);
-                    transition: left 0.35s ease-in-out; 
-                }
-                &.left{
-                    .round_bar{
+                    background: #eee;
+                    overflow: hidden;
+
+                    a {
+                        display: block;
+                        position: relative;
+                        float: left;
+                        @include vp(font-size, 30px);
+                        @include vp(line-height, 77px);
+                        font-weight: 600;
+                        color: #000;
+                        opacity: .3;
+                        width: 50%;
+                        height: 100%;
+                        // margin-top: 11px;
+                        text-align: center;
+                        z-index: 4;
+
+                        &.on {
+                            color: #fff;
+                            opacity: 1;
+                        }
+                    }
+
+                    .round_bar {
+                        position: absolute;
+                        @include vp(top, 1px);
                         @include vp(left, 1px);
+                        @include vp(width, 244px);
+                        @include vp(height, 77px);
+                        @include vp(border-radius, 100px);
+                        background: $black;
+                        @include vp(border, 1px solid $black);
+                        transition: left 0.35s ease-in-out;
+                    }
+
+                    &.left {
+                        .round_bar {
+                            @include vp(left, 1px);
+                        }
+                    }
+
+                    &.right {
+                        .round_bar {
+                            @include vp(left, 242px);
+                        }
                     }
                 }
-                &.right{
-                    .round_bar{
-                        @include vp(left, 242px);
-                    }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    clear: both;
                 }
+
+               
             }
-            &::after{
-                content: '';
-                display: block;
-                clear: both;
+            &.active {
+                position: fixed;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                @include vp(max-width, 750px);
+                @include vp(width, 750px);
+                background: $thickGreen;
+                @include vp(padding-bottom, 20px);
+                z-index: 100;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
             }
         }
 
 
+
     }
-    &.home{
-        @include vp(height, 546px);    
+
+    &.home {
+        @include vp(height, 546px);
         background-color: $thickGreen;
-        @include vp(border-radius, 0 0 40px 40px); 
-        
+        @include vp(border-radius, 0 0 40px 40px);
+
     }
+
     &.common {
         display: flex;
         align-items: center;
@@ -122,19 +149,21 @@ header{
         right: 0px;
         top: 0px;
         justify-content: space-between;
-        @include vp(height, 112px); 
+        @include vp(height, 112px);
         background-color: rgb(255, 255, 255);
         z-index: 100;
+
         .btn_back {
             background: url("../images/btn/btn_back.png") center center no-repeat;
-            @include vp(background-size, 96px auto); 
-            @include vp(padding, 48px 50px); 
+            @include vp(background-size, 96px auto);
+            @include vp(padding, 48px 50px);
         }
+
         h1 {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            @include vp( font-size, 30px); 
+            @include vp(font-size, 30px);
             font-weight: 700;
         }
     }
@@ -142,21 +171,23 @@ header{
 
 
 /*gnb*/
-.gnb{
+.gnb {
     display: none;
     position: fixed;
-    top:0;
-    left:50%;
+    top: 0;
+    left: 50%;
     transform: translateX(-50%);
     @include vp(max-width, 750px);
     @include vp(width, 750px);
     height: 100%;
-    background: #f6f6f6;   
+    background: #f6f6f6;
     z-index: 1000;
-    .contents{
+
+    .contents {
         overflow-y: auto;
         overflow-x: hidden;
         height: 100%;
+
         // &::-webkit-scrollbar {
         //     @include vp(max-height, 50px);  
         //     @include vp(width, 4px);  
@@ -168,213 +199,241 @@ header{
         // &::-webkit-scrollbar-track {
         //     background: transparent;
         // }
-        .gnb_top{
+        .gnb_top {
             display: flex;
             align-items: center;
             justify-content: right;
-            @include vp(padding, 96px 8px 0 0 );    
-            @include vp(margin-bottom, 38px);    
-            button{
-                @include vp(width, 96px);    
-                @include vp(height, 96px);    
-                &.btn_alarm{
+            @include vp(padding, 96px 8px 0 0);
+            @include vp(margin-bottom, 38px);
+
+            button {
+                @include vp(width, 96px);
+                @include vp(height, 96px);
+
+                &.btn_alarm {
                     background: url("../images/icons/icon_alert_b.png") 0 0 no-repeat;
-                    @include vp(background-size, 96px auto);  
+                    @include vp(background-size, 96px auto);
                 }
-                &.btn_close{
+
+                &.btn_close {
                     background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
-                    @include vp(background-size, 96px auto);  
+                    @include vp(background-size, 96px auto);
                 }
             }
         }
-        .input_link{
+
+        .input_link {
             @include vp(width, 670px);
-            margin:0 auto;  
+            margin: 0 auto;
         }
-        nav{
+
+        nav {
             @include vp(padding, 0 40px);
             @include vp(margin-top, 84px);
-            ul{
+
+            ul {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 @include vp(column-gap, 22px);
+
                 // justify-content: flex-start;
-                .icon{
+                .icon {
                     flex: 1 1 calc(50% - 22px);
+
                     @include breakpoint {
                         flex: 1 1 calc(50% - 2.9333333333vw);
                     }
-    
+
                     box-sizing: border-box;
-                    @include vp(padding-bottom,54px);
+                    @include vp(padding-bottom, 54px);
                     @include vp(border-bottom, 1px solid $black);
                     @include vp(margin-bottom, 92px);
-                    a{ 
+
+                    a {
                         position: relative;
                         display: inline-block;
-                        @include vp(font-size, 32px );
-                        @include vp(padding-left, 64px );
-                        @include vp(line-height, 32px );
+                        @include vp(font-size, 32px);
+                        @include vp(padding-left, 64px);
+                        @include vp(line-height, 32px);
                         color: $black;
                         font-weight: 600;
-                        &::before{
+
+                        &::before {
                             content: '';
-                            @include vp(width, 48px );
-                            @include vp(height, 48px );
+                            @include vp(width, 48px);
+                            @include vp(height, 48px);
                             display: block;
                             position: absolute;
                             @include vp(top, -5px);
-                            left:0;
-                
+                            left: 0;
+
                         }
                     }
-                    &.speaker{
-                        a{
-                            &::before{
+
+                    &.speaker {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-                    &.edit{
-                        a{
-                            &::before{
+
+                    &.edit {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-                    &.chart{
-                        a{
-                            &::before{
+
+                    &.chart {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-                    &.bookmark{
-                        a{
-                            &::before{
+
+                    &.bookmark {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-                    &.collections{
-                        a{
-                            &::before{
+
+                    &.collections {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-                    &.menubook{
-                        a{
-                            &::before{
+
+                    &.menubook {
+                        a {
+                            &::before {
                                 background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px  auto);
+                                @include vp(background-size, 48px auto);
                             }
-                        }    
+                        }
                     }
-    
+
                 }
             }
         }
-        .app_setting_content{
-            @include vp(margin-top, -8px );
-            .inner{
+
+        .app_setting_content {
+            @include vp(margin-top, -8px);
+
+            .inner {
                 @include vp(padding, 0px 40px);
-                h3{
+
+                h3 {
                     @include vp(margin-bottom, 40px);
                     @include vp(font-size, 32px);
-                    color: $black; 
+                    color: $black;
                     font-weight: 600;
                 }
-                .btn_list{
+
+                .btn_list {
                     display: flex;
                     @include vp(column-gap, 22px);
-                    li{
-                        button{
+
+                    li {
+                        button {
                             position: relative;
                             @include vp(width, 324px);
                             @include vp(height, 120px);
                             @include vp(border-radius, 40px);
                             background: $white;
                             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-                            span{
+
+                            span {
                                 position: relative;
                                 @include vp(font-size, 26px);
                                 font-weight: 400;
                                 @include vp(padding-left, 68px);
-                                &::before{
+
+                                &::before {
                                     content: '';
                                     position: absolute;
                                     @include vp(top, -10px);
-                                    left:0;
+                                    left: 0;
                                     @include vp(width, 48px);
                                     @include vp(height, 48px);
                                 }
                             }
                         }
-                        &.btn_alarm{
-                            button{
-                                span{
-                                    &::before{
+
+                        &.btn_alarm {
+                            button {
+                                span {
+                                    &::before {
                                         background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
-                                        @include vp(background-size, 48px  auto);
-                                        
+                                        @include vp(background-size, 48px auto);
+
                                     }
                                 }
                             }
                         }
-                        &.btn_collections{ 
-                            button{
-                                span{
-                                    &::before{
+
+                        &.btn_collections {
+                            button {
+                                span {
+                                    &::before {
                                         background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;
-                                        @include vp(background-size, 48px  auto);
-                                        
+                                        @include vp(background-size, 48px auto);
+
                                     }
+                                }
                             }
-                        }
                         }
                     }
                 }
             }
         }
-     
-        .logout_box{
-            @include vp(margin-top, 80px );
-            @include vp(background-size, 48px  auto);
-            .inner{
+
+        .logout_box {
+            @include vp(margin-top, 80px);
+            @include vp(background-size, 48px auto);
+
+            .inner {
                 @include vp(border-top, 1px solid $gray );
                 text-align: center;
-                .btn_logout{
-                    @include vp(margin, 60px 120px );
-                    span{
+
+                .btn_logout {
+                    @include vp(margin, 60px 120px);
+
+                    span {
                         position: relative;
                         font-weight: 400;
-                        @include vp(font-size, 26px );
-                        @include vp(line-height, 32px );
-                        @include vp(padding-left, 68px );
-                        &:before{
+                        @include vp(font-size, 26px);
+                        @include vp(line-height, 32px);
+                        @include vp(padding-left, 68px);
+
+                        &:before {
                             content: '';
                             display: block;
                             position: absolute;
-                            @include vp(width, 48px );
-                            @include vp(height, 48px );
-                            @include vp(top, -10px );
-                            left:0;
+                            @include vp(width, 48px);
+                            @include vp(height, 48px);
+                            @include vp(top, -10px);
+                            left: 0;
                             background: url("../images/icons/icon_logout.png") 0 0 no-repeat;
-                            @include vp(background-size, 48px  auto);
+                            @include vp(background-size, 48px auto);
                         }
                     }
-                    
+
                 }
             }
         }
     }
-  
-}
 
+}
