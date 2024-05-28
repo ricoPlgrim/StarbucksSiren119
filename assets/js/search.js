@@ -1,59 +1,77 @@
     
 /* global var*/
 var _w;
-var _htmlBody;
-var _gnb;
-var _gnbBtn;
-var _gnbCloseBtn;
+var _search;
+var _searchInput;
+var _deleteAllBtn;
+var _btnTextDelete;
+var searchListBox;
+var searchListItem;
+var btnSearhDelete;
 
-var commonUi = {
+var searchUi = {
 
     init: function () {
-        commonUi.loadEvent();
+        searchUi.loadEvent();
     },
     create: function(){
         _w = $( window );
-        _htmlBody = $( "html, body" );
-        _gnb = $( ".gnb" );
-        _gnbBtn = $( ".btn_hamburger" );
-        _gnbCloseBtn = _gnb.find( ".btn_close" );
-        console.log( "create init" );
+        _search = $( ".searh" );
+        _searchInput= _search.find( ".search_input" );
+        _deleteAllBtn = _search.find( ".btn_all_delete" );
+        _btnTextDelete = _search.find( ".btn_text_delete" );
+        searchListBox = _search.find( ".search_list" );
+
+        btnSearhDelete = _search.find( ".btn_searh_delete" );
+
+        console.log( _deleteAllBtn );
     },
     addEvent: function(){
-        commonUi.resizeEvent( null );
-        _w.on( "resize", commonUi.resizeEvent );
-        
-        _gnbBtn.on( "click", commonUi.gnbBtnClick );
-        _gnbCloseBtn.on( "click", commonUi.gnbCloseClick );
-        console.log( "addEvent init" );
+        _searchInput.on( "input", searchUi.inputTarget );
+        _deleteAllBtn.on( "click", searchUi.deleteAllBtnClick );
+        _btnTextDelete.on( "click", searchUi.inPutTextDeleteClick );
+        btnSearhDelete.on( "click", searchUi.btnSearhListDeleteClick );
     },
 
     loadEvent: function () {
-        commonUi.create();
-        commonUi.addEvent();
-        console.log( "loadEvent init" );
+        searchUi.create();
+        searchUi.addEvent();
+    },
+
+
+    //검색어 입력시 한글자이상 버튼 삭제 버튼 노출
+    inputTarget: function(){
+        var inputLength = $( this ).val().length;
+
+        if( inputLength >0 ){
+            _btnTextDelete.css( "display", "block" );
+        }else{
+            _btnTextDelete.css( "display", "none" );
+        }
 
     },
 
-    resizeEvent: function(){
-        console.log( "window resize" );
+    //전체 삭제 이벤트 
+    deleteAllBtnClick: function(){ 
+        searchListBox.find( "li" ).remove();
+        console.log( "전체 삭제!" );
     },
 
-    gnbBtnClick: function(){
-        _htmlBody.css( "overflow", "hidden" );
-        _gnb.css( "display", "block" );
+    //인풋에 텍스트 글자 삭제
+    inPutTextDeleteClick: function(){
+        _searchInput.val("");
     },
 
-    gnbCloseClick: function(){
-        _htmlBody.css( "overflow", "auto" );
-        _gnb.css( "display", "none" );
+    //최근 검색어 리스트 삭제버튼 클릭
+    btnSearhListDeleteClick: function(){
+        var that = $( this ).parents("li").remove();
+        console.log( that); 
     }
-
    
 };
-
+ 
 
 
 $(function () {
-    commonUi.init();
+    searchUi.init();
 });

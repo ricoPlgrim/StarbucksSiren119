@@ -4,6 +4,8 @@
 @import 'base/mixin'; 
 #wrap{
     &.searh{
+        overflow-x: hidden;
+        overflow-y: auto;
         section{
             background: #f6f6f6;  
             height: 100vh;
@@ -31,7 +33,7 @@
                         @include vp(border-radius, 12px );
                         @include vp(font-size, 26px );
                         @include vp(letter-spacing, .5px );
-                        @include vp(padding, 24px 40px 24px 80px );
+                        @include vp(padding, 24px 60px 24px 80px );
                         box-sizing: border-box;
                         color:$black;
 
@@ -42,6 +44,9 @@
                             @include vp(letter-spacing, .5px );
                             font-weight: 400;
                          }
+                         &:focus{
+                            @include vp(border, 2px solid $black );
+                        }    
                     } 
                     &:before{
                         content: '';
@@ -54,6 +59,22 @@
                         background: url( "../images/icons/icon_searh.png") 0 0 no-repeat;
                         @include vp(background-size, 80px auto );
                         z-index: 1;
+                    }
+                    &:focus-within {
+                        &:before{
+                            background: url( "../images/icons/icon_searh_on.png") 0 0 no-repeat;
+                            @include vp(background-size, 80px auto );
+                        }
+                    }
+                    .btn_text_delete{
+                        display: none;
+                        position: absolute;
+                        @include vp(top, 24px ); 
+                        @include vp(right, 28px ); 
+                        @include vp(width, 32px ); 
+                        @include vp(height, 32px );
+                        background: url("../images/btn/btn_searh_delete.png") 0 0 no-repeat;
+                        @include vp(background-size, 32px  auto );
                     }
                 }   
                 .btn_searh_delete{

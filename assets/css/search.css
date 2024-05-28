@@ -643,6 +643,10 @@ body {
   font-display: swap;
   src: local("Pretendard Thin"), url(../fonts/Pretendard/Pretendard-Thin.woff2) format("woff2"), url(../fonts/Pretendard/Pretendard-Thin.woff) format("woff");
 }
+#wrap.searh {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
 #wrap.searh section {
   background: #f6f6f6;
   height: 100vh;
@@ -709,7 +713,7 @@ body {
   border-radius: 12px;
   font-size: 26px;
   letter-spacing: 0.5px;
-  padding: 24px 40px 24px 80px;
+  padding: 24px 60px 24px 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000;
@@ -732,7 +736,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
-    padding: 3.2vw 5.3333333333vw 3.2vw 10.6666666667vw;
+    padding: 3.2vw 8vw 3.2vw 10.6666666667vw;
   }
 }
 #wrap.searh section .input_contents .input_box > input::-webkit-input-placeholder {
@@ -799,6 +803,14 @@ body {
     letter-spacing: 0.0666666667vw;
   }
 }
+#wrap.searh section .input_contents .input_box > input:focus {
+  border: 2px solid #000;
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box > input:focus {
+    border: 0.2666666667vw solid #000;
+  }
+}
 #wrap.searh section .input_contents .input_box:before {
   content: "";
   display: block;
@@ -824,6 +836,50 @@ body {
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box:before {
     background-size: 10.6666666667vw auto;
+  }
+}
+#wrap.searh section .input_contents .input_box:focus-within:before {
+  background: url("../images/icons/icon_searh_on.png") 0 0 no-repeat;
+  background-size: 80px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box:focus-within:before {
+    background-size: 10.6666666667vw auto;
+  }
+}
+#wrap.searh section .input_contents .input_box .btn_text_delete {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 32px;
+  height: 32px;
+  background: url("../images/btn/btn_searh_delete.png") 0 0 no-repeat;
+  background-size: 32px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box .btn_text_delete {
+    top: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box .btn_text_delete {
+    right: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box .btn_text_delete {
+    width: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box .btn_text_delete {
+    height: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box .btn_text_delete {
+    background-size: 4.2666666667vw auto;
   }
 }
 #wrap.searh section .input_contents .btn_searh_delete {
