@@ -1,0 +1,135 @@
+@import 'base/reset'; 
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/mixin'; 
+#wrap{
+    &.searh{
+        section{
+            background: #f6f6f6;  
+            height: 100vh;
+            height: 100dvh;
+            @include vp(padding-bottom, 100px ); 
+            .input_contents{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include vp(padding, 104px 8px 80px 40px ); 
+                .input_box{
+                    position: relative;
+                    @include vp(width, 606px ); 
+                    @include vp(height, 80px );
+                    @include vp(border, 2px solid $gray );
+                    @include vp(border-radius, 12px );
+                    background: #fff;
+                    >input{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width: 100%;
+                        height: 100%;
+                        border:0;
+                        @include vp(border-radius, 12px );
+                        @include vp(font-size, 26px );
+                        @include vp(letter-spacing, .5px );
+                        @include vp(padding, 24px 40px 24px 80px );
+                        box-sizing: border-box;
+                        color:$black;
+
+                        font-weight: 400;
+                        &::placeholder {
+                            color:    #bbb;
+                            @include vp(font-size, 26px );
+                            @include vp(letter-spacing, .5px );
+                            font-weight: 400;
+                         }
+                    } 
+                    &:before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        @include vp(width, 80px );
+                        @include vp(height, 80px );
+                        background: url( "../images/icons/icon_searh.png") 0 0 no-repeat;
+                        @include vp(background-size, 80px auto );
+                        z-index: 1;
+                    }
+                }   
+                .btn_searh_delete{
+                    @include vp(width, 96px ); 
+                    @include vp(height, 96px );
+                    background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
+                    @include vp(background-size, 96px auto );
+                }
+            }
+            .searh_contents{
+                @include vp(padding, 0 104px 0 60px ); 
+                .search_top{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3{
+                        @include vp(font-size, 32px ); 
+                        @include vp(line-height, 32px ); 
+                        font-weight: 600;
+                    }
+                    .btn_all_delete{
+                        position: relative;;
+                        @include vp(font-size, 24px ); 
+                        @include vp(line-height, 28px ); 
+                        color: $black;
+                        font-weight: 400;
+                        opacity: .5;
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom:0;
+                            left:0;
+                            width: 100%;
+                            background-color: $black;
+                            @include vp(height, 2px ); 
+                            opacity: .5;
+                        }
+                    }
+                }
+                .search_list_box{
+                    @include vp(padding-top, 54px ); 
+                    .search_list{
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            display: flex;
+                            align-items: top;
+                            justify-content: space-between;
+                            @include vp(margin-top, 36px ); 
+                           a{
+                            &.title{
+                                @include vp(min-width, 190px ); 
+                                @include vp(max-width, 490px ); 
+                                @include vp(font-size, 26px ); 
+                                @include vp(line-height, 30px ); 
+                                font-weight: 400;
+                                color: $black;
+                                opacity: .8;
+                            }
+                            &.btn_searh_delete{
+                                display: block;
+                                @include vp(margin-right, 28px ); 
+                                @include vp(width, 32px ); 
+                                @include vp(height, 32px ); 
+                                background: url("/");
+                                background: url("../images/btn/btn_searh_delete.png") 0 0 no-repeat;
+                                @include vp(background-size, 32px auto);  
+                            }
+                           } 
+                           &:first-child{
+                            margin-top:0;
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+} 
