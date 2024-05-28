@@ -9,6 +9,7 @@ var reportUi = {
 
     init: function () {
         reportUi.loadEvent();
+        reportUi.detailSwiper(); 
     },
     create: function(){
         _w = $( window );
@@ -51,6 +52,14 @@ var reportUi = {
         selectOption.text(selectedText);
         selectBox.find(".option_list").removeClass("active");
     },
+    detailSwiper: function(){
+        var swiper = new Swiper(".detail_visual", {
+			slidesPerView: "auto",
+			pagination: {
+				el: ".swiper-pagination",
+			},
+		});
+	},
 };
 
 $(function () {
