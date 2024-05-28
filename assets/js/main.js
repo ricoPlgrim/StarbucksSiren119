@@ -43,6 +43,26 @@ var mainUi = {
         var menuView = _main.find(".menu_view_list");
         var menuViewList = menuView.find("li.menu_view_item");
 
+        _menuBtnlist.eq(index).toggleClass( "on" );
+
+
+        if ((index + 1) % 2 === 0) {
+            //클릭한 녀석에 전 엘리먼트 구해서
+            //현재 엘리먼트 다음 순으로  이동
+            // $( ".menu_btn-list" ).eq(index)
+            var prevElem = _menuBtnlist.eq(index - 1);
+            $(this).after(prevElem);
+          
+            console.log( "짝수" );
+
+            // $(this).addClass('highlight');
+        } else {
+            console.log( "홀수" );
+        }
+
+
+        return;
+
         console.log(menuViewList.length);
         var textBox = menuView.find(".inner");
         var btnClose = menuViewList.eq(index).find(".btn_close");

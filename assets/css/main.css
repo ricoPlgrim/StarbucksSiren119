@@ -26,6 +26,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   gap: 22px;
   max-width: 670px;
@@ -66,6 +69,8 @@
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
   border-radius: 40px;
   background: #fff;
+  -webkit-transition: all 0.45s;
+  transition: all 0.45s;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li {
@@ -226,7 +231,30 @@
     background-size: 14.6666666667vw auto;
   }
 }
+.sections .section_inner .menu_btn-list > li.on {
+  width: 670px;
+  height: 394px;
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .menu_btn-list > li.on {
+    width: 89.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .menu_btn-list > li.on {
+    height: 52.5333333333vw;
+  }
+}
+.sections .section_inner .menu_btn-list > li:nth-child(odd) {
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.sections .section_inner .menu_btn-list > li:nth-child(even) {
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
 .sections .section_inner .menu_view_list {
+  display: none;
   position: absolute;
   top: 0;
   left: 40px;

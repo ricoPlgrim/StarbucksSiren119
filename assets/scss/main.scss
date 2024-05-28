@@ -19,11 +19,11 @@
             position: relative;
             display: flex; 
             flex-wrap: wrap;
+            align-items: flex-start;
             width: 100%;
             @include vp(gap, 22px); 
             @include vp(max-width, 670px);
             @include vp(padding-bottom, 104px); 
-            
         
             margin:0 auto;
             z-index: 20; 
@@ -38,6 +38,7 @@
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05)); 
                 @include vp(border-radius, 40px); 
                 background: #fff;
+                transition: all .45s;
                 a{ 
                     display: flex;
                     flex-direction: column;
@@ -117,11 +118,22 @@
                         }
                     }
                 }
+                &.on{
+                    @include vp(width, 670px); 
+                    @include vp(height, 394px); 
+                }
+                &:nth-child(odd){
+                    transform-origin: left;
+                }
+                &:nth-child(even){
+                    transform-origin: right;
+                }
             }
        
         }
 
         .menu_view_list{
+            display: none;
             position: absolute;
             top:0;
             @include vp(left, 40px); 
@@ -231,7 +243,7 @@
                     transform: translateY(346px);
                     @include breakpoint {
                         transform: translateY(46.13333333333333vw);
-                      }
+                    }
                     
                 }
                 &:nth-child(5),

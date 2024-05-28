@@ -6,8 +6,16 @@ header{
     .header_inner{
         @include vp(padding, 0 42px);   
         .header_top{
-            @include vp(padding-top, 116px);   
+            position: fixed;
+            @include vp(top, 112px);    
+            left:50%;
+            transform: translateX(-50%);
+            @include vp(padding, 0 42px);   
             display: flex;
+            @include vp(width, 750px);    
+            @include vp(max-width, 750px);    
+            z-index: 1000;
+            // background: $thickGreen;
             .btn_hamburger{
                 display: block;
                 @include vp(width, 54px);    
@@ -30,7 +38,9 @@ header{
         h1{
             display: block;
             @include vp(width, 320px);
-            @include vp(margin, 22px auto 0);
+            @include vp(margin, 0 auto );
+            @include vp(padding-top, 200px );
+
         }
 
         .header_switchbox{
@@ -104,5 +114,243 @@ header{
         @include vp(border-radius, 0 0 40px 40px); 
         
     }
+}
+
+
+/*gnb*/
+.gnb{
+    display: none;
+    position: fixed;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    @include vp(max-width, 750px);
+    @include vp(width, 750px);
+    height: 100%;
+    background: #f6f6f6;   
+    z-index: 1000;
+    .contents{
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100%;
+        // &::-webkit-scrollbar {
+        //     @include vp(max-height, 50px);  
+        //     @include vp(width, 4px);  
+        // }
+        // &::-webkit-scrollbar-thumb {
+        //     background: rgb(103, 103, 103);
+        //     @include vp(border-radius, 10px); 
+        // }
+        // &::-webkit-scrollbar-track {
+        //     background: transparent;
+        // }
+        .gnb_top{
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            @include vp(padding, 96px 8px 0 0 );    
+            @include vp(margin-bottom, 38px);    
+            button{
+                @include vp(width, 96px);    
+                @include vp(height, 96px);    
+                &.btn_alarm{
+                    background: url("../images/icons/icon_alert_b.png") 0 0 no-repeat;
+                    @include vp(background-size, 96px auto);  
+                }
+                &.btn_close{
+                    background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
+                    @include vp(background-size, 96px auto);  
+                }
+            }
+        }
+        .input_link{
+            @include vp(width, 670px);
+            margin:0 auto;  
+        }
+        nav{
+            @include vp(padding, 0 40px);
+            @include vp(margin-top, 84px);
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                @include vp(column-gap, 22px);
+                // justify-content: flex-start;
+                .icon{
+                    flex: 1 1 calc(50% - 22px);
+                    @include breakpoint {
+                        flex: 1 1 calc(50% - 2.9333333333vw);
+                    }
+    
+                    box-sizing: border-box;
+                    @include vp(padding-bottom,54px);
+                    @include vp(border-bottom, 1px solid $black);
+                    @include vp(margin-bottom, 92px);
+                    a{ 
+                        position: relative;
+                        display: inline-block;
+                        @include vp(font-size, 32px );
+                        @include vp(padding-left, 64px );
+                        @include vp(line-height, 32px );
+                        color: $black;
+                        font-weight: 600;
+                        &::before{
+                            content: '';
+                            @include vp(width, 48px );
+                            @include vp(height, 48px );
+                            display: block;
+                            position: absolute;
+                            @include vp(top, -5px);
+                            left:0;
+                
+                        }
+                    }
+                    &.speaker{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+                    &.edit{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+                    &.chart{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+                    &.bookmark{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+                    &.collections{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+                    &.menubook{
+                        a{
+                            &::before{
+                                background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
+                                @include vp(background-size, 48px  auto);
+                            }
+                        }    
+                    }
+    
+                }
+            }
+        }
+        .app_setting_content{
+            @include vp(margin-top, -8px );
+            .inner{
+                @include vp(padding, 0px 40px);
+                h3{
+                    @include vp(margin-bottom, 40px);
+                    @include vp(font-size, 32px);
+                    color: $black; 
+                    font-weight: 600;
+                }
+                .btn_list{
+                    display: flex;
+                    @include vp(column-gap, 22px);
+                    li{
+                        button{
+                            position: relative;
+                            @include vp(width, 324px);
+                            @include vp(height, 120px);
+                            @include vp(border-radius, 40px);
+                            background: $white;
+                            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+                            span{
+                                position: relative;
+                                @include vp(font-size, 26px);
+                                font-weight: 400;
+                                @include vp(padding-left, 68px);
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    @include vp(top, -10px);
+                                    left:0;
+                                    @include vp(width, 48px);
+                                    @include vp(height, 48px);
+                                }
+                            }
+                        }
+                        &.btn_alarm{
+                            button{
+                                span{
+                                    &::before{
+                                        background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
+                                        @include vp(background-size, 48px  auto);
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        &.btn_collections{ 
+                            button{
+                                span{
+                                    &::before{
+                                        background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;
+                                        @include vp(background-size, 48px  auto);
+                                        
+                                    }
+                            }
+                        }
+                        }
+                    }
+                }
+            }
+        }
+     
+        .logout_box{
+            @include vp(margin-top, 80px );
+            @include vp(background-size, 48px  auto);
+            .inner{
+                @include vp(border-top, 1px solid $gray );
+                text-align: center;
+                .btn_logout{
+                    @include vp(margin, 60px 120px );
+                    span{
+                        position: relative;
+                        font-weight: 400;
+                        @include vp(font-size, 26px );
+                        @include vp(line-height, 32px );
+                        @include vp(padding-left, 68px );
+                        &:before{
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            @include vp(width, 48px );
+                            @include vp(height, 48px );
+                            @include vp(top, -10px );
+                            left:0;
+                            background: url("../images/icons/icon_logout.png") 0 0 no-repeat;
+                            @include vp(background-size, 48px  auto);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+  
 }
 

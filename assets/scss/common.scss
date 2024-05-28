@@ -15,6 +15,7 @@
 
 
 .bottom_sheet{
+    display: none;
     position: fixed;
     top:0;
     left:50%; 
@@ -40,7 +41,7 @@
                     content: '';
                     position: absolute;
                     top:0;
-                    left:50%;
+                    left:50%; 
                     transform: translateX(-50%);
                     @include vp(border-radius, 100px );    
                     @include vp(width, 68px );    
