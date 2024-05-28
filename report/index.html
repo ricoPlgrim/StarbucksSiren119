@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/report.css">
+</head>
+<body>
+    <main id="wrap">
+        <header class="common">
+            <button class="btn_back"></button>
+            <h1>보고작성</h1>
+        </header>
+        <section class="report">
+            <h2 class="blind">보고작성</h2>
+            <div class="category_wrap">
+                <div class="menu_img">
+                    <img src="../assets/images/icons/icon_disaster.png" alt="메뉴 아이콘">
+                </div>
+                <div class="text_box">
+                    <div class="title">보고하기</div>
+                    <div class="category_info">
+                        <span class="text01">재해시설</span>
+                        <span class="text02">누수</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create_form">
+                <div class="file_upload_wrap">
+                    <div class="title01">사진</div>
+                    <ul class="file_list">
+                        <!-- 이미지 추가 버튼 -->
+                        <li>
+                            <div class="btn_upload">
+                                <input type="file" name="file" id="imageFile" accept="image/*" multiple>
+                            </div>
+                        </li>
+                        <!-- 추가된 이미지 -->
+                        <li>
+                            <div class="img_box"><img src="../assets/images/temp/report01.png" alt="업로드 이미지" /></div>
+                            <!-- <span class="btn_close">삭제</span> -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">응급조치</div>
+                    <ul class="form_list scroll">
+                        <li class="on"><span>고객대피</span></li>
+                        <li><span>소방서 출동</span></li>
+                    </ul>
+                </div>   
+                <div class="form_box">
+                    <div class="title01">발생매장</div>
+                    <ul class="form_list scroll">
+                        <li><span>Store1</span></li>
+                        <li><span>Store2</span></li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">발생시간</div>
+                    <ul class="form_list">
+                        <li><span>2024년 04월 03일</span></li>
+                        <li class="select_box">
+                            <div class="select_option">07시</div>
+                            <ul class="option_list">
+                                <li>07시</li>
+                                <li>08시</li>
+                                <li>09시</li>
+                                <li>10시</li>
+                                <li>11시</li>
+                                <li>12시</li>
+                                <li>13시</li>
+                                <li>14시</li>
+                                <li>15시</li>
+                                <li>16시</li>
+                                <li>17시</li>
+                                <li>18시</li>
+                                <li>19시</li>
+                                <li>20시</li>
+                                <li>21시</li>
+                                <li>22시</li>
+                            </ul>
+                        </li>
+                        <li class="select_box">
+                            <div class="select_option">00분</div>
+                            <ul class="option_list">
+                                <li>00분</li>
+                                <li>05분</li>
+                                <li>10분</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">발생장소</div>
+                    <ul class="form_list scroll">
+                        <li><span>플로어</span></li>
+                        <li><span>백룸</span></li>
+                        <li><span>창가</span></li>
+                        <li><span>천장</span></li>
+                        <li><span>DT 영업</span></li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">영업가부</div>
+                    <ul class="form_list scroll">
+                        <li><span>영업가능</span></li>
+                        <li><span>일시 영업중단</span></li>
+                        <li><span>DT 영업중단</span></li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">재난피해</div>
+                    <ul class="form_list scroll">
+                        <li><span>파트너</span></li>
+                        <li><span>고객</span></li>
+                        <li><span>물품</span></li>
+                        <li><span>기타</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="write_preview">
+                <div class="preview_header">
+                    <h3>보고내용 미리보기<span>선택하신 항목이 자동 입력됩니다</span></h3>
+                </div>
+                <ul class="preview_list">
+                   <li>
+                        <dl>
+                            <dt>응급조치</dt>
+                            <dd>
+                                <span class="emerg01">고객대피</span>
+                                <span class="emerg02">소방서</span>
+                            </dd>
+                        </dl>
+                   </li>
+                   <li>
+                        <dl>
+                            <dt>발생매장</dt>
+                            <dd>성수역점</dd>
+                        </dl>
+                        <dl>
+                            <dt>발생시간</dt>
+                            <dd>2024년 4월 30일 09시 23분</dd>
+                        </dl>
+                        <dl>
+                            <dt>발생장소</dt>
+                            <dd>플로어, 백룸</dd>
+                        </dl>
+                        <dl>
+                            <dt>영업가부</dt>
+                            <dd>일시 영업 중단,DT 영업중단</dd>
+                        </dl>
+                        <dl>
+                            <dt>재난피해</dt>
+                            <dd>물품,기타</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
+                    </li>
+                    <li>
+                        <div class="switch_box">
+                            <h4>긴급 보고 필요</h4>
+                            <label for="switch01" class="switch01">
+                                <input type="checkbox" id="switch01" hidden />
+                                <span class="slider"></span>
+                            </label> 
+                           
+                        </div>
+                    </li>
+                    <li>
+                        <div class="switch_box">
+                            <h4>유지보수 연결</h4>
+                            <label for="switch02" class="switch01">
+                                <input type="checkbox" id="switch02" hidden />
+                                <span class="slider"></span>
+                            </label> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn_report">
+                <button>보고하기</button>
+            </div>
+        </section>
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/report.js"></script>
+</body>
+</html>

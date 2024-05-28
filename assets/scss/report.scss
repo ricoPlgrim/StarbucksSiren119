@@ -1,0 +1,301 @@
+@import 'base/variables';
+@import 'base/mixin'; 
+
+.report {
+    @include vp( font-size, 32px);
+    @include vp( padding-top, 112px);
+    .category_wrap {
+        display: flex;
+        align-items: center;
+        @include vp( padding, 28px 40px); 
+        @include vp( margin-bottom, 40px); 
+        background: #EEE;
+        .menu_img{
+            @include vp( padding, 20px); 
+            @include vp( margin-right, 40px); 
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+            img {
+                @include vp( width, 70px); 
+            }
+        }
+        .text_box {
+            display: flex;
+            flex-direction: column;
+            .title {
+                @include vp( font-size, 22px); 
+                color: rgba(0, 0, 0, 0.58);
+            }
+            .category_info {
+                @include vp( font-size, 30px); 
+                font-weight: 600;
+                .text01 {
+                    @include vp( padding-right, 30px); 
+                    @include vp( margin-right, 8px); 
+                    background: url("../images/icons/ico_arrow_right.png") center right no-repeat;
+                    @include vp(background-size, 12px auto); 
+                }
+            }
+        }
+    }
+
+    .create_form {
+        @include vp( padding-left, 40px); 
+        .file_upload_wrap {
+            @include vp( margin-bottom, 60px); 
+            .title01 {
+                @include vp( font-size, 30px); 
+                @include vp( margin-bottom, 20px); 
+                font-weight: 600;
+            }
+            .file_list {
+                display: flex;
+                flex-direction: row;
+                li {
+                    @include vp( margin-right, 8px); 
+                }
+                .btn_upload {
+                    display: block;
+                    @include vp( width, 210px); 
+                    @include vp( height, 210px); 
+                    background: #eee url("../images/icons/ico_fileupload.png") no-repeat center;
+                    @include vp(  background-size, 48px auto);
+                    border-radius: 6px;
+                    input {
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                }
+                .img_box {
+                    position: relative;
+                    @include vp( width, 210px); 
+                    @include vp( height, 210px); 
+                    border-radius: 6px;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        width: 100%;
+                        height: auto;
+                    } &::before{
+                        content: '';
+                        display: block;
+                        padding-top: 100%;
+                    }
+                }
+            }
+        }
+        .form_box {
+            display: flex;
+            align-items: center;
+            @include vp( margin-bottom, 40px);
+            .title01 {
+                @include vp( font-size, 26px); 
+                @include vp( padding-right, 44px); 
+                text-wrap: nowrap;
+                font-weight: 600;
+            }
+            .form_list{
+                display: flex;
+                &.scroll {
+                    overflow-y: auto;
+                    &::-webkit-scrollbar {width: 3px; height:3px;}
+                    &::-webkit-scrollbar-thumb  {border-radius: 10px; background: #888;}
+                }
+                li {
+                    @include vp( padding, 24px 30px);
+                    @include vp( font-size, 26px); 
+                    @include vp( margin-right, 8px);
+                    color: rgba(0, 0, 0, 0.58);
+                    @include vp( border-radius, 12px);
+                    border: 1px solid #EEE;
+                    text-wrap: nowrap;
+                    &.on {
+                        border: 1px solid #00A862;
+                        color: #00A862;
+                        font-weight: 600;
+                    }
+                    &.select_box {
+                        position: relative;
+                        padding: 0px;
+                       .select_option {
+                        position: relative;
+                        @include vp( padding, 24px 60px 24px 20px); 
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                @include vp(top, 20px);
+                                @include vp(right, 16px);
+                                @include vp(width, 24px);
+                                @include vp(height, 32px);
+                                background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
+                                @include vp(background-size, 24px auto);
+                            }
+                       }
+                       .option_list {
+                        display: none;
+                        position: absolute;
+                        @include vp( top, 80px); 
+                        @include vp( height, 200px); 
+                        left: 0px;
+                        border: 1px solid #EEE;
+                        background-color: #fff;
+                        @include vp( border-radius, 12px);
+                        overflow-y: auto;
+                        &.active {
+                            display: block;
+                            }
+                        li {
+                            border: none;
+                            }
+                       }
+                    }
+                }
+            }           
+        }
+    }
+
+    .write_preview {
+        @include vp( margin, 0px 40px);     
+        @include vp( padding, 0px 40px);     
+        border-radius: 8px;
+        background: #F7F7F7;
+        .preview_header {
+            @include vp( padding-top, 60px);    
+            h3 {
+                @include vp( padding-bottom, 40px);
+                @include vp( margin-bottom, 40px);
+                @include vp( font-size, 30px);        
+                font-weight: 700;
+                border-bottom: 1px solid #333;
+                span {
+                    @include vp( padding-left, 20px); 
+                    color: rgba(0, 0, 0, 0.56);
+                    @include vp( font-size, 22px); 
+                }
+            }
+        }
+        .preview_list {
+            @include vp( padding-bottom, 44px); 
+            li {
+                @include vp( padding-bottom, 40px); 
+                @include vp( margin-bottom, 40px); 
+                border-bottom: 1px solid #ddd;
+                &:last-child {
+                    border-bottom: none;
+                }
+                dl {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center; 
+                    @include vp( padding-bottom, 20px); 
+                    @include vp( font-size, 26px);  
+                    &:first-child {
+                        padding-bottom: none;
+                    }
+                    dt {
+                        color: rgba(0, 0, 0, 0.58);
+                    }
+                    dd {
+                        span {
+                            @include vp( padding, 10px 10px 10px 52px); 
+                            border: 1px solid #000;
+                            border-radius: 6px;
+                        }
+                        .emerg01 {
+                            background: url("../images/icons/ico_emergency01.png") center left no-repeat;
+                            @include vp(background-size, 40px auto); 
+                            @include vp(background-position-x, 6px); 
+                        }
+                        .emerg02 {
+                            background: url("../images/icons/ico_emergency02.png") center left no-repeat;
+                            @include vp(background-size, 40px auto); 
+                            @include vp(background-position-x, 6px); 
+                        }
+                    }
+                }
+                textarea {
+                    @include vp(padding, 40px);   
+                    @include vp( line-height, 40px);   
+                    @include vp( font-size, 26px); 
+                    @include vp( height, 252px); 
+                    width:100%;
+                    border: none;
+                    background: #EDEDED;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    border-radius: 8px;
+                }
+                .switch_box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    h4 {
+                        @include vp( font-size, 30px); 
+                        font-weight: 700;
+                    }
+                    .switch01 {
+                        position: relative;
+                        display: inline-block;
+                        @include vp(width, 104px); 
+                        @include vp(height, 64px); 
+                        
+                        .slider {
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            right: 0px;
+                            bottom: 0px;
+                            cursor: pointer;
+                            background-color: #ddd;
+                            @include vp(border-radius, 200px); 
+                            transition: 0.4s;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                @include vp(width, 48px); 
+                                @include vp(height, 48px); 
+                                border-radius: 50%;
+                                background: #fff;
+                                @include vp(left, 8px); 
+                                @include vp(top, 8px); 
+                                transition: 0.4s;
+                            }
+                        }
+                        input[type="checkbox"]:checked + .slider {
+                            background: #00A862;
+                        }
+                        input[type="checkbox"]:checked + .slider {
+                           &::before {
+                            @include vp(transform, translateX(20px)); 
+                           }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .btn_report {
+        @include vp( margin, 40px); 
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        button {
+            @include vp( padding, 32px 0px); 
+            @include vp( font-size, 36px); 
+            font-weight: 700;
+            color: #fff;
+            border-radius: 8px;
+            background: #00A862;
+            width: 100%;
+        }
+    }
+}
+
+.detail {
+
+}

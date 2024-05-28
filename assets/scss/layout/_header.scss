@@ -114,6 +114,30 @@ header{
         @include vp(border-radius, 0 0 40px 40px); 
         
     }
+    &.common {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        justify-content: space-between;
+        @include vp(height, 112px); 
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        .btn_back {
+            background: url("../images/btn/btn_back.png") center center no-repeat;
+            @include vp(background-size, 96px auto); 
+            @include vp(padding, 48px 50px); 
+        }
+        h1 {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include vp( font-size, 30px); 
+            font-weight: 700;
+        }
+    }
 }
 
 
