@@ -13,12 +13,8 @@
   }
 }
 .report .category_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 28px 40px;
   margin-bottom: 40px;
   background: #EEE;
@@ -38,8 +34,7 @@
   margin-right: 40px;
   background: #fff;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
   .report .category_wrap .menu_img {
@@ -60,13 +55,8 @@
   }
 }
 .report .category_wrap .text_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .report .category_wrap .text_box .title {
   font-size: 22px;
@@ -139,15 +129,11 @@
   }
 }
 .report .create_form .file_upload_wrap .file_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 .report .create_form .file_upload_wrap .file_list li {
+  position: relative;
   margin-right: 8px;
 }
 @media screen and (max-width: 750px) {
@@ -187,7 +173,6 @@
   position: relative;
   width: 210px;
   height: 210px;
-  border-radius: 6px;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
@@ -204,23 +189,49 @@
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 100%;
   height: auto;
+  border-radius: 12px;
+}
+@media screen and (max-width: 750px) {
+  .report .create_form .file_upload_wrap .file_list .img_box img {
+    border-radius: 1.6vw;
+  }
 }
 .report .create_form .file_upload_wrap .file_list .img_box::before {
   content: "";
   display: block;
   padding-top: 100%;
 }
+.report .create_form .file_upload_wrap .file_list .btn_delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 54px;
+  height: 54px;
+  background: url("../images/btn/btn_file_delete.png") no-repeat center;
+  background-size: 54px auto;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  .report .create_form .file_upload_wrap .file_list .btn_delete {
+    width: 7.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .create_form .file_upload_wrap .file_list .btn_delete {
+    height: 7.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .create_form .file_upload_wrap .file_list .btn_delete {
+    background-size: 7.2vw auto;
+  }
+}
 .report .create_form .form_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 750px) {
@@ -245,18 +256,11 @@
   }
 }
 .report .create_form .form_box .form_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .report .create_form .form_box .form_list.scroll {
-  padding-bottom: 20px;
+  padding-bottom: 1px;
   overflow-y: auto;
-}
-@media screen and (max-width: 750px) {
-  .report .create_form .form_box .form_list.scroll {
-    padding-bottom: 2.6666666667vw;
-  }
 }
 .report .create_form .form_box .form_list.scroll::-webkit-scrollbar {
   width: 3px;
@@ -458,11 +462,11 @@
   }
 }
 .report .write_preview .preview_list {
-  padding-bottom: 44px;
+  padding-bottom: 80px;
 }
 @media screen and (max-width: 750px) {
   .report .write_preview .preview_list {
-    padding-bottom: 5.8666666667vw;
+    padding-bottom: 10.6666666667vw;
   }
 }
 .report .write_preview .preview_list li {
@@ -481,18 +485,14 @@
   }
 }
 .report .write_preview .preview_list li:last-child {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
   border-bottom: none;
 }
 .report .write_preview .preview_list li dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 20px;
   font-size: 26px;
 }
@@ -582,16 +582,90 @@
     height: 33.6vw;
   }
 }
+.report .write_preview .preview_list li .checkbox01 {
+  position: relative;
+  display: inline-block;
+}
+.report .write_preview .preview_list li .checkbox01 input[type=checkbox] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  opacity: 0;
+}
+.report .write_preview .preview_list li .checkbox01 label {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 84px;
+  background: url("../images/btn/btn_check_off.png") no-repeat;
+  background-size: 88px auto;
+  background-position-x: -20px;
+  background-position-y: -10px;
+  min-height: 66px;
+  line-height: 66px;
+  font-size: 30px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    padding-left: 11.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    background-size: 11.7333333333vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    background-position-x: -2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    background-position-y: -1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    min-height: 8.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    line-height: 8.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 label {
+    font-size: 4vw;
+  }
+}
+.report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
+  background: url("../images/btn/btn_check_on.png") no-repeat;
+  background-size: 88px auto;
+  background-position-x: -20px;
+  background-position-y: -10px;
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
+    background-size: 11.7333333333vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
+    background-position-x: -2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
+    background-position-y: -1.3333333333vw;
+  }
+}
 .report .write_preview .preview_list li .switch_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 .report .write_preview .preview_list li .switch_box h4 {
   font-size: 30px;
@@ -627,7 +701,6 @@
   cursor: pointer;
   background-color: #ddd;
   border-radius: 200px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -644,7 +717,6 @@
   background: #fff;
   left: 8px;
   top: 8px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -671,25 +743,18 @@
   background: #00A862;
 }
 .report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
+  transform: translateX(20px);
 }
 @media screen and (max-width: 750px) {
   .report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
+    transform: translateX(20px);
   }
 }
 .report .btn_report {
   margin: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 @media screen and (max-width: 750px) {
   .report .btn_report {

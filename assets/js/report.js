@@ -53,12 +53,14 @@ var reportUi = {
         selectBox.find(".option_list").removeClass("active");
     },
     detailSwiper: function(){
-        var swiper = new Swiper(".swiper01", {
-			slidesPerView: "auto",
-			pagination: {
-				el: ".swiper-pagination",
-			},
-		});
+        if ($('.detail_swiper').length) {
+            new Swiper('.detail_swiper', {
+                slidesPerView: 'auto',
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        }
 	},
 };
 

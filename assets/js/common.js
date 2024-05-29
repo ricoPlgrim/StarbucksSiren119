@@ -7,18 +7,21 @@ var _gnbBtn;
 var _gnbCloseBtn;
 var _scrollTopButton;
 var _stickyTarget;
-var isActive = false; 
 
 var switchBox = $(".header_switchbox");
-var switchBoxOffset = switchBox.offset().top; 
-var marginTop = parseInt(switchBox.css('margin-top'), 10); 
-var totalOffsetTop = switchBoxOffset - marginTop; 
+if( switchBox.length > 0  ){
+    var switchBoxOffset = switchBox.offset().top; 
+    var marginTop = parseInt(switchBox.css('margin-top'), 10); 
+    var totalOffsetTop = switchBoxOffset - marginTop; 
+}
 
 var _switchBox;
 var _switchBoxOffset;
 var _marginTop; 
 var _totalOffsetTop 
 
+var _bottomSheetDim;
+var _bottomSheetClose;
 
 var commonUi = {
 
@@ -35,11 +38,14 @@ var commonUi = {
         _stickyTarget= $( ".header_sticky " );
 
         _switchBox = $(".header_switchbox");
-        _switchBoxOffset = _switchBox.offset().top; 
-        _marginTop = parseInt(_switchBox.css('margin-top'), 10); 
-        _totalOffsetTop = _switchBoxOffset -_marginTop; 
+        if( switchBox.length > 0 ){
+            _switchBoxOffset = _switchBox.offset().top; 
+            _marginTop = parseInt(_switchBox.css('margin-top'), 10); 
+            _totalOffsetTop = _switchBoxOffset -_marginTop; 
+        }
 
-
+        _bottomSheetDim = $( ".bottom_sheet" ).find( ".dimd" );
+        _bottomSheetClose = $( ".bottom_sheet" ).find( ".btn_sheet_close" );
     },
     addEvent: function(){
         commonUi.resizeEvent( null );
@@ -49,7 +55,7 @@ var commonUi = {
         _gnbBtn.on( "click", commonUi.gnbBtnClick );
         _gnbCloseBtn.on( "click", commonUi.gnbCloseClick );
         _scrollTopButton.on( "click", commonUi.scrollTopClick );
-        console.log( "addEvent init" );
+        $(_bottomSheetDim).add(_bottomSheetClose).on("click", commonUi.bottomSheetHide);
     },
 
     loadEvent: function () {
@@ -95,8 +101,22 @@ var commonUi = {
     gnbCloseClick: function(){
         _htmlBody.css( "overflow", "auto" );
         _gnb.css( "display", "none" );
-    }
+    },
 
+    bottomSheetOpen: function(){
+        $( ".bottom_sheet" ).addClass( "open" );
+        setTimeout( function(){
+            $( ".sheet_wrap" ).addClass( "open" );
+        },50);
+    },
+   
+    bottomSheetHide: function(){
+        $( ".sheet_wrap" ).removeClass( "open" );
+        setTimeout( function(){
+            $( ".bottom_sheet" ).removeClass( "open" );
+        },100);
+    }
+    
    
 };
 

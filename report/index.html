@@ -42,7 +42,11 @@
                         <!-- 추가된 이미지 -->
                         <li>
                             <div class="img_box"><img src="../assets/images/temp/report01.png" alt="업로드 이미지" /></div>
-                            <!-- <span class="btn_close">삭제</span> -->
+                            <span class="btn_delete"></span>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/temp/report02.png" alt="업로드 이미지" /></div>
+                            <span class="btn_delete"></span>
                         </li>
                     </ul>
                 </div>
@@ -122,6 +126,30 @@
                         <li><span>기타</span></li>
                     </ul>
                 </div>
+                <div class="form_box">
+                    <div class="title01">상품명</div>
+                    <ul class="form_list">
+                        <li class="input_box">
+                            <input type="text" placeholder="">
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">제공컵</div>
+                    <ul class="form_list scroll">
+                        <li><span>매장컵</span></li>
+                        <li><span>리유저블</span></li>
+                        <li><span>텀블러</span></li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">컵사이즈</div>
+                    <ul class="form_list">
+                        <li class="input_box">
+                            <input type="text" placeholder="사이즈를 기재해주세요">
+                        </li>
+                    </ul>
+                </div>
             </div>
 
             <div class="write_preview">
@@ -164,23 +192,23 @@
                         <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
                     </li>
                     <li>
-                        <div class="switch_box">
-                            <h4>긴급 보고 필요</h4>
-                            <label for="switch01" class="switch01">
-                                <input type="checkbox" id="switch01" hidden />
-                                <span class="slider"></span>
-                            </label> 
-                           
-                        </div>
+                        <span class="checkbox01">
+                            <input type="checkbox" id="checkbox01" /> 
+                            <label for="checkbox01">긴급 보고 필요</label>
+                        </span>
                     </li>
                     <li>
-                        <div class="switch_box">
+                        <span class="checkbox01">
+                            <input type="checkbox" id="checkbox02" /> 
+                            <label for="checkbox02">유지보수 앱 연결하기</label>
+                        </span>
+                        <!-- <div class="switch_box">
                             <h4>유지보수 연결</h4>
                             <label for="switch02" class="switch01">
                                 <input type="checkbox" id="switch02" hidden />
                                 <span class="slider"></span>
                             </label> 
-                        </div>
+                        </div> -->
                     </li>
                 </ul>
             </div>
