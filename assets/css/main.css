@@ -624,6 +624,15 @@
     background-size: 5.8666666667vw auto;
   }
 }
+.sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox]:checked {
+  background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
+  background-size: 44px auto;
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox]:checked {
+    background-size: 5.8666666667vw auto;
+  }
+}
 .sections .section_inner .setting_contents .setting_top a {
   position: relative;
   margin-left: auto;
