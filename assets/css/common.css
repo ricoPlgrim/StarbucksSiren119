@@ -1691,29 +1691,29 @@ header.common h1 {
     background-size: 4.2666666667vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents {
   position: relative;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
   width: 188px;
   height: 88px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
     height: 11.7333333333vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li button {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -1724,14 +1724,14 @@ header.common h1 {
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li button {
     font-size: 4vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li.on button {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li.on button {
   opacity: 1;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
   position: absolute;
   left: 0;
   top: 82px;
@@ -1740,17 +1740,17 @@ header.common h1 {
   background: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     top: 10.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     height: 0.8vw;
   }
 }

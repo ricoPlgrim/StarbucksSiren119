@@ -287,6 +287,10 @@
                           appearance: none;
                           background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
                           @include vp(background-size, 44px auto); 
+                          &:checked{
+                            background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
+                            @include vp(background-size, 44px auto); 
+                          }
                         }
                       }
                 }
