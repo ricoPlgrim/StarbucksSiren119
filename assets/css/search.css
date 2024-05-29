@@ -665,23 +665,20 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 104px 8px 80px 40px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 104px 0px 80px 40px;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents {
-    padding: 13.8666666667vw 1.0666666667vw 10.6666666667vw 5.3333333333vw;
+    padding: 13.8666666667vw 0vw 10.6666666667vw 5.3333333333vw;
   }
 }
 #wrap.searh section .input_contents .input_box {
   position: relative;
   width: 606px;
   height: 80px;
-  border: 2px solid #ddd;
-  border-radius: 12px;
-  background: #fff;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box {
@@ -691,16 +688,6 @@ body {
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box {
     height: 10.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .input_box {
-    border: 0.2666666667vw solid #ddd;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .input_box {
-    border-radius: 1.6vw;
   }
 }
 #wrap.searh section .input_contents .input_box > input {
@@ -716,7 +703,10 @@ body {
   padding: 24px 60px 24px 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 12px;
   color: #000;
+  background: #fff;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
@@ -737,6 +727,16 @@ body {
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
     padding: 3.2vw 8vw 3.2vw 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box > input {
+    border: 0.2666666667vw solid #ddd;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box > input {
+    border-radius: 1.6vw;
   }
 }
 #wrap.searh section .input_contents .input_box > input::-webkit-input-placeholder {
@@ -811,6 +811,15 @@ body {
     border: 0.2666666667vw solid #000;
   }
 }
+#wrap.searh section .input_contents .input_box.active:before {
+  background: url("../images/icons/icon_searh_on.png") 0 0 no-repeat;
+  background-size: 80px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents .input_box.active:before {
+    background-size: 10.6666666667vw auto;
+  }
+}
 #wrap.searh section .input_contents .input_box:before {
   content: "";
   display: block;
@@ -835,15 +844,6 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box:before {
-    background-size: 10.6666666667vw auto;
-  }
-}
-#wrap.searh section .input_contents .input_box:focus-within:before {
-  background: url("../images/icons/icon_searh_on.png") 0 0 no-repeat;
-  background-size: 80px auto;
-}
-@media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .input_box:focus-within:before {
     background-size: 10.6666666667vw auto;
   }
 }
@@ -882,25 +882,27 @@ body {
     background-size: 4.2666666667vw auto;
   }
 }
-#wrap.searh section .input_contents .btn_searh_delete {
-  width: 96px;
-  height: 96px;
-  background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
-  background-size: 96px auto;
+#wrap.searh section .input_contents .btn_cancel {
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 32px;
+  line-height: 32px;
+  margin-left: 20px;
+  font-style: normal;
+  font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .btn_searh_delete {
-    width: 12.8vw;
+  #wrap.searh section .input_contents .btn_cancel {
+    font-size: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .btn_searh_delete {
-    height: 12.8vw;
+  #wrap.searh section .input_contents .btn_cancel {
+    line-height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .btn_searh_delete {
-    background-size: 12.8vw auto;
+  #wrap.searh section .input_contents .btn_cancel {
+    margin-left: 2.6666666667vw;
   }
 }
 #wrap.searh section .searh_contents {
@@ -1064,4 +1066,16 @@ body {
 }
 #wrap.searh section .searh_contents .search_list_box .search_list li:first-child {
   margin-top: 0;
+}
+#wrap.searh section .searh_contents .search_list_box .no_list {
+  display: none;
+  color: #aaa;
+  text-align: left;
+  font-size: 26px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .searh_contents .search_list_box .no_list {
+    font-size: 3.4666666667vw;
+  }
 }

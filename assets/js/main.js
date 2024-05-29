@@ -25,9 +25,6 @@ var mainUi = {
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
         _btnBookmark.on("click", mainUi.btnBookMarkClick);
 
-
-
-
     },
     loadEvent: function () {
         mainUi.create();

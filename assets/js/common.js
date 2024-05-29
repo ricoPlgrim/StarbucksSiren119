@@ -10,9 +10,11 @@ var _stickyTarget;
 var isActive = false; 
 
 var switchBox = $(".header_switchbox");
-var switchBoxOffset = switchBox.offset().top; 
-var marginTop = parseInt(switchBox.css('margin-top'), 10); 
-var totalOffsetTop = switchBoxOffset - marginTop; 
+if( switchBox.length > 0  ){
+    var switchBoxOffset = switchBox.offset().top; 
+    var marginTop = parseInt(switchBox.css('margin-top'), 10); 
+    var totalOffsetTop = switchBoxOffset - marginTop; 
+}
 
 var _switchBox;
 var _switchBoxOffset;
@@ -35,9 +37,11 @@ var commonUi = {
         _stickyTarget= $( ".header_sticky " );
 
         _switchBox = $(".header_switchbox");
-        _switchBoxOffset = _switchBox.offset().top; 
-        _marginTop = parseInt(_switchBox.css('margin-top'), 10); 
-        _totalOffsetTop = _switchBoxOffset -_marginTop; 
+        if( switchBox.length > 0 ){
+            _switchBoxOffset = _switchBox.offset().top; 
+            _marginTop = parseInt(_switchBox.css('margin-top'), 10); 
+            _totalOffsetTop = _switchBoxOffset -_marginTop; 
+        }
 
 
     },
