@@ -36,40 +36,19 @@ var mainUi = {
     },
 
     menuBtnListClick: function () {
-        var index = $(this).index();
-        var menuView = _main.find(".menu_view_list");
-        var menuViewList = menuView.find("li.menu_view_item");
-        return;
-        _menuBtnlist.eq(index).toggleClass("on");
-
-     
-        if ((index + 1) % 2 === 0) {
-            var prevElem = _menuBtnlist.eq(index - 1);
-            $(this).after(prevElem);
-            console.log("짝수");
+        var className =  $(this).attr('class');
+        var sectionInner = $(".section_inner");
+        $( ".menu_box" ).removeClass( "on" );
+        if (sectionInner.hasClass(className)) {
+            sectionInner.removeClass(className).removeClass('open');
+            console.log( "줄어들때?", $( ".menu_box" ).length );
+           $( ".menu_box" ).removeClass( "on" );
         } else {
-            console.log("홀수");
+            sectionInner.removeClass().addClass('section_inner ' + className + ' open');
+            $( this ).find( ".menu_box" ).addClass( "on" );
+            console.log( "2222" );
         }
-
-
-      
-
-        console.log(menuViewList.length);
-        var textBox = menuView.find(".inner");
-        var btnClose = menuViewList.eq(index).find(".btn_close");
-        menuView.css({
-            "z-index": 30,
-            "opacity": 1
-        });
-
-        btnClose.css("opacity", 1);
-        menuViewList.removeClass("on");
-        menuViewList.eq(index).addClass("on");
-        menuView.removeClass("on");
-        gsap.set(textBox, { opacity: 0 })
-        gsap.to(textBox, .15, { opacity: 1, });
-
-        btnClose.on("click", mainUi.menuBtnClose);
+        
     },
 
     menuBtnClose: function () {

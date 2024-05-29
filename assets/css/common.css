@@ -657,11 +657,11 @@ header .header_inner .header_top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 112px;
+  padding-top: 80px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top {
-    padding-top: 14.9333333333vw;
+    padding-top: 10.6666666667vw;
   }
 }
 header .header_inner .header_top .btn_hamburger {
