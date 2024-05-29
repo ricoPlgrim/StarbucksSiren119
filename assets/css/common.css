@@ -926,6 +926,24 @@ header.common h1 {
     font-size: 4vw;
   }
 }
+header.common .btn_bookmark {
+  background: url("../images/btn/btn_bookmarkL_off.png") center center no-repeat;
+  background-size: 54px auto;
+  padding: 54px 50px;
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_bookmark {
+    background-size: 7.2vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_bookmark {
+    padding: 7.2vw 6.6666666667vw;
+  }
+}
+header.common .btn_bookmark.on {
+  background: url("../images/btn/btn_bookmarkL_on.png") center center no-repeat;
+}
 
 /*gnb*/
 .gnb {
