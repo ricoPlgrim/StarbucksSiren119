@@ -68,6 +68,7 @@ var searchUi = {
     deleteAllBtnClick: function(){ 
         _searchListBox.remove();
         _nolistText.css( "display", "block" ); 
+        _deleteAllBtn.css( "display", "none" );
     },
 
     //인풋에 텍스트 글자 삭제
@@ -82,6 +83,7 @@ var searchUi = {
        if( _searchListBox.find( "li" ).length == 0 ){
         _searchListBox.remove();
         _nolistText.css( "display", "block" ); 
+        _deleteAllBtn.css( "display", "none" );
       }
     },
 
