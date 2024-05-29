@@ -14,7 +14,7 @@ var reportUi = {
     create: function(){
         _w = $( window );
         _report = $( ".report" );
-        _reportListBtn = _report.find( "ul.form_list" ).find("li").not(".option_list > li");
+        _reportListBtn = _report.find("ul.form_list").find("li").not(".option_list > li");
         _selectBtn = _report.find("ul.form_list").find(".select_option");
         _selectItem = _report.find("ul.option_list").find("li");
     },
@@ -53,12 +53,14 @@ var reportUi = {
         selectBox.find(".option_list").removeClass("active");
     },
     detailSwiper: function(){
-        var swiper = new Swiper(".detail_visual", {
-			slidesPerView: "auto",
-			pagination: {
-				el: ".swiper-pagination",
-			},
-		});
+        if ($('.detail_swiper').length) {
+            new Swiper('.detail_swiper', {
+                slidesPerView: 'auto',
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+        }
 	},
 };
 

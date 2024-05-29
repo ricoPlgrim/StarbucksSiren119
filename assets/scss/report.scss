@@ -53,6 +53,7 @@
                 display: flex;
                 flex-direction: row;
                 li {
+                    position: relative;
                     @include vp( margin-right, 8px); 
                 }
                 .btn_upload {
@@ -72,7 +73,6 @@
                     position: relative;
                     @include vp( width, 210px); 
                     @include vp( height, 210px); 
-                    border-radius: 6px;
                     overflow: hidden;
                     img {
                         position: absolute;
@@ -81,11 +81,22 @@
                         transform: translate(0, -50%);
                         width: 100%;
                         height: auto;
+                        @include vp( border-radius, 12px); 
                     } &::before{
                         content: '';
                         display: block;
                         padding-top: 100%;
                     }
+                }
+                .btn_delete {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    @include vp( width, 54px); 
+                    @include vp( height, 54px); 
+                    background:  url("../images/btn/btn_file_delete.png") no-repeat center;
+                    @include vp(background-size, 54px auto);
+                    cursor: pointer;
                 }
             }
         }
@@ -95,16 +106,17 @@
             @include vp( margin-bottom, 40px);
             .title01 {
                 @include vp( font-size, 26px); 
-                @include vp( padding-right, 44px); 
+                @include vp( min-width, 132px); 
                 text-wrap: nowrap;
                 font-weight: 600;
             }
             .form_list{
                 display: flex;
                 &.scroll {
+                    padding-bottom: 1px;
                     overflow-y: auto;
-                    &::-webkit-scrollbar {width: 3px; height:3px;}
-                    &::-webkit-scrollbar-thumb  {border-radius: 10px; background: #888;}
+                    &::-webkit-scrollbar{width: 3px; height:3px;}
+                    &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
                 }
                 li {
                     @include vp( padding, 24px 30px);
@@ -154,6 +166,17 @@
                             }
                        }
                     }
+                    &.input_box {
+                        @include vp( width, 536px);
+                        input {
+                            background: none;
+                            border: none;
+                            width: 100%;
+                        }
+                        &.on {
+                            border: 1px solid #000;
+                        }
+                    }
                 }
             }           
         }
@@ -180,12 +203,14 @@
             }
         }
         .preview_list {
-            @include vp( padding-bottom, 44px); 
+            @include vp( padding-bottom, 80px); 
             li {
                 @include vp( padding-bottom, 40px); 
                 @include vp( margin-bottom, 40px); 
                 border-bottom: 1px solid #ddd;
                 &:last-child {
+                    padding-bottom: 0px;
+                    margin-bottom: 0px;
                     border-bottom: none;
                 }
                 dl {
@@ -229,6 +254,36 @@
                     -webkit-border-radius: 5px;
                     -moz-border-radius: 5px;
                     border-radius: 8px;
+                }
+                .checkbox01 {
+                    position:relative;
+                    display:inline-block;
+                    input[type="checkbox"] {
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        border: none;
+                        opacity: 0;
+                    }
+                    label {
+                        display: inline-flex;
+                        align-items: center;
+                        @include vp(padding-left, 84px);
+                        background:url("../images/btn/btn_check_off.png") no-repeat;
+                        @include vp(background-size, 88px auto);
+                        @include vp(background-position-x, -20px);
+                        @include vp(background-position-y, -10px);
+                        @include vp(min-height, 66px);
+                        @include vp(line-height, 66px);
+                        @include vp( font-size, 30px); 
+                        font-weight: 700;
+                    }
+                    input[type="checkbox"]:checked + label {
+                        background:url("../images/btn/btn_check_on.png")  no-repeat;
+                        @include vp(background-size, 88px auto);
+                        @include vp(background-position-x, -20px);
+                        @include vp(background-position-y, -10px);
+                    }
                 }
                 .switch_box {
                     display: flex;
@@ -619,3 +674,67 @@
         }
     }
 }
+    // 팝업
+    .layer_popup {
+        display: none;
+        position: fixed;
+        top: 0px;
+        min-height: 100vh;
+        width: 100%;
+        background: #fff;
+        z-index: 999;
+        &.active {
+            display: block;
+        }
+        .btn_close {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            @include vp(width, 46px); 
+            @include vp(height, 46px); 
+            background: url("../images/btn/btn_close.png") center center no-repeat;
+            @include vp(background-size, 46px auto); 
+            @include vp(padding, 34px); 
+            z-index: 999;
+        }
+        .detail_pop_visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+            min-height: 100vh;
+            .swiper-pagination {
+                bottom: 23%;
+                left:50%; 
+                transform: translateX(-50%);
+                width:auto;
+            }
+            .swiper-pagination-bullet {
+                @include vp( margin, 0px 4px); 
+                @include vp( width, 16px); 
+                @include vp( height, 16px); 
+                background: #FFFFFF80;
+                border: 1px solid #00000061;
+            }
+            .swiper-pagination-bullet-active {
+                background: $green;
+            }
+            .img_box {
+                position: relative;
+                overflow: hidden;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    width: 100%;
+                    height: auto;
+                } &::before{
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+            }
+        }
+    }
