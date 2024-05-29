@@ -15,18 +15,18 @@ var mainUi = {
         _w = $(window);
         _main = $("main");
         _menuBtnlist = _main.find(".menu_btn-list").find("li");
-        _switchBoxBtns = _main.find( ".switch_round > a" );
-        _btnBookmark = _main.find( ".btn_bookmark" );
+        _switchBoxBtns = _main.find(".switch_round > a");
+        _btnBookmark = _main.find(".btn_bookmark");
     },
     addEvent: function () {
         mainUi.resizeEvent(null);
         _w.on("resize", mainUi.resizeEvent);
         _menuBtnlist.on("click", mainUi.menuBtnListClick);
-        _switchBoxBtns.on( "click", mainUi.switchBoxBtnClick );
-        _btnBookmark.on( "click", mainUi.btnBookMarkClick );
+        _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
+        _btnBookmark.on("click", mainUi.btnBookMarkClick);
 
 
-        
+
 
     },
     loadEvent: function () {
@@ -42,26 +42,20 @@ var mainUi = {
         var index = $(this).index();
         var menuView = _main.find(".menu_view_list");
         var menuViewList = menuView.find("li.menu_view_item");
+        return;
+        _menuBtnlist.eq(index).toggleClass("on");
 
-        _menuBtnlist.eq(index).toggleClass( "on" );
-
-
+     
         if ((index + 1) % 2 === 0) {
-            //클릭한 녀석에 전 엘리먼트 구해서
-            //현재 엘리먼트 다음 순으로  이동
-            // $( ".menu_btn-list" ).eq(index)
             var prevElem = _menuBtnlist.eq(index - 1);
             $(this).after(prevElem);
-          
-            console.log( "짝수" );
-
-            // $(this).addClass('highlight');
+            console.log("짝수");
         } else {
-            console.log( "홀수" );
+            console.log("홀수");
         }
 
 
-        return;
+      
 
         console.log(menuViewList.length);
         var textBox = menuView.find(".inner");
@@ -94,26 +88,26 @@ var mainUi = {
         }, 100);
     },
 
-    switchBoxBtnClick: function(){
-        var index =  $( this ).index();
-        var contents = $( ".sections" ).find( "section" );
-        var roundBar = $(this).parents( ".switch_round" );
-        _switchBoxBtns.removeClass( "on" );
-        _switchBoxBtns.eq(index).addClass( "on" );
-        contents.removeClass( "on" );
-        contents.eq(index).addClass( "on" );
-        
-        if( index == 0 ){
-            roundBar.removeClass( "right" )
-            roundBar.addClass( "left" )
-        }else{
-            roundBar.removeClass( "left" )
-            roundBar.addClass( "right" )
+    switchBoxBtnClick: function () {
+        var index = $(this).index();
+        var contents = $(".sections").find("section");
+        var roundBar = $(this).parents(".switch_round");
+        _switchBoxBtns.removeClass("on");
+        _switchBoxBtns.eq(index).addClass("on");
+        contents.removeClass("on");
+        contents.eq(index).addClass("on");
+
+        if (index == 0) {
+            roundBar.removeClass("right")
+            roundBar.addClass("left")
+        } else {
+            roundBar.removeClass("left")
+            roundBar.addClass("right")
         }
     },
 
-    btnBookMarkClick: function(){
-        $( this ).toggleClass( "on" );
+    btnBookMarkClick: function () {
+        $(this).toggleClass("on");
     }
 };
 
