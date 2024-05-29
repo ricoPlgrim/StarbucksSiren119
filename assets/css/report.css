@@ -13,8 +13,12 @@
   }
 }
 .report .category_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 28px 40px;
   margin-bottom: 40px;
   background: #EEE;
@@ -34,7 +38,8 @@
   margin-right: 40px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
   .report .category_wrap .menu_img {
@@ -55,8 +60,13 @@
   }
 }
 .report .category_wrap .text_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .report .category_wrap .text_box .title {
   font-size: 22px;
@@ -129,8 +139,13 @@
   }
 }
 .report .create_form .file_upload_wrap .file_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .report .create_form .file_upload_wrap .file_list li {
   margin-right: 8px;
@@ -189,7 +204,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 100%;
   height: auto;
 }
@@ -199,8 +215,12 @@
   padding-top: 100%;
 }
 .report .create_form .form_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 750px) {
@@ -225,6 +245,8 @@
   }
 }
 .report .create_form .form_box .form_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .report .create_form .form_box .form_list.scroll {
@@ -462,9 +484,15 @@
   border-bottom: none;
 }
 .report .write_preview .preview_list li dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 20px;
   font-size: 26px;
 }
@@ -555,9 +583,15 @@
   }
 }
 .report .write_preview .preview_list li .switch_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .report .write_preview .preview_list li .switch_box h4 {
   font-size: 30px;
@@ -593,6 +627,7 @@
   cursor: pointer;
   background-color: #ddd;
   border-radius: 200px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -609,6 +644,7 @@
   background: #fff;
   left: 8px;
   top: 8px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -635,18 +671,25 @@
   background: #00A862;
 }
 .report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 @media screen and (max-width: 750px) {
   .report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
 }
 .report .btn_report {
   margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 750px) {
   .report .btn_report {

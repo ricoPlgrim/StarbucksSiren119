@@ -651,28 +651,33 @@
 }
 .sections .section_inner .setting_contents .setting_top a::after {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 0;
   content: "";
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 23px;
+  height: 27px;
   background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-  background-size: 40px auto;
+  background-size: 23px auto;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .setting_top a::after {
-    width: 5.3333333333vw;
+    top: 1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .setting_top a::after {
-    height: 5.3333333333vw;
+    width: 3.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .setting_top a::after {
-    background-size: 5.3333333333vw auto;
+    height: 3.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents .setting_top a::after {
+    background-size: 3.0666666667vw auto;
   }
 }
 .sections .section_inner .setting_contents .btn_group {
