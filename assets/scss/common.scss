@@ -16,153 +16,191 @@
 
 .bottom_sheet{
     display: none;
-    position: fixed;
-    top:0;
-    left:50%; 
-    transform: translateX(-50%);
-    @include vp(max-width, 750px);     
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-   
-    .sheet_content{
-        position: relative;
-        @include vp(border-radius, 20px 20px 0 0 );     
-        background: #F8F8F8;
-        // display:flex;
-        // flex-direction:column-reverse;
-        // height: inherit;
-        .sheet_top{
+    position: relative;
+    .sheet_wrap{
+        @include vp(max-width, 750px);     
+        transform: translateX(-50%);
+        min-height: 200px;
+        position: fixed;
+        z-index: 300;
+        border-radius: 15px;
+        transition: all .2s ease-in-out;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -110%;
+        .sheet_content{
             position: relative;
-            .btn_sheet_close{
-                width: 100%;
-                @include vp(height, 40px);     
-                &::after{
-                    content: '';
-                    position: absolute;
-                    top:0;
-                    left:50%; 
-                    transform: translateX(-50%);
-                    @include vp(border-radius, 100px );    
-                    @include vp(width, 68px );    
-                    @include vp(height, 8px );  
-                    background: rgba(0, 0, 0, 0.38);
-                }
-            }
-        }
-      
-        .date_contents{
-      
-            @include vp(padding, 0 40px 56px );     
-            .date_list{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                li{
-                    @include vp(width, 160px );   
-                    @include vp(border-radius, 8px );   
-                    @include vp( border, 2px solid rgba(0, 0, 0, 0.12));
-                    box-sizing: border-box;
-                    button{
-                        width: inherit;
-                        @include vp(padding, 30px 22px );     
-                        @include vp(font-size, 26px );     
-                        line-height: normal;
-                        background: none;
-                    }
-                    &.on{
-                        background: $green;
-                        @include vp( border, 2px solid $green);
-                        button{
-                            color: $white;
-                        }
-                    }
-                }
-            }
-
-            .date_setting{
-                display: flex;
-                @include vp(margin-top, 22px );    
-                @include vp(gap, 14px );    
-                .date_start,
-                .date_end{
-                    position: relative;
-                    @include vp(width, 330px );    
-                    @include vp(height, 76px );    
-                    @include vp(padding, 22px 40px );    
-                    @include vp(border-radius, 4px );    
-                    background: #EEE;
-                    span{
-                        font-family: "Pretendard Variable";
-                        @include vp(font-size, 26px );    
-                        font-weight: 400;
-                        color: $black;
-                        opacity: .6;
-                    }
-                    input{
+            @include vp(border-radius, 40px 40px 0 0 );     
+            background: #F8F8F8;
+            // display:flex;
+            // flex-direction:column-reverse;
+            // height: inherit;
+            .sheet_top{
+                position: relative;
+                .btn_sheet_close{
+                    display: block;
+                    width: 100%;
+                    @include vp(height, 40px);     
+                    &::after{
+                        content: '';
                         position: absolute;
                         @include vp(top, 20px );    
-                        @include vp(right, 20px );    
-                        @include vp(width, 32px );    
-                        @include vp(height, 37px );    
-                        border:0;
-                        background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
-                        @include vp(background-size, 32px auto );    
-                        &::-webkit-calendar-picker-indicator,
-                        &::-webkit-inner-spin-button {
-                            // display: none;
-                            // appearance: none; 
+                        left:50%; 
+                        transform: translateX(-50%);
+                        @include vp(border-radius, 100px );    
+                        @include vp(width, 68px );    
+                        @include vp(height, 8px );  
+                        background: rgba(0, 0, 0, 0.38);
+                    }
+                }
+            }
+          
+            .date_contents{
+          
+                @include vp(padding, 40px 40px 56px );     
+                .date_list{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    li{
+                        @include vp(width, 160px );   
+                        @include vp(border-radius, 8px );   
+                        @include vp( border, 2px solid rgba(0, 0, 0, 0.12));
+                        box-sizing: border-box;
+                        button{
+                            width: inherit;
+                            @include vp(padding, 30px 22px );     
+                            @include vp(font-size, 26px );     
+                            line-height: normal;
+                            background: none;
+                        }
+                        &.on{
+                            background: $green;
+                            @include vp( border, 2px solid $green);
+                            button{
+                                color: $white;
+                            }
                         }
                     }
+                }
+    
+                .date_setting{
+                    display: flex;
+                    @include vp(margin-top, 22px );    
+                    @include vp(gap, 14px );    
+                    .date_start,
+                    .date_end{
+                        position: relative;
+                        @include vp(width, 330px );    
+                        @include vp(height, 76px );    
+                        @include vp(padding, 22px 40px );    
+                        @include vp(border-radius, 4px );    
+                        background: #EEE;
+                        span{
+                            font-family: "Pretendard Variable";
+                            @include vp(font-size, 26px );    
+                            font-weight: 400;
+                            color: $black;
+                            opacity: .6;
+                        }
+                        input{
+                            position: absolute;
+                            @include vp(top, 20px );    
+                            @include vp(right, 20px );    
+                            @include vp(width, 32px );    
+                            @include vp(height, 37px );    
+                            border:0;
+                            background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
+                            @include vp(background-size, 32px auto );    
+                            &::-webkit-calendar-picker-indicator,
+                            &::-webkit-inner-spin-button {
+                                // display: none;
+                                // appearance: none; 
+                            }
+                        }
+                    }
+                }
+            }
+            .type_cointents{
+                position: relative;
+                .type_list{
+                    display: flex;
+                    li{
+                        @include vp(width, 188px );    
+                        @include vp(height, 88px );
+                        button{
+                            text-align: center;
+                            width: 100%;
+                            height: 100%;
+                            color: $black;
+                            opacity: .4;
+                            text-align: center;
+                            @include vp(font-size, 30px );
+                            font-weight: 600;
+                        }    
+                        &.on{
+                            button{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .bar{
+                    position: absolute;
+                    left:0;
+                    @include vp(top, 82px );    
+                    @include vp(width, 188px );    
+                    @include vp(height, 6px );    
+                    background: $green;
                 }
             }
         }
-        .type_cointents{
-            position: relative;
-            .type_list{
-                display: flex;
-                li{
-                    @include vp(width, 188px );    
-                    @include vp(height, 88px );
-                    button{
-                        text-align: center;
-                        width: 100%;
-                        height: 100%;
-                        color: $black;
-                        opacity: .4;
-                        text-align: center;
-                        @include vp(font-size, 30px );
-                        font-weight: 600;
-                    }    
-                    &.on{
-                        button{
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-            .bar{
-                position: absolute;
-                left:0;
-                @include vp(top, 82px );    
-                @include vp(width, 188px );    
-                @include vp(height, 6px );    
-                background: $green;
-            }
+      
+        &.open{
+            bottom:0;
+        }
+    }
+    .dimd{
+        position: fixed;
+        top:0;
+        left:50%;
+        width: 100%;
+        height: 100%;
+        @include vp(max-width, 750px);     
+        transform: translateX(-50%);
+        background: $black;
+        z-index: -1;
+        transition: all 0.2s ease-in-out;
+        opacity: 0;
+        pointer-events: none;
+
+
+    }
+
+
+
+    // position: fixed;
+    // top:0;
+    // left:50%; 
+    // transform: translateX(-50%);
+    // @include vp(max-width, 750px);     
+    // width: 100%;
+    // height: 100%;
+    // z-index: 100;
+   
+   
+  
+    &.open{
+        display: block;
+        .dimd{
+            opacity: .4;
+            pointer-events: all;
+            z-index: 100;
         }
     }
 
-    .dimd{
-        position: absolute;
-        top:0;
-        left:0;
-        width: 100%;
-        height: 100%;
-        background: $black;
-        opacity: .4;
-        z-index: -1;
-    }
+
 
 
 }

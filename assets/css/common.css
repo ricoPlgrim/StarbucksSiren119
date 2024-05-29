@@ -1457,47 +1457,54 @@ header.common .btn_bookmark.on {
 
 .bottom_sheet {
   display: none;
-  position: fixed;
-  top: 0;
-  left: 50%;
+  position: relative;
+}
+.bottom_sheet .sheet_wrap {
+  max-width: 750px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  max-width: 750px;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
+  min-height: 200px;
+  position: fixed;
+  z-index: 300;
+  border-radius: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -110%;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet {
+  .bottom_sheet .sheet_wrap {
     max-width: 100vw;
   }
 }
-.bottom_sheet .sheet_content {
+.bottom_sheet .sheet_wrap .sheet_content {
   position: relative;
-  border-radius: 20px 20px 0 0;
+  border-radius: 40px 40px 0 0;
   background: #F8F8F8;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content {
-    border-radius: 2.6666666667vw 2.6666666667vw 0 0;
+  .bottom_sheet .sheet_wrap .sheet_content {
+    border-radius: 5.3333333333vw 5.3333333333vw 0 0;
   }
 }
-.bottom_sheet .sheet_content .sheet_top {
+.bottom_sheet .sheet_wrap .sheet_content .sheet_top {
   position: relative;
 }
-.bottom_sheet .sheet_content .sheet_top .btn_sheet_close {
+.bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close {
+  display: block;
   width: 100%;
   height: 40px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close {
+  .bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close {
     height: 5.3333333333vw;
   }
 }
-.bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+.bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -1507,29 +1514,34 @@ header.common .btn_bookmark.on {
   background: rgba(0, 0, 0, 0.38);
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+  .bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close::after {
+    top: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close::after {
     border-radius: 13.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+  .bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close::after {
     width: 9.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .sheet_top .btn_sheet_close::after {
+  .bottom_sheet .sheet_wrap .sheet_content .sheet_top .btn_sheet_close::after {
     height: 1.0666666667vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents {
-  padding: 0 40px 56px;
+.bottom_sheet .sheet_wrap .sheet_content .date_contents {
+  padding: 40px 40px 56px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents {
-    padding: 0 5.3333333333vw 7.4666666667vw;
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents {
+    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_list {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1541,7 +1553,7 @@ header.common .btn_bookmark.on {
           align-items: center;
   gap: 10px;
 }
-.bottom_sheet .sheet_content .date_contents .date_list li {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
   width: 160px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.12);
@@ -1549,21 +1561,21 @@ header.common .btn_bookmark.on {
           box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
     width: 21.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
     border-radius: 1.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
     border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_list li button {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li button {
   width: inherit;
   padding: 30px 22px;
   font-size: 26px;
@@ -1571,28 +1583,28 @@ header.common .btn_bookmark.on {
   background: none;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li button {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li button {
     padding: 4vw 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li button {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li button {
     font-size: 3.4666666667vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_list li.on {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li.on {
   background: #00A862;
   border: 2px solid #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_list li.on {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li.on {
     border: 0.2666666667vw solid #00A862;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_list li.on button {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li.on button {
   color: #fff;
 }
-.bottom_sheet .sheet_content .date_contents .date_setting {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1600,17 +1612,17 @@ header.common .btn_bookmark.on {
   gap: 14px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting {
     margin-top: 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting {
     gap: 1.8666666667vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_setting .date_start,
-.bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start,
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end {
   position: relative;
   width: 330px;
   height: 76px;
@@ -1619,31 +1631,31 @@ header.common .btn_bookmark.on {
   background: #EEE;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end {
     width: 44vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end {
     height: 10.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end {
     padding: 2.9333333333vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end {
     border-radius: 0.5333333333vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_setting .date_start span,
-.bottom_sheet .sheet_content .date_contents .date_setting .date_end span {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start span,
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end span {
   font-family: "Pretendard Variable";
   font-size: 26px;
   font-weight: 400;
@@ -1651,13 +1663,13 @@ header.common .btn_bookmark.on {
   opacity: 0.6;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start span,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end span {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start span,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end span {
     font-size: 3.4666666667vw;
   }
 }
-.bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-.bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+.bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1668,58 +1680,58 @@ header.common .btn_bookmark.on {
   background-size: 32px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
     top: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
     right: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
     width: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
     height: 4.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_start input,
-  .bottom_sheet .sheet_content .date_contents .date_setting .date_end input {
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_start input,
+  .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting .date_end input {
     background-size: 4.2666666667vw auto;
   }
 }
-.bottom_sheet .sheet_content .type_cointents {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents {
   position: relative;
 }
-.bottom_sheet .sheet_content .type_cointents .type_list {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.bottom_sheet .sheet_content .type_cointents .type_list li {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
   width: 188px;
   height: 88px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
     height: 11.7333333333vw;
   }
 }
-.bottom_sheet .sheet_content .type_cointents .type_list li button {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -1730,14 +1742,14 @@ header.common .btn_bookmark.on {
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .type_list li button {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
     font-size: 4vw;
   }
 }
-.bottom_sheet .sheet_content .type_cointents .type_list li.on button {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li.on button {
   opacity: 1;
 }
-.bottom_sheet .sheet_content .type_cointents .bar {
+.bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
   position: absolute;
   left: 0;
   top: 82px;
@@ -1746,29 +1758,51 @@ header.common .btn_bookmark.on {
   background: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
     top: 10.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
     height: 0.8vw;
   }
 }
+.bottom_sheet .sheet_wrap.open {
+  bottom: 0;
+}
 .bottom_sheet .dimd {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
   height: 100%;
+  max-width: 750px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #000;
-  opacity: 0.4;
   z-index: -1;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .dimd {
+    max-width: 100vw;
+  }
+}
+.bottom_sheet.open {
+  display: block;
+}
+.bottom_sheet.open .dimd {
+  opacity: 0.4;
+  pointer-events: all;
+  z-index: 100;
 }
 
 .scroll_top_box {
