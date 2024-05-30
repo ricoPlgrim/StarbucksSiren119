@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="../assets/css/report.css">
 </head>
 <body>
-    <main id="wrap">
+    <main id="wrap" class="report">
         <header class="common">
             <button class="btn_back"></button>
             <h1>보고작성</h1>
         </header>
-        <section class="report">
+        <section>
             <h2 class="blind">보고작성</h2>
             <div class="category_wrap">
                 <div class="menu_img">
                     <img src="../assets/images/icons/icon_disaster.png" alt="메뉴 아이콘">
                 </div>
-                <div class="text_box">
+                <div class="category_box">
                     <div class="title">보고하기</div>
                     <div class="category_info">
                         <span class="text01">재해시설</span>
@@ -129,8 +129,9 @@
                 <div class="form_box">
                     <div class="title01">상품명</div>
                     <ul class="form_list">
-                        <li class="input_box">
+                        <li class="text_box">
                             <input type="text" placeholder="">
+                            <span class="btn_delete">내용 삭제</span>
                         </li>
                     </ul>
                 </div>
@@ -145,8 +146,9 @@
                 <div class="form_box">
                     <div class="title01">컵사이즈</div>
                     <ul class="form_list">
-                        <li class="input_box">
+                        <li class="text_box">
                             <input type="text" placeholder="사이즈를 기재해주세요">
+                            <span class="btn_delete">내용 삭제</span>
                         </li>
                     </ul>
                 </div>
@@ -220,6 +222,7 @@
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/js/report.js"></script>
 </body>
 </html>
