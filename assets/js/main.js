@@ -5,6 +5,7 @@ var _menuBtnlist;
 var _main;
 var _switchBoxBtns;
 var _btnBookmark;
+var _btnFilter;
 
 var mainUi = {
 
@@ -17,6 +18,7 @@ var mainUi = {
         _menuBtnlist = _main.find(".menu_btn-list").find("li");
         _switchBoxBtns = _main.find(".switch_round > a");
         _btnBookmark = _main.find(".btn_bookmark");
+        _btnFilter = _main.find( ".btn_filter" );
     },
     addEvent: function () {
         mainUi.resizeEvent(null);
@@ -24,6 +26,7 @@ var mainUi = {
         _menuBtnlist.on("click", mainUi.menuBtnListClick);
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
         _btnBookmark.on("click", mainUi.btnBookMarkClick);
+        _btnFilter.on( "click", mainUi.btnFilterClcik );
 
     },
     loadEvent: function () {
@@ -41,27 +44,12 @@ var mainUi = {
         $( ".menu_box" ).removeClass( "on" );
         if (sectionInner.hasClass(className)) {
             sectionInner.removeClass(className).removeClass('open');
-            console.log( "줄어들때?", $( ".menu_box" ).length );
            $( ".menu_box" ).removeClass( "on" );
         } else {
             sectionInner.removeClass().addClass('section_inner ' + className + ' open');
             $( this ).find( ".menu_box" ).addClass( "on" );
-            console.log( "2222" );
         }
         
-    },
-
-    menuBtnClose: function () {
-        var index = $(this);
-        var menuView = index.parents(".menu_view_list");
-        index.css("opacity", 0);
-        index.next().css("opacity", 0);
-        index.parent("li.on").removeClass("on");
-        setTimeout(function () {
-            menuView.css({
-                "z-index": 10,
-            });
-        }, 100);
     },
 
     switchBoxBtnClick: function () {
@@ -84,7 +72,13 @@ var mainUi = {
 
     btnBookMarkClick: function () {
         $(this).toggleClass("on");
+    },
+
+    btnFilterClcik: function(){
+        console.log( "111" );
+        commonUi.bottomSheetOpen();
     }
+    
 };
 
 

@@ -93,10 +93,8 @@ var commonUi = {
     },
 
     scrollEvent: function () {
-        var _sT = $(this).scrollTop(); // 현재 스크롤 위치
-
-
-        if (_sT > 10) {
+        var _sT = $(this).scrollTop(); 
+        if (_sT > _w.height()/3 ) {
             _scrollTopButton.fadeIn();
         } else {
             _scrollTopButton.fadeOut();

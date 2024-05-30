@@ -49,7 +49,6 @@
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
                 @include vp(border-radius, 40px);
                 background: #fff;
-                transition: all .45s;
                 &:nth-child(2){
                     @include vp(top, 348px );
                 }
@@ -57,6 +56,7 @@
                     @include vp(top, 694px );
                 }
                 .menu_box{
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -68,11 +68,12 @@
                     font-weight: 600;
                     text-align: center;
                     .thum{
+                        transition: width 0.5s ease;
                         &::before {
                             content: '';
                             display: block;
-                            @include vp(margin-bottom, 34px);
-                            @include vp(width, 110px);
+                            @include vp(margin-bottom, 32px);
+                            @include vp(width, 112px);
                             @include vp(height, 110px);
     
                         }
@@ -90,10 +91,87 @@
                     }
                     .menu{
                         display: none;
+                        position: relative;
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            @include vp(top, 34px);
+                            @include vp(right, 34px);
+                            @include vp(width, 32px);
+                            @include vp(height, 32px);
+                            background: url("../images/btn/btn_minus.png") 0 0 no-repeat;
+                            @include vp(background-size, 32px auto);
+                        }
+                        .inner{
+                            @include vp(padding, 60px 60px 92px);
+                            @include vp(min-width, 670px);
+                      
+                            .title_box{
+                                display: flex;
+                                align-items: center;
+                                @include vp(padding-bottom, 32px);
+                                @include vp(margin-bottom, 40px);
+                                @include vp(border-bottom, 2px solid $black);
+                                h3{
+                                    position: relative;
+                                    @include vp(padding-left, 88px);
+                                    color: $black;
+                                    @include vp(font-size, 32px);
+                                    font-weight: 600;
+                               
+                                    &:before{
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        @include vp(top, -5px);
+                                        left:0;
+                                        @include vp(width, 48px);
+                                        @include vp(height, 48px);
+                                        background: url(../images/icons/icon_Partner.png) 0 0 no-repeat;
+                                        @include vp(background-size, 48px auto);
+                                    }
+                                }
+                                .read_text{
+                                    @include vp(margin-left, 20px);
+                                    color: rgba(136, 136, 136, 0.58);
+                                    @include vp(font-size, 24px);
+                                    font-weight: 400; 
+                                }
+                            }
+                            .scroll_box{
+                                @include vp(max-height, 172px);
+                                overflow: auto;
+                                .type_list{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    @include vp(margin-top, -28px);
+                                    li{
+                                        flex: 1 0 50%; 
+                                        box-sizing: border-box; 
+                                        text-align: left;
+                                        @include vp(margin-top, 28px);
+                                        a{
+                                            color: $black;
+                                            @include vp(font-size, 26px);
+                                            font-weight: 400; 
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     &.on{
-                        .thum{ display: none;}
-                        .menu{ display: block; }
+                        justify-content:flex-start;
+                 
+                        .thum{ 
+                           display: none;
+                        }
+                        // .thum{ display: none;}
+                        .menu{
+                           display: block;
+                          
+                        }
                     }
 
                    
@@ -102,8 +180,9 @@
                 &.parther {
                     .thum {
                         &:before {
+                            @include vp(width, 114px );
                             background: url("../images/icons/icon_Partner.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(background-size, 114px auto);
                         }
                     }
                 }
@@ -112,7 +191,21 @@
                     .thum {
                         &:before {
                             background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -120,8 +213,24 @@
                 &.disaster {
                     .thum {
                         &:before {
+                            @include vp(width, 115px );
                             background: url("../images/icons/icon_disaster.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(background-size, 115px auto);
+                        }
+                        
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_disaster.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -130,7 +239,21 @@
                     .thum {
                         &:before {
                             background: url("../images/icons/icon_fire.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_fire.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -139,7 +262,21 @@
                     .thum {
                         &:before {
                             background: url("../images/icons//icon_different_thing.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_different_thing.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -147,8 +284,23 @@
                 &.safety {
                     .thum {
                         &:before {
-                            background: url("../images/icons/icon_food_ safety.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto);
+                            @include vp(width, 114px );
+                            background: url("../images/icons/icon_food_safety.png") 0 0 no-repeat;
+                            @include vp(background-size, 114px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_food_safety.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -159,6 +311,7 @@
         &.parther{
             .menu_btn-list{
                 &.left{
+                    z-index: 30;
                     .parther{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
@@ -186,9 +339,7 @@
         &.disaster{
             .menu_btn-list{
                 &.left{
-                    .parther{
-              
-                    }
+                    z-index: 30;
                     .disaster{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
@@ -210,6 +361,7 @@
         &.different{
             .menu_btn-list{
                 &.left{
+                    z-index: 30;
                     .different{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
@@ -241,7 +393,7 @@
                     .customer{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
-                        @include vp(left, -350px);
+                        @include vp(left, -345px);
                     }
                     .fire{
                         @include vp(top, 408px);
@@ -272,7 +424,7 @@
                     .fire{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
-                        @include vp(left, -350px);
+                        @include vp(left, -345px);
                     }
                     .safety{
                         @include vp(top, 751px);
@@ -292,7 +444,7 @@
                     .safety{
                         @include vp(width, 670px);
                         @include vp(height, 394px);
-                        @include vp(left, -350px);
+                        @include vp(left, -345px);
                     }
                 } 
             }
@@ -447,17 +599,19 @@
 
         .setting_contents {
             width: 100%;
-            @include vp(height, 212px);
+            // @include vp(height, 212px);
             background: $white;
             @include vp(border-radius, 40px);
+            @include vp(padding, 40px 40px 28px 40px);
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 
             .setting_top {
                 display: flex;
                 // justify-content: space-around;
-                @include vp(padding, 40px 40px 28px 40px);
+            
 
                 .setting_check_box {
+                    display: inline-flex;
                     label {
                         display: flex;
                         align-items: center;
@@ -484,85 +638,115 @@
                         }
                     }
                 }
-
-                a {
+                .btn_cart{
                     position: relative;
-                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    color: rgba(0, 0, 0, 0.87);
                     @include vp(font-size, 26px);
+                    @include vp(margin-left, 64px);
+                    @include vp(padding-left, 48px);
                     font-weight: 400;
-                    color: $black;
-                    @include vp(width, 151px);
-                    text-align: right;
-                    @include vp(border-bottom, 2px solid #1C1B1F);
-
-                    &::after {
-                        position: absolute;
-                        @include vp(top, 10px);
-                        left: 0;
+                    &::after{
                         content: '';
-                        display: block;
-                        @include vp(width, 23px);
-                        @include vp(height, 27px);
-                        background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-                        @include vp(background-size, 23px auto);
+                        position: absolute;
+                        @include vp(top, 3px);
+                        left:0;
+                        @include vp(width, 40px);
+                        @include vp(height, 40px);
+                        background: url("../images/btn/btn_pie_chart.png") 0 0 no-repeat;
+                        @include vp(background-size, 40px auto);
+                    }
+                }
+                .btn_filter{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    color: rgba(0, 0, 0, 0.87);
+                    @include vp(font-size, 26px);
+                    @include vp(margin-left, auto);
+                    @include vp(padding-left, 48px);
+                    font-weight: 400;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        @include vp(top, 3px);
+                        left:0;
+                        @include vp(width, 40px);
+                        @include vp(height, 40px);
+                        background: url("../images/btn/btn_filter.png") 0 0 no-repeat;
+                        @include vp(background-size, 40px auto);
                     }
                 }
             }
 
             .btn_group {
                 position: relative;
-                @include vp(padding-left, 34px);
-
+                display: flex;
+                align-items: center;
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                @include vp(margin-top, 28px);
+                // @include vp(padding-left, 34px);
+                .btn_refresh{
+                    display: inline-flex;
+                    @include vp(width, 68px);
+                    @include vp(height, 64px);
+                    @include vp(margin-right, 8px);
+                    background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
+                    @include vp(background-size, 68px auto);
+                }
                 .btn_list {
+                    @include vp(width, 514px);
                     position: relative;
                     display: flex;
                     flex-wrap: nowrap;
                     flex-direction: row;
-                    @include vp(gap, 6px);
-                    @include vp(height, 75px);
+                    @include vp(gap, 8px);
+                    @include vp(height, 64px);
                     align-items: center;
-                    overflow-scrolling: auto;
                     overflow-x: scroll;
                     overflow-y: hidden;
-                    @include vp(padding-right, 34px);
 
                     li {
+                        position: relative;
                         flex: 0 0 auto;
-
-                        a {
+                        .tag{
                             position: relative;
                             @include vp(font-size, 24px);
-                            @include vp(line-height, 32px);
-                            @include vp(padding, 14px 56px 14px 24px);
-                            @include vp(border-radius, 40px);
-                            @include vp(border, 1px solid $gray );
-                            font-weight: 600;
-                            color: $black;
-                            opacity: .7;
-
-                            &::after {
-                                content: '';
-                                position: absolute;
-                                @include vp(top, 24px);
-                                @include vp(right, 24px);
-                                @include vp(width, 21px);
-                                @include vp(height, 13px);
-                                background: url("../images/btn/btn_select.png") 0 0 no-repeat;
-                                @include vp(background-size, 21px auto);
-                            }
+                            @include vp(padding, 20px 60px 20px 20px);
+                            @include vp(height, 64px);
+                            font-weight: 500;
+                            color: $white;
+                            @include vp(letter-spacing, .1px);
+                            text-align: center;
+                            @include vp(border-radius, 6px);
+                            @include vp(border, 1px solid $green);
+                            background-color: $green;
+                        }
+                        .btn_close{
+                            display: block;
+                            position: absolute;
+                            @include vp(top, 19px);
+                            @include vp(right, 20px);
+                            @include vp(width, 28px);
+                            @include vp(height, 28px);
+                            background: url("../images/btn/btn_close_w.png") 0 0 no-repeat;
+                            @include vp(background-size, 28px auto);
+                            z-index: 10;
                         }
                     }
                 }
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    @include vp(top, -18px);
-                    right: 0;
-                    @include vp(width, 126px);
-                    @include vp(height, 80px);
-                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
-                }
+                // &:after {
+                //     content: '';
+                //     position: absolute;
+                //     @include vp(top, -18px);
+                //     right: 0;
+                //     @include vp(width, 126px);
+                //     @include vp(height, 80px);
+                //     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
+                // }
             }
         }
 
@@ -590,35 +774,35 @@
                                 align-items: center;
                                 @include vp(line-height, 28px);
 
-                                .complete {
+                                .badge {
                                     @include vp(padding, 8px 16px);
                                     @include vp(border-radius, 12px);
-                                    @include vp(border, 2px solid #00A862);
+                                    @include vp(border, 2px solid $green);
                                     @include vp(font-size, 24px);
-                                    @include vp(margin-right, 20px);
+                                    @include vp(margin-left, 8px);
                                     background: #EBFFF7;
                                     font-weight: 400;
-                                    color: #00A862;
-                                }
-
-                                .accident_type {
-                                    @include vp(padding-right, 20px);
-                                    @include vp(font-size, 24px);
-                                    font-weight: 400;
-
-                                    &.red {
-                                        color: $rad;
-                                    }
-
-                                    &.green {
+                                    &.complete{
                                         color: $green;
                                     }
+                                    &.emergency{
+                                        background: #FFF6F6;
+                                        @include vp(border, 2px solid #FF7F7F);
+                                        color: #F00;
+                                    }
+                                    &.common{
+                                        @include vp(border, 2px solid $gray);
+                                        background: #eee;
+                                        color: #333;
+                                    }
+                                    &:first-child{ margin-left:0;}
                                 }
 
                                 p {
                                     color: $black;
                                     @include vp(font-size, 24px);
                                     font-weight: 400;
+                                    @include vp(margin-left, 20px);
                                 }
                             }
 
@@ -659,7 +843,7 @@
 
                                 &.last {
                                     span {
-                                        color: #888;
+                                        color: #333;
                                         @include vp(font-size, 24px);
                                         font-style: normal;
                                         font-weight: 400;
@@ -749,6 +933,35 @@
                                     z-index: 1;
                                 }
                             }
+
+                            .no_img{
+                                @include vp(width, 148px);
+                                @include vp(height, 148px);
+                                &.parther{
+                                    background: url("../images/icons/icon_no_img_parther.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.customer{
+                                    background: url("../images/icons/icon_no_img_customer.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.disaster{
+                                    background: url("../images/icons/icon_no_img_disaster.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.fire{
+                                    background: url("../images/icons/icon_no_img_fire.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.different{
+                                    background: url("../images/icons/icon_no_img_different.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.safety{
+                                    background: url("../images/icons/icon_no_img_safety.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                            }
                         }
                     }
 
@@ -756,27 +969,25 @@
                         position: absolute;
                         @include vp(top, -10px);
                         @include vp(right, 39px);
-                        @include vp(width, 44px);
-                        @include vp(height, 70px);
+                        @include vp(width, 50px);
+                        @include vp(height, 76px);
                         background: url("../images/btn/btn_bookmark_off.png") 0 0 no-repeat;
-                        @include vp(background-size, 44px auto);
+                        @include vp(background-size, 50px auto);
 
                         // box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
                         &.on {
                             background: url("../images/btn/btn_bookmark_on.png") 0 0 no-repeat;
-                            @include vp(background-size, 44px auto);
+                            @include vp(background-size, 50px auto);
                         }
                     }
                 }
             }
         }
     }
-
     &.home {}
 
     section {
         display: none;
-
         &.on {
             display: block;
         }

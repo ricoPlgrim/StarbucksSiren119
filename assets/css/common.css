@@ -3,6 +3,9 @@
  * ================================================== */
 html {
   -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html:focus-within {
@@ -1009,12 +1012,12 @@ header.common .btn_bookmark.on {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  padding: 96px 8px 0 0;
+  padding: 100px 8px 0 0;
   margin-bottom: 38px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .gnb_top {
-    padding: 12.8vw 1.0666666667vw 0 0;
+    padding: 13.3333333333vw 1.0666666667vw 0 0;
   }
 }
 @media screen and (max-width: 750px) {

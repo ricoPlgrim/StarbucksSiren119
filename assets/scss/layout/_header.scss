@@ -195,23 +195,12 @@ header {
         overflow-y: auto;
         overflow-x: hidden;
         height: 100%;
-
-        // &::-webkit-scrollbar {
-        //     @include vp(max-height, 50px);  
-        //     @include vp(width, 4px);  
-        // }
-        // &::-webkit-scrollbar-thumb {
-        //     background: rgb(103, 103, 103);
-        //     @include vp(border-radius, 10px); 
-        // }
-        // &::-webkit-scrollbar-track {
-        //     background: transparent;
-        // }
+     
         .gnb_top {
             display: flex;
             align-items: center;
             justify-content: right;
-            @include vp(padding, 96px 8px 0 0);
+            @include vp(padding, 100px 8px 0 0);
             @include vp(margin-bottom, 38px);
 
             button {
@@ -226,6 +215,8 @@ header {
                 &.btn_close {
                     background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
                     @include vp(background-size, 96px auto);
+                }
+              
                 }
             }
         }
@@ -368,6 +359,7 @@ header {
                                 @include vp(font-size, 26px);
                                 font-weight: 400;
                                 @include vp(padding-left, 68px);
+                                color: $black;
 
                                 &::before {
                                     content: '';
