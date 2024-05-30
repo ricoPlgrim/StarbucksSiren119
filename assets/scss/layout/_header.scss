@@ -172,6 +172,8 @@ header {
             @include vp(padding, 54px 50px); 
             &.on {
                 background: url("../images/btn/btn_bookmarkL_on.png") center center no-repeat;
+                @include vp(background-size, 54px auto); 
+                @include vp(padding, 54px 50px); 
             }
         }
     }

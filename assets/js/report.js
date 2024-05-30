@@ -1,9 +1,11 @@
 /* global var*/
 var _w;
 var _report;
+var _detail;
 var _reportListBtn;
 var _selectBtn;
 var _selectItem;
+var _btnBookmark;
 
 var reportUi = {
 
@@ -13,16 +15,19 @@ var reportUi = {
     },
     create: function(){
         _w = $( window );
-        _report = $( ".report" );
+        _report = $(".report");
+        _detail = $(".detail");
         _reportListBtn = _report.find("ul.form_list").find("li").not(".option_list > li");
         _selectBtn = _report.find("ul.form_list").find(".select_option");
         _selectItem = _report.find("ul.option_list").find("li");
+        _btnBookmark = _detail.find(".btn_bookmark");
     },
     addEvent: function(){
         reportUi.resizeEvent( null );
         _w.on( "resize", reportUi.resizeEvent );
         _reportListBtn.on("click", reportUi.reportBtnClick);
         _selectBtn.on("click", reportUi.selectBtnClick);
+        _btnBookmark.on("click", reportUi.bookmarkBtnClick);
     },
     loadEvent: function () {
         reportUi.create();
@@ -51,6 +56,9 @@ var reportUi = {
 
         selectOption.text(selectedText);
         selectBox.find(".option_list").removeClass("active");
+    },
+    bookmarkBtnClick: function(){
+        $(this).toggleClass("on");
     },
     detailSwiper: function(){
         if ($('.detail_swiper').length) {

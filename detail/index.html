@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="../assets/css/report.css">
 </head>
 <body>
-    <main id="wrap">
+    <main id="wrap" class="detail">
         <header class="common">
             <button class="btn_back"></button>
             <h1>보고상세</h1>
+            <!-- 북마크 활성화 class="on" -->
             <button class="btn_bookmark"></button>
         </header>
 
-        <section class="detail">
+        <section>
             <h2 class="blind">보고상세</h2>
             <!-- 상단 매장 이미지 -->
             <div class="detail_visual detail_swiper">
@@ -48,7 +49,11 @@
             <div class="detail_wrap">
                 <div class="detail_box">
                    <div class="info_header">
-                        <span class="badge">긴급</span>
+                        <div class="badge">
+                            <span class="done">종결</span>
+                            <span class="urgency">긴급</span>
+                            <span class="general">일반</span>
+                        </div>
                         <span class="location">서울 세관사거리</span>
                    </div>
                     <div class="incident_box">
@@ -61,34 +66,51 @@
                             <span class="time">11:09</span>
                             <span class="comments">3</span>
                         </div>
-                        <div class="tag_box">
+                        <!-- <div class="tag_box">
                             <span class="tag01">유지보수 연결</span>
                             <span class="tag01">대피/소방</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
-                <div class="detail_box flex">
+                <div class="detail_box">
                     <div class="report_info">
                         <dl>
                             <dt>보고자</dt>
-                            <dd class="border">홍길동 파트너</dd>
+                            <dd class="border">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">홍길동 파트너</a>
+                            </dd>
                         </dl>
                         <dl>
                             <dt>DM</dt>
-                            <dd class="border">김스벅 ·<span> 운영10팀</span></dd>
+                            <dd class="border">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">
+                                    김스벅 ·<span> 운영10팀</span>
+                                </a>
+                            </dd>
                         </dl>
                         <dl>
                             <dt>팀장</dt>
-                            <dd class="border">최스벅 ·<span> 운영10팀</span></dd>
+                            <dd class="border">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">
+                                    최스벅 ·<span> 운영10팀</span>
+                                </a>
+                            </dd>
                         </dl>
                     </div>
-                    <div class="btn_box">
+                    <!-- <div class="btn_box">
                         <span class="btn01">MOBILE</span>
                         <span class="btn02">SMS</span>
-                    </div>
+                    </div> -->
                 </div>       
                 <div class="detail_box">
                     <div class="report_info">
+                        <dl class="emerge_box">
+                            <dt>응급조치</dt>
+                            <dd>
+                                <span class="emerg01">고객대피</span>
+                                <span class="emerg02">소방서</span>
+                            </dd>
+                        </dl>
                         <dl>
                             <dt>발생매장</dt>
                             <dd>센트럴 F1</dd>
@@ -105,11 +127,15 @@
                             <dt>영업가부</dt>
                             <dd>영업가능</dd>
                         </dl>
+                        <dl>
+                            <dt>원인</dt>
+                            <dd>소비기한 경과</dd>
+                        </dl>
+                        <dl>
+                            <dt>재난피해</dt>
+                            <dd>없음</dd>
+                        </dl>
                     </div>
-                </div>
-                <div class="btn_comment">
-                    <div class="input_box"><input type="text" placeholder="댓글을 입력하세요."></div>
-                    <button>등록</button>
                 </div>
                 <div class="notice">
                     소비기한 경과 물품회수 조치 완료, 고객 환불 완료,고객 
@@ -127,8 +153,7 @@
                 </div>
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user">김스벅 ·<span> 운영10팀</span></span>
-                        <button class="btn_recomment">답글작성</button>
+                        <span class="user"><span class="name">김스벅</span> · 운영10팀</span>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -141,6 +166,15 @@
                         옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행 <br/>
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
                     </div>
+                    <div class="btn_wrap">
+                        <div class="btn_recomment">
+                            <span>답글작성</span>
+                        </div>
+                        <div class="comment_edit">
+                            <span class="btn_edit">수정</span>
+                            <span class="btn_delete">삭제</span>
+                        </div>  
+                    </div>
                     <ul class="recomment_box">
                         <li>
                             <div class="text01">
@@ -150,7 +184,7 @@
                                 천장마감 및 콘센트 원복 보수 진행
                             </div>
                             <div class="text02">
-                                <span class="user">고영민 · <span>DM 운영 3팀</span></span>
+                                <span class="user"><span class="name">고영민</span> · DM 운영 3팀</span>
                                 <span class="date">2024-05-08</span>
                                 <span class="time">12:45</span>
                             </div>
@@ -162,7 +196,7 @@
                                 바닥공사 완료 > 천장마감 및 콘센트 원복 보수 진행
                             </div>
                             <div class="text02">
-                                <span class="user">민영희 · <span>DM 운영 5팀</span></span>
+                                <span class="user"><span class="name">민영희</span> · DM 운영 3팀</span>
                                 <span class="date">2024-05-10</span>
                                 <span class="time">16:05</span>
                             </div>
@@ -174,7 +208,7 @@
                                 천장마감 및 콘센트 원복 보수 완료
                             </div>
                             <div class="text02">
-                                <span class="user">오주연 · <span>DM 운영 7팀</span></span>
+                                <span class="user"><span class="name">오주연</span> · DM 운영 7팀</span>
                                 <span class="date">2024-05-11</span>
                                 <span class="time">09:38</span>
                             </div>
@@ -183,7 +217,7 @@
                 </div> 
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user">김스벅 ·<span> 운영10팀</span></span>
+                        <span class="user"><span class="name">정재형</span> · DM 운영 16팀</span>
                         <button class="btn_recomment">답글작성</button>
                     </div>
                     <div class="info02">
@@ -196,11 +230,20 @@
                         옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정
                         옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
+                    </div>
+                    <div class="btn_wrap">
+                        <div class="btn_recomment">
+                            <span>답글작성</span>
+                        </div>
+                        <div class="comment_edit">
+                            <span class="btn_edit">수정</span>
+                            <span class="btn_delete">삭제</span>
+                        </div>  
                     </div>
                 </div>
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user">김스벅 ·<span> 운영10팀</span></span>
+                        <span class="user"><span class="name">김혜윤</span> · DM 운영 8팀</span>
                         <button class="btn_recomment">답글작성</button>
                     </div>
                     <div class="info02">
@@ -213,12 +256,21 @@
                         옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정
                         옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
+                    </div>
+                    <div class="btn_wrap">
+                        <div class="btn_recomment">
+                            <span>답글작성</span>
+                        </div>
+                        <div class="comment_edit">
+                            <span class="btn_edit">수정</span>
+                            <span class="btn_delete">삭제</span>
+                        </div>  
                     </div>
                 </div> 
             </div>
         </section>
 
-        <!-- 팝업 -->
+        <!-- 상단 이미지 레이어 팝업 -->
         <div id="detailVisualPop" class="layer_popup">
             <header>
                 <button class="btn_close"></button>
@@ -241,10 +293,55 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+        <!-- 하단 레이어 팝업 -->
+        <aside class="bottom_sheet">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="staff_info_contents">
+                            <h3 class="name">최스벅</h3>
+                            <div class="btn_contact">
+                                <div class="btn01"><span class="mail">메일</span></div>
+                                <div class="btn01"><span class="phone">전화</span></div>
+                                <div class="btn01"><span class="text">문자</span></div>
+                            </div>
+                            <div class="staff_info">
+                                <dl>
+                                    <dt>소속</dt>
+                                    <dd>스타벅스 DM 운영 10팀</dd>
+                                </dl>
+                                <dl>
+                                    <dt>메일</dt>
+                                    <dd>james.choi@starbucks.com</dd>
+                                </dl>
+                                <dl>
+                                    <dt>전화</dt>
+                                    <dd>010 - 2345 - 5678</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
+
+        <!-- 하단 댓글 버튼 -->
+        <aside class="btn_comment">
+            <div class="text_box">
+                <textarea rows="1" cols="2" placeholder="텍스트입력"></textarea>
+                <span class="btn_delete">내용 삭제</span>
+            </div>
+            <!-- 활성화되면 class="on" 추가 -->
+            <button>등록</button>
+        </aside>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/swiper.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script src="../assets/js/report.js"></script>
     <script src="../assets/js/popup.js"></script>
 </body>

@@ -1,7 +1,7 @@
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
-html {
+ html {
   -webkit-text-size-adjust: 100%;
 }
 
@@ -12,7 +12,6 @@ html:focus-within {
 body {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   position: relative;
   width: 100%;
@@ -26,8 +25,7 @@ body {
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Elements that don't have a class get default styles */
@@ -176,8 +174,7 @@ q:after {
    */
 input:required,
 input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 input:-webkit-autofill,
@@ -198,7 +195,6 @@ input[type=search]::-webkit-search-results-decoration {
 input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -316,7 +312,6 @@ input[type=radio] {
    */
 input[type=search] {
   -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -363,8 +358,7 @@ table {
    * github.com/necolas/normalize.css
    */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   overflow: visible;
   background: #000;
   border: 0;
@@ -654,8 +648,6 @@ header .header_inner {
   }
 }
 header .header_inner .header_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 112px;
 }
@@ -675,8 +667,6 @@ header .header_inner .header_top .btn_hamburger {
 }
 header .header_inner .header_top .utility_contents {
   margin-left: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 header .header_inner .header_top .utility_contents .btn_search {
@@ -802,7 +792,6 @@ header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
   border-radius: 100px;
   background: #000;
   border: 1px solid #000;
-  -webkit-transition: left 0.35s ease-in-out;
   transition: left 0.35s ease-in-out;
 }
 @media screen and (max-width: 750px) {
@@ -860,15 +849,13 @@ header .header_inner .header_sticky.active {
   position: fixed;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   max-width: 750px;
   width: 750px;
   background: #006241;
   padding-bottom: 20px;
   z-index: 100;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky.active {
@@ -901,19 +888,13 @@ header.home {
   }
 }
 header.common {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 112px;
   background-color: rgb(255, 255, 255);
   z-index: 100;
@@ -941,8 +922,7 @@ header.common .btn_back {
 header.common h1 {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   font-size: 30px;
   font-weight: 700;
 }
@@ -968,6 +948,18 @@ header.common .btn_bookmark {
 }
 header.common .btn_bookmark.on {
   background: url("../images/btn/btn_bookmarkL_on.png") center center no-repeat;
+  background-size: 54px auto;
+  padding: 54px 50px;
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_bookmark.on {
+    background-size: 7.2vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_bookmark.on {
+    padding: 7.2vw 6.6666666667vw;
+  }
 }
 
 /*gnb*/
@@ -976,8 +968,7 @@ header.common .btn_bookmark.on {
   position: fixed;
   top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   max-width: 750px;
   width: 750px;
   height: 100%;
@@ -1000,15 +991,9 @@ header.common .btn_bookmark.on {
   height: 100%;
 }
 .gnb .contents .gnb_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  align-items: center;
+  justify-content: right;
   padding: 96px 8px 0 0;
   margin-bottom: 38px;
 }
@@ -1078,40 +1063,28 @@ header.common .btn_bookmark.on {
   }
 }
 .gnb .contents nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 22px;
-     -moz-column-gap: 22px;
-          column-gap: 22px;
+  flex-wrap: wrap;
+  align-items: center;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents nav ul {
-    -webkit-column-gap: 2.9333333333vw;
-       -moz-column-gap: 2.9333333333vw;
-            column-gap: 2.9333333333vw;
+    -moz-column-gap: 2.9333333333vw;
+         column-gap: 2.9333333333vw;
   }
 }
 .gnb .contents nav ul .icon {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 calc(50% - 22px);
-          flex: 1 1 calc(50% - 22px);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  flex: 1 1 calc(50% - 22px);
+  box-sizing: border-box;
   padding-bottom: 54px;
   border-bottom: 1px solid #000;
   margin-bottom: 92px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents nav ul .icon {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 calc(50% - 2.9333333333vw);
-            flex: 1 1 calc(50% - 2.9333333333vw);
+    flex: 1 1 calc(50% - 2.9333333333vw);
   }
 }
 @media screen and (max-width: 750px) {
@@ -1264,18 +1237,14 @@ header.common .btn_bookmark.on {
   }
 }
 .gnb .contents .app_setting_content .inner .btn_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 22px;
-     -moz-column-gap: 22px;
-          column-gap: 22px;
+  -moz-column-gap: 22px;
+       column-gap: 22px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .app_setting_content .inner .btn_list {
-    -webkit-column-gap: 2.9333333333vw;
-       -moz-column-gap: 2.9333333333vw;
-            column-gap: 2.9333333333vw;
+    -moz-column-gap: 2.9333333333vw;
+         column-gap: 2.9333333333vw;
   }
 }
 .gnb .contents .app_setting_content .inner .btn_list li button {
@@ -1284,8 +1253,7 @@ header.common .btn_bookmark.on {
   height: 120px;
   border-radius: 40px;
   background: #fff;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .app_setting_content .inner .btn_list li button {
@@ -1461,13 +1429,11 @@ header.common .btn_bookmark.on {
 }
 .bottom_sheet .sheet_wrap {
   max-width: 750px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   min-height: 200px;
   position: fixed;
   z-index: 300;
   border-radius: 15px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   left: 50%;
   transform: translateX(-50%);
@@ -1506,8 +1472,7 @@ header.common .btn_bookmark.on {
   position: absolute;
   top: 20px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   border-radius: 100px;
   width: 68px;
   height: 8px;
@@ -1542,23 +1507,16 @@ header.common .btn_bookmark.on {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
   width: 160px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.12);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
@@ -1605,8 +1563,6 @@ header.common .btn_bookmark.on {
   color: #fff;
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 22px;
   gap: 14px;
@@ -1713,8 +1669,6 @@ header.common .btn_bookmark.on {
   position: relative;
 }
 .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
@@ -1772,6 +1726,139 @@ header.common .btn_bookmark.on {
     height: 0.8vw;
   }
 }
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents {
+  padding: 40px 40px 56px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents {
+    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .name {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .name {
+    font-size: 4vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact {
+    padding-top: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact {
+    padding-bottom: 8vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+  padding: 24px 20px;
+  width: 216px;
+  border-radius: 16px;
+  border: 1px solid #00A862;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+    padding: 3.2vw 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+    width: 28.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+    border-radius: 2.1333333333vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+  padding-left: 60px;
+  font-size: 30px;
+  color: #00A862;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+    padding-left: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+    font-size: 4vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+  background: url("../images/icons/ico_mail.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+  background: url("../images/icons/ico_call.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+  background: url("../images/icons/ico_text.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl {
+  display: flex;
+  margin-bottom: 8px;
+  font-size: 26px;
+  line-height: 54px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl {
+    margin-bottom: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl {
+    line-height: 7.2vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl dt {
+  min-width: 146px;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.3411764706);
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl dt {
+    min-width: 19.4666666667vw;
+  }
+}
 .bottom_sheet .sheet_wrap.open {
   bottom: 0;
 }
@@ -1782,11 +1869,9 @@ header.common .btn_bookmark.on {
   width: 100%;
   height: 100%;
   max-width: 750px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background: #000;
   z-index: -1;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
   pointer-events: none;
@@ -1812,8 +1897,7 @@ header.common .btn_bookmark.on {
   height: 112px;
   bottom: 82px;
   right: 50%;
-  -webkit-transform: translateX(348px);
-          transform: translateX(348px);
+  transform: translateX(348px);
 }
 @media screen and (max-width: 750px) {
   .scroll_top_box {
@@ -1832,8 +1916,7 @@ header.common .btn_bookmark.on {
 }
 @media screen and (max-width: 750px) {
   .scroll_top_box {
-    -webkit-transform: translateX(46.4vw);
-            transform: translateX(46.4vw);
+    transform: translateX(46.4vw);
   }
 }
 .scroll_top_box a {
