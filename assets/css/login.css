@@ -1,15 +1,8 @@
 .login {
   padding: 140px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background: #F6F6F6;
   min-height: 100vh;
   overflow: hidden;
@@ -122,7 +115,13 @@
 }
 .login .login_wrap .login_box .auto_checkbox {
   position: relative;
+  margin-top: 28px;
   display: inline-block;
+}
+@media screen and (max-width: 750px) {
+  .login .login_wrap .login_box .auto_checkbox {
+    margin-top: 3.7333333333vw;
+  }
 }
 .login .login_wrap .login_box .auto_checkbox input[type=checkbox] {
   position: absolute;
@@ -132,17 +131,13 @@
   opacity: 0;
 }
 .login .login_wrap .login_box .auto_checkbox label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-left: 64px;
   background: url("../images/btn/btn_check_off.png") no-repeat;
-  background-size: 88px auto;
-  background-position-x: -20px;
-  min-height: 88px;
+  background-size: 44px auto;
+  min-height: 44px;
+  line-height: 44px;
   font-size: 26px;
 }
 @media screen and (max-width: 750px) {
@@ -152,17 +147,17 @@
 }
 @media screen and (max-width: 750px) {
   .login .login_wrap .login_box .auto_checkbox label {
-    background-size: 11.7333333333vw auto;
+    background-size: 5.8666666667vw auto;
   }
 }
 @media screen and (max-width: 750px) {
   .login .login_wrap .login_box .auto_checkbox label {
-    background-position-x: -2.6666666667vw;
+    min-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   .login .login_wrap .login_box .auto_checkbox label {
-    min-height: 11.7333333333vw;
+    line-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -172,30 +167,17 @@
 }
 .login .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
   background: url("../images/btn/btn_check_on.png") no-repeat;
-  background-size: 88px auto;
-  background-position-x: -20px;
+  background-size: 44px auto;
 }
 @media screen and (max-width: 750px) {
   .login .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
-    background-size: 11.7333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
-    background-position-x: -2.6666666667vw;
+    background-size: 5.8666666667vw auto;
   }
 }
 .login .login_wrap .login_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 .login .login_wrap .login_btn button {
   width: 670px;

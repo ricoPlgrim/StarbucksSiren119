@@ -53,6 +53,7 @@
             }
             .auto_checkbox {
                 position:relative;
+                @include vp( margin-top, 28px);
                 display:inline-block;
                 input[type="checkbox"] {
                     position:absolute;
@@ -66,15 +67,14 @@
                     align-items: center;
                     @include vp(padding-left, 64px);
                     background:url("../images/btn/btn_check_off.png") no-repeat;
-                    @include vp(background-size, 88px auto);
-                    @include vp(background-position-x, -20px);
-                    @include vp(min-height, 88px);
+                    @include vp(background-size, 44px auto);
+                    @include vp(min-height, 44px);
+                    @include vp(line-height, 44px);
                     @include vp(font-size, 26px);
                 }
                 input[type="checkbox"]:checked + label {
                     background:url("../images/btn/btn_check_on.png")  no-repeat;
-                    @include vp(background-size, 88px auto);
-                    @include vp(background-position-x, -20px);
+                    @include vp(background-size, 44px auto);
                 }
             }
         }
