@@ -1,557 +1,995 @@
-
 @import 'base/variables';
-@import 'base/mixin'; 
+@import 'base/mixin';
 
-#wrap{
+#wrap {
     background: #f6f6f6;
 }
-.sections{
-    .section_inner{
+
+.sections {
+    .section_inner {
         position: relative;
-        @include vp(padding, 0px 40px); 
+        @include vp(padding, 0px 40px);
         transform: translateY(-40px);
+
         @include breakpoint {
-          transform: translateY(-5.333333333333333vw);
+            transform: translateY(-5.333333333333333vw);
         }
-     
+        &:after{
+            content: '';
+            display: block;
+            clear: both;    
+        }
         // @include vp(padding, 0 20px); 
-        .menu_btn-list{
+        .menu_btn-list {
+            float: left;
             position: relative;
-            display: flex; 
-            flex-wrap: wrap;
-            align-items: flex-start;
-            width: 100%;
-            @include vp(gap, 22px); 
-            @include vp(max-width, 670px);
-            @include vp(padding-bottom, 104px); 
-        
-            margin:0 auto;
-            z-index: 20; 
-            >li{
-                position: relative;
+            @include vp(max-width, 324px);
+            @include vp(width, 324px);
+            // @include vp(padding-bottom, 104px); 
+            @include vp(min-height, 1016px);
+
+
+            margin: 0 auto;
+            z-index: 20;
+
+            &:first-child {
+                @include vp(margin-right, 20px );
+            }
+
+            >li {
+                position: absolute;
                 display: flex;
-                justify-content: center;  
+                justify-content: center;
                 align-items: center;
+                top:0;
+                left:0;
                 cursor: pointer;
-                @include vp(width, 324px); 
-                @include vp(height, 324px); 
-                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05)); 
-                @include vp(border-radius, 40px); 
+                @include vp(width, 324px);
+                @include vp(height, 324px);
+                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
+                @include vp(border-radius, 40px);
                 background: #fff;
-                transition: all .45s;
-                a{ 
+                &:nth-child(2){
+                    @include vp(top, 348px );
+                }
+                &:nth-child(3){
+                    @include vp(top, 694px );
+                }
+                .menu_box{
+                    position: relative;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
                     width: inherit;
-                    height:inherit;
-                    @include vp( font-size, 32px); 
+                    height: inherit;
+                    @include vp(font-size, 32px);
                     color: $black;
                     font-weight: 600;
                     text-align: center;
-                    &::before{
-                        content: '';
-                        display: block;
-                        @include vp(margin-bottom, 34px); 
-                        @include vp(width, 110px); 
-                        @include vp(height, 110px); 
-                    
+                    .thum{
+                        transition: width 0.5s ease;
+                        &::before {
+                            content: '';
+                            display: block;
+                            @include vp(margin-bottom, 32px);
+                            @include vp(width, 112px);
+                            @include vp(height, 110px);
+    
+                        }
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            @include vp(top, 40px);
+                            @include vp(right, 40px);
+                            @include vp(width, 32px);
+                            @include vp(height, 32px);
+                            background: url("../images/btn/btn_plus.png") 0 0 no-repeat;
+                            @include vp(background-size, 32px auto);
+                        }
                     }
-                    &::after{
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        @include vp(top, 40px); 
-                        @include vp(right, 40px); 
-                        @include vp(width, 32px); 
-                        @include vp(height, 32px); 
-                        background: url("../images/btn/btn_plus.png") 0 0 no-repeat;
-                        @include vp(background-size, 32px auto); 
-                    }
-                }
-                &.parther{
-                    a{
+                    .menu{
+                        display: none;
+                        position: relative;
                         &:before{
+                            content: '';
+                            position: absolute;
+                            @include vp(top, 34px);
+                            @include vp(right, 34px);
+                            @include vp(width, 32px);
+                            @include vp(height, 32px);
+                            background: url("../images/btn/btn_minus.png") 0 0 no-repeat;
+                            @include vp(background-size, 32px auto);
+                        }
+                        .inner{
+                            @include vp(padding, 60px 60px 92px);
+                            @include vp(min-width, 670px);
+                      
+                            .title_box{
+                                display: flex;
+                                align-items: center;
+                                @include vp(padding-bottom, 32px);
+                                @include vp(margin-bottom, 40px);
+                                @include vp(border-bottom, 2px solid $black);
+                                h3{
+                                    position: relative;
+                                    @include vp(padding-left, 88px);
+                                    color: $black;
+                                    @include vp(font-size, 32px);
+                                    font-weight: 600;
+                               
+                                    &:before{
+                                        content: '';
+                                        display: block;
+                                        position: absolute;
+                                        @include vp(top, -5px);
+                                        left:0;
+                                        @include vp(width, 48px);
+                                        @include vp(height, 48px);
+                                        background: url(../images/icons/icon_Partner.png) 0 0 no-repeat;
+                                        @include vp(background-size, 48px auto);
+                                    }
+                                }
+                                .read_text{
+                                    @include vp(margin-left, 20px);
+                                    color: rgba(136, 136, 136, 0.58);
+                                    @include vp(font-size, 24px);
+                                    font-weight: 400; 
+                                }
+                            }
+                            .scroll_box{
+                                @include vp(max-height, 172px);
+                                overflow: auto;
+                                .type_list{
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    @include vp(margin-top, -28px);
+                                    li{
+                                        flex: 1 0 50%; 
+                                        box-sizing: border-box; 
+                                        text-align: left;
+                                        @include vp(margin-top, 28px);
+                                        a{
+                                            color: $black;
+                                            @include vp(font-size, 26px);
+                                            font-weight: 400; 
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.on{
+                        justify-content:flex-start;
+                 
+                        .thum{ 
+                           display: none;
+                        }
+                        // .thum{ display: none;}
+                        .menu{
+                           display: block;
+                          
+                        }
+                    }
+
+                   
+                }
+
+                &.parther {
+                    .thum {
+                        &:before {
+                            @include vp(width, 114px );
                             background: url("../images/icons/icon_Partner.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+                            @include vp(background-size, 114px auto);
                         }
                     }
                 }
-                &.customer{
-                    a{
-                        &:before{
+
+                &.customer {
+                    .thum {
+                        &:before {
                             background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                &.disaster{
-                    a{
-                        &:before{
+
+                &.disaster {
+                    .thum {
+                        &:before {
+                            @include vp(width, 115px );
                             background: url("../images/icons/icon_disaster.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+                            @include vp(background-size, 115px auto);
+                        }
+                        
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_disaster.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                &.fire{
-                    a{
-                        &:before{
+
+                &.fire {
+                    .thum {
+                        &:before {
                             background: url("../images/icons/icon_fire.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_fire.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                &.different{
-                    a{
-                        &:before{
+
+                &.different {
+                    .thum {
+                        &:before {
                             background: url("../images/icons//icon_different_thing.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+                            @include vp(background-size, 112px auto);
+                        }
+                    }
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_different_thing.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
-                &.safety{
-                    a{
-                        &:before{
-                            background: url("../images/icons/icon_food_ safety.png") 0 0 no-repeat;
-                            @include vp(background-size, 110px auto); 
+
+                &.safety {
+                    .thum {
+                        &:before {
+                            @include vp(width, 114px );
+                            background: url("../images/icons/icon_food_safety.png") 0 0 no-repeat;
+                            @include vp(background-size, 114px auto);
                         }
                     }
-                }
-                &.on{
-                    @include vp(width, 670px); 
-                    @include vp(height, 394px); 
-                }
-                &:nth-child(odd){
-                    transform-origin: left;
-                }
-                &:nth-child(even){
-                    transform-origin: right;
+                    .menu_box{
+                        .menu{
+                            .inner{
+                                .title_box{
+                                    h3{
+                                        &:before{
+                                            background: url("../images/icons/icon_food_safety.png") 0 0 no-repeat;
+                                            @include vp(background-size, 48px auto);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
-       
+
         }
 
-        .menu_view_list{
+        &.parther{
+            .menu_btn-list{
+                &.left{
+                    z-index: 30;
+                    .parther{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                    }
+                    .disaster{
+                        @include vp(top, 408px);
+                    }
+                    .different{
+                        @include vp(top, 751px);
+                    }
+                }
+                &.right{
+                    .customer{
+                        @include vp(top, 408px);
+                    }
+                    .fire{
+                        @include vp(top, 751px);
+                    }
+                    .safety{
+                        @include vp(top, 1096px);
+                    }
+                }
+            }
+        }
+        &.disaster{
+            .menu_btn-list{
+                &.left{
+                    z-index: 30;
+                    .disaster{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                    }
+                    .different{
+                        @include vp(top, 751px);
+                    }
+                }
+                &.right{
+                    .fire{
+                        @include vp(top, 751px);
+                    }
+                    .safety{
+                        @include vp(top, 1096px);
+                    }
+                }
+            }
+        }
+        &.different{
+            .menu_btn-list{
+                &.left{
+                    z-index: 30;
+                    .different{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                    }
+                }
+                &.right{
+                    .safety{
+                        @include vp(top, 1096px);
+                    }
+                }
+            }
+        }
+
+        &.customer{
+            .menu_btn-list{
+                &.left{
+                    .parther{
+                        @include vp(top, 408px);
+                       
+                    }
+                    .disaster{
+                        @include vp(top, 751px);
+                    }
+                    .different{
+                        @include vp(top, 1096px);
+                    }
+                }
+                &.right{
+                    .customer{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                        @include vp(left, -345px);
+                    }
+                    .fire{
+                        @include vp(top, 408px);
+                    }
+                    .safety{
+                        @include vp(top, 751px);
+                    }
+                }
+            }
+        }
+        &.fire{
+            .menu_btn-list{
+                &.left{
+                    .parther{
+                       
+                    }
+                    .disaster{
+                        @include vp(top, 751px);
+                    }
+                    .different{
+                        @include vp(top, 1096px);
+                    }
+                }
+                &.right{
+                    .customer{
+                    
+                    }
+                    .fire{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                        @include vp(left, -345px);
+                    }
+                    .safety{
+                        @include vp(top, 751px);
+                    }
+                }
+            }
+        }
+        &.safety{
+            .menu_btn-list{
+         
+                &.left{
+                    .different{
+                        @include vp(top, 1096px);
+                    }
+                }
+                &.right{
+                    .safety{
+                        @include vp(width, 670px);
+                        @include vp(height, 394px);
+                        @include vp(left, -345px);
+                    }
+                } 
+            }
+        }
+
+        &.open{
+            @include vp(min-height, 1400px);
+        }
+        .menu_view_list {
             display: none;
             position: absolute;
-            top:0;
-            @include vp(left, 40px); 
-            @include vp(width, 670px); 
+            top: 0;
+            @include vp(left, 40px);
+            @include vp(width, 670px);
             z-index: 10;
             opacity: 0;
-            >li{
+
+            >li {
                 display: none;
                 position: relative;
                 // @include vp(transform, translateY(-30px)); 
-                @include vp(margin-top, -30px );  
-                @include vp(width, 324px); 
-                @include vp(height, 324px); 
-                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.1)); 
+                @include vp(margin-top, -30px);
+                @include vp(width, 324px);
+                @include vp(height, 324px);
+                @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.1));
                 background: #fff;
-                @include vp(border-radius, 40px); 
+                @include vp(border-radius, 40px);
+
                 // transition:width .35s, height .35s;
-                .btn_close{
+                .btn_close {
                     position: absolute;
-                    @include vp(top, 32px); 
-                    @include vp(right, 32px); 
-                    @include vp(width, 46px); 
-                    @include vp(height, 46px); 
+                    @include vp(top, 32px);
+                    @include vp(right, 32px);
+                    @include vp(width, 46px);
+                    @include vp(height, 46px);
                     background: url("../images/btn/btn_close.png") 0 0 no-repeat;
-                    @include vp(background-size, 46px auto); 
+                    @include vp(background-size, 46px auto);
                     opacity: 0;
                 }
-                .inner{
+
+                .inner {
                     opacity: 0;
-                    @include vp(padding, 68px 60px 0 60px); 
-                    .title_box{
+                    @include vp(padding, 68px 60px 0 60px);
+
+                    .title_box {
                         display: flex;
                         align-items: end;
-                        @include vp(padding-bottom, 32px); 
-                        @include vp(margin-bottom, 50px); 
-                        @include vp(border-bottom, 1px solid #333); 
-                        h3{
+                        @include vp(padding-bottom, 32px);
+                        @include vp(margin-bottom, 50px);
+                        @include vp(border-bottom, 1px solid #333);
+
+                        h3 {
                             position: relative;
-                            @include vp(padding-left, 68px); 
-                            @include vp(font-size, 32px); 
+                            @include vp(padding-left, 68px);
+                            @include vp(font-size, 32px);
                             font-weight: 600;
-                         
-                            &::after{
+
+                            &::after {
                                 content: '';
                                 position: absolute;
-                                @include vp(top, -10px); 
-                                left:0;
+                                @include vp(top, -10px);
+                                left: 0;
                                 display: block;
-                                @include vp(width, 48px); 
-                                @include vp(height, 48px); 
+                                @include vp(width, 48px);
+                                @include vp(height, 48px);
                                 background: url("../images/icons/icon_Partner.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto); 
+                                @include vp(background-size, 48px auto);
                             }
                         }
-                        span{
-                            @include vp(padding-left, 20px); 
-                            @include vp(font-size, 24px); 
+
+                        span {
+                            @include vp(padding-left, 20px);
+                            @include vp(font-size, 24px);
                             font-weight: 400;
-                            color: #888; 
+                            color: #888;
                             opacity: .6;
                         }
                     }
-                    .scroll_box{
-                        @include vp(max-height, 207px); 
+
+                    .scroll_box {
+                        @include vp(max-height, 207px);
                         overflow-y: auto;
+
                         &::-webkit-scrollbar {
-                            @include vp(max-height, 5px);  
-                            @include vp(width, 8px);  
+                            @include vp(max-height, 5px);
+                            @include vp(width, 8px);
                         }
+
                         &::-webkit-scrollbar-thumb {
                             background: rgb(103, 103, 103);
-                            @include vp(border-radius, 10px); 
+                            @include vp(border-radius, 10px);
                         }
+
                         &::-webkit-scrollbar-track {
                             background: transparent;
                             // background: rgba(220, 20, 60, .1); 
                         }
-                        .type_list{
+
+                        .type_list {
                             display: flex;
                             flex-wrap: wrap;
-                          
-                            li{
+
+                            li {
                                 flex: 0 0 33.3333%;
                                 // @include vp(width, 130px); 
                                 // @include vp(margin-right, 70px); 
-                                @include vp(margin-bottom, 38px); 
-                                @include vp(font-size, 26px); 
+                                @include vp(margin-bottom, 38px);
+                                @include vp(font-size, 26px);
                                 word-break: keep-all;
-                                a{
+
+                                a {
                                     display: block;
                                     text-align: left;
                                     color: $black;
                                     font-weight: 400;
                                 }
+
                                 &:nth-child(3n) {
-                                    margin-right: 0; 
+                                    margin-right: 0;
                                 }
                             }
                         }
-                    
+
                     }
                 }
+
                 &:nth-child(3),
-                &:nth-child(4){
+                &:nth-child(4) {
                     // @include vp(transform, translateY(316px)); 
                     // @include vp(margin-top, 346px ); 
                     transform: translateY(346px);
+
                     @include breakpoint {
                         transform: translateY(46.13333333333333vw);
                     }
-                    
+
                 }
+
                 &:nth-child(5),
-                &:nth-child(6){
+                &:nth-child(6) {
                     // @include vp(transform, translateY(662px)); 
-                    @include vp(margin-top, 692px );  
+                    @include vp(margin-top, 692px);
                 }
-                &.on{
+
+                &.on {
                     display: block;
-                    @include vp(width, 670px); 
-                    @include vp(height, 394px); 
+                    @include vp(width, 670px);
+                    @include vp(height, 394px);
                 }
             }
         }
-        
-        .setting_contents{
+
+        .setting_contents {
             width: 100%;
-            @include vp(height, 212px); 
+            // @include vp(height, 212px);
             background: $white;
-            @include vp(border-radius, 40px); 
+            @include vp(border-radius, 40px);
+            @include vp(padding, 40px 40px 28px 40px);
             box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-            .setting_top{
+
+            .setting_top {
                 display: flex;
                 // justify-content: space-around;
-                @include vp(padding, 40px 40px 28px 40px); 
-                .setting_check_box{
+            
+
+                .setting_check_box {
+                    display: inline-flex;
                     label {
                         display: flex;
                         align-items: center;
-                        @include vp(font-size, 26px); 
+                        @include vp(font-size, 26px);
                         font-weight: 400;
                         color: $black;
                         opacity: .87;
                         cursor: pointer;
-                        input[type="checkbox"] { 
-                          @include vp(padding-left, 64px); 
-                          @include vp(width, 44px); 
-                          @include vp(height, 44px); 
-                          cursor: pointer;
-                          outline: none;
-                          appearance: none;
-                          background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
-                          @include vp(background-size, 44px auto); 
+
+                        input[type="checkbox"] {
+                            @include vp(padding-left, 64px);
+                            @include vp(width, 44px);
+                            @include vp(height, 44px);
+                            cursor: pointer;
+                            outline: none;
+                            appearance: none;
+                            background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
+                            @include vp(background-size, 44px auto);
+
+                            &:checked {
+                                background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
+                                @include vp(background-size, 44px auto);
+                            }
                         }
-                      }
+                    }
                 }
-                a{
+                .btn_cart{
                     position: relative;
-                    margin-left: auto;
-                    @include vp(font-size, 26px); 
+                    display: flex;
+                    align-items: center;
+                    color: rgba(0, 0, 0, 0.87);
+                    @include vp(font-size, 26px);
+                    @include vp(margin-left, 64px);
+                    @include vp(padding-left, 48px);
                     font-weight: 400;
-                    color: $black;
-                    @include vp(width, 151px); 
-                    text-align: right;
-                    @include vp(border-bottom, 2px solid #1C1B1F);  
                     &::after{
-                        position: absolute;
-                        @include vp(top, 10px); 
-                        left:0;
                         content: '';
-                        display: block;
-                        @include vp(width, 23px); 
-                        @include vp(height, 27px );  
-                        background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-                        @include vp(background-size, 23px auto); 
+                        position: absolute;
+                        @include vp(top, 3px);
+                        left:0;
+                        @include vp(width, 40px);
+                        @include vp(height, 40px);
+                        background: url("../images/btn/btn_pie_chart.png") 0 0 no-repeat;
+                        @include vp(background-size, 40px auto);
+                    }
+                }
+                .btn_filter{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    color: rgba(0, 0, 0, 0.87);
+                    @include vp(font-size, 26px);
+                    @include vp(margin-left, auto);
+                    @include vp(padding-left, 48px);
+                    font-weight: 400;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        @include vp(top, 3px);
+                        left:0;
+                        @include vp(width, 40px);
+                        @include vp(height, 40px);
+                        background: url("../images/btn/btn_filter.png") 0 0 no-repeat;
+                        @include vp(background-size, 40px auto);
                     }
                 }
             }
-            .btn_group{
+
+            .btn_group {
                 position: relative;
-                @include vp(padding-left, 34px ); 
-                .btn_list{
+                display: flex;
+                align-items: center;
+                flex-wrap:wrap;
+                justify-content: flex-start;
+                @include vp(margin-top, 28px);
+                // @include vp(padding-left, 34px);
+                .btn_refresh{
+                    display: inline-flex;
+                    @include vp(width, 68px);
+                    @include vp(height, 64px);
+                    @include vp(margin-right, 8px);
+                    background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
+                    @include vp(background-size, 68px auto);
+                }
+                .btn_list {
+                    @include vp(width, 514px);
                     position: relative;
                     display: flex;
                     flex-wrap: nowrap;
                     flex-direction: row;
-                    @include vp(gap, 6px );  
-                    @include vp(height, 75px );  
+                    @include vp(gap, 8px);
+                    @include vp(height, 64px);
                     align-items: center;
-                    overflow-scrolling: auto;
                     overflow-x: scroll;
                     overflow-y: hidden;
-                    @include vp(padding-right, 34px ); 
-                    
-                    li{
+
+                    li {
+                        position: relative;
                         flex: 0 0 auto;
-                        a{
+                        .tag{
                             position: relative;
-                            @include vp(font-size, 24px); 
-                            @include vp(line-height, 32px); 
-                            @include vp(padding, 14px 56px 14px  24px); 
-                            @include vp(border-radius, 40px); 
-                            @include vp(border, 1px solid $gray ); 
-                            font-weight: 600;
-                            color: $black;
-                            opacity: .7;
-                       
-                            &::after{
-                                content: '';
-                                position: absolute;
-                                @include vp(top, 24px); 
-                                @include vp(right, 24px); 
-                                @include vp(width, 21px); 
-                                @include vp(height, 13px); 
-                                background: url("../images/btn/btn_select.png") 0 0 no-repeat;
-                                @include vp(background-size, 21px auto); 
-                            }
+                            @include vp(font-size, 24px);
+                            @include vp(padding, 20px 60px 20px 20px);
+                            @include vp(height, 64px);
+                            font-weight: 500;
+                            color: $white;
+                            @include vp(letter-spacing, .1px);
+                            text-align: center;
+                            @include vp(border-radius, 6px);
+                            @include vp(border, 1px solid $green);
+                            background-color: $green;
+                        }
+                        .btn_close{
+                            display: block;
+                            position: absolute;
+                            @include vp(top, 19px);
+                            @include vp(right, 20px);
+                            @include vp(width, 28px);
+                            @include vp(height, 28px);
+                            background: url("../images/btn/btn_close_w.png") 0 0 no-repeat;
+                            @include vp(background-size, 28px auto);
+                            z-index: 10;
                         }
                     }
                 }
-                &:after{
-                    content: '';
-                    position: absolute;
-                    @include vp(top, -18px); 
-                    right:0;
-                    @include vp(width, 126px); 
-                    @include vp(height, 80px); 
-                    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
-                }
+
+                // &:after {
+                //     content: '';
+                //     position: absolute;
+                //     @include vp(top, -18px);
+                //     right: 0;
+                //     @include vp(width, 126px);
+                //     @include vp(height, 80px);
+                //     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
+                // }
             }
         }
-        .accident_content{
-            @include vp(margin-top, 20px); 
-            .accident_list{
-                >li{
+
+        .accident_content {
+            @include vp(margin-top, 20px);
+
+            .accident_list {
+                >li {
                     position: relative;
-                    @include vp(margin-top, 20px);  
-                    @include vp(height, 228px); 
-                    @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05)); 
+                    @include vp(margin-top, 20px);
+                    @include vp(height, 228px);
+                    @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
                     background: #fff;
-                    @include vp(border-radius, 40px); 
-                    a{
+                    @include vp(border-radius, 40px);
+
+                    a {
                         position: relative;
                         display: block;
                         @include vp(padding, 32px 40px);
-                        box-sizing: border-box; 
-                        dl{
-                            dt{
+                        box-sizing: border-box;
+
+                        dl {
+                            dt {
                                 display: flex;
                                 align-items: center;
                                 @include vp(line-height, 28px);
-                                .complete{
+
+                                .badge {
                                     @include vp(padding, 8px 16px);
                                     @include vp(border-radius, 12px);
-                                    @include vp(border, 2px solid #00A862);
+                                    @include vp(border, 2px solid $green);
                                     @include vp(font-size, 24px);
-                                    @include vp(margin-right, 20px);
+                                    @include vp(margin-left, 8px);
                                     background: #EBFFF7;
                                     font-weight: 400;
-                                    color: #00A862;
-                                }
-                                .accident_type{
-                                    @include vp(padding-right, 20px);
-                                    @include vp(font-size, 24px); 
-                                    font-weight: 400;
-                                    &.red{
-                                        color:$rad;
-                                    }
-                                    &.green{
+                                    &.complete{
                                         color: $green;
                                     }
+                                    &.emergency{
+                                        background: #FFF6F6;
+                                        @include vp(border, 2px solid #FF7F7F);
+                                        color: #F00;
+                                    }
+                                    &.common{
+                                        @include vp(border, 2px solid $gray);
+                                        background: #eee;
+                                        color: #333;
+                                    }
+                                    &:first-child{ margin-left:0;}
                                 }
-                                p{
+
+                                p {
                                     color: $black;
-                                    @include vp(font-size, 24px); 
+                                    @include vp(font-size, 24px);
                                     font-weight: 400;
+                                    @include vp(margin-left, 20px);
                                 }
                             }
-                            dd{
-                                @include vp(padding-top, 32px); 
+
+                            dd {
+                                @include vp(padding-top, 32px);
                                 display: flex;
                                 align-items: center;
-                                span{
-                                    @include vp(font-size, 30px); 
-                                    @include vp(line-height, 32px); 
+
+                                span {
+                                    @include vp(font-size, 30px);
+                                    @include vp(line-height, 32px);
                                     color: $black;
                                     opacity: .8;
                                     font-weight: 600;
-                                    &:last-child{
+
+                                    &:last-child {
                                         position: relative;
                                         display: inline-block;
-                                        @include vp(padding-left, 32px); 
-                                        @include vp(width, 308px); 
+                                        @include vp(padding-left, 32px);
+                                        @include vp(width, 308px);
                                         text-overflow: ellipsis;
                                         overflow: hidden;
                                         white-space: nowrap;
-                                        word-break: normal; 
+                                        word-break: normal;
                                         text-overflow: ellipsis;
 
-                                        &:after{
-                                            content: ''; 
-                                            @include vp(width,3px);
+                                        &:after {
+                                            content: '';
+                                            @include vp(width, 3px);
                                             position: absolute;
-                                            @include vp(top, 3px); 
-                                            @include vp(left, 16px); 
-                                            @include vp(height,28px);
-                                            background: #888; 
+                                            @include vp(top, 3px);
+                                            @include vp(left, 16px);
+                                            @include vp(height, 28px);
+                                            background: #888;
                                         }
                                     }
                                 }
-                                &.last{
-                                    span{
-                                        color: #888;
-                                        @include vp(font-size, 24px); 
+
+                                &.last {
+                                    span {
+                                        color: #333;
+                                        @include vp(font-size, 24px);
                                         font-style: normal;
                                         font-weight: 400;
                                         line-height: normal;
-                                        @include vp(padding-left, 20px); 
-                                        &:last-child{
+                                        @include vp(padding-left, 20px);
+
+                                        &:last-child {
                                             width: auto;
-                                            &::after{
+
+                                            &::after {
                                                 content: none;
                                             }
                                         }
-                                        &.write{
+
+                                        &.write {
                                             display: flex;
-                                           
-                                            &:before{
+
+                                            &:before {
                                                 display: inline-block;
-                                                @include vp(margin-right, 6px ); 
+                                                @include vp(margin-right, 6px);
                                                 content: '';
-                                                @include vp(width, 30px); 
-                                                @include vp(height, 28px); 
+                                                @include vp(width, 30px);
+                                                @include vp(height, 28px);
                                                 background: url("../images/icons/icon_rate_review.png") 0 0 no-repeat;
-                                                @include vp(background-size, 30px auto); 
+                                                @include vp(background-size, 30px auto);
                                             }
                                         }
-                                        &.read{
-                                            @include vp(padding-left, 20px); 
+
+                                        &.read {
+                                            @include vp(padding-left, 20px);
                                             display: flex;
                                             align-items: center;
                                             justify-content: flex-start;
-                                            .time{
-                                                @include vp(padding-right, 6px );   
+
+                                            .time {
+                                                @include vp(padding-right, 6px);
                                             }
                                         }
-                                        &:first-child{ padding-left:0; }
+
+                                        &:first-child {
+                                            padding-left: 0;
+                                        }
                                     }
                                 }
                             }
                         }
-                        .photo_box{
+
+                        .photo_box {
                             position: absolute;
-                            @include vp(width, 148px); 
-                            @include vp(height, 148px); 
-                            @include vp(top, 40px); 
-                            @include vp(right, 40px); 
-                            @include vp( border-radius, 6px); 
+                            @include vp(width, 148px);
+                            @include vp(height, 148px);
+                            @include vp(top, 40px);
+                            @include vp(right, 40px);
+                            @include vp(border-radius, 6px);
                             overflow: hidden;
-                            .count_box{
+
+                            .count_box {
                                 position: absolute;
                                 display: flex;
                                 align-items: center;
-                                @include vp(top, 104px); 
-                                @include vp(right, 8px); 
-                                @include vp(height, 36px); 
-                                @include vp(padding, 10px ); 
-                                @include vp( border-radius, 7px); 
+                                @include vp(top, 104px);
+                                @include vp(right, 8px);
+                                @include vp(height, 36px);
+                                @include vp(padding, 10px);
+                                @include vp(border-radius, 7px);
                                 overflow: hidden;
-                                justify-content: center;  
-                                span{
+                                justify-content: center;
+
+                                span {
                                     position: relative;
                                     color: $white;
-                                    @include vp(text-shadow,  0px 4px 4px rgba(0, 0, 0, 0.25)); 
-                                    @include vp(font-size, 24px); 
+                                    @include vp(text-shadow, 0px 4px 4px rgba(0, 0, 0, 0.25));
+                                    @include vp(font-size, 24px);
                                     font-weight: 400;
                                     z-index: 2;
                                 }
-                                &:after{
+
+                                &:after {
                                     content: '';
                                     display: block;
                                     position: absolute;
-                                    top:0;
-                                    left:0;
+                                    top: 0;
+                                    left: 0;
                                     width: 100%;
                                     height: 100%;
-                                    background: rgba(0, 0, 0, 0.30);   
+                                    background: rgba(0, 0, 0, 0.30);
                                     z-index: 1;
+                                }
+                            }
+
+                            .no_img{
+                                @include vp(width, 148px);
+                                @include vp(height, 148px);
+                                &.parther{
+                                    background: url("../images/icons/icon_no_img_parther.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.customer{
+                                    background: url("../images/icons/icon_no_img_customer.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.disaster{
+                                    background: url("../images/icons/icon_no_img_disaster.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.fire{
+                                    background: url("../images/icons/icon_no_img_fire.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.different{
+                                    background: url("../images/icons/icon_no_img_different.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
+                                }
+                                &.safety{
+                                    background: url("../images/icons/icon_no_img_safety.png") 0 0 no-repeat;
+                                    @include vp(background-size, 148px auto);
                                 }
                             }
                         }
                     }
-                    .btn_bookmark{
+
+                    .btn_bookmark {
                         position: absolute;
-                        @include vp(top, -10px); 
-                        @include vp(right, 39px); 
-                        @include vp(width, 44px); 
-                        @include vp(height, 70px); 
+                        @include vp(top, -10px);
+                        @include vp(right, 39px);
+                        @include vp(width, 50px);
+                        @include vp(height, 76px);
                         background: url("../images/btn/btn_bookmark_off.png") 0 0 no-repeat;
-                        @include vp(background-size, 44px auto); 
+                        @include vp(background-size, 50px auto);
+
                         // box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-                        &.on{
+                        &.on {
                             background: url("../images/btn/btn_bookmark_on.png") 0 0 no-repeat;
-                            @include vp(background-size, 44px auto); 
+                            @include vp(background-size, 50px auto);
                         }
                     }
                 }
             }
         }
     }
-    &.home{
+    &.home {}
 
-    }
-    section{
-        display: none; 
-        &.on{
+    section {
+        display: none;
+        &.on {
             display: block;
         }
     }
-} 
- 
+}

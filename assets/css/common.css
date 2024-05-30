@@ -3,6 +3,9 @@
  * ================================================== */
  html {
   -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html:focus-within {
@@ -649,11 +652,11 @@ header .header_inner {
 }
 header .header_inner .header_top {
   display: flex;
-  padding-top: 112px;
+  padding-top: 80px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top {
-    padding-top: 14.9333333333vw;
+    padding-top: 10.6666666667vw;
   }
 }
 header .header_inner .header_top .btn_hamburger {
@@ -992,14 +995,18 @@ header.common .btn_bookmark.on {
 }
 .gnb .contents .gnb_top {
   display: flex;
-  align-items: center;
-  justify-content: right;
-  padding: 96px 8px 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding: 100px 8px 0 0;
   margin-bottom: 38px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .gnb_top {
-    padding: 12.8vw 1.0666666667vw 0 0;
+    padding: 13.3333333333vw 1.0666666667vw 0 0;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1665,27 +1672,29 @@ header.common .btn_bookmark.on {
     background-size: 4.2666666667vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents {
   position: relative;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
   width: 188px;
   height: 88px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li {
     height: 11.7333333333vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li button {
   text-align: center;
   width: 100%;
   height: 100%;
@@ -1696,14 +1705,14 @@ header.common .btn_bookmark.on {
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li button {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li button {
     font-size: 4vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .type_list li.on button {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .type_list li.on button {
   opacity: 1;
 }
-.bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+.bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
   position: absolute;
   left: 0;
   top: 82px;
@@ -1712,17 +1721,17 @@ header.common .btn_bookmark.on {
   background: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     top: 10.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     width: 25.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .type_cointents .bar {
+  .bottom_sheet .sheet_wrap .sheet_content .type_contents .bar {
     height: 0.8vw;
   }
 }

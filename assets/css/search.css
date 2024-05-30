@@ -3,6 +3,9 @@
  * ================================================== */
 html {
   -webkit-text-size-adjust: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html:focus-within {
@@ -668,11 +671,11 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 104px 0px 80px 40px;
+  padding: 100px 0px 80px 40px;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents {
-    padding: 13.8666666667vw 0vw 10.6666666667vw 5.3333333333vw;
+    padding: 13.3333333333vw 0vw 10.6666666667vw 5.3333333333vw;
   }
 }
 #wrap.searh section .input_contents .input_box {
