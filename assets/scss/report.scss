@@ -292,17 +292,15 @@
                             align-items: center;
                             @include vp(padding-left, 84px);
                             background:url("../images/btn/btn_check_off.png") no-repeat;
-                            @include vp(background-size, 88px auto);
-                            @include vp(background-position-x, -22px);
-                            @include vp(min-height, 88px);
-                            @include vp(line-height, 88px);
+                            @include vp(background-size, 44px auto);
+                            @include vp(min-height, 44px);
+                            @include vp(line-height, 44px);
                             @include vp( font-size, 30px); 
                             font-weight: 700;
                         }
                         input[type="checkbox"]:checked + label {
                             background:url("../images/btn/btn_check_on.png")  no-repeat;
-                            @include vp(background-size, 88px auto);
-                            @include vp(background-position-x, -22px);
+                            @include vp(background-size, 44px auto);
                         }
                     }
                     .switch_box {

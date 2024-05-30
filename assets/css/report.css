@@ -12,13 +12,9 @@
     padding-top: 14.9333333333vw;
   }
 }
-.report .category_wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#wrap.report .category_wrap {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 28px 40px;
   margin-bottom: 40px;
   background: #EEE;
@@ -38,8 +34,7 @@
   margin-right: 40px;
   background: #fff;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
   #wrap.report .category_wrap .menu_img {
@@ -61,10 +56,7 @@
 }
 #wrap.report .category_wrap .category_box {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 #wrap.report .category_wrap .category_box .title {
   font-size: 22px;
@@ -138,10 +130,7 @@
 }
 #wrap.report .create_form .file_upload_wrap .file_list {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 #wrap.report .create_form .file_upload_wrap .file_list li {
   position: relative;
@@ -200,8 +189,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -243,9 +231,7 @@
 }
 #wrap.report .create_form .form_box {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 750px) {
@@ -547,6 +533,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 40px;
   padding-bottom: 20px;
   font-size: 26px;
 }
@@ -652,15 +639,12 @@
 }
 #wrap.report .write_preview .preview_list li .checkbox01 label {
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-left: 84px;
   background: url("../images/btn/btn_check_off.png") no-repeat;
-  background-size: 88px auto;
-  background-position-x: -22px;
-  min-height: 88px;
-  line-height: 88px;
+  background-size: 44px auto;
+  min-height: 44px;
+  line-height: 44px;
   font-size: 30px;
   font-weight: 700;
 }
@@ -671,22 +655,17 @@
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .checkbox01 label {
-    background-size: 11.7333333333vw auto;
+    background-size: 5.8666666667vw auto;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .checkbox01 label {
-    background-position-x: -2.9333333333vw;
+    min-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .checkbox01 label {
-    min-height: 11.7333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.report .write_preview .preview_list li .checkbox01 label {
-    line-height: 11.7333333333vw;
+    line-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -696,27 +675,17 @@
 }
 #wrap.report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
   background: url("../images/btn/btn_check_on.png") no-repeat;
-  background-size: 88px auto;
-  background-position-x: -22px;
+  background-size: 44px auto;
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
-    background-size: 11.7333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.report .write_preview .preview_list li .checkbox01 input[type=checkbox]:checked + label {
-    background-position-x: -2.9333333333vw;
+    background-size: 5.8666666667vw auto;
   }
 }
 #wrap.report .write_preview .preview_list li .switch_box {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 #wrap.report .write_preview .preview_list li .switch_box h4 {
   font-size: 30px;
@@ -752,7 +721,6 @@
   cursor: pointer;
   background-color: #ddd;
   border-radius: 200px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -769,7 +737,6 @@
   background: #fff;
   left: 8px;
   top: 8px;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -805,14 +772,9 @@
 }
 #wrap.report .btn_report {
   margin: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.report .btn_report {
@@ -859,8 +821,7 @@
 #wrap.detail .detail_visual .swiper-pagination {
   bottom: 50px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: auto;
 }
 @media screen and (max-width: 750px) {
@@ -923,12 +884,8 @@
 }
 #wrap.detail .detail_wrap .detail_box .info_header {
   margin-bottom: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .detail_box .info_header {
@@ -1049,15 +1006,9 @@
 }
 #wrap.detail .detail_wrap .detail_box .detail_info {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .detail_box .detail_info {
@@ -1122,9 +1073,6 @@
     border-radius: 1.6vw;
   }
 }
-.detail .detail_wrap .detail_box .report_info dl {
-  display: -webkit-box;
-  display: -ms-flexbox;
 #wrap.detail .detail_wrap .detail_box .report_info dl {
   display: flex;
   align-items: center;
@@ -1322,12 +1270,8 @@
 #wrap.detail .detail_wrap .btn_wrap {
   margin-bottom: 80px;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .btn_wrap {
@@ -1336,12 +1280,8 @@
 }
 #wrap.detail .detail_wrap .btn_wrap div {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 #wrap.detail .detail_wrap .btn_wrap div button {
   width: 330px;
@@ -1450,12 +1390,8 @@
 }
 #wrap.detail .comment_wrap .comment_box .info01 {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 20px;
   line-height: 48px;
 }
@@ -1961,12 +1897,8 @@
 }
 #wrap .layer_popup .detail_pop_visual {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
@@ -1974,8 +1906,7 @@
 #wrap .layer_popup .detail_pop_visual .swiper-pagination {
   bottom: 23%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: auto;
 }
 #wrap .layer_popup .detail_pop_visual .swiper-pagination-bullet {
@@ -2011,8 +1942,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  transform: translate(0, -50%);
   width: 100%;
   height: auto;
 }
