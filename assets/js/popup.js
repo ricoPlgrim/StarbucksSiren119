@@ -29,13 +29,24 @@ var popupUi = {
     openPopup: function(targetName) {
         var layerName = "#" + targetName;
 
-        $("body").find(layerName).addClass("active");
+        $("body").find(layerName).addClass("open");
         $("body").css("overflow", "hidden");
 
         $(layerName).find(".btn_close").on("click", function(){
-            $("body").find(layerName).removeClass("active");
-            $("body").css("overflow", "scroll");
+            closePopup(layerName);
         });
+
+        // 팝업 외부를 클릭하면 팝업을 닫는 이벤트 핸들러
+        $(layerName).on("click", function(event) {
+            if (event.target === this) {
+                closePopup(layerName);
+            }
+        });
+
+        function closePopup(layerName) {
+            $("body").find(layerName).removeClass("open");
+            $("body").css("overflow", "scroll");
+        }
     },
 };
 

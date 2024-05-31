@@ -210,6 +210,23 @@
                     }
                 }
             }
+            .btn_comment_box {
+                @include vp(padding, 40px 40px 56px );     
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .btn_comment {
+                    @include vp(width, 750px );    
+                    @include vp(height, 568px );    
+                    @include vp(border-radius, 12px );  
+                    border: 1px solid #00A862;
+                    background: #fff;
+                    span {
+                        @include vp(font-size, 28px );   
+                        color: #00A862;
+                    }
+                }
+            }
         }
       
         &.open{
@@ -262,5 +279,85 @@
         height: inherit;
         background:url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
         @include vp(background-size, 112px auto); 
+    }
+}
+
+// 팝업
+// 중앙 팝업, 토스트 팝업
+.layer_m_popup {
+    display: none;
+    position: fixed;
+    top: 0px;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.38);;
+    z-index: 999;
+    &.open {
+        display: block;
+    }
+    .pop_cont01 {
+        @include vp(padding, 80px 40px); 
+        position: absolute;
+        top: 50%;
+        @include vp(left, 40px); 
+        @include vp(right, 40px); 
+        transform: translate(0, -50%);
+        @include vp(border-radius, 40px); 
+        background: #fff;
+        &.toast {
+            @include vp(padding, 40px 0px); 
+        }
+        .text {
+            @include vp(font-size, 26px); 
+            @include vp(line-height, 40px); 
+            text-align: center;
+        }
+        .btn_bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include vp(gap, 16px);   
+            @include vp(margin-top, 60px); 
+            button {
+                @include vp(width, 290px);
+                @include vp(height, 80px);
+                @include vp(border-radius, 12px);
+                @include vp(line-height, 40px); 
+                @include vp(font-size, 28px);
+                text-align: center;
+                font-weight: 600;
+                &.btn-border {
+                    border: 1px solid #00A862;
+                    color: #00A862;
+                }
+                &.btn-fill {
+                    color: #fff;
+                    background: #00A862;
+                }
+            }
+        }
+    }
+}
+
+// 풀 팝업
+.layer_popup {
+    display: none;
+    position: fixed;
+    top: 0px;
+    min-height: 100vh;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    &.open {
+        display: block;
+    }
+    .btn_close {
+        position: absolute;
+        top: 0px;
+        right: 0px; 
+        background: url("../images/btn/btn_close.png") center center no-repeat;
+        @include vp(background-size, 56px auto); 
+        @include vp(padding, 40px); 
+        z-index: 999;
     }
 }
