@@ -1650,7 +1650,7 @@
   top: 3px;
   left: 16px;
   height: 28px;
-  background: #888;
+  background: rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .accident_content .accident_list > li a dl dd span:last-child:after {
@@ -1973,6 +1973,21 @@
 @media screen and (max-width: 750px) {
   .sections .section_inner .accident_content .accident_list > li .btn_bookmark.on {
     background-size: 6.6666666667vw auto;
+  }
+}
+.sections .section_inner .accident_content .accident_list > li.on a dl dt p {
+  color: #ddd;
+}
+.sections .section_inner .accident_content .accident_list > li.on a dl dd span {
+  color: #ddd;
+}
+.sections .section_inner .accident_content .accident_list > li.on a dl dd.last span.write:before {
+  background: url("../images/icons/icon_rate_review_on.png") 0 0 no-repeat;
+  background-size: 30px auto;
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .accident_content .accident_list > li.on a dl dd.last span.write:before {
+    background-size: 4vw auto;
   }
 }
 .sections section {

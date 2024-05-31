@@ -651,7 +651,7 @@ body {
   overflow-y: auto;
 }
 #wrap.searh section {
-  background: #f6f6f6;
+  background: #fff;
   height: 100vh;
   height: 100dvh;
   padding-bottom: 100px;

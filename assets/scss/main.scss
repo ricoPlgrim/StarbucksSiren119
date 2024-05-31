@@ -836,7 +836,7 @@
                                             @include vp(top, 3px);
                                             @include vp(left, 16px);
                                             @include vp(height, 28px);
-                                            background: #888;
+                                            background: rgba(0, 0, 0, 0.12);
                                         }
                                     }
                                 }
@@ -980,6 +980,30 @@
                             @include vp(background-size, 50px auto);
                         }
                     }
+                    &.on{
+                        a{
+                            dl{
+                                dt{
+                                    p{
+                                        color: $gray;
+                                    }
+                                }
+                                dd{
+                                    span{ color: $gray;}
+                                    &.last{
+                                        span{
+                                            &.write{
+                                                &:before{
+                                                    background: url("../images/icons/icon_rate_review_on.png") 0 0 no-repeat;
+                                                    @include vp(background-size, 30px auto);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -987,7 +1011,7 @@
     &.home {}
 
     section {
-        display: none;
+        display: none; 
         &.on {
             display: block;
         }
