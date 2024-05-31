@@ -706,6 +706,7 @@
                             @include vp( font-size, 24px);
                             color: #00000094;
                             cursor: pointer;
+                            a {color: inherit;}
                             &.btn_edit {
                                 @include vp( margin-right, 20px);
                             }
@@ -722,10 +723,22 @@
                     }
                 }
                 .recomment_box {
+                    position: relative;
                     @include vp( padding-top, 40px); 
                     @include vp( margin-top, 22px); 
                     border-top: 1px dashed #DDD;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0px;
+                        @include vp( left, -40px); 
+                        @include vp( right, -40px); 
+                        @include vp( bottom, -40px); 
+                        background: #F6F6F6;
+                        z-index: -1;
+                    }
                     > li {
+                        position: relative;
                         @include vp( padding-bottom, 40px); 
                         @include vp( margin-bottom, 40px); 
                         border-bottom: 1px dashed #DDD;
@@ -737,7 +750,7 @@
                         .text01 {
                             position: relative;
                             @include vp( padding-left, 34px); 
-                            @include vp( margin-bottom, 20px); 
+                            @include vp( margin-bottom, 40px); 
                             @include vp( font-size, 26px);
                             @include vp( line-height, 40px);
                             color: #888;
@@ -752,9 +765,12 @@
                             }
                         }
                         .text02 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
                             @include vp( padding-left, 34px); 
                             @include vp( font-size, 24px);
-                            span {
+                            .comment_info {
                                 @include vp( margin-right, 8px); 
                                 &.user {
                                     .name {
@@ -775,6 +791,27 @@
                                     color: #00000057;
                                 }
                             }
+                            .comment_edit {
+                                span {
+                                    position: relative;
+                                    @include vp( font-size, 24px);
+                                    color: #00000094;
+                                    cursor: pointer;
+                                    a {color: inherit;}
+                                    &.btn_edit {
+                                        @include vp( margin-right, 20px);
+                                    }
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        left: 0px;
+                                        right: 0px;
+                                        @include vp( bottom, 0px);
+                                        background: #00000094;
+                                        height: 1px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -790,26 +827,38 @@
             box-shadow: 0 -1px 5px 0px #BBBBBB;
             .text_box {
                 position: relative;
+                @include vp(padding, 20px 70px 0px 28px);
                 @include vp(width, 526px);
+                @include vp(border-radius, 16px); 
+                border: 1px solid #DDD;
+                    &.on {
+                    border: 1px solid #000;
+                    color: #000;
+                }
                 textarea {
-                    @include vp(padding, 20px 70px 20px 28px);
                     @include vp(width, 100%);
-                    @include vp(height, 80px);
-                    @include vp(min-height, 80px);
-                    @include vp(max-height, 168px);
-                    @include vp(line-height, normal);
+                    @include vp(min-height, 56px);
+                    @include vp(max-height, 80px);
+                    @include vp(line-height, 36px);
                     @include vp(font-size, 26px);
                     color: #797979;
                     overflow-y: hidden;
+                    outline: none;
                     resize: none;
-                    @include vp(border-radius, 16px); 
-                    border: 1px solid #DDD;
+                    border: none;
                     &::-webkit-scrollbar{
                         width: 0px;
                     }
-                    &:focus {
-                        border: 1px solid #000;
-                        color: #000;
+                }
+                .byte_num {
+                    display: none;
+                    position: absolute; 
+                    @include vp(left, 28px);
+                    @include vp(bottom, 24px);
+                    @include vp(font-size, 26px);
+                    color: #AAA;
+                    &.on {
+                        display: block;
                     }
                 }
                 .btn_delete {
@@ -844,68 +893,47 @@
                 }
             }
         }
-    }
 
-    // 팝업
-    .layer_popup {
-        display: none;
-        position: fixed;
-        top: 0px;
-        min-height: 100vh;
-        width: 100%;
-        background: #fff;
-        z-index: 999;
-        &.active {
-            display: block;
-        }
-        .btn_close {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            // @include vp(width, 56px); 
-            // @include vp(height, 56px); 
-            background: url("../images/btn/btn_close.png") center center no-repeat;
-            @include vp(background-size, 56px auto); 
-            @include vp(padding, 40px); 
-            z-index: 999;
-        }
-        .detail_pop_visual {
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow-x: hidden;
-            overflow-y: auto;
-            min-height: 100vh;
-            .swiper-pagination {
-                bottom: 23%;
-                left:50%; 
-                transform: translateX(-50%);
-                width:auto;
-            }
-            .swiper-pagination-bullet {
-                @include vp( margin, 0px 4px); 
-                @include vp( width, 16px); 
-                @include vp( height, 16px); 
-                background: #FFFFFF80;
-                border: 1px solid #00000061;
-            }
-            .swiper-pagination-bullet-active {
-                background: $green;
-            }
-            .img_box {
+        // 비주얼 상단 스와이퍼 팝업
+        .layer_popup {
+            .detail_pop_visual {
                 position: relative;
-                overflow: hidden;
-                img {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    width: 100%;
-                    height: auto;
-                } &::before{
-                    content: '';
-                    display: block;
-                    padding-top: 100%;
+                display: flex;
+                align-items: center;
+                overflow-x: hidden;
+                overflow-y: auto;
+                min-height: 100vh;
+                .swiper-pagination {
+                    bottom: 23%;
+                    left:50%; 
+                    transform: translateX(-50%);
+                    width:auto;
+                }
+                .swiper-pagination-bullet {
+                    @include vp( margin, 0px 4px); 
+                    @include vp( width, 16px); 
+                    @include vp( height, 16px); 
+                    background: #FFFFFF80;
+                    border: 1px solid #00000061;
+                }
+                .swiper-pagination-bullet-active {
+                    background: $green;
+                }
+                .img_box {
+                    position: relative;
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(0, -50%);
+                        width: 100%;
+                        height: auto;
+                    } &::before{
+                        content: '';
+                        display: block;
+                        padding-top: 100%;
+                    }
                 }
             }
         }

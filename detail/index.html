@@ -171,8 +171,14 @@
                             <span>답글작성</span>
                         </div>
                         <div class="comment_edit">
-                            <span class="btn_edit">수정</span>
-                            <span class="btn_delete">삭제</span>
+                            <span class="btn_edit">
+                                수정
+                            </span>
+                            <span class="btn_delete">
+                                <a href="javascript:void(0)" data-target="commentDeletePop">
+                                    삭제
+                                </a>
+                            </span>
                         </div>  
                     </div>
                     <ul class="recomment_box">
@@ -187,6 +193,14 @@
                                 <span class="user"><span class="name">고영민</span> · DM 운영 3팀</span>
                                 <span class="date">2024-05-08</span>
                                 <span class="time">12:45</span>
+                                <div class="comment_edit">
+                                    <span class="btn_edit">수정</span>
+                                    <span class="btn_delete">
+                                        <a href="javascript:void(0)" data-target="commentDeletePop">
+                                            삭제
+                                        </a>
+                                    </span>
+                                </div>  
                             </div>
                         </li>
                         <li>
@@ -199,6 +213,10 @@
                                 <span class="user"><span class="name">민영희</span> · DM 운영 3팀</span>
                                 <span class="date">2024-05-10</span>
                                 <span class="time">16:05</span>
+                                <div class="comment_edit">
+                                    <span class="btn_edit">수정</span>
+                                    <span class="btn_delete">삭제</span>
+                                </div>  
                             </div>
                         </li>
                         <li>
@@ -208,9 +226,15 @@
                                 천장마감 및 콘센트 원복 보수 완료
                             </div>
                             <div class="text02">
-                                <span class="user"><span class="name">오주연</span> · DM 운영 7팀</span>
-                                <span class="date">2024-05-11</span>
-                                <span class="time">09:38</span>
+                               <div class="comment_info">
+                                    <span class="user"><span class="name">오주연</span> · DM 운영 7팀</span>
+                                    <span class="date">2024-05-11</span>
+                                    <span class="time">09:38</span>
+                               </div>
+                                <div class="comment_edit">
+                                    <span class="btn_edit">수정</span>
+                                    <span class="btn_delete">삭제</span>
+                                </div>  
                             </div>
                         </li>
                     </ul>
@@ -235,10 +259,6 @@
                         <div class="btn_recomment">
                             <span>답글작성</span>
                         </div>
-                        <div class="comment_edit">
-                            <span class="btn_edit">수정</span>
-                            <span class="btn_delete">삭제</span>
-                        </div>  
                     </div>
                 </div>
                 <div class="comment_box">
@@ -261,10 +281,6 @@
                         <div class="btn_recomment">
                             <span>답글작성</span>
                         </div>
-                        <div class="comment_edit">
-                            <span class="btn_edit">수정</span>
-                            <span class="btn_delete">삭제</span>
-                        </div>  
                     </div>
                 </div> 
             </div>
@@ -275,27 +291,40 @@
             <header>
                 <button class="btn_close"></button>
             </header>
-            <div class="detail_pop_visual detail_swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+            <div class="pop_cont01">
+                <div class="detail_pop_visual detail_swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
 
-        <!-- 하단 레이어 팝업 -->
-        <aside class="bottom_sheet">
+        <!-- 댓글 삭제 레이어 팝업 -->
+        <div id="commentDeletePop" class="layer_m_popup">
+            <div class="pop_cont01">
+                <p class="text">댓글을 삭제하시겠습니까?</p>
+                <div class="btn_bottom">
+                    <button class="btn-border">취소</button>
+                    <button class="btn-fill">확인</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 하단 파트너 연락처 레이어 팝업 -->
+        <aside class="bottom_sheet" id="contactPop">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
@@ -328,10 +357,27 @@
             <div class="dimd"></div>
         </aside>
 
-        <!-- 하단 댓글 버튼 -->
+        <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
+        <!-- <aside class="bottom_sheet" id="commentBtnPop">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="btn_comment_box">
+                            <div class="btn_comment"><span class="btn_edit">메일</span></div>
+                            <div class="btn_comment"><span class="btn_delete">전화</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside> -->
+
+        <!-- 하단 고정 댓글 버튼 -->
         <aside class="btn_comment">
             <div class="text_box">
                 <textarea rows="1" cols="2" placeholder="텍스트입력"></textarea>
+                <span class="byte_num">0 / 1000byte</span>
                 <span class="btn_delete">내용 삭제</span>
             </div>
             <!-- 활성화되면 class="on" 추가 -->
