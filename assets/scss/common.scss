@@ -122,39 +122,8 @@
                     }
                 }
             }
-            .type_contents{
-                position: relative;
-                .type_list{
-                    display: flex;
-                    li{
-                        @include vp(width, 188px );    
-                        @include vp(height, 88px );
-                        button{
-                            text-align: center;
-                            width: 100%;
-                            height: 100%;
-                            color: $black;
-                            opacity: .4;
-                            text-align: center;
-                            @include vp(font-size, 30px );
-                            font-weight: 600;
-                        }    
-                        &.on{
-                            button{
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-                .bar{
-                    position: absolute;
-                    left:0;
-                    @include vp(top, 82px );    
-                    @include vp(width, 188px );    
-                    @include vp(height, 6px );    
-                    background: $green;
-                }
-            }
+          
+
             .staff_info_contents {
                 @include vp(padding, 40px 40px 56px );     
                 .name {
@@ -359,5 +328,296 @@
         @include vp(background-size, 56px auto); 
         @include vp(padding, 40px); 
         z-index: 999;
+    }
+}
+
+
+.common_card_list{
+    >li {
+        position: relative;
+        @include vp(margin-top, 20px);
+        @include vp(height, 228px);
+        @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
+        background: #fff;
+        @include vp(border-radius, 40px);
+
+        a {
+            position: relative;
+            display: block;
+            @include vp(padding, 32px 40px);
+            box-sizing: border-box;
+
+            dl {
+                dt {
+                    display: flex;
+                    align-items: center;
+                    @include vp(line-height, 28px);
+
+                    .badge {
+                        @include vp(padding, 8px 16px);
+                        @include vp(border-radius, 12px);
+                        @include vp(border, 2px solid $green);
+                        @include vp(font-size, 24px);
+                        @include vp(margin-left, 8px);
+                        background: #EBFFF7;
+                        font-weight: 400;
+                        &.complete{
+                            color: $green;
+                        }
+                        &.emergency{
+                            background: #FFF6F6;
+                            @include vp(border, 2px solid #FF7F7F);
+                            color: #F00;
+                        }
+                        &.common{
+                            @include vp(border, 2px solid $gray);
+                            background: #eee;
+                            color: #333;
+                        }
+                        &:first-child{ margin-left:0;}
+                    }
+
+                    p {
+                        color: $black;
+                        @include vp(font-size, 24px);
+                        font-weight: 400;
+                        @include vp(margin-left, 20px);
+                    }
+                }
+
+                dd {
+                    @include vp(padding-top, 32px);
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        @include vp(font-size, 30px);
+                        @include vp(line-height, 32px);
+                        color: $black;
+                        opacity: .8;
+                        font-weight: 600;
+
+                        &:last-child {
+                            position: relative;
+                            display: inline-block;
+                            @include vp(padding-left, 32px);
+                            @include vp(width, 308px);
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            word-break: normal;
+                            text-overflow: ellipsis;
+
+                            &:after {
+                                content: '';
+                                @include vp(width, 3px);
+                                position: absolute;
+                                @include vp(top, 3px);
+                                @include vp(left, 16px);
+                                @include vp(height, 28px);
+                                background: rgba(0, 0, 0, 0.12);
+                            }
+                        }
+                    }
+
+                    &.last {
+                        span {
+                            color: #333;
+                            @include vp(font-size, 24px);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            @include vp(padding-left, 20px);
+
+                            &:last-child {
+                                width: auto;
+
+                                &::after {
+                                    content: none;
+                                }
+                            }
+
+                            &.write {
+                                display: flex;
+
+                                &:before {
+                                    display: inline-block;
+                                    @include vp(margin-right, 6px);
+                                    content: '';
+                                    @include vp(width, 30px);
+                                    @include vp(height, 28px);
+                                    background: url("../images/icons/icon_rate_review.png") 0 0 no-repeat;
+                                    @include vp(background-size, 30px auto);
+                                }
+                            }
+
+                            &.read {
+                                @include vp(padding-left, 20px);
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .time {
+                                    @include vp(padding-right, 6px);
+                                }
+                            }
+
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .photo_box {
+                position: absolute;
+                @include vp(width, 148px);
+                @include vp(height, 148px);
+                @include vp(top, 40px);
+                @include vp(right, 40px);
+                @include vp(border-radius, 6px);
+                overflow: hidden;
+
+                .count_box {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    @include vp(top, 104px);
+                    @include vp(right, 8px);
+                    @include vp(height, 36px);
+                    @include vp(padding, 10px);
+                    @include vp(border-radius, 7px);
+                    overflow: hidden;
+                    justify-content: center;
+
+                    span {
+                        position: relative;
+                        color: $white;
+                        @include vp(text-shadow, 0px 4px 4px rgba(0, 0, 0, 0.25));
+                        @include vp(font-size, 24px);
+                        font-weight: 400;
+                        z-index: 2;
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.30);
+                        z-index: 1;
+                    }
+                }
+
+                .no_img{
+                    @include vp(width, 148px);
+                    @include vp(height, 148px);
+                    &.parther{
+                        background: url("../images/icons/icon_no_img_parther.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                    &.customer{
+                        background: url("../images/icons/icon_no_img_customer.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                    &.disaster{
+                        background: url("../images/icons/icon_no_img_disaster.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                    &.fire{
+                        background: url("../images/icons/icon_no_img_fire.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                    &.different{
+                        background: url("../images/icons/icon_no_img_different.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                    &.safety{
+                        background: url("../images/icons/icon_no_img_safety.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                }
+            }
+        }
+
+        .btn_bookmark {
+            position: absolute;
+            @include vp(top, -10px);
+            @include vp(right, 39px);
+            @include vp(width, 50px);
+            @include vp(height, 76px);
+            background: url("../images/btn/btn_bookmark_off.png") 0 0 no-repeat;
+            @include vp(background-size, 50px auto);
+
+            // box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+            &.on {
+                background: url("../images/btn/btn_bookmark_on.png") 0 0 no-repeat;
+                @include vp(background-size, 50px auto);
+            }
+        }
+        &.on{
+            a{
+                dl{
+                    dt{
+                        p{
+                            color: $gray;
+                        }
+                    }
+                    dd{
+                        span{ color: $gray;}
+                        &.last{
+                            span{
+                                &.write{
+                                    &:before{
+                                        background: url("../images/icons/icon_rate_review_on.png") 0 0 no-repeat;
+                                        @include vp(background-size, 30px auto);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.cm_tab_contents{
+    position: relative;
+    .cm_type_list{
+        display: flex;
+        li{
+            @include vp(width, 188px );    
+            @include vp(height, 88px );
+            button{
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                color: $black;
+                opacity: .4;
+                text-align: center;
+                @include vp(font-size, 30px );
+                font-weight: 600;
+            }    
+            &.on{
+                button{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .bar{
+        position: absolute;
+        left:0;
+        @include vp(top, 82px );    
+        @include vp(width, 188px );    
+        @include vp(height, 6px );    
+        background: $green;
     }
 }

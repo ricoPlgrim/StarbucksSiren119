@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
@@ -646,6 +647,8 @@ body {
   font-display: swap;
   src: local("Pretendard Thin"), url(../fonts/Pretendard/Pretendard-Thin.woff2) format("woff2"), url(../fonts/Pretendard/Pretendard-Thin.woff) format("woff");
 }
+/* 정리중 */
+/* 정리중 */
 #wrap.searh {
   overflow-x: hidden;
   overflow-y: auto;
@@ -706,7 +709,7 @@ body {
   padding: 24px 60px 24px 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 2px solid #ddd;
+  border: 2px solid #999;
   border-radius: 12px;
   color: #000;
   background: #fff;
@@ -734,7 +737,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
-    border: 0.2666666667vw solid #ddd;
+    border: 0.2666666667vw solid #999;
   }
 }
 @media screen and (max-width: 750px) {
