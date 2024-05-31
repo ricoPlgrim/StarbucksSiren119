@@ -1,7 +1,7 @@
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
- html {
+html {
   -webkit-text-size-adjust: 100%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -15,6 +15,7 @@ html:focus-within {
 body {
   -webkit-text-size-adjust: 100%;
      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
   position: relative;
   width: 100%;
@@ -28,7 +29,8 @@ body {
 *,
 ::after,
 ::before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* Elements that don't have a class get default styles */
@@ -177,7 +179,8 @@ q:after {
    */
 input:required,
 input {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 input:-webkit-autofill,
@@ -198,6 +201,7 @@ input[type=search]::-webkit-search-results-decoration {
 input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -315,6 +319,7 @@ input[type=radio] {
    */
 input[type=search] {
   -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -361,7 +366,8 @@ table {
    * github.com/necolas/normalize.css
    */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   overflow: visible;
   background: #000;
   border: 0;
@@ -651,6 +657,8 @@ header .header_inner {
   }
 }
 header .header_inner .header_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-top: 80px;
 }
@@ -670,6 +678,8 @@ header .header_inner .header_top .btn_hamburger {
 }
 header .header_inner .header_top .utility_contents {
   margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 header .header_inner .header_top .utility_contents .btn_search {
@@ -795,6 +805,7 @@ header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
   border-radius: 100px;
   background: #000;
   border: 1px solid #000;
+  -webkit-transition: left 0.35s ease-in-out;
   transition: left 0.35s ease-in-out;
 }
 @media screen and (max-width: 750px) {
@@ -852,13 +863,15 @@ header .header_inner .header_sticky.active {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   max-width: 750px;
   width: 750px;
   background: #006241;
   padding-bottom: 20px;
   z-index: 100;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky.active {
@@ -891,13 +904,19 @@ header.home {
   }
 }
 header.common {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 112px;
   background-color: rgb(255, 255, 255);
   z-index: 100;
@@ -925,7 +944,8 @@ header.common .btn_back {
 header.common h1 {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   font-size: 30px;
   font-weight: 700;
 }
@@ -971,11 +991,12 @@ header.common .btn_bookmark.on {
   position: fixed;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   max-width: 750px;
   width: 750px;
   height: 100%;
-  background: #f6f6f6;
+  background: #fff;
   z-index: 1000;
 }
 @media screen and (max-width: 750px) {
@@ -994,6 +1015,8 @@ header.common .btn_bookmark.on {
   height: 100%;
 }
 .gnb .contents .gnb_top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1046,70 +1069,82 @@ header.common .btn_bookmark.on {
     background-size: 12.8vw auto;
   }
 }
-.gnb .contents .input_link {
+.gnb .input_link {
   width: 670px;
   margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .input_link {
+  .gnb .input_link {
     width: 89.3333333333vw;
   }
 }
-.gnb .contents nav {
+.gnb nav {
   padding: 0 40px;
-  margin-top: 84px;
+  margin-top: 80px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav {
+  .gnb nav {
     padding: 0 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav {
-    margin-top: 11.2vw;
+  .gnb nav {
+    margin-top: 10.6666666667vw;
   }
 }
-.gnb .contents nav ul {
+.gnb nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  -moz-column-gap: 22px;
-       column-gap: 22px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 22px;
+     -moz-column-gap: 22px;
+          column-gap: 22px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul {
-    -moz-column-gap: 2.9333333333vw;
-         column-gap: 2.9333333333vw;
+  .gnb nav ul {
+    -webkit-column-gap: 2.9333333333vw;
+       -moz-column-gap: 2.9333333333vw;
+            column-gap: 2.9333333333vw;
   }
 }
-.gnb .contents nav ul .icon {
-  flex: 1 1 calc(50% - 22px);
-  box-sizing: border-box;
-  padding-bottom: 54px;
-  border-bottom: 1px solid #000;
+.gnb nav ul .icon {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(50% - 22px);
+          flex: 1 1 calc(50% - 22px);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 60px;
+  border-bottom: 2px solid #000;
   margin-bottom: 92px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon {
-    flex: 1 1 calc(50% - 2.9333333333vw);
+  .gnb nav ul .icon {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 calc(50% - 2.9333333333vw);
+            flex: 1 1 calc(50% - 2.9333333333vw);
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon {
-    padding-bottom: 7.2vw;
+  .gnb nav ul .icon {
+    padding-bottom: 8vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon {
-    border-bottom: 0.1333333333vw solid #000;
+  .gnb nav ul .icon {
+    border-bottom: 0.2666666667vw solid #000;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon {
+  .gnb nav ul .icon {
     margin-bottom: 12.2666666667vw;
   }
 }
-.gnb .contents nav ul .icon a {
+.gnb nav ul .icon a {
   position: relative;
   display: inline-block;
   font-size: 32px;
@@ -1119,21 +1154,21 @@ header.common .btn_bookmark.on {
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a {
+  .gnb nav ul .icon a {
     font-size: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a {
+  .gnb nav ul .icon a {
     padding-left: 8.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a {
+  .gnb nav ul .icon a {
     line-height: 4.2666666667vw;
   }
 }
-.gnb .contents nav ul .icon a::before {
+.gnb nav ul .icon a::before {
   content: "";
   width: 48px;
   height: 48px;
@@ -1143,157 +1178,163 @@ header.common .btn_bookmark.on {
   left: 0;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a::before {
+  .gnb nav ul .icon a::before {
     width: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a::before {
+  .gnb nav ul .icon a::before {
     height: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon a::before {
+  .gnb nav ul .icon a::before {
     top: -0.6666666667vw;
   }
 }
-.gnb .contents nav ul .icon.speaker a::before {
+.gnb nav ul .icon.speaker a::before {
   background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.speaker a::before {
+  .gnb nav ul .icon.speaker a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents nav ul .icon.edit a::before {
+.gnb nav ul .icon.edit a::before {
   background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.edit a::before {
+  .gnb nav ul .icon.edit a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents nav ul .icon.chart a::before {
+.gnb nav ul .icon.chart a::before {
   background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.chart a::before {
+  .gnb nav ul .icon.chart a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents nav ul .icon.bookmark a::before {
+.gnb nav ul .icon.bookmark a::before {
   background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.bookmark a::before {
+  .gnb nav ul .icon.bookmark a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents nav ul .icon.collections a::before {
+.gnb nav ul .icon.collections a::before {
   background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.collections a::before {
+  .gnb nav ul .icon.collections a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents nav ul .icon.menubook a::before {
+.gnb nav ul .icon.menubook a::before {
   background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents nav ul .icon.menubook a::before {
+  .gnb nav ul .icon.menubook a::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents .app_setting_content {
+.gnb .app_setting_content {
   margin-top: -8px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content {
+  .gnb .app_setting_content {
     margin-top: -1.0666666667vw;
   }
 }
-.gnb .contents .app_setting_content .inner {
+.gnb .app_setting_content .inner {
   padding: 0px 40px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner {
+  .gnb .app_setting_content .inner {
     padding: 0vw 5.3333333333vw;
   }
 }
-.gnb .contents .app_setting_content .inner h3 {
+.gnb .app_setting_content .inner h3 {
   margin-bottom: 40px;
   font-size: 32px;
   color: #000;
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner h3 {
+  .gnb .app_setting_content .inner h3 {
     margin-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner h3 {
+  .gnb .app_setting_content .inner h3 {
     font-size: 4.2666666667vw;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list {
+.gnb .app_setting_content .inner .btn_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -moz-column-gap: 22px;
-       column-gap: 22px;
+  -webkit-column-gap: 22px;
+     -moz-column-gap: 22px;
+          column-gap: 22px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list {
-    -moz-column-gap: 2.9333333333vw;
-         column-gap: 2.9333333333vw;
+  .gnb .app_setting_content .inner .btn_list {
+    -webkit-column-gap: 2.9333333333vw;
+       -moz-column-gap: 2.9333333333vw;
+            column-gap: 2.9333333333vw;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list li button {
+.gnb .app_setting_content .inner .btn_list li button {
   position: relative;
   width: 324px;
   height: 120px;
   border-radius: 40px;
-  background: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  background: #F7F7F7;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li button {
     width: 43.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li button {
     height: 16vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li button {
     border-radius: 5.3333333333vw;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list li button span {
+.gnb .app_setting_content .inner .btn_list li button span {
   position: relative;
   font-size: 26px;
   font-weight: 400;
   padding-left: 68px;
+  color: #000;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button span {
+  .gnb .app_setting_content .inner .btn_list li button span {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button span {
+  .gnb .app_setting_content .inner .btn_list li button span {
     padding-left: 9.0666666667vw;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list li button span::before {
+.gnb .app_setting_content .inner .btn_list li button span::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -1302,70 +1343,70 @@ header.common .btn_bookmark.on {
   height: 48px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li button span::before {
     top: -1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li button span::before {
     width: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li button span::before {
     height: 6.4vw;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list li.btn_alarm button span::before {
+.gnb .app_setting_content .inner .btn_list li.btn_alarm button span::before {
   background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li.btn_alarm button span::before {
+  .gnb .app_setting_content .inner .btn_list li.btn_alarm button span::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents .app_setting_content .inner .btn_list li.btn_collections button span::before {
+.gnb .app_setting_content .inner .btn_list li.btn_collections button span::before {
   background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .app_setting_content .inner .btn_list li.btn_collections button span::before {
+  .gnb .app_setting_content .inner .btn_list li.btn_collections button span::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents .logout_box {
+.gnb .logout_box {
   margin-top: 80px;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box {
+  .gnb .logout_box {
     margin-top: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box {
+  .gnb .logout_box {
     background-size: 6.4vw auto;
   }
 }
-.gnb .contents .logout_box .inner {
+.gnb .logout_box .inner {
   border-top: 1px solid #ddd;
   text-align: center;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner {
+  .gnb .logout_box .inner {
     border-top: 0.1333333333vw solid #ddd;
   }
 }
-.gnb .contents .logout_box .inner .btn_logout {
+.gnb .logout_box .inner .btn_logout {
   margin: 60px 120px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout {
+  .gnb .logout_box .inner .btn_logout {
     margin: 8vw 16vw;
   }
 }
-.gnb .contents .logout_box .inner .btn_logout span {
+.gnb .logout_box .inner .btn_logout span {
   position: relative;
   font-weight: 400;
   font-size: 26px;
@@ -1373,21 +1414,21 @@ header.common .btn_bookmark.on {
   padding-left: 68px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span {
+  .gnb .logout_box .inner .btn_logout span {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span {
+  .gnb .logout_box .inner .btn_logout span {
     line-height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span {
+  .gnb .logout_box .inner .btn_logout span {
     padding-left: 9.0666666667vw;
   }
 }
-.gnb .contents .logout_box .inner .btn_logout span:before {
+.gnb .logout_box .inner .btn_logout span:before {
   content: "";
   display: block;
   position: absolute;
@@ -1399,22 +1440,22 @@ header.common .btn_bookmark.on {
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span:before {
+  .gnb .logout_box .inner .btn_logout span:before {
     width: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span:before {
+  .gnb .logout_box .inner .btn_logout span:before {
     height: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span:before {
+  .gnb .logout_box .inner .btn_logout span:before {
     top: -1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .contents .logout_box .inner .btn_logout span:before {
+  .gnb .logout_box .inner .btn_logout span:before {
     background-size: 6.4vw auto;
   }
 }
@@ -1436,11 +1477,13 @@ header.common .btn_bookmark.on {
 }
 .bottom_sheet .sheet_wrap {
   max-width: 750px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   min-height: 200px;
   position: fixed;
   z-index: 300;
   border-radius: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   left: 50%;
   transform: translateX(-50%);
@@ -1479,7 +1522,8 @@ header.common .btn_bookmark.on {
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   border-radius: 100px;
   width: 68px;
   height: 8px;
@@ -1514,16 +1558,23 @@ header.common .btn_bookmark.on {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
   width: 160px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_list li {
@@ -1570,6 +1621,8 @@ header.common .btn_bookmark.on {
   color: #fff;
 }
 .bottom_sheet .sheet_wrap .sheet_content .date_contents .date_setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 22px;
   gap: 14px;
@@ -1754,9 +1807,15 @@ header.common .btn_bookmark.on {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 10px;
   padding-top: 40px;
   padding-bottom: 60px;
@@ -1838,6 +1897,8 @@ header.common .btn_bookmark.on {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 8px;
   font-size: 26px;
@@ -1878,9 +1939,11 @@ header.common .btn_bookmark.on {
   width: 100%;
   height: 100%;
   max-width: 750px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #000;
   z-index: -1;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
   pointer-events: none;
@@ -1906,7 +1969,8 @@ header.common .btn_bookmark.on {
   height: 112px;
   bottom: 82px;
   right: 50%;
-  transform: translateX(348px);
+  -webkit-transform: translateX(348px);
+          transform: translateX(348px);
 }
 @media screen and (max-width: 750px) {
   .scroll_top_box {
@@ -1925,7 +1989,8 @@ header.common .btn_bookmark.on {
 }
 @media screen and (max-width: 750px) {
   .scroll_top_box {
-    transform: translateX(46.4vw);
+    -webkit-transform: translateX(46.4vw);
+            transform: translateX(46.4vw);
   }
 }
 .scroll_top_box a {

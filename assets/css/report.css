@@ -13,8 +13,12 @@
   }
 }
 #wrap.report .category_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 28px 40px;
   margin-bottom: 40px;
   background: #EEE;
@@ -34,7 +38,8 @@
   margin-right: 40px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
   #wrap.report .category_wrap .menu_img {
@@ -55,8 +60,13 @@
   }
 }
 #wrap.report .category_wrap .category_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #wrap.report .category_wrap .category_box .title {
   font-size: 22px;
@@ -129,8 +139,13 @@
   }
 }
 #wrap.report .create_form .file_upload_wrap .file_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 #wrap.report .create_form .file_upload_wrap .file_list li {
   position: relative;
@@ -189,7 +204,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -230,8 +246,12 @@
   }
 }
 #wrap.report .create_form .form_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
 }
 @media screen and (max-width: 750px) {
@@ -256,6 +276,8 @@
   }
 }
 #wrap.report .create_form .form_box .form_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 #wrap.report .create_form .form_box .form_list.scroll {
@@ -530,9 +552,15 @@
   padding-bottom: 0px;
 }
 #wrap.report .write_preview .preview_list li dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   line-height: 40px;
   padding-bottom: 20px;
   font-size: 26px;
@@ -638,8 +666,12 @@
   opacity: 0;
 }
 #wrap.report .write_preview .preview_list li .checkbox01 label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 84px;
   background: url("../images/btn/btn_check_off.png") no-repeat;
   background-size: 44px auto;
@@ -683,9 +715,15 @@
   }
 }
 #wrap.report .write_preview .preview_list li .switch_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #wrap.report .write_preview .preview_list li .switch_box h4 {
   font-size: 30px;
@@ -721,6 +759,7 @@
   cursor: pointer;
   background-color: #ddd;
   border-radius: 200px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -737,6 +776,7 @@
   background: #fff;
   left: 8px;
   top: 8px;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 @media screen and (max-width: 750px) {
@@ -763,18 +803,25 @@
   background: #00A862;
 }
 #wrap.report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .switch_box .switch01 input[type=checkbox]:checked + .slider::before {
-    transform: translateX(20px);
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
   }
 }
 #wrap.report .btn_report {
   margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.report .btn_report {
@@ -821,7 +868,8 @@
 #wrap.detail .detail_visual .swiper-pagination {
   bottom: 50px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: auto;
 }
 @media screen and (max-width: 750px) {
@@ -884,8 +932,12 @@
 }
 #wrap.detail .detail_wrap .detail_box .info_header {
   margin-bottom: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .detail_box .info_header {
@@ -948,6 +1000,8 @@
   }
 }
 #wrap.detail .detail_wrap .detail_box .incident_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 #wrap.detail .detail_wrap .detail_box .incident_box .text01 {
@@ -1006,9 +1060,15 @@
 }
 #wrap.detail .detail_wrap .detail_box .detail_info {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .detail_box .detail_info {
@@ -1074,8 +1134,12 @@
   }
 }
 #wrap.detail .detail_wrap .detail_box .report_info dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 24px;
   font-size: 26px;
   text-align: center;
@@ -1166,8 +1230,13 @@
   border-bottom: 1px solid #000;
 }
 #wrap.detail .detail_wrap .detail_box .btn_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #wrap.detail .detail_wrap .detail_box .btn_box span {
   padding: 20px 20px 20px 60px;
@@ -1269,9 +1338,15 @@
 }
 #wrap.detail .detail_wrap .btn_wrap {
   margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .btn_wrap {
@@ -1279,9 +1354,15 @@
   }
 }
 #wrap.detail .detail_wrap .btn_wrap div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #wrap.detail .detail_wrap .btn_wrap div button {
   width: 330px;
@@ -1389,9 +1470,15 @@
   border-bottom: none;
 }
 #wrap.detail .comment_wrap .comment_box .info01 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px;
   line-height: 48px;
 }
@@ -1480,13 +1567,23 @@
   }
 }
 #wrap.detail .comment_wrap .comment_box .btn_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 #wrap.detail .comment_wrap .comment_box .btn_wrap .btn_recomment {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-left: 60px;
   height: 48px;
   background: url("../images/icons/ico_edit_review.png") center left no-repeat;
@@ -1707,7 +1804,8 @@
   bottom: 0px;
   padding: 20px 40px 60px;
   background: #fff;
-  box-shadow: 0 -1px 5px 0px #BBBBBB;
+  -webkit-box-shadow: 0 -1px 5px 0px #BBBBBB;
+          box-shadow: 0 -1px 5px 0px #BBBBBB;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment {
@@ -1897,8 +1995,12 @@
 }
 #wrap .layer_popup .detail_pop_visual {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   min-height: 100vh;
@@ -1906,7 +2008,8 @@
 #wrap .layer_popup .detail_pop_visual .swiper-pagination {
   bottom: 23%;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: auto;
 }
 #wrap .layer_popup .detail_pop_visual .swiper-pagination-bullet {
@@ -1942,7 +2045,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   width: 100%;
   height: auto;
 }
