@@ -10,6 +10,9 @@
     font-size: 0;
     @include vp(max-width, 750px);
     margin: 0 auto;
+    &.setting{
+        @include vp(padding-top, 112px);
+    }
 }
 
 
@@ -964,7 +967,7 @@
 
         &:checked+.cricle {
             &:before {
-                transform: scale(1);
+                transform: translate(-50%, -50%) scale(1);
             }
         }
     }
@@ -983,15 +986,15 @@
             content: '';
             display: block;
             position: absolute;
-            @include vp(top, 7px);
-            @include vp(left, 8px);
+            @include vp(top, 50%);
+            @include vp(left, 50%);
+            border-radius: 50%; 
             @include vp(width, 24px);
             @include vp(height, 24px);
-            border-radius: 50%;
             background-color: $green;
-            transform: scale(0);
-            transition: transform .35s ease-in-out;
-            transform-origin: center center;
+            transform: translate(-50%, -50%) scale(0); /* 크기 비율 1 (원래 크기) */
+            transition: transform 0.3s ease;
+         
         }
     }
 
@@ -1132,3 +1135,74 @@
         }
     }
 }
+
+/*공통*/
+.cm_setting_cotnents{
+    .inner{
+        @include vp(padding,  60px 40px);
+        .setting_list{
+            >li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                @include vp(padding-top, 32px);
+                h3{
+                    color:$black-87;
+                    @include vp(font-size, $f15);
+                    @include vp(line-height, $f12);
+                    font-weight: $fw7;
+                }
+                a{
+                    color:$black-87;
+                    @include vp(font-size, $f13);
+                    @include vp(line-height, $f12);
+                    font-weight: $fw4;
+                }
+                &:first-child{
+                    padding-top:0;
+                    @include vp(padding-bottom, 40px);
+                    @include vp(margin-bottom, 32px);
+                    @include vp(border-bottom, 2px solid $light-gray-2 );
+                }
+                dl{
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: space-between; 
+                    dt{
+                        color:$black-87;
+                        @include vp(font-size, $f15);
+                        font-weight: $fw4;
+                        @include vp(line-height, $f12);
+                    }
+                }
+
+                .checkbox_list{
+                    li{ 
+                        @include vp(margin-top, 44px);
+                        >label{
+                            display: flex;
+                            align-items: center;
+                            color: $black;
+                            @include vp(font-size, $f14);
+                            @include vp(line-height, 36px);
+                            @include vp(padding-left, 84px);
+                            font-weight: $fw4;
+                        }
+                        &:first-child{ margin-top:0; }
+                    }
+                }
+                &.last{
+                    @include vp(margin-top, 60px);
+                    @include vp(padding-top, 60px);
+                    @include vp(border-top, 2px solid $light-gray-2 );
+                    padding-bottom:0;
+                }
+            }
+        }
+    }
+}
+
+
+
