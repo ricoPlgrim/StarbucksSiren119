@@ -977,6 +977,30 @@ header.common .btn_bookmark.on {
     padding: 7.2vw 6.6666666667vw;
   }
 }
+header.setting {
+  justify-content: flex-end;
+  border-bottom: 2px solid #DDD;
+}
+header.setting .btn_close {
+  background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
+  background-size: 96px auto;
+  padding: 48px 50px;
+}
+@media screen and (max-width: 750px) {
+  header.setting .btn_close {
+    background-size: 12.8vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.setting .btn_close {
+    padding: 6.4vw 6.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.setting {
+    border-bottom: 0.2666666667vw solid #DDD;
+  }
+}
 
 /*gnb*/
 .gnb {
@@ -1433,6 +1457,14 @@ header.common .btn_bookmark.on {
 @media screen and (max-width: 750px) {
   #wrap {
     max-width: 100vw;
+  }
+}
+#wrap.setting {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting {
+    padding-top: 14.9333333333vw;
   }
 }
 
@@ -3107,7 +3139,7 @@ header.common .btn_bookmark.on {
   display: none;
 }
 .cm_radio_box input[type=radio]:checked + .cricle:before {
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 .cm_radio_box .cricle {
   width: 44px;
@@ -3138,24 +3170,23 @@ header.common .btn_bookmark.on {
   content: "";
   display: block;
   position: absolute;
-  top: 7px;
-  left: 8px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
   background-color: #00A862;
-  transform: scale(0);
-  transition: transform 0.35s ease-in-out;
-  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0); /* 크기 비율 1 (원래 크기) */
+  transition: transform 0.3s ease;
 }
 @media screen and (max-width: 750px) {
   .cm_radio_box .cricle:before {
-    top: 0.9333333333vw;
+    top: 50%;
   }
 }
 @media screen and (max-width: 750px) {
   .cm_radio_box .cricle:before {
-    left: 1.0666666667vw;
+    left: 50%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3415,4 +3446,157 @@ header.common .btn_bookmark.on {
 }
 .cm_btn_round.disabled .text {
   color: #AAA;
+}
+
+/*공통*/
+.cm_setting_cotnents .inner {
+  padding: 60px 40px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner {
+    padding: 8vw 5.3333333333vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 32px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li {
+    padding-top: 4.2666666667vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li h3 {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li h3 {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li a {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 26px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li a {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li a {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li:first-child {
+  padding-top: 0;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #DDD;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    padding-bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    margin-bottom: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    border-bottom: 0.2666666667vw solid #DDD;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li dl {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.cm_setting_cotnents .inner .setting_list > li dl dt {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li dl dt {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li dl dt {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li {
+  margin-top: 44px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li {
+    margin-top: 5.8666666667vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 28px;
+  line-height: 36px;
+  padding-left: 84px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    line-height: 4.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    padding-left: 11.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li:first-child {
+  margin-top: 0;
+}
+.cm_setting_cotnents .inner .setting_list > li.last {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 2px solid #DDD;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    margin-top: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    padding-top: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    border-top: 0.2666666667vw solid #DDD;
+  }
 }
