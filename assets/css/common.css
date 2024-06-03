@@ -2102,6 +2102,7 @@ header.common .btn_bookmark.on {
   width: 290px;
   height: 80px;
   line-height: 40px;
+  font-size: 28px;
   text-align: center;
 }
 @media screen and (max-width: 750px) {
@@ -2117,6 +2118,11 @@ header.common .btn_bookmark.on {
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
     line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_m_popup .pop_cont01 .btn_bottom button {
+    font-size: 3.7333333333vw;
   }
 }
 .layer_m_popup .pop_cont01 .btn_bottom button > span {
