@@ -1,45 +1,38 @@
-.login {
+#wrap.login section {
   padding: 140px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background: #F6F6F6;
   min-height: 100vh;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
-  .login {
+  #wrap.login section {
     padding: 18.6666666667vw 5.3333333333vw;
   }
 }
-.login .logo {
+#wrap.login section .logo {
   display: block;
   width: 320px;
 }
 @media screen and (max-width: 750px) {
-  .login .logo {
+  #wrap.login section .logo {
     width: 42.6666666667vw;
   }
 }
-.login .login_wrap .login_box {
+#wrap.login section .login_wrap .login_box {
   padding: 200px 80px 80px;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box {
+  #wrap.login section .login_wrap .login_box {
     padding: 26.6666666667vw 10.6666666667vw 10.6666666667vw;
   }
 }
-.login .login_wrap .login_box > div {
+#wrap.login section .login_wrap .login_box > div {
   position: relative;
 }
-.login .login_wrap .login_box > div input {
+#wrap.login section .login_wrap .login_box > div input {
   width: 670px;
   height: 100px;
   border-radius: 12px;
@@ -49,35 +42,35 @@
   font-size: 26px;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div input {
+  #wrap.login section .login_wrap .login_box > div input {
     width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div input {
+  #wrap.login section .login_wrap .login_box > div input {
     height: 13.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div input {
+  #wrap.login section .login_wrap .login_box > div input {
     border-radius: 1.6vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div input {
+  #wrap.login section .login_wrap .login_box > div input {
     text-indent: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div input {
+  #wrap.login section .login_wrap .login_box > div input {
     font-size: 3.4666666667vw;
   }
 }
-.login .login_wrap .login_box > div input:focus {
+#wrap.login section .login_wrap .login_box > div input:focus {
   outline: 1px solid #000;
   font-weight: 600;
 }
-.login .login_wrap .login_box > div .btn_delete {
+#wrap.login section .login_wrap .login_box > div .btn_delete {
   display: none;
   position: absolute;
   top: 0px;
@@ -90,60 +83,56 @@
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div .btn_delete {
+  #wrap.login section .login_wrap .login_box > div .btn_delete {
     padding: 6.6666666667vw 5.6vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div .btn_delete {
+  #wrap.login section .login_wrap .login_box > div .btn_delete {
     width: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div .btn_delete {
+  #wrap.login section .login_wrap .login_box > div .btn_delete {
     height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div .btn_delete {
+  #wrap.login section .login_wrap .login_box > div .btn_delete {
     background-size: 4.2666666667vw auto;
   }
 }
-.login .login_wrap .login_box > div .btn_delete.on {
+#wrap.login section .login_wrap .login_box > div .btn_delete.on {
   display: block;
 }
-.login .login_wrap .login_box > div:first-child {
+#wrap.login section .login_wrap .login_box > div:first-child {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box > div:first-child {
+  #wrap.login section .login_wrap .login_box > div:first-child {
     margin-bottom: 2.6666666667vw;
   }
 }
-.login .login_wrap .login_box .auto_checkbox {
+#wrap.login section .login_wrap .login_box .auto_checkbox {
   position: relative;
   margin-top: 28px;
   display: inline-block;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox {
+  #wrap.login section .login_wrap .login_box .auto_checkbox {
     margin-top: 3.7333333333vw;
   }
 }
-.login .login_wrap .login_box .auto_checkbox input[type=checkbox] {
+#wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox] {
   position: absolute;
   top: 0;
   left: 0;
   border: none;
   opacity: 0;
 }
-.login .login_wrap .login_box .auto_checkbox label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
+#wrap.login section .login_wrap .login_box .auto_checkbox label {
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-left: 64px;
   background: url("../images/btn/btn_check_off.png") no-repeat;
   background-size: 44px auto;
@@ -152,52 +141,45 @@
   font-size: 26px;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox label {
     padding-left: 8.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox label {
     background-size: 5.8666666667vw auto;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox label {
     min-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox label {
     line-height: 5.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox label {
     font-size: 3.4666666667vw;
   }
 }
-.login .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
+#wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
   background: url("../images/btn/btn_check_on.png") no-repeat;
   background-size: 44px auto;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
+  #wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
     background-size: 5.8666666667vw auto;
   }
 }
-.login .login_wrap .login_btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#wrap.login section .login_wrap .login_btn {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-.login .login_wrap .login_btn button {
+#wrap.login section .login_wrap .login_btn button {
   width: 670px;
   height: 100px;
   font-size: 32px;
@@ -205,39 +187,39 @@
   border-radius: 12px;
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_btn button {
+  #wrap.login section .login_wrap .login_btn button {
     width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_btn button {
+  #wrap.login section .login_wrap .login_btn button {
     height: 13.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_btn button {
+  #wrap.login section .login_wrap .login_btn button {
     font-size: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_btn button {
+  #wrap.login section .login_wrap .login_btn button {
     border-radius: 1.6vw;
   }
 }
-.login .login_wrap .login_btn button:first-child {
+#wrap.login section .login_wrap .login_btn button:first-child {
   background: #AAAAAA;
   color: #fff;
 }
-.login .login_wrap .login_btn button:first-child.on {
+#wrap.login section .login_wrap .login_btn button:first-child.on {
   background: #00A862;
 }
-.login .login_wrap .login_btn button:last-child {
+#wrap.login section .login_wrap .login_btn button:last-child {
   margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1215686275);
   color: rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (max-width: 750px) {
-  .login .login_wrap .login_btn button:last-child {
+  #wrap.login section .login_wrap .login_btn button:last-child {
     margin-top: 2.6666666667vw;
   }
 }

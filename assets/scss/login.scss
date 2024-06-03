@@ -1,104 +1,109 @@
 @import 'base/variables';
 @import 'base/mixin'; 
 
-.login {
-    @include vp(padding, 140px 40px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #F6F6F6;
-    min-height: 100vh;
-    overflow: hidden;
-    .logo {
-        display: block;
-        @include vp(width, 320px);
 
-    }
-    .login_wrap {
-        .login_box {
-            @include vp(padding, 200px 80px 80px);
-            & > div {
-                position: relative;
-                input {
-                    @include vp( width, 670px);
-                    @include vp( height, 100px);
-                    @include vp( border-radius, 12px);
-                    @include vp( text-indent, 28px);
-                    border: 1px solid #AAAAAA;
-                    background: #fff;
-                    @include vp(font-size, 26px);
-                    &:focus {
-                        outline: 1px solid #000;
-                        font-weight: 600;
-                    }
-                }
-                .btn_delete {
-                    display: none;
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    @include vp( padding,50px 42px);
-                    @include vp( width, 32px);
-                    @include vp( height, 32px);
-                    background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-                    @include vp(background-size, 32px auto); 
-                    cursor: pointer;
-                    &.on {
-                        display: block;
-                    }
-                }
-                &:first-child {
-                    @include vp( margin-bottom, 20px);
-                }
-            }
-            .auto_checkbox {
-                position:relative;
-                @include vp( margin-top, 28px);
-                display:inline-block;
-                input[type="checkbox"] {
-                    position:absolute;
-                    top:0;
-                    left:0;
-                    border: none;
-                    opacity: 0;
-                }
-                label {
-                    display: inline-flex;
-                    align-items: center;
-                    @include vp(padding-left, 64px);
-                    background:url("../images/btn/btn_check_off.png") no-repeat;
-                    @include vp(background-size, 44px auto);
-                    @include vp(min-height, 44px);
-                    @include vp(line-height, 44px);
-                    @include vp(font-size, 26px);
-                }
-                input[type="checkbox"]:checked + label {
-                    background:url("../images/btn/btn_check_on.png")  no-repeat;
-                    @include vp(background-size, 44px auto);
-                }
-            }
-        }
-        .login_btn {
+#wrap {
+    &.login {
+        section {
+            @include vp(padding, 140px 40px);
             display: flex;
             flex-direction: column;
             align-items: center;
-            button {
-                @include vp( width, 670px);
-                @include vp( height, 100px);
-                @include vp( font-size, 32px);
-                font-weight: 700;
-                @include vp( border-radius, 12px);
-                &:first-child {
-                    background: #AAAAAA;
-                    color: #fff;
-                    &.on {
-                        background: #00A862;
+            background: #F6F6F6;
+            min-height: 100vh;
+            overflow: hidden;
+            .logo {
+                display: block;
+                @include vp(width, 320px);
+    
+            }
+            .login_wrap {
+                .login_box {
+                    @include vp(padding, 200px 80px 80px);
+                    & > div {
+                        position: relative;
+                        input {
+                            @include vp( width, 670px);
+                            @include vp( height, 100px);
+                            @include vp( border-radius, 12px);
+                            @include vp( text-indent, 28px);
+                            border: 1px solid #AAAAAA;
+                            background: #fff;
+                            @include vp(font-size, 26px);
+                            &:focus {
+                                outline: 1px solid #000;
+                                font-weight: 600;
+                            }
+                        }
+                        .btn_delete {
+                            display: none;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            @include vp( padding,50px 42px);
+                            @include vp( width, 32px);
+                            @include vp( height, 32px);
+                            background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+                            @include vp(background-size, 32px auto); 
+                            cursor: pointer;
+                            &.on {
+                                display: block;
+                            }
+                        }
+                        &:first-child {
+                            @include vp( margin-bottom, 20px);
+                        }
+                    }
+                    .auto_checkbox {
+                        position:relative;
+                        @include vp( margin-top, 28px);
+                        display:inline-block;
+                        input[type="checkbox"] {
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            border: none;
+                            opacity: 0;
+                        }
+                        label {
+                            display: inline-flex;
+                            align-items: center;
+                            @include vp(padding-left, 64px);
+                            background:url("../images/btn/btn_check_off.png") no-repeat;
+                            @include vp(background-size, 44px auto);
+                            @include vp(min-height, 44px);
+                            @include vp(line-height, 44px);
+                            @include vp(font-size, 26px);
+                        }
+                        input[type="checkbox"]:checked + label {
+                            background:url("../images/btn/btn_check_on.png")  no-repeat;
+                            @include vp(background-size, 44px auto);
+                        }
                     }
                 }
-                &:last-child {
-                    @include vp( margin-top, 20px);
-                    border: 1px solid #0000001F;
-                    color: #00000094;
+                .login_btn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    button {
+                        @include vp( width, 670px);
+                        @include vp( height, 100px);
+                        @include vp( font-size, 32px);
+                        font-weight: 700;
+                        @include vp( border-radius, 12px);
+                        &:first-child {
+                            background: #AAAAAA;
+                            color: #fff;
+                            &.on {
+                                background: #00A862;
+                            }
+                        }
+                        &:last-child {
+                            @include vp( margin-top, 20px);
+                            border: 1px solid #0000001F;
+                            color: #00000094;
+                        }
+                    }
                 }
             }
         }
