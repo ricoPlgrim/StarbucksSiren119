@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
@@ -13,10 +14,7 @@ html:focus-within {
 }
 
 body {
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -29,14 +27,12 @@ body {
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /**
@@ -179,8 +175,7 @@ q:after {
    */
 input:required,
 input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 input:-webkit-autofill,
@@ -202,6 +197,7 @@ input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -319,6 +315,7 @@ input[type=radio] {
    */
 input[type=search] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
@@ -366,8 +363,7 @@ table {
    * github.com/necolas/normalize.css
    */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   overflow: visible;
   background: #000;
   border: 0;
@@ -646,6 +642,8 @@ body {
   font-display: swap;
   src: local("Pretendard Thin"), url(../fonts/Pretendard/Pretendard-Thin.woff2) format("woff2"), url(../fonts/Pretendard/Pretendard-Thin.woff) format("woff");
 }
+/* 정리중 */
+/* 정리중 */
 #wrap.searh {
   overflow-x: hidden;
   overflow-y: auto;
@@ -662,15 +660,9 @@ body {
   }
 }
 #wrap.searh section .input_contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
   padding: 100px 0px 80px 40px;
 }
 @media screen and (max-width: 750px) {
@@ -704,9 +696,8 @@ body {
   font-size: 26px;
   letter-spacing: 0.5px;
   padding: 24px 60px 24px 80px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 2px solid #ddd;
+  box-sizing: border-box;
+  border: 2px solid #999;
   border-radius: 12px;
   color: #000;
   background: #fff;
@@ -734,37 +725,13 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
-    border: 0.2666666667vw solid #ddd;
+    border: 0.2666666667vw solid #999;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
     border-radius: 1.6vw;
   }
-}
-#wrap.searh section .input_contents .input_box > input::-webkit-input-placeholder {
-  color: #bbb;
-  font-size: 26px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-#wrap.searh section .input_contents .input_box > input::-moz-placeholder {
-  color: #bbb;
-  font-size: 26px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-#wrap.searh section .input_contents .input_box > input:-ms-input-placeholder {
-  color: #bbb;
-  font-size: 26px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-#wrap.searh section .input_contents .input_box > input::-ms-input-placeholder {
-  color: #bbb;
-  font-size: 26px;
-  letter-spacing: 0.5px;
-  font-weight: 400;
 }
 #wrap.searh section .input_contents .input_box > input::placeholder {
   color: #bbb;
@@ -773,35 +740,11 @@ body {
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .input_box > input::-webkit-input-placeholder {
-    font-size: 3.4666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input::-moz-placeholder {
-    font-size: 3.4666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input:-ms-input-placeholder {
-    font-size: 3.4666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input::-ms-input-placeholder {
-    font-size: 3.4666666667vw;
-  }
   #wrap.searh section .input_contents .input_box > input::placeholder {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.searh section .input_contents .input_box > input::-webkit-input-placeholder {
-    letter-spacing: 0.0666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input::-moz-placeholder {
-    letter-spacing: 0.0666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input:-ms-input-placeholder {
-    letter-spacing: 0.0666666667vw;
-  }
-  #wrap.searh section .input_contents .input_box > input::-ms-input-placeholder {
-    letter-spacing: 0.0666666667vw;
-  }
   #wrap.searh section .input_contents .input_box > input::placeholder {
     letter-spacing: 0.0666666667vw;
   }
@@ -917,15 +860,9 @@ body {
   }
 }
 #wrap.searh section .searh_contents .search_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 #wrap.searh section .searh_contents .search_top h3 {
   font-size: 32px;
@@ -984,24 +921,13 @@ body {
   }
 }
 #wrap.searh section .searh_contents .search_list_box .search_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 #wrap.searh section .searh_contents .search_list_box .search_list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: top;
+  justify-content: space-between;
   margin-top: 36px;
 }
 @media screen and (max-width: 750px) {

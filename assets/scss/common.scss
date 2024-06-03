@@ -1,24 +1,25 @@
-@import 'base/reset'; 
+@import 'base/reset';
 @import 'base/fonts';
 @import 'base/variables';
-@import 'base/mixin'; 
+@import 'base/mixin';
 /* LAYOUT CSS */
 @import "layout/header";
 
 
-#wrap{
-    font-size:0; 
-    @include vp(max-width, 750px);     
-    margin:0 auto;  
-} 
-     
+#wrap {
+    font-size: 0;
+    @include vp(max-width, 750px);
+    margin: 0 auto;
+}
 
 
-.bottom_sheet{
+
+.bottom_sheet {
     display: none;
     position: relative;
-    .sheet_wrap{
-        @include vp(max-width, 750px);     
+
+    .sheet_wrap {
+        @include vp(max-width, 750px);
         transform: translateX(-50%);
         min-height: 200px;
         position: fixed;
@@ -28,91 +29,104 @@
         left: 50%;
         transform: translateX(-50%);
         bottom: -110%;
-        .sheet_content{
+
+        .sheet_content {
             position: relative;
-            @include vp(border-radius, 40px 40px 0 0 );     
+            @include vp(border-radius, 40px 40px 0 0);
             background: #F8F8F8;
+
             // display:flex;
             // flex-direction:column-reverse;
             // height: inherit;
-            .sheet_top{
+            .sheet_top {
                 position: relative;
-                .btn_sheet_close{
+
+                .btn_sheet_close {
                     display: block;
                     width: 100%;
-                    @include vp(height, 40px);     
-                    &::after{
+                    @include vp(height, 40px);
+
+                    &::after {
                         content: '';
                         position: absolute;
-                        @include vp(top, 20px );    
-                        left:50%; 
+                        @include vp(top, 20px);
+                        left: 50%;
                         transform: translateX(-50%);
-                        @include vp(border-radius, 100px );    
-                        @include vp(width, 68px );    
-                        @include vp(height, 8px );  
+                        @include vp(border-radius, 100px);
+                        @include vp(width, 68px);
+                        @include vp(height, 8px);
                         background: rgba(0, 0, 0, 0.38);
                     }
                 }
             }
-          
-            .date_contents{
-          
-                @include vp(padding, 40px 40px 56px );     
-                .date_list{
+
+            .date_contents {
+
+                @include vp(padding, 40px 40px 56px);
+
+                .date_list {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
-                    li{
-                        @include vp(width, 160px );   
-                        @include vp(border-radius, 8px );   
-                        @include vp( border, 2px solid rgba(0, 0, 0, 0.12));
+
+                    li {
+                        @include vp(width, 160px);
+                        @include vp(border-radius, 8px);
+                        @include vp(border, 2px solid rgba(0, 0, 0, 0.12));
                         box-sizing: border-box;
-                        button{
+
+                        button {
                             width: inherit;
-                            @include vp(padding, 30px 22px );     
-                            @include vp(font-size, 26px );     
+                            @include vp(padding, 30px 22px);
+                            @include vp(font-size, 26px);
                             line-height: normal;
                             background: none;
                         }
-                        &.on{
+
+                        &.on {
                             background: $green;
-                            @include vp( border, 2px solid $green);
-                            button{
+                            @include vp(border, 2px solid $green);
+
+                            button {
                                 color: $white;
                             }
                         }
                     }
                 }
-    
-                .date_setting{
+
+                .date_setting {
                     display: flex;
-                    @include vp(margin-top, 22px );    
-                    @include vp(gap, 14px );    
+                    @include vp(margin-top, 22px);
+                    @include vp(gap, 14px);
+
                     .date_start,
-                    .date_end{
+                    .date_end {
                         position: relative;
-                        @include vp(width, 330px );    
-                        @include vp(height, 76px );    
-                        @include vp(padding, 22px 40px );    
-                        @include vp(border-radius, 4px );    
+                        @include vp(width, 330px);
+                        @include vp(height, 76px);
+                        @include vp(padding, 22px 40px);
+                        @include vp(border-radius, 4px);
                         background: #EEE;
-                        span{
+
+                        span {
                             font-family: "Pretendard Variable";
-                            @include vp(font-size, 26px );    
+                            @include vp(font-size, 26px);
                             font-weight: 400;
                             color: $black;
                             opacity: .6;
                         }
-                        input{
+
+                        input {
                             position: absolute;
-                            @include vp(top, 20px );    
-                            @include vp(right, 20px );    
-                            @include vp(width, 32px );    
-                            @include vp(height, 37px );    
-                            border:0;
+                            @include vp(top, 20px);
+                            @include vp(right, 20px);
+                            @include vp(width, 32px);
+                            @include vp(height, 37px);
+                            border: 0;
                             background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
-                            @include vp(background-size, 32px auto );    
+                            @include vp(background-size, 32px auto);
+
                             &::-webkit-calendar-picker-indicator,
                             &::-webkit-inner-spin-button {
                                 // display: none;
@@ -122,91 +136,70 @@
                     }
                 }
             }
-            .type_contents{
-                position: relative;
-                .type_list{
-                    display: flex;
-                    li{
-                        @include vp(width, 188px );    
-                        @include vp(height, 88px );
-                        button{
-                            text-align: center;
-                            width: 100%;
-                            height: 100%;
-                            color: $black;
-                            opacity: .4;
-                            text-align: center;
-                            @include vp(font-size, 30px );
-                            font-weight: 600;
-                        }    
-                        &.on{
-                            button{
-                                opacity: 1;
-                            }
-                        }
-                    }
-                }
-                .bar{
-                    position: absolute;
-                    left:0;
-                    @include vp(top, 82px );    
-                    @include vp(width, 188px );    
-                    @include vp(height, 6px );    
-                    background: $green;
-                }
-            }
+
+
             .staff_info_contents {
-                @include vp(padding, 40px 40px 56px );     
+                @include vp(padding, 40px 40px 56px);
+
                 .name {
-                    @include vp(font-size, 30px);    
+                    @include vp(font-size, 30px);
                     text-align: center;
                     font-weight: 600;
                 }
+
                 .btn_contact {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     gap: 10px;
-                    @include vp(padding-top, 40px); 
-                    @include vp(padding-bottom, 60px); 
+                    @include vp(padding-top, 40px);
+                    @include vp(padding-bottom, 60px);
+
                     .btn01 {
-                        @include vp(padding, 24px 20px); 
-                        @include vp(width, 216px); 
-                        @include vp(border-radius, 16px); 
+                        @include vp(padding, 24px 20px);
+                        @include vp(width, 216px);
+                        @include vp(border-radius, 16px);
                         border: 1px solid #00A862;
                         text-align: center;
                         cursor: pointer;
+
                         span {
-                            @include vp(padding-left, 60px); 
-                            @include vp(font-size, 30px); 
-                            color: #00A862;;
+                            @include vp(padding-left, 60px);
+                            @include vp(font-size, 30px);
+                            color: #00A862;
+                            ;
                             font-weight: 600;
-                          &.mail {
-                            background: url("../images/icons/ico_mail.png") center left no-repeat;
-                            @include vp(background-size, 40px auto); 
-                          }
-                          &.phone {
-                            background: url("../images/icons/ico_call.png") center left no-repeat;
-                            @include vp(background-size, 40px auto); 
-                          }
-                          &.text {
-                            background: url("../images/icons/ico_text.png") center left no-repeat;
-                            @include vp(background-size, 40px auto); 
-                          }
+
+                            &.mail {
+                                background: url("../images/icons/ico_mail.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+
+                            &.phone {
+                                background: url("../images/icons/ico_call.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+
+                            &.text {
+                                background: url("../images/icons/ico_text.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
                         }
                     }
                 }
+
                 .staff_info {
                     dl {
-                       display: flex; 
-                       @include vp( margin-bottom, 8px); 
-                       @include vp( font-size, 26px);
-                       @include vp( line-height, 54px);
-                       dt {
-                        @include vp( min-width, 146px); 
-                        text-align: left;
-                        color: #00000057;
-                       }
+                        display: flex;
+                        @include vp(margin-bottom, 8px);
+                        @include vp(font-size, 26px);
+                        @include vp(line-height, 54px);
+
+                        dt {
+                            @include vp(min-width, 146px);
+                            text-align: left;
+                            color: #00000057;
+                        }
                     }
                 }
             }
@@ -248,13 +241,14 @@
             bottom:0;
         }
     }
-    .dimd{
+
+    .dimd {
         position: fixed;
-        top:0;
-        left:50%;
+        top: 0;
+        left: 50%;
         width: 100%;
         height: 100%;
-        @include vp(max-width, 750px);     
+        @include vp(max-width, 750px);
         transform: translateX(-50%);
         background: $black;
         z-index: -1;
@@ -264,9 +258,11 @@
 
 
     }
-    &.open{
+
+    &.open {
         display: block;
-        .dimd{
+
+        .dimd {
             opacity: .4;
             pointer-events: all;
             z-index: 100;
@@ -276,24 +272,26 @@
 }
 
 
-.scroll_top_box{
+.scroll_top_box {
     display: none;
     position: fixed;
-    @include vp(width, 112px);     
-    @include vp(height, 112px);     
-    @include vp(bottom, 82px);     
+    @include vp(width, 112px);
+    @include vp(height, 112px);
+    @include vp(bottom, 82px);
     // @include vp(right, 42px);     
     right: 50%;
     transform: translateX(348px);
+
     @include breakpoint {
         transform: translateX(46.4vw);
-      }
-    a{
+    }
+
+    a {
         display: block;
         width: inherit;
         height: inherit;
-        background:url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
-        @include vp(background-size, 112px auto); 
+        background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
+        @include vp(background-size, 112px auto);
     }
 }
 
@@ -305,47 +303,55 @@
     top: 0px;
     min-height: 100vh;
     width: 100%;
-    background: rgba(0, 0, 0, 0.38);;
+    background: rgba(0, 0, 0, 0.38);
+    ;
     z-index: 999;
+
     &.open {
         display: block;
     }
+
     .pop_cont01 {
-        @include vp(padding, 80px 40px); 
+        @include vp(padding, 80px 40px);
         position: absolute;
         top: 50%;
-        @include vp(left, 40px); 
-        @include vp(right, 40px); 
+        @include vp(left, 40px);
+        @include vp(right, 40px);
         transform: translate(0, -50%);
-        @include vp(border-radius, 40px); 
+        @include vp(border-radius, 40px);
         background: #fff;
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
         &.toast {
-            @include vp(padding, 40px 0px); 
+            @include vp(padding, 40px 0px);
         }
+
         .text {
-            @include vp(font-size, 26px); 
-            @include vp(line-height, 40px); 
+            @include vp(font-size, 26px);
+            @include vp(line-height, 40px);
             text-align: center;
         }
+
         .btn_bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            @include vp(gap, 16px);   
-            @include vp(margin-top, 60px); 
+            @include vp(gap, 16px);
+            @include vp(margin-top, 60px);
+
             button {
                 @include vp(width, 290px);
                 @include vp(height, 80px);
                 @include vp(border-radius, 12px);
-                @include vp(line-height, 40px); 
+                @include vp(line-height, 40px);
                 @include vp(font-size, 28px);
                 text-align: center;
                 font-weight: 600;
+
                 &.btn-border {
                     border: 1px solid #00A862;
                     color: #00A862;
                 }
+
                 &.btn-fill {
                     color: #fff;
                     background: #00A862;
@@ -364,16 +370,605 @@
     width: 100%;
     background: #fff;
     z-index: 999;
+
     &.open {
         display: block;
     }
+
     .btn_close {
         position: absolute;
         top: 0px;
-        right: 0px; 
+        right: 0px;
         background: url("../images/btn/btn_close.png") center center no-repeat;
-        @include vp(background-size, 56px auto); 
-        @include vp(padding, 40px); 
+        @include vp(background-size, 56px auto);
+        @include vp(padding, 40px);
         z-index: 999;
+    }
+}
+
+
+.common_card_list {
+    >li {
+        position: relative;
+        @include vp(margin-top, 20px);
+        @include vp(height, 228px);
+        @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
+        background: #fff;
+        @include vp(border-radius, 40px);
+
+        a {
+            position: relative;
+            display: block;
+            @include vp(padding, 32px 40px);
+            box-sizing: border-box;
+
+            dl {
+                dt {
+                    display: flex;
+                    align-items: center;
+                    @include vp(line-height, 28px);
+
+                    .badge {
+                        @include vp(padding, 8px 16px);
+                        @include vp(border-radius, 12px);
+                        @include vp(border, 2px solid $green);
+                        @include vp(font-size, 24px);
+                        @include vp(margin-left, 8px);
+                        background: #EBFFF7;
+                        font-weight: 400;
+
+                        &.complete {
+                            color: $green;
+                        }
+
+                        &.emergency {
+                            background: #FFF6F6;
+                            @include vp(border, 2px solid #FF7F7F);
+                            color: #F00;
+                        }
+
+                        &.common {
+                            @include vp(border, 2px solid $gray);
+                            background: #eee;
+                            color: #333;
+                        }
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
+
+                    p {
+                        color: $black;
+                        @include vp(font-size, 24px);
+                        font-weight: 400;
+                        @include vp(margin-left, 20px);
+                    }
+                }
+
+                dd {
+                    @include vp(padding-top, 32px);
+                    display: flex;
+                    align-items: center;
+
+                    span {
+                        @include vp(font-size, 30px);
+                        @include vp(line-height, 32px);
+                        color: $black;
+                        opacity: .8;
+                        font-weight: 600;
+
+                        &:last-child {
+                            position: relative;
+                            display: inline-block;
+                            @include vp(padding-left, 32px);
+                            @include vp(width, 308px);
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            word-break: normal;
+                            text-overflow: ellipsis;
+
+                            &:after {
+                                content: '';
+                                @include vp(width, 3px);
+                                position: absolute;
+                                @include vp(top, 3px);
+                                @include vp(left, 16px);
+                                @include vp(height, 28px);
+                                background: rgba(0, 0, 0, 0.12);
+                            }
+                        }
+                    }
+
+                    &.last {
+                        span {
+                            color: #333;
+                            @include vp(font-size, 24px);
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            @include vp(padding-left, 20px);
+
+                            &:last-child {
+                                width: auto;
+
+                                &::after {
+                                    content: none;
+                                }
+                            }
+
+                            &.write {
+                                display: flex;
+
+                                &:before {
+                                    display: inline-block;
+                                    @include vp(margin-right, 6px);
+                                    content: '';
+                                    @include vp(width, 30px);
+                                    @include vp(height, 28px);
+                                    background: url("../images/icons/icon_rate_review.png") 0 0 no-repeat;
+                                    @include vp(background-size, 30px auto);
+                                }
+                            }
+
+                            &.read {
+                                @include vp(padding-left, 20px);
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+
+                                .time {
+                                    @include vp(padding-right, 6px);
+                                }
+                            }
+
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .photo_box {
+                position: absolute;
+                @include vp(width, 148px);
+                @include vp(height, 148px);
+                @include vp(top, 40px);
+                @include vp(right, 40px);
+                @include vp(border-radius, 6px);
+                overflow: hidden;
+
+                .count_box {
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    @include vp(top, 104px);
+                    @include vp(right, 8px);
+                    @include vp(height, 36px);
+                    @include vp(padding, 10px);
+                    @include vp(border-radius, 7px);
+                    overflow: hidden;
+                    justify-content: center;
+
+                    span {
+                        position: relative;
+                        color: $white;
+                        @include vp(text-shadow, 0px 4px 4px rgba(0, 0, 0, 0.25));
+                        @include vp(font-size, 24px);
+                        font-weight: 400;
+                        z-index: 2;
+                    }
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.30);
+                        z-index: 1;
+                    }
+                }
+
+                .no_img {
+                    @include vp(width, 148px);
+                    @include vp(height, 148px);
+
+                    &.parther {
+                        background: url("../images/icons/icon_no_img_parther.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+
+                    &.customer {
+                        background: url("../images/icons/icon_no_img_customer.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+
+                    &.disaster {
+                        background: url("../images/icons/icon_no_img_disaster.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+
+                    &.fire {
+                        background: url("../images/icons/icon_no_img_fire.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+
+                    &.different {
+                        background: url("../images/icons/icon_no_img_different.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+
+                    &.safety {
+                        background: url("../images/icons/icon_no_img_safety.png") 0 0 no-repeat;
+                        @include vp(background-size, 148px auto);
+                    }
+                }
+            }
+        }
+
+        .btn_bookmark {
+            position: absolute;
+            @include vp(top, -10px);
+            @include vp(right, 39px);
+            @include vp(width, 50px);
+            @include vp(height, 76px);
+            background: url("../images/btn/btn_bookmark_off.png") 0 0 no-repeat;
+            @include vp(background-size, 50px auto);
+
+            // box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+            &.on {
+                background: url("../images/btn/btn_bookmark_on.png") 0 0 no-repeat;
+                @include vp(background-size, 50px auto);
+            }
+        }
+
+        &.on {
+            a {
+                dl {
+                    dt {
+                        p {
+                            color: $gray;
+                        }
+                    }
+
+                    dd {
+                        span {
+                            color: $gray;
+                        }
+
+                        &.last {
+                            span {
+                                &.write {
+                                    &:before {
+                                        background: url("../images/icons/icon_rate_review_on.png") 0 0 no-repeat;
+                                        @include vp(background-size, 30px auto);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/*탭 영역*/
+.cm_tab_contents {
+    position: relative;
+
+    .cm_type_list {
+        display: flex;
+
+        li {
+            @include vp(width, 188px);
+            @include vp(height, 88px);
+
+            button {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                color: $black;
+                opacity: .4;
+                text-align: center;
+                @include vp(font-size, 30px);
+                font-weight: 600;
+            }
+
+            &.on {
+                button {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .bar {
+        position: absolute;
+        left: 0;
+        @include vp(top, 82px);
+        @include vp(width, 188px);
+        @include vp(height, 6px);
+        background: $green;
+    }
+}
+
+/* font size 정의*/
+.cm-ft16 {
+    @include vp(font-size, 32px);
+}
+
+.cm-ft15 {
+    @include vp(font-size, 30px);
+}
+
+.cm-ft14 {
+    @include vp(font-size, 28px);
+}
+
+.cm-ft13 {
+    @include vp(font-size, 26px);
+}
+
+.cm-ft12 {
+    @include vp(font-size, 24px);
+}
+
+/*font weight 정의*/
+.cm-w4 {
+    font-weight: $fw4;
+}
+
+.cm-w6 {
+    font-weight: $fw6;
+}
+
+
+/*line*/
+.cm_line {
+    width: 100%;
+    @include vp(height, 2px);
+
+    &.dk {
+        background: $dark-gray;
+    }
+
+    &.lg2 {
+        background: $light-gray-2;
+    }
+
+    &.lg3 {
+        background: $light-gray-3;
+    }
+
+    &.gd {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, #BBB 100%);
+        opacity: 0.8;
+        @include vp(height, 12px);
+    }
+
+    &.vt {
+        @include vp(width, 2px);
+        @include vp(height, 240px);
+    }
+
+}
+
+
+/*color 정의*/
+.cm-g {
+    background-color: $gray;
+}
+
+.cm-b {
+    background-color: $black;
+}
+
+.cm-dk {
+    background-color: $dark-gray;
+}
+
+.cm-lg1 {
+    background-color: $light-gray-1;
+}
+
+.cm-lg3 {
+    background-color: $light-gray-3;
+}
+
+.cm-w {
+    background-color: $white;
+}
+
+.cm-g {
+    background-color: $green;
+}
+
+.cm-bk58 {
+    background-color: $black-58;
+}
+
+.cm-g {
+    background-color: $gray;
+}
+
+.cm-mg {
+    background-color: $medium-gray;
+}
+
+.cm-bk12 {
+    background-color: $black-12;
+}
+
+
+/*라디오 박스*/
+.cm_radio_box {
+    display: block;
+    position: relative;
+    @include vp(padding-left, 44px);
+    @include vp(height, 44px);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked+.cricle {
+            &:before {
+                transform: scale(1);
+            }
+        }
+    }
+
+    .cricle {
+        @include vp(width, 44px);
+        @include vp(height, 44px);
+        background: transparent;
+        border-radius: 50%;
+        @include vp(border, 2px solid $green);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            @include vp(top, 7px);
+            @include vp(left, 8px);
+            @include vp(width, 24px);
+            @include vp(height, 24px);
+            border-radius: 50%;
+            background-color: $green;
+            transform: scale(0);
+            transition: transform .35s ease-in-out;
+            transform-origin: center center;
+        }
+    }
+
+    &.gray{
+        .cricle {
+            @include vp(border, 2px solid $light-gray-1);
+
+            &:before {
+                background-color: $light-gray-1;
+            }
+        }
+    }
+}
+
+/*토글박스*/
+.cm_toggle_container{
+    position: relative;
+    @include vp(width, 104px);
+    @include vp(height, 64px);
+    .toggle_input {
+        display: none;
+        &:checked+.toggle_label{
+            background-color: #00A862;
+            &:before{
+                transform: translateX(42px);
+                @include breakpoint {
+                    transform: translateX(5.6vw);
+                }
+            }
+        }
+    }
+    .toggle_label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(29, 27, 32, 0.12);
+        @include vp(border-radius, 200px);
+        cursor: pointer;
+        transition: background-color 0.3s;
+        &::before{
+            content: '';
+            position: absolute;
+            @include vp(top, 8px);
+            @include vp(left, 8px);
+            @include vp(width, 48px);
+            @include vp(height, 48px);
+            background-color: $white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+    }
+    
+}
+
+/*체크박스*/
+.cm_check_box {
+    display: inline-flex;
+    label {
+        display: flex;
+        align-items: center;
+        @include vp(font-size, 26px);
+        font-weight: 400;
+        color: $black;
+        opacity: .87;
+        cursor: pointer;
+
+        input[type="checkbox"] {
+            @include vp(padding-left, 64px);
+            @include vp(width, 44px);
+            @include vp(height, 44px);
+            cursor: pointer;
+            outline: none;
+            appearance: none;
+            background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
+            @include vp(background-size, 44px auto);
+
+            &:checked {
+                background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
+                @include vp(background-size, 44px auto);
+            }
+        }
+    }
+}
+
+
+.cm_btn_round{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include vp(border-radius, 12px);
+    @include vp(border, 2px solid $black-12);
+    .text{
+        color: $black-58;
+        text-align: center;
+        @include vp(font-size, 28px);
+        font-style: normal;
+        font-weight: 600;
+        @include vp(padding, 20px 48px);
+        @include vp(font-size, 26px);
+        @include vp(line-height, 40px);
+        @include vp(letter-spacing, .1px);
+    }
+    &.on{
+        @include vp(border, 2px solid $green);
+        .text{ color: $green;}
+    }
+    &.active{
+        @include vp(border, 2px solid $green);
+        @include vp(background-color, $green);
+        .text{ color: $white; }
+    }
+    &.disabled{
+        @include vp(border, 2px solid transparent);
+        @include vp(background-color, $black-12);
+        .text{ color: $light-gray-1;}
     }
 }

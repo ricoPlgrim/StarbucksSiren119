@@ -1,0 +1,172 @@
+@import 'base/variables';
+@import 'base/mixin';
+
+.guide {
+    background: #999;
+
+    .guide_box {
+        .guide_list {
+            display: block;
+
+            >li {
+                position: relative;
+                @include vp(border-radius, 40px 40px 16px 16px);
+                background: $white;
+                overflow: hidden;
+                @include vp(margin-top, 40px);
+
+                .guide_top {
+
+                    width: 100%;
+                    @include vp(height, 364px);
+                    background: linear-gradient(180deg, #4E4E4E -22.34%, #222 94.32%);
+                    @include vp(padding, 48px);
+
+                    .text_box {
+                        position: relative;
+                        z-index: 2;
+
+                        h3 {
+                            @include vp(font-size, 80px);
+                            @include vp(padding-top, 48px);
+                            color: $white;
+                            font-weight: 400;
+                        }
+
+                        p {
+                            @include vp(padding-top, 24px);
+                            color: $white;
+                            @include vp(font-size, 20px);
+                            font-weight: 400;
+                        }
+                    }
+
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        display: block;
+                        @include vp(width, 465px);
+                        @include vp(height, 364px);
+                        background: url("../images/guide/vector.png") 0 0 no-repeat;
+                        @include vp(background-size, 465px auto);
+                        z-index: 1;
+                    }
+                }
+
+                .guide_bottom {
+                    @include vp(padding, 40px);
+
+                    .text_list {
+                        li {
+                            p {
+                                color: $black;
+                            }
+                        }
+                    }
+
+                    .color_list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include vp(gap, 22px);
+
+                        .cricle {
+                            @include vp(width, 140px);
+                            @include vp(height, 140px);
+                            @include vp(border-radius, 100px);
+                        }
+
+                        p {
+                            @include vp(font-size, 20px);
+                            color: $black;
+                            text-align: center;
+                            @include vp(margin, 20px auto 0);
+                        }
+                    }
+
+                    .guide_line_list {
+                        &.row {
+                            li {
+                                @include vp(margin-top, 36px);
+                                &:first-child {
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+                        &.vertical{
+                            display: flex;
+                            @include vp(margin-top, 40px );    
+                            li{
+                                @include vp(margin-left, 100px);
+                                &:first-child {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+
+                    }
+
+                    .buttons_list{
+                        li{
+                            display: flex;
+                            @include vp(gap, 30px );
+                        }
+                    }
+
+
+
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+
+        }
+    }
+
+}
+
+
+
+/*color 정의*/
+
+
+// $dark-gray: #333;
+// $light-gray-1: #AAA;
+// $light-gray-2: #DDD;
+// $light-gray-3: #EEE;
+// $green: #00A862;
+// $black-58: rgba(0, 0, 0, 0.58);
+// $gray: #999;
+// $medium-gray: #BBB;
+// $black-12: rgba(0, 0, 0, 0.12);
+
+
+.radio_group {
+    display: flex;
+    align-items: center;
+
+    .radio_list {
+        display: inline-flex;
+        width: 50%;
+
+        li {
+            @include vp(margin-left, 24px);
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+     
+    }
+}
+
+.toggle_list {
+    display: flex;
+    align-items: center;
+
+   
+}
+

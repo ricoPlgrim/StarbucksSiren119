@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* 정리중 */
+/* 정리중 */
 #wrap.report {
   font-size: 32px;
   padding-top: 112px;
@@ -604,6 +607,8 @@
   width: 100%;
   border: none;
   background: #EDEDED;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 8px;
 }
 @media screen and (max-width: 750px) {

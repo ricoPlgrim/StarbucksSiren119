@@ -60,8 +60,8 @@ var commonUi = {
         _startDateInput = $( ".bottom_sheet" ).find( "#startdate" );
         _endDateInput = $( ".bottom_sheet" ).find( "#enddate" );
 
-        _typeBtns = $( ".type_contents" ).find( ".type_list" ).find( "li" );
-     
+        _typeBtns = $( ".cm_tab_contents" ).find( ".cm_type_list" ).find( "li" );
+
 
 
     },
@@ -170,7 +170,7 @@ var commonUi = {
 
     typeBtnsClick : function(){
         $( this ).addClass( "on" ).siblings().removeClass( "on" );
-        var bars = $( ".type_contents" ).find( ".bar" );
+        var bars = $( ".cm_tab_contents" ).find( ".bar" );
         var offsetLeft = $(this).position().left;
             console.log( offsetLeft );
             gsap.to(bars, {
