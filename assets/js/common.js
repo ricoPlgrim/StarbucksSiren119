@@ -139,8 +139,6 @@ var commonUi = {
         
         $(layerName).addClass("open");
         $( "html, body" ).css( "overflow", "hidden" );
-     
-        $(".bottom_sheet").addClass("open");
         setTimeout(function () {
             $(".sheet_wrap").addClass("open");
         }, 50);
@@ -151,6 +149,7 @@ var commonUi = {
 
         $(".sheet_wrap").removeClass("open");
         $( "html, body" ).css( "overflow", "auto" );
+        
         setTimeout(function () {
             $(layerName).removeClass("open");
         }, 100);
