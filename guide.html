@@ -360,7 +360,94 @@
 
                     </div>
                 </li>
+                <!--하단 레이어 팝업 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Bottom Sheet</h3>
+                            <p>
+                                바텀시트는 문자 그대로 사용자의 액션을 위해 화면의 하단에서 출력되는 모달 UI입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <ul class="buttons_list">
+                            <li>
+                                <button class="cm_btn_round on" onclick="commonUi.bottomSheetOpen('contactPop')">
+                                    <span class="text">최스벅</span>
+                                </button>
+                                <!--on클래스 추가시 border font 색상 변경-->
+                                <button class="cm_btn_round on" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    <span class="text">수정</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <!-- 하단 파트너 연락처 레이어 팝업 -->
+                        <aside class="bottom_sheet" id="contactPop">
+                            <div class="sheet_wrap">
+                                <div class="sheet_content">
+                                    <div class="sheet_top">
+                                        <a href="javascript:;" class="btn_sheet_close"></a>
+                                        <div class="staff_info_contents">
+                                            <h3 class="name">최스벅</h3>
+                                            <div class="btn_contact">
+                                                <button class="cm_btn_round on">
+                                                    <span class="mail">메일</span>
+                                                </button>
+                                                <button class="cm_btn_round on">
+                                                    <span class="phone">전화</span>
+                                                </button>
+                                                <button class="cm_btn_round on">
+                                                    <span class="txt">문자</span>
+                                                </button>
+                                            </div>
+                                            <div class="staff_info">
+                                                <dl>
+                                                    <dt>소속</dt>
+                                                    <dd>스타벅스 DM 운영 10팀</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>메일</dt>
+                                                    <dd>james.choi@starbucks.com</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>전화</dt>
+                                                    <dd>010 - 2345 - 5678</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dimd"></div>
+                        </aside>
 
+                        <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
+                        <aside class="bottom_sheet" id="commentBtnPop">
+                            <div class="sheet_wrap">
+                                <div class="sheet_content">
+                                    <div class="sheet_top">
+                                        <a href="javascript:;" class="btn_sheet_close"></a>
+                                        <div class="btn_comment_contents">
+                                            <div class="btn_box">
+                                                <button class="cm_btn_round on">
+                                                    <span class="btn_edit">수정</span>
+                                                </button>
+                                                <button class="cm_btn_round on">
+                                                    <span class="btn_delete">삭제</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dimd"></div>
+                        </aside>
+                    </div>
+                </li>
             </ul>
         </section>
     </main>
