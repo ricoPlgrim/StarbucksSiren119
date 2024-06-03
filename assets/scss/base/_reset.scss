@@ -265,7 +265,7 @@ button,
 input {
     line-height: normal;
 }
-
+button{ cursor: pointer;}
 /**
    * Address inconsistent `text-transform` inheritance for `button` and `select`.
    * All other form control elements do not inherit `text-transform` values.

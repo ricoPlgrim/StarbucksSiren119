@@ -125,6 +125,8 @@ var commonUi = {
     },
 
     bottomSheetOpen: function () {
+        $( "html, body" ).css( "overflow", "hidden" );
+     
         $(".bottom_sheet").addClass("open");
         setTimeout(function () {
             $(".sheet_wrap").addClass("open");
@@ -133,6 +135,7 @@ var commonUi = {
 
     bottomSheetHide: function () {
         $(".sheet_wrap").removeClass("open");
+        $( "html, body" ).css( "overflow", "auto" );
         setTimeout(function () {
             $(".bottom_sheet").removeClass("open");
         }, 100);

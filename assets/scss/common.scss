@@ -33,11 +33,8 @@
         .sheet_content {
             position: relative;
             @include vp(border-radius, 40px 40px 0 0);
-            background: #F8F8F8;
+            background: $white;
 
-            // display:flex;
-            // flex-direction:column-reverse;
-            // height: inherit;
             .sheet_top {
                 position: relative;
 
@@ -79,7 +76,7 @@
                         button {
                             width: inherit;
                             @include vp(padding, 30px 22px);
-                            @include vp(font-size, 26px);
+                            @include vp(font-size, $f13);
                             line-height: normal;
                             background: none;
                         }
@@ -111,7 +108,7 @@
 
                         span {
                             font-family: "Pretendard Variable";
-                            @include vp(font-size, 26px);
+                            @include vp(font-size, $f13);
                             font-weight: 400;
                             color: $black;
                             opacity: .6;
@@ -142,7 +139,7 @@
                 @include vp(padding, 40px 40px 56px);
 
                 .name {
-                    @include vp(font-size, 30px);
+                    @include vp(font-size, $f15);
                     text-align: center;
                     font-weight: 600;
                 }
@@ -165,7 +162,7 @@
 
                         span {
                             @include vp(padding-left, 60px);
-                            @include vp(font-size, 30px);
+                            @include vp(font-size, $f15);
                             color: #00A862;
                             ;
                             font-weight: 600;
@@ -192,7 +189,7 @@
                     dl {
                         display: flex;
                         @include vp(margin-bottom, 8px);
-                        @include vp(font-size, 26px);
+                        @include vp(font-size, $f13);
                         @include vp(line-height, 54px);
 
                         dt {
@@ -218,10 +215,14 @@
                     background: #fff;
 
                     span {
-                        @include vp(font-size, 28px);
+                        @include vp(font-size, $f14);
                         color: #00A862;
                     }
                 }
+            }
+
+            &.white {
+                background: $white !important;
             }
         }
 
@@ -257,6 +258,48 @@
         }
     }
 
+    .full_wrap {
+        width: 100%;
+        overflow-y: auto;
+
+        >.buttons_list {
+            display: flex;
+            @include vp(margin-left, 40px);
+            @include vp(padding, 16px 40px 32px 0);
+
+            li {
+                flex: 0 0 auto;
+                @include vp(margin-left, 60px);
+
+                button {
+                    @include vp(font-size, $f15);
+                    font-weight: 400;
+                    letter-spacing: 0.1px;
+                    text-align: center;
+                    color: $light-gray-1;
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+        }
+    }
+
+    &.filter{
+        .sheet_wrap{
+            .btn_sheet_close{ 
+                display: block;
+                @include vp(width, 96px);
+                @include vp(height, 96px);
+                margin:0 auto;
+            }
+            &.open{ 
+                // bottom:-690px;
+            }
+        }
+    }
 }
 
 
@@ -314,7 +357,7 @@
         }
 
         .text {
-            @include vp(font-size, 26px);
+            @include vp(font-size, $f13);
             @include vp(line-height, 40px);
             text-align: center;
         }
@@ -331,7 +374,7 @@
                 @include vp(height, 80px);
                 @include vp(border-radius, 12px);
                 @include vp(line-height, 40px);
-                @include vp(font-size, 28px);
+                @include vp(font-size, $f14);
                 text-align: center;
                 font-weight: 600;
 
@@ -375,7 +418,7 @@
 }
 
 
-.common_card_list {
+.cm_card_list {
     >li {
         position: relative;
         @include vp(margin-top, 20px);
@@ -400,7 +443,7 @@
                         @include vp(padding, 8px 16px);
                         @include vp(border-radius, 12px);
                         @include vp(border, 2px solid $green);
-                        @include vp(font-size, 24px);
+                        @include vp(font-size, $f12);
                         @include vp(margin-left, 8px);
                         background: #EBFFF7;
                         font-weight: 400;
@@ -428,7 +471,7 @@
 
                     p {
                         color: $black;
-                        @include vp(font-size, 24px);
+                        @include vp(font-size, $f12);
                         font-weight: 400;
                         @include vp(margin-left, 20px);
                     }
@@ -440,7 +483,7 @@
                     align-items: center;
 
                     span {
-                        @include vp(font-size, 30px);
+                        @include vp(font-size, $f15);
                         @include vp(line-height, 32px);
                         color: $black;
                         opacity: .8;
@@ -472,7 +515,7 @@
                     &.last {
                         span {
                             color: #333;
-                            @include vp(font-size, 24px);
+                            @include vp(font-size, $f12);
                             font-style: normal;
                             font-weight: 400;
                             line-height: normal;
@@ -544,7 +587,7 @@
                         position: relative;
                         color: $white;
                         @include vp(text-shadow, 0px 4px 4px rgba(0, 0, 0, 0.25));
-                        @include vp(font-size, 24px);
+                        @include vp(font-size, $f12);
                         font-weight: 400;
                         z-index: 2;
                     }
@@ -665,7 +708,7 @@
                 color: $black;
                 opacity: .4;
                 text-align: center;
-                @include vp(font-size, 30px);
+                @include vp(font-size, $f15);
                 font-weight: 600;
             }
 
@@ -687,26 +730,137 @@
     }
 }
 
-/* font size 정의*/
-.cm-ft16 {
-    @include vp(font-size, 32px);
+.cm_tab_panel {
+    // @include vp(max-height, 240px );
+    // overflow: auto;
+    .panel_list {
+        li {
+            display: block;
+
+            &.active {
+                display: block;
+
+                .inner {
+                    @include vp(padding, 30px 20px);
+
+                    .checkbox_list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        @include vp(gap, 44px);
+
+                        >li {
+                            flex: 1 1 calc(50% - 44px);
+
+                            @include breakpoint {
+                                flex: 1 1 calc(50% - 5.8666666667vw);
+                            }
+
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.cm-ft15 {
-    @include vp(font-size, 30px);
+.cm_tab_bottom {
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        @include vp(height, 12px);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #BBB 100%);
+        opacity: 0.8;
+    }
+
+    .button_grop {
+        .inner {
+            @include vp(padding, 20px 0 20px 40px);
+            position: relative;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .btn_refresh {
+                display: inline-flex;
+                @include vp(width, 68px);
+                @include vp(height, 64px);
+                @include vp(margin-right, 8px);
+                background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
+                @include vp(background-size, 68px auto);
+            }
+
+            .btn_list {
+                @include vp(width, 617px);
+                position: relative;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                @include vp(gap, 8px);
+                @include vp(height, 64px);
+                align-items: center;
+                overflow-x: scroll;
+                overflow-y: hidden;
+
+                li {
+                    position: relative;
+                    flex: 0 0 auto;
+
+                    .tag {
+                        position: relative;
+                        @include vp(font-size, $f12);
+                        @include vp(padding, 20px 60px 20px 20px);
+                        @include vp(height, 64px);
+                        font-weight: 500;
+                        color: $black-58;
+                        @include vp(letter-spacing, .1px);
+                        text-align: center;
+                        @include vp(border-radius, 6px);
+                        @include vp(border, 2px solid $black-12);
+                        background-color: $white;
+                    }
+
+                    .btn_close {
+                        display: block;
+                        position: absolute;
+                        @include vp(top, 19px);
+                        @include vp(right, 20px);
+                        @include vp(width, 28px);
+                        @include vp(height, 28px);
+                        background: url("../images/btn/btn_close_g.png") 0 0 no-repeat;
+                        @include vp(background-size, 28px auto);
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            @include vp(height, 2px);
+            background-color: $light-gray-3;
+        }
+        &.bottom{
+            .inner{
+                @include vp(padding, 40px 40px 62px 40px);
+                button{
+                    @include vp(height, 100px);
+                    @include vp(width, 466px);
+                    &:first-child{ 
+                        @include vp(margin-right, 8px); 
+                        @include vp(width, 196px);
+                    }
+                 
+                }
+            }
+        }
+    }
 }
 
-.cm-ft14 {
-    @include vp(font-size, 28px);
-}
-
-.cm-ft13 {
-    @include vp(font-size, 26px);
-}
-
-.cm-ft12 {
-    @include vp(font-size, 24px);
-}
 
 /*font weight 정의*/
 .cm-w4 {
@@ -843,7 +997,7 @@
         }
     }
 
-    &.gray{
+    &.gray {
         .cricle {
             @include vp(border, 2px solid $light-gray-1);
 
@@ -855,22 +1009,27 @@
 }
 
 /*토글박스*/
-.cm_toggle_container{
+.cm_toggle_container {
     position: relative;
     @include vp(width, 104px);
     @include vp(height, 64px);
+
     .toggle_input {
         display: none;
-        &:checked+.toggle_label{
+
+        &:checked+.toggle_label {
             background-color: #00A862;
-            &:before{
+
+            &:before {
                 transform: translateX(42px);
+
                 @include breakpoint {
                     transform: translateX(5.6vw);
                 }
             }
         }
     }
+
     .toggle_label {
         position: absolute;
         top: 0;
@@ -881,7 +1040,8 @@
         @include vp(border-radius, 200px);
         cursor: pointer;
         transition: background-color 0.3s;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             @include vp(top, 8px);
@@ -893,16 +1053,17 @@
             transition: transform 0.3s;
         }
     }
-    
+
 }
 
 /*체크박스*/
 .cm_check_box {
     display: inline-flex;
+
     label {
         display: flex;
         align-items: center;
-        @include vp(font-size, 26px);
+        @include vp(font-size, $f13);
         font-weight: 400;
         color: $black;
         opacity: .87;
@@ -926,37 +1087,50 @@
     }
 }
 
-
-.cm_btn_round{
+/*버튼 */
+.cm_btn_round {
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @include vp(border-radius, 12px);
     @include vp(border, 2px solid $black-12);
-    .text{
+
+    .text {
         color: $black-58;
         text-align: center;
-        @include vp(font-size, 28px);
+        @include vp(font-size, $f14);
         font-style: normal;
         font-weight: 600;
         @include vp(padding, 20px 48px);
-        @include vp(font-size, 26px);
+        @include vp(font-size, $f13);
         @include vp(line-height, 40px);
         @include vp(letter-spacing, .1px);
     }
-    &.on{
+
+    &.on {
         @include vp(border, 2px solid $green);
-        .text{ color: $green;}
+
+        .text {
+            color: $green;
+        }
     }
-    &.active{
+
+    &.active {
         @include vp(border, 2px solid $green);
         @include vp(background-color, $green);
-        .text{ color: $white; }
+
+        .text {
+            color: $white;
+        }
     }
-    &.disabled{
+
+    &.disabled {
         @include vp(border, 2px solid transparent);
         @include vp(background-color, $black-12);
-        .text{ color: $light-gray-1;}
+
+        .text {
+            color: $light-gray-1;
+        }
     }
 }
