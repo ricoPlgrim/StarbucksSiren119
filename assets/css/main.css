@@ -976,6 +976,30 @@ header.common .btn_bookmark.on {
     padding: 7.2vw 6.6666666667vw;
   }
 }
+header.setting {
+  justify-content: flex-end;
+  border-bottom: 2px solid #DDD;
+}
+header.setting .btn_close {
+  background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
+  background-size: 96px auto;
+  padding: 48px 50px;
+}
+@media screen and (max-width: 750px) {
+  header.setting .btn_close {
+    background-size: 12.8vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.setting .btn_close {
+    padding: 6.4vw 6.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.setting {
+    border-bottom: 0.2666666667vw solid #DDD;
+  }
+}
 
 /*gnb*/
 .gnb {
@@ -1434,6 +1458,14 @@ header.common .btn_bookmark.on {
     max-width: 100vw;
   }
 }
+#wrap.setting {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting {
+    padding-top: 14.9333333333vw;
+  }
+}
 
 .bottom_sheet {
   display: none;
@@ -1810,46 +1842,81 @@ header.common .btn_bookmark.on {
     min-width: 19.4666666667vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-  padding: 40px 40px 56px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+  padding: 52px 44px 90px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+    padding: 6.9333333333vw 5.8666666667vw 12vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-  width: 750px;
-  height: 568px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+  padding: 24px 20px;
+  width: 670px;
   border-radius: 12px;
   border: 1px solid #00A862;
   background: #fff;
+  text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    width: 100vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+    padding: 3.2vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    height: 75.7333333333vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+    width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
     border-radius: 1.6vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+  padding-left: 60px;
   font-size: 28px;
+  line-height: 48px;
   color: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+    padding-left: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
     font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+    line-height: 6.4vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+  background: url("../images/icons/ico_edit.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+  background: url("../images/icons/ico_delete.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+    background-size: 5.3333333333vw auto;
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content.white {
@@ -2007,6 +2074,7 @@ header.common .btn_bookmark.on {
   transform: translate(0, -50%);
   border-radius: 40px;
   background: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 {
@@ -2960,52 +3028,6 @@ header.common .btn_bookmark.on {
   }
 }
 
-/* font size 정의*/
-.cm-ft16 {
-  font-size: 32px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft16 {
-    font-size: 4.2666666667vw;
-  }
-}
-
-.cm-ft15 {
-  font-size: 30px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft15 {
-    font-size: 4vw;
-  }
-}
-
-.cm-ft14 {
-  font-size: 28px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft14 {
-    font-size: 3.7333333333vw;
-  }
-}
-
-.cm-ft13 {
-  font-size: 26px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft13 {
-    font-size: 3.4666666667vw;
-  }
-}
-
-.cm-ft12 {
-  font-size: 24px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft12 {
-    font-size: 3.2vw;
-  }
-}
-
 /*font weight 정의*/
 .cm-w4 {
   font-weight: 400;
@@ -3161,24 +3183,26 @@ header.common .btn_bookmark.on {
   content: "";
   display: block;
   position: absolute;
-  top: 7px;
-  left: 8px;
+  top: 50%;
+  left: 50%;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   background-color: #00A862;
   transform: scale(0);
+  transform: translateY(-50%);
+  transform: translateX(-50%);
   transition: transform 0.35s ease-in-out;
   transform-origin: center center;
 }
 @media screen and (max-width: 750px) {
   .cm_radio_box .cricle:before {
-    top: 0.9333333333vw;
+    top: 50%;
   }
 }
 @media screen and (max-width: 750px) {
   .cm_radio_box .cricle:before {
-    left: 1.0666666667vw;
+    left: 50%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3438,6 +3462,159 @@ header.common .btn_bookmark.on {
 }
 .cm_btn_round.disabled .text {
   color: #AAA;
+}
+
+/*공통*/
+.cm_setting_cotnents .inner {
+  padding: 60px 40px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner {
+    padding: 8vw 5.3333333333vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 32px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li {
+    padding-top: 4.2666666667vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li h3 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li h3 {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li h3 {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li a {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 26px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li a {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li a {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li:first-child {
+  padding-top: 0;
+  padding-bottom: 40px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #DDD;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    padding-bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    margin-bottom: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li:first-child {
+    border-bottom: 0.2666666667vw solid #DDD;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li dl {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.cm_setting_cotnents .inner .setting_list > li dl dt {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li dl dt {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li dl dt {
+    line-height: 3.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li {
+  margin-top: 44px;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li {
+    margin-top: 5.8666666667vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 28px;
+  line-height: 36px;
+  padding-left: 84px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    line-height: 4.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li .checkbox_list li > label {
+    padding-left: 11.2vw;
+  }
+}
+.cm_setting_cotnents .inner .setting_list > li .checkbox_list li:first-child {
+  margin-top: 0;
+}
+.cm_setting_cotnents .inner .setting_list > li.last {
+  margin-top: 60px;
+  padding-top: 60px;
+  border-top: 2px solid #DDD;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    margin-top: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    padding-top: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_setting_cotnents .inner .setting_list > li.last {
+    border-top: 0.2666666667vw solid #DDD;
+  }
 }
 
 #wrap {
