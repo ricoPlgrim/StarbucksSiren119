@@ -1,3 +1,6 @@
+@charset "UTF-8";
+/* 정리중 */
+/* 정리중 */
 #wrap.login section {
   padding: 140px 40px;
   display: flex;
@@ -113,65 +116,12 @@
     margin-bottom: 2.6666666667vw;
   }
 }
-#wrap.login section .login_wrap .login_box .auto_checkbox {
-  position: relative;
+#wrap.login section .login_wrap .login_box .auto_login {
   margin-top: 28px;
-  display: inline-block;
 }
 @media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox {
+  #wrap.login section .login_wrap .login_box .auto_login {
     margin-top: 3.7333333333vw;
-  }
-}
-#wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: none;
-  opacity: 0;
-}
-#wrap.login section .login_wrap .login_box .auto_checkbox label {
-  display: inline-flex;
-  align-items: center;
-  padding-left: 64px;
-  background: url("../images/btn/btn_check_off.png") no-repeat;
-  background-size: 44px auto;
-  min-height: 44px;
-  line-height: 44px;
-  font-size: 26px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox label {
-    padding-left: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox label {
-    background-size: 5.8666666667vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox label {
-    min-height: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox label {
-    line-height: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox label {
-    font-size: 3.4666666667vw;
-  }
-}
-#wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
-  background: url("../images/btn/btn_check_on.png") no-repeat;
-  background-size: 44px auto;
-}
-@media screen and (max-width: 750px) {
-  #wrap.login section .login_wrap .login_box .auto_checkbox input[type=checkbox]:checked + label {
-    background-size: 5.8666666667vw auto;
   }
 }
 #wrap.login section .login_wrap .login_btn {
