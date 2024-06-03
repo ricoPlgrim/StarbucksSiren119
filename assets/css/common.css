@@ -913,6 +913,9 @@ header.common {
     height: 14.9333333333vw;
   }
 }
+header.common.on {
+  box-shadow: 0 -1px 5px 0px #BBBBBB;
+}
 header.common .btn_back {
   background: url("../images/btn/btn_back.png") center center no-repeat;
   background-size: 96px auto;
@@ -1707,69 +1710,62 @@ header.common .btn_bookmark.on {
     padding-bottom: 8vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
   padding: 24px 20px;
   width: 216px;
-  border-radius: 16px;
-  border: 1px solid #00A862;
   text-align: center;
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
     padding: 3.2vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
     width: 28.8vw;
   }
 }
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
-    border-radius: 2.1333333333vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
   padding-left: 60px;
   font-size: 30px;
   color: #00A862;
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
     padding-left: 8vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
     font-size: 4vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.mail {
   background: url("../images/icons/ico_mail.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.mail {
     background-size: 5.3333333333vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.phone {
   background: url("../images/icons/ico_call.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.phone {
     background-size: 5.3333333333vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.txt {
   background: url("../images/icons/ico_text.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.txt {
     background-size: 5.3333333333vw auto;
   }
 }
@@ -1805,11 +1801,11 @@ header.common .btn_bookmark.on {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-  padding: 52px 44px 90px;
+  padding: 52px 44px 105px;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-    padding: 6.9333333333vw 5.8666666667vw 12vw;
+    padding: 6.9333333333vw 5.8666666667vw 14vw;
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
@@ -1818,8 +1814,8 @@ header.common .btn_bookmark.on {
   align-items: center;
   gap: 10px;
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
-  padding: 24px 20px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+  padding: 20px 0px;
   width: 670px;
   border-radius: 12px;
   border: 1px solid #00A862;
@@ -1828,56 +1824,56 @@ header.common .btn_bookmark.on {
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
-    padding: 3.2vw 2.6666666667vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+    padding: 2.6666666667vw 0vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
     width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
     border-radius: 1.6vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
   padding-left: 60px;
   font-size: 28px;
   line-height: 48px;
   color: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     padding-left: 8vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     font-size: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     line-height: 6.4vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_edit {
   background: url("../images/icons/ico_edit.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_edit {
     background-size: 5.3333333333vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
   background: url("../images/icons/ico_delete.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
     background-size: 5.3333333333vw auto;
   }
 }
@@ -2040,11 +2036,8 @@ header.common .btn_bookmark.on {
 .layer_m_popup .pop_cont01 .btn_bottom button {
   width: 290px;
   height: 80px;
-  border-radius: 12px;
   line-height: 40px;
-  font-size: 28px;
   text-align: center;
-  font-weight: 600;
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
@@ -2058,26 +2051,16 @@ header.common .btn_bookmark.on {
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
-    border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .layer_m_popup .pop_cont01 .btn_bottom button {
     line-height: 5.3333333333vw;
   }
 }
+.layer_m_popup .pop_cont01 .btn_bottom button > span {
+  font-size: 28px;
+}
 @media screen and (max-width: 750px) {
-  .layer_m_popup .pop_cont01 .btn_bottom button {
+  .layer_m_popup .pop_cont01 .btn_bottom button > span {
     font-size: 3.7333333333vw;
   }
-}
-.layer_m_popup .pop_cont01 .btn_bottom button.btn-border {
-  border: 1px solid #00A862;
-  color: #00A862;
-}
-.layer_m_popup .pop_cont01 .btn_bottom button.btn-fill {
-  color: #fff;
-  background: #00A862;
 }
 
 .layer_popup {

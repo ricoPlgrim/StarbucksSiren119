@@ -69,6 +69,7 @@ var commonUi = {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
         _w.on("scroll", commonUi.scrollEvent);
+        _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick);
         _gnbCloseBtn.on("click", commonUi.gnbCloseClick);
@@ -86,8 +87,8 @@ var commonUi = {
         _typeBtns.on( "click", commonUi.typeBtnsClick );
         // input, textarea 이벤트
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
-
-
+        // header 스크롤 이벤트
+ 
     },
 
     loadEvent: function () {
@@ -226,7 +227,19 @@ var commonUi = {
         }
 
         $(".btn_delete").on("click", deleteText);
-    }    
+    },
+    headerScroll: function() {
+        // 스크롤 탑일때 해더 변경
+        var winTop = _w.scrollTop();
+        var cHeader = $("header.common");
+        var headerHeight = cHeader.height();
+
+		if(winTop >= headerHeight){
+			$(cHeader).addClass('on'); 
+		} else {
+			$(cHeader).removeClass('on');
+		}
+    }
 };
 
 
