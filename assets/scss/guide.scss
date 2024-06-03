@@ -108,6 +108,14 @@
 
                     }
 
+                    .buttons_list{
+                        li{
+                            display: flex;
+                            @include vp(gap, 30px );
+                        }
+                    }
+
+
 
                 }
 

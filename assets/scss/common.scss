@@ -647,7 +647,7 @@
 
 }
 
-
+/*탭 영역*/
 .cm_tab_contents {
     position: relative;
 
@@ -686,8 +686,6 @@
         background: $green;
     }
 }
-
-
 
 /* font size 정의*/
 .cm-ft16 {
@@ -751,9 +749,7 @@
 }
 
 
-
 /*color 정의*/
-
 .cm-g {
     background-color: $gray;
 }
@@ -931,4 +927,36 @@
 }
 
 
-
+.cm_btn_round{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include vp(border-radius, 12px);
+    @include vp(border, 2px solid $black-12);
+    .text{
+        color: $black-58;
+        text-align: center;
+        @include vp(font-size, 28px);
+        font-style: normal;
+        font-weight: 600;
+        @include vp(padding, 20px 48px);
+        @include vp(font-size, 26px);
+        @include vp(line-height, 40px);
+        @include vp(letter-spacing, .1px);
+    }
+    &.on{
+        @include vp(border, 2px solid $green);
+        .text{ color: $green;}
+    }
+    &.active{
+        @include vp(border, 2px solid $green);
+        @include vp(background-color, $green);
+        .text{ color: $white; }
+    }
+    &.disabled{
+        @include vp(border, 2px solid transparent);
+        @include vp(background-color, $black-12);
+        .text{ color: $light-gray-1;}
+    }
+}

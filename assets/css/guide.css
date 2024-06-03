@@ -191,6 +191,15 @@
 .guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical li:first-child {
   margin-left: 0;
 }
+.guide .guide_box .guide_list > li .guide_bottom .buttons_list li {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .buttons_list li {
+    gap: 4vw;
+  }
+}
 .guide .guide_box .guide_list > li:first-child {
   margin-top: 0;
 }

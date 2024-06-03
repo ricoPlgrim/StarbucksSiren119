@@ -2583,6 +2583,7 @@ header.common .btn_bookmark.on {
   }
 }
 
+/*탭 영역*/
 .cm_tab_contents {
   position: relative;
 }
@@ -3022,4 +3023,104 @@ header.common .btn_bookmark.on {
   .cm_check_box label input[type=checkbox]:checked {
     background-size: 5.8666666667vw auto;
   }
+}
+
+.cm_btn_round {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round {
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+.cm_btn_round .text {
+  color: rgba(0, 0, 0, 0.58);
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 20px 48px;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0.1px;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    padding: 2.6666666667vw 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    letter-spacing: 0.0133333333vw;
+  }
+}
+.cm_btn_round.on {
+  border: 2px solid #00A862;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.on {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+.cm_btn_round.on .text {
+  color: #00A862;
+}
+.cm_btn_round.active {
+  border: 2px solid #00A862;
+  background-color: #00A862;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.active {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.active {
+    background-color: #00A862;
+  }
+}
+.cm_btn_round.active .text {
+  color: #fff;
+}
+.cm_btn_round.disabled {
+  border: 2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.disabled {
+    border: 0.2666666667vw solid transparent;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+.cm_btn_round.disabled .text {
+  color: #AAA;
 }
