@@ -915,6 +915,9 @@ header.common {
     height: 14.9333333333vw;
   }
 }
+header.common.on {
+  box-shadow: 0 -1px 5px 0px #BBBBBB;
+}
 header.common .btn_back {
   background: url("../images/btn/btn_back.png") center center no-repeat;
   background-size: 96px auto;
@@ -1709,69 +1712,62 @@ header.common .btn_bookmark.on {
     padding-bottom: 8vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
   padding: 24px 20px;
   width: 216px;
-  border-radius: 16px;
-  border: 1px solid #00A862;
   text-align: center;
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
     padding: 3.2vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button {
     width: 28.8vw;
   }
 }
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 {
-    border-radius: 2.1333333333vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
   padding-left: 60px;
   font-size: 30px;
   color: #00A862;
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
     padding-left: 8vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span {
     font-size: 4vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.mail {
   background: url("../images/icons/ico_mail.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.mail {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.mail {
     background-size: 5.3333333333vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.phone {
   background: url("../images/icons/ico_call.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.phone {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.phone {
     background-size: 5.3333333333vw auto;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+.bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.txt {
   background: url("../images/icons/ico_text.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact .btn01 span.text {
+  .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.txt {
     background-size: 5.3333333333vw auto;
   }
 }
@@ -1806,46 +1802,81 @@ header.common .btn_bookmark.on {
     min-width: 19.4666666667vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-  padding: 40px 40px 56px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+  padding: 52px 44px 105px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+    padding: 6.9333333333vw 5.8666666667vw 14vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-  width: 750px;
-  height: 568px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+  padding: 20px 0px;
+  width: 670px;
   border-radius: 12px;
   border: 1px solid #00A862;
   background: #fff;
+  text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    width: 100vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+    padding: 2.6666666667vw 0vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    height: 75.7333333333vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+    width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
     border-radius: 1.6vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
+  padding-left: 60px;
   font-size: 28px;
+  line-height: 48px;
   color: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
+    padding-left: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
+    line-height: 6.4vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_edit {
+  background: url("../images/icons/ico_edit.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_edit {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
+  background: url("../images/icons/ico_delete.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
+    background-size: 5.3333333333vw auto;
   }
 }
 .bottom_sheet .sheet_wrap.open {
@@ -1942,6 +1973,7 @@ header.common .btn_bookmark.on {
   transform: translate(0, -50%);
   border-radius: 40px;
   background: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 {
@@ -2006,11 +2038,8 @@ header.common .btn_bookmark.on {
 .layer_m_popup .pop_cont01 .btn_bottom button {
   width: 290px;
   height: 80px;
-  border-radius: 12px;
   line-height: 40px;
-  font-size: 28px;
   text-align: center;
-  font-weight: 600;
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
@@ -2024,26 +2053,16 @@ header.common .btn_bookmark.on {
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
-    border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .layer_m_popup .pop_cont01 .btn_bottom button {
     line-height: 5.3333333333vw;
   }
 }
+.layer_m_popup .pop_cont01 .btn_bottom button > span {
+  font-size: 28px;
+}
 @media screen and (max-width: 750px) {
-  .layer_m_popup .pop_cont01 .btn_bottom button {
+  .layer_m_popup .pop_cont01 .btn_bottom button > span {
     font-size: 3.7333333333vw;
   }
-}
-.layer_m_popup .pop_cont01 .btn_bottom button.btn-border {
-  border: 1px solid #00A862;
-  color: #00A862;
-}
-.layer_m_popup .pop_cont01 .btn_bottom button.btn-fill {
-  color: #fff;
-  background: #00A862;
 }
 
 .layer_popup {
@@ -2585,6 +2604,7 @@ header.common .btn_bookmark.on {
   }
 }
 
+/*탭 영역*/
 .cm_tab_contents {
   position: relative;
 }
@@ -2647,15 +2667,483 @@ header.common .btn_bookmark.on {
   }
 }
 
-/*line*/
-.cm_bar_b {
-  width: 100%;
-  height: 2px solid #333;
+/* font size 정의*/
+.cm-ft16 {
+  font-size: 32px;
 }
 @media screen and (max-width: 750px) {
-  .cm_bar_b {
-    height: 0.2666666667vw solid #333;
+  .cm-ft16 {
+    font-size: 4.2666666667vw;
   }
+}
+
+.cm-ft15 {
+  font-size: 30px;
+}
+@media screen and (max-width: 750px) {
+  .cm-ft15 {
+    font-size: 4vw;
+  }
+}
+
+.cm-ft14 {
+  font-size: 28px;
+}
+@media screen and (max-width: 750px) {
+  .cm-ft14 {
+    font-size: 3.7333333333vw;
+  }
+}
+
+.cm-ft13 {
+  font-size: 26px;
+}
+@media screen and (max-width: 750px) {
+  .cm-ft13 {
+    font-size: 3.4666666667vw;
+  }
+}
+
+.cm-ft12 {
+  font-size: 24px;
+}
+@media screen and (max-width: 750px) {
+  .cm-ft12 {
+    font-size: 3.2vw;
+  }
+}
+
+/*font weight 정의*/
+.cm-w4 {
+  font-weight: 400;
+}
+
+.cm-w6 {
+  font-weight: 600;
+}
+
+/*line*/
+.cm_line {
+  width: 100%;
+  height: 2px;
+}
+@media screen and (max-width: 750px) {
+  .cm_line {
+    height: 0.2666666667vw;
+  }
+}
+.cm_line.dk {
+  background: #333;
+}
+.cm_line.lg2 {
+  background: #DDD;
+}
+.cm_line.lg3 {
+  background: #EEE;
+}
+.cm_line.gd {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #BBB 100%);
+  opacity: 0.8;
+  height: 12px;
+}
+@media screen and (max-width: 750px) {
+  .cm_line.gd {
+    height: 1.6vw;
+  }
+}
+.cm_line.vt {
+  width: 2px;
+  height: 240px;
+}
+@media screen and (max-width: 750px) {
+  .cm_line.vt {
+    width: 0.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_line.vt {
+    height: 32vw;
+  }
+}
+
+/*color 정의*/
+.cm-g {
+  background-color: #999;
+}
+
+.cm-b {
+  background-color: #000;
+}
+
+.cm-dk {
+  background-color: #333;
+}
+
+.cm-lg1 {
+  background-color: #AAA;
+}
+
+.cm-lg3 {
+  background-color: #EEE;
+}
+
+.cm-w {
+  background-color: #fff;
+}
+
+.cm-g {
+  background-color: #00A862;
+}
+
+.cm-bk58 {
+  background-color: rgba(0, 0, 0, 0.58);
+}
+
+.cm-g {
+  background-color: #999;
+}
+
+.cm-mg {
+  background-color: #BBB;
+}
+
+.cm-bk12 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+/*라디오 박스*/
+.cm_radio_box {
+  display: block;
+  position: relative;
+  padding-left: 44px;
+  height: 44px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box {
+    padding-left: 5.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box {
+    height: 5.8666666667vw;
+  }
+}
+.cm_radio_box input[type=radio] {
+  display: none;
+}
+.cm_radio_box input[type=radio]:checked + .cricle:before {
+  transform: scale(1);
+}
+.cm_radio_box .cricle {
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid #00A862;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle {
+    width: 5.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle {
+    height: 5.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+.cm_radio_box .cricle:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #00A862;
+  transform: scale(0);
+  transition: transform 0.35s ease-in-out;
+  transform-origin: center center;
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle:before {
+    top: 0.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle:before {
+    left: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle:before {
+    width: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box .cricle:before {
+    height: 3.2vw;
+  }
+}
+.cm_radio_box.gray .cricle {
+  border: 2px solid #AAA;
+}
+@media screen and (max-width: 750px) {
+  .cm_radio_box.gray .cricle {
+    border: 0.2666666667vw solid #AAA;
+  }
+}
+.cm_radio_box.gray .cricle:before {
+  background-color: #AAA;
+}
+
+/*토글박스*/
+.cm_toggle_container {
+  position: relative;
+  width: 104px;
+  height: 64px;
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container {
+    width: 13.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container {
+    height: 8.5333333333vw;
+  }
+}
+.cm_toggle_container .toggle_input {
+  display: none;
+}
+.cm_toggle_container .toggle_input:checked + .toggle_label {
+  background-color: #00A862;
+}
+.cm_toggle_container .toggle_input:checked + .toggle_label:before {
+  transform: translateX(42px);
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_input:checked + .toggle_label:before {
+    transform: translateX(5.6vw);
+  }
+}
+.cm_toggle_container .toggle_label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 27, 32, 0.12);
+  border-radius: 200px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_label {
+    border-radius: 26.6666666667vw;
+  }
+}
+.cm_toggle_container .toggle_label::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_label::before {
+    top: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_label::before {
+    left: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_label::before {
+    width: 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_toggle_container .toggle_label::before {
+    height: 6.4vw;
+  }
+}
+
+/*체크박스*/
+.cm_check_box {
+  display: inline-flex;
+}
+.cm_check_box label {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  opacity: 0.87;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label {
+    font-size: 3.4666666667vw;
+  }
+}
+.cm_check_box label input[type=checkbox] {
+  padding-left: 64px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
+  background-size: 44px auto;
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label input[type=checkbox] {
+    padding-left: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label input[type=checkbox] {
+    width: 5.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label input[type=checkbox] {
+    height: 5.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label input[type=checkbox] {
+    background-size: 5.8666666667vw auto;
+  }
+}
+.cm_check_box label input[type=checkbox]:checked {
+  background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
+  background-size: 44px auto;
+}
+@media screen and (max-width: 750px) {
+  .cm_check_box label input[type=checkbox]:checked {
+    background-size: 5.8666666667vw auto;
+  }
+}
+
+.cm_btn_round {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round {
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+.cm_btn_round .text {
+  color: rgba(0, 0, 0, 0.58);
+  text-align: center;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  padding: 20px 48px;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0.1px;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    padding: 2.6666666667vw 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round .text {
+    letter-spacing: 0.0133333333vw;
+  }
+}
+.cm_btn_round.on {
+  border: 2px solid #00A862;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.on {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+.cm_btn_round.on .text {
+  color: #00A862;
+}
+.cm_btn_round.active {
+  border: 2px solid #00A862;
+  background-color: #00A862;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.active {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.active {
+    background-color: #00A862;
+  }
+}
+.cm_btn_round.active .text {
+  color: #fff;
+}
+.cm_btn_round.disabled {
+  border: 2px solid transparent;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.disabled {
+    border: 0.2666666667vw solid transparent;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_round.disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+  }
+}
+.cm_btn_round.disabled .text {
+  color: #AAA;
 }
 
 #wrap {

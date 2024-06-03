@@ -54,31 +54,8 @@
                             @include vp( margin-bottom, 20px);
                         }
                     }
-                    .auto_checkbox {
-                        position:relative;
+                    .auto_login {
                         @include vp( margin-top, 28px);
-                        display:inline-block;
-                        input[type="checkbox"] {
-                            position:absolute;
-                            top:0;
-                            left:0;
-                            border: none;
-                            opacity: 0;
-                        }
-                        label {
-                            display: inline-flex;
-                            align-items: center;
-                            @include vp(padding-left, 64px);
-                            background:url("../images/btn/btn_check_off.png") no-repeat;
-                            @include vp(background-size, 44px auto);
-                            @include vp(min-height, 44px);
-                            @include vp(line-height, 44px);
-                            @include vp(font-size, 26px);
-                        }
-                        input[type="checkbox"]:checked + label {
-                            background:url("../images/btn/btn_check_on.png")  no-repeat;
-                            @include vp(background-size, 44px auto);
-                        }
                     }
                 }
                 .login_btn {

@@ -116,28 +116,39 @@
                     &.scroll {
                         padding-bottom: 1px;
                         overflow-y: auto;
-                        &::-webkit-scrollbar{width: 3px; height:3px;}
-                        &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
+                        // &::-webkit-scrollbar{width: 3px; height:3px;}
+                        // &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
                     }
                     li {
-                        @include vp( padding, 24px 30px);
                         @include vp( font-size, 26px); 
                         @include vp( margin-right, 8px);
                         color: rgba(0, 0, 0, 0.58);
                         @include vp( border-radius, 12px);
-                        border: 1px solid #EEE;
                         text-wrap: nowrap;
                         &.on {
                             border: 1px solid #00A862;
-                            color: #00A862;
-                            font-weight: 600;
+                            .text {
+                                color: #00A862;
+                                font-weight: 600;
+                            }
+                        }
+                        .text {
+                            @include vp( padding, 20px);
+                            font-weight: 400;
                         }
                         &.select_box {
                             position: relative;
-                            padding: 0px;
+                            &.on {
+                                .select_option {
+                                    border: none;
+                                    color: #00A862;
+                                }
+                            }
                            .select_option {
                             position: relative;
                             @include vp( padding, 24px 60px 24px 20px); 
+                            border: 1px solid #0000001F;
+                            @include vp( border-radius, 12px);
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -152,28 +163,34 @@
                            .option_list {
                             display: none;
                             position: absolute;
+                            @include vp( padding, 12px 55px 12px 20px); 
                             @include vp( top, 80px); 
+                            @include vp( left, 0px); 
                             @include vp( height, 200px); 
-                            left: 0px;
-                            border: 1px solid #EEE;
+                            overflow-y: auto;
+                            border: 1px solid #0000001F;
                             background-color: #fff;
                             @include vp( border-radius, 12px);
-                            overflow-y: auto;
+                            p {
+                                @include vp( padding, 12px 0px); 
+                                @include vp( line-height, 40px); 
+                                }
                             &.active {
                                 display: block;
-                                }
-                            li {
-                                border: none;
                                 }
                            }
                         }
                         &.text_box {
                             position: relative;
-                            @include vp( width, 536px);
                             input {
-                                background: none;
-                                border: none;
+                                @include vp( padding, 24px 30px);
+                                @include vp( border-radius, 16px);
+                                @include vp( width, 536px);
+                                border: 1px solid #0000001F;
                                 width: 100%;
+                                &:focus {
+                                    outline: 1px solid #000;
+                                }
                             }
                             .btn_delete {
                                 display: none;
@@ -190,9 +207,6 @@
                                 &.on {
                                     display: block;
                                 }
-                            }
-                            &.on {
-                                border: 1px solid #000;
                             }
                         }
                     }
@@ -277,76 +291,10 @@
                         -moz-border-radius: 5px;
                         border-radius: 8px;
                     }
-                    .checkbox01 {
-                        position:relative;
-                        display:inline-block;
-                        input[type="checkbox"] {
-                            position:absolute;
-                            top:0;
-                            left:0;
-                            border: none;
-                            opacity: 0;
-                        }
+                    .chk01 {
                         label {
-                            display: inline-flex;
-                            align-items: center;
-                            @include vp(padding-left, 84px);
-                            background:url("../images/btn/btn_check_off.png") no-repeat;
-                            @include vp(background-size, 44px auto);
-                            @include vp(min-height, 44px);
-                            @include vp(line-height, 44px);
                             @include vp( font-size, 30px); 
                             font-weight: 700;
-                        }
-                        input[type="checkbox"]:checked + label {
-                            background:url("../images/btn/btn_check_on.png")  no-repeat;
-                            @include vp(background-size, 44px auto);
-                        }
-                    }
-                    .switch_box {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        h4 {
-                            @include vp( font-size, 30px); 
-                            font-weight: 700;
-                        }
-                        .switch01 {
-                            position: relative;
-                            display: inline-block;
-                            @include vp(width, 104px); 
-                            @include vp(height, 64px); 
-                            
-                            .slider {
-                                position: absolute;
-                                top: 0px;
-                                left: 0px;
-                                right: 0px;
-                                bottom: 0px;
-                                cursor: pointer;
-                                background-color: #ddd;
-                                @include vp(border-radius, 200px); 
-                                transition: 0.4s;
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    @include vp(width, 48px); 
-                                    @include vp(height, 48px); 
-                                    border-radius: 50%;
-                                    background: #fff;
-                                    @include vp(left, 8px); 
-                                    @include vp(top, 8px); 
-                                    transition: 0.4s;
-                                }
-                            }
-                            input[type="checkbox"]:checked + .slider {
-                                background: #00A862;
-                            }
-                            input[type="checkbox"]:checked + .slider {
-                               &::before {
-                                @include vp(transform, translateX(20px)); 
-                               }
-                            }
                         }
                     }
                 }
@@ -420,11 +368,12 @@
                     margin-bottom: 0px;
                 }
                 .info_header {
-                    @include vp( margin-bottom, 14px); 
+                    @include vp( margin-bottom,32px); 
                     display: flex;
                     align-items: center;
                     .badge {
                         > span {
+                            display: inline-block;
                             @include vp( margin-right, 8px); 
                             @include vp( font-size, 22px); 
                             @include vp( padding, 8px 16px); 
@@ -447,7 +396,7 @@
                         }
                     }
                     .location {
-                        @include vp( margin-left, 16px); 
+                        @include vp( margin-left, 12px); 
                         @include vp( font-size, 24px); 
                     }
                 }
@@ -587,34 +536,20 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                div {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    button {
-                        @include vp( width, 330px);
-                        @include vp( height, 84px);
-                        @include vp( border-radius, 16px);
-                        @include vp( font-size, 30px);
-                        font-weight: 600;
-                        &.btn_type01 {
-                            @include vp( margin-right, 10px);
-                            background: #00A862;
-                            color: #fff;
-                        }
-                        &.btn_type02 {
-                            border: 1px solid #00A862;
-                            color: #00A862;
-                        }
+                button {
+                    @include vp( width, 330px);
+                    @include vp( height, 84px);
+                    @include vp( border-radius, 16px);
+                    @include vp( font-size, 30px);
+                    font-weight: 600;
+                    &:nth-child(1) {
+                        @include vp( margin-right, 10px);
                     }
                 }
             }
         }
         .comment_wrap {
             @include vp( margin, 0px 40px 160px); 
-            &.comment-detail {
-                @include vp( padding-top, 60px);
-            }
             .comment_header {
                 @include vp( padding-bottom, 24px); 
                 @include vp( margin-bottom, 48px); 
@@ -690,6 +625,7 @@
                         cursor: pointer;
                         span {
                             position: relative;
+                            display: inline-block;
                             @include vp( font-size, 24px);
                             color: #00000094;
                             &::before {
@@ -697,7 +633,7 @@
                                 position: absolute;
                                 left: 0px;
                                 right: 0px;
-                                @include vp( bottom, 1px);
+                                @include vp( bottom, 0px);
                                 background: #00000094;
                                 height: 1px;
                             }
@@ -718,7 +654,7 @@
                                 position: absolute;
                                 left: 0px;
                                 right: 0px;
-                                @include vp( bottom, 1px);
+                                @include vp( bottom, 0px);
                                 background: #00000094;
                                 height: 1px;
                             }
@@ -774,24 +710,27 @@
                             @include vp( padding-left, 34px); 
                             @include vp( font-size, 24px);
                             .comment_info {
-                                @include vp( margin-right, 8px); 
-                                &.user {
-                                    .name {
-                                        position: relative;
-                                        cursor: pointer;
-                                        &::before {
-                                            content: '';
-                                            position: absolute;
-                                            left: 0px;
-                                            right: 0px;
-                                            @include vp( bottom, 0px);
-                                            background: #000;
-                                            height: 1px;
+                                span {
+                                    display: inline-block;
+                                    @include vp( margin-right, 14px);
+                                    &.user {
+                                        .name {
+                                            position: relative;
+                                            cursor: pointer;
+                                            &::before {
+                                                content: '';
+                                                position: absolute;
+                                                left: 0px;
+                                                right: 0px;
+                                                @include vp( bottom, 0px);
+                                                background: #000;
+                                                height: 1px;
+                                            }
                                         }
                                     }
-                                }
-                                &.date, &.time {
-                                    color: #00000057;
+                                    &.date, &.time {
+                                        color: #888;
+                                    }
                                 }
                             }
                             .comment_edit {

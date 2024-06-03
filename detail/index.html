@@ -142,8 +142,14 @@
                     컴플레인 없었음. 매장 진열 식품에 대한 소비기한 경과 여부 점검하여 추가 이슈 없었음을 확인 함.
                 </div>
                 <div class="btn_wrap">
-                    <div><button class="btn_type01">수정</button></div>
-                    <div><button class="btn_type02">CASE 등록</button></div>
+                    <button class="cm_btn_round active">
+                        <span class="text">수정</span>
+                    </button>
+                    <button class="cm_btn_round on">
+                        <span class="text">CASE 등록</span>
+                    </button>
+                    <!-- <div><button class="btn_type01">수정</button></div>
+                    <div><button class="btn_type02">CASE 등록</button></div> -->
                 </div>
             </div>
 
@@ -167,9 +173,9 @@
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
                     </div>
                     <div class="btn_wrap">
-                        <div class="btn_recomment">
+                        <button class="btn_recomment">
                             <span>답글작성</span>
-                        </div>
+                        </button>
                         <div class="comment_edit">
                             <span class="btn_edit">
                                 <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
@@ -192,9 +198,11 @@
                                 천장마감 및 콘센트 원복 보수 진행
                             </div>
                             <div class="text02">
-                                <span class="user"><span class="name">고영민</span> · DM 운영 3팀</span>
-                                <span class="date">2024-05-08</span>
-                                <span class="time">12:45</span>
+                                <div class="comment_info">
+                                    <span class="user"><span class="name">고영민</span> · DM 운영 3팀</span>
+                                    <span class="date">2024-05-08</span>
+                                    <span class="time">12:45</span>
+                               </div>
                                 <div class="comment_edit">
                                     <span class="btn_edit">
                                         <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
@@ -216,13 +224,23 @@
                                 바닥공사 완료 > 천장마감 및 콘센트 원복 보수 진행
                             </div>
                             <div class="text02">
-                                <span class="user"><span class="name">민영희</span> · DM 운영 3팀</span>
-                                <span class="date">2024-05-10</span>
-                                <span class="time">16:05</span>
+                                <div class="comment_info">
+                                    <span class="user"><span class="name">민영희</span> · DM 운영 3팀</span>
+                                    <span class="date">2024-05-10</span>
+                                    <span class="time">16:05</span>
+                               </div>
                                 <div class="comment_edit">
-                                    <span class="btn_edit">수정</span>
-                                    <span class="btn_delete">삭제</span>
-                                </div>  
+                                    <span class="btn_edit">
+                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                            수정
+                                        </a>
+                                    </span>
+                                    <span class="btn_delete">
+                                        <a href="javascript:void(0)" data-target="commentDeletePop">
+                                            삭제
+                                        </a>
+                                    </span>
+                                </div>
                             </div>
                         </li>
                         <li>
@@ -237,10 +255,18 @@
                                     <span class="date">2024-05-11</span>
                                     <span class="time">09:38</span>
                                </div>
-                                <div class="comment_edit">
-                                    <span class="btn_edit">수정</span>
-                                    <span class="btn_delete">삭제</span>
-                                </div>  
+                               <div class="comment_edit">
+                                <span class="btn_edit">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                        수정
+                                    </a>
+                                </span>
+                                <span class="btn_delete">
+                                    <a href="javascript:void(0)" data-target="commentDeletePop">
+                                        삭제
+                                    </a>
+                                </span>
+                            </div>  
                             </div>
                         </li>
                     </ul>
@@ -248,7 +274,6 @@
                 <div class="comment_box">
                     <div class="info01">
                         <span class="user"><span class="name">정재형</span> · DM 운영 16팀</span>
-                        <button class="btn_recomment">답글작성</button>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -262,15 +287,14 @@
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
                     </div>
                     <div class="btn_wrap">
-                        <div class="btn_recomment">
+                        <button class="btn_recomment">
                             <span>답글작성</span>
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div class="comment_box">
                     <div class="info01">
                         <span class="user"><span class="name">김혜윤</span> · DM 운영 8팀</span>
-                        <button class="btn_recomment">답글작성</button>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -284,9 +308,9 @@
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
                     </div>
                     <div class="btn_wrap">
-                        <div class="btn_recomment">
+                        <button class="btn_recomment">
                             <span>답글작성</span>
-                        </div>
+                        </button>
                     </div>
                 </div> 
             </div>
@@ -323,8 +347,12 @@
             <div class="pop_cont01">
                 <p class="text">댓글을 삭제하시겠습니까?</p>
                 <div class="btn_bottom">
-                    <button class="btn-border">취소</button>
-                    <button class="btn-fill">확인</button>
+                    <button class="cm_btn_round on">
+                        <span class="text">취소</span>
+                    </button>
+                    <button class="cm_btn_round active">
+                        <span class="text">삭제</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -338,9 +366,15 @@
                         <div class="staff_info_contents">
                             <h3 class="name">최스벅</h3>
                             <div class="btn_contact">
-                                <div class="btn01"><span class="mail">메일</span></div>
-                                <div class="btn01"><span class="phone">전화</span></div>
-                                <div class="btn01"><span class="text">문자</span></div>
+                                <button class="cm_btn_round on">
+                                    <span class="mail">메일</span>
+                                </button>
+                                <button class="cm_btn_round on">
+                                    <span class="phone">전화</span>
+                                </button>
+                                <button class="cm_btn_round on">
+                                    <span class="txt">문자</span>
+                                </button>
                             </div>
                             <div class="staff_info">
                                 <dl>
@@ -371,8 +405,12 @@
                         <a href="javascript:;" class="btn_sheet_close"></a>
                         <div class="btn_comment_contents">
                             <div class="btn_box">
-                                <div><span class="btn_edit">메일</span></div>
-                                <div><span class="btn_delete">전화</span></div>
+                                <button class="cm_btn_round on">
+                                    <span class="btn_edit">수정</span>
+                                </button>
+                                <button class="cm_btn_round on">
+                                    <span class="btn_delete">삭제</span>
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -17,9 +17,9 @@ var reportUi = {
         _w = $( window );
         _report = $(".report");
         _detail = $(".detail");
-        _reportListBtn = _report.find("ul.form_list").find("li").not(".option_list > li");
-        _selectBtn = _report.find("ul.form_list").find(".select_option");
-        _selectItem = _report.find("ul.option_list").find("li");
+        _reportListBtn = _report.find(".form_list").find("li").not("li.text_box");
+        _selectBtn = _report.find(".form_list").find(".select_option");
+        _selectItem = _report.find(".option_list").find("p");
         _btnBookmark = _detail.find(".btn_bookmark");
     },
     addEvent: function(){
@@ -43,19 +43,29 @@ var reportUi = {
         var optionList = $(this).siblings(".option_list");
         var selectBox = $(this).parents(".select_box");
 
-        $(".option_list").not(optionList).removeClass("active");
         optionList.toggleClass("active");
         selectBox.addClass("on");
+
+        var currentText = $(this).text();
+
+        optionList.find("p").each(function() {
+            $(this).text() === currentText ?  $(this).hide() : $(this).show();
+        });
 
         _selectItem.on("click", reportUi.selectItemClick);
     },
     selectItemClick: function(){
-        var selectedText = $(this).text();
         var selectBox = $(this).closest(".select_box");
+        var selectedText = $(this).text();
+        var optionList = selectBox.find(".option_list");
         var selectOption = selectBox.find(".select_option");
 
         selectOption.text(selectedText);
         selectBox.find(".option_list").removeClass("active");
+
+        optionList.find("p").each(function() {
+            $(this).text() === selectedText ? $(this).show() : $(this).hide();
+        });
     },
     bookmarkBtnClick: function(){
         $(this).toggleClass("on");

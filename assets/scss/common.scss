@@ -155,21 +155,16 @@
                     @include vp(padding-top, 40px);
                     @include vp(padding-bottom, 60px);
 
-                    .btn01 {
+                    > button {
                         @include vp(padding, 24px 20px);
                         @include vp(width, 216px);
-                        @include vp(border-radius, 16px);
-                        border: 1px solid #00A862;
                         text-align: center;
                         cursor: pointer;
-
                         span {
                             @include vp(padding-left, 60px);
                             @include vp(font-size, 30px);
                             color: #00A862;
-                            ;
                             font-weight: 600;
-
                             &.mail {
                                 background: url("../images/icons/ico_mail.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
@@ -180,7 +175,7 @@
                                 @include vp(background-size, 40px auto);
                             }
 
-                            &.text {
+                            &.txt {
                                 background: url("../images/icons/ico_text.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
@@ -204,14 +199,14 @@
                 }
             }
             .btn_comment_contents {                
-                @include vp(padding, 52px 44px 90px );     
+                @include vp(padding, 52px 44px 105px );     
                 .btn_box {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
-                    > div {
-                        @include vp(padding, 24px 20px); 
+                    > button {
+                        @include vp(padding, 20px 0px); 
                         @include vp(width, 670px); 
                         @include vp(border-radius, 12px );  
                         border: 1px solid #00A862;
@@ -341,20 +336,10 @@
             button {
                 @include vp(width, 290px);
                 @include vp(height, 80px);
-                @include vp(border-radius, 12px);
                 @include vp(line-height, 40px);
-                @include vp(font-size, 28px);
                 text-align: center;
-                font-weight: 600;
-
-                &.btn-border {
-                    border: 1px solid #00A862;
-                    color: #00A862;
-                }
-
-                &.btn-fill {
-                    color: #fff;
-                    background: #00A862;
+                > span {
+                    @include vp(font-size, 28px);
                 }
             }
         }
