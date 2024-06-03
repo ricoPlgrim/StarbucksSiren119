@@ -319,7 +319,7 @@
 
                     </div>
                     <div class="accident_content">
-                        <ul class="common_card_list accident_list">
+                        <ul class="cm_card_list accident_list">
                             <li>
                                 <a href="../detail/index.html">
                                     <dl>
@@ -578,9 +578,13 @@
 
         </div>
 
-        <aside class="bottom_sheet">
+        <aside class="bottom_sheet filter">
+       
             <div class="sheet_wrap">
-                <div class="sheet_content">
+                <button class="btn_sheet_close">
+                    <img src="assets/images/btn/btn_clsoe_w.png" alt="레이어 닫기버튼">
+                </button>
+                <div class="sheet_content white">
                     <div class="sheet_top">
                         <a href="javascript:;" class="btn_sheet_close"></a>
                         <div class="date_contents">
@@ -626,8 +630,166 @@
                                 <li>
                                     <button type="button">DM</button>
                                 </li>
-                                <div class="bar"></div>
                             </ul>
+                            <div class="cm_line gd"></div>
+                            <div class="full_wrap">
+                                <ul class="buttons_list">
+                                    <li>
+                                        <button>파트너</button>
+                                    </li>
+                                    <li>
+                                        <button>고객</button>
+                                    </li>
+                                    <li>
+                                        <button>재해/시설</button>
+                                    </li>
+                                    <li>
+                                        <button>화재</button>
+                                    </li>
+                                    <li>
+                                        <button>이물</button>
+                                    </li>
+                                    <li>
+                                        <button>식품안전</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cm_line lg3"></div>
+                            <div class="bar"></div>
+                        </div>
+                        <div class="cm_tab_panel">
+                            <ul class="panel_list">
+                                <li class="active">
+                                    <div class="inner">
+                                        <ul class="checkbox_list">
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="entire">
+                                                        <input type="checkbox" name="check" id="entire" />전체
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="singular">
+                                                        <input type="checkbox" name="check" id="singular" />단수
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="break">
+                                                        <input type="checkbox" name="check" id="break" />파손/탈락
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="etc">
+                                                        <input type="checkbox" name="check" id="etc" />기타
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="waterleak">
+                                                        <input type="checkbox" name="check" id="waterleak" />누수
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="assembly">
+                                                        <input type="checkbox" name="check" id="assembly" />집회
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="flooding">
+                                                        <input type="checkbox" name="check" id="flooding" />침수
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="inspection">
+                                                        <input type="checkbox" name="check" id="inspection" />공사 및 점검
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="reflux">
+                                                        <input type="checkbox" name="check" id="reflux" />역류
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="system">
+                                                        <input type="checkbox" name="check" id="system" />시스템
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="cm_check_box">
+                                                    <label for="storefire">
+                                                        <input type="checkbox" name="check" id="storefire" />매장 외부 화재
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class=""></div>
+                        </div>
+                      
+                    </div>
+                    <div class="cm_tab_bottom">
+                        <div class="button_grop">
+                            <div class="inner">
+                                <button class="btn_refresh"><span class="blind">새로고침</span></button>
+                                <ul class="btn_list">
+                                    <li>
+                                        <button class="tag">긴급</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">사고유형</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">매장타입별</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">긴급</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">사고유형</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">매장타입별</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        <div class="button_grop bottom">
+                            <div class="inner">
+                                <button class="cm_btn_round on">
+                                    <span class="text">초기화</span>
+                                </button>
+                                <!--on클래스 추가시 border font 색상 변경-->
+                                <button class="cm_btn_round active">
+                                    <span class="text">적용</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

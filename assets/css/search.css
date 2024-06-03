@@ -267,6 +267,10 @@ input {
   line-height: normal;
 }
 
+button {
+  cursor: pointer;
+}
+
 /**
    * Address inconsistent `text-transform` inheritance for `button` and `select`.
    * All other form control elements do not inherit `text-transform` values.
@@ -643,7 +647,7 @@ body {
   src: local("Pretendard Thin"), url(../fonts/Pretendard/Pretendard-Thin.woff2) format("woff2"), url(../fonts/Pretendard/Pretendard-Thin.woff) format("woff");
 }
 /* 정리중 */
-/* 정리중 */
+/*폰트 사이즈*/
 #wrap.searh {
   overflow-x: hidden;
   overflow-y: auto;

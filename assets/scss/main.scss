@@ -2,7 +2,7 @@
 @import 'base/mixin';
 @import 'common';
 #wrap {
-    background: #f6f6f6;
+    background: #f6f6f6; 
 }
 
 .sections {
@@ -336,6 +336,7 @@
                 }
             }
         }
+
         &.disaster{
             .menu_btn-list{
                 &.left{
@@ -358,6 +359,7 @@
                 }
             }
         }
+
         &.different{
             .menu_btn-list{
                 &.left{
@@ -404,6 +406,7 @@
                 }
             }
         }
+
         &.fire{
             .menu_btn-list{
                 &.left{
@@ -432,6 +435,7 @@
                 }
             }
         }
+
         &.safety{
             .menu_btn-list{
          
@@ -453,6 +457,7 @@
         &.open{
             @include vp(min-height, 1400px);
         }
+
         .menu_view_list {
             display: none;
             position: absolute;
@@ -703,7 +708,7 @@
                     flex-wrap: nowrap;
                     flex-direction: row;
                     @include vp(gap, 8px);
-                    @include vp(height, 64px);
+                    @include vp(height, 64px); 
                     align-items: center;
                     overflow-x: scroll;
                     overflow-y: hidden;
@@ -753,6 +758,8 @@
         .accident_content {
             @include vp(margin-top, 20px);
         }
+
+        
     }
     &.home {}
 
@@ -760,6 +767,7 @@
         display: none; 
         &.on {
             display: block;
-        }
+        } 
     }
+
 }
