@@ -14,6 +14,7 @@
     <main id="wrap" class="guide">
         <section class="guide_box">
             <ul class="guide_list">
+                <!--폰트 정의-->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -49,7 +50,7 @@
                         </ul>
                     </div>
                 </li>
-
+                <!-- 색상 정의 -->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -107,7 +108,7 @@
                         </ul>
                     </div>
                 </li>
-
+                <!-- 버튼 정의 -->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -121,10 +122,15 @@
                         </div>
                     </div>
                     <div class="guide_bottom">
+                        <em>Filled buttons 40</em>
+                        <ul class="buttons_list">
+                            <li>
 
+                            </li>
+                        </ul>
                     </div>
                 </li>
-
+                <!--라디오 버튼 정의-->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -141,14 +147,14 @@
                         <div class="radio_group">
                             <ul class="radio_list">
                                 <li>
-                                    <label for="agree1" class="radio_box">
+                                    <label for="agree1" class="cm_radio_box">
                                         <input type="radio" id="agree1" name="agree1" value="동의" checked="checked" />
                                         <span class="cricle"></span>
                                         <!-- 동의 -->
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="agree2" class="radio_box">
+                                    <label for="agree2" class="cm_radio_box">
                                         <input type="radio" id="agree2" name="agree1" value="미동의" />
                                         <span class="cricle"></span>
                                         <!-- 미동의 -->
@@ -156,28 +162,58 @@
                                 </li>
                             </ul>
 
-                            <ul class="radio_list gray" style="margin-left: 30px;">
+                            <ul class="radio_list " style="margin-left: 30px;">
                                 <li>
-                                    <label for="agree3" class="radio_box">
+                                    <label for="agree3" class="cm_radio_box gray">
                                         <input type="radio" id="agree3" name="agree2" value="동의" checked="checked" />
                                         <span class="cricle"></span>
                                         <!-- 동의 -->
                                     </label>
                                 </li>
                                 <li>
-                                    <label for="agree4" class="radio_box">
+                                    <label for="agree4" class="cm_radio_box gray">
                                         <input type="radio" id="agree4" name="agree2" value="미동의" />
                                         <span class="cricle"></span>
                                         <!-- 미동의 -->
                                     </label>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
 
-
+                </li>
+                <!--체크박스 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Check Boxes</h3>
+                            <p>
+                                확인란을 사용하면 사용자는 세트에서 하나 이상의 항목을 선택할 수 있으며 옵션을 켜거나 끄는 데 사용할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <div class="checkbox_bottom">
+                            <div class="checkbox_group">
+                                <ul class="checkbox_list">
+                                    <li>
+                                        <div class="cm_check_box">
+                                            <label for="notread">
+                                                <input type="checkbox" name="check" id="notread" />읽지 않음
+                                            </label>
+                                        </div>
+                                    </li>
+                                   
+                                </ul>
+                                
+                            </div>
                         </div>
                     </div>
                 </li>
-
+                <!--스위츠 버튼 정의 -->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -193,22 +229,21 @@
                     <div class="guide_bottom">
                         <ul class="toggle_list">
                             <li style="margin-right:2vw;">
-                                <div class="toggle-container">
-                                    <input type="checkbox" id="toggle1" class="toggle-input">
-                                    <label for="toggle1" class="toggle-label"></label>
+                                <div class="cm_toggle_container">
+                                    <input type="checkbox" id="toggle1" class="toggle_input">
+                                    <label for="toggle1" class="toggle_label"></label>
                                 </div>
                             </li>
                             <li>
-                                <div class="toggle-container">
-                                    <input type="checkbox" id="toggle2" class="toggle-input" checked>
-                                    <label for="toggle2" class="toggle-label"></label>
+                                <div class="cm_toggle_container">
+                                    <input type="checkbox" id="toggle2" class="toggle_input" checked>
+                                    <label for="toggle2" class="toggle_label"></label>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </li>
-
-
+                <!--탭 형식-->
                 <li>
                     <div class="guide_top">
                         <div class="text_box">
@@ -217,7 +252,7 @@
                             </h2>
                             <h3>Tabs</h3>
                             <p>
-                                탭은 동일한 계층 구조 수준에서 관련 콘텐츠 그룹 간의 탐색을 
+                                탭은 동일한 계층 구조 수준에서 관련 콘텐츠 그룹 간의 탐색을
                                 구성하고 지원합니다.
                             </p>
                         </div>
@@ -242,8 +277,76 @@
                         </div>
                     </div>
                 </li>
+                <!--구분선 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Dividers</h3>
+                            <p>
+                                구분선은 목록과 레이아웃에서 콘텐츠를 그룹화하는 데 사용되는 얇은 선입니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <em>Horizontal</em>
+                        <ul class="guide_line_list row">
+                            <li>
+                                <div class="cm_line dk"></div>
+                            </li>
+                            <li>
+                                <div class="cm_line lg2"></div>
+                            </li>
+                            <li>
+                                <div class="cm_line lg3"></div>
+                            </li>
+                            <li>
+                                <div class="cm_line gd"></div>
+                            </li>
+                        </ul>
+                        <em>Vertical</em>
+                        <ul class="guide_line_list vertical">
+                            <li>
+                                <div class="cm_line vt dk"></div>
+                            </li>
+                            <li>
+                                <div class="cm_line vt lg2"></div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </li>
+                <!--헤더 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Top Bars</h3>
+                            <p>
+                                상단 바에는 백버튼, 페이지 제목, 작업 바로가기 등 정보와 작업이 화면 상단에 표시됩니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <header class="common" style="position:relative">
+                            <button class="btn_back"></button>
+                            <h1>보고작성</h1>
+                        </header>
+
+                        <header class="common" style="position:relative">
+                            <button class="btn_back"></button>
+                            <h1>보고상세</h1>
+                            <!-- 북마크 활성화 class="on" -->
+                            <button class="btn_bookmark"></button>
+                        </header>
 
 
+                    </div>
+                </li>
 
             </ul>
         </section>

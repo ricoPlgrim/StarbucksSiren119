@@ -27,7 +27,6 @@
 .guide .guide_box .guide_list > li .guide_top {
   width: 100%;
   height: 364px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-22.34%, #4E4E4E), color-stop(94.32%, #222));
   background: linear-gradient(180deg, #4E4E4E -22.34%, #222 94.32%);
   padding: 48px;
 }
@@ -116,11 +115,8 @@
   color: #000;
 }
 .guide .guide_box .guide_list > li .guide_bottom .color_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 22px;
 }
 @media screen and (max-width: 750px) {
@@ -164,121 +160,47 @@
     margin: 2.6666666667vw auto 0;
   }
 }
+.guide .guide_box .guide_list > li .guide_bottom .guide_line_list.row li {
+  margin-top: 36px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .guide_line_list.row li {
+    margin-top: 4.8vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .guide_line_list.row li:first-child {
+  margin-top: 0;
+}
+.guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical {
+  display: flex;
+  margin-top: 40px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical {
+    margin-top: 5.3333333333vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical li {
+  margin-left: 100px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical li {
+    margin-left: 13.3333333333vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .guide_line_list.vertical li:first-child {
+  margin-left: 0;
+}
 .guide .guide_box .guide_list > li:first-child {
   margin-top: 0;
 }
 
-/* font size 정의*/
-.cm-ft16 {
-  font-size: 32px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft16 {
-    font-size: 4.2666666667vw;
-  }
-}
-
-.cm-ft15 {
-  font-size: 30px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft15 {
-    font-size: 4vw;
-  }
-}
-
-.cm-ft14 {
-  font-size: 28px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft14 {
-    font-size: 3.7333333333vw;
-  }
-}
-
-.cm-ft13 {
-  font-size: 26px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft13 {
-    font-size: 3.4666666667vw;
-  }
-}
-
-.cm-ft12 {
-  font-size: 24px;
-}
-@media screen and (max-width: 750px) {
-  .cm-ft12 {
-    font-size: 3.2vw;
-  }
-}
-
-/*font weight 정의*/
-.cm-w4 {
-  font-weight: 400;
-}
-
-.cm-w6 {
-  font-weight: 600;
-}
-
 /*color 정의*/
-.cm-g {
-  background-color: #999;
-}
-
-.cm-b {
-  background-color: #000;
-}
-
-.cm-dk {
-  background-color: #333;
-}
-
-.cm-lg1 {
-  background-color: #AAA;
-}
-
-.cm-lg3 {
-  background-color: #EEE;
-}
-
-.cm-w {
-  background-color: #fff;
-}
-
-.cm-g {
-  background-color: #00A862;
-}
-
-.cm-bk58 {
-  background-color: rgba(0, 0, 0, 0.58);
-}
-
-.cm-g {
-  background-color: #999;
-}
-
-.cm-mg {
-  background-color: #BBB;
-}
-
-.cm-bk12 {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
 .radio_group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .radio_group .radio_list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 50%;
 }
@@ -290,200 +212,11 @@
     margin-left: 3.2vw;
   }
 }
-.radio_group .radio_list li .radio_box {
-  display: block;
-  position: relative;
-  padding-left: 44px;
-  height: 44px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box {
-    padding-left: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box {
-    height: 5.8666666667vw;
-  }
-}
-.radio_group .radio_list li .radio_box input[type=radio] {
-  display: none;
-}
-.radio_group .radio_list li .radio_box input[type=radio]:checked + .cricle:before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.radio_group .radio_list li .radio_box .cricle {
-  width: 44px;
-  height: 44px;
-  background: transparent;
-  border-radius: 50%;
-  border: 2px solid #00A862;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle {
-    width: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle {
-    height: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle {
-    border: 0.2666666667vw solid #00A862;
-  }
-}
-.radio_group .radio_list li .radio_box .cricle:before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #00A862;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.35s ease-in-out;
-  transition: -webkit-transform 0.35s ease-in-out;
-  transition: transform 0.35s ease-in-out;
-  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle:before {
-    top: 1.0666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle:before {
-    left: 1.0666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle:before {
-    width: 3.2vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list li .radio_box .cricle:before {
-    height: 3.2vw;
-  }
-}
 .radio_group .radio_list li:first-child {
   margin-left: 0;
 }
-.radio_group .radio_list.gray li .radio_box .cricle {
-  border: 2px solid #AAA;
-}
-@media screen and (max-width: 750px) {
-  .radio_group .radio_list.gray li .radio_box .cricle {
-    border: 0.2666666667vw solid #AAA;
-  }
-}
-.radio_group .radio_list.gray li .radio_box .cricle:before {
-  background-color: #AAA;
-}
 
 .toggle_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.toggle_list .toggle-container {
-  position: relative;
-  width: 104px;
-  height: 64px;
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-container {
-    width: 13.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-container {
-    height: 8.5333333333vw;
-  }
-}
-.toggle_list .toggle-input {
-  display: none;
-}
-.toggle_list .toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(29, 27, 32, 0.12);
-  border-radius: 200px;
-  cursor: pointer;
-  -webkit-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-label {
-    border-radius: 26.6666666667vw;
-  }
-}
-.toggle_list .toggle-label::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 48px;
-  height: 48px;
-  background-color: #fff;
-  border-radius: 50%;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-label::before {
-    top: 1.0666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-label::before {
-    left: 1.0666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-label::before {
-    width: 6.4vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-label::before {
-    height: 6.4vw;
-  }
-}
-.toggle_list .toggle-input:checked + .toggle-label {
-  background-color: #00A862;
-}
-.toggle_list .toggle-input:checked + .toggle-label::before {
-  -webkit-transform: translateX(42px);
-          transform: translateX(42px);
-}
-@media screen and (max-width: 750px) {
-  .toggle_list .toggle-input:checked + .toggle-label::before {
-    -webkit-transform: translateX(5.6vw);
-            transform: translateX(5.6vw);
-  }
+  align-items: center;
 }
