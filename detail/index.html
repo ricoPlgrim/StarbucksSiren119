@@ -77,13 +77,13 @@
                         <dl>
                             <dt>보고자</dt>
                             <dd class="border">
-                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">홍길동 파트너</a>
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">홍길동 파트너</a>
                             </dd>
                         </dl>
                         <dl>
                             <dt>DM</dt>
                             <dd class="border">
-                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">
                                     김스벅 ·<span> 운영10팀</span>
                                 </a>
                             </dd>
@@ -91,7 +91,7 @@
                         <dl>
                             <dt>팀장</dt>
                             <dd class="border">
-                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen()">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">
                                     최스벅 ·<span> 운영10팀</span>
                                 </a>
                             </dd>
@@ -172,7 +172,9 @@
                         </div>
                         <div class="comment_edit">
                             <span class="btn_edit">
-                                수정
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    수정
+                                </a>
                             </span>
                             <span class="btn_delete">
                                 <a href="javascript:void(0)" data-target="commentDeletePop">
@@ -194,7 +196,11 @@
                                 <span class="date">2024-05-08</span>
                                 <span class="time">12:45</span>
                                 <div class="comment_edit">
-                                    <span class="btn_edit">수정</span>
+                                    <span class="btn_edit">
+                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                            수정
+                                        </a>
+                                    </span>
                                     <span class="btn_delete">
                                         <a href="javascript:void(0)" data-target="commentDeletePop">
                                             삭제
@@ -358,20 +364,22 @@
         </aside>
 
         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
-        <!-- <aside class="bottom_sheet" id="commentBtnPop">
+        <aside class="bottom_sheet" id="commentBtnPop">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
                         <a href="javascript:;" class="btn_sheet_close"></a>
-                        <div class="btn_comment_box">
-                            <div class="btn_comment"><span class="btn_edit">메일</span></div>
-                            <div class="btn_comment"><span class="btn_delete">전화</span></div>
+                        <div class="btn_comment_contents">
+                            <div class="btn_box">
+                                <div><span class="btn_edit">메일</span></div>
+                                <div><span class="btn_delete">전화</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="dimd"></div>
-        </aside> -->
+        </aside>
 
         <!-- 하단 고정 댓글 버튼 -->
         <aside class="btn_comment">

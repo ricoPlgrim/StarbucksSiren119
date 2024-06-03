@@ -612,6 +612,9 @@
         }
         .comment_wrap {
             @include vp( margin, 0px 40px 160px); 
+            &.comment-detail {
+                @include vp( padding-top, 60px);
+            }
             .comment_header {
                 @include vp( padding-bottom, 24px); 
                 @include vp( margin-bottom, 48px); 
@@ -827,38 +830,40 @@
             box-shadow: 0 -1px 5px 0px #BBBBBB;
             .text_box {
                 position: relative;
-                @include vp(padding, 20px 70px 0px 28px);
+                @include vp(padding, 24px 10px 0px 28px);
                 @include vp(width, 526px);
                 @include vp(border-radius, 16px); 
                 border: 1px solid #DDD;
+                overflow-y: auto;
+                &::-webkit-scrollbar{width: 3px; height:3px;}
+                &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
                     &.on {
                     border: 1px solid #000;
                     color: #000;
                 }
                 textarea {
+                    @include vp(padding-right, 30px);
                     @include vp(width, 100%);
                     @include vp(min-height, 56px);
-                    @include vp(max-height, 80px);
+                    @include vp(max-height, 216px);
                     @include vp(line-height, 36px);
                     @include vp(font-size, 26px);
                     color: #797979;
-                    overflow-y: hidden;
                     outline: none;
                     resize: none;
                     border: none;
-                    &::-webkit-scrollbar{
-                        width: 0px;
-                    }
                 }
                 .byte_num {
                     display: none;
                     position: absolute; 
                     @include vp(left, 28px);
-                    @include vp(bottom, 24px);
+                    @include vp(height, 64px);
+                    @include vp(bottom, 0px);
                     @include vp(font-size, 26px);
                     color: #AAA;
                     &.on {
-                        display: block;
+                        display: flex;
+                        align-items: center;
                     }
                 }
                 .btn_delete {

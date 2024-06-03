@@ -7,6 +7,7 @@ var _gnbBtn;
 var _gnbCloseBtn;
 var _scrollTopButton;
 var _stickyTarget;
+var _textFormBtn;
 
 var switchBox = $(".header_switchbox");
 if (switchBox.length > 0) {
@@ -41,6 +42,8 @@ var commonUi = {
         _gnbCloseBtn = _gnb.find(".btn_close");
         _scrollTopButton = $(".scroll_top_box");
         _stickyTarget = $(".header_sticky ");
+        // 입렵폼 input, textarea
+        _textFormBtn = $(".text_box").find("input, textarea");
 
         _switchBox = $(".header_switchbox");
         if (switchBox.length > 0) {
@@ -58,7 +61,7 @@ var commonUi = {
         _endDateInput = $( ".bottom_sheet" ).find( "#enddate" );
 
         _typeBtns = $( ".type_contents" ).find( ".type_list" ).find( "li" );
-
+     
 
 
     },
@@ -70,13 +73,19 @@ var commonUi = {
         _gnbBtn.on("click", commonUi.gnbBtnClick);
         _gnbCloseBtn.on("click", commonUi.gnbCloseClick);
         _scrollTopButton.on("click", commonUi.scrollTopClick);
-        $(_bottomSheetDim).add(_bottomSheetClose).on("click", commonUi.bottomSheetHide);
+        // 하단 레이어 닫기 이벤트
+        _bottomSheetDim.add(_bottomSheetClose).on("click", function() {
+            var popupId = $(this).closest(".bottom_sheet").attr("id");
+            commonUi.bottomSheetHide(popupId);
+        });
         _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick);
 
         _startDateInput.on( "change",commonUi.startDateValue  );
         _endDateInput.on( "change",commonUi.endDateValue  );
 
         _typeBtns.on( "click", commonUi.typeBtnsClick );
+        // input, textarea 이벤트
+        _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
 
 
     },
@@ -124,17 +133,21 @@ var commonUi = {
         _gnb.css("display", "none");
     },
 
-    bottomSheetOpen: function () {
-        $(".bottom_sheet").addClass("open");
+    bottomSheetOpen: function (popupId) {
+        var layerName = "#" + popupId;
+        
+        $(layerName).addClass("open");
         setTimeout(function () {
             $(".sheet_wrap").addClass("open");
         }, 50);
     },
+    
+    bottomSheetHide: function (popupId) {
+        var layerName = "#" + popupId;
 
-    bottomSheetHide: function () {
         $(".sheet_wrap").removeClass("open");
         setTimeout(function () {
-            $(".bottom_sheet").removeClass("open");
+            $(layerName).removeClass("open");
         }, 100);
     },
 
@@ -165,8 +178,55 @@ var commonUi = {
                 x: offsetLeft,
                 ease: "expo.inOut"
             });
-    }
+    },
+    textFormClick: function() {
+        var This = $(this);
+        var textForm = This.parent();
+        var textArea = This.is("textarea");
+        var byteNum = textForm.find(".byte_num");
+        var scrollHeight = This[0].scrollHeight;
+        var byteHeight = byteNum.height();
+        var textFormHeight = textForm.height();
 
+        if (This.val().length < 1) {
+            textForm.find(".btn_delete").removeClass("on");
+            textForm.parent().find("button").removeClass("on");
+            if (textArea) {
+                textForm.removeClass("on");
+                byteNum.removeClass("on");
+                This.css("height", "auto");
+                textForm.css("padding-bottom", 0);
+                $("body").css("padding-bottom", 0);
+        
+            }
+        } else {
+            textForm.find(".btn_delete").addClass("on");
+            textForm.parent().find("button").addClass("on");
+            if (textArea) {
+                textForm.addClass("on");
+                byteNum.addClass("on");
+                This.css("height", scrollHeight + "px");
+                textForm.css("padding-bottom", byteHeight + "px");
+                $("body").css("padding-bottom", textFormHeight);
+            }
+        }
+      
+        function clearText(textValue) {
+            textValue.val("");
+            textValue.focus();
+            textValue.is("textarea") ? textValue.css("height", "auto") : '';
+        }
+
+        function deleteText() {
+            var parent = $(this).parent();
+            var textArea = parent.find("textarea");
+            var inputField = parent.find("input");
+
+            (textArea.length > 0 && clearText(textArea)) || (inputField.length > 0 && clearText(inputField));
+        }
+
+        $(".btn_delete").on("click", deleteText);
+    }    
 };
 
 

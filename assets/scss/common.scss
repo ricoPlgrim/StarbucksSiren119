@@ -210,20 +210,35 @@
                     }
                 }
             }
-            .btn_comment_box {
-                @include vp(padding, 40px 40px 56px );     
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                .btn_comment {
-                    @include vp(width, 750px );    
-                    @include vp(height, 568px );    
-                    @include vp(border-radius, 12px );  
-                    border: 1px solid #00A862;
-                    background: #fff;
-                    span {
-                        @include vp(font-size, 28px );   
-                        color: #00A862;
+            .btn_comment_contents {                
+                @include vp(padding, 52px 44px 90px );     
+                .btn_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    > div {
+                        @include vp(padding, 24px 20px); 
+                        @include vp(width, 670px); 
+                        @include vp(border-radius, 12px );  
+                        border: 1px solid #00A862;
+                        background: #fff;
+                        text-align: center;
+                        cursor: pointer;
+                        span {
+                            @include vp(padding-left, 60px); 
+                            @include vp(font-size, 28px );
+                            @include vp(line-height, 48px );
+                            color: #00A862;
+                            &.btn_edit {
+                                background: url("../images/icons/ico_edit.png") center left no-repeat;
+                                @include vp(background-size, 40px auto); 
+                              }
+                              &.btn_delete {
+                                background: url("../images/icons/ico_delete.png") center left no-repeat;
+                                @include vp(background-size, 40px auto); 
+                              }
+                        }
                     }
                 }
             }
@@ -304,6 +319,7 @@
         transform: translate(0, -50%);
         @include vp(border-radius, 40px); 
         background: #fff;
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
         &.toast {
             @include vp(padding, 40px 0px); 
         }

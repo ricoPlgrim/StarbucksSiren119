@@ -1929,46 +1929,81 @@ header.common .btn_bookmark.on {
     min-width: 19.4666666667vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-  padding: 40px 40px 56px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+  padding: 52px 44px 90px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+    padding: 6.9333333333vw 5.8666666667vw 12vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-  width: 750px;
-  height: 568px;
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+  padding: 24px 20px;
+  width: 670px;
   border-radius: 12px;
   border: 1px solid #00A862;
   background: #fff;
+  text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    width: 100vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+    padding: 3.2vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    height: 75.7333333333vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
+    width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div {
     border-radius: 1.6vw;
   }
 }
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+  padding-left: 60px;
   font-size: 28px;
+  line-height: 48px;
   color: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+    padding-left: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
     font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
+    line-height: 6.4vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+  background: url("../images/icons/ico_edit.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+  background: url("../images/icons/ico_delete.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
+    background-size: 5.3333333333vw auto;
   }
 }
 .bottom_sheet .sheet_wrap.open {
@@ -2069,6 +2104,7 @@ header.common .btn_bookmark.on {
   transform: translate(0, -50%);
   border-radius: 40px;
   background: #fff;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
 }
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 {
