@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 정리중 */
-/* 정리중 */
+/*폰트 사이즈*/
 .guide {
   background: #999;
 }
@@ -111,8 +111,30 @@
     padding: 5.3333333333vw;
   }
 }
-.guide .guide_box .guide_list > li .guide_bottom .text_list li p {
+.guide .guide_box .guide_list > li .guide_bottom .text_list li:nth-child(1) p {
+  font-size: 32px;
   color: #000;
+  font-weight: 400;
+}
+.guide .guide_box .guide_list > li .guide_bottom .text_list li:nth-child(2) p {
+  font-size: 30px;
+  color: #000;
+  font-weight: 400;
+}
+.guide .guide_box .guide_list > li .guide_bottom .text_list li:nth-child(3) p {
+  font-size: 28px;
+  color: #000;
+  font-weight: 400;
+}
+.guide .guide_box .guide_list > li .guide_bottom .text_list li:nth-child(4) p {
+  font-size: 26px;
+  color: #000;
+  font-weight: 400;
+}
+.guide .guide_box .guide_list > li .guide_bottom .text_list li:nth-child(5) p {
+  font-size: 24px;
+  color: #000;
+  font-weight: 400;
 }
 .guide .guide_box .guide_list > li .guide_bottom .color_list {
   display: flex;

@@ -60,9 +60,16 @@
                     @include vp(padding, 40px);
 
                     .text_list {
+                        $font-sizes: ($f16, $f15, $f14, $f13, $f12);
                         li {
-                            p {
-                                color: $black;
+                            @each $size in $font-sizes {
+                                &:nth-child(#{index($font-sizes, $size)}) {
+                                    p {
+                                        font-size: $size;
+                                        color: $black;
+                                        font-weight: $fw4;
+                                    }
+                                }
                             }
                         }
                     }
