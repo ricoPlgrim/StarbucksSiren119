@@ -17,7 +17,7 @@ var reportUi = {
         _w = $( window );
         _report = $(".report");
         _detail = $(".detail");
-        _reportListBtn = _report.find(".form_list").find("li").not("li.text_box");
+        _reportListBtn = _report.find(".form_list").find("li").not("li.text_box, li.select_box");
         _selectBtn = _report.find(".form_list").find(".select_option");
         _selectItem = _report.find(".option_list").find("p");
         _btnBookmark = _detail.find(".btn_bookmark");
@@ -42,11 +42,10 @@ var reportUi = {
     selectBtnClick: function(){
         var optionList = $(this).siblings(".option_list");
         var selectBox = $(this).parents(".select_box");
+        var currentText = $(this).text();
 
         optionList.toggleClass("active");
         selectBox.addClass("on");
-
-        var currentText = $(this).text();
 
         optionList.find("p").each(function() {
             $(this).text() === currentText ?  $(this).hide() : $(this).show();
