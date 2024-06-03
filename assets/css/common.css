@@ -2255,7 +2255,7 @@ header.common .btn_bookmark.on {
 .cm_card_list > li a dl dt .badge.emergency {
   background: #FFF6F6;
   border: 2px solid #FF7F7F;
-  color: #F00;
+  color: #FF0000;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dt .badge.emergency {
@@ -2264,7 +2264,7 @@ header.common .btn_bookmark.on {
 }
 .cm_card_list > li a dl dt .badge.common {
   border: 2px solid #999;
-  background: #eee;
+  background: #EEE;
   color: #333;
 }
 @media screen and (max-width: 750px) {

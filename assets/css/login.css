@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 정리중 */
-/* 정리중 */
+/*폰트 사이즈*/
 #wrap.login section {
   padding: 140px 40px;
   display: flex;
@@ -40,7 +40,7 @@
   height: 100px;
   border-radius: 12px;
   text-indent: 28px;
-  border: 1px solid #AAAAAA;
+  border: 1px solid #AAA;
   background: #fff;
   font-size: 26px;
 }
@@ -157,7 +157,7 @@
   }
 }
 #wrap.login section .login_wrap .login_btn button:first-child {
-  background: #AAAAAA;
+  background: #AAA;
   color: #fff;
 }
 #wrap.login section .login_wrap .login_btn button:first-child.on {

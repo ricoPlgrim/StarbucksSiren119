@@ -27,12 +27,12 @@
                             @include vp( height, 100px);
                             @include vp( border-radius, 12px);
                             @include vp( text-indent, 28px);
-                            border: 1px solid #AAAAAA;
-                            background: #fff;
-                            @include vp(font-size, 26px);
+                            border: 1px solid $light-gray-1;
+                            background: $white;
+                            @include vp(font-size, $f13);
                             &:focus {
-                                outline: 1px solid #000;
-                                font-weight: 600;
+                                outline: 1px solid $black;
+                                font-weight: $fw6;
                             }
                         }
                         .btn_delete {
@@ -65,14 +65,14 @@
                     button {
                         @include vp( width, 670px);
                         @include vp( height, 100px);
-                        @include vp( font-size, 32px);
+                        @include vp( font-size, $f16);
                         font-weight: 700;
                         @include vp( border-radius, 12px);
                         &:first-child {
-                            background: #AAAAAA;
-                            color: #fff;
+                            background: $light-gray-1;
+                            color: $white;
                             &.on {
-                                background: #00A862;
+                                background: $green;
                             }
                         }
                         &:last-child {

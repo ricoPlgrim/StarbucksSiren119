@@ -2,13 +2,7 @@
 /* 정리중 */
 /*폰트 사이즈*/
 #wrap.report {
-  font-size: 32px;
   padding-top: 112px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.report {
-    font-size: 4.2666666667vw;
-  }
 }
 @media screen and (max-width: 750px) {
   #wrap.report {
@@ -134,6 +128,10 @@
 #wrap.report .create_form .file_upload_wrap .file_list {
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
+}
+#wrap.report .create_form .file_upload_wrap .file_list::-webkit-scrollbar {
+  display: none;
 }
 #wrap.report .create_form .file_upload_wrap .file_list li {
   position: relative;
@@ -148,7 +146,7 @@
   display: block;
   width: 210px;
   height: 210px;
-  background: #eee url("../images/icons/ico_fileupload.png") no-repeat center;
+  background: #EEE url("../images/icons/ico_fileupload.png") no-repeat center;
   background-size: 48px auto;
   border-radius: 6px;
 }
@@ -521,7 +519,7 @@
 }
 #wrap.report .write_preview .preview_header h3 span {
   padding-left: 20px;
-  color: rgba(0, 0, 0, 0.56);
+  color: rgba(0, 0, 0, 0.5607843137);
   font-size: 22px;
 }
 @media screen and (max-width: 750px) {
@@ -551,7 +549,7 @@
 #wrap.report .write_preview .preview_list li {
   padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #DDD;
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li {
@@ -677,6 +675,14 @@
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li .chk01 label {
     font-size: 4vw;
+  }
+}
+#wrap.report .write_preview .preview_list li .chk01 label input {
+  padding-right: 20px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.report .write_preview .preview_list li .chk01 label input {
+    padding-right: 2.6666666667vw;
   }
 }
 #wrap.report .btn_report {
@@ -834,12 +840,12 @@
   border: 1px solid #00A862;
 }
 #wrap.detail .detail_wrap .detail_box .info_header .badge > span.urgency {
-  color: #F00;
+  color: #FF0000;
   background: #FFF6F6;
   border: 1px solid #FF7A7A;
 }
 #wrap.detail .detail_wrap .detail_box .info_header .badge > span.general {
-  color: #333333;
+  color: #333;
   background: #EEE;
   border: 1px solid #DDD;
 }
@@ -961,7 +967,7 @@
   font-size: 22px;
   border-radius: 12px;
   color: #00A862;
-  background: rgba(0, 168, 98, 0.14);
+  background: rgba(0, 168, 98, 0.1411764706);
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .detail_wrap .detail_box .detail_info .tag_box span {
@@ -1677,7 +1683,7 @@
   bottom: 0px;
   padding: 20px 40px 60px;
   background: #fff;
-  box-shadow: 0 -1px 5px 0px #BBBBBB;
+  box-shadow: 0 -1px 5px 0px #BBB;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment {
@@ -1837,8 +1843,8 @@
   height: 80px;
   border-radius: 12px;
   font-size: 26px;
-  color: rgba(255, 255, 255, 0.58);
-  background: #AAAAAA;
+  color: rgba(255, 255, 255, 0.5803921569);
+  background: #AAA;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment button {
@@ -1872,7 +1878,7 @@
 }
 #wrap.detail .btn_comment button.on {
   background: #00A862;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 #wrap.detail .layer_popup .detail_pop_visual {
   position: relative;
