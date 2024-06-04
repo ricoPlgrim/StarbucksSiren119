@@ -180,8 +180,8 @@ header {
         }
     }
     &.setting{
-        justify-content: flex-end;
         .btn_close {
+            margin-left:auto;
             background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
             @include vp(background-size, 96px auto);
             @include vp(padding, 48px 50px);
@@ -189,13 +189,16 @@ header {
         // @include vp(border-bottom, 2px solid $light-gray-2 );
     }
     &.push{
-        justify-content: space-between;
         .btn_setting{
+            margin-left:auto;
             background: url("../images/btn/btn_setting.png") center center no-repeat;
             @include vp(background-size, 96px auto);
             @include vp(padding, 48px 50px);
         }
         // @include vp(border-bottom, 2px solid $light-gray-2 );
+    }
+    &.filter{
+        
     }
 }
 

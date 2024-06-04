@@ -5,7 +5,6 @@ var _menuBtnlist;
 var _main;
 var _switchBoxBtns;
 var _btnBookmark;
-var _btnFilter;
 
 var mainUi = {
 
@@ -18,7 +17,7 @@ var mainUi = {
         _menuBtnlist = _main.find(".menu_btn-list").find("li");
         _switchBoxBtns = _main.find(".switch_round > a");
         _btnBookmark = _main.find(".btn_bookmark");
-        _btnFilter = _main.find( ".btn_filter" );
+
     },
     addEvent: function () {
         mainUi.resizeEvent(null);
@@ -26,7 +25,6 @@ var mainUi = {
         _menuBtnlist.on("click", mainUi.menuBtnListClick);
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
         _btnBookmark.on("click", mainUi.btnBookMarkClick);
-        _btnFilter.on( "click", mainUi.btnFilterClcik );
 
     },
     loadEvent: function () {
@@ -74,10 +72,7 @@ var mainUi = {
         $(this).toggleClass("on");
     },
 
-    btnFilterClcik: function(){
-        console.log( "111" );
-        commonUi.bottomSheetOpen();
-    }
+ 
     
 };
 

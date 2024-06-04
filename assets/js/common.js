@@ -172,6 +172,7 @@ var commonUi = {
     },
 
     typeBtnsClick : function(){
+        var index = $( this ).index();
         $( this ).addClass( "on" ).siblings().removeClass( "on" );
         var bars = $( ".cm_tab_contents" ).find( ".bar" );
         var offsetLeft = $(this).position().left;
@@ -181,6 +182,11 @@ var commonUi = {
                 x: offsetLeft,
                 ease: "expo.inOut"
             });
+
+        var  tabPanelTarget = $( ".cm_tab_panel" ).find( "li" );
+        tabPanelTarget.removeClass( "on" )
+        tabPanelTarget.eq(index).addClass( "on" )
+
     },
     textFormClick: function() {
         var This = $(this);
