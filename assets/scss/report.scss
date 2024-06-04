@@ -554,6 +554,45 @@
         }
         .comment_wrap {
             @include vp( margin, 0px 40px 160px); 
+            &.comment-detail {
+                @include vp( padding-top, 60px); 
+                .reply_box {
+                    .text01 {
+                        position: relative;
+                        @include vp( margin-bottom, 40px); 
+                        @include vp( font-size, $f13);
+                        @include vp( line-height, 40px);
+                        color: #00000094;
+                    }
+                    .text02 {
+                        display: flex;
+                        align-items: center;
+                        @include vp( font-size, $f12);
+                        span {
+                            display: inline-block;
+                            @include vp( margin-right, 14px);
+                            &.user {
+                                .name {
+                                    position: relative;
+                                    cursor: pointer;
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        left: 0px;
+                                        right: 0px;
+                                        @include vp( bottom, 1px);
+                                        background: $black;
+                                        height: 1px;
+                                    }
+                                }
+                            }
+                            &.date, &.time {
+                                color: #00000057;
+                            }
+                        }
+                    }
+                }
+            }
             .comment_header {
                 @include vp( padding-bottom, 24px); 
                 @include vp( margin-bottom, 48px); 

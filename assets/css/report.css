@@ -1237,6 +1237,76 @@
     margin: 0vw 5.3333333333vw 21.3333333333vw;
   }
 }
+#wrap.detail .comment_wrap.comment-detail {
+  padding-top: 60px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail {
+    padding-top: 8vw;
+  }
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text01 {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 26px;
+  line-height: 40px;
+  color: rgba(0, 0, 0, 0.5803921569);
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text01 {
+    margin-bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text01 {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text01 {
+    line-height: 5.3333333333vw;
+  }
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text02 {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text02 {
+    font-size: 3.2vw;
+  }
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text02 span {
+  display: inline-block;
+  margin-right: 14px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text02 span {
+    margin-right: 1.8666666667vw;
+  }
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name {
+  position: relative;
+  cursor: pointer;
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 1px;
+  background: #000;
+  height: 1px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name::before {
+    bottom: 0.1333333333vw;
+  }
+}
+#wrap.detail .comment_wrap.comment-detail .reply_box .text02 span.date, #wrap.detail .comment_wrap.comment-detail .reply_box .text02 span.time {
+  color: rgba(0, 0, 0, 0.3411764706);
+}
 #wrap.detail .comment_wrap .comment_header {
   padding-bottom: 24px;
   margin-bottom: 48px;
