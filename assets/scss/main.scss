@@ -49,6 +49,8 @@
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
                 @include vp(border-radius, 40px);
                 background: #fff;
+                transition: top 0.35s ease-in-out;
+                // transition: top .5s;
                 &:nth-child(2){
                     @include vp(top, 348px );
                 }
@@ -103,7 +105,7 @@
                             @include vp(background-size, 32px auto);
                         }
                         .inner{
-                            @include vp(padding, 60px 60px 92px);
+                            @include vp(padding, 60px);
                             @include vp(min-width, 670px);
                       
                             .title_box{
@@ -139,8 +141,6 @@
                                 }
                             }
                             .scroll_box{
-                                @include vp(max-height, 172px);
-                                overflow: auto;
                                 .type_list{
                                     display: flex;
                                     flex-wrap: wrap;
@@ -314,24 +314,24 @@
                     z-index: 30;
                     .parther{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 324px);
                     }
                     .disaster{
-                        @include vp(top, 408px);
+                        @include vp(top, 347px);
                     }
                     .different{
-                        @include vp(top, 751px);
+                        @include vp(top, 693px);
                     }
                 }
                 &.right{
                     .customer{
-                        @include vp(top, 408px);
+                        @include vp(top, 347px);
                     }
                     .fire{
-                        @include vp(top, 751px);
+                        @include vp(top, 693px);
                     }
                     .safety{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1039px);
                     }
                 }
             }
@@ -343,18 +343,18 @@
                     z-index: 30;
                     .disaster{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 516px);
                     }
                     .different{
-                        @include vp(top, 751px);
+                        @include vp(top, 886px);
                     }
                 }
                 &.right{
                     .fire{
-                        @include vp(top, 751px);
+                        @include vp(top, 886px);
                     }
                     .safety{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1222px);
                     }
                 }
             }
@@ -366,12 +366,12 @@
                     z-index: 30;
                     .different{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 336px);
                     }
                 }
                 &.right{
                     .safety{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1052px);
                     }
                 }
             }
@@ -381,14 +381,14 @@
             .menu_btn-list{
                 &.left{
                     .parther{
-                        @include vp(top, 408px);
+                        @include vp(top, 416px);
                        
                     }
                     .disaster{
-                        @include vp(top, 751px);
+                        @include vp(top, 764px);
                     }
                     .different{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1100px);
                     }
                 }
                 &.right{
@@ -398,10 +398,10 @@
                         @include vp(left, -345px);
                     }
                     .fire{
-                        @include vp(top, 408px);
+                        @include vp(top, 416px);
                     }
                     .safety{
-                        @include vp(top, 751px);
+                        @include vp(top, 764px);
                     }
                 }
             }
@@ -414,10 +414,10 @@
                        
                     }
                     .disaster{
-                        @include vp(top, 751px);
+                        @include vp(top, 766px);
                     }
                     .different{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1112px);
                     }
                 }
                 &.right{
@@ -426,7 +426,7 @@
                     }
                     .fire{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 396px);
                         @include vp(left, -345px);
                     }
                     .safety{
@@ -441,7 +441,7 @@
          
                 &.left{
                     .different{
-                        @include vp(top, 1096px);
+                        @include vp(top, 1100px);
                     }
                 }
                 &.right{
@@ -455,7 +455,7 @@
         }
 
         &.open{
-            @include vp(min-height, 1400px);
+            @include vp(min-height, 1530px);
         }
 
         .menu_view_list {
@@ -530,38 +530,18 @@
                     }
 
                     .scroll_box {
-                        @include vp(max-height, 207px);
-                        overflow-y: auto;
-
-                        &::-webkit-scrollbar {
-                            @include vp(max-height, 5px);
-                            @include vp(width, 8px);
-                        }
-
-                        &::-webkit-scrollbar-thumb {
-                            background: rgb(103, 103, 103);
-                            @include vp(border-radius, 10px);
-                        }
-
-                        &::-webkit-scrollbar-track {
-                            background: transparent;
-                            // background: rgba(220, 20, 60, .1); 
-                        }
-
                         .type_list {
                             display: flex;
                             flex-wrap: wrap;
 
                             li {
                                 flex: 0 0 33.3333%;
-                                // @include vp(width, 130px); 
-                                // @include vp(margin-right, 70px); 
                                 @include vp(margin-bottom, 38px);
                                 @include vp(font-size, 26px);
                                 word-break: keep-all;
 
                                 a {
-                                    display: block;
+                                    display: block; 
                                     text-align: left;
                                     color: $black;
                                     font-weight: 400;
@@ -721,13 +701,13 @@
                             @include vp(font-size, 24px);
                             @include vp(padding, 20px 60px 20px 20px);
                             @include vp(height, 64px);
-                            font-weight: 500;
-                            color: $white;
+                            font-weight: $fw5;
+                            color: $green;
                             @include vp(letter-spacing, .1px);
                             text-align: center;
-                            @include vp(border-radius, 6px);
-                            @include vp(border, 1px solid $green);
-                            background-color: $green;
+                            @include vp(border-radius, 12px);
+                            @include vp(border, 2px solid $green);
+                            background-color: transparent;
                         }
                         .btn_close{
                             display: block;
@@ -736,7 +716,7 @@
                             @include vp(right, 20px);
                             @include vp(width, 28px);
                             @include vp(height, 28px);
-                            background: url("../images/btn/btn_close_w.png") 0 0 no-repeat;
+                            background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
                             @include vp(background-size, 28px auto);
                             z-index: 10;
                         }

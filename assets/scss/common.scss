@@ -797,7 +797,6 @@
             }
         }
     }
-
     .bar {
         position: absolute;
         left: 0;
@@ -805,6 +804,16 @@
         @include vp(width, 188px);
         @include vp(height, 6px);
         background: $green;
+    }
+}
+.cm_tab_panel_contents{
+    @include vp(min-height, 350px);
+    li{
+        display: none;
+        @include vp(padding, 60px);
+        @include vp(font-size, 50px);
+        color: $black;
+        &.on{ display: block;}
     }
 }
 

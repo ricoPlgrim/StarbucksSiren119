@@ -977,10 +977,8 @@ header.common .btn_bookmark.on {
     padding: 7.2vw 6.6666666667vw;
   }
 }
-header.setting {
-  justify-content: flex-end;
-}
 header.setting .btn_close {
+  margin-left: auto;
   background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
   background-size: 96px auto;
   padding: 48px 50px;
@@ -995,10 +993,8 @@ header.setting .btn_close {
     padding: 6.4vw 6.6666666667vw;
   }
 }
-header.push {
-  justify-content: space-between;
-}
 header.push .btn_setting {
+  margin-left: auto;
   background: url("../images/btn/btn_setting.png") center center no-repeat;
   background-size: 96px auto;
   padding: 48px 50px;
@@ -1013,7 +1009,6 @@ header.push .btn_setting {
     padding: 6.4vw 6.6666666667vw;
   }
 }
-
 /*gnb*/
 .gnb {
   display: none;
@@ -2922,6 +2917,34 @@ header.push .btn_setting {
   .cm_tab_contents .bar {
     height: 0.8vw;
   }
+}
+
+.cm_tab_panel_contents {
+  min-height: 350px;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_panel_contents {
+    min-height: 46.6666666667vw;
+  }
+}
+.cm_tab_panel_contents li {
+  display: none;
+  padding: 60px;
+  font-size: 50px;
+  color: #000;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_panel_contents li {
+    padding: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_panel_contents li {
+    font-size: 6.6666666667vw;
+  }
+}
+.cm_tab_panel_contents li.on {
+  display: block;
 }
 
 .cm_tab_panel .panel_list li {
