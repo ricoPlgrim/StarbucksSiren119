@@ -1,0 +1,111 @@
+@import 'base/variables';
+@import 'base/mixin'; 
+
+
+#wrap{
+    &.setting{
+        .cm_type_list{
+            position: relative;
+            &:after{ 
+                content: ''; 
+                position: absolute;
+                @include vp(bottom, -12px); 
+                left:0;
+                width: 100%;
+                @include vp(height, 12px); 
+                background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+            }
+        }
+
+        .cm_tab_panel{
+            .no_alerts{
+                display: none;
+                @include vp(padding-top, 278px); 
+                color: $black;
+                text-align: center;
+                font-size: $f15;
+                font-weight: $fw4;
+            }
+            .status_message_box{
+                display: none;
+                @include vp(padding-top, 266px); 
+                .alert_message{
+                    position: relative;
+                    color: $black;
+                    @include vp(font-size, $f15); 
+                    font-weight: $fw4;
+                    text-align: center;
+                    &:before{
+                        display: block;
+                        content: '';
+                        @include vp(width, 80px); 
+                        @include vp(height, 80px); 
+                        background: url("../images/icons/icon_alert_off_b.png") 0 0 no-repeat;
+                        @include vp(background-size, 80px auto); 
+                        @include vp(margin, 0 auto 40px ); 
+                    }
+                }
+                .btn_alarm_link{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color:$black-58;
+                    text-align: center;
+                    @include vp(font-size, $f16); 
+                    @include vp(width, 328px); 
+                    @include vp(height, 100px); 
+                    font-weight: $fw7;
+                    @include vp(letter-spacing, 0.2px); 
+                    @include vp(margin, 80px auto 0); 
+                    @include vp(border-radius, 12px); 
+                    @include vp(border, 2px solid  $black-12); 
+                    
+                }
+            }
+            &.list{
+                background: $light-gray-4;
+            }
+        }
+
+        .alarm_list_box{
+            .inner{
+                @include vp(padding, 48px 40px); 
+                .alarm_list{
+                    @include vp(margin-top, 40px); 
+                    >li{
+                        @include vp(margin-top, 60px); 
+                        dl{
+                            dt{
+                                color: $black;
+                                font-weight: $fw6;
+                                @include vp(font-size, $f15); 
+                            }
+                            dd{
+                                .cm_card_list{
+                                    >li{
+                                        a{
+                                            dl{
+                                                dd{
+                                                    span{
+                                                        &:last-child{ @include vp(width, 465px)}
+                                                    }
+                                                    &.last{
+                                                        @include vp(font-size, $f15); 
+                                                        span{
+                                                            &:last-child{ width: auto;}
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:first-child{ margin-top:0; }
+                    }
+                }
+            }
+        }
+    }
+}

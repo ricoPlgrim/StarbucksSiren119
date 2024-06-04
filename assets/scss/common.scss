@@ -25,6 +25,7 @@
         @include vp(max-width, 750px);
         transform: translateX(-50%);
         min-height: 200px;
+        width: 100%;
         position: fixed;
         z-index: 300;
         border-radius: 15px;
@@ -198,6 +199,58 @@
                     }
                 }
             }
+
+
+            .record_info_contents {
+                @include vp(padding, 60px);
+             
+                .btn_group{
+                    display: flex;
+                    flex-direction: column;
+                    .icon{ 
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        color:$black-87;
+                        @include vp(font-size, $f14);
+                        font-weight: $fw4;
+                        @include vp(line-height, 22px);
+                        @include vp(margin-top, 38px);
+                      
+                        &:before{
+                            display: block;
+                            content: '';
+                            @include vp(width, 40px);  
+                            @include vp(height, 40px);  
+                            @include vp(margin-right, 40px);
+                        }
+                        &.setting{
+                            &:before{
+                                background: url('../images/icons/icon_setting.png') 0 0 no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+                         
+                        }
+                        &.situation{
+                            &:before{
+                                background: url('../images/icons/icon_mark_read.png') 0 0 no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+                            }
+                         
+                        &.delete{
+                            &:before{
+                                background: url('../images/icons/icon_delete.png') 0 0 no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+                        }
+                        &:first-child{ margin-top:0;}
+                    }
+                }
+             
+            } 
+
+
             .btn_comment_contents {                
                 @include vp(padding, 52px 44px 105px );     
                 .btn_box {
@@ -296,7 +349,7 @@
 
         }
     }
-
+    
     &.filter{
         .sheet_wrap{
             .btn_sheet_close{ 
@@ -312,7 +365,11 @@
     }
 }
 
-
+#record{
+    .sheet_wrap{
+        @include vp(min-height, 170px);
+    }
+}
 .scroll_top_box {
     display: none;
     position: fixed;
@@ -441,6 +498,7 @@
                     @include vp(line-height, 28px);
 
                     .badge {
+                        position: relative;
                         @include vp(padding, 8px 16px);
                         @include vp(border-radius, 12px);
                         @include vp(border, 2px solid $green);
@@ -448,7 +506,7 @@
                         @include vp(margin-left, 8px);
                         background: #EBFFF7;
                         font-weight: $fw4;
-
+                        line-height: 1;
                         &.complete {
                             color: $green;
                         }
@@ -464,10 +522,28 @@
                             background: $light-gray-3;
                             color: $dark-gray;
                         }
+                        &.comment{
+                            @include vp(border, 2px solid $blue);
+                            background: $light-blue;
+                            color: $blue;
+                        }
 
                         &:first-child {
                             margin-left: 0;
                         }
+                        &.bullet{
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                top:0;
+                                @include vp(right, -15px);
+                                @include vp(width, 8px);
+                                @include vp(height, 8px);
+                                background: $green;
+                                border-radius: 50%;
+                            }
+                        }
+                    
                     }
 
                     p {
@@ -514,6 +590,7 @@
                     }
 
                     &.last {
+                        @include vp(padding-top, 20px);
                         span {
                             color: $dark-gray;
                             @include vp(font-size, $f12);

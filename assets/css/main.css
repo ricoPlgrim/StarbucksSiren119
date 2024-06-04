@@ -982,7 +982,6 @@ header.common .btn_bookmark.on {
 }
 header.setting {
   justify-content: flex-end;
-  border-bottom: 2px solid #DDD;
 }
 header.setting .btn_close {
   background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
@@ -999,9 +998,22 @@ header.setting .btn_close {
     padding: 6.4vw 6.6666666667vw;
   }
 }
+header.push {
+  justify-content: space-between;
+}
+header.push .btn_setting {
+  background: url("../images/btn/btn_setting.png") center center no-repeat;
+  background-size: 96px auto;
+  padding: 48px 50px;
+}
 @media screen and (max-width: 750px) {
-  header.setting {
-    border-bottom: 0.2666666667vw solid #DDD;
+  header.push .btn_setting {
+    background-size: 12.8vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.push .btn_setting {
+    padding: 6.4vw 6.6666666667vw;
   }
 }
 
@@ -2251,6 +2263,7 @@ header.setting .btn_close {
   }
 }
 .cm_card_list > li a dl dt .badge {
+  position: relative;
   padding: 8px 16px;
   border-radius: 12px;
   border: 2px solid #00A862;
@@ -2307,8 +2320,43 @@ header.setting .btn_close {
     border: 0.2666666667vw solid #999;
   }
 }
+.cm_card_list > li a dl dt .badge.comment {
+  border: 2px solid #0094FF;
+  background: #F1F9FF;
+  color: #333;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.comment {
+    border: 0.2666666667vw solid #0094FF;
+  }
+}
 .cm_card_list > li a dl dt .badge:first-child {
   margin-left: 0;
+}
+.cm_card_list > li a dl dt .badge.bullet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 8px;
+  height: 8px;
+  background: #00A862;
+  border-radius: 50%;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    right: -2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    width: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    height: 1.0666666667vw;
+  }
 }
 .cm_card_list > li a dl dt p {
   color: #000;
@@ -2401,6 +2449,14 @@ header.setting .btn_close {
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dd span:last-child:after {
     height: 3.7333333333vw;
+  }
+}
+.cm_card_list > li a dl dd.last {
+  padding-top: 20px;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dd.last {
+    padding-top: 2.6666666667vw;
   }
 }
 .cm_card_list > li a dl dd.last span {

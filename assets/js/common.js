@@ -54,7 +54,6 @@ var commonUi = {
 
         _bottomSheetDim = $(".bottom_sheet").find(".dimd");
         _bottomSheetClose = $(".bottom_sheet").find(".btn_sheet_close");
-
         _bottomSheetDateList = $(".bottom_sheet").find(".date_list").find("li");
 
         _startDateInput = $( ".bottom_sheet" ).find( "#startdate" );

@@ -1,75 +1,303 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starbucks Siren119</title>
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
     <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/settring.css">
 </head>
+
 <body>
     <main id="wrap" class="setting">
-        <header class="common setting">
-            <button class="btn_close"></button>
+        <header class="common push">
+            <button class="btn_back"></button>
             <h1>Push 이력관리</h1>
+            <button class="btn_setting" onclick="commonUi.bottomSheetOpen('record')"></button>
         </header>
         <section>
             <h2 class="blind">Push 이력관리 설정 페이지</h2>
-            <div class="cm_setting_cotnents">
-                <div class="inner">
-                    <ul class="setting_list">
-                        <li>
-                            <h3>조회 기간</h3>
-                        </li>
-                        <li>
-                            <ul class="checkbox_list">
-                                <li>
-                                    <label for="agree1" class="cm_radio_box">
-                                        <input type="radio" id="agree1" name="agree" value="전체"  />
-                                        <span class="cricle"></span>
-                                        전체
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="agree2" class="cm_radio_box">
-                                        <input type="radio" id="agree2" name="agree" value="3개월​"  />
-                                        <span class="cricle"></span>
-                                        3개월​
-                                       
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="agree3" class="cm_radio_box">
-                                        <input type="radio" id="agree3" name="agree" value="6개월​"  />
-                                        <span class="cricle"></span>
-                                        6개월​
-                                      
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="agree4" class="cm_radio_box">
-                                        <input type="radio" id="agree4" name="agree" value="9개월​"  />
-                                        <span class="cricle"></span>
-                                        9개월​
-                                    </label>
-                                </li>
-                                <li>
-                                    <label for="agree5" class="cm_radio_box">
-                                        <input type="radio" id="agree5" name="agree" value="12개월​"  />
-                                        <span class="cricle"></span>
-                                        12개월​
-                                    </label>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            <div class="cm_tab_contents">
+                <ul class="cm_type_list">
+                    <li class="on">
+                        <button type="button">전체(<span>25</span>)</button>
+                    </li>
+                    <li>
+                        <button type="button">긴급(<span>5</span>)</button>
+                    </li>
+                    <li>
+                        <button type="button">일반(<span>15</span>)</button>
+                    </li>
+                    <li>
+                        <button type="button">답글(<span>25</span>)</button>
+                    </li>
+                    <div class="bar"></div>
+                </ul>
+            </div>
+            <!--list클래스 추가시 백그라운드 변경-->
+            <div class="cm_tab_panel list">
+                <div class="alarm_list_box">
+                    <div class="inner">
+                        <div class="cm_check_box">
+                            <label for="notread">
+                                <input type="checkbox" name="check" id="notread" />읽지 않음
+                            </label>
+                        </div>
+                        <ul class="alarm_list">
+                            <li>
+                                <dl>
+                                    <dt>오늘</dt>
+                                    <dd>
+                                        <ul class="cm_card_list accident_list">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge emergency bullet">긴급</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">아크로힐스 논현​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+
+                            <li>
+                                <dl>
+                                    <dt>어제</dt>
+                                    <dd>
+                                        <ul class="cm_card_list accident_list">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge common bullet">일반</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">센터필드 F1​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <!--on클래스 추가시 읽음 처리-->
+                                            <li class="on">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge emergency">긴급</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge comment bullet">댓글</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+
+                                            <li class="on">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge comment">댓글</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>파트너</span> | <span>근무중 사고</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>2024.05.23</dt>
+                                    <dd>
+                                        <ul class="cm_card_list accident_list">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge common bullet">일반</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">센터필드 F1​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <!--on클래스 추가시 읽음 처리-->
+                                            <li class="on">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge emergency">긴급</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge comment bullet">댓글</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>식품안전</span> | <span>관능 요소 이상(맛/냄새/색상 이상 등)</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+
+                                            <li class="on">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <!--bullet 클래스 추가시 도트 생성-->
+                                                            <em class="badge comment">댓글</em>
+                                                            <p>보고가 등록되었습니다.</p>
+                                                        </dt>
+                                                        <dd>
+                                                            <span>파트너</span> | <span>근무중 사고</span>
+                                                        </dd>
+                                                        <dd class="last">
+                                                            <span class="store">서래마을 입구​</span>
+                                                            <span class="date">2024-05-02</span>
+                                                            <span class="time">11:09</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
+                <!--현재 받은 알림이 없습니다.-->
+                <p class="no_alerts">현재 받은 알림이 없습니다.</p>
+
+                <!--알림설정이 꺼져 있습니다.-->
+                <div class="status_message_box">
+                    <p class="alert_message">알림설정이 꺼져 있습니다.</p>
+                    <a href="javascript:;" class="btn_alarm_link">알림설정하러 가기 </a>
+                </div>
+
+
             </div>
         </section>
+        <!-- 하단 파트너 연락처 레이어 팝업 -->
+        <aside class="bottom_sheet" id="record">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="record_info_contents">
+                            <div class="btn_group">
+                                <a href="javascript:;" class="icon setting">알림 설정하기</a>
+                                <a href="javascript:;" class="icon situation">모두 읽은 상태로 표시</a>
+                                <a href="javascript:;" class="icon delete">전체 삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
+
+        <aside class="scroll_top_box">
+            <a href="javascript:;">
+                <span class="blind">상단으로 이동</span>
+            </a>
+        </aside>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/alarm.js"></script>
 </body>
+
 </html>
