@@ -394,7 +394,7 @@
 }
 
 // 팝업
-// 중앙 팝업, 토스트 팝업
+// 중앙 팝업
 .layer_m_popup {
     display: none;
     position: fixed;
@@ -402,7 +402,6 @@
     min-height: 100vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.38);
-    ;
     z-index: 999;
 
     &.open {
@@ -419,10 +418,6 @@
         @include vp(border-radius, 40px);
         background: $white;
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
-        &.toast {
-            @include vp(padding, 40px 0px);
-        }
-
         .text {
             @include vp(font-size, $f13);
             @include vp(line-height, 40px);
@@ -446,6 +441,38 @@
                     @include vp(font-size, $f14);
                 }
             }
+        }
+    }
+}
+
+// 토스트 팝업
+.layer_toast {
+    display: none;
+    position: fixed;
+    top: 0px;
+    min-height: 100vh;
+    width: 100%;
+    z-index: 999;
+
+    &.open {
+        display: block;
+    }
+
+    .pop_cont01 {
+        @include vp(padding, 40px 0px);
+        position: absolute;
+        top: 50%;
+        @include vp(left, 40px);
+        @include vp(right, 40px);
+        transform: translate(0, -50%);
+        background: $dark-gray;
+        color: $white;
+        @include vp(border-radius, 12px);
+        box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+        .text {
+            @include vp(font-size, $f15);
+            @include vp(line-height, 40px);
+            text-align: center;
         }
     }
 }

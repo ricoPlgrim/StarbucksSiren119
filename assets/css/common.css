@@ -2202,14 +2202,6 @@ header.push .btn_setting {
     border-radius: 5.3333333333vw;
   }
 }
-.layer_m_popup .pop_cont01.toast {
-  padding: 40px 0px;
-}
-@media screen and (max-width: 750px) {
-  .layer_m_popup .pop_cont01.toast {
-    padding: 5.3333333333vw 0vw;
-  }
-}
 .layer_m_popup .pop_cont01 .text {
   font-size: 26px;
   line-height: 40px;
@@ -2275,6 +2267,65 @@ header.push .btn_setting {
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button > span {
     font-size: 3.7333333333vw;
+  }
+}
+
+.layer_toast {
+  display: none;
+  position: fixed;
+  top: 0px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 999;
+}
+.layer_toast.open {
+  display: block;
+}
+.layer_toast .pop_cont01 {
+  padding: 40px 0px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  right: 40px;
+  transform: translate(0, -50%);
+  background: #333;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 {
+    padding: 5.3333333333vw 0vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 {
+    left: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 {
+    right: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 {
+    border-radius: 1.6vw;
+  }
+}
+.layer_toast .pop_cont01 .text {
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 .text {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_toast .pop_cont01 .text {
+    line-height: 5.3333333333vw;
   }
 }
 

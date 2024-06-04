@@ -8,7 +8,7 @@ var popupUi = {
     },
     create: function(){
         _w = $(window);
-        _popBtn = $("body").find("a");
+        _popBtn = $("body").find("a, button");
     },
     addEvent: function(){
         popupUi.resizeEvent(null);
