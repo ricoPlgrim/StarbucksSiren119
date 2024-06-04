@@ -61,83 +61,7 @@
                 }
             }
 
-            .date_contents {
-
-                @include vp(padding, 40px 40px 56px);
-
-                .date_list {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 10px;
-
-                    li {
-                        @include vp(width, 160px);
-                        @include vp(border-radius, 8px);
-                        @include vp(border, 2px solid rgba(0, 0, 0, 0.12));
-                        box-sizing: border-box;
-
-                        button {
-                            width: inherit;
-                            @include vp(padding, 30px 22px);
-                            @include vp(font-size, $f13);
-                            line-height: normal;
-                            background: none;
-                        }
-
-                        &.on {
-                            background: $green;
-                            @include vp(border, 2px solid $green);
-
-                            button {
-                                color: $white;
-                            }
-                        }
-                    }
-                }
-
-                .date_setting {
-                    display: flex;
-                    @include vp(margin-top, 22px);
-                    @include vp(gap, 14px);
-
-                    .date_start,
-                    .date_end {
-                        position: relative;
-                        @include vp(width, 330px);
-                        @include vp(height, 76px);
-                        @include vp(padding, 22px 40px);
-                        @include vp(border-radius, 4px);
-                        background: $light-gray-3;
-
-                        span {
-                            font-family: "Pretendard Variable";
-                            @include vp(font-size, $f13);
-                            font-weight: $fw4;
-                            color: $black;
-                            opacity: .6;
-                        }
-
-                        input {
-                            position: absolute;
-                            @include vp(top, 20px);
-                            @include vp(right, 20px);
-                            @include vp(width, 32px);
-                            @include vp(height, 37px);
-                            border: 0;
-                            background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
-                            @include vp(background-size, 32px auto);
-
-                            &::-webkit-calendar-picker-indicator,
-                            &::-webkit-inner-spin-button {
-                                // display: none;
-                                // appearance: none; 
-                            }
-                        }
-                    }
-                }
-            }
-
+          
 
             .staff_info_contents {
                 @include vp(padding, 40px 40px 56px);
@@ -321,34 +245,7 @@
         }
     }
 
-    .full_wrap {
-        width: 100%;
-        overflow-y: auto;
-
-        >.buttons_list {
-            display: flex;
-            @include vp(margin-left, 40px);
-            @include vp(padding, 16px 40px 32px 0);
-
-            li {
-                flex: 0 0 auto;
-                @include vp(margin-left, 60px);
-
-                button {
-                    @include vp(font-size, $f15);
-                    font-weight: $fw4;
-                    letter-spacing: 0.1px;
-                    text-align: center;
-                    color: $light-gray-1;
-                }
-
-                &:first-child {
-                    margin-left: 0;
-                }
-            }
-
-        }
-    }
+   
     
     &.filter{
         .sheet_wrap{
@@ -800,8 +697,8 @@
     position: relative;
 
     .cm_type_list {
+        position: relative;
         display: flex;
-
         li {
             @include vp(width, 188px);
             @include vp(height, 88px);
@@ -810,8 +707,7 @@
                 text-align: center;
                 width: 100%;
                 height: 100%;
-                color: $black;
-                opacity: .4;
+                color: $black-58;
                 text-align: center;
                 @include vp(font-size, $f15);
                 font-weight: $fw6;
@@ -819,9 +715,19 @@
 
             &.on {
                 button {
-                    opacity: 1;
+                    color: $black;
                 }
             }
+        }
+        &::after{ 
+            content: '';
+            display: block;
+            position: absolute;
+            @include vp(bottom, -12px);
+            left:0;
+            width: 100%;
+            @include vp(height, 12px);
+            background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
         }
     }
     .bar {
@@ -833,6 +739,7 @@
         background: $green;
     }
 }
+
 .cm_tab_panel_contents{
     @include vp(min-height, 350px);
     li{
@@ -848,66 +755,47 @@
     // @include vp(max-height, 240px );
     // overflow: auto;
     .panel_list {
-        li {
-            display: block;
+        >li {
+            display: none;
+            .inner {
+                @include vp(padding, 30px 20px);
 
-            &.active {
-                display: block;
+                .checkbox_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    @include vp(gap, 44px);
 
-                .inner {
-                    @include vp(padding, 30px 20px);
+                    >li {
+                        flex: 1 1 calc(50% - 44px);
 
-                    .checkbox_list {
-                        display: flex;
-                        flex-wrap: wrap;
-                        @include vp(gap, 44px);
-
-                        >li {
-                            flex: 1 1 calc(50% - 44px);
-
-                            @include breakpoint {
-                                flex: 1 1 calc(50% - 5.8666666667vw);
-                            }
-
-                            box-sizing: border-box;
+                        @include breakpoint {
+                            flex: 1 1 calc(50% - 5.8666666667vw);
                         }
+
+                        box-sizing: border-box;
                     }
                 }
+            }
+            &.on {
+                display: block;
             }
         }
     }
 }
 
 .cm_tab_bottom {
-    &:before {
-        content: '';
-        display: block;
-        width: 100%;
-        @include vp(height, 12px);
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, $medium-gray 100%);
-        opacity: 0.8;
-    }
-
+    box-shadow: 0 -1px 5px 0px $$light-gray-6;
     .button_grop {
         .inner {
-            @include vp(padding, 20px 0 20px 40px);
+            @include vp(padding, 20px 0 20px 0);
             position: relative;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             justify-content: flex-start;
 
-            .btn_refresh {
-                display: inline-flex;
-                @include vp(width, 68px);
-                @include vp(height, 64px);
-                @include vp(margin-right, 8px);
-                background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
-                @include vp(background-size, 68px auto);
-            }
-
             .btn_list {
-                @include vp(width, 617px);
+                width: 100%;
                 position: relative;
                 display: flex;
                 flex-wrap: nowrap;
@@ -928,12 +816,13 @@
                         @include vp(padding, 20px 60px 20px 20px);
                         @include vp(height, 64px);
                         font-weight: 500;
-                        color: $black-58;
+                        color: $green;
                         @include vp(letter-spacing, .1px);
                         text-align: center;
-                        @include vp(border-radius, 6px);
-                        @include vp(border, 2px solid $black-12);
+                        @include vp(border-radius, 12px);
+                        @include vp(border, 2px solid $green);
                         background-color: $white;
+
                     }
 
                     .btn_close {
@@ -943,9 +832,12 @@
                         @include vp(right, 20px);
                         @include vp(width, 28px);
                         @include vp(height, 28px);
-                        background: url("../images/btn/btn_close_g.png") 0 0 no-repeat;
+                        background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
                         @include vp(background-size, 28px auto);
                         z-index: 10;
+                    }
+                    &:first-child{
+                        @include vp(margin-left, 40px );    
                     }
                 }
             }
@@ -962,9 +854,9 @@
             .inner{
                 @include vp(padding, 40px 40px 62px 40px);
                 button{
-                    @include vp(height, 100px);
+                    @include vp(height, 50px);
                     @include vp(width, 466px);
-                    &:first-child{ 
+                    &:first-child{  
                         @include vp(margin-right, 8px); 
                         @include vp(width, 196px);
                     }
@@ -973,9 +865,52 @@
             }
         }
     }
+
+    &.filter{
+        position: fixed;
+        bottom:0;
+        left:50%;
+        transform: translateX(-50%);
+        width: 100%;
+        @include vp(max-width, 750px);
+        background: $white;
+    }
 }
 
+.cm_full_wrap {
+    width: 100%;
+    @include vp(margin-top, 28px);
+    @include vp(border-bottom, 2px solid $light-gray-2);
+    >.buttons_list {
+        display: flex;
+        overflow-y: auto;
+        // transform: translateX(40px);
+        @include vp(padding, 16px 40px 32px 0);
+   
+        li {
+            flex: 0 0 auto;
+            @include vp(margin-left, 60px);
 
+            button {
+                @include vp(font-size, $f15);
+                font-weight: $fw4;
+                @include vp(letter-spacing, 0.2px);
+                text-align: center;
+                color: $gray;
+            }
+
+            &:first-child {
+                @include vp(margin-left, 40px);
+            }
+            &.on{
+                button{
+                    color: $black;
+                }
+            }
+        }
+
+    }
+}
 /*font weight 정의*/
 .cm-w4 {
     font-weight: $fw4;
@@ -1317,5 +1252,77 @@
     }
 }
 
+.cm_date_contents {
+
+    @include vp(padding, 60px 40px 20px 40px);
+
+    .date_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include vp(gap, 10px);
+        li {
+            @include vp(width, 160px);
+            @include vp(border-radius, 8px);
+            @include vp(border, 2px solid rgba(0, 0, 0, 0.12));
+            box-sizing: border-box;
+
+            button {
+                width: inherit;
+                @include vp(padding, 30px 22px);
+                @include vp(font-size, $f14);
+                line-height: normal;
+                background: none;
+                font-weight: $fw6;
+                color: $black-58;
+            }
+
+            &.on {
+                background: $green;
+                @include vp(border, 2px solid $green);
+
+                button {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .date_setting {
+        display: flex;
+        @include vp(margin-top, 10px);
+        @include vp(gap, 14px);
+
+        .date_start,
+        .date_end {
+            position: relative;
+            @include vp(width, 330px);
+            @include vp(height, 76px);
+            @include vp(padding, 22px 40px);
+            @include vp(border-radius, 12px); 
+            background: $light-gray-5;
+            @include vp(border, 2px solid $black-12 );
+            span {
+                font-family: "Pretendard Variable";
+                @include vp(font-size, $f13);
+                font-weight: $fw4;
+                color: $black;
+                opacity: .6;
+                line-height: 1;
+            }
+
+            input {
+                position: absolute;
+                @include vp(top, 12px);
+                @include vp(right, 20px);
+                @include vp(width, 48px);
+                @include vp(height, 48px);
+                border: 0;
+                background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
+                @include vp(background-size, 48px auto);
+            }
+        }
+    }
+}
 
 

@@ -1,4 +1,21 @@
 @import 'base/variables';
 @import 'base/mixin'; 
 
+#wrap{
+    &.filter{
+        @include vp(padding-top, 112px);
+        .cm_tab_panel {
+            .panel_list {
+                >li {
+                    .inner {
+                        @include vp(padding, 48px 40px);
+                    }
+                    
+                }
+            }
+        }
+
+    }
+}
+
 

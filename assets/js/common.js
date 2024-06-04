@@ -29,6 +29,8 @@ var _startDateInput;
 var _endDateInput;
 
 var _typeBtns;
+var _twoDepsMenu;
+
 var commonUi = {
 
     init: function () {
@@ -54,14 +56,13 @@ var commonUi = {
 
         _bottomSheetDim = $(".bottom_sheet").find(".dimd");
         _bottomSheetClose = $(".bottom_sheet").find(".btn_sheet_close");
-        _bottomSheetDateList = $(".bottom_sheet").find(".date_list").find("li");
+        _bottomSheetDateList = $(".cm_date_contents").find(".date_list").find("li");
 
-        _startDateInput = $( ".bottom_sheet" ).find( "#startdate" );
-        _endDateInput = $( ".bottom_sheet" ).find( "#enddate" );
-
+        _startDateInput = $( "#startdate" );  
+        _endDateInput = $( "#enddate" );
         _typeBtns = $( ".cm_tab_contents" ).find( ".cm_type_list" ).find( "li" );
 
-
+        _twoDepsMenu = $( ".cm_tab_panel .buttons_list" ).find( "li" );
 
     },
     addEvent: function () {
@@ -80,21 +81,21 @@ var commonUi = {
         });
         _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick);
 
-        _startDateInput.on( "change",commonUi.startDateValue  );
-        _endDateInput.on( "change",commonUi.endDateValue  );
+        _startDateInput.on( "change", commonUi.startDateValue  );
+        _endDateInput.on( "change", commonUi.endDateValue  );
 
         _typeBtns.on( "click", commonUi.typeBtnsClick );
         // input, textarea 이벤트
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
         // header 스크롤 이벤트
+
+        _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
  
     },
 
     loadEvent: function () {
         commonUi.create();
         commonUi.addEvent();
-        console.log("loadEvent init");
-
     },
 
     resizeEvent: function () {
@@ -162,6 +163,7 @@ var commonUi = {
     },
 
     startDateValue: function(){
+        console.log( "qwelmwqklenmklwqnejkqwnejkwqnejkqwnjkeneq" );
         var selectedDate = $(this).val();
         $( ".date_start" ).find( ".date_text" ).text( selectedDate );
     },
@@ -176,16 +178,15 @@ var commonUi = {
         $( this ).addClass( "on" ).siblings().removeClass( "on" );
         var bars = $( ".cm_tab_contents" ).find( ".bar" );
         var offsetLeft = $(this).position().left;
-            console.log( offsetLeft );
             gsap.to(bars, {
                 duration: 0.75,
                 x: offsetLeft,
                 ease: "expo.inOut"
             });
 
-        var  tabPanelTarget = $( ".cm_tab_panel" ).find( "li" );
-        tabPanelTarget.removeClass( "on" )
-        tabPanelTarget.eq(index).addClass( "on" )
+        var  tabPanelTarget = $( ".cm_tab_panel" ).find( ".item" );
+        tabPanelTarget.removeClass( "on" );
+        tabPanelTarget.eq(index).addClass( "on" );
 
     },
     textFormClick: function() {
@@ -246,7 +247,29 @@ var commonUi = {
 		} else {
 			$(cHeader).removeClass('on');
 		}
+    },
+    twoDepsMenuClick: function(e) {
+        e.preventDefault();
+        var index = $(this).index();
+        var menuContainer = $(this).closest(".buttons_list");
+    
+        menuContainer.find("li").removeClass("on");
+        menuContainer.find("li").eq(index).addClass("on");
+    
+        commonUi.centerMenu(menuContainer, $(this));
+    },
+    
+    centerMenu: function(menuContainer, menuItem) {
+        var containerWidth = menuContainer.outerWidth();
+        var itemOffsetLeft = menuItem.offset().left;
+        var containerOffsetLeft = menuContainer.offset().left;
+        var scrollLeftValue = menuContainer.scrollLeft() + (itemOffsetLeft - containerOffsetLeft) + (menuItem.outerWidth() / 2) - (containerWidth / 2);
+    
+        menuContainer.animate({
+            scrollLeft: scrollLeftValue
+        }, 300);
     }
+
 };
 
 
