@@ -1799,7 +1799,7 @@
   padding-right: 30px;
   width: 100%;
   min-height: 56px;
-  max-height: 216px;
+  max-height: 180px;
   line-height: 36px;
   font-size: 26px;
   color: #797979;
@@ -1824,7 +1824,7 @@
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    max-height: 28.8vw;
+    max-height: 24vw;
   }
 }
 @media screen and (max-width: 750px) {
