@@ -188,10 +188,9 @@ var commonUi = {
         var textForm = This.parent();
         var textArea = This.is("textarea");
         var byteNum = textForm.find(".byte_num");
-        var scrollHeight = This[0].scrollHeight;
         var byteHeight = byteNum.height();
         var textFormHeight = textForm.height();
-
+ 
         if (This.val().length < 1) {
             textForm.find(".btn_delete").removeClass("on");
             textForm.parent().find("button").removeClass("on");
@@ -201,7 +200,6 @@ var commonUi = {
                 This.css("height", "auto");
                 textForm.css("padding-bottom", 0);
                 $("body").css("padding-bottom", 0);
-        
             }
         } else {
             textForm.find(".btn_delete").addClass("on");
@@ -209,7 +207,8 @@ var commonUi = {
             if (textArea) {
                 textForm.addClass("on");
                 byteNum.addClass("on");
-                This.css("height", scrollHeight + "px");
+                This.css("height", "auto" );
+                This.height( this.scrollHeight );
                 textForm.css("padding-bottom", byteHeight + "px");
                 $("body").css("padding-bottom", textFormHeight);
             }
@@ -232,7 +231,7 @@ var commonUi = {
         $(".btn_delete").on("click", deleteText);
     },
     headerScroll: function() {
-        // 스크롤 탑일때 해더 변경
+        // 스크롤 탑일때 헤더 변경
         var winTop = _w.scrollTop();
         var cHeader = $("header.common");
         var headerHeight = cHeader.height();
