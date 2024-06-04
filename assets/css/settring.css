@@ -1,0 +1,197 @@
+@charset "UTF-8";
+/* 정리중 */
+/*폰트 사이즈*/
+#wrap.setting .cm_type_list {
+  position: relative;
+}
+#wrap.setting .cm_type_list:after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_type_list:after {
+    bottom: -1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_type_list:after {
+    height: 1.6vw;
+  }
+}
+#wrap.setting .cm_tab_panel .no_alerts {
+  display: none;
+  padding-top: 278px;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .no_alerts {
+    padding-top: 37.0666666667vw;
+  }
+}
+#wrap.setting .cm_tab_panel .status_message_box {
+  display: none;
+  padding-top: 266px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box {
+    padding-top: 35.4666666667vw;
+  }
+}
+#wrap.setting .cm_tab_panel .status_message_box .alert_message {
+  position: relative;
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .alert_message {
+    font-size: 4vw;
+  }
+}
+#wrap.setting .cm_tab_panel .status_message_box .alert_message:before {
+  display: block;
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: url("../images/icons/icon_alert_off_b.png") 0 0 no-repeat;
+  background-size: 80px auto;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .alert_message:before {
+    width: 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .alert_message:before {
+    height: 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .alert_message:before {
+    background-size: 10.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .alert_message:before {
+    margin: 0 auto 5.3333333333vw;
+  }
+}
+#wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.58);
+  text-align: center;
+  font-size: 32px;
+  width: 328px;
+  height: 100px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin: 80px auto 0;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    width: 43.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    height: 13.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    letter-spacing: 0.0266666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    margin: 10.6666666667vw auto 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .cm_tab_panel .status_message_box .btn_alarm_link {
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+#wrap.setting .cm_tab_panel.list {
+  background: #F6F6F6;
+}
+#wrap.setting .alarm_list_box .inner {
+  padding: 48px 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner {
+    padding: 6.4vw 5.3333333333vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list {
+  margin-top: 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner .alarm_list {
+    margin-top: 5.3333333333vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li {
+  margin-top: 60px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner .alarm_list > li {
+    margin-top: 8vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li dl dt {
+  color: #000;
+  font-weight: 600;
+  font-size: 30px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner .alarm_list > li dl dt {
+    font-size: 4vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li dl dd .cm_card_list > li a dl dd span:last-child {
+  width: 465px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner .alarm_list > li dl dd .cm_card_list > li a dl dd span:last-child {
+    width: 62vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li dl dd .cm_card_list > li a dl dd.last {
+  font-size: 30px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.setting .alarm_list_box .inner .alarm_list > li dl dd .cm_card_list > li a dl dd.last {
+    font-size: 4vw;
+  }
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li dl dd .cm_card_list > li a dl dd.last span:last-child {
+  width: auto;
+}
+#wrap.setting .alarm_list_box .inner .alarm_list > li:first-child {
+  margin-top: 0;
+}

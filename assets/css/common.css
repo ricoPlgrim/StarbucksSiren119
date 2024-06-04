@@ -979,7 +979,6 @@ header.common .btn_bookmark.on {
 }
 header.setting {
   justify-content: flex-end;
-  border-bottom: 2px solid #DDD;
 }
 header.setting .btn_close {
   background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
@@ -996,9 +995,22 @@ header.setting .btn_close {
     padding: 6.4vw 6.6666666667vw;
   }
 }
+header.push {
+  justify-content: space-between;
+}
+header.push .btn_setting {
+  background: url("../images/btn/btn_setting.png") center center no-repeat;
+  background-size: 96px auto;
+  padding: 48px 50px;
+}
 @media screen and (max-width: 750px) {
-  header.setting {
-    border-bottom: 0.2666666667vw solid #DDD;
+  header.push .btn_setting {
+    background-size: 12.8vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.push .btn_setting {
+    padding: 6.4vw 6.6666666667vw;
   }
 }
 
@@ -1476,6 +1488,7 @@ header.setting .btn_close {
   max-width: 750px;
   transform: translateX(-50%);
   min-height: 200px;
+  width: 100%;
   position: fixed;
   z-index: 300;
   border-radius: 15px;
@@ -1836,6 +1849,95 @@ header.setting .btn_close {
     min-width: 19.4666666667vw;
   }
 }
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents {
+  padding: 60px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents {
+    padding: 8vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group {
+  display: flex;
+  flex-direction: column;
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 38px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon {
+    line-height: 2.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon {
+    margin-top: 5.0666666667vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon:before {
+  display: block;
+  content: "";
+  width: 40px;
+  height: 40px;
+  margin-right: 40px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon:before {
+    width: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon:before {
+    height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon:before {
+    margin-right: 5.3333333333vw;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.setting:before {
+  background: url("../images/icons/icon_setting.png") 0 0 no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.setting:before {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.situation:before {
+  background: url("../images/icons/icon_mark_read.png") 0 0 no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.situation:before {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.delete:before {
+  background: url("../images/icons/icon_delete.png") 0 0 no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon.delete:before {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.bottom_sheet .sheet_wrap .sheet_content .record_info_contents .btn_group .icon:first-child {
+  margin-top: 0;
+}
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
   padding: 52px 44px 105px;
 }
@@ -2005,6 +2107,15 @@ header.setting .btn_close {
     height: 12.8vw;
   }
 }
+#record .sheet_wrap {
+  min-height: 170px;
+}
+@media screen and (max-width: 750px) {
+  #record .sheet_wrap {
+    min-height: 22.6666666667vw;
+  }
+}
+
 .scroll_top_box {
   display: none;
   position: fixed;
@@ -2248,6 +2359,7 @@ header.setting .btn_close {
   }
 }
 .cm_card_list > li a dl dt .badge {
+  position: relative;
   padding: 8px 16px;
   border-radius: 12px;
   border: 2px solid #00A862;
@@ -2255,6 +2367,7 @@ header.setting .btn_close {
   margin-left: 8px;
   background: #EBFFF7;
   font-weight: 400;
+  line-height: 1;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dt .badge {
@@ -2304,8 +2417,43 @@ header.setting .btn_close {
     border: 0.2666666667vw solid #999;
   }
 }
+.cm_card_list > li a dl dt .badge.comment {
+  border: 2px solid #0094FF;
+  background: #F1F9FF;
+  color: #0094FF;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.comment {
+    border: 0.2666666667vw solid #0094FF;
+  }
+}
 .cm_card_list > li a dl dt .badge:first-child {
   margin-left: 0;
+}
+.cm_card_list > li a dl dt .badge.bullet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width: 8px;
+  height: 8px;
+  background: #00A862;
+  border-radius: 50%;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    right: -2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    width: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dt .badge.bullet::after {
+    height: 1.0666666667vw;
+  }
 }
 .cm_card_list > li a dl dt p {
   color: #000;
@@ -2398,6 +2546,14 @@ header.setting .btn_close {
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dd span:last-child:after {
     height: 3.7333333333vw;
+  }
+}
+.cm_card_list > li a dl dd.last {
+  padding-top: 20px;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dd.last {
+    padding-top: 2.6666666667vw;
   }
 }
 .cm_card_list > li a dl dd.last span {
