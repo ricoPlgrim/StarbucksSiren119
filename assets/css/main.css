@@ -755,14 +755,14 @@ header .header_inner .header_sticky .header_switchbox .switch_round {
   position: relative;
   width: 100%;
   height: inherit;
-  border: 1px solid #eee;
+  border: 1px solid #EEE;
   border-radius: 100px;
-  background: #eee;
+  background: #EEE;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky .header_switchbox .switch_round {
-    border: 0.1333333333vw solid #eee;
+    border: 0.1333333333vw solid #EEE;
   }
 }
 @media screen and (max-width: 750px) {
@@ -911,7 +911,8 @@ header.common {
   top: 0px;
   justify-content: space-between;
   height: 112px;
-  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #EEE;
+  background-color: #fff;
   z-index: 100;
 }
 @media screen and (max-width: 750px) {
@@ -920,7 +921,7 @@ header.common {
   }
 }
 header.common.on {
-  box-shadow: 0 -1px 5px 0px #BBBBBB;
+  box-shadow: 0 -1px 5px 0px #BBB;
 }
 header.common .btn_back {
   background: url("../images/btn/btn_back.png") center center no-repeat;
@@ -1842,8 +1843,8 @@ header.setting .btn_close {
   padding: 52px 44px 105px;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box {
-    padding: 5.3333333333vw 5.3333333333vw 7.4666666667vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
+    padding: 6.9333333333vw 5.8666666667vw 14vw;
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
@@ -1867,8 +1868,8 @@ header.setting .btn_close {
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_box .btn_comment {
-    height: 75.7333333333vw;
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button {
+    width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1880,49 +1881,20 @@ header.setting .btn_close {
   padding-left: 60px;
   font-size: 28px;
   line-height: 48px;
-  line-height: 48px;
   color: #00A862;
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_contents .btn_box > button span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     padding-left: 8vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content > div span {
-    padding-left: 8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button_contents .btn_box > div span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     font-size: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  @media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span {
-    line-height: 6.4vw;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
-  background: url("../images/icons/ico_edit.png") center left no-repeat;
-  background-size: 40px auto;
-}
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_edit {
-    background-size: 5.3333333333vw auto;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
-  background: url("../images/icons/ico_delete.png") center left no-repeat;
-  background-size: 40px auto;
-}
-@media screen and (max-width: 750px) {
-  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > div span.btn_delete {
-    background-size: 5.3333333333vw auto;
-  }
-}
-.bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
+  .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span {
     line-height: 6.4vw;
   }
 }
@@ -1943,6 +1915,9 @@ header.setting .btn_close {
   .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
     background-size: 5.3333333333vw auto;
   }
+}
+.bottom_sheet .sheet_wrap .sheet_content.white {
+  background: #fff !important;
 }
 .bottom_sheet .sheet_wrap.open {
   bottom: 0;
@@ -2162,6 +2137,7 @@ header.setting .btn_close {
   width: 290px;
   height: 80px;
   line-height: 40px;
+  font-size: 28px;
   text-align: center;
 }
 @media screen and (max-width: 750px) {
@@ -2177,6 +2153,11 @@ header.setting .btn_close {
 @media screen and (max-width: 750px) {
   .layer_m_popup .pop_cont01 .btn_bottom button {
     line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_m_popup .pop_cont01 .btn_bottom button {
+    font-size: 3.7333333333vw;
   }
 }
 .layer_m_popup .pop_cont01 .btn_bottom button > span {
@@ -2309,7 +2290,7 @@ header.setting .btn_close {
 .cm_card_list > li a dl dt .badge.emergency {
   background: #FFF6F6;
   border: 2px solid #FF7F7F;
-  color: #F00;
+  color: #FF0000;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dt .badge.emergency {
@@ -2318,7 +2299,7 @@ header.setting .btn_close {
 }
 .cm_card_list > li a dl dt .badge.common {
   border: 2px solid #999;
-  background: #eee;
+  background: #EEE;
   color: #333;
 }
 @media screen and (max-width: 750px) {
@@ -3161,7 +3142,7 @@ header.setting .btn_close {
   display: none;
 }
 .cm_radio_box input[type=radio]:checked + .cricle:before {
-  transform: scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 .cm_radio_box .cricle {
   width: 44px;
@@ -3194,15 +3175,12 @@ header.setting .btn_close {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 50%;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
   background-color: #00A862;
-  transform: scale(0);
-  transform: translateY(-50%);
-  transform: translateX(-50%);
-  transition: transform 0.35s ease-in-out;
-  transform-origin: center center;
+  transform: translate(-50%, -50%) scale(0); /* 크기 비율 1 (원래 크기) */
+  transition: transform 0.3s ease;
 }
 @media screen and (max-width: 750px) {
   .cm_radio_box .cricle:before {

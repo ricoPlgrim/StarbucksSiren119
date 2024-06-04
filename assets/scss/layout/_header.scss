@@ -57,9 +57,9 @@ header {
                     position: relative;
                     width: 100%;
                     height: inherit;
-                    @include vp(border, 1px solid #eee);
+                    @include vp(border, 1px solid $light-gray-3);
                     @include vp(border-radius, 100px);
-                    background: #eee;
+                    background: $light-gray-3;
                     overflow: hidden;
 
                     a {
@@ -69,7 +69,7 @@ header {
                         @include vp(font-size, 30px);
                         @include vp(line-height, 77px);
                         font-weight: 600;
-                        color: #000;
+                        color: $black;
                         opacity: .3;
                         width: 50%;
                         height: 100%;
@@ -78,7 +78,7 @@ header {
                         z-index: 4;
 
                         &.on {
-                            color: #fff;
+                            color: $white;
                             opacity: 1;
                         }
                     }
@@ -148,10 +148,11 @@ header {
         top: 0px;
         justify-content: space-between;
         @include vp(height, 112px);
-        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid $light-gray-3;
+        background-color: $white;
         z-index: 100;
         &.on {
-            box-shadow: 0 -1px 5px 0px #BBBBBB;
+            box-shadow: 0 -1px 5px 0px $medium-gray;
         }
 
         .btn_back {

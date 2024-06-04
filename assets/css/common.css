@@ -753,14 +753,14 @@ header .header_inner .header_sticky .header_switchbox .switch_round {
   position: relative;
   width: 100%;
   height: inherit;
-  border: 1px solid #eee;
+  border: 1px solid #EEE;
   border-radius: 100px;
-  background: #eee;
+  background: #EEE;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky .header_switchbox .switch_round {
-    border: 0.1333333333vw solid #eee;
+    border: 0.1333333333vw solid #EEE;
   }
 }
 @media screen and (max-width: 750px) {
@@ -909,7 +909,8 @@ header.common {
   top: 0px;
   justify-content: space-between;
   height: 112px;
-  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #EEE;
+  background-color: #fff;
   z-index: 100;
 }
 @media screen and (max-width: 750px) {
@@ -918,7 +919,7 @@ header.common {
   }
 }
 header.common.on {
-  box-shadow: 0 -1px 5px 0px #BBBBBB;
+  box-shadow: 0 -1px 5px 0px #BBB;
 }
 header.common .btn_back {
   background: url("../images/btn/btn_back.png") center center no-repeat;
