@@ -7,6 +7,7 @@ var _gnbBtn;
 var _gnbCloseBtn;
 var _scrollTopButton;
 var _stickyTarget;
+var _popBtn;
 var _textFormBtn;
 
 var switchBox = $(".header_switchbox");
@@ -44,6 +45,8 @@ var commonUi = {
         _gnbCloseBtn = _gnb.find(".btn_close");
         _scrollTopButton = $(".scroll_top_box");
         _stickyTarget = $(".header_sticky ");
+        // 팝업 버튼
+        _popBtn = $("body").find("a, button");
         // 입렵폼 input, textarea
         _textFormBtn = $(".text_box").find("input, textarea");
 
@@ -87,7 +90,8 @@ var commonUi = {
         _typeBtns.on( "click", commonUi.typeBtnsClick );
         // input, textarea 이벤트
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
-        // header 스크롤 이벤트
+        // 팝업 버튼 클릭 이벤트
+        _popBtn.on("click", commonUi.popupItemClick);
 
         _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
  
@@ -268,7 +272,34 @@ var commonUi = {
         menuContainer.animate({
             scrollLeft: scrollLeftValue
         }, 300);
-    }
+    },
+    // 레이어 팝업 이벤트
+    popupItemClick: function(){
+        var targetName = $(this).data("target");
+        if(targetName) commonUi.openPopup(targetName);
+    },
+    openPopup: function(targetName) {
+        var layerName = "#" + targetName;
+
+        $("body").find(layerName).addClass("open");
+        $("body").css("overflow", "hidden");
+
+        $(layerName).find(".btn_close").on("click", function(){
+            closePopup(layerName);
+        });
+
+        // 팝업 외부를 클릭하면 팝업을 닫는 이벤트 핸들러
+        $(layerName).on("click", function(event) {
+            if (event.target === this) {
+                closePopup(layerName);
+            }
+        });
+
+        function closePopup(layerName) {
+            $("body").find(layerName).removeClass("open");
+            $("body").css("overflow", "scroll");
+        }
+    },
 
 };
 
