@@ -27,15 +27,22 @@
         .cm_full_wrap {
             margin-top: 0px;
             .buttons_list {
-                @include vp(padding, 32px 0px 24px);
+                @include vp(padding, 36px 0px 30px);
                 &::-webkit-scrollbar {display: none;}
             }
         }
         .board_list_wrap {
             .board_list {
+                @include vp(margin, 0px 40px 60px);
+                .header {
+                    @include vp(padding, 60px 0px 40px);
+                    @include vp(font-size, $f15);
+                    font-weight: $fw6;
+                    line-height: normal;
+                    border-bottom: 1px solid $dark-gray;
+                }
                 > li {
                     @include vp(padding, 48px 0px);
-                    @include vp(margin, 0 40px);
                     border-bottom: 1px solid $light-gray-3;
                     a {
                         @include vp(padding-right, 80px);
@@ -46,6 +53,30 @@
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         overflow: hidden;
+                    }
+                }
+                .btn_more {
+                    @include vp(margin-top, 40px);
+                    @include vp(width, 670px);
+                    text-align: center;
+                    button {
+                        position: relative;
+                        @include vp(padding, 20px 0px);
+                        width: 100%;
+                        @include vp(font-size, $f13);
+                        @include vp(border-radius, 12px);
+                        border: 1px solid $black-12;
+                        color: $black-58;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            @include vp(top, 16px);
+                            @include vp(right, 180px);
+                            @include vp(width, 24px);
+                            @include vp(height, 32px);
+                            background: url("../images/icons/ico_arrow_down.png") center center no-repeat;
+                            @include vp(background-size, 24px auto);
+                        }
                     }
                 }
             }

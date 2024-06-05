@@ -63,29 +63,48 @@
   margin-top: 0px;
 }
 #wrap.board .cm_full_wrap .buttons_list {
-  padding: 32px 0px 24px;
+  padding: 36px 0px 30px;
 }
 @media screen and (max-width: 750px) {
   #wrap.board .cm_full_wrap .buttons_list {
-    padding: 4.2666666667vw 0vw 3.2vw;
+    padding: 4.8vw 0vw 4vw;
   }
 }
 #wrap.board .cm_full_wrap .buttons_list::-webkit-scrollbar {
   display: none;
 }
+#wrap.board .board_list_wrap .board_list {
+  margin: 0px 40px 60px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list {
+    margin: 0vw 5.3333333333vw 8vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list .header {
+  padding: 60px 0px 40px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: normal;
+  border-bottom: 1px solid #333;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .header {
+    padding: 8vw 0vw 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .header {
+    font-size: 4vw;
+  }
+}
 #wrap.board .board_list_wrap .board_list > li {
   padding: 48px 0px;
-  margin: 0 40px;
   border-bottom: 1px solid #EEE;
 }
 @media screen and (max-width: 750px) {
   #wrap.board .board_list_wrap .board_list > li {
     padding: 6.4vw 0vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li {
-    margin: 0 5.3333333333vw;
   }
 }
 #wrap.board .board_list_wrap .board_list > li a {
@@ -111,6 +130,80 @@
 @media screen and (max-width: 750px) {
   #wrap.board .board_list_wrap .board_list > li a {
     font-size: 3.4666666667vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list .btn_more {
+  margin-top: 40px;
+  width: 670px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more {
+    margin-top: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more {
+    width: 89.3333333333vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list .btn_more button {
+  position: relative;
+  padding: 20px 0px;
+  width: 100%;
+  font-size: 26px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.58);
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button {
+    padding: 2.6666666667vw 0vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button {
+    border-radius: 1.6vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list .btn_more button::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 180px;
+  width: 24px;
+  height: 32px;
+  background: url("../images/icons/ico_arrow_down.png") center center no-repeat;
+  background-size: 24px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+    top: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+    right: 24vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+    width: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+    height: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+    background-size: 3.2vw auto;
   }
 }
 #wrap.board .board_conts {
