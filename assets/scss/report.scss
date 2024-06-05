@@ -132,54 +132,11 @@
                                 color: $green;
                                 font-weight: $fw6;
                             }
+                            button {border: none;}
                         }
                         .text {
                             @include vp( padding, 20px);
                             font-weight: $fw4;
-                        }
-                        &.select_box {
-                            position: relative;
-                            &.on {
-                                .select_option {
-                                    border: none;
-                                    color: $green;
-                                }
-                            }
-                           .select_option {
-                            position: relative;
-                            @include vp( padding, 24px 60px 24px 20px); 
-                            border: 1px solid #0000001F;
-                            @include vp( border-radius, 12px);
-                                &::after {
-                                    content: '';
-                                    position: absolute;
-                                    @include vp(top, 20px);
-                                    @include vp(right, 16px);
-                                    @include vp(width, 24px);
-                                    @include vp(height, 32px);
-                                    background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
-                                    @include vp(background-size, 24px auto);
-                                }
-                           }
-                           .option_list {
-                            display: none;
-                            position: absolute;
-                            @include vp( padding, 12px 55px 12px 20px); 
-                            @include vp( top, 80px); 
-                            @include vp( left, 0px); 
-                            @include vp( height, 200px); 
-                            overflow-y: auto;
-                            border: 1px solid #0000001F;
-                            background-color: $white;
-                            @include vp( border-radius, 12px);
-                            p {
-                                @include vp( padding, 12px 0px); 
-                                @include vp( line-height, 40px); 
-                                }
-                            &.active {
-                                display: block;
-                                }
-                           }
                         }
                         &.text_box {
                             position: relative;
@@ -211,7 +168,77 @@
                             }
                         }
                     }
-                }           
+                }         
+                &.required {
+                    .title01 {
+                        position: relative;
+                        color: #FF2E00;
+                        font-weight: $fw6;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            @include vp(top, 0px);
+                            @include vp(width, 10px);
+                            @include vp(height, 10px);
+                            background: url("../images/icons/ico_required.png") center center no-repeat;
+                            @include vp(background-size, 10px auto);
+                        }
+                    }
+                    .form_list {
+                        li {
+                            &.on {
+                                border: 1px solid #FF2E00;
+                                .text {
+                                    color: #FF2E00;
+                                }
+                            }
+                            &.select_box {
+                                position: relative;
+                                &.on {
+                                    .select_option {
+                                        border: none;
+                                        color: #FF2E00;
+                                    }
+                                }
+                               .select_option {
+                                position: relative;
+                                @include vp( padding, 24px 60px 24px 20px); 
+                                border: 1px solid #0000001F;
+                                @include vp( border-radius, 12px);
+                                    &::after {
+                                        content: '';
+                                        position: absolute;
+                                        @include vp(top, 20px);
+                                        @include vp(right, 16px);
+                                        @include vp(width, 24px);
+                                        @include vp(height, 32px);
+                                        background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
+                                        @include vp(background-size, 24px auto);
+                                    }
+                               }
+                               .option_list {
+                                display: none;
+                                position: absolute;
+                                @include vp( padding, 12px 55px 12px 20px); 
+                                @include vp( top, 80px); 
+                                @include vp( left, 0px); 
+                                @include vp( height, 200px); 
+                                overflow-y: auto;
+                                border: 1px solid #0000001F;
+                                background-color: $white;
+                                @include vp( border-radius, 12px);
+                                p {
+                                    @include vp( padding, 12px 0px); 
+                                    @include vp( line-height, 40px); 
+                                    }
+                                &.active {
+                                    display: block;
+                                    }
+                               }
+                            }
+                        }
+                    }
+                }  
             }
         }
     
@@ -284,13 +311,11 @@
                         @include vp(padding, 40px);   
                         @include vp( line-height, 40px);   
                         @include vp( font-size, $f13); 
+                        @include vp( border-radius, 16px); 
                         @include vp( height, 252px); 
                         width:100%;
-                        border: none;
-                        background: #EDEDED;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        border-radius: 8px;
+                        border: 1px solid $light-gray-2;
+                        background: $white;
                     }
                     .chk01 {
                         label {
