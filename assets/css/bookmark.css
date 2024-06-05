@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* 정리중 */
+/*폰트 사이즈*/
+#wrap.bookmark {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark {
+    padding-top: 14.9333333333vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner {
+  padding: 48px 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner {
+    padding: 6.4vw 5.3333333333vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents {
+  padding-top: 234px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents {
+    padding-top: 31.2vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+  color: #999;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+    line-height: 5.3333333333vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap {
+  text-align: center;
+  margin-top: 80px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap {
+    margin-top: 10.6666666667vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+  color: #00A862;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.2px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+    font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+    line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+    letter-spacing: 0.0266666667vw;
+  }
+}
+#wrap.bookmark .cm_tab_panel.nolist {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
