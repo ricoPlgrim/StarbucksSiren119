@@ -2797,6 +2797,22 @@ header.filter .btn_close {
     height: 0.8vw;
   }
 }
+.cm_tab_contents.col3 .cm_type_list li {
+  width: 250px;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_contents.col3 .cm_type_list li {
+    width: 33.3333333333vw;
+  }
+}
+.cm_tab_contents.col3 .bar {
+  width: 250px;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_contents.col3 .bar {
+    width: 33.3333333333vw;
+  }
+}
 
 .cm_tab_panel_contents {
   min-height: 350px;
@@ -2858,6 +2874,9 @@ header.filter .btn_close {
 }
 .cm_tab_panel .panel_list > li.on {
   display: block;
+}
+.cm_tab_panel.cm_g {
+  background: #F6F6F6;
 }
 
 .cm_tab_bottom {
@@ -3276,7 +3295,8 @@ header.filter .btn_close {
   width: 24px;
   height: 24px;
   background-color: #00A862;
-  transform: translate(-50%, -50%) scale(0); /* 크기 비율 1 (원래 크기) */
+  transform: translate(-50%, -50%) scale(0);
+  /* 크기 비율 1 (원래 크기) */
   transition: transform 0.3s ease;
 }
 @media screen and (max-width: 750px) {
