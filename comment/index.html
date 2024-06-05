@@ -11,7 +11,7 @@
 <body>
     <main id="wrap" class="detail">
         <header class="common">
-            <button class="btn_back"></button>
+            <button class="btn_back" data-target="commentPop"></button>
             <h1>댓글 수정</h1>
         </header>
 
@@ -37,20 +37,27 @@
             </div>
         </section>
 
-        <!-- 하단 고정 댓글 버튼 -->
-        <aside class="btn_comment">
-            <div class="text_box">
-                <textarea rows="1" cols="2" placeholder="텍스트입력"></textarea>
-                <span class="byte_num">0 / 1000byte</span>
-                <span class="btn_delete">내용 삭제</span>
+        <!-- 댓글 알럿 레이어 팝업 -->
+        <div id="commentPop" class="layer_m_popup">
+            <div class="pop_cont01">
+                <p class="text">
+                    댓글 작성을 종료하시겠습니까? <br/>
+                    작성중인 내용은 저장되지 않습니다.
+                </p>
+                <div class="btn_bottom">
+                    <button class="cm_btn_round on">
+                        <span class="text">계속 작성</span>
+                    </button>
+                    <button class="cm_btn_round active">
+                        <span class="text">작성 종료</span>
+                    </button>
+                </div>
             </div>
-            <!-- 활성화되면 class="on" 추가 -->
-            <button>등록</button>
-        </aside>
+        </div>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/report.js"></script>
+    <script src="../assets/js/popup.js"></script>
 </body>
 </html>
