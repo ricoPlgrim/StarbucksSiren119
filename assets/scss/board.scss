@@ -1,0 +1,73 @@
+@import 'base/variables';
+@import 'base/mixin'; 
+
+#wrap {
+    &.board {
+        @include vp(padding-top, 112px);
+        .cm_type_list{
+            position: relative;
+            &:after{ 
+                content: ''; 
+                position: absolute;
+                @include vp(bottom, -18px); 
+                left:0;
+                width: 100%;
+                @include vp(height, 12px); 
+                background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+            }
+            li {
+                @include vp(width, 50%);
+                @include vp(height, 94px);
+            }
+            .bar {
+                @include vp(width, 50%);
+                @include vp(top, 94px);
+            }
+        }
+        .cm_full_wrap {
+            margin-top: 0px;
+            .buttons_list {
+                @include vp(padding, 32px 0px 24px);
+                &::-webkit-scrollbar {display: none;}
+            }
+        }
+        .board_list_wrap {
+            .board_list {
+                > li {
+                    @include vp(padding, 48px 0px);
+                    @include vp(margin, 0 40px);
+                    border-bottom: 1px solid $light-gray-3;
+                    a {
+                        @include vp(padding-right, 80px);
+                        display: block;
+                        @include vp(line-height, 40px);
+                        @include vp(font-size, $f13);
+                        color: $black;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .board_conts {
+            @include vp(padding, 0px 40px);
+            .text_wrap {
+                @include vp(padding-top, 60px);
+                .title {
+                    @include vp(margin-bottom, 40px);
+                    @include vp(font-size, $f15);
+                    @include vp(line-height, 48px);
+                    font-weight: $fw6;
+                }
+                p {
+                    @include vp(line-height, 40px);
+                    @include vp(font-size, $f13);
+                }
+            }
+            .img_wrap {
+                @include vp(margin-top, 40px);
+            }
+        }
+    }
+}
