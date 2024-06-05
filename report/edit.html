@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/report.css">
+</head>
+<body>
+    <main id="wrap" class="report">
+        <header class="common">
+            <button class="btn_back"></button>
+            <h1>보고수정</h1>
+        </header>
+        <section>
+            <h2 class="blind">보고수정</h2>
+            <div class="category_wrap">
+                <div class="menu_img">
+                    <img src="../assets/images/icons/icon_disaster.png" alt="메뉴 아이콘">
+                </div>
+                <div class="category_box">
+                    <div class="title">보고하기</div>
+                    <div class="category_info">
+                        <span class="text01">재해시설</span>
+                        <span class="text02">누수</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create_form">
+                <div class="file_upload_wrap">
+                    <div class="title01">사진</div>
+                    <ul class="file_list">
+                        <!-- 이미지 추가 버튼 -->
+                        <li>
+                            <div class="btn_upload">
+                                <input type="file" name="file" id="imageFile" accept="image/*" multiple>
+                            </div>
+                        </li>
+                        <!-- 추가된 이미지 -->
+                        <li>
+                            <div class="img_box"><img src="../assets/images/temp/report01.png" alt="업로드 이미지" /></div>
+                            <span class="btn_delete"></span>
+                        </li>
+                        <li>
+                            <div class="img_box"><img src="../assets/images/temp/report02.png" alt="업로드 이미지" /></div>
+                            <span class="btn_delete"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box required">
+                    <div class="title01">응급조치</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">고객대피</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">소방서 출동</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>   
+                <div class="form_box required">
+                    <div class="title01">발생매장</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">Store1</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">Store2 출동</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box required">
+                    <div class="title01">발생시간</div>
+                    <ul class="form_list">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">2024년 04월 03일</span>
+                            </button>
+                        </li>
+                        <li class="select_box">
+                            <div class="select_option">07시</div>
+                            <div class="option_list">
+                                <p>07시</p>
+                                <p>08시</p>
+                                <p>09시</p>
+                                <p>10시</p>
+                                <p>11시</p>
+                                <p>12시</p>
+                                <p>13시</p>
+                                <p>14시</p>
+                                <p>15시</p>
+                                <p>16시</p>
+                                <p>17시</p>
+                                <p>18시</p>
+                                <p>19시</p>
+                                <p>20시</p>
+                                <p>21시</p>
+                                <p>22시</p>
+                            </div>
+                        </li>
+                        <li class="select_box">
+                            <div class="select_option">00분</div>
+                            <div class="option_list">
+                                <p>00분</p>
+                                <p>05분</p>
+                                <p>10분</p>
+                                <p>15분</p>
+                                <p>20분</p>
+                                <p>25분</p>
+                                <p>30분</p>
+                                <p>35분</p>
+                                <p>40분</p>
+                                <p>45분</p>
+                                <p>50분</p>
+                                <p>55분</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box required">
+                    <div class="title01">발생장소</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">플로어</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">백룸</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">창가</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">천장</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">DT영업점</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">영업가부</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">영업가능</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">일시 영업중단</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">DT 영업중단</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">재난피해</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">파트너</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">고객</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">물품</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">기타</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">상품명</div>
+                    <ul class="form_list">
+                        <li class="text_box">
+                            <input type="text" placeholder="">
+                            <span class="btn_delete">내용 삭제</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">제공컵</div>
+                    <ul class="form_list scroll">
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">매장컵</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">리유저블</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">텀블러</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_box">
+                    <div class="title01">컵사이즈</div>
+                    <ul class="form_list">
+                        <li class="text_box">
+                            <input type="text" placeholder="사이즈를 기재해주세요">
+                            <span class="btn_delete">내용 삭제</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="write_preview">
+                <div class="preview_header">
+                    <h3>보고내용 미리보기<span>선택하신 항목이 자동 입력됩니다</span></h3>
+                </div>
+                <ul class="preview_list">
+                   <li>
+                        <dl>
+                            <dt>응급조치</dt>
+                            <dd>
+                                <span class="emerg01">고객대피</span>
+                                <span class="emerg02">소방서</span>
+                            </dd>
+                        </dl>
+                   </li>
+                   <li>
+                        <dl>
+                            <dt>발생매장</dt>
+                            <dd>성수역점</dd>
+                        </dl>
+                        <dl>
+                            <dt>발생시간</dt>
+                            <dd>2024년 4월 30일 09시 23분</dd>
+                        </dl>
+                        <dl>
+                            <dt>발생장소</dt>
+                            <dd>플로어, 백룸</dd>
+                        </dl>
+                        <dl>
+                            <dt>영업가부</dt>
+                            <dd>일시 영업 중단,DT 영업중단</dd>
+                        </dl>
+                        <dl>
+                            <dt>재난피해</dt>
+                            <dd>물품,기타</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
+                    </li>
+                    <li>
+                        <div class="cm_check_box chk01">
+                            <label for="checkbox01">
+                                <input type="checkbox" name="check" id="checkbox01" />긴급 보고 필요
+                            </label>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cm_check_box chk01">
+                            <label for="checkbox02">
+                                <input type="checkbox" name="check" id="checkbox02" />유지보수 앱 연결하기
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn_report">
+                <button data-target="completeEditPop">수정하기</button>
+            </div>
+        </section>
+
+        <!-- 수정 완료 알럿 팝업 -->
+        <div class="layer_toast" id="completeEditPop">
+            <div class="pop_cont01">
+                <p class="text">수정이 완료되었습니다.</p>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/report.js"></script>
+</body>
+</html>
