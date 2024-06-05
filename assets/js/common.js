@@ -94,7 +94,6 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);
 
         _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
- 
     },
 
     loadEvent: function () {
@@ -256,13 +255,23 @@ var commonUi = {
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
+        var menuBtn = $(this).find("button");
+        var filterText = $(menuBtn).data("filter");
     
+        // 탭메뉴 클릭 시 활성화
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
-    
+
+        // 탭메뉴 클릭 시 필터된 항목 보여주기
+        $(".board_list").hide();
+        if (filterText === "all") {
+            $(".board_list").show();
+        } else {
+            $(".board_list." + filterText).show();
+        }
+        
         commonUi.centerMenu(menuContainer, $(this));
     },
-    
     centerMenu: function(menuContainer, menuItem) {
         var containerWidth = menuContainer.outerWidth();
         var itemOffsetLeft = menuItem.offset().left;

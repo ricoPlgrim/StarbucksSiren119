@@ -63,11 +63,11 @@
   margin-top: 0px;
 }
 #wrap.board .cm_full_wrap .buttons_list {
-  padding: 36px 0px 30px;
+  padding: 36px 30px 30px 0px;
 }
 @media screen and (max-width: 750px) {
   #wrap.board .cm_full_wrap .buttons_list {
-    padding: 4.8vw 0vw 4vw;
+    padding: 4.8vw 4vw 4vw 0vw;
   }
 }
 #wrap.board .cm_full_wrap .buttons_list::-webkit-scrollbar {
@@ -81,8 +81,98 @@
     margin: 0vw 5.3333333333vw 8vw;
   }
 }
+#wrap.board .board_list_wrap .board_list.partner {
+  background: url("../images/icons/ico_m_partner.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.partner {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.partner {
+    background-position-y: 6.4vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list.customer {
+  background: url("../images/icons/ico_m_customer.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.customer {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.customer {
+    background-position-y: 6.4vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list.disaster {
+  background: url("../images/icons/ico_m_disaster.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.disaster {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.disaster {
+    background-position-y: 6.4vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list.fire {
+  background: url("../images/icons/ico_m_fire.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.fire {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.fire {
+    background-position-y: 6.4vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list.foreign {
+  background: url("../images/icons/ico_m_foreign.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.foreign {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.foreign {
+    background-position-y: 6.4vw;
+  }
+}
+#wrap.board .board_list_wrap .board_list.food_safety {
+  background: url("../images/icons/ico_m_food_safety.png") center left no-repeat;
+  background-size: 50px auto;
+  background-position-y: 48px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.food_safety {
+    background-size: 6.6666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.board .board_list_wrap .board_list.food_safety {
+    background-position-y: 6.4vw;
+  }
+}
 #wrap.board .board_list_wrap .board_list .header {
-  padding: 60px 0px 40px;
+  padding: 60px 0px 40px 68px;
   font-size: 30px;
   font-weight: 600;
   line-height: normal;
@@ -90,7 +180,7 @@
 }
 @media screen and (max-width: 750px) {
   #wrap.board .board_list_wrap .board_list .header {
-    padding: 8vw 0vw 5.3333333333vw;
+    padding: 8vw 0vw 5.3333333333vw 9.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -132,22 +222,22 @@
     font-size: 3.4666666667vw;
   }
 }
-#wrap.board .board_list_wrap .board_list .btn_more {
+#wrap.board .board_list_wrap .board_list .btn {
   margin-top: 40px;
   width: 670px;
   text-align: center;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more {
+  #wrap.board .board_list_wrap .board_list .btn {
     margin-top: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more {
+  #wrap.board .board_list_wrap .board_list .btn {
     width: 89.3333333333vw;
   }
 }
-#wrap.board .board_list_wrap .board_list .btn_more button {
+#wrap.board .board_list_wrap .board_list .btn button {
   position: relative;
   padding: 20px 0px;
   width: 100%;
@@ -157,21 +247,21 @@
   color: rgba(0, 0, 0, 0.58);
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button {
+  #wrap.board .board_list_wrap .board_list .btn button {
     padding: 2.6666666667vw 0vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button {
+  #wrap.board .board_list_wrap .board_list .btn button {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button {
+  #wrap.board .board_list_wrap .board_list .btn button {
     border-radius: 1.6vw;
   }
 }
-#wrap.board .board_list_wrap .board_list .btn_more button::after {
+#wrap.board .board_list_wrap .board_list .btn button::after {
   content: "";
   position: absolute;
   top: 16px;
@@ -182,29 +272,35 @@
   background-size: 24px auto;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+  #wrap.board .board_list_wrap .board_list .btn button::after {
     top: 2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+  #wrap.board .board_list_wrap .board_list .btn button::after {
     right: 24vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+  #wrap.board .board_list_wrap .board_list .btn button::after {
     width: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+  #wrap.board .board_list_wrap .board_list .btn button::after {
     height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list .btn_more button::after {
+  #wrap.board .board_list_wrap .board_list .btn button::after {
     background-size: 3.2vw auto;
   }
+}
+#wrap.board .board_list_wrap .board_list .btn_close {
+  display: none;
+}
+#wrap.board .board_list_wrap .board_list .btn_close button::after {
+  transform: scaleY(-1);
 }
 #wrap.board .board_conts {
   padding: 0px 40px;

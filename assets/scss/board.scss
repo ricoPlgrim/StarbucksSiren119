@@ -27,15 +27,45 @@
         .cm_full_wrap {
             margin-top: 0px;
             .buttons_list {
-                @include vp(padding, 36px 0px 30px);
+                @include vp(padding, 36px 30px 30px 0px);
                 &::-webkit-scrollbar {display: none;}
             }
         }
         .board_list_wrap {
             .board_list {
                 @include vp(margin, 0px 40px 60px);
+                &.partner {
+                    background: url("../images/icons/ico_m_partner.png") center left no-repeat;
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
+                &.customer {
+                    background: url("../images/icons/ico_m_customer.png") center left no-repeat;
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
+                &.disaster {
+                    background: url("../images/icons/ico_m_disaster.png") center left no-repeat;
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
+                &.fire {
+                    background: url("../images/icons/ico_m_fire.png") center left no-repeat;
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
+                &.foreign {
+                    background: url("../images/icons/ico_m_foreign.png") center left no-repeat;
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
+                &.food_safety {
+                    background: url("../images/icons/ico_m_food_safety.png") center left no-repeat; 
+                    @include vp(background-size, 50px auto); 
+                    @include vp(background-position-y, 48px); 
+                }
                 .header {
-                    @include vp(padding, 60px 0px 40px);
+                    @include vp(padding, 60px 0px 40px 68px);
                     @include vp(font-size, $f15);
                     font-weight: $fw6;
                     line-height: normal;
@@ -55,7 +85,7 @@
                         overflow: hidden;
                     }
                 }
-                .btn_more {
+                .btn {
                     @include vp(margin-top, 40px);
                     @include vp(width, 670px);
                     text-align: center;
@@ -77,6 +107,12 @@
                             background: url("../images/icons/ico_arrow_down.png") center center no-repeat;
                             @include vp(background-size, 24px auto);
                         }
+                    }
+                }  
+                .btn_close {
+                    display: none;
+                    button::after {
+                        transform: scaleY(-1); 
                     }
                 }
             }
