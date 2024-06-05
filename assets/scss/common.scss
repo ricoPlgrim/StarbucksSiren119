@@ -10,7 +10,8 @@
     font-size: 0;
     @include vp(max-width, 750px);
     margin: 0 auto;
-    &.setting{
+
+    &.setting {
         @include vp(padding-top, 112px);
     }
 }
@@ -61,7 +62,7 @@
                 }
             }
 
-          
+
 
             .staff_info_contents {
                 @include vp(padding, 40px 40px 56px);
@@ -80,16 +81,18 @@
                     @include vp(padding-top, 40px);
                     @include vp(padding-bottom, 60px);
 
-                    > button {
+                    >button {
                         @include vp(padding, 24px 20px);
                         @include vp(width, 216px);
                         text-align: center;
                         cursor: pointer;
+
                         span {
                             @include vp(padding-left, 60px);
                             @include vp(font-size, $f15);
                             color: $green;
                             font-weight: $fw6;
+
                             &.mail {
                                 background: url("../images/icons/ico_mail.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
@@ -127,82 +130,93 @@
 
             .record_info_contents {
                 @include vp(padding, 60px);
-             
-                .btn_group{
+
+                .btn_group {
                     display: flex;
                     flex-direction: column;
-                    .icon{ 
+
+                    .icon {
                         position: relative;
                         display: flex;
                         align-items: center;
-                        color:$black-87;
+                        color: $black-87;
                         @include vp(font-size, $f14);
                         font-weight: $fw4;
                         @include vp(line-height, 22px);
                         @include vp(margin-top, 38px);
-                      
-                        &:before{
+
+                        &:before {
                             display: block;
                             content: '';
-                            @include vp(width, 40px);  
-                            @include vp(height, 40px);  
+                            @include vp(width, 40px);
+                            @include vp(height, 40px);
                             @include vp(margin-right, 40px);
                         }
-                        &.setting{
-                            &:before{
+
+                        &.setting {
+                            &:before {
                                 background: url('../images/icons/icon_setting.png') 0 0 no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
-                         
+
                         }
-                        &.situation{
-                            &:before{
+
+                        &.situation {
+                            &:before {
                                 background: url('../images/icons/icon_mark_read.png') 0 0 no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
-                            }
-                         
-                        &.delete{
-                            &:before{
+                        }
+
+                        &.delete {
+                            &:before {
                                 background: url('../images/icons/icon_delete.png') 0 0 no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
                         }
-                        &:first-child{ margin-top:0;}
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
                     }
                 }
-             
-            } 
+
+            }
 
 
-            .btn_comment_contents {                
-                @include vp(padding, 52px 44px 105px );     
+            .btn_comment_contents {
+                @include vp(padding, 52px 44px 105px);
+
                 .btn_box {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     gap: 10px;
-                    > button {
-                        @include vp(padding, 20px 0px); 
-                        @include vp(width, 670px); 
-                        @include vp(border-radius, 12px );  
+
+                    >button {
+                        @include vp(padding, 20px 0px);
+                        @include vp(width, 670px);
+                        @include vp(border-radius, 12px);
                         border: 1px solid $green;
                         background: $white;
                         text-align: center;
                         cursor: pointer;
+
                         span {
-                            @include vp(padding-left, 60px); 
+                            @include vp(padding-left, 60px);
                             @include vp(font-size, $f14 );
-                            @include vp(line-height, 48px );
+                            @include vp(line-height, 48px);
                             color: $green;
+
                             &.btn_edit {
                                 background: url("../images/icons/ico_edit.png") center left no-repeat;
-                                @include vp(background-size, 40px auto); 
-                              }
-                              &.btn_delete {
+                                @include vp(background-size, 40px auto);
+                            }
+
+                            &.btn_delete {
                                 background: url("../images/icons/ico_delete.png") center left no-repeat;
-                                @include vp(background-size, 40px auto); 
-                              }
+                                @include vp(background-size, 40px auto);
+                            }
                         }
                     }
                 }
@@ -212,9 +226,9 @@
                 background: $white !important;
             }
         }
-      
-        &.open{
-            bottom:0;
+
+        &.open {
+            bottom: 0;
         }
     }
 
@@ -245,28 +259,30 @@
         }
     }
 
-   
-    
-    &.filter{
-        .sheet_wrap{
-            .btn_sheet_close{ 
+
+
+    &.filter {
+        .sheet_wrap {
+            .btn_sheet_close {
                 display: block;
                 @include vp(width, 96px);
                 @include vp(height, 96px);
-                margin:0 auto;
+                margin: 0 auto;
             }
-            &.open{ 
+
+            &.open {
                 // bottom:-690px;
             }
         }
     }
 }
 
-#record{
-    .sheet_wrap{
+#record {
+    .sheet_wrap {
         @include vp(min-height, 170px);
     }
 }
+
 .scroll_top_box {
     display: none;
     position: fixed;
@@ -315,6 +331,7 @@
         @include vp(border-radius, 40px);
         background: $white;
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+
         .text {
             @include vp(font-size, $f13);
             @include vp(line-height, 40px);
@@ -334,7 +351,8 @@
                 @include vp(line-height, 40px);
                 @include vp(font-size, $f14);
                 text-align: center;
-                > span {
+
+                >span {
                     @include vp(font-size, $f14);
                 }
             }
@@ -366,6 +384,7 @@
         color: $white;
         @include vp(border-radius, 12px);
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+
         .text {
             @include vp(font-size, $f15);
             @include vp(line-height, 40px);
@@ -431,6 +450,7 @@
                         background: #EBFFF7;
                         font-weight: $fw4;
                         line-height: 1;
+
                         &.complete {
                             color: $green;
                         }
@@ -446,7 +466,8 @@
                             background: $light-gray-3;
                             color: $dark-gray;
                         }
-                        &.comment{
+
+                        &.comment {
                             @include vp(border, 2px solid $blue);
                             background: $light-blue;
                             color: $blue;
@@ -455,11 +476,12 @@
                         &:first-child {
                             margin-left: 0;
                         }
-                        &.bullet{
-                            &::after{
+
+                        &.bullet {
+                            &::after {
                                 content: '';
                                 position: absolute;
-                                top:0;
+                                top: 0;
                                 @include vp(right, -15px);
                                 @include vp(width, 8px);
                                 @include vp(height, 8px);
@@ -467,7 +489,7 @@
                                 border-radius: 50%;
                             }
                         }
-                    
+
                     }
 
                     p {
@@ -515,6 +537,7 @@
 
                     &.last {
                         @include vp(padding-top, 20px);
+
                         span {
                             color: $dark-gray;
                             @include vp(font-size, $f12);
@@ -699,6 +722,7 @@
     .cm_type_list {
         position: relative;
         display: flex;
+
         li {
             @include vp(width, 188px);
             @include vp(height, 88px);
@@ -719,17 +743,20 @@
                 }
             }
         }
-        &::after{ 
+
+        &::after {
             content: '';
             display: block;
             position: absolute;
             @include vp(bottom, -12px);
-            left:0;
+            left: 0;
             width: 100%;
             @include vp(height, 12px);
             background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
         }
+
     }
+
     .bar {
         position: absolute;
         left: 0;
@@ -738,25 +765,43 @@
         @include vp(height, 6px);
         background: $green;
     }
+
+    &.col3 {
+        .cm_type_list {
+            li {
+                @include vp(width, 250px);
+            }
+        }
+
+        .bar {
+            @include vp(width, 250px);
+        }
+    }
 }
 
-.cm_tab_panel_contents{
+.cm_tab_panel_contents {
     @include vp(min-height, 350px);
-    li{
+
+    li {
         display: none;
         @include vp(padding, 60px);
         @include vp(font-size, 50px);
         color: $black;
-        &.on{ display: block;}
+
+        &.on {
+            display: block;
+        }
     }
 }
 
 .cm_tab_panel {
+
     // @include vp(max-height, 240px );
     // overflow: auto;
     .panel_list {
         >li {
             display: none;
+
             .inner {
                 @include vp(padding, 30px 20px);
 
@@ -776,15 +821,21 @@
                     }
                 }
             }
+
             &.on {
                 display: block;
             }
         }
     }
+
+    &.cm_g {
+        background: $light-gray-4;
+    }
 }
 
 .cm_tab_bottom {
-    box-shadow: 0 -1px 5px 0px $$light-gray-6;
+    box-shadow: 0 -1px 5px 0px $light-gray-6;
+
     .button_grop {
         .inner {
             @include vp(padding, 20px 0 20px 0);
@@ -836,8 +887,9 @@
                         @include vp(background-size, 28px auto);
                         z-index: 10;
                     }
-                    &:first-child{
-                        @include vp(margin-left, 40px );    
+
+                    &:first-child {
+                        @include vp(margin-left, 40px);
                     }
                 }
             }
@@ -850,26 +902,29 @@
             @include vp(height, 2px);
             background-color: $light-gray-3;
         }
-        &.bottom{
-            .inner{
+
+        &.bottom {
+            .inner {
                 @include vp(padding, 40px 40px 62px 40px);
-                button{
+
+                button {
                     @include vp(height, 50px);
                     @include vp(width, 466px);
-                    &:first-child{  
-                        @include vp(margin-right, 8px); 
+
+                    &:first-child {
+                        @include vp(margin-right, 8px);
                         @include vp(width, 196px);
                     }
-                 
+
                 }
             }
         }
     }
 
-    &.filter{
+    &.filter {
         position: fixed;
-        bottom:0;
-        left:50%;
+        bottom: 0;
+        left: 50%;
         transform: translateX(-50%);
         width: 100%;
         @include vp(max-width, 750px);
@@ -881,12 +936,13 @@
     width: 100%;
     @include vp(margin-top, 28px);
     @include vp(border-bottom, 2px solid $light-gray-2);
+
     >.buttons_list {
         display: flex;
         overflow-y: auto;
         // transform: translateX(40px);
         @include vp(padding, 16px 40px 32px 0);
-   
+
         li {
             flex: 0 0 auto;
             @include vp(margin-left, 60px);
@@ -902,8 +958,9 @@
             &:first-child {
                 @include vp(margin-left, 40px);
             }
-            &.on{
-                button{
+
+            &.on {
+                button {
                     color: $black;
                 }
             }
@@ -911,6 +968,7 @@
 
     }
 }
+
 /*font weight 정의*/
 .cm-w4 {
     font-weight: $fw4;
@@ -1036,13 +1094,14 @@
             position: absolute;
             @include vp(top, 50%);
             @include vp(left, 50%);
-            border-radius: 50%; 
+            border-radius: 50%;
             @include vp(width, 24px);
             @include vp(height, 24px);
             background-color: $green;
-            transform: translate(-50%, -50%) scale(0); /* 크기 비율 1 (원래 크기) */
+            transform: translate(-50%, -50%) scale(0);
+            /* 크기 비율 1 (원래 크기) */
             transition: transform 0.3s ease;
-         
+
         }
     }
 
@@ -1144,7 +1203,6 @@
     align-items: center;
     @include vp(border-radius, 12px);
     @include vp(border, 2px solid $black-12);
-
     .text {
         color: $black-58;
         text-align: center;
@@ -1185,51 +1243,58 @@
 }
 
 /*공통*/
-.cm_setting_cotnents{
-    .inner{
-        @include vp(padding,  60px 40px);
-        .setting_list{
-            >li{
+.cm_setting_cotnents {
+    .inner {
+        @include vp(padding, 60px 40px);
+
+        .setting_list {
+            >li {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
                 @include vp(padding-top, 32px);
-                h3{
-                    color:$black-87;
+
+                h3 {
+                    color: $black-87;
                     @include vp(font-size, $f15);
                     @include vp(line-height, $f12);
                     font-weight: $fw7;
                 }
-                a{
-                    color:$black-87;
+
+                a {
+                    color: $black-87;
                     @include vp(font-size, $f13);
                     @include vp(line-height, $f12);
                     font-weight: $fw4;
                 }
-                &:first-child{
-                    padding-top:0;
+
+                &:first-child {
+                    padding-top: 0;
                     @include vp(padding-bottom, 40px);
                     @include vp(margin-bottom, 32px);
                     @include vp(border-bottom, 2px solid $light-gray-2 );
                 }
-                dl{
+
+                dl {
                     display: flex;
                     width: 100%;
                     align-items: center;
-                    justify-content: space-between; 
-                    dt{
-                        color:$black-87;
+                    justify-content: space-between;
+
+                    dt {
+                        color: $black-87;
                         @include vp(font-size, $f15);
                         font-weight: $fw4;
                         @include vp(line-height, $f12);
                     }
                 }
 
-                .checkbox_list{
-                    li{ 
+                .checkbox_list {
+                    li {
                         @include vp(margin-top, 44px);
-                        >label{
+
+                        >label {
                             display: flex;
                             align-items: center;
                             color: $black;
@@ -1238,14 +1303,18 @@
                             @include vp(padding-left, 84px);
                             font-weight: $fw4;
                         }
-                        &:first-child{ margin-top:0; }
+
+                        &:first-child {
+                            margin-top: 0;
+                        }
                     }
                 }
-                &.last{
+
+                &.last {
                     @include vp(margin-top, 60px);
                     @include vp(padding-top, 60px);
                     @include vp(border-top, 2px solid $light-gray-2 );
-                    padding-bottom:0;
+                    padding-bottom: 0;
                 }
             }
         }
@@ -1261,6 +1330,7 @@
         justify-content: center;
         align-items: center;
         @include vp(gap, 10px);
+
         li {
             @include vp(width, 160px);
             @include vp(border-radius, 8px);
@@ -1299,9 +1369,10 @@
             @include vp(width, 330px);
             @include vp(height, 76px);
             @include vp(padding, 22px 40px);
-            @include vp(border-radius, 12px); 
+            @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
+
             span {
                 font-family: "Pretendard Variable";
                 @include vp(font-size, $f13);
@@ -1324,5 +1395,3 @@
         }
     }
 }
-
-
