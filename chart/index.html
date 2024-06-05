@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/chart.css">
+</head>
+
+<body>
+    <main id="wrap" class="chart">
+        <header class="common">
+            <button class="btn_back"></button>
+            <h1>현황.통계</h1>
+        </header>
+        <section>
+            <h2 class="blind">현황.통계 페이지</h2>
+            <div class="cm_date_contents">
+                <ul class="date_list">
+                    <li class="on">
+                        <button type="bytton">월별 </button>
+                    </li>
+                    <li>
+                        <button type="bytton">1개월</button>
+                    </li>
+                    <li>
+                        <button type="bytton">3개월</button>
+                    </li>
+                    <li>
+                        <button type="bytton">직접입력</button>
+                    </li>
+                </ul>
+                <div class="date_setting">
+                    <div class="date_start">
+                        <span class="date_text">2024-04-13</span>
+                        <input type="date" name="startdate" id="startdate" value="2018-07-22" min="2018-01-01"
+                            max="2018-12-31">
+                    </div> 
+                    <div class="date_end">
+                        <span class="date_text">2024-04-13</span>
+                        <input type="date" name="enddate" id="enddate" value="2018-07-22" min="2018-01-01"
+                            max="2018-12-31">
+                    </div>
+                </div>
+
+            </div>
+            <div class="chart_wrap">
+                <h3>카테고리별 현황 분포​</h3>
+                <!-- 차트 영역 -->
+            </div>
+        </section>
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>
