@@ -41,8 +41,7 @@
                         font-weight: 400;
                         &::placeholder {
                             color:    #bbb;
-                            @include vp(font-size, $f16 );
-                            transform: scale(0.8125);
+                            @include vp(font-size, $f13 );
                             transform-origin: left center; 
                             @include vp(letter-spacing, .5px );
                             font-weight: 400;

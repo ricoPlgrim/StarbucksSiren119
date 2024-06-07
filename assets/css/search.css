@@ -741,15 +741,14 @@ body {
 }
 #wrap.searh section .input_contents .input_box > input::placeholder {
   color: #bbb;
-  font-size: 32px;
-  transform: scale(0.8125);
+  font-size: 26px;
   transform-origin: left center;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input::placeholder {
-    font-size: 4.2666666667vw;
+    font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
