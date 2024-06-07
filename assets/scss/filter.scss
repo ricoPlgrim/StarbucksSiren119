@@ -9,12 +9,22 @@
                 >li {
                     .inner {
                         @include vp(padding, 48px 40px);
+                     
                     }
                     
                 }
             }
+          
         }
-
+        .cm_tab_bottom{
+            .button_grop{
+                &.bottom{
+                    button{
+                        @include vp(height, 100px );
+                    }
+                }
+            }
+        }
     }
 }
 
