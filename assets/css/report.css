@@ -1801,6 +1801,7 @@
   padding: 20px 40px 60px;
   background: #fff;
   box-shadow: 0 -1px 5px 0px #BBB;
+  z-index: 20;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment {
