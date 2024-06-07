@@ -688,6 +688,7 @@
   width: 100%;
   border: 1px solid #DDD;
   background: #fff;
+  resize: none;
 }
 @media screen and (max-width: 750px) {
   #wrap.report .write_preview .preview_list li textarea {
