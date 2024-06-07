@@ -1409,7 +1409,6 @@
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
-            @include vp(line-height, 40px);
             box-sizing: border-box;
 
             span {
@@ -1418,7 +1417,7 @@
                 font-weight: $fw4;
                 color: $black;
                 opacity: .6;
-                line-height: 1;
+                @include vp(line-height, 26px);
             }
 
             input {
