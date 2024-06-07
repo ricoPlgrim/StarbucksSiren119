@@ -4068,6 +4068,8 @@ header.filter .btn_close {
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
@@ -4106,18 +4108,11 @@ header.filter .btn_close {
   font-weight: 400;
   color: #000;
   opacity: 0.6;
-  line-height: 26px;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start span,
   .cm_date_contents .date_setting .date_end span {
     font-size: 3.4666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start span,
-  .cm_date_contents .date_setting .date_end span {
-    line-height: 3.4666666667vw;
   }
 }
 .cm_date_contents .date_setting .date_start input,

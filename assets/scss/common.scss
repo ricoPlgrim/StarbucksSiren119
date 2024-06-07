@@ -1410,6 +1410,8 @@
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
             box-sizing: border-box;
+            display: flex;
+            align-items: center;
 
             span {
                 font-family: "Pretendard Variable";
@@ -1417,7 +1419,6 @@
                 font-weight: $fw4;
                 color: $black;
                 opacity: .6;
-                @include vp(line-height, 26px);
             }
 
             input {
