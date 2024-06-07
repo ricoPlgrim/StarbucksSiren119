@@ -700,12 +700,67 @@ header .header_inner .header_top .utility_contents .btn_search {
   }
 }
 header .header_inner .header_top .utility_contents .btn_alarm {
+  position: relative;
   display: block;
   width: 54px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top .utility_contents .btn_alarm {
     width: 7.2vw;
+  }
+}
+header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  width: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
+    top: -1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
+    right: -2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
+    width: 6.6666666667vw;
+  }
+}
+header .header_inner .header_top .utility_contents .btn_alarm .alarm_count .count {
+  width: auto;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  padding: 4px 10px;
+  height: 34px;
+  background: #FF2E00;
+  border-radius: 50px;
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count .count {
+    font-size: 2.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count .count {
+    padding: 0.5333333333vw 1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count .count {
+    height: 4.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header .header_inner .header_top .utility_contents .btn_alarm .alarm_count .count {
+    border-radius: 6.6666666667vw;
   }
 }
 header .header_inner h1 {
@@ -1061,17 +1116,96 @@ header.filter .btn_close {
   display: flex;
   align-items: center;
   justify-content: right;
-  padding: 100px 8px 0 0;
+  padding: 80px 8px 0 0;
   margin-bottom: 38px;
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .gnb_top {
-    padding: 13.3333333333vw 1.0666666667vw 0 0;
+    padding: 10.6666666667vw 1.0666666667vw 0 0;
   }
 }
 @media screen and (max-width: 750px) {
   .gnb .contents .gnb_top {
     margin-bottom: 5.0666666667vw;
+  }
+}
+.gnb .contents .gnb_top a {
+  position: relative;
+  display: block;
+  width: 96px;
+  height: 96px;
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a {
+    width: 12.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a {
+    height: 12.8vw;
+  }
+}
+.gnb .contents .gnb_top a.btn_alarm {
+  background: url("../images/icons/icon_alert_b.png") 0 0 no-repeat;
+  background-size: 96px auto;
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a.btn_alarm {
+    background-size: 12.8vw auto;
+  }
+}
+.gnb .contents .gnb_top a .alarm_count {
+  position: absolute;
+  top: 12px;
+  right: 2px;
+  width: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count {
+    top: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count {
+    right: 0.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count {
+    width: 6.6666666667vw;
+  }
+}
+.gnb .contents .gnb_top a .alarm_count .count {
+  width: auto;
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  padding: 4px 10px;
+  height: 34px;
+  background: #FF2E00;
+  border-radius: 50px;
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count .count {
+    font-size: 2.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count .count {
+    padding: 0.5333333333vw 1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count .count {
+    height: 4.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .gnb .contents .gnb_top a .alarm_count .count {
+    border-radius: 6.6666666667vw;
   }
 }
 .gnb .contents .gnb_top button {
@@ -1086,15 +1220,6 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .gnb .contents .gnb_top button {
     height: 12.8vw;
-  }
-}
-.gnb .contents .gnb_top button.btn_alarm {
-  background: url("../images/icons/icon_alert_b.png") 0 0 no-repeat;
-  background-size: 96px auto;
-}
-@media screen and (max-width: 750px) {
-  .gnb .contents .gnb_top button.btn_alarm {
-    background-size: 12.8vw auto;
   }
 }
 .gnb .contents .gnb_top button.btn_close {

@@ -32,6 +32,13 @@ var _endDateInput;
 var _typeBtns;
 var _twoDepsMenu;
 
+var _searchInput;
+var _deleteAllBtn;
+var _btnTextDelete;
+var _inputBoxTarget;
+var _btnTextDelete;
+
+
 var commonUi = {
 
     init: function () {
@@ -67,6 +74,15 @@ var commonUi = {
 
         _twoDepsMenu = $( ".cm_tab_panel .buttons_list" ).find( "li" );
 
+
+        _searchInput= $( ".search_input" );
+        _deleteAllBtn = $( ".btn_all_delete" );
+        _btnTextDelete = $( ".btn_text_delete" );
+        _inputBoxTarget = $( ".input_box" );
+        _btnTextDelete =  $( ".btn_text_delete" );
+
+
+
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
@@ -94,6 +110,14 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);
 
         _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
+
+        _searchInput.on( "input", commonUi.inputTarget );
+        _searchInput.on( "focus", commonUi.inputFocusEvent );
+        _searchInput.on( "focusout", commonUi.inputFocusOutEvent );
+        _btnTextDelete.on( "click", commonUi.inPutTextDeleteClick );
+
+
+
     },
 
     loadEvent: function () {
@@ -309,6 +333,29 @@ var commonUi = {
             $("body").css("overflow", "scroll");
         }
     },
+
+
+     //검색어 입력시 한글자이상 버튼 삭제 버튼 노출
+     inputTarget: function(){
+        var inputLength = $( this ).val().length;
+        if( inputLength > 0 ){
+            _btnTextDelete.css( "display", "block" );
+        }else{
+            _btnTextDelete.css( "display", "none" );
+        }
+
+    },
+
+    inputFocusEvent: function(){
+        _inputBoxTarget.addClass('active');
+    },
+
+    inputFocusOutEvent: function(){
+        _inputBoxTarget.removeClass('active');
+    },
+   inPutTextDeleteClick: function(){
+    _searchInput.val("");
+   },
 
 };
 

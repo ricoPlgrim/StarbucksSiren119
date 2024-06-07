@@ -31,8 +31,28 @@ header {
                 }
 
                 .btn_alarm {
+                    position: relative;
                     display: block;
                     @include vp(width, 54px);
+                    .alarm_count{
+                        position: absolute;
+                        @include vp(top, -10px);
+                        @include vp(right, -20px);
+                        @include vp(width, 50px);
+                        display: flex;
+                        justify-content: space-around;
+                        .count{
+                            width: auto;
+                            @include vp(font-size, $f11);
+                            font-weight: $fw4;
+                            color: $white;
+                            text-align: center;
+                            @include vp(padding, 4px 10px);
+                            @include vp(height, 34px);
+                            background:$orange;
+                            @include vp(border-radius, 50px);
+                        }
+                    }
                 }
             }
         }
@@ -231,18 +251,40 @@ header {
             display: flex;
             align-items: center;
             justify-content: right;
-            @include vp(padding, 100px 8px 0 0);
+            @include vp(padding, 80px 8px 0 0);
             @include vp(margin-bottom, 38px);
-
-            button {
+            a{
+                position: relative;
+                display: block;
                 @include vp(width, 96px);
                 @include vp(height, 96px);
-
                 &.btn_alarm {
                     background: url("../images/icons/icon_alert_b.png") 0 0 no-repeat;
                     @include vp(background-size, 96px auto);
                 }
-
+                .alarm_count{
+                    position: absolute;
+                    @include vp(top, 12px);
+                    @include vp(right, 2px);
+                    @include vp(width, 50px);
+                    display: flex;
+                    justify-content: space-around;
+                    .count{
+                        width: auto;
+                        @include vp(font-size, $f11);
+                        font-weight: $fw4;
+                        color: $white;
+                        text-align: center; 
+                        @include vp(padding, 4px 10px);
+                        @include vp(height, 34px);
+                        background:$orange;
+                        @include vp(border-radius, 50px);
+                    }
+                }
+            }
+            button {
+                @include vp(width, 96px);
+                @include vp(height, 96px);
                 &.btn_close {
                     background: url("../images/btn/btn_clsoe_b.png") 0 0 no-repeat;
                     @include vp(background-size, 96px auto);
