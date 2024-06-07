@@ -24,13 +24,15 @@
                         position: absolute;
                         top:0;
                         left:0;
-                        width: 100%;
+                        width: 123%;
                         height: 100%;
                         border:0;
                         @include vp(border-radius, 12px );
-                        @include vp(font-size, 26px );
+                        @include vp(font-size, $f16 );
+                        transform: scale(0.8125);
+                        transform-origin: left top; 
                         @include vp(letter-spacing, .5px );
-                        @include vp(padding, 24px 60px 24px 80px );
+                        @include vp(padding, 47px 60px 49px 94px );
                         box-sizing: border-box;
                         @include vp(border, 2px solid $gray );
                         @include vp(border-radius, 12px );
@@ -39,7 +41,9 @@
                         font-weight: 400;
                         &::placeholder {
                             color:    #bbb;
-                            @include vp(font-size, 26px );
+                            @include vp(font-size, $f16 );
+                            transform: scale(0.8125);
+                            transform-origin: left center; 
                             @include vp(letter-spacing, .5px );
                             font-weight: 400;
                          }
