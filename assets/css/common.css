@@ -4063,7 +4063,6 @@ header.filter .btn_close {
   position: relative;
   width: 330px;
   height: 76px;
-  padding: 22px 40px;
   border-radius: 12px;
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
@@ -4086,12 +4085,6 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
   .cm_date_contents .date_setting .date_end {
-    padding: 2.9333333333vw 5.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start,
-  .cm_date_contents .date_setting .date_end {
     border-radius: 1.6vw;
   }
 }
@@ -4103,11 +4096,18 @@ header.filter .btn_close {
 }
 .cm_date_contents .date_setting .date_start span,
 .cm_date_contents .date_setting .date_end span {
+  padding-left: 40px;
   font-family: "Pretendard Variable";
   font-size: 26px;
   font-weight: 400;
   color: #000;
   opacity: 0.6;
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_setting .date_start span,
+  .cm_date_contents .date_setting .date_end span {
+    padding-left: 5.3333333333vw;
+  }
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start span,

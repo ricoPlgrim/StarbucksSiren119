@@ -1405,7 +1405,7 @@
             position: relative;
             @include vp(width, 330px);
             @include vp(height, 76px);
-            @include vp(padding, 22px 40px);
+            // @include vp(padding, 22px 40px);
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
@@ -1414,6 +1414,7 @@
             align-items: center;
 
             span {
+                @include vp(padding-left, 40px);
                 font-family: "Pretendard Variable";
                 @include vp(font-size, $f13);
                 font-weight: $fw4;
