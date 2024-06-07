@@ -5397,12 +5397,14 @@ header.filter .btn_close {
   flex-wrap: nowrap;
   flex-direction: row;
   gap: 8px;
-  height: 64px;
+  height: 66px;
+  padding-bottom: 2px;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .btn_list {
@@ -5416,7 +5418,12 @@ header.filter .btn_close {
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .btn_list {
-    height: 8.5333333333vw;
+    height: 8.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents .btn_group .btn_list {
+    padding-bottom: 0.2666666667vw;
   }
 }
 .sections .section_inner .setting_contents .btn_group .btn_list::-webkit-scrollbar {
