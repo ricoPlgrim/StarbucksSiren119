@@ -3145,6 +3145,8 @@ header.filter .btn_close {
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_bottom .button_grop .inner .btn_list {
@@ -3155,6 +3157,9 @@ header.filter .btn_close {
   .cm_tab_bottom .button_grop .inner .btn_list {
     height: 8.5333333333vw;
   }
+}
+.cm_tab_bottom .button_grop .inner .btn_list::-webkit-scrollbar {
+  display: none;
 }
 .cm_tab_bottom .button_grop .inner .btn_list li {
   position: relative;
@@ -4055,6 +4060,8 @@ header.filter .btn_close {
   border-radius: 12px;
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
+  line-height: 40px;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
@@ -4084,6 +4091,12 @@ header.filter .btn_close {
   .cm_date_contents .date_setting .date_start,
   .cm_date_contents .date_setting .date_end {
     border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_setting .date_start,
+  .cm_date_contents .date_setting .date_end {
+    line-height: 5.3333333333vw;
   }
 }
 .cm_date_contents .date_setting .date_start span,

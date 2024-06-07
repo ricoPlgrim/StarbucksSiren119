@@ -3147,6 +3147,8 @@ header.filter .btn_close {
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_bottom .button_grop .inner .btn_list {
@@ -3157,6 +3159,9 @@ header.filter .btn_close {
   .cm_tab_bottom .button_grop .inner .btn_list {
     height: 8.5333333333vw;
   }
+}
+.cm_tab_bottom .button_grop .inner .btn_list::-webkit-scrollbar {
+  display: none;
 }
 .cm_tab_bottom .button_grop .inner .btn_list li {
   position: relative;
@@ -4057,6 +4062,8 @@ header.filter .btn_close {
   border-radius: 12px;
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
+  line-height: 40px;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
@@ -4086,6 +4093,12 @@ header.filter .btn_close {
   .cm_date_contents .date_setting .date_start,
   .cm_date_contents .date_setting .date_end {
     border: 0.2666666667vw solid rgba(0, 0, 0, 0.12);
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_setting .date_start,
+  .cm_date_contents .date_setting .date_end {
+    line-height: 5.3333333333vw;
   }
 }
 .cm_date_contents .date_setting .date_start span,
@@ -5222,6 +5235,7 @@ header.filter .btn_close {
   font-size: 26px;
   margin-left: 64px;
   padding-left: 48px;
+  line-height: 44px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
@@ -5237,6 +5251,11 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .setting_top .btn_cart {
     padding-left: 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents .setting_top .btn_cart {
+    line-height: 5.8666666667vw;
   }
 }
 .sections .section_inner .setting_contents .setting_top .btn_cart::after {
@@ -5277,6 +5296,7 @@ header.filter .btn_close {
   font-size: 26px;
   margin-left: auto;
   padding-left: 48px;
+  line-height: 44px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
@@ -5292,6 +5312,11 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .setting_top .btn_filter {
     padding-left: 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents .setting_top .btn_filter {
+    line-height: 5.8666666667vw;
   }
 }
 .sections .section_inner .setting_contents .setting_top .btn_filter::after {
@@ -5376,6 +5401,8 @@ header.filter .btn_close {
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .btn_list {
@@ -5391,6 +5418,9 @@ header.filter .btn_close {
   .sections .section_inner .setting_contents .btn_group .btn_list {
     height: 8.5333333333vw;
   }
+}
+.sections .section_inner .setting_contents .btn_group .btn_list::-webkit-scrollbar {
+  display: none;
 }
 .sections .section_inner .setting_contents .btn_group .btn_list li {
   position: relative;

@@ -888,7 +888,11 @@
                 align-items: center;
                 overflow-x: scroll;
                 overflow-y: hidden;
-
+                -ms-overflow-style: none;
+                scrollbar-width: none; 
+                &::-webkit-scrollbar {
+                    display: none; 
+                }
                 li {
                     position: relative;
                     flex: 0 0 auto;
@@ -1387,8 +1391,8 @@
                 }
             }
         }
-    }
-
+    } 
+ 
     .date_setting {
         display: flex;
         @include vp(margin-top, 10px);
@@ -1403,6 +1407,8 @@
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
+            @include vp(line-height, 40px);
+            box-sizing: border-box;
 
             span {
                 font-family: "Pretendard Variable";
