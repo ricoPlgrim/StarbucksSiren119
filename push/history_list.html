@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/settring.css">
+</head>
+
+<body>
+    <main id="wrap" class="setting">
+        <header class="common push">
+            <button class="btn_back" onclick='history.back(-1); return false;'></button>
+            <h1>Push 이력관리</h1>
+            <button class="btn_setting" onclick="commonUi.bottomSheetOpen('record')"></button>
+        </header>
+        <section>
+            <h2 class="blind">Push 이력관리 설정 페이지</h2>
+            <!--list클래스 추가시 백그라운드 변경-->
+            <div class="cm_tab_panel list">
+                <div class="alarm_list_box">
+                    <div class="inner">
+                        <div class="cm_check_box">
+                            <label for="notread">
+                                <input type="checkbox" name="check" id="notread" />읽지 않음 <p class="lead_box"><span
+                                        class="count">55</span>/<span class="total">200</span>개</p>
+                            </label>
+                        </div>
+                        <ul class="alarm_list">
+                            <li>
+                                <dl>
+                                    <dt>오늘</dt>
+                                    <dd>
+                                        <ul class="history_list">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <!--on클래스 추가시 블릿 추가-->
+                                                        <dt class="on">
+                                                            <span>[긴급]</span><span> 아크로힐스 논현</span> | <span> 관능 요소
+                                                                이상(맛/냄새/색상 이상 등...</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+
+                            <li>
+                                <dl>
+                                    <dt>어제</dt>
+                                    <dd>
+                                        <ul class="history_list">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <!--on클래스 추가시 블릿 추가-->
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 근무중
+                                                                사고</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <!--on클래스 추가시 블릿 추가-->
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <!--lead 클래스 추가시 회색 텍스트 변경-->
+                                            <li class="lead">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li class="lead">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                            
+                            <li>
+                                <dl>
+                                    <dt>2024.05.23</dt>
+                                    <dd>
+                                        <ul class="history_list">
+                                            <!--lead클래스 추가 시 읽음처리-->
+                                            <li class="lead">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <!--on클래스 추가시 블릿 추가-->
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 근무중
+                                                                사고</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <!--on클래스 추가시 블릿 추가-->
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <!--lead 클래스 추가시 회색 텍스트 변경-->
+                                            <li class="lead">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt class="on">
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                            <li class="lead">
+                                                <a href="javascript:;">
+                                                    <dl>
+                                                        <dt>
+                                                            <span>[일반]</span><span> 아크로힐스 논현</span> | <span> 소비기한 경과품
+                                                                판매</span>
+                                                        </dt>
+                                                        <dd>
+                                                            <span class="time">2024-06-05 08:31</span>
+                                                        </dd>
+                                                    </dl>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+
+                      
+                    </div>
+
+                </div>
+                <!--현재 받은 알림이 없습니다.-->
+                <p class="no_alerts">현재 받은 알림이 없습니다.</p>
+
+                <!--알림설정이 꺼져 있습니다.-->
+                <div class="status_message_box">
+                    <p class="alert_message">알림설정이 꺼져 있습니다.</p>
+                    <a href="javascript:;" class="btn_alarm_link">알림설정하러 가기 </a>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- 하단 파트너 연락처 레이어 팝업 -->
+        <aside class="bottom_sheet" id="record">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="record_info_contents">
+                            <div class="btn_group">
+                                <a href="javascript:;" class="icon setting">알림 설정하기</a>
+                                <a href="javascript:;" class="icon situation">모두 읽은 상태로 표시</a>
+                                <a href="javascript:;" class="icon delete">전체 삭제</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
+
+        <aside class="scroll_top_box">
+            <a href="javascript:;">
+                <span class="blind">상단으로 이동</span>
+            </a>
+        </aside>
+
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/alarm.js"></script>
+</body>
+
+</html>

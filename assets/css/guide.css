@@ -251,3 +251,93 @@
   display: flex;
   align-items: center;
 }
+
+.page {
+  background-color: #f4f4f4;
+}
+.page #wrap {
+  max-width: 1280px;
+}
+.page h1 {
+  text-align: left;
+  margin: 30px 0;
+  font-size: 40px;
+}
+@media screen and (max-width: 750px) {
+  .page h1 {
+    margin: 4vw 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .page h1 {
+    font-size: 5.3333333333vw;
+  }
+}
+.page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 750px) {
+  .page table {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+.page thead {
+  background-color: #333;
+  color: #fff;
+}
+.page thead th {
+  padding: 20px;
+  font-size: 20px;
+  color: #000;
+  text-align: left;
+}
+@media screen and (max-width: 750px) {
+  .page thead th {
+    padding: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .page thead th {
+    font-size: 2.6666666667vw;
+  }
+}
+.page thead th:last-child {
+  text-align: center;
+}
+.page thead th:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.page thead th:nth-child(odd) {
+  background-color: #fff;
+}
+.page tbody td {
+  text-align: left;
+  padding: 20px;
+  border-bottom: 2px solid #ddd;
+  font-size: 20px;
+}
+@media screen and (max-width: 750px) {
+  .page tbody td {
+    padding: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .page tbody td {
+    border-bottom: 0.2666666667vw solid #ddd;
+  }
+}
+@media screen and (max-width: 750px) {
+  .page tbody td {
+    font-size: 2.6666666667vw;
+  }
+}
+.page tbody td:last-child {
+  text-align: center;
+}
+.page tbody tr:hover {
+  background-color: #f1f1f1;
+}

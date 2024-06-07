@@ -43,7 +43,7 @@ var commonUi = {
         _gnb = $(".gnb");
         _gnbBtn = $(".btn_hamburger");
         _gnbCloseBtn = _gnb.find(".btn_close");
-        _scrollTopButton = $(".scroll_top_box");
+        _scrollTopButton = $(".scrolltop_box");
         _stickyTarget = $(".header_sticky ");
         // 팝업 버튼
         _popBtn = $("body").find("a, button");
@@ -107,7 +107,7 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop(); 
-        if (_sT > _w.height()/3 ) {
+        if (_sT > 100 ) {
             _scrollTopButton.fadeIn();
         } else {
             _scrollTopButton.fadeOut();

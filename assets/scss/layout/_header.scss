@@ -377,8 +377,12 @@ header {
                     @include vp(column-gap, 22px);
 
                     li {
-                        button {
+                        a {
                             position: relative;
+                            text-align: center;
+                            justify-content: center;
+                            display: flex;
+                            align-items: center;
                             @include vp(width, 324px);
                             @include vp(height, 120px);
                             @include vp(border-radius, 40px);
@@ -404,7 +408,7 @@ header {
                         }
 
                         &.btn_alarm {
-                            button {
+                            a {
                                 span {
                                     &::before {
                                         background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
@@ -416,7 +420,7 @@ header {
                         }
 
                         &.btn_collections {
-                            button {
+                            a {
                                 span {
                                     &::before {
                                         background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;

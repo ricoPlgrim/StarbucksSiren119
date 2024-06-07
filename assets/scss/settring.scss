@@ -23,7 +23,7 @@
                 @include vp(padding-top, 278px); 
                 color: $black;
                 text-align: center;
-                font-size: $f15;
+                @include vp(font-size, $f15); 
                 font-weight: $fw4;
             }
             .status_message_box{
@@ -63,36 +63,92 @@
                 }
             }
             &.list{
-                background: $light-gray-4;
+                background: $white;
             }
         }
 
         .alarm_list_box{
             .inner{
                 @include vp(padding, 48px 40px); 
+                .lead_box{
+                    @include vp(padding-left, 20px ); 
+                    color: $light-gray-1;
+                    @include vp(font-size, $f13 ); 
+                    font-weight: $fw4;
+                    .count{
+                        color:$black-87;
+                        @include vp(font-size, $f13 ); 
+                    }
+                }
                 .alarm_list{
                     @include vp(margin-top, 40px); 
                     >li{
-                        @include vp(margin-top, 60px); 
+                        @include vp(margin-top, 80px); 
                         dl{
-                            dt{
-                                color: $black;
+                            >dt{
+                                color: $black; 
                                 font-weight: $fw6;
                                 @include vp(font-size, $f15); 
+                                @include vp(margin-bottom, 40px); 
                             }
                             dd{
-                                .cm_card_list{
+                                .history_list{
+                                    @include vp(border-top, 2px solid $dark-gray); 
                                     >li{
                                         a{
                                             dl{
+                                                position: relative;
+                                              
+                                                @include vp(border-bottom, 2px solid $light-gray-3); 
+                                                @include vp(padding,28px 12px 28px 20px); 
+                                                >dt{
+                                                    color: $black; 
+                                                    @include vp(font-size, $f13); 
+                                                    margin-bottom: 0;
+                                                    font-weight: $fw4;
+                                                    white-space: nowrap;
+                                                    overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    @include vp(margin-bottom, 10px); 
+                                                    &.on{
+                                                        &:before{
+                                                            position: absolute;
+                                                            @include vp(top, 40px); 
+                                                            left:0;
+                                                            content: '';
+                                                            @include vp(width, 8px); 
+                                                            @include vp(height, 8px); 
+                                                            background: $green;
+                                                            border-radius: 50%;
+                                                        }
+                                                    }
+                                                }
                                                 dd{
                                                     span{
-                                                        &:last-child{ @include vp(width, 465px)}
+                                                        color: $black;
+                                                        @include vp(font-size,   $f11); 
+                                                        font-weight: $fw4;
                                                     }
-                                                    &.last{
-                                                        @include vp(font-size, $f15); 
+                                                   
+                                                }
+                                            }
+                                        }
+                                        &.lead{
+                                            a{
+                                                dl{
+                                                    dt{
+                                                        color: $light-gray-1;
+                                                        &.on{
+                                                            &:before{
+                                                              display: none;
+                                                            }
+                                                        }
+                                                    }
+                                                    dd{
                                                         span{
-                                                            &:last-child{ width: auto;}
+                                                            color: $light-gray-1;
                                                         }
                                                     }
                                                 }

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/message.css">
+</head>
+
+<body>
+    <main id="wrap" class="message">
+        <header class="common">
+            <button class="btn_back" onclick='history.back(-1); return false;'></button>
+            <h1>수신팀 상세 지정</h1>
+        </header>
+        <section class="detail">
+            <h2 class="blind">수신팀 상세 지정 페이지</h2>
+            <div class="inner">
+                <div class="team_contents">
+                
+                    <div class="select_title">
+                        <em class="select_team">3개 팀 선택 확인</em>
+                        <div class="button_grop">
+                            <div class="inner">
+                                <ul class="btn_list">
+                                    <li>
+                                        <button class="tag">전략기획본부</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">사업기획팀</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">데이터사이언스팀</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">운영팀</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                    <li>
+                                        <button class="tag">DM</button>
+                                        <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="checkbox_list">
+                        <li>
+                            <div class="cm_check_box">
+                                <label for="operate11">
+                                    <input type="checkbox" name="check" id="operate11" />지원센터
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cm_check_box">
+                                <label for="operate">
+                                    <input type="checkbox" name="check" id="operate" />운영팀
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="cm_check_box">
+                                <label for="dm">
+                                    <input type="checkbox" name="check" id="dm" />DM
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="input_contents">
+                        <div class="input_box">
+                            <input type="text"  placeholder="내용 검색" class="search_input">
+                            <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                        </div>
+                    </div>
+
+                    <div class="team_list_contents">
+                        <ul class="team_list">
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox1">
+                                    <label for="checkbox1"><span>대표이사</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox2">
+                                    <label for="checkbox2"><span>전략기획본부</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox3">
+                                    <label for="checkbox3"><span>기획담당</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox4">
+                                    <label for="checkbox4"><span>사업기획팀</span></label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox5">
+                                    <label for="checkbox5"><span>이커머스사업팀</span></label> 
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox_container">
+                                    <input type="checkbox" id="checkbox6">
+                                    <label for="checkbox6"><span>디지털사업팀</span></label> 
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+                <div class="submit_box">
+                <div class="inner">
+                    <button class="cm_btn_round active">
+                        <span class="text">적용하기</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+        <!-- 하단 파트너 연락처 레이어 팝업 -->
+
+
+        <aside class="scroll_top_box">
+            <a href="javascript:;">
+                <span class="blind">상단으로 이동</span>
+            </a>
+        </aside>
+
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/alarm.js"></script>
+</body>
+
+</html>

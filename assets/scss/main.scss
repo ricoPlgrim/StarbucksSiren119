@@ -1,6 +1,9 @@
 @import 'base/variables';
 @import 'base/mixin';
 @import 'common';
+.main{
+    background: #f6f6f6; 
+}
 #wrap {
     background: #f6f6f6; 
 }
@@ -741,7 +744,9 @@
 
         
     }
-    &.home {}
+    &.home {
+
+    }
 
     section {
         display: none; 

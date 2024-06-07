@@ -278,31 +278,65 @@
 #record {
     .sheet_wrap {
         @include vp(min-height, 170px);
-    }
+    } 
 }
-
-.scroll_top_box {
+.scrolltop_box{
     display: none;
     position: fixed;
-    @include vp(width, 112px);
-    @include vp(height, 112px);
-    @include vp(bottom, 82px);
-    // @include vp(right, 42px);     
-    right: 50%;
-    transform: translateX(348px);
-
+    @include vp(bottom, 214px);
+    left:50%;
+    transform: translateX(209px);
     @include breakpoint {
-        transform: translateX(46.4vw);
+        transform: translateX(27.86666666666667vw);
     }
-
-    a {
+    .btn_top{
         display: block;
-        width: inherit;
-        height: inherit;
+        @include vp(width, 136px); 
+        @include vp(height, 136px); 
         background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
-        @include vp(background-size, 112px auto);
+        @include vp(background-size, 136px auto);
+        margin-left: auto;
+    }
+    &.on{
+        @include vp(bottom, 59px);
     }
 }
+.message_box{
+    position: fixed;
+    @include vp(bottom, 82px);
+    left:50%;
+    transform: translateX(75px);
+    @include breakpoint {
+        transform: translateX(10vw);
+    }
+    .btn_message{
+        position: relative;
+        display: block;
+        color: $orange;
+        text-align: center;
+        @include vp(font-size, $f16);
+        font-weight: $fw6;
+        @include vp(width, 260px);
+        @include vp(height, 112px);
+        @include vp(border-radius, 68px);
+        @include vp(border, 4px solid $orange );
+        @include vp(line-height, 102px);
+        @include vp(padding-left, 68px);
+        background: $white;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+        &::after{
+            content: '';
+            position: absolute;
+            @include vp(top, 26px);
+            @include vp(left, 40px);
+            @include vp(width, 48px);
+            @include vp(height, 48px);
+            background: url("../images/icons/icon_email_read.png") 0 0 no-repeat;
+            @include vp(background-size, 48px auto);
+        }
+    }
+}
+
 
 // 팝업
 // 중앙 팝업

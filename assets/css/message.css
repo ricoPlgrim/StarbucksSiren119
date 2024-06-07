@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* 정리중 */
+/*폰트 사이즈*/
 /**
  * Modern CSS Reset Tweaks
  * ================================================== */
@@ -4015,5 +4017,864 @@ header.filter .btn_close {
   .cm_date_contents .date_setting .date_start input,
   .cm_date_contents .date_setting .date_end input {
     background-size: 6.4vw auto;
+  }
+}
+
+#wrap.message {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message {
+    padding-top: 14.9333333333vw;
+  }
+}
+#wrap.message section {
+  padding-bottom: 300px;
+  /*수신팀 상세 지정 */
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section {
+    padding-bottom: 40vw;
+  }
+}
+#wrap.message section.detail > .inner {
+  padding: 0 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner {
+    padding: 0 5.3333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents {
+  padding-top: 60px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents {
+    padding-top: 8vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .basic {
+  color: #AAA;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .basic {
+    font-size: 4vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .select_team {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .select_team {
+    font-size: 4vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner {
+  padding-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner {
+    padding-top: 5.3333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
+  gap: 8px;
+  height: 64px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
+    gap: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
+    height: 8.5333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li {
+  position: relative;
+  flex: 0 0 auto;
+}
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+  position: relative;
+  font-size: 24px;
+  padding: 20px 60px 20px 20px;
+  height: 64px;
+  font-weight: 500;
+  color: #00A862;
+  letter-spacing: 0.1px;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid #00A862;
+  background-color: #fff;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    height: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    letter-spacing: 0.0133333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+  display: block;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
+  background-size: 28px auto;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+    top: 2.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+    right: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+    width: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+    height: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
+    background-size: 3.7333333333vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .checkbox_list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .checkbox_list {
+    margin-top: 5.3333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .checkbox_list li {
+  margin-left: 40px;
+  cursor: pointer;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .checkbox_list li {
+    margin-left: 5.3333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .checkbox_list li:nth-child(3n+1) {
+  margin-left: 0;
+}
+#wrap.message section.detail > .inner .team_contents .input_contents {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents {
+    padding-top: 5.3333333333vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box {
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box {
+    height: 10.6666666667vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  padding: 24px 60px 24px 80px;
+  box-sizing: border-box;
+  border: 2px solid #BBB;
+  border-radius: 12px;
+  color: #000;
+  background: #fff;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    letter-spacing: 0.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    padding: 3.2vw 8vw 3.2vw 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    border: 0.2666666667vw solid #BBB;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input {
+    border-radius: 1.6vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+  color: #bbb;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+    letter-spacing: 0.0666666667vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box > input:focus {
+  border: 2px solid #000;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box > input:focus {
+    border: 0.2666666667vw solid #000;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box.active:before {
+  background: url("../images/icons/icon_searh_on.png") 0 0 no-repeat;
+  background-size: 80px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box.active:before {
+    background-size: 10.6666666667vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background: url("../images/icons/icon_searh.png") 0 0 no-repeat;
+  background-size: 80px auto;
+  z-index: 1;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box:before {
+    width: 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box:before {
+    height: 10.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box:before {
+    background-size: 10.6666666667vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+  display: none;
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 32px;
+  height: 32px;
+  background: url("../images/btn/btn_searh_delete.png") 0 0 no-repeat;
+  background-size: 32px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+    top: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+    right: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+    width: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+    height: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .input_contents .input_box .btn_text_delete {
+    background-size: 4.2666666667vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents {
+  margin-top: 60px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents {
+    margin-top: 8vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li {
+  padding-bottom: 36px;
+  margin-bottom: 36px;
+  border-bottom: 2px solid #EEE;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li {
+    padding-bottom: 4.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li {
+    margin-bottom: 4.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li {
+    border-bottom: 0.2666666667vw solid #EEE;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container input[type=checkbox] {
+  display: none;
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container input[type=checkbox]:checked + label::after {
+  background: url("../images/btn/btn_check_round_on.png") 0 0 no-repeat;
+  background-size: 64px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container input[type=checkbox]:checked + label::after {
+    background-size: 8.5333333333vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label {
+    font-size: 4vw;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label::after {
+  content: "";
+  display: block;
+  margin-left: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: url("../images/btn/btn_check_round_off.png") 0 0 no-repeat;
+  background-size: 64px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label::after {
+    width: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label::after {
+    height: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label::after {
+    background-size: 8.5333333333vw auto;
+  }
+}
+#wrap.message section.detail > .inner .team_contents .team_list_contents .nodata {
+  margin-top: 280px;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 22px;
+  line-height: 44px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .nodata {
+    margin-top: 37.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .nodata {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .team_list_contents .nodata {
+    line-height: 5.8666666667vw;
+  }
+}
+#wrap.message .title {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .title {
+    font-size: 4vw;
+  }
+}
+#wrap.message .message_contents .inner {
+  padding: 60px 40px 120px 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner {
+    padding: 8vw 5.3333333333vw 16vw 5.3333333333vw;
+  }
+}
+#wrap.message .message_contents .inner .textarea_contents {
+  position: relative;
+  margin-top: 40px;
+  height: 280px;
+  border-radius: 16px;
+  border: 2px solid #DDD;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents {
+    margin-top: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents {
+    height: 37.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents {
+    border-radius: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents {
+    border: 0.2666666667vw solid #DDD;
+  }
+}
+#wrap.message .message_contents .inner .textarea_contents .textarea_box {
+  position: relative;
+  height: 220px;
+  max-height: 220px;
+  overflow: auto;
+  border: 2px solid transparent;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .textarea_box {
+    height: 29.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .textarea_box {
+    max-height: 29.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .textarea_box {
+    border: 0.2666666667vw solid transparent;
+  }
+}
+#wrap.message .message_contents .inner .textarea_contents textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 28px 28px 55px 28px;
+  line-height: 40px;
+  font-size: 26px;
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  resize: none;
+  font-weight: 400;
+  color: #AAA;
+  border: 0;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents textarea {
+    padding: 3.7333333333vw 3.7333333333vw 7.3333333333vw 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents textarea {
+    line-height: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents textarea {
+    font-size: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents textarea {
+    border-radius: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents textarea {
+    height: 100%;
+  }
+}
+#wrap.message .message_contents .inner .textarea_contents .byte_num {
+  position: absolute;
+  bottom: 28px;
+  right: 28px;
+  color: #AAA;
+  font-size: 26px;
+  font-size: 22px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .byte_num {
+    bottom: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .byte_num {
+    right: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .message_contents .inner .textarea_contents .byte_num {
+    font-size: 3.4666666667vw;
+  }
+}
+#wrap.message .receiver_contents .inner {
+  padding: 0 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner {
+    padding: 0 5.3333333333vw;
+  }
+}
+#wrap.message .receiver_contents .inner .title {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #DDD;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .title {
+    padding-bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .title {
+    margin-bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .title {
+    border-bottom: 0.2666666667vw solid #DDD;
+  }
+}
+#wrap.message .receiver_contents .inner .check_box {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .check_box {
+    margin-bottom: 10.6666666667vw;
+  }
+}
+#wrap.message .receiver_contents .inner .check_box .checkbox_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+#wrap.message .receiver_contents .inner .check_box .checkbox_list li {
+  flex: 1 1 50%;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 44px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .check_box .checkbox_list li {
+    margin-bottom: 5.8666666667vw;
+  }
+}
+#wrap.message .receiver_contents .inner .check_box .checkbox_list li:nth-child(odd):nth-last-child(-n+2),
+#wrap.message .receiver_contents .inner .check_box .checkbox_list li:nth-child(even):nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+#wrap.message .receiver_contents .inner .team_contents {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#wrap.message .receiver_contents .inner .team_contents .text {
+  position: relative;
+  display: inline-flex;
+  color: #00A862;
+  font-size: 30px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .team_contents .text {
+    font-size: 4vw;
+  }
+}
+#wrap.message .receiver_contents .inner .team_contents .text:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #00A862;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .team_contents .text:before {
+    height: 0.2666666667vw;
+  }
+}
+#wrap.message .receiver_contents .inner .team_contents .btn_team {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-left: auto;
+  background: url("../images/btn/btn_plus_g.png") 0 0 no-repeat;
+  background-size: 64px auto;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .team_contents .btn_team {
+    width: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .team_contents .btn_team {
+    height: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .team_contents .btn_team {
+    background-size: 8.5333333333vw auto;
+  }
+}
+#wrap.message .receiver_contents .inner .button_grop .inner {
+  padding: 20px 0 20px 0;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner {
+    padding: 2.6666666667vw 0 2.6666666667vw 0;
+  }
+}
+#wrap.message .receiver_contents .inner .button_grop .inner .btn_list {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list {
+    gap: 1.0666666667vw;
+  }
+}
+#wrap.message .receiver_contents .inner .button_grop .inner .btn_list li {
+  position: relative;
+  flex: 0 0 auto;
+}
+#wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+  position: relative;
+  font-size: 24px;
+  padding: 20px 60px 20px 20px;
+  height: 64px;
+  font-weight: 500;
+  color: #00A862;
+  letter-spacing: 0.1px;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid #00A862;
+  background-color: #fff;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    height: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    letter-spacing: 0.0133333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    border-radius: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+#wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+  display: block;
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
+  background-size: 28px auto;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+    top: 2.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+    right: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+    width: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+    height: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+    background-size: 3.7333333333vw auto;
+  }
+}
+#wrap.message .submit_box {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 750px;
+  background: #fff;
+  border-top: 2px solid #DDD;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .submit_box {
+    border-top: 0.2666666667vw solid #DDD;
+  }
+}
+#wrap.message .submit_box .inner {
+  padding: 40px 40px 86px 40px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .submit_box .inner {
+    padding: 5.3333333333vw 5.3333333333vw 11.4666666667vw 5.3333333333vw;
+  }
+}
+#wrap.message .submit_box .inner .cm_btn_round {
+  width: 100%;
+}
+#wrap.message .submit_box .inner .cm_btn_round span {
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .submit_box .inner .cm_btn_round span {
+    padding: 4vw 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .submit_box .inner .cm_btn_round span {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message .submit_box .inner .cm_btn_round span {
+    letter-spacing: 0.0266666667vw;
   }
 }

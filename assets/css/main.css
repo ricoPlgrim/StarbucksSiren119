@@ -1310,8 +1310,12 @@ header.filter .btn_close {
     column-gap: 2.9333333333vw;
   }
 }
-.gnb .app_setting_content .inner .btn_list li button {
+.gnb .app_setting_content .inner .btn_list li a {
   position: relative;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   width: 324px;
   height: 120px;
   border-radius: 40px;
@@ -1319,21 +1323,21 @@ header.filter .btn_close {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li a {
     width: 43.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li a {
     height: 16vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button {
+  .gnb .app_setting_content .inner .btn_list li a {
     border-radius: 5.3333333333vw;
   }
 }
-.gnb .app_setting_content .inner .btn_list li button span {
+.gnb .app_setting_content .inner .btn_list li a span {
   position: relative;
   font-size: 26px;
   font-weight: 400;
@@ -1341,16 +1345,16 @@ header.filter .btn_close {
   color: #000;
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button span {
+  .gnb .app_setting_content .inner .btn_list li a span {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button span {
+  .gnb .app_setting_content .inner .btn_list li a span {
     padding-left: 9.0666666667vw;
   }
 }
-.gnb .app_setting_content .inner .btn_list li button span::before {
+.gnb .app_setting_content .inner .btn_list li a span::before {
   content: "";
   position: absolute;
   top: -10px;
@@ -1359,35 +1363,35 @@ header.filter .btn_close {
   height: 48px;
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li a span::before {
     top: -1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li a span::before {
     width: 6.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li button span::before {
+  .gnb .app_setting_content .inner .btn_list li a span::before {
     height: 6.4vw;
   }
 }
-.gnb .app_setting_content .inner .btn_list li.btn_alarm button span::before {
+.gnb .app_setting_content .inner .btn_list li.btn_alarm a span::before {
   background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li.btn_alarm button span::before {
+  .gnb .app_setting_content .inner .btn_list li.btn_alarm a span::before {
     background-size: 6.4vw auto;
   }
 }
-.gnb .app_setting_content .inner .btn_list li.btn_collections button span::before {
+.gnb .app_setting_content .inner .btn_list li.btn_collections a span::before {
   background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb .app_setting_content .inner .btn_list li.btn_collections button span::before {
+  .gnb .app_setting_content .inner .btn_list li.btn_collections a span::before {
     background-size: 6.4vw auto;
   }
 }
@@ -1921,45 +1925,155 @@ header.filter .btn_close {
   }
 }
 
-.scroll_top_box {
+.scrolltop_box {
   display: none;
   position: fixed;
-  width: 112px;
-  height: 112px;
+  bottom: 214px;
+  left: 50%;
+  transform: translateX(209px);
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box {
+    bottom: 28.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box {
+    transform: translateX(27.8666666667vw);
+  }
+}
+.scrolltop_box .btn_top {
+  display: block;
+  width: 136px;
+  height: 136px;
+  background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
+  background-size: 136px auto;
+  margin-left: auto;
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box .btn_top {
+    width: 18.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box .btn_top {
+    height: 18.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box .btn_top {
+    background-size: 18.1333333333vw auto;
+  }
+}
+.scrolltop_box.on {
+  bottom: 59px;
+}
+@media screen and (max-width: 750px) {
+  .scrolltop_box.on {
+    bottom: 7.8666666667vw;
+  }
+}
+
+.message_box {
+  position: fixed;
   bottom: 82px;
-  right: 50%;
-  transform: translateX(348px);
+  left: 50%;
+  transform: translateX(75px);
 }
 @media screen and (max-width: 750px) {
-  .scroll_top_box {
-    width: 14.9333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .scroll_top_box {
-    height: 14.9333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .scroll_top_box {
+  .message_box {
     bottom: 10.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .scroll_top_box {
-    transform: translateX(46.4vw);
+  .message_box {
+    transform: translateX(10vw);
   }
 }
-.scroll_top_box a {
+.message_box .btn_message {
+  position: relative;
   display: block;
-  width: inherit;
-  height: inherit;
-  background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
-  background-size: 112px auto;
+  color: #FF2E00;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  width: 260px;
+  height: 112px;
+  border-radius: 68px;
+  border: 4px solid #FF2E00;
+  line-height: 102px;
+  padding-left: 68px;
+  background: #fff;
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
 }
 @media screen and (max-width: 750px) {
-  .scroll_top_box a {
-    background-size: 14.9333333333vw auto;
+  .message_box .btn_message {
+    font-size: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    width: 34.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    height: 14.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    border-radius: 9.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    border: 0.5333333333vw solid #FF2E00;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    line-height: 13.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message {
+    padding-left: 9.0666666667vw;
+  }
+}
+.message_box .btn_message::after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 40px;
+  width: 48px;
+  height: 48px;
+  background: url("../images/icons/icon_email_read.png") 0 0 no-repeat;
+  background-size: 48px auto;
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message::after {
+    top: 3.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message::after {
+    left: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message::after {
+    width: 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message::after {
+    height: 6.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .message_box .btn_message::after {
+    background-size: 6.4vw auto;
   }
 }
 
@@ -3904,6 +4018,10 @@ header.filter .btn_close {
   .cm_date_contents .date_setting .date_end input {
     background-size: 6.4vw auto;
   }
+}
+
+.main {
+  background: #f6f6f6;
 }
 
 #wrap {
