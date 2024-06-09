@@ -4242,7 +4242,7 @@ header.filter .btn_close {
   gap: 8px;
   height: 66px;
   padding-bottom: 2px;
-  width: 100%;
+  width: 670px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -4267,6 +4267,11 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
     padding-bottom: 0.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
+    width: 89.3333333333vw;
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list::-webkit-scrollbar {
@@ -4354,9 +4359,6 @@ header.filter .btn_close {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
     background-size: 3.7333333333vw auto;
   }
-}
-#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:last-child {
-  margin-right: 0;
 }
 #wrap.message section.detail > .inner .team_contents .checkbox_list {
   display: flex;

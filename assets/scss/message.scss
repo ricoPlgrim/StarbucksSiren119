@@ -37,7 +37,7 @@
                                         @include vp(gap, 8px);
                                         @include vp(height, 66px); 
                                         @include vp(padding-bottom, 2px);
-                                        width: 100%;
+                                        @include vp(width, 670px); 
                                         position: relative;
                                         display: flex;
                                         flex-wrap: nowrap;
@@ -80,7 +80,6 @@
                                                 @include vp(background-size, 28px auto);
                                                 z-index: 10;
                                             }
-                                           &:last-child{ margin-right: 0;}
                                         }
                                     }
                                 }
