@@ -36,12 +36,13 @@
                         box-sizing: border-box;
                         @include vp(border, 2px solid $gray );
                         @include vp(border-radius, 12px );
+                        box-sizing: border-box;
                         color:$black;
                         background: #fff;
                         font-weight: 400;
                         &::placeholder {
                             color:    #bbb;
-                            @include vp(font-size, $f13 );
+                            @include vp(font-size, $f15 ); 
                             transform-origin: left center; 
                             @include vp(letter-spacing, .5px );
                             font-weight: 400;

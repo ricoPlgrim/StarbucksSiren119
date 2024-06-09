@@ -705,6 +705,7 @@ body {
   box-sizing: border-box;
   border: 2px solid #999;
   border-radius: 12px;
+  box-sizing: border-box;
   color: #000;
   background: #fff;
   font-weight: 400;
@@ -741,14 +742,14 @@ body {
 }
 #wrap.searh section .input_contents .input_box > input::placeholder {
   color: #bbb;
-  font-size: 26px;
+  font-size: 30px;
   transform-origin: left center;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input::placeholder {
-    font-size: 3.4666666667vw;
+    font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
