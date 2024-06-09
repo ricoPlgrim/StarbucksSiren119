@@ -55,7 +55,7 @@
                                                 z-index: 10;
                                             }
                                             &:last-child{ 
-                                                @include vp(margin-right,1px); 
+                                                @include vp(margin-right, 0); 
                                             }
                                         }
                                     }
