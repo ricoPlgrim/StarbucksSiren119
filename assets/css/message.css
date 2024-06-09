@@ -4239,9 +4239,7 @@ header.filter .btn_close {
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
-  height: 66px;
   padding-bottom: 1px;
-  width: 670px;
   position: relative;
   display: flex;
   flex-wrap: nowrap;
@@ -4253,17 +4251,7 @@ header.filter .btn_close {
 }
 @media screen and (max-width: 750px) {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
-    height: 8.8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
     padding-bottom: 0.1333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
-    width: 89.3333333333vw;
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li {

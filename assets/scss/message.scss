@@ -34,9 +34,7 @@
 
                                     position: relative;
                                     .btn_list { 
-                                        @include vp(height, 66px); 
                                         @include vp(padding-bottom, 1px);
-                                        @include vp(width, 670px); 
                                         position: relative;
                                         display: flex;
                                         flex-wrap: nowrap;
