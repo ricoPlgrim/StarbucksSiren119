@@ -4227,11 +4227,6 @@ header.filter .btn_close {
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner {
   padding-top: 40px;
   position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  position: relative;
 }
 @media screen and (max-width: 750px) {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner {
@@ -4240,14 +4235,8 @@ header.filter .btn_close {
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
   padding-bottom: 1px;
-  position: relative;
   display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  align-items: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  box-sizing: border-box;
+  overflow-y: auto;
 }
 @media screen and (max-width: 750px) {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list {
@@ -4256,7 +4245,7 @@ header.filter .btn_close {
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li {
   position: relative;
-  flex: 0 0 auto;
+  text-wrap: nowrap;
   margin-left: 8px;
 }
 @media screen and (max-width: 750px) {
@@ -4264,47 +4253,24 @@ header.filter .btn_close {
     margin-left: 1.0666666667vw;
   }
 }
-#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
-  position: relative;
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .cm_btn_round .text {
   font-size: 24px;
   padding: 20px 60px 20px 20px;
-  height: 64px;
-  font-weight: 500;
-  color: #00A862;
-  letter-spacing: 0.1px;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid #00A862;
-  background-color: #fff;
+  line-height: 20px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .cm_btn_round .text {
     font-size: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .cm_btn_round .text {
     padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
-    height: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
-    letter-spacing: 0.0133333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
-    border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .tag {
-    border: 0.2666666667vw solid #00A862;
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .cm_btn_round .text {
+    line-height: 2.6666666667vw;
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .btn_close {
