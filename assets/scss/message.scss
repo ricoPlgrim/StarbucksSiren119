@@ -32,8 +32,6 @@
                                     flex-wrap: wrap;
                                     justify-content: flex-start;
 
-
-
                                     position: relative;
                                     .btn_list { 
                                         @include vp(gap, 8px);
@@ -56,7 +54,6 @@
                                         li {
                                             position: relative;
                                             flex: 0 0 auto;
-                        
                                             .tag {
                                                 position: relative;
                                                 @include vp(font-size, $f12);
@@ -83,7 +80,7 @@
                                                 @include vp(background-size, 28px auto);
                                                 z-index: 10;
                                             }
-                                           
+                                           &:last-child{ margin-right: 0;}
                                         }
                                     }
                                 }
@@ -358,12 +355,9 @@
                             flex-direction: row;
                             @include vp(gap, 8px);
                             align-items: center;
-                            @include vp(padding-right, 2px);
-                            box-sizing: border-box;
                             li {
                                 position: relative;
                                 flex: 0 0 auto;
-            
                                 .tag {
                                     position: relative;
                                     @include vp(font-size, $f12);
@@ -390,7 +384,6 @@
                                     @include vp(background-size, 28px auto);
                                     z-index: 10;
                                 }
-                               
                             }
                         }
                     }
