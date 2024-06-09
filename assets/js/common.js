@@ -79,7 +79,6 @@ var commonUi = {
         _deleteAllBtn = $( ".btn_all_delete" );
         _btnTextDelete = $( ".btn_text_delete" );
         _inputBoxTarget = $( ".input_box" );
-        _btnTextDelete =  $( ".btn_text_delete" );
 
 
 
@@ -354,7 +353,9 @@ var commonUi = {
         _inputBoxTarget.removeClass('active');
     },
    inPutTextDeleteClick: function(){
-    _searchInput.val("");
+        _searchInput.val("");
+        $( this ).css( "display", "none" );
+
    },
 
 };

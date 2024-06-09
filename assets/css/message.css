@@ -4310,7 +4310,7 @@ header.filter .btn_close {
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:last-child {
-  margin-left: 0;
+  margin-left: 1px;
 }
 #wrap.message section.detail > .inner .team_contents .checkbox_list {
   display: flex;

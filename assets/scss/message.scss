@@ -54,7 +54,7 @@
                                                 @include vp(background-size, 28px auto);
                                                 z-index: 10;
                                             }
-                                            &:last-child{ margin-left:0;}
+                                            &:last-child{ margin-left:1px;}
                                         }
                                     }
                                 }
