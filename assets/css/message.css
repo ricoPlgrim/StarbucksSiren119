@@ -4246,11 +4246,11 @@ header.filter .btn_close {
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li {
   position: relative;
   text-wrap: nowrap;
-  margin-left: 8px;
+  margin-right: 8px;
 }
 @media screen and (max-width: 750px) {
   #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li {
-    margin-left: 1.0666666667vw;
+    margin-right: 1.0666666667vw;
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li .cm_btn_round .text {
@@ -4309,7 +4309,7 @@ header.filter .btn_close {
     background-size: 3.7333333333vw auto;
   }
 }
-#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:first-child {
+#wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:last-child {
   margin-left: 0;
 }
 #wrap.message section.detail > .inner .team_contents .checkbox_list {
