@@ -4310,7 +4310,12 @@ header.filter .btn_close {
   }
 }
 #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:last-child {
-  margin-left: 1px;
+  margin-right: 1px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.message section.detail > .inner .team_contents .select_title .button_grop .inner .btn_list li:last-child {
+    margin-right: 0.1333333333vw;
+  }
 }
 #wrap.message section.detail > .inner .team_contents .checkbox_list {
   display: flex;
