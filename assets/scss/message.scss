@@ -34,9 +34,8 @@
 
                                     position: relative;
                                     .btn_list { 
-                                        @include vp(gap, 8px);
                                         @include vp(height, 66px); 
-                                        @include vp(padding-bottom, 2px);
+                                        @include vp(padding-bottom, 1px);
                                         @include vp(width, 670px); 
                                         position: relative;
                                         display: flex;
@@ -45,15 +44,12 @@
                                         align-items: center;
                                         overflow-x: scroll;
                                         overflow-y: hidden;
-                                        -ms-overflow-style: none;
-                                        scrollbar-width: none; 
                                         box-sizing: border-box;
-                                        &::-webkit-scrollbar {
-                                            display: none; 
-                                        }
+                                     
                                         li {
                                             position: relative;
                                             flex: 0 0 auto;
+                                            @include vp(margin-left, 8px);
                                             .tag {
                                                 position: relative;
                                                 @include vp(font-size, $f12);
@@ -80,6 +76,7 @@
                                                 @include vp(background-size, 28px auto);
                                                 z-index: 10;
                                             }
+                                            &:first-child{ margin-left:0;}
                                         }
                                     }
                                 }
