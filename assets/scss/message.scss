@@ -358,7 +358,8 @@
                             flex-direction: row;
                             @include vp(gap, 8px);
                             align-items: center;
-            
+                            @include vp(padding-right, 2px);
+                            box-sizing: border-box;
                             li {
                                 position: relative;
                                 flex: 0 0 auto;
