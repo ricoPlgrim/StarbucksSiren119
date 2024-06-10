@@ -1,9 +1,10 @@
 @import 'base/variables';
 @import 'base/mixin';
 @import 'common';
-#wrap {
+.main{
     background: $light-gray-4; 
 }
+
 
 .sections {
     .section_inner {
