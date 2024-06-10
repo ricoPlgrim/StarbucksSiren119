@@ -884,11 +884,17 @@
                 flex-wrap: nowrap;
                 flex-direction: row;
                 @include vp(gap, 8px);
-                @include vp(height, 64px);
+                @include vp(height, 66px);
+                @include vp(padding-bottom, 2px);
                 align-items: center;
                 overflow-x: scroll;
                 overflow-y: hidden;
-
+                box-sizing: border-box;
+                -ms-overflow-style: none;
+                scrollbar-width: none; 
+                &::-webkit-scrollbar {
+                    display: none; 
+                }
                 li {
                     position: relative;
                     flex: 0 0 auto;
@@ -1387,8 +1393,8 @@
                 }
             }
         }
-    }
-
+    } 
+ 
     .date_setting {
         display: flex;
         @include vp(margin-top, 10px);
@@ -1399,18 +1405,21 @@
             position: relative;
             @include vp(width, 330px);
             @include vp(height, 76px);
-            @include vp(padding, 22px 40px);
+            // @include vp(padding, 22px 40px);
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
+            box-sizing: border-box;
 
             span {
+                @include vp(padding-left, 40px);
                 font-family: "Pretendard Variable";
+                @include vp(font-size, $f13);
                 @include vp(font-size, $f13);
                 font-weight: $fw4;
                 color: $black;
                 opacity: .6;
-                line-height: 1;
+                @include vp(line-height, 70px); 
             }
 
             input {

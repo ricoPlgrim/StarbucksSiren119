@@ -27,43 +27,21 @@
                                 .inner {
                                     @include vp(padding-top, 40px );
                                     position: relative;
-                                    display: flex;
-                                    align-items: center;
-                                    flex-wrap: wrap;
-                                    justify-content: flex-start;
-
-
-
-                                    position: relative;
-                                    .btn_list {
-                                        @include vp(gap, 8px);
-                                        @include vp(height, 64px);
-                                        width: 100%;
-                                        position: relative;
+                                    .btn_list { 
+                                        @include vp(padding-bottom, 1px);
                                         display: flex;
-                                        flex-wrap: nowrap;
-                                        flex-direction: row;
-                                        align-items: center;
-                                        overflow-x: scroll;
-                                        overflow-y: hidden;
+                                        overflow-y: auto;
                                         li {
                                             position: relative;
-                                            flex: 0 0 auto;
-                        
-                                            .tag {
-                                                position: relative;
-                                                @include vp(font-size, $f12);
-                                                @include vp(padding, 20px 60px 20px 20px);
-                                                @include vp(height, 64px);
-                                                font-weight: 500;
-                                                color: $green;
-                                                @include vp(letter-spacing, .1px);
-                                                text-align: center;
-                                                @include vp(border-radius, 12px);
-                                                @include vp(border, 2px solid $green);
-                                                background-color: $white;
-                        
-                                            }
+                                            text-wrap: nowrap;
+                                            @include vp(margin-right, 8px);
+                                            .cm_btn_round{
+                                                .text{
+                                                    @include vp(font-size, $f12);
+                                                    @include vp(padding, 20px 60px 20px 20px);
+                                                    @include vp(line-height,20px);
+                                                }
+                                            } 
                         
                                             .btn_close {
                                                 display: block;
@@ -76,7 +54,9 @@
                                                 @include vp(background-size, 28px auto);
                                                 z-index: 10;
                                             }
-                                           
+                                            &:last-child{ 
+                                                @include vp(margin-right, 0); 
+                                            }
                                         }
                                     }
                                 }
@@ -351,11 +331,9 @@
                             flex-direction: row;
                             @include vp(gap, 8px);
                             align-items: center;
-            
                             li {
                                 position: relative;
                                 flex: 0 0 auto;
-            
                                 .tag {
                                     position: relative;
                                     @include vp(font-size, $f12);
@@ -382,7 +360,6 @@
                                     @include vp(background-size, 28px auto);
                                     z-index: 10;
                                 }
-                               
                             }
                         }
                     }

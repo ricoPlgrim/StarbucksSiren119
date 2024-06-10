@@ -693,16 +693,19 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 123%;
   height: 100%;
   border: 0;
   border-radius: 12px;
-  font-size: 26px;
+  font-size: 32px;
+  transform: scale(0.8125);
+  transform-origin: left top;
   letter-spacing: 0.5px;
-  padding: 24px 60px 24px 80px;
+  padding: 47px 60px 49px 94px;
   box-sizing: border-box;
   border: 2px solid #999;
   border-radius: 12px;
+  box-sizing: border-box;
   color: #000;
   background: #fff;
   font-weight: 400;
@@ -714,7 +717,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
-    font-size: 3.4666666667vw;
+    font-size: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -724,7 +727,7 @@ body {
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input {
-    padding: 3.2vw 8vw 3.2vw 10.6666666667vw;
+    padding: 6.2666666667vw 8vw 6.5333333333vw 12.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -739,13 +742,14 @@ body {
 }
 #wrap.searh section .input_contents .input_box > input::placeholder {
   color: #bbb;
-  font-size: 26px;
+  font-size: 30px;
+  transform-origin: left center;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents .input_box > input::placeholder {
-    font-size: 3.4666666667vw;
+    font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
