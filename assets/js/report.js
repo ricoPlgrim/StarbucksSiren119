@@ -11,7 +11,6 @@ var reportUi = {
 
     init: function () {
         reportUi.loadEvent();
-        reportUi.detailSwiper(); 
     },
     create: function(){
         _w = $( window );
@@ -69,16 +68,6 @@ var reportUi = {
     bookmarkBtnClick: function(){
         $(this).toggleClass("on");
     },
-    detailSwiper: function(){
-        if ($('.detail_swiper').length) {
-            new Swiper('.detail_swiper', {
-                slidesPerView: 'auto',
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-            });
-        }
-	},
 };
 
 $(function () {

@@ -2004,7 +2004,6 @@
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
-  min-height: 100vh;
 }
 #wrap.detail .layer_popup .detail_pop_visual .swiper-pagination {
   bottom: 23%;
