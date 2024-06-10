@@ -4,6 +4,7 @@
 @import 'base/mixin';
 /* LAYOUT CSS */
 @import "layout/header";
+@import "layout/pages";
 
 
 #wrap {
@@ -12,6 +13,10 @@
     margin: 0 auto;
 
     &.setting {
+        @include vp(padding-top, 112px);
+    }
+
+    &.sub{
         @include vp(padding-top, 112px);
     }
 }
@@ -280,6 +285,7 @@
         @include vp(min-height, 170px);
     } 
 }
+
 .scrolltop_box{
     display: none;
     position: fixed;
@@ -301,6 +307,7 @@
         @include vp(bottom, 59px);
     }
 }
+
 .message_box{
     position: fixed;
     @include vp(bottom, 82px);
@@ -392,6 +399,7 @@
     }
 }
 
+
 // 토스트 팝업
 .layer_toast {
     display: none;
@@ -450,7 +458,7 @@
     }
 }
 
-
+//카드 리스트
 .cm_card_list {
     >li {
         position: relative;
@@ -811,6 +819,7 @@
     }
 }
 
+/*탭 패널 영역*/
 .cm_tab_panel_contents {
     @include vp(min-height, 350px);
 
@@ -969,7 +978,7 @@
         background: $white;
     }
 }
-
+/*풀 스크롤링*/
 .cm_full_wrap {
     width: 100%;
     @include vp(margin-top, 28px);
@@ -1433,5 +1442,43 @@
                 @include vp(background-size, 48px auto);
             }
         }
+    }
+}
+
+
+/*가로 스크롤및 버튼 리스트*/
+.cm_btn_list { 
+    @include vp(padding-bottom, 1px);
+    display: flex;
+    overflow-y: auto;
+    li {
+        position: relative;
+        text-wrap: nowrap;
+        @include vp(margin-right, 8px);
+        .cm_btn_round{
+            .text{
+                @include vp(font-size, $f12);
+                @include vp(padding, 20px 60px 20px 20px);
+                @include vp(line-height,20px);
+            }
+        } 
+
+        .btn_close {
+            display: block;
+            position: absolute;
+            @include vp(top, 19px);
+            @include vp(right, 20px);
+            @include vp(width, 28px);
+            @include vp(height, 28px);
+            background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
+            @include vp(background-size, 28px auto);
+            z-index: 10;
+        }
+        &:last-child{ 
+            @include vp(margin-right, 0); 
+        }
+    }
+    &.etc{
+        @include vp(padding, 0 40px);
     }
 }

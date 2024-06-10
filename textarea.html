@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <style>
+        textarea{ resize: none;}
+    </style>
+</head>
+
+<body>
+    <textarea id="myTextArea" style="width: 300px; height: 500px; font-size: 16px; line-height: 20px; padding: 5px; margin:0 auto;"></textarea>
+    <div id="info"></div>
+    <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myTextArea').on('input', function () {
+                var textarea = $(this);
+                var text = textarea.val();
+                var fontFamily = textarea.css('font-family');
+                var fontSize = textarea.css('font-size');
+                var textWidth = textarea.width();
+
+                // 임시 캔버스 요소를 생성해 글꼴 스타일을 적용
+                var canvas = document.createElement('canvas');
+                var context = canvas.getContext('2d');
+                context.font = fontSize + ' ' + fontFamily;
+
+                var lines = 1;
+                var lineWidth = 0;
+
+                for (var i = 0; i < text.length; i++) {
+                    var charWidth = context.measureText(text[i]).width;
+                    if (lineWidth + charWidth > textWidth) {
+                        lines++;
+                        lineWidth = charWidth;
+                    } else {
+                        lineWidth += charWidth;
+                    }
+                }
+
+                // 줄 수 출력
+                $('#info').text('현재 줄 수: ' + lines);
+
+                if (lines >= 5) {
+                    console.log( "5줄일떄" );
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>
