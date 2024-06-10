@@ -298,8 +298,6 @@ var commonUi = {
     },
     subDepsMenuClick: function(){
         var index = $(this).index();
-        console.log($(this));
-        console.log(index);
 
         $(this).siblings().removeClass("on");
         $(this).addClass("on");
