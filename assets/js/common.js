@@ -42,7 +42,6 @@ var _loginInPut;
 
 var _btnTypeList;
 
-
 var commonUi = {
 
     init: function () {
@@ -124,10 +123,10 @@ var commonUi = {
         _searchInput.on("focusout", commonUi.inputFocusOutEvent);
         _btnTextDelete.on("click", commonUi.inPutTextDeleteClick);
         _loginInPut.on("input", commonUi.loginValueCheck);
-        _btnTypeClose.on("click", commonUi._btnTypeCloseClick);
+        _btnTypeClose.on("click", commonUi.btnTypeCloseClick);
 
-
-
+        commonUi.tabActivation();
+  
     },
 
     loadEvent: function () {
@@ -168,6 +167,7 @@ var commonUi = {
 
     gnbBtnClick: function () {
         _gnb.css("display", "block");
+        _htmlBody.css("overflow", "hidden");
     },
 
     gnbCloseClick: function () {
@@ -225,6 +225,7 @@ var commonUi = {
     },
 
     typeBtnsClick: function () {
+
         var index = $(this).index();
         $(this).addClass("on").siblings().removeClass("on");
         commonUi.updateBarPosition($(this));
@@ -232,8 +233,8 @@ var commonUi = {
         var tabPanelTarget = $(".cm_tab_panel").find(".item");
         tabPanelTarget.removeClass("on");
         tabPanelTarget.eq(index).addClass("on");
-      
     },
+
     textFormClick: function () {
         var This = $(this);
         var textForm = This.parent();
@@ -391,16 +392,55 @@ var commonUi = {
         }
     },
 
-    _btnTypeCloseClick: function () {
+    btnTypeCloseClick: function () {
         var btnGroup = $( this ).parents( ".btn_group" );
         var liLength = $( ".cm_btn_list" ).find( "li" ).length; 
         $( this ).parents( "li" ).remove();
         if( liLength == 1 ){
             btnGroup.remove();
         }
-     
+    },
 
+    mainSwichCahge: function(){
+        commonUi.gnbCloseClick();
+        var contents = $(".sections").find("section");
+        var roundBar = $(".switch_round");
+        if( roundBar.hasClass( "right")) return;
+        _switchBoxBtns.removeClass("on");
+        _switchBoxBtns.eq(1).addClass("on");
+        contents.removeClass("on");
+        contents.eq(1).addClass("on");
+        roundBar.removeClass("left")
+        roundBar.addClass("right")
+    },
+
+    setTabIndex: function(index){
+        localStorage.setItem('tabIndex', index);
+    },
+
+    tabActivation: function() {
+        var path = window.location.pathname;
+        var page = path.split("/").pop();
+    
+        if (page === "index.html" && path.includes("/board/")) {
+            var tabIndex = localStorage.getItem('tabIndex');
+            if (tabIndex !== null) {
+                tabIndex = parseInt(tabIndex, 10); 
+                var selectedButton = _typeBtns.eq(tabIndex);
+                commonUi.updateBarPosition(selectedButton);
+
+                var tabPanelTarget = $(".cm_tab_panel").find(".item");
+                tabPanelTarget.removeClass("on");
+                tabPanelTarget.eq(tabIndex).addClass("on");
+
+                var cmTypeListItems = $(".cm_type_list li");
+                cmTypeListItems.removeClass("on");
+                cmTypeListItems.eq(tabIndex).addClass("on");
+            }
+        }
     }
+
+
 };
 
 
