@@ -153,7 +153,7 @@ header {
     }
 
     &.home {
-        @include vp(height, 546px);
+        @include vp(height, 446px);
         background-color: $thickGreen;
         @include vp(border-radius, 0 0 40px 40px);
 
