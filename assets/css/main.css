@@ -1640,11 +1640,11 @@ header.filter .btn_close {
     padding-top: 14.9333333333vw;
   }
 }
-#wrap.common {
+#wrap.sub {
   padding-top: 112px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.common {
+  #wrap.sub {
     padding-top: 14.9333333333vw;
   }
 }
@@ -2401,31 +2401,41 @@ header.filter .btn_close {
   display: none;
   position: fixed;
   top: 0px;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background: #fff;
   z-index: 999;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .layer_popup.open {
   display: block;
 }
-.layer_popup .btn_close {
+.layer_popup header {
+  height: 120px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup header {
+    height: 16vw;
+  }
+}
+.layer_popup header .btn_close {
   position: absolute;
   top: 0px;
   right: 0px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
-  padding: 40px;
+  padding: 60px;
   z-index: 999;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .btn_close {
+  .layer_popup header .btn_close {
     background-size: 7.4666666667vw auto;
   }
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .btn_close {
-    padding: 5.3333333333vw;
+  .layer_popup header .btn_close {
+    padding: 8vw;
   }
 }
 
@@ -3411,7 +3421,7 @@ header.filter .btn_close {
   }
 }
 .cm_full_wrap > .buttons_list li.on button {
-  color: #000;
+  color: #00A862;
 }
 
 /*font weight 정의*/
@@ -4283,6 +4293,14 @@ header.filter .btn_close {
     margin-right: 0;
   }
 }
+.cm_btn_list.etc {
+  padding: 0 40px;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_list.etc {
+    padding: 0 5.3333333333vw;
+  }
+}
 
 #wrap {
   background: #F6F6F6;
@@ -4645,6 +4663,9 @@ header.filter .btn_close {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
     background-size: 3.2vw auto;
   }
+}
+.sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text a {
+  color: inherit;
 }
 .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .scroll_box .type_list {
   display: flex;
@@ -5571,4 +5592,168 @@ header.filter .btn_close {
 }
 .sections section.on {
   display: block;
+}
+
+.pop_cont01 .category_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 92px 40px 60px;
+  background: #EEE;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap {
+    padding: 12.2666666667vw 5.3333333333vw 8vw;
+  }
+}
+.pop_cont01 .category_wrap h4 {
+  padding-left: 148px;
+  display: inline-flex;
+  align-items: center;
+  height: 108px;
+  font-size: 32px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4 {
+    padding-left: 19.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4 {
+    height: 14.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4 {
+    font-size: 4.2666666667vw;
+  }
+}
+.pop_cont01 .category_wrap h4.partner {
+  background: url("../images/icons/icon_Partner.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.partner {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap h4.disaster {
+  background: url("../images/icons/icon_disaster.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.disaster {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap h4.foreign {
+  background: url("../images/icons//icon_different_thing.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.foreign {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap h4.customer {
+  background: url("../images/icons/icon__Customer.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.customer {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap h4.fire {
+  background: url("../images/icons/icon_fire.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.fire {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap h4.food_safety {
+  background: url("../images/icons/icon_food_safety.png") center left no-repeat;
+  background-size: 108px auto;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap h4.food_safety {
+    background-size: 14.4vw auto;
+  }
+}
+.pop_cont01 .category_wrap .btn_box {
+  margin-top: 70px;
+  display: flex;
+  gap: 10px;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap .btn_box {
+    margin-top: 9.3333333333vw;
+  }
+}
+.pop_cont01 .category_wrap .btn_box button {
+  background: #fff;
+  font-weight: 400;
+}
+.pop_cont01 .category_wrap .btn_box button span {
+  padding: 20px;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .category_wrap .btn_box button span {
+    padding: 2.6666666667vw;
+  }
+}
+.pop_cont01 .guide_list {
+  margin: 20px 0px;
+  padding: 0px 40px;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list {
+    margin: 2.6666666667vw 0vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list {
+    padding: 0vw 5.3333333333vw;
+  }
+}
+.pop_cont01 .guide_list li {
+  padding: 40px 0px;
+  border-bottom: 1px solid #EEE;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list li {
+    padding: 5.3333333333vw 0vw;
+  }
+}
+.pop_cont01 .guide_list li:last-child {
+  border-bottom: none;
+}
+.pop_cont01 .guide_list li .title {
+  margin-bottom: 12px;
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list li .title {
+    margin-bottom: 1.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list li .title {
+    font-size: 4vw;
+  }
+}
+.pop_cont01 .guide_list li .sub_title {
+  font-size: 24px;
+  color: #666;
+}
+@media screen and (max-width: 750px) {
+  .pop_cont01 .guide_list li .sub_title {
+    font-size: 3.2vw;
+  }
 }

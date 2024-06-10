@@ -438,23 +438,28 @@
     display: none;
     position: fixed;
     top: 0px;
-    min-height: 100vh;
+    height: 100%;
     width: 100%;
     background: $white;
     z-index: 999;
+    overflow:hidden;
+    overflow-y:auto;
 
     &.open {
         display: block;
     }
 
-    .btn_close {
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        background: url("../images/btn/btn_close.png") center center no-repeat;
-        @include vp(background-size, 56px auto);
-        @include vp(padding, 40px);
-        z-index: 999;
+    header {
+        @include vp(height, 120px);
+        .btn_close {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: url("../images/btn/btn_close.png") center center no-repeat;
+            @include vp(background-size, 56px auto);
+            @include vp(padding, 60px);
+            z-index: 999;
+        }
     }
 }
 

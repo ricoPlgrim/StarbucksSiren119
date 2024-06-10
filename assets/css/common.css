@@ -2399,31 +2399,41 @@ header.filter .btn_close {
   display: none;
   position: fixed;
   top: 0px;
-  min-height: 100vh;
+  height: 100%;
   width: 100%;
   background: #fff;
   z-index: 999;
+  overflow: hidden;
+  overflow-y: auto;
 }
 .layer_popup.open {
   display: block;
 }
-.layer_popup .btn_close {
+.layer_popup header {
+  height: 120px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup header {
+    height: 16vw;
+  }
+}
+.layer_popup header .btn_close {
   position: absolute;
   top: 0px;
   right: 0px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
-  padding: 40px;
+  padding: 60px;
   z-index: 999;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .btn_close {
+  .layer_popup header .btn_close {
     background-size: 7.4666666667vw auto;
   }
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .btn_close {
-    padding: 5.3333333333vw;
+  .layer_popup header .btn_close {
+    padding: 8vw;
   }
 }
 
