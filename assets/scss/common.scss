@@ -16,7 +16,7 @@
         @include vp(padding-top, 112px);
     }
 
-    &.sub{
+    &.sub {
         @include vp(padding-top, 112px);
     }
 }
@@ -283,40 +283,45 @@
 #record {
     .sheet_wrap {
         @include vp(min-height, 170px);
-    } 
+    }
 }
 
-.scrolltop_box{
+.scrolltop_box {
     display: none;
     position: fixed;
     @include vp(bottom, 214px);
-    left:50%;
+    left: 50%;
     transform: translateX(209px);
+
     @include breakpoint {
         transform: translateX(27.86666666666667vw);
     }
-    .btn_top{
+
+    .btn_top {
         display: block;
-        @include vp(width, 136px); 
-        @include vp(height, 136px); 
+        @include vp(width, 136px);
+        @include vp(height, 136px);
         background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
         @include vp(background-size, 136px auto);
         margin-left: auto;
     }
-    &.on{
+
+    &.on {
         @include vp(bottom, 59px);
     }
 }
 
-.message_box{
+.message_box {
     position: fixed;
     @include vp(bottom, 82px);
-    left:50%;
+    left: 50%;
     transform: translateX(75px);
+
     @include breakpoint {
         transform: translateX(10vw);
     }
-    .btn_message{
+
+    .btn_message {
         position: relative;
         display: block;
         color: $orange;
@@ -331,7 +336,8 @@
         @include vp(padding-left, 68px);
         background: $white;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
-        &::after{
+
+        &::after {
             content: '';
             position: absolute;
             @include vp(top, 26px);
@@ -844,7 +850,7 @@
             display: none;
 
             .inner {
-                @include vp(padding, 30px 20px);
+                @include vp(padding, 30px 40px);
 
                 .checkbox_list {
                     display: flex;
@@ -900,10 +906,12 @@
                 overflow-y: hidden;
                 box-sizing: border-box;
                 -ms-overflow-style: none;
-                scrollbar-width: none; 
+                scrollbar-width: none;
+
                 &::-webkit-scrollbar {
-                    display: none; 
+                    display: none;
                 }
+
                 li {
                     position: relative;
                     flex: 0 0 auto;
@@ -976,8 +984,21 @@
         width: 100%;
         @include vp(max-width, 750px);
         background: $white;
+
+        .button_grop {
+            &.bottom {
+                .inner {
+                    button {
+                        @include vp(height, 100px);
+                    }
+                }
+            }
+        }
+
+
     }
 }
+
 /*풀 스크롤링*/
 .cm_full_wrap {
     width: 100%;
@@ -1005,13 +1026,27 @@
             &:first-child {
                 @include vp(margin-left, 40px);
             }
-            &.on{
-                button{
+
+            &.on {
+                button {
                     color: $green;
                 }
             }
         }
 
+    }
+
+    &.etc {
+        >.buttons_list {
+            li {
+                &.on {
+                    button {
+                        color: $green;
+                    }
+                }
+
+            }
+        }
     }
 }
 
@@ -1249,6 +1284,7 @@
     align-items: center;
     @include vp(border-radius, 12px);
     @include vp(border, 2px solid $black-12);
+
     .text {
         color: $black-58;
         text-align: center;
@@ -1402,8 +1438,8 @@
                 }
             }
         }
-    } 
- 
+    }
+
     .date_setting {
         display: flex;
         @include vp(margin-top, 10px);
@@ -1428,7 +1464,7 @@
                 font-weight: $fw4;
                 color: $black;
                 opacity: .6;
-                @include vp(line-height, 70px); 
+                @include vp(line-height, 70px);
             }
 
             input {
@@ -1447,21 +1483,23 @@
 
 
 /*가로 스크롤및 버튼 리스트*/
-.cm_btn_list { 
+.cm_btn_list {
     @include vp(padding-bottom, 1px);
     display: flex;
     overflow-y: auto;
+
     li {
         position: relative;
         text-wrap: nowrap;
         @include vp(margin-right, 8px);
-        .cm_btn_round{
-            .text{
+
+        .cm_btn_round {
+            .text {
                 @include vp(font-size, $f12);
                 @include vp(padding, 20px 60px 20px 20px);
-                @include vp(line-height,20px);
+                @include vp(line-height, 20px);
             }
-        } 
+        }
 
         .btn_close {
             display: block;
@@ -1474,11 +1512,14 @@
             @include vp(background-size, 28px auto);
             z-index: 10;
         }
-        &:last-child{ 
-            @include vp(margin-right, 0); 
+
+        &:last-child {
+            @include vp(margin-right, 0);
         }
     }
-    &.etc{
-        @include vp(padding, 0 40px);
+
+    &.etc {
+        @include vp(padding, 20px 40px);
+        @include vp(border-bottom, 2px solid $light-gray-3);
     }
 }

@@ -810,14 +810,14 @@ header .header_inner .header_sticky .header_switchbox .switch_round {
   position: relative;
   width: 100%;
   height: inherit;
-  border: 1px solid #EEE;
+  border: 2px solid #EEE;
   border-radius: 100px;
-  background: #EEE;
+  background: #fff;
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky .header_switchbox .switch_round {
-    border: 0.1333333333vw solid #EEE;
+    border: 0.2666666667vw solid #EEE;
   }
 }
 @media screen and (max-width: 750px) {
@@ -862,7 +862,7 @@ header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
   border-radius: 100px;
   background: #000;
   border: 1px solid #000;
-  transition: left 0.35s ease-in-out;
+  transition: left 0.2s ease-in-out;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
@@ -1033,6 +1033,30 @@ header.common .btn_bookmark.on {
 @media screen and (max-width: 750px) {
   header.common .btn_bookmark.on {
     padding: 7.2vw 6.6666666667vw;
+  }
+}
+header.common .btn_close {
+  position: absolute;
+  top: 12px auto;
+  right: 0px;
+  background: url("../images/btn/btn_close.png") center center no-repeat;
+  background-size: 56px auto;
+  padding: 40px;
+  z-index: 999;
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_close {
+    top: 1.6vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_close {
+    background-size: 7.4666666667vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.common .btn_close {
+    padding: 5.3333333333vw;
   }
 }
 header.setting .btn_close {
@@ -1640,11 +1664,11 @@ header.filter .btn_close {
     padding-top: 14.9333333333vw;
   }
 }
-#wrap.common {
+#wrap.sub {
   padding-top: 112px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.common {
+  #wrap.sub {
     padding-top: 14.9333333333vw;
   }
 }
@@ -3349,6 +3373,14 @@ header.filter .btn_close {
     max-width: 100vw;
   }
 }
+.cm_tab_bottom.filter .button_grop.bottom .inner button {
+  height: 100px;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_bottom.filter .button_grop.bottom .inner button {
+    height: 13.3333333333vw;
+  }
+}
 
 /*풀 스크롤링*/
 .cm_full_wrap {
@@ -4281,6 +4313,14 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .cm_btn_list li:last-child {
     margin-right: 0;
+  }
+}
+.cm_btn_list.etc {
+  padding: 0 40px;
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_list.etc {
+    padding: 0 5.3333333333vw;
   }
 }
 
