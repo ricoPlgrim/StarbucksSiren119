@@ -599,12 +599,12 @@
                 <nav>
                     <div class="inner">
                         <ul>
-                            <li class="icon speaker"><a href="report/index.html">보고하기</a></li>
-                            <li class="icon edit"><a href="javascript:;">사건 ∙ 사고</a></li>
+                            <li class="icon speaker"><a href="javascript:;" onclick="commonUi.mainSwichCahge(0)">보고하기</a></li>
+                            <li class="icon edit"><a href="javascript:;" onclick="commonUi.mainSwichCahge(1)">사건 ∙ 사고</a></li>
                             <li class="icon chart"><a href="chart/index.html">현황/통계</a></li>
                             <li class="icon bookmark"><a href="bookmark/list.html">북마크</a></li>
-                            <li class="icon collections"><a href="board/index.html">주요 보고사례</a></li>
-                            <li class="icon menubook"><a href="board/index.html">업무 메뉴얼</a></li>
+                            <li class="icon menubook"><a href="board/index.html" onclick="commonUi.setTabIndex(0)">업무가이드</a></li> 
+                            <li class="icon collections"><a href="board/index.html" onclick="commonUi.setTabIndex(1)">주요 보고사례</a></li>
                         </ul>
                     </div>
                 </nav>
