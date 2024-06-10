@@ -31,6 +31,7 @@ var _endDateInput;
 
 var _typeBtns;
 var _twoDepsMenu;
+var _subDepsMenu;
 
 var _searchInput;
 var _deleteAllBtn;
@@ -73,6 +74,7 @@ var commonUi = {
         _typeBtns = $( ".cm_tab_contents" ).find( ".cm_type_list" ).find( "li" );
 
         _twoDepsMenu = $( ".cm_tab_panel .buttons_list" ).find( "li" );
+        _subDepsMenu = $( ".cm_tab_panel .depth_02" ).find("li");
 
 
         _searchInput= $( ".search_input" );
@@ -109,6 +111,7 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);
 
         _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
+        _subDepsMenu.on("click", commonUi.subDepsMenuClick);
 
         _searchInput.on( "input", commonUi.inputTarget );
         _searchInput.on( "focus", commonUi.inputFocusEvent );
@@ -278,22 +281,28 @@ var commonUi = {
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
-        var menuBtn = $(this).find("button");
-        var filterText = $(menuBtn).data("filter");
+        var menuDepth02 = $(this).parents().parents().find(".depth_02");
     
         // 탭메뉴 클릭 시 활성화
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
 
-        // 탭메뉴 클릭 시 필터된 항목 보여주기
-        $(".board_list").hide();
-        if (filterText === "all") {
-            $(".board_list").show();
+        // 탭메뉴 하위 투뎁스 이벤트
+        if(index > 0) {
+            menuDepth02.show();
+            menuDepth02.css("display", "flex");
         } else {
-            $(".board_list." + filterText).show();
-        }
-        
+            menuDepth02.hide();
+        }        
         commonUi.centerMenu(menuContainer, $(this));
+    },
+    subDepsMenuClick: function(){
+        var index = $(this).index();
+        console.log($(this));
+        console.log(index);
+
+        $(this).siblings().removeClass("on");
+        $(this).addClass("on");
     },
     centerMenu: function(menuContainer, menuItem) {
         var containerWidth = menuContainer.outerWidth();
