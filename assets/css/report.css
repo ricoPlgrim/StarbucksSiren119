@@ -1814,6 +1814,7 @@
   width: 526px;
   border-radius: 16px;
   border: 1px solid #DDD;
+  overflow: hidden;
   overflow-y: auto;
 }
 @media screen and (max-width: 750px) {
@@ -1841,28 +1842,37 @@
 }
 #wrap.detail .btn_comment .text_box.on {
   border: 1px solid #000;
-  color: #000;
+}
+#wrap.detail .btn_comment .text_box.on textarea {
+  margin-bottom: -38px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.detail .btn_comment .text_box.on textarea {
+    margin-bottom: -5.0666666667vw;
+  }
 }
 #wrap.detail .btn_comment .text_box textarea {
-  padding-right: 30px;
-  width: 100%;
+  padding-right: 80px;
+  width: 124%;
   min-height: 56px;
-  max-height: 180px;
-  line-height: 36px;
-  font-size: 26px;
-  color: #797979;
+  max-height: 200px;
+  line-height: 40px;
+  font-size: 32px;
+  color: #000;
   outline: none;
   resize: none;
   border: none;
+  transform: scale(0.8125);
+  transform-origin: left top;
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    padding-right: 4vw;
+    padding-right: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    width: 100%;
+    width: 124%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1872,17 +1882,17 @@
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    max-height: 24vw;
+    max-height: 26.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    line-height: 4.8vw;
+    line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   #wrap.detail .btn_comment .text_box textarea {
-    font-size: 3.4666666667vw;
+    font-size: 4.2666666667vw;
   }
 }
 #wrap.detail .btn_comment .text_box .byte_num {
