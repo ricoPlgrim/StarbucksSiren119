@@ -27,38 +27,7 @@
                                 .inner {
                                     @include vp(padding-top, 40px );
                                     position: relative;
-                                    .btn_list { 
-                                        @include vp(padding-bottom, 1px);
-                                        display: flex;
-                                        overflow-y: auto;
-                                        li {
-                                            position: relative;
-                                            text-wrap: nowrap;
-                                            @include vp(margin-right, 8px);
-                                            .cm_btn_round{
-                                                .text{
-                                                    @include vp(font-size, $f12);
-                                                    @include vp(padding, 20px 60px 20px 20px);
-                                                    @include vp(line-height,20px);
-                                                }
-                                            } 
-                        
-                                            .btn_close {
-                                                display: block;
-                                                position: absolute;
-                                                @include vp(top, 19px);
-                                                @include vp(right, 20px);
-                                                @include vp(width, 28px);
-                                                @include vp(height, 28px);
-                                                background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
-                                                @include vp(background-size, 28px auto);
-                                                z-index: 10;
-                                            }
-                                            &:last-child{ 
-                                                @include vp(margin-right, 0); 
-                                            }
-                                        }
-                                    }
+                             
                                 }
                             }
 
