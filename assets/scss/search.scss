@@ -40,14 +40,14 @@
                         @include vp(border-radius, 12px );
                         box-sizing: border-box;
                         color:$black;
-                        background: #fff;
-                        font-weight: 400;
+                        background: $white;
+                        font-weight: $fw4;
                         &::placeholder {
                             color:    #bbb;
                             @include vp(font-size, $f15 ); 
                             transform-origin: left center; 
                             @include vp(letter-spacing, .5px );
-                            font-weight: 400;
+                            font-weight: $fw4;
                          }
                          &:focus{
                             @include vp(border, 2px solid $black );
@@ -84,12 +84,12 @@
                     }
                 }   
                 .btn_cancel{
-                    color: rgba(0, 0, 0, 0.72);
+                    color: $black-72;
                     @include vp(font-size, 32px ); 
                     @include vp(line-height, 32px ); 
                     @include vp(margin-left, 20px ); 
                     font-style: normal;
-                    font-weight: 600;
+                    font-weight: $fw6;
                 }
             }
             .searh_contents{
@@ -101,14 +101,14 @@
                     h3{
                         @include vp(font-size, 32px ); 
                         @include vp(line-height, 32px ); 
-                        font-weight: 600;
+                        font-weight: $fw6;
                     }
                     .btn_all_delete{
                         position: relative;;
                         @include vp(font-size, 24px ); 
                         @include vp(line-height, 28px ); 
                         color: $black;
-                        font-weight: 400;
+                        font-weight: $fw4;
                         opacity: .5;
                         &::after{
                             content: '';
@@ -138,7 +138,7 @@
                                 @include vp(max-width, 490px ); 
                                 @include vp(font-size, 26px ); 
                                 @include vp(line-height, 30px ); 
-                                font-weight: 400;
+                                font-weight: $fw4;
                                 color: $black;
                                 opacity: .8;
                             }
@@ -162,7 +162,7 @@
                         color: #aaa;
                         text-align: left;
                         @include vp(font-size, 26px ); 
-                        font-weight: 400;
+                        font-weight: $fw4;
 
                     }
                 }

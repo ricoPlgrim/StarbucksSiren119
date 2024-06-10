@@ -82,14 +82,14 @@ section {
                             @include vp(border, 2px solid $light-gray-6 );
                             @include vp(border-radius, 12px);
                             color: $black;
-                            background: #fff;
-                            font-weight: 400;
+                            background: $white;
+                            font-weight: $fw4;
 
                             &::placeholder {
                                 color: #bbb;
                                 @include vp(font-size, 26px);
                                 @include vp(letter-spacing, .5px);
-                                font-weight: 400;
+                                font-weight: $fw4;
                             }
 
                             &:focus {
@@ -213,22 +213,6 @@ section {
                 @include vp(max-height, 220px);
                 overflow: auto;
                 @include vp(border, 2px solid transparent);
-                // &::-webkit-scrollbar-thumb {
-                //     background: #888;
-                //     border-radius: 10px;
-                // }
-                // &::-webkit-scrollbar-thumb:hover {
-                //     background: #555;
-                // }
-                // &::-webkit-scrollbar-thumb:horizontal {
-                //     height: 6px;
-                // }
-                // &::-webkit-scrollbar-thumb:vertical {
-                //     width: 6px;
-                // }
-                // &::-webkit-scrollbar-corner {
-                //     background: #f1f1f1;
-                // }
             }
 
             textarea {
@@ -248,7 +232,6 @@ section {
                 color: $light-gray-1;
                 border: 0;
                 overflow-x: hidden;
-
             }
 
             .byte_num {
@@ -354,7 +337,7 @@ section {
                             @include vp(font-size, $f12);
                             @include vp(padding, 20px 60px 20px 20px);
                             @include vp(height, 64px);
-                            font-weight: 500;
+                            font-weight: $fw5;
                             color: $green;
                             @include vp(letter-spacing, .1px);
                             text-align: center;
@@ -389,7 +372,7 @@ section {
     transform: translateX(-50%);
     width: 100%;
     max-width: 750px;
-    background: #fff;
+    background: $white;
     @include vp(border-top, 2px solid $light-gray-2);
     z-index: 10;
 

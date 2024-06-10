@@ -767,7 +767,7 @@
             }
             .sub_title {
                 @include vp( font-size, $f12); 
-                color: #666;
+                color: $light-gray-8;
             }
         }
     }
