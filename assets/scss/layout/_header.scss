@@ -9,7 +9,7 @@ header {
         .header_top {
             // position: fixed;
             display: flex;
-            @include vp(padding-top, 80px);
+            @include vp(padding-top, 33px);
 
             // left:50%;
             // transform: translateX(-50%);

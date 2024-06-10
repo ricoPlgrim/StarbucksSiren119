@@ -448,8 +448,8 @@
     width: 100%;
     background: $white;
     z-index: 999;
-    overflow:hidden;
-    overflow-y:auto;
+    overflow: hidden;
+    overflow-y: auto;
 
     &.open {
         display: block;
@@ -457,6 +457,7 @@
 
     header {
         @include vp(height, 120px);
+
         .btn_close {
             position: absolute;
             top: 0px;
@@ -720,7 +721,7 @@
 
         .btn_bookmark {
             position: absolute;
-            @include vp(top, -10px);
+            @include vp(top, 34px);
             @include vp(right, 39px);
             @include vp(width, 50px);
             @include vp(height, 76px);
@@ -993,14 +994,16 @@
         .button_grop {
             &.bottom {
                 .inner {
-                    button {
+                    button { 
                         @include vp(height, 100px);
                     }
                 }
             }
+           
         }
-
-
+        .dimd{
+            @include vp(top, 18px);
+        }
     }
 }
 
@@ -1264,7 +1267,7 @@
         cursor: pointer;
 
         input[type="checkbox"] {
-            @include vp(padding-left, 64px);
+            @include vp(padding-left, 84px);
             @include vp(width, 44px);
             @include vp(height, 44px);
             cursor: pointer;
@@ -1340,7 +1343,7 @@
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
-                @include vp(padding-top, 32px);
+                @include vp(padding-top, 48px);
 
                 h3 {
                     color: $black-87;
@@ -1488,43 +1491,55 @@
 
 
 /*가로 스크롤및 버튼 리스트*/
-.cm_btn_list {
-    @include vp(padding-bottom, 1px);
-    display: flex;
-    overflow-y: auto;
+.btn_group {
+    position: relative;
+    .cm_btn_list {
+        @include vp(padding-bottom, 1px);
+        display: flex;
+        overflow-y: auto;
 
-    li {
-        position: relative;
-        text-wrap: nowrap;
-        @include vp(margin-right, 8px);
+        li {
+            position: relative;
+            text-wrap: nowrap;
+            @include vp(margin-right, 8px);
 
-        .cm_btn_round {
-            .text {
-                @include vp(font-size, $f12);
-                @include vp(padding, 20px 60px 20px 20px);
-                @include vp(line-height, 20px);
+            .cm_btn_round {
+                .text {
+                    @include vp(font-size, $f12);
+                    @include vp(padding, 20px 60px 20px 20px);
+                    @include vp(line-height, 20px);
+                }
+            }
+
+            .btn_close {
+                display: block;
+                position: absolute;
+                @include vp(top, 19px);
+                @include vp(right, 20px);
+                @include vp(width, 28px);
+                @include vp(height, 28px);
+                background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
+                @include vp(background-size, 28px auto);
+                z-index: 10;
+            }
+
+            &:last-child {
+                @include vp(margin-right, 58px);
             }
         }
 
-        .btn_close {
-            display: block;
-            position: absolute;
-            @include vp(top, 19px);
-            @include vp(right, 20px);
-            @include vp(width, 28px);
-            @include vp(height, 28px);
-            background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
-            @include vp(background-size, 28px auto);
-            z-index: 10;
-        }
-
-        &:last-child {
-            @include vp(margin-right, 0);
+        &.etc {
+            @include vp(padding, 20px 0 20px 40px);
+            @include vp(border-bottom, 2px solid $light-gray-3);
         }
     }
 
-    &.etc {
-        @include vp(padding, 20px 40px);
-        @include vp(border-bottom, 2px solid $light-gray-3);
+    .dimd {
+        position: absolute;
+        top:0;
+        right:0;
+        @include vp(width, 58px);
+        @include vp(height, 64px);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.50) 49.54%, #FFF 95.91%);
     }
 }

@@ -662,11 +662,11 @@ header .header_inner {
 }
 header .header_inner .header_top {
   display: flex;
-  padding-top: 80px;
+  padding-top: 33px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top {
-    padding-top: 10.6666666667vw;
+    padding-top: 4.4vw;
   }
 }
 header .header_inner .header_top .btn_hamburger {
@@ -2956,7 +2956,7 @@ header.filter .btn_close {
 }
 .cm_card_list > li .btn_bookmark {
   position: absolute;
-  top: -10px;
+  top: 34px;
   right: 39px;
   width: 50px;
   height: 76px;
@@ -2965,7 +2965,7 @@ header.filter .btn_close {
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li .btn_bookmark {
-    top: -1.3333333333vw;
+    top: 4.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3389,6 +3389,14 @@ header.filter .btn_close {
     height: 13.3333333333vw;
   }
 }
+.cm_tab_bottom.filter .dimd {
+  top: 18px;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_bottom.filter .dimd {
+    top: 2.4vw;
+  }
+}
 
 /*풀 스크롤링*/
 .cm_full_wrap {
@@ -3751,7 +3759,7 @@ header.filter .btn_close {
   }
 }
 .cm_check_box label input[type=checkbox] {
-  padding-left: 64px;
+  padding-left: 84px;
   width: 44px;
   height: 44px;
   cursor: pointer;
@@ -3762,7 +3770,7 @@ header.filter .btn_close {
 }
 @media screen and (max-width: 750px) {
   .cm_check_box label input[type=checkbox] {
-    padding-left: 8.5333333333vw;
+    padding-left: 11.2vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3905,11 +3913,11 @@ header.filter .btn_close {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 48px;
 }
 @media screen and (max-width: 750px) {
   .cm_setting_cotnents .inner .setting_list > li {
-    padding-top: 4.2666666667vw;
+    padding-top: 6.4vw;
   }
 }
 .cm_setting_cotnents .inner .setting_list > li h3 {
@@ -4242,47 +4250,50 @@ header.filter .btn_close {
 }
 
 /*가로 스크롤및 버튼 리스트*/
-.cm_btn_list {
+.btn_group {
+  position: relative;
+}
+.btn_group .cm_btn_list {
   padding-bottom: 1px;
   display: flex;
   overflow-y: auto;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list {
+  .btn_group .cm_btn_list {
     padding-bottom: 0.1333333333vw;
   }
 }
-.cm_btn_list li {
+.btn_group .cm_btn_list li {
   position: relative;
   text-wrap: nowrap;
   margin-right: 8px;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li {
+  .btn_group .cm_btn_list li {
     margin-right: 1.0666666667vw;
   }
 }
-.cm_btn_list li .cm_btn_round .text {
+.btn_group .cm_btn_list li .cm_btn_round .text {
   font-size: 24px;
   padding: 20px 60px 20px 20px;
   line-height: 20px;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .cm_btn_round .text {
+  .btn_group .cm_btn_list li .cm_btn_round .text {
     font-size: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .cm_btn_round .text {
+  .btn_group .cm_btn_list li .cm_btn_round .text {
     padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .cm_btn_round .text {
+  .btn_group .cm_btn_list li .cm_btn_round .text {
     line-height: 2.6666666667vw;
   }
 }
-.cm_btn_list li .btn_close {
+.btn_group .cm_btn_list li .btn_close {
   display: block;
   position: absolute;
   top: 19px;
@@ -4294,49 +4305,67 @@ header.filter .btn_close {
   z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .btn_close {
     top: 2.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .btn_close {
     right: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .btn_close {
     width: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .btn_close {
     height: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .btn_close {
     background-size: 3.7333333333vw auto;
   }
 }
-.cm_btn_list li:last-child {
-  margin-right: 0;
+.btn_group .cm_btn_list li:last-child {
+  margin-right: 58px;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list li:last-child {
-    margin-right: 0;
+  .btn_group .cm_btn_list li:last-child {
+    margin-right: 7.7333333333vw;
   }
 }
-.cm_btn_list.etc {
-  padding: 20px 40px;
+.btn_group .cm_btn_list.etc {
+  padding: 20px 0 20px 40px;
   border-bottom: 2px solid #EEE;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list.etc {
-    padding: 2.6666666667vw 5.3333333333vw;
+  .btn_group .cm_btn_list.etc {
+    padding: 2.6666666667vw 0 2.6666666667vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_list.etc {
+  .btn_group .cm_btn_list.etc {
     border-bottom: 0.2666666667vw solid #EEE;
+  }
+}
+.btn_group .dimd {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  height: 64px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 49.54%, #FFF 95.91%);
+}
+@media screen and (max-width: 750px) {
+  .btn_group .dimd {
+    width: 7.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .btn_group .dimd {
+    height: 8.5333333333vw;
   }
 }
