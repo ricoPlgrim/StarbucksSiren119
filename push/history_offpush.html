@@ -11,20 +11,20 @@
 </head>
 
 <body>
-    <main id="wrap" class="setting">
+    <main id="wrap" class="sub">
         <header class="common push">
             <button class="btn_back" onclick='history.back(-1); return false;'></button>
             <h1>Push 이력관리</h1>
             <button class="btn_setting" onclick="commonUi.bottomSheetOpen('record')"></button>
         </header>
-        <section>
+        <section  class="setting">
             <h2 class="blind">Push 이력관리 설정 페이지</h2>
             <!--list클래스 추가시 백그라운드 변경-->
             <div class="cm_tab_panel list">
                 <!--알림설정이 꺼져 있습니다.-->
                 <div class="status_message_box" style="display: block;">
                     <p class="alert_message">알림설정이 꺼져 있습니다.</p>
-                    <a href="javascript:;" class="btn_alarm_link">알림설정하러 가기 </a>
+                    <a href="setting.html" class="btn_alarm_link">알림설정하러 가기 </a>
                 </div>
 
 

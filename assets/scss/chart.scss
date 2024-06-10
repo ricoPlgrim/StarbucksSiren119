@@ -1,9 +1,7 @@
 @import 'base/variables';
 @import 'base/mixin'; 
 
-#wrap{
-    &.chart {
-        @include vp(padding-top, 112px);
+    .chart {
         .cm_date_contents {
             .date_setting {
                 @include vp(margin-top, 20px);
@@ -22,4 +20,3 @@
             }
         }
     }
-}

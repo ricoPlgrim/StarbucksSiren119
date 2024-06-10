@@ -1,18 +1,10 @@
 @charset "UTF-8";
 /* 정리중 */
 /*폰트 사이즈*/
-#wrap.board {
-  padding-top: 112px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.board {
-    padding-top: 14.9333333333vw;
-  }
-}
-#wrap.board .cm_type_list {
+.board .cm_type_list {
   position: relative;
 }
-#wrap.board .cm_type_list:after {
+.board .cm_type_list:after {
   content: "";
   position: absolute;
   bottom: -18px;
@@ -22,58 +14,58 @@
   background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list:after {
+  .board .cm_type_list:after {
     bottom: -2.4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list:after {
+  .board .cm_type_list:after {
     height: 1.6vw;
   }
 }
-#wrap.board .cm_type_list li {
+.board .cm_type_list li {
   width: 50%;
   height: 94px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list li {
+  .board .cm_type_list li {
     width: 50%;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list li {
+  .board .cm_type_list li {
     height: 12.5333333333vw;
   }
 }
-#wrap.board .cm_type_list .bar {
+.board .cm_type_list .bar {
   width: 50%;
   top: 94px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list .bar {
+  .board .cm_type_list .bar {
     width: 50%;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_type_list .bar {
+  .board .cm_type_list .bar {
     top: 12.5333333333vw;
   }
 }
-#wrap.board .cm_full_wrap {
+.board .cm_full_wrap {
   margin-top: 0px;
 }
-#wrap.board .cm_full_wrap .buttons_list {
+.board .cm_full_wrap .buttons_list {
   padding: 42px 30px 30px 0px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_full_wrap .buttons_list {
+  .board .cm_full_wrap .buttons_list {
     padding: 5.6vw 4vw 4vw 0vw;
   }
 }
-#wrap.board .cm_full_wrap .buttons_list::-webkit-scrollbar {
+.board .cm_full_wrap .buttons_list::-webkit-scrollbar {
   display: none;
 }
-#wrap.board .cm_full_wrap .depth_02 {
+.board .cm_full_wrap .depth_02 {
   display: none;
   padding: 28px 40px;
   align-items: center;
@@ -81,54 +73,54 @@
   background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_full_wrap .depth_02 {
+  .board .cm_full_wrap .depth_02 {
     padding: 3.7333333333vw 5.3333333333vw;
   }
 }
-#wrap.board .cm_full_wrap .depth_02 > li button {
+.board .cm_full_wrap .depth_02 > li button {
   background-color: #fff;
 }
-#wrap.board .cm_full_wrap .depth_02 > li button span {
+.board .cm_full_wrap .depth_02 > li button span {
   padding: 20px;
   line-height: normal;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .cm_full_wrap .depth_02 > li button span {
+  .board .cm_full_wrap .depth_02 > li button span {
     padding: 2.6666666667vw;
   }
 }
-#wrap.board .cm_full_wrap .depth_02 > li.on button {
+.board .cm_full_wrap .depth_02 > li.on button {
   border: 1px solid #00A862;
 }
-#wrap.board .cm_full_wrap .depth_02 > li.on button span {
+.board .cm_full_wrap .depth_02 > li.on button span {
   color: #00A862;
   font-weight: 600;
 }
-#wrap.board .board_list_wrap .board_list > li {
+.board .board_list_wrap .board_list > li {
   padding: 48px 0px;
   margin: 0 40px;
   border-bottom: 1px solid #EEE;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li {
+  .board .board_list_wrap .board_list > li {
     padding: 6.4vw 0vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li {
+  .board .board_list_wrap .board_list > li {
     margin: 0 5.3333333333vw;
   }
 }
-#wrap.board .board_list_wrap .board_list > li:first-child {
+.board .board_list_wrap .board_list > li:first-child {
   margin-top: 12px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li:first-child {
+  .board .board_list_wrap .board_list > li:first-child {
     margin-top: 1.6vw;
   }
 }
-#wrap.board .board_list_wrap .board_list > li a {
+.board .board_list_wrap .board_list > li a {
   padding-right: 80px;
   display: block;
   line-height: 40px;
@@ -139,76 +131,76 @@
   overflow: hidden;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li a {
+  .board .board_list_wrap .board_list > li a {
     padding-right: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li a {
+  .board .board_list_wrap .board_list > li a {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_list_wrap .board_list > li a {
+  .board .board_list_wrap .board_list > li a {
     font-size: 3.4666666667vw;
   }
 }
-#wrap.board .board_conts {
+.board .board_conts {
   padding: 0px 40px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts {
+  .board .board_conts {
     padding: 0vw 5.3333333333vw;
   }
 }
-#wrap.board .board_conts .text_wrap {
+.board .board_conts .text_wrap {
   padding-top: 60px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap {
+  .board .board_conts .text_wrap {
     padding-top: 8vw;
   }
 }
-#wrap.board .board_conts .text_wrap .title {
+.board .board_conts .text_wrap .title {
   margin-bottom: 40px;
   font-size: 30px;
   line-height: 48px;
   font-weight: 600;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap .title {
+  .board .board_conts .text_wrap .title {
     margin-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap .title {
+  .board .board_conts .text_wrap .title {
     font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap .title {
+  .board .board_conts .text_wrap .title {
     line-height: 6.4vw;
   }
 }
-#wrap.board .board_conts .text_wrap p {
+.board .board_conts .text_wrap p {
   line-height: 40px;
   font-size: 26px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap p {
+  .board .board_conts .text_wrap p {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .text_wrap p {
+  .board .board_conts .text_wrap p {
     font-size: 3.4666666667vw;
   }
 }
-#wrap.board .board_conts .img_wrap {
+.board .board_conts .img_wrap {
   margin-top: 40px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.board .board_conts .img_wrap {
+  .board .board_conts .img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
