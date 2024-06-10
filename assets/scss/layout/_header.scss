@@ -77,9 +77,9 @@ header {
                     position: relative;
                     width: 100%;
                     height: inherit;
-                    @include vp(border, 1px solid $light-gray-3);
+                    @include vp(border, 2px solid $light-gray-3);
                     @include vp(border-radius, 100px);
-                    background: $light-gray-3;
+                    background: $white;
                     overflow: hidden;
 
                     a {
@@ -112,7 +112,7 @@ header {
                         @include vp(border-radius, 100px);
                         background: $black;
                         @include vp(border, 1px solid $black);
-                        transition: left 0.35s ease-in-out;
+                        transition: left 0.2s ease-in-out;
                     }
 
                     &.left {
@@ -188,6 +188,7 @@ header {
             @include vp(font-size, 30px);
             font-weight: 700;
         }
+        
         .btn_bookmark {
             background: url("../images/btn/btn_bookmarkL_off.png") center center no-repeat;
             @include vp(background-size, 54px auto); 
@@ -198,6 +199,16 @@ header {
                 @include vp(padding, 54px 50px); 
             }
         }
+
+        .btn_close {
+            position: absolute;
+            @include vp(top, 12px auto);
+            right: 0px;
+            background: url("../images/btn/btn_close.png") center center no-repeat;
+            @include vp(background-size, 56px auto);
+            @include vp(padding, 40px);
+            z-index: 999;
+        } 
     }
     
     &.setting{
@@ -209,6 +220,7 @@ header {
         }
         // @include vp(border-bottom, 2px solid $light-gray-2 );
     }
+
     &.push{
         .btn_setting{
             margin-left:auto;
@@ -218,6 +230,7 @@ header {
         }
         // @include vp(border-bottom, 2px solid $light-gray-2 );
     }
+
     &.filter{
         .btn_close{
             margin-left:auto;
@@ -251,8 +264,10 @@ header {
             display: flex;
             align-items: center;
             justify-content: right;
-            @include vp(padding, 80px 8px 0 0);
-            @include vp(margin-bottom, 38px);
+            @include vp(padding, 12px 10px 12px 0);
+            // @include vp(margin-bottom, 12px);
+            @include vp(border-bottom, 2px solid  $light-gray-3);
+
             a{
                 position: relative;
                 display: block;
@@ -294,115 +309,114 @@ header {
             }
         }
 
-        .input_link {
-            @include vp(width, 670px);
-            margin: 0 auto;
-        }
+      
 
         nav {
-            @include vp(padding, 0 40px);
-            @include vp(margin-top, 80px);
-
-            ul {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                @include vp(column-gap, 22px);
-
-                // justify-content: flex-start;
-                .icon {
-                    flex: 1 1 calc(50% - 22px);
-
-                    @include breakpoint {
-                        flex: 1 1 calc(50% - 2.9333333333vw);
-                    }
-
-                    box-sizing: border-box;
-                    @include vp(padding-bottom, 60px);
-                    @include vp(border-bottom, 2px solid $black);
-                    @include vp(margin-bottom, 92px);
-
-                    a {
-                        position: relative;
-                        display: inline-block;
-                        @include vp(font-size, 32px);
-                        @include vp(padding-left, 64px);
-                        @include vp(line-height, 32px);
-                        color: $black;
-                        font-weight: 600;
-
-                        &::before {
-                            content: '';
-                            @include vp(width, 48px);
-                            @include vp(height, 48px);
-                            display: block;
-                            position: absolute;
-                            @include vp(top, -5px);
-                            left: 0;
-
+            .inner{
+                @include vp(padding, 0 40px);
+                @include vp(margin-top, 60px);
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    @include vp(column-gap, 22px);
+    
+                    // justify-content: flex-start;
+                    .icon {
+                        flex: 1 1 calc(50% - 22px);
+    
+                        @include breakpoint {
+                            flex: 1 1 calc(50% - 2.9333333333vw);
                         }
-                    }
-
-                    &.speaker {
+    
+                        box-sizing: border-box;
+                        @include vp(padding-bottom, 56px);
+                        @include vp(border-bottom, 2px solid $black);
+                        @include vp(margin-bottom, 92px);
+    
                         a {
+                            position: relative;
+                            display: inline-block;
+                            @include vp(font-size, 32px);
+                            @include vp(padding-left, 64px);
+                            @include vp(line-height, 32px);
+                            color: $black;
+                            font-weight: 600;
+    
                             &::before {
-                                background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+                                content: '';
+                                @include vp(width, 48px);
+                                @include vp(height, 48px);
+                                display: block;
+                                position: absolute;
+                                @include vp(top, -5px);
+                                left: 0;
+    
                             }
                         }
-                    }
-
-                    &.edit {
-                        a {
-                            &::before {
-                                background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+    
+                        &.speaker {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
                         }
-                    }
-
-                    &.chart {
-                        a {
-                            &::before {
-                                background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+    
+                        &.edit {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
                         }
-                    }
-
-                    &.bookmark {
-                        a {
-                            &::before {
-                                background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+    
+                        &.chart {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
                         }
-                    }
-
-                    &.collections {
-                        a {
-                            &::before {
-                                background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+    
+                        &.bookmark {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
                         }
-                    }
-
-                    &.menubook {
-                        a {
-                            &::before {
-                                background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
-                                @include vp(background-size, 48px auto);
+    
+                        &.collections {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
                         }
+    
+                        &.menubook {
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
+                            }
+                        }
+    
                     }
-
                 }
             }
+          
         }
 
         .app_setting_content {
-            @include vp(margin-top, -8px);
+            @include vp(margin-top, 8px);
 
             .inner {
                 @include vp(padding, 0px 40px);
@@ -480,6 +494,7 @@ header {
         .logout_box {
             @include vp(margin-top, 80px);
             @include vp(background-size, 48px auto);
+            @include vp(padding, 0 40px);
 
             .inner {
                 @include vp(border-top, 1px solid $gray );

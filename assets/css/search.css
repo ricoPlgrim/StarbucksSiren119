@@ -667,11 +667,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 100px 0px 80px 40px;
+  padding: 20px 0px 20px 40px;
+  border-bottom: 2px solid #EEE;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .input_contents {
-    padding: 13.3333333333vw 0vw 10.6666666667vw 5.3333333333vw;
+    padding: 2.6666666667vw 0vw 2.6666666667vw 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap.searh section .input_contents {
+    border-bottom: 0.2666666667vw solid #EEE;
   }
 }
 #wrap.searh section .input_contents .input_box {
@@ -860,11 +866,11 @@ body {
   }
 }
 #wrap.searh section .searh_contents {
-  padding: 0 104px 0 60px;
+  padding: 60px 104px 0 60px;
 }
 @media screen and (max-width: 750px) {
   #wrap.searh section .searh_contents {
-    padding: 0 13.8666666667vw 0 8vw;
+    padding: 8vw 13.8666666667vw 0 8vw;
   }
 }
 #wrap.searh section .searh_contents .search_top {

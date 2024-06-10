@@ -1,11 +1,8 @@
 @import 'base/variables';
 @import 'base/mixin';
 @import 'common';
-.main{
-    background: #f6f6f6; 
-}
 #wrap {
-    background: #f6f6f6; 
+    background: $light-gray-4; 
 }
 
 .sections {
@@ -28,10 +25,7 @@
             position: relative;
             @include vp(max-width, 324px);
             @include vp(width, 324px);
-            // @include vp(padding-bottom, 104px); 
             @include vp(min-height, 1016px);
-
-
             margin: 0 auto;
             z-index: 20;
 
@@ -51,9 +45,7 @@
                 @include vp(height, 324px);
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
                 @include vp(border-radius, 40px);
-                background: #fff;
-                // transition: top 0.35s ease-in-out;
-                // transition: top .5s;
+                background: $white;
                 &:nth-child(2){
                     @include vp(top, 348px );
                 }
@@ -70,7 +62,7 @@
                     height: inherit;
                     @include vp(font-size, 32px);
                     color: $black;
-                    font-weight: 600;
+                    font-weight: $fw6;
                     text-align: center;
                     .thum{
                         transition: width 0.5s ease;
@@ -80,7 +72,6 @@
                             @include vp(margin-bottom, 32px);
                             @include vp(width, 112px);
                             @include vp(height, 110px);
-    
                         }
                         &::after {
                             content: '';
@@ -122,7 +113,7 @@
                                     @include vp(padding-left, 88px);
                                     color: $black;
                                     @include vp(font-size, 32px);
-                                    font-weight: 600;
+                                    font-weight: $fw6;
                                
                                     &:before{
                                         content: '';
@@ -137,10 +128,24 @@
                                     }
                                 }
                                 .read_text{
+                                    position: relative;
+                                    display: block;
                                     @include vp(margin-left, 20px);
-                                    color: rgba(136, 136, 136, 0.58);
+                                    @include vp(padding-left, 34px);
+                                    color: $black-58;
                                     @include vp(font-size, 24px);
-                                    font-weight: 400; 
+                                    font-weight: $fw4; 
+                                    &:before{
+                                        content: '';
+                                        position: absolute;
+                                        @include vp(top, 2px);
+                                        left:0;
+                                        @include vp(width, 24px);
+                                        @include vp(height, 24px);
+                                        background: url(../images/icons/icon_info.png) 0 0 no-repeat;
+                                        @include vp(background-size, 24px auto);
+                                    }
+                                    a {color: inherit;}
                                 }
                             }
                             .scroll_box{
@@ -156,7 +161,7 @@
                                         a{
                                             color: $black;
                                             @include vp(font-size, 26px);
-                                            font-weight: 400; 
+                                            font-weight: $fw4; 
                                             word-break: keep-all;
                                         }
                                     }
@@ -458,7 +463,7 @@
         }
 
         &.open{
-            @include vp(min-height, 1530px);
+            @include vp(min-height, 1430px);
         }
 
         .menu_view_list {
@@ -473,15 +478,12 @@
             >li {
                 display: none;
                 position: relative;
-                // @include vp(transform, translateY(-30px)); 
                 @include vp(margin-top, -30px);
                 @include vp(width, 324px);
                 @include vp(height, 324px);
                 @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.1));
-                background: #fff;
+                background: $white;
                 @include vp(border-radius, 40px);
-
-                // transition:width .35s, height .35s;
                 .btn_close {
                     position: absolute;
                     @include vp(top, 32px);
@@ -502,13 +504,13 @@
                         align-items: end;
                         @include vp(padding-bottom, 32px);
                         @include vp(margin-bottom, 50px);
-                        @include vp(border-bottom, 1px solid #333);
+                        @include vp(border-bottom, 1px solid $dark-gray);
 
                         h3 {
                             position: relative;
                             @include vp(padding-left, 68px);
                             @include vp(font-size, 32px);
-                            font-weight: 600;
+                            font-weight: $fw6;
 
                             &::after {
                                 content: '';
@@ -526,8 +528,8 @@
                         span {
                             @include vp(padding-left, 20px);
                             @include vp(font-size, 24px);
-                            font-weight: 400;
-                            color: #888;
+                            font-weight: $fw4;
+                            color: $light-gray-7;
                             opacity: .6;
                         }
                     }
@@ -547,7 +549,7 @@
                                     display: block; 
                                     text-align: left;
                                     color: $black;
-                                    font-weight: 400;
+                                    font-weight: $fw4;
                                 }
 
                                 &:nth-child(3n) {
@@ -561,19 +563,14 @@
 
                 &:nth-child(3),
                 &:nth-child(4) {
-                    // @include vp(transform, translateY(316px)); 
-                    // @include vp(margin-top, 346px ); 
                     transform: translateY(346px);
-
                     @include breakpoint {
                         transform: translateY(46.13333333333333vw);
                     }
-
                 }
 
                 &:nth-child(5),
                 &:nth-child(6) {
-                    // @include vp(transform, translateY(662px)); 
                     @include vp(margin-top, 692px);
                 }
 
@@ -587,7 +584,6 @@
 
         .setting_contents {
             width: 100%;
-            // @include vp(height, 212px);
             background: $white;
             @include vp(border-radius, 40px);
             @include vp(padding, 40px 40px 28px 40px);
@@ -595,16 +591,13 @@
 
             .setting_top {
                 display: flex;
-                // justify-content: space-around;
-            
-
                 .setting_check_box {
                     display: inline-flex;
                     label {
                         display: flex;
                         align-items: center;
                         @include vp(font-size, 26px);
-                        font-weight: 400;
+                        font-weight: $fw4;
                         color: $black;
                         opacity: .87;
                         cursor: pointer;
@@ -630,12 +623,12 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    color: rgba(0, 0, 0, 0.87);
+                    color: $black-58;
                     @include vp(font-size, 26px);
                     @include vp(margin-left, 64px);
                     @include vp(padding-left, 48px);
                     @include vp(line-height, 44px);
-                    font-weight: 400;
+                    font-weight: $fw4;
                     &::after{
                         content: '';
                         position: absolute;
@@ -651,12 +644,12 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    color: rgba(0, 0, 0, 0.87);
+                    color: $black-58;
                     @include vp(font-size, 26px);
                     @include vp(margin-left, auto);
                     @include vp(padding-left, 48px);
                     @include vp(line-height, 44px);
-                    font-weight: 400;
+                    font-weight: $fw4;
                     &::after{
                         content: '';
                         position: absolute;
@@ -673,11 +666,10 @@
             .btn_group {
                 position: relative;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 flex-wrap:wrap;
                 justify-content: flex-start;
                 @include vp(margin-top, 28px);
-                // @include vp(padding-left, 34px);
                 .btn_refresh{
                     display: inline-flex;
                     @include vp(width, 68px);
@@ -686,63 +678,9 @@
                     background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
                     @include vp(background-size, 68px auto);
                 }
-                .btn_list {
+                .cm_btn_list {
                     @include vp(width, 514px);
-                    position: relative;
-                    display: flex;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    @include vp(gap, 8px);
-                    @include vp(height, 66px); 
-                    @include vp(padding-bottom, 2px); 
-                    align-items: center;
-                    overflow-x: scroll;
-                    overflow-y: hidden;
-                    -ms-overflow-style: none;
-                    scrollbar-width: none; 
-                    box-sizing: border-box;
-                    &::-webkit-scrollbar {
-                        display: none; 
-                    }
-                    li {
-                        position: relative;
-                        flex: 0 0 auto;
-                        .tag{
-                            position: relative;
-                            @include vp(font-size, 24px);
-                            @include vp(padding, 20px 60px 20px 20px);
-                            @include vp(height, 64px);
-                            font-weight: $fw5;
-                            color: $green;
-                            @include vp(letter-spacing, .1px);
-                            text-align: center;
-                            @include vp(border-radius, 12px);
-                            @include vp(border, 2px solid $green);
-                            background-color: transparent;
-                        }
-                        .btn_close{
-                            display: block;
-                            position: absolute;
-                            @include vp(top, 19px);
-                            @include vp(right, 20px); 
-                            @include vp(width, 28px);
-                            @include vp(height, 28px);
-                            background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
-                            @include vp(background-size, 28px auto);
-                            z-index: 10;
-                        }
-                    }
                 }
-
-                // &:after {
-                //     content: '';
-                //     position: absolute;
-                //     @include vp(top, -18px);
-                //     right: 0;
-                //     @include vp(width, 126px);
-                //     @include vp(height, 80px);
-                //     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 29.89%, rgba(255, 255, 255, 0.80) 72.26%, #FFF 99.74%);
-                // }
             }
         }
 
@@ -752,10 +690,6 @@
 
         
     }
-    &.home {
-
-    }
-
     section {
         display: none; 
         &.on {
@@ -763,4 +697,77 @@
         } 
     }
 
+}
+
+// 보고하기 공통 작성 가이드 팝업
+.pop_cont01 {
+    .category_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @include vp( padding, 92px 40px 60px); 
+        background: $light-gray-3;
+        h4 {
+            @include vp( padding-left, 148px); 
+            display: inline-flex;   
+            align-items: center;
+            @include vp( height, 108px); 
+            @include vp( font-size, $f16); 
+            font-weight: $fw6;
+            &.partner{
+                background: url("../images/icons/icon_Partner.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+            &.disaster{
+                background: url("../images/icons/icon_disaster.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+            &.foreign {
+                background: url("../images/icons//icon_different_thing.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+            &.customer{
+                background: url("../images/icons/icon__Customer.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+            &.fire{
+                background: url("../images/icons/icon_fire.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+            &.food_safety{
+                background: url("../images/icons/icon_food_safety.png") center left no-repeat;
+                @include vp(background-size, 108px auto);
+            }
+        }
+        .btn_box {
+            @include vp( margin-top, 70px); 
+            display: flex;
+            gap: 10px;
+            button {
+                background: $white;
+                font-weight: $fw4;
+                span { @include vp( padding, 20px); }
+            }
+        }
+    }
+    .guide_list {
+        @include vp( margin, 20px 0px); 
+        @include vp( padding, 0px 40px); 
+        li {
+            @include vp( padding, 40px 0px); 
+            border-bottom: 1px solid $light-gray-3;
+            &:last-child {border-bottom: none;}
+            .title {
+                @include vp( margin-bottom, 12px); 
+                @include vp( font-size, $f15); 
+                font-weight: $fw6;
+            }
+            .sub_title {
+                @include vp( font-size, $f12); 
+                color: #666;
+            }
+        }
+    }
 }
