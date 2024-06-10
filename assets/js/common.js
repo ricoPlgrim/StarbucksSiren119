@@ -37,6 +37,9 @@ var _deleteAllBtn;
 var _btnTextDelete;
 var _inputBoxTarget;
 var _btnTextDelete;
+var _loginInPut;
+
+var _btnTypeList;
 
 
 var commonUi = {
@@ -68,17 +71,21 @@ var commonUi = {
         _bottomSheetClose = $(".bottom_sheet").find(".btn_sheet_close");
         _bottomSheetDateList = $(".cm_date_contents").find(".date_list").find("li");
 
-        _startDateInput = $( "#startdate" );  
-        _endDateInput = $( "#enddate" );
-        _typeBtns = $( ".cm_tab_contents" ).find( ".cm_type_list" ).find( "li" );
+        _startDateInput = $("#startdate");
+        _endDateInput = $("#enddate");
+        _typeBtns = $(".cm_tab_contents").find(".cm_type_list").find("li");
 
-        _twoDepsMenu = $( ".cm_tab_panel .buttons_list" ).find( "li" );
+        _twoDepsMenu = $(".cm_tab_panel .buttons_list").find("li");
 
 
-        _searchInput= $( ".search_input" );
-        _deleteAllBtn = $( ".btn_all_delete" );
-        _btnTextDelete = $( ".btn_text_delete" );
-        _inputBoxTarget = $( ".input_box" );
+        _searchInput = $(".search_input");
+        _deleteAllBtn = $(".btn_all_delete");
+        _btnTextDelete = $(".btn_text_delete");
+        _inputBoxTarget = $(".input_box");
+
+        _loginInPut = $(".login_box").find(".user_id");
+
+        _btnTypeClose = $(".cm_btn_list").find(".btn_close");
 
 
 
@@ -93,27 +100,29 @@ var commonUi = {
         _gnbCloseBtn.on("click", commonUi.gnbCloseClick);
         _scrollTopButton.on("click", commonUi.scrollTopClick);
         // 하단 레이어 닫기 이벤트
-        _bottomSheetDim.add(_bottomSheetClose).on("click", function() {
+        _bottomSheetDim.add(_bottomSheetClose).on("click", function () {
             var popupId = $(this).closest(".bottom_sheet").attr("id");
             commonUi.bottomSheetHide(popupId);
         });
         _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick);
 
-        _startDateInput.on( "change", commonUi.startDateValue  );
-        _endDateInput.on( "change", commonUi.endDateValue  );
+        _startDateInput.on("change", commonUi.startDateValue);
+        _endDateInput.on("change", commonUi.endDateValue);
 
-        _typeBtns.on( "click", commonUi.typeBtnsClick );
+        _typeBtns.on("click", commonUi.typeBtnsClick);
         // input, textarea 이벤트
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
         // 팝업 버튼 클릭 이벤트
         _popBtn.on("click", commonUi.popupItemClick);
 
-        _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
+        _twoDepsMenu.on("click", commonUi.twoDepsMenuClick);
 
-        _searchInput.on( "input", commonUi.inputTarget );
-        _searchInput.on( "focus", commonUi.inputFocusEvent );
-        _searchInput.on( "focusout", commonUi.inputFocusOutEvent );
-        _btnTextDelete.on( "click", commonUi.inPutTextDeleteClick );
+        _searchInput.on("input", commonUi.inputTarget);
+        _searchInput.on("focus", commonUi.inputFocusEvent);
+        _searchInput.on("focusout", commonUi.inputFocusOutEvent);
+        _btnTextDelete.on("click", commonUi.inPutTextDeleteClick);
+        _loginInPut.on("input", commonUi.loginValueCheck);
+        _btnTypeClose.on("click", commonUi._btnTypeCloseClick);
 
 
 
@@ -125,12 +134,16 @@ var commonUi = {
     },
 
     resizeEvent: function () {
-        console.log("window resize");
+        _typeBtns.each(function() {
+            if ($(this).hasClass("on")) {
+                commonUi.updateBarPosition($(this));
+            }
+        });
     },
 
     scrollEvent: function () {
-        var _sT = $(this).scrollTop(); 
-        if (_sT > 100 ) {
+        var _sT = $(this).scrollTop();
+        if (_sT > 100) {
             _scrollTopButton.fadeIn();
         } else {
             _scrollTopButton.fadeOut();
@@ -162,67 +175,71 @@ var commonUi = {
 
     bottomSheetOpen: function (popupId) {
         var layerName = "#" + popupId;
-        
+
         $(layerName).addClass("open");
-        $( "html, body" ).css( "overflow", "hidden" );
+        $("html, body").css("overflow", "hidden");
         setTimeout(function () {
             $(".sheet_wrap").addClass("open");
         }, 50);
     },
-    
+
     bottomSheetHide: function (popupId) {
         var layerName = "#" + popupId;
 
         $(".sheet_wrap").removeClass("open");
-        $( "html, body" ).css( "overflow", "auto" );
-        
+        $("html, body").css("overflow", "auto");
+
         setTimeout(function () {
             $(layerName).removeClass("open");
         }, 100);
     },
 
     bottomSheetDateListClick: function () {
-        var index = $( this ).index();
-        _bottomSheetDateList.removeClass( "on" );
-        _bottomSheetDateList.eq(index).addClass( "on" );
+        var index = $(this).index();
+        _bottomSheetDateList.removeClass("on");
+        _bottomSheetDateList.eq(index).addClass("on");
 
     },
 
-    startDateValue: function(){
-        console.log( "qwelmwqklenmklwqnejkqwnejkwqnejkqwnjkeneq" );
+    startDateValue: function () {
+        console.log("qwelmwqklenmklwqnejkqwnejkwqnejkqwnjkeneq");
         var selectedDate = $(this).val();
-        $( ".date_start" ).find( ".date_text" ).text( selectedDate );
+        $(".date_start").find(".date_text").text(selectedDate);
     },
 
-    endDateValue: function(){
+    endDateValue: function () {
         var selectedDate = $(this).val();
-        $( ".date_end" ).find( ".date_text" ).text( selectedDate );
+        $(".date_end").find(".date_text").text(selectedDate);
     },
 
-    typeBtnsClick : function(){
-        var index = $( this ).index();
-        $( this ).addClass( "on" ).siblings().removeClass( "on" );
-        var bars = $( ".cm_tab_contents" ).find( ".bar" );
-        var offsetLeft = $(this).position().left;
-            gsap.to(bars, {
-                duration: 0.75,
-                x: offsetLeft,
-                ease: "expo.inOut"
-            });
-
-        var  tabPanelTarget = $( ".cm_tab_panel" ).find( ".item" );
-        tabPanelTarget.removeClass( "on" );
-        tabPanelTarget.eq(index).addClass( "on" );
-
+    updateBarPosition: function(button) {
+        var offsetLeft = button.position().left;
+        var bars = $(".cm_tab_contents").find(".bar");
+        gsap.to(bars, {
+            duration: 0.75,
+            x: offsetLeft,
+            ease: "expo.inOut"
+        });
     },
-    textFormClick: function() {
+
+    typeBtnsClick: function () {
+        var index = $(this).index();
+        $(this).addClass("on").siblings().removeClass("on");
+        commonUi.updateBarPosition($(this));
+
+        var tabPanelTarget = $(".cm_tab_panel").find(".item");
+        tabPanelTarget.removeClass("on");
+        tabPanelTarget.eq(index).addClass("on");
+      
+    },
+    textFormClick: function () {
         var This = $(this);
         var textForm = This.parent();
         var textArea = This.is("textarea");
         var byteNum = textForm.find(".byte_num");
         var byteHeight = byteNum.height();
         var textFormHeight = textForm.height();
- 
+
         if (This.val().length < 1) {
             textForm.find(".btn_delete").removeClass("on");
             textForm.parent().find("button").removeClass("on");
@@ -239,13 +256,13 @@ var commonUi = {
             if (textArea) {
                 textForm.addClass("on");
                 byteNum.addClass("on");
-                This.css("height", "auto" );
-                This.height( this.scrollHeight );
+                This.css("height", "auto");
+                This.height(this.scrollHeight);
                 textForm.css("padding-bottom", byteHeight + "px");
                 $("body").css("padding-bottom", textFormHeight);
             }
         }
-      
+
         function clearText(textValue) {
             textValue.val("");
             textValue.focus();
@@ -262,25 +279,25 @@ var commonUi = {
 
         $(".btn_delete").on("click", deleteText);
     },
-    headerScroll: function() {
+    headerScroll: function () {
         // 스크롤 탑일때 헤더 변경
         var winTop = _w.scrollTop();
         var cHeader = $("header.common");
         var headerHeight = cHeader.height();
 
-		if(winTop >= headerHeight){
-			$(cHeader).addClass('on'); 
-		} else {
-			$(cHeader).removeClass('on');
-		}
+        if (winTop >= headerHeight) {
+            $(cHeader).addClass('on');
+        } else {
+            $(cHeader).removeClass('on');
+        }
     },
-    twoDepsMenuClick: function(e) {
+    twoDepsMenuClick: function (e) {
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
         var menuBtn = $(this).find("button");
         var filterText = $(menuBtn).data("filter");
-    
+
         // 탭메뉴 클릭 시 활성화
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
@@ -292,36 +309,36 @@ var commonUi = {
         } else {
             $(".board_list." + filterText).show();
         }
-        
+
         commonUi.centerMenu(menuContainer, $(this));
     },
-    centerMenu: function(menuContainer, menuItem) {
+    centerMenu: function (menuContainer, menuItem) {
         var containerWidth = menuContainer.outerWidth();
         var itemOffsetLeft = menuItem.offset().left;
         var containerOffsetLeft = menuContainer.offset().left;
         var scrollLeftValue = menuContainer.scrollLeft() + (itemOffsetLeft - containerOffsetLeft) + (menuItem.outerWidth() / 2) - (containerWidth / 2);
-    
+
         menuContainer.animate({
             scrollLeft: scrollLeftValue
         }, 300);
     },
     // 레이어 팝업 이벤트
-    popupItemClick: function(){
+    popupItemClick: function () {
         var targetName = $(this).data("target");
-        if(targetName) commonUi.openPopup(targetName);
+        if (targetName) commonUi.openPopup(targetName);
     },
-    openPopup: function(targetName) {
+    openPopup: function (targetName) {
         var layerName = "#" + targetName;
 
         $("body").find(layerName).addClass("open");
         $("body").css("overflow", "hidden");
 
-        $(layerName).find(".btn_close").on("click", function(){
+        $(layerName).find(".btn_close").on("click", function () {
             closePopup(layerName);
         });
 
         // 팝업 외부를 클릭하면 팝업을 닫는 이벤트 핸들러
-        $(layerName).on("click", function(event) {
+        $(layerName).on("click", function (event) {
             if (event.target === this) {
                 closePopup(layerName);
             }
@@ -334,30 +351,49 @@ var commonUi = {
     },
 
 
-     //검색어 입력시 한글자이상 버튼 삭제 버튼 노출
-     inputTarget: function(){
-        var inputLength = $( this ).val().length;
-        if( inputLength > 0 ){
-            _btnTextDelete.css( "display", "block" );
-        }else{
-            _btnTextDelete.css( "display", "none" );
+    //검색어 입력시 한글자이상 버튼 삭제 버튼 노출
+    inputTarget: function () {
+        var inputLength = $(this).val().length;
+        if (inputLength > 0) {
+            _btnTextDelete.css("display", "block");
+        } else {
+            _btnTextDelete.css("display", "none");
         }
 
     },
 
-    inputFocusEvent: function(){
+    inputFocusEvent: function () {
         _inputBoxTarget.addClass('active');
     },
 
-    inputFocusOutEvent: function(){
+    inputFocusOutEvent: function () {
         _inputBoxTarget.removeClass('active');
     },
-   inPutTextDeleteClick: function(){
+    inPutTextDeleteClick: function () {
         _searchInput.val("");
-        $( this ).css( "display", "none" );
+        $(this).css("display", "none");
 
-   },
+    },
 
+    loginValueCheck: function () {
+        var inputLength = $(this).val().length;
+        if (inputLength > 0) {
+            $(".btn_login").addClass("on");
+        } else {
+            $(".btn_login").removeClass("on");
+        }
+    },
+
+    _btnTypeCloseClick: function () {
+        var btnGroup = $( this ).parents( ".btn_group" );
+        var liLength = $( ".cm_btn_list" ).find( "li" ).length; 
+        $( this ).parents( "li" ).remove();
+        if( liLength == 1 ){
+            btnGroup.remove();
+        }
+     
+
+    }
 };
 
 

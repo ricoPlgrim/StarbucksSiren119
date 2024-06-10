@@ -20,8 +20,6 @@ var mainUi = {
 
     },
     addEvent: function () {
-        mainUi.resizeEvent(null);
-        _w.on("resize", mainUi.resizeEvent);
         _menuBtnlist.on("click", mainUi.menuBtnListClick);
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
         _btnBookmark.on("click", mainUi.btnBookMarkClick);
@@ -32,9 +30,7 @@ var mainUi = {
         mainUi.addEvent();
     },
 
-    resizeEvent: function () {
-        console.log("window resize");
-    },
+   
 
     menuBtnListClick: function () {
         var className =  $(this).attr('class');

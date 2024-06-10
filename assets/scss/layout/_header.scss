@@ -77,9 +77,9 @@ header {
                     position: relative;
                     width: 100%;
                     height: inherit;
-                    @include vp(border, 1px solid $light-gray-3);
+                    @include vp(border, 2px solid $light-gray-3);
                     @include vp(border-radius, 100px);
-                    background: $light-gray-3;
+                    background: $white;
                     overflow: hidden;
 
                     a {
@@ -112,7 +112,7 @@ header {
                         @include vp(border-radius, 100px);
                         background: $black;
                         @include vp(border, 1px solid $black);
-                        transition: left 0.35s ease-in-out;
+                        transition: left 0.2s ease-in-out;
                     }
 
                     &.left {
@@ -199,6 +199,16 @@ header {
                 @include vp(padding, 54px 50px); 
             }
         }
+
+        .btn_close {
+            position: absolute;
+            @include vp(top, 12px auto);
+            right: 0px;
+            background: url("../images/btn/btn_close.png") center center no-repeat;
+            @include vp(background-size, 56px auto);
+            @include vp(padding, 40px);
+            z-index: 999;
+        } 
     }
     
     &.setting{

@@ -15,7 +15,9 @@
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
-                @include vp(padding, 100px 0px 80px 40px ); 
+                @include vp(padding, 20px 0px 20px 40px ); 
+                @include vp(border-bottom, 2px solid  $light-gray-3  ); 
+                
                 .input_box{
                     position: relative;
                     @include vp(width, 606px ); 
@@ -91,7 +93,7 @@
                 }
             }
             .searh_contents{
-                @include vp(padding, 0 104px 0 60px ); 
+                @include vp(padding, 60px 104px 0 60px ); 
                 .search_top{
                     display: flex;
                     align-items: center;
