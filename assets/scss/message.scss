@@ -19,7 +19,9 @@
                                 font-weight: $fw6;
                             }
                             .select_team{
-                                color: $black-87;
+                                display: block;
+                                color: $black-87; 
+                                @include vp(margin-bottom, 40px );
                                 @include vp(font-size, $f15 );
                                 font-weight: $fw6;
                             }
@@ -58,13 +60,16 @@
                                     position: absolute;
                                     top:0;
                                     left:0;
-                                    width: 100%;
+                                    @include vp(top, -9px );
+                                    @include vp(left, -76px );
+                                    width: 123%;
                                     height: 100%;
                                     border:0;
                                     @include vp(border-radius, 12px );
-                                    @include vp(font-size, 26px );
+                                    @include vp(font-size, $f16 );
+                                    transform: scale(0.8125);
                                     @include vp(letter-spacing, .5px );
-                                    @include vp(padding, 24px 60px 24px 80px );
+                                    @include vp(padding, 45px 60px 50px 80px );
                                     box-sizing: border-box;
                                     @include vp(border, 2px solid $light-gray-6 );
                                     @include vp(border-radius, 12px );
@@ -205,20 +210,21 @@
                     }
                     textarea {
                         position: absolute;
-                        top:0;
-                        left:0;
-                        @include vp(padding, 28px 28px 55px 28px);   
+                        @include vp(top, -22px);   
+                        @include vp(left, -78px);   
+                        @include vp(padding, 28px 28px 48px 28px);   
                         @include vp( line-height, 40px);   
-                        @include vp( font-size, $f13); 
                         @include vp( border-radius, 16px); 
-                        @include vp( height, 100%); 
-               
-                        width:100%;
+                        @include vp(font-size, $f16 );
+                        transform: scale(0.8125);
+                        width:123.4%;
+                        height: 120%;
                         background: $white;
                         resize: none;
                         font-weight: $fw4;
                         color:$light-gray-1;
                         border:0;
+                        overflow-x: hidden;
                    
                     }
                     .byte_num{
