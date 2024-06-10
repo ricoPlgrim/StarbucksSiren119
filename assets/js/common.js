@@ -401,17 +401,27 @@ var commonUi = {
         }
     },
 
-    mainSwichCahge: function(){
+    mainSwichCahge: function($type){
         commonUi.gnbCloseClick();
         var contents = $(".sections").find("section");
         var roundBar = $(".switch_round");
-        if( roundBar.hasClass( "right")) return;
-        _switchBoxBtns.removeClass("on");
-        _switchBoxBtns.eq(1).addClass("on");
-        contents.removeClass("on");
-        contents.eq(1).addClass("on");
-        roundBar.removeClass("left")
-        roundBar.addClass("right")
+        if( $type == 0){
+            _switchBoxBtns.removeClass("on");
+            _switchBoxBtns.eq(0).addClass("on");
+            contents.removeClass("on");
+            contents.eq(0).addClass("on");
+            roundBar.addClass("left")
+            roundBar.removeClass("right")
+        }else{
+            _switchBoxBtns.removeClass("on");
+            _switchBoxBtns.eq(1).addClass("on");
+            contents.removeClass("on");
+            contents.eq(1).addClass("on");
+            roundBar.removeClass("left")
+            roundBar.addClass("right")
+        }
+
+     
     },
 
     setTabIndex: function(index){
