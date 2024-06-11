@@ -857,7 +857,7 @@ header .header_inner .header_sticky .header_switchbox .switch_round a.on {
 }
 header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
   position: absolute;
-  top: 1px;
+  top: 0;
   left: 1px;
   width: 244px;
   height: 77px;
@@ -868,7 +868,7 @@ header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky .header_switchbox .switch_round .round_bar {
-    top: 0.1333333333vw;
+    top: 0;
   }
 }
 @media screen and (max-width: 750px) {
