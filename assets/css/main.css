@@ -1831,6 +1831,9 @@ section.board .board_conts .img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
+section.bookmark .cm_tab_panel {
+  height: 100%;
+}
 section.bookmark .cm_tab_panel .panel_list > li .inner {
   padding: 48px 40px;
 }
@@ -4740,6 +4743,14 @@ section.message .submit_box .inner .cm_btn_round span, section.message_detail .s
     letter-spacing: 0.0266666667vw;
   }
 }
+section.setting .cm_check_box label input[type=checkbox] {
+  padding-left: 56px;
+}
+@media screen and (max-width: 750px) {
+  section.setting .cm_check_box label input[type=checkbox] {
+    padding-left: 7.4666666667vw;
+  }
+}
 section.setting .cm_type_list {
   position: relative;
 }
@@ -6195,12 +6206,20 @@ section.searh .searh_contents .search_list_box .no_list {
   background: #fff;
   z-index: 999;
   overflow: hidden;
-  overflow-y: auto;
 }
 .layer_popup.open {
   display: block;
 }
 .layer_popup header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
 }
 @media screen and (max-width: 750px) {
@@ -6227,11 +6246,29 @@ section.searh .searh_contents .search_list_box .no_list {
     padding: 8vw;
   }
 }
+.layer_popup header .title {
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup header .title {
+    font-size: 4vw;
+  }
+}
+.layer_popup .pop_cont01 {
+  margin-top: 120px;
+  overflow-y: auto;
+  height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 {
+    margin-top: 16vw;
+  }
+}
 
 .cm_card_list > li {
   position: relative;
   margin-top: 20px;
-  height: 228px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.05);
   background: #fff;
   border-radius: 40px;
@@ -6239,11 +6276,6 @@ section.searh .searh_contents .search_list_box .no_list {
 @media screen and (max-width: 750px) {
   .cm_card_list > li {
     margin-top: 2.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_card_list > li {
-    height: 30.4vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -6467,15 +6499,15 @@ section.searh .searh_contents .search_list_box .no_list {
     height: 3.7333333333vw;
   }
 }
-.cm_card_list > li a dl dd.last {
+.cm_card_list > li a dl dd.time_info {
   padding-top: 20px;
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last {
+  .cm_card_list > li a dl dd.time_info {
     padding-top: 2.6666666667vw;
   }
 }
-.cm_card_list > li a dl dd.last span {
+.cm_card_list > li a dl dd.time_info span {
   color: #333;
   font-size: 24px;
   font-style: normal;
@@ -6484,27 +6516,27 @@ section.searh .searh_contents .search_list_box .no_list {
   padding-left: 20px;
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span {
+  .cm_card_list > li a dl dd.time_info span {
     font-size: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span {
+  .cm_card_list > li a dl dd.time_info span {
     padding-left: 2.6666666667vw;
   }
 }
-.cm_card_list > li a dl dd.last span:last-child {
+.cm_card_list > li a dl dd.time_info span:last-child {
   width: auto;
 }
-.cm_card_list > li a dl dd.last span:last-child::after {
+.cm_card_list > li a dl dd.time_info span:last-child::after {
   content: none;
 }
-.cm_card_list > li a dl dd.last span.write {
+.cm_card_list > li a dl dd.time_info span.write {
   display: flex;
 }
-.cm_card_list > li a dl dd.last span.write:before {
+.cm_card_list > li a dl dd.time_info span.write:before {
   display: inline-block;
-  margin-right: 6px;
+  margin-right: 4px;
   content: "";
   width: 30px;
   height: 28px;
@@ -6512,46 +6544,62 @@ section.searh .searh_contents .search_list_box .no_list {
   background-size: 30px auto;
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.write:before {
-    margin-right: 0.8vw;
+  .cm_card_list > li a dl dd.time_info span.write:before {
+    margin-right: 0.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.write:before {
+  .cm_card_list > li a dl dd.time_info span.write:before {
     width: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.write:before {
+  .cm_card_list > li a dl dd.time_info span.write:before {
     height: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.write:before {
+  .cm_card_list > li a dl dd.time_info span.write:before {
     background-size: 4vw auto;
   }
 }
-.cm_card_list > li a dl dd.last span.read {
+.cm_card_list > li a dl dd.time_info span.read {
   padding-left: 20px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.read {
+  .cm_card_list > li a dl dd.time_info span.read {
     padding-left: 2.6666666667vw;
   }
 }
-.cm_card_list > li a dl dd.last span.read .time {
+.cm_card_list > li a dl dd.time_info span.read .time {
   padding-right: 6px;
 }
 @media screen and (max-width: 750px) {
-  .cm_card_list > li a dl dd.last span.read .time {
+  .cm_card_list > li a dl dd.time_info span.read .time {
     padding-right: 0.8vw;
   }
 }
-.cm_card_list > li a dl dd.last span:first-child {
+.cm_card_list > li a dl dd.time_info span:first-child {
   padding-left: 0;
+}
+.cm_card_list > li a dl dd.lead_info {
+  color: #000;
+  font-size: 24px;
+  padding-top: 28px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dd.lead_info {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_card_list > li a dl dd.lead_info {
+    padding-top: 3.7333333333vw;
+  }
 }
 .cm_card_list > li a .photo_box {
   position: absolute;
@@ -8096,14 +8144,6 @@ section.searh .searh_contents .search_list_box .no_list {
     background-size: 3.7333333333vw auto;
   }
 }
-.btn_group .cm_btn_list li:last-child {
-  margin-right: 58px;
-}
-@media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li:last-child {
-    margin-right: 7.7333333333vw;
-  }
-}
 .btn_group .cm_btn_list.etc {
   padding: 20px 0 20px 40px;
   border-bottom: 2px solid #EEE;
@@ -8665,9 +8705,9 @@ section.searh .searh_contents .search_list_box .no_list {
   position: relative;
   display: block;
   margin-left: 20px;
-  padding-left: 34px;
+  padding-left: 40px;
   color: rgba(0, 0, 0, 0.58);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
@@ -8677,12 +8717,12 @@ section.searh .searh_contents .search_list_box .no_list {
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text {
-    padding-left: 4.5333333333vw;
+    padding-left: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text {
-    font-size: 3.2vw;
+    font-size: 3.4666666667vw;
   }
 }
 .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
@@ -8690,10 +8730,10 @@ section.searh .searh_contents .search_list_box .no_list {
   position: absolute;
   top: 2px;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   background: url(../images/icons/icon_info.png) 0 0 no-repeat;
-  background-size: 24px auto;
+  background-size: 30px auto;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
@@ -8702,17 +8742,17 @@ section.searh .searh_contents .search_list_box .no_list {
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
-    width: 3.2vw;
+    width: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
-    height: 3.2vw;
+    height: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text:before {
-    background-size: 3.2vw auto;
+    background-size: 4vw auto;
   }
 }
 .sections .section_inner .menu_btn-list > li .menu_box .menu .inner .title_box .read_text a {

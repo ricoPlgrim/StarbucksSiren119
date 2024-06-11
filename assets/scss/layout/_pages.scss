@@ -125,6 +125,7 @@ section {
     //북마크
     &.bookmark {
         .cm_tab_panel {
+            height: 100%;
             .panel_list {
                 >li {
                     .inner {
@@ -1730,9 +1731,16 @@ section {
 
     //푸시이력페이지
     &.setting {
+
+        .cm_check_box{
+            label{
+                input[type=checkbox]{ 
+                    @include vp(padding-left, 56px);
+                }
+            }
+        }
         .cm_type_list {
             position: relative;
-
             &:after {
                 content: '';
                 position: absolute;

@@ -1,5 +1,3 @@
-
-/* global var*/
 var _w;
 var _menuBtnlist;
 var _main;
@@ -9,7 +7,7 @@ var _btnBookmark;
 var mainUi = {
 
     init: function () {
-        mainUi.loadEvent();
+        this.loadEvent();
     },
     create: function () {
         _w = $(window);
@@ -50,17 +48,16 @@ var mainUi = {
         var index = $(this).index();
         var contents = $(".sections").find("section");
         var roundBar = $(this).parents(".switch_round");
+
         _switchBoxBtns.removeClass("on");
         _switchBoxBtns.eq(index).addClass("on");
         contents.removeClass("on");
         contents.eq(index).addClass("on");
 
-        if (index == 0) {
-            roundBar.removeClass("right")
-            roundBar.addClass("left")
+        if (index === 0) {
+            roundBar.removeClass("right").addClass("left");
         } else {
-            roundBar.removeClass("left")
-            roundBar.addClass("right")
+            roundBar.removeClass("left").addClass("right");
         }
     },
 

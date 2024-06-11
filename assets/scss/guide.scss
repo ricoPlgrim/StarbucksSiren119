@@ -203,24 +203,24 @@
     }
     
     thead th {
-        @include vp(padding, 20px);
+        @include vp(line-height, 80px);
         @include vp(font-size, 20px);
-        color: $black;
-        text-align: left;
+        @include vp(width, 200px);
+        color: $white;
+        text-align: center;
+        background-color: $black;
+        &:first-child{
+            @include vp(width, 370px);
+        }
         &:last-child{
             text-align: center;
         }
-        &:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        &:nth-child(odd) {
-            background-color: #fff;
-        }
+       
     }
     
   
     tbody td {
-        text-align: left;
+        text-align: center;
         @include vp(padding, 20px);
         @include vp(border-bottom, 2px solid #ddd);
         @include vp(font-size, 20px);
