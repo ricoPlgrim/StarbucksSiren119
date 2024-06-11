@@ -948,6 +948,7 @@ header.home {
   height: 446px;
   background-color: #006241;
   border-radius: 0 0 40px 40px;
+  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   header.home {

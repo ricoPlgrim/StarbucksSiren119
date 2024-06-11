@@ -156,6 +156,7 @@ header {
         @include vp(height, 446px);
         background-color: $thickGreen;
         @include vp(border-radius, 0 0 40px 40px);
+        overflow: hidden;
 
     }
 
