@@ -923,7 +923,6 @@ header .header_inner .header_sticky.active {
   background: #006241;
   padding-bottom: 20px;
   z-index: 100;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_sticky.active {

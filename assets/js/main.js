@@ -2,7 +2,7 @@ var _w;
 var _menuBtnlist;
 var _main;
 var _switchBoxBtns;
-var _btnBookmark;
+
 
 var mainUi = {
 
@@ -14,13 +14,13 @@ var mainUi = {
         _main = $("main");
         _menuBtnlist = _main.find(".menu_btn-list").find("li");
         _switchBoxBtns = _main.find(".switch_round > a");
-        _btnBookmark = _main.find(".btn_bookmark");
+     
 
     },
     addEvent: function () {
         _menuBtnlist.on("click", mainUi.menuBtnListClick);
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
-        _btnBookmark.on("click", mainUi.btnBookMarkClick);
+
 
     },
     loadEvent: function () {
@@ -61,9 +61,7 @@ var mainUi = {
         }
     },
 
-    btnBookMarkClick: function () {
-        $(this).toggleClass("on");
-    },
+   
 
  
     

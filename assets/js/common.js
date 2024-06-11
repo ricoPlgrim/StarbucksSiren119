@@ -42,7 +42,7 @@ var _loginInPut;
 
 var _btnTypeList;
 var _rowScrolLBox;
-
+var _btnBookmark;
 
 var commonUi = {
 
@@ -84,6 +84,8 @@ var commonUi = {
         _loginInPut = $(".login_box").find(".user_id");
         _btnTypeClose = $(".cm_btn_list").find(".btn_close");
         _rowScrolLBox = $( ".cm_btn_list" );
+        _btnBookmark = $(".btn_bookmark");
+
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
@@ -120,9 +122,9 @@ var commonUi = {
         _btnTypeClose.on("click", commonUi.btnTypeCloseClick); //타입 버튼 삭제 이벤트
 
         _rowScrolLBox.on( "scroll", commonUi.rowScrollBoxCheck );
-        commonUi.tabActivation(); //탭영역 로드 체크 순서
-
+        _btnBookmark.on("click", commonUi.btnBookMarkClick);
         
+        commonUi.tabActivation(); //탭영역 로드 체크 순서
   
     },
 
@@ -454,7 +456,11 @@ var commonUi = {
         }else{
             dimd.css( "display", "block" );
         }
-    }
+    },
+
+    btnBookMarkClick: function () {
+        $(this).toggleClass("on");
+    },
 };
 
 
