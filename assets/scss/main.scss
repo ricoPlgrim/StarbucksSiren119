@@ -622,6 +622,8 @@ html, body {
                 display: flex;
                 .cm_check_box { 
                     label {
+                        color: $black-87;
+                        opacity: 1;
                         input[type="checkbox"] {
                             @include vp(padding-left, 64px);
                         }
@@ -631,7 +633,7 @@ html, body {
                     position: relative;
                     display: flex;
                     align-items: center;
-                    color: $black-58;
+                    color: $black-87;
                     @include vp(font-size, $f13);
                     @include vp(margin-left, 64px);
                     @include vp(padding-left, 48px);
@@ -652,7 +654,7 @@ html, body {
                     position: relative;
                     display: flex;
                     align-items: center;
-                    color: $black-58;
+                    color: $black-87;
                     @include vp(font-size, $f13);
                     @include vp(margin-left, auto);
                     @include vp(padding-left, 48px);
@@ -687,7 +689,7 @@ html, body {
                     @include vp(background-size, 68px auto);
                 }
                 .cm_btn_list {
-                    @include vp(width, 514px);
+                    @include vp(width, 513px);
                 }
             }
         }

@@ -9980,6 +9980,10 @@ html, body {
 .sections .section_inner .setting_contents .setting_top {
   display: flex;
 }
+.sections .section_inner .setting_contents .setting_top .cm_check_box label {
+  color: rgba(0, 0, 0, 0.87);
+  opacity: 1;
+}
 .sections .section_inner .setting_contents .setting_top .cm_check_box label input[type=checkbox] {
   padding-left: 64px;
 }
@@ -9992,7 +9996,7 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.58);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 26px;
   margin-left: 64px;
   padding-left: 48px;
@@ -10053,7 +10057,7 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.58);
+  color: rgba(0, 0, 0, 0.87);
   font-size: 26px;
   margin-left: auto;
   padding-left: 48px;
@@ -10152,11 +10156,11 @@ html, body {
   }
 }
 .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-  width: 514px;
+  width: 513px;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-    width: 68.5333333333vw;
+    width: 68.4vw;
   }
 }
 .sections .section_inner .accident_content {

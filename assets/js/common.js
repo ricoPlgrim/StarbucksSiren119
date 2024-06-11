@@ -145,7 +145,7 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
-        if (_sT > 100) {
+        if (_sT > 80) {
             _scrollTopButton.fadeIn();
         } else {
             _scrollTopButton.fadeOut();
