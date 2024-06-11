@@ -22,7 +22,6 @@ var reportUi = {
         });
         _timeBtn = _report.find(".form_list").find(".time_box");
         _dateBtn = _report.find(".form_list").find(".date_box");
-        _btnBookmark = _report.find(".btn_bookmark");
     },
     addEvent: function(){
         reportUi.resizeEvent( null );
@@ -30,7 +29,6 @@ var reportUi = {
         _reportListBtn.on("click", reportUi.reportBtnClick);
         _timeBtn.on("click", reportUi.timeBtnClick);
         _dateBtn.on("click", reportUi.dateBtnClick);
-        _btnBookmark.on("click", reportUi.bookmarkBtnClick);
     },
     loadEvent: function () {
         reportUi.create();
@@ -61,7 +59,6 @@ var reportUi = {
                     var formattedTime = `${period} ${formattedHours}시 ${minutes}분`;
 
                 timeText.text(formattedTime);
-                $(this).hide();
             }
         });
     },
@@ -80,9 +77,6 @@ var reportUi = {
             var formattedDate = `${year}년 ${month}월 ${day}일`;
             dateText.text(formattedDate);
         });
-    },
-    bookmarkBtnClick: function(){
-        $(this).toggleClass("on");
     },
     detailSwiper: function(){
         if ($(".detail_swiper").length) {
