@@ -290,14 +290,16 @@
   color: #fff;
 }
 .page thead th {
-  padding: 20px;
+  line-height: 80px;
   font-size: 20px;
-  color: #000;
-  text-align: left;
+  width: 200px;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
 }
 @media screen and (max-width: 750px) {
   .page thead th {
-    padding: 2.6666666667vw;
+    line-height: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -305,17 +307,24 @@
     font-size: 2.6666666667vw;
   }
 }
+@media screen and (max-width: 750px) {
+  .page thead th {
+    width: 26.6666666667vw;
+  }
+}
+.page thead th:first-child {
+  width: 370px;
+}
+@media screen and (max-width: 750px) {
+  .page thead th:first-child {
+    width: 49.3333333333vw;
+  }
+}
 .page thead th:last-child {
   text-align: center;
 }
-.page thead th:nth-child(even) {
-  background-color: #f9f9f9;
-}
-.page thead th:nth-child(odd) {
-  background-color: #fff;
-}
 .page tbody td {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   border-bottom: 2px solid #ddd;
   font-size: 20px;

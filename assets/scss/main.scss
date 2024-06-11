@@ -18,7 +18,7 @@
         &:after{
             content: '';
             display: block;
-            clear: both;    
+            clear: both;     
         }
         // @include vp(padding, 0 20px); 
         .menu_btn-list {
@@ -61,7 +61,7 @@
                     justify-content: center;
                     width: inherit;
                     height: inherit;
-                    @include vp(font-size, 32px);
+                    @include vp(font-size, $f16);
                     color: $black;
                     font-weight: $fw6;
                     text-align: center;
@@ -113,7 +113,7 @@
                                     position: relative;
                                     @include vp(padding-left, 88px);
                                     color: $black;
-                                    @include vp(font-size, 32px);
+                                    @include vp(font-size, $f16);
                                     font-weight: $fw6;
                                
                                     &:before{
@@ -132,9 +132,9 @@
                                     position: relative;
                                     display: block;
                                     @include vp(margin-left, 20px);
-                                    @include vp(padding-left, 34px);
+                                    @include vp(padding-left, 40px);
                                     color: $black-58;
-                                    @include vp(font-size, 24px);
+                                    @include vp(font-size, $f13);
                                     font-weight: $fw4; 
                                     cursor: pointer;
                                     &:before{
@@ -142,10 +142,10 @@
                                         position: absolute;
                                         @include vp(top, 2px);
                                         left:0;
-                                        @include vp(width, 24px);
-                                        @include vp(height, 24px);
+                                        @include vp(width, 30px);
+                                        @include vp(height, 30px);
                                         background: url(../images/icons/icon_info.png) 0 0 no-repeat;
-                                        @include vp(background-size, 24px auto);
+                                        @include vp(background-size, 30px auto);
                                     }
                                     a {color: inherit;}
                                 }
@@ -162,7 +162,7 @@
                                         @include vp(margin-top, 28px);
                                         a{
                                             color: $black;
-                                            @include vp(font-size, 26px);
+                                            @include vp(font-size, $f13);
                                             font-weight: $fw4; 
                                             word-break: keep-all;
                                         }
@@ -511,7 +511,7 @@
                         h3 {
                             position: relative;
                             @include vp(padding-left, 68px);
-                            @include vp(font-size, 32px);
+                            @include vp(font-size, $f16);
                             font-weight: $fw6;
 
                             &::after {
@@ -529,7 +529,7 @@
 
                         span {
                             @include vp(padding-left, 20px);
-                            @include vp(font-size, 24px);
+                            @include vp(font-size, $f12);
                             font-weight: $fw4;
                             color: $light-gray-7;
                             opacity: .6;
@@ -544,7 +544,7 @@
                             li {
                                 flex: 0 0 33.3333%;
                                 @include vp(margin-bottom, 38px);
-                                @include vp(font-size, 26px);
+                                @include vp(font-size, $f13);
                                 word-break: keep-all;
 
                                 a {
@@ -598,7 +598,7 @@
                     label {
                         display: flex;
                         align-items: center;
-                        @include vp(font-size, 26px);
+                        @include vp(font-size, $f13);
                         font-weight: $fw4;
                         color: $black;
                         opacity: .87;
@@ -626,7 +626,7 @@
                     display: flex;
                     align-items: center;
                     color: $black-58;
-                    @include vp(font-size, 26px);
+                    @include vp(font-size, $f13);
                     @include vp(margin-left, 64px);
                     @include vp(padding-left, 48px);
                     @include vp(line-height, 44px);
@@ -647,7 +647,7 @@
                     display: flex;
                     align-items: center;
                     color: $black-58;
-                    @include vp(font-size, 26px);
+                    @include vp(font-size, $f13);
                     @include vp(margin-left, auto);
                     @include vp(padding-left, 48px);
                     @include vp(line-height, 44px);

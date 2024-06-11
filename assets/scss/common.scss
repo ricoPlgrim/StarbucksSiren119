@@ -628,12 +628,11 @@
 //카드 리스트
 .cm_card_list {
     >li {
-        position: relative;
+        position: relative; 
         @include vp(margin-top, 20px);
-        @include vp(height, 228px);
         @include vp(box-shadow, 0px 0px 10px 0px rgba(0, 0, 0, 0.05));
         background: $white;
-        @include vp(border-radius, 40px);
+        @include vp(border-radius, 40px); 
 
         a {
             position: relative;
@@ -742,7 +741,7 @@
                         }
                     }
 
-                    &.last {
+                    &.time_info {
                         @include vp(padding-top, 20px);
 
                         span {
@@ -766,7 +765,7 @@
 
                                 &:before {
                                     display: inline-block;
-                                    @include vp(margin-right, 6px);
+                                    @include vp(margin-right, 4px);
                                     content: '';
                                     @include vp(width, 30px);
                                     @include vp(height, 28px);
@@ -791,6 +790,12 @@
                             }
                         }
                     }
+                    &.lead_info{
+                        color: $black;
+                        @include vp(font-size, $f12);
+                        @include vp(padding-top, 28px);
+                        font-weight: $fw4;
+                    }
                 }
             }
 
@@ -802,7 +807,14 @@
                 @include vp(right, 40px);
                 @include vp(border-radius, 6px);
                 overflow: hidden;
-
+                background:$light-gray-3;
+                >img{
+                    object-fit: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
                 .count_box {
                     position: absolute;
                     display: flex;
@@ -837,6 +849,7 @@
                     }
                 }
 
+                
                 .no_img {
                     @include vp(width, 148px);
                     @include vp(height, 148px);
@@ -1678,9 +1691,9 @@
                 z-index: 10;
             }
 
-            &:last-child {
-                @include vp(margin-right, 58px);
-            }
+            // &:last-child {
+            //     @include vp(margin-right, 58px);
+            // }
         }
 
         &.etc {

@@ -41,6 +41,8 @@ var _btnTextDelete;
 var _loginInPut;
 
 var _btnTypeList;
+var _rowScrolLBox;
+
 
 var commonUi = {
 
@@ -70,26 +72,18 @@ var commonUi = {
         _bottomSheetDim = $(".bottom_sheet").find(".dimd");
         _bottomSheetClose = $(".bottom_sheet").find(".btn_sheet_close");
         _bottomSheetDateList = $(".cm_date_contents").find(".date_list").find("li");
-
         _startDateInput = $("#startdate");
         _endDateInput = $("#enddate");
         _typeBtns = $(".cm_tab_contents").find(".cm_type_list").find("li");
-
         _twoDepsMenu = $(".cm_tab_panel .buttons_list").find("li");
         _subDepsMenu = $( ".cm_tab_panel .depth_02" ).find("li");
-
-
         _searchInput = $(".search_input");
         _deleteAllBtn = $(".btn_all_delete");
         _btnTextDelete = $(".btn_text_delete");
         _inputBoxTarget = $(".input_box");
-
         _loginInPut = $(".login_box").find(".user_id");
-
         _btnTypeClose = $(".cm_btn_list").find(".btn_close");
-
-
-
+        _rowScrolLBox = $( ".cm_btn_list" );
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
@@ -125,7 +119,10 @@ var commonUi = {
         _loginInPut.on("input", commonUi.loginValueCheck); //로그인 인풋 벨류 체크
         _btnTypeClose.on("click", commonUi.btnTypeCloseClick); //타입 버튼 삭제 이벤트
 
-        commonUi.tabActivation();
+        _rowScrolLBox.on( "scroll", commonUi.rowScrollBoxCheck );
+        commonUi.tabActivation(); //탭영역 로드 체크 순서
+
+        
   
     },
 
@@ -447,11 +444,18 @@ var commonUi = {
                 cmTypeListItems.eq(tabIndex).addClass("on");
             }
         }
+    },
+
+    rowScrollBoxCheck: function(){
+        var scrollLeft = $(this).scrollLeft();
+        var dimd = $( ".btn_group" ).find( ".dimd" );
+        if( scrollLeft > 10 ){
+            dimd.css( "display", "none" );
+        }else{
+            dimd.css( "display", "block" );
+        }
     }
-
-
 };
-
 
 
 $(function () {
