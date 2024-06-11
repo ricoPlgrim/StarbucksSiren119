@@ -45,7 +45,6 @@ var reportUi = {
         var timeText = $(this).find(".time_display");  
 
         $(this).addClass("on");
-        timeInput.show();
 
         timeInput.on("change", function() {
             var selectedTime = $(this).val();
