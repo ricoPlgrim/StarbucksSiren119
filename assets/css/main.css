@@ -9754,60 +9754,12 @@ section.searh .searh_contents .search_list_box .no_list {
 .sections .section_inner .setting_contents .setting_top {
   display: flex;
 }
-.sections .section_inner .setting_contents .setting_top .setting_check_box {
-  display: inline-flex;
-}
-.sections .section_inner .setting_contents .setting_top .setting_check_box label {
-  display: flex;
-  align-items: center;
-  font-size: 26px;
-  font-weight: 400;
-  color: #000;
-  opacity: 0.87;
-  cursor: pointer;
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label {
-    font-size: 3.4666666667vw;
-  }
-}
-.sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox] {
+.sections .section_inner .setting_contents .setting_top .cm_check_box label input[type=checkbox] {
   padding-left: 64px;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  outline: none;
-  appearance: none;
-  background: url("../images/btn/btn_check_off.png") 0 0 no-repeat;
-  background-size: 44px auto;
 }
 @media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox] {
+  .sections .section_inner .setting_contents .setting_top .cm_check_box label input[type=checkbox] {
     padding-left: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox] {
-    width: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox] {
-    height: 5.8666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox] {
-    background-size: 5.8666666667vw auto;
-  }
-}
-.sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox]:checked {
-  background: url("../images/btn/btn_check_on.png") 0 0 no-repeat;
-  background-size: 44px auto;
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner .setting_contents .setting_top .setting_check_box label input[type=checkbox]:checked {
-    background-size: 5.8666666667vw auto;
   }
 }
 .sections .section_inner .setting_contents .setting_top .btn_cart {
