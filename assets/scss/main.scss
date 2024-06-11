@@ -1,6 +1,17 @@
 @import 'base/variables';
 @import 'base/mixin';
 @import 'common';
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow-y: auto;
+}
+
+
 .main{
     background: $light-gray-4; 
     -webkit-overflow-scrolling:auto;

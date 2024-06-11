@@ -20,7 +20,6 @@ body {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  min-height: -webkit-fill-available;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
@@ -8873,6 +8872,15 @@ section.searh .searh_contents .search_list_box .no_list {
 .cm_btn_comment button.on {
   background: #00A862;
   color: #fff;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow-y: auto;
 }
 
 .main {
