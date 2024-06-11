@@ -2428,12 +2428,20 @@ header.filter .btn_close {
   background: #fff;
   z-index: 999;
   overflow: hidden;
-  overflow-y: auto;
 }
 .layer_popup.open {
   display: block;
 }
 .layer_popup header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 120px;
 }
 @media screen and (max-width: 750px) {
@@ -2458,6 +2466,25 @@ header.filter .btn_close {
 @media screen and (max-width: 750px) {
   .layer_popup header .btn_close {
     padding: 8vw;
+  }
+}
+.layer_popup header .title {
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup header .title {
+    font-size: 4vw;
+  }
+}
+.layer_popup .pop_cont01 {
+  margin-top: 120px;
+  overflow-y: auto;
+  height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 {
+    margin-top: 16vw;
   }
 }
 

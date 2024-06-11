@@ -911,44 +911,43 @@
     }
 }
 
-// 비주얼 상단 스와이퍼 팝업
-.layer_popup {
+ // 비주얼 상단 확대보기 레이어 팝업
+ .layer_popup {
     .detail_pop_visual {
         position: relative;
         display: flex;
         align-items: center;
-        overflow-x: hidden;
-        overflow-y: auto;
-        .swiper-pagination {
-            bottom: 23%;
-            left:50%; 
-            transform: translateX(-50%);
-            width:auto;
-        }
-        .swiper-pagination-bullet {
-            @include vp( margin, 0px 4px); 
-            @include vp( width, 16px); 
-            @include vp( height, 16px); 
-            background: #FFFFFF80;
-            border: 1px solid #00000061;
-        }
-        .swiper-pagination-bullet-active {
-            background: $green;
-        }
-        .img_box {
-            position: relative;
+        .slide_img {
             overflow: hidden;
-            img {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%);
-                width: 100%;
-                height: auto;
-            } &::before{
-                content: '';
-                display: block;
-                padding-top: 100%;
+            position: relative;
+            ul {
+                @include vp( padding-bottom, 150px); 
+                li {
+                    @include vp( margin-bottom, 40px); 
+                    &:last-child {@include vp( margin-bottom, 600px)}
+                }
+            }
+        }
+        .pagination {
+            position: fixed;
+            top: 50%;
+            @include vp( right, 40px); 
+            transform: translateY(-50%);
+            @include vp( margin-top, -100px); 
+            display: inline-flex;
+            flex-direction: column;
+            gap: 8px;
+            .bullet {
+                display: inline-block;
+                @include vp( margin, 0px 4px); 
+                @include vp( width, 16px); 
+                @include vp( height, 16px); 
+                border-radius: 50%;
+                background: #FFFFFF80;
+                border: 1px solid #00000061;
+                &.active {
+                    background: $green;
+                }
             }
         }
     }

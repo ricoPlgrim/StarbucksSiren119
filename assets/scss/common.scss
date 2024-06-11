@@ -449,15 +449,20 @@
     background: $white;
     z-index: 999;
     overflow: hidden;
-    overflow-y: auto;
-
     &.open {
         display: block;
     }
-
     header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         @include vp(height, 120px);
-
         .btn_close {
             position: absolute;
             top: 0px;
@@ -467,6 +472,15 @@
             @include vp(padding, 60px);
             z-index: 999;
         }
+        .title {
+            @include vp(font-size, $f15);
+            font-weight: $fw6;
+        }
+    }
+    .pop_cont01 {
+        @include vp(margin-top, 120px);
+        overflow-y:auto;
+        height: 100%;
     }
 }
 
