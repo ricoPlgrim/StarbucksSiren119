@@ -1921,48 +1921,48 @@ section.bookmark .cm_tab_panel.nolist {
   min-height: 100vh;
   min-height: 100dvh;
 }
-section .chart .cm_date_contents .date_setting {
+section.chart .cm_date_contents .date_setting {
   margin-top: 20px;
 }
 @media screen and (max-width: 750px) {
-  section .chart .cm_date_contents .date_setting {
+  section.chart .cm_date_contents .date_setting {
     margin-top: 2.6666666667vw;
   }
 }
-section .chart .chart_wrap {
-  margin: 40px 40px 0px;
+section.chart .chart_wrap {
+  margin: 40px 40px 50px;
   padding: 60px 60px 80px;
   border-radius: 16px;
   background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
-  section .chart .chart_wrap {
-    margin: 5.3333333333vw 5.3333333333vw 0vw;
+  section.chart .chart_wrap {
+    margin: 5.3333333333vw 5.3333333333vw 6.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section .chart .chart_wrap {
+  section.chart .chart_wrap {
     padding: 8vw 8vw 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section .chart .chart_wrap {
+  section.chart .chart_wrap {
     border-radius: 2.1333333333vw;
   }
 }
-section .chart .chart_wrap h3 {
+section.chart .chart_wrap h3 {
   margin-bottom: 40px;
   font-size: 32px;
   font-weight: 600;
   text-align: center;
 }
 @media screen and (max-width: 750px) {
-  section .chart .chart_wrap h3 {
+  section.chart .chart_wrap h3 {
     margin-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section .chart .chart_wrap h3 {
+  section.chart .chart_wrap h3 {
     font-size: 4.2666666667vw;
   }
 }
@@ -6404,15 +6404,6 @@ section.searh .searh_contents .search_list_box .no_list {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 120px;
 }
 @media screen and (max-width: 750px) {
@@ -6438,6 +6429,105 @@ section.searh .searh_contents .search_list_box .no_list {
   .layer_popup header .btn_close {
     padding: 8vw;
   }
+}
+.layer_popup header .title {
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup header .title {
+    font-size: 4vw;
+  }
+}
+.layer_popup .pop_cont01 {
+  margin-top: 120px;
+  overflow-y: auto;
+  height: 100%;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 {
+    margin-top: 16vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.layer_popup .pop_cont01 .detail_pop_visual .slide_img {
+  overflow: hidden;
+  position: relative;
+}
+.layer_popup .pop_cont01 .detail_pop_visual .slide_img ul {
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .slide_img ul {
+    padding-bottom: 20vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual .slide_img ul li {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .slide_img ul li {
+    margin-bottom: 5.3333333333vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual .slide_img ul li:last-child {
+  margin-bottom: 600px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .slide_img ul li:last-child {
+    margin-bottom: 80vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual .pagination {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  margin-top: -100px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .pagination {
+    right: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .pagination {
+    margin-top: -13.3333333333vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual .pagination .bullet {
+  display: inline-block;
+  margin: 0px 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5019607843);
+  border: 1px solid rgba(0, 0, 0, 0.3803921569);
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .pagination .bullet {
+    margin: 0vw 0.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .pagination .bullet {
+    width: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont01 .detail_pop_visual .pagination .bullet {
+    height: 2.1333333333vw;
+  }
+}
+.layer_popup .pop_cont01 .detail_pop_visual .pagination .bullet.active {
+  background: #00A862;
 }
 
 .cm_card_list > li {
@@ -6783,6 +6873,7 @@ section.searh .searh_contents .search_list_box .no_list {
   right: 40px;
   border-radius: 6px;
   overflow: hidden;
+  background: #EEE;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a .photo_box {
@@ -6808,6 +6899,17 @@ section.searh .searh_contents .search_list_box .no_list {
   .cm_card_list > li a .photo_box {
     border-radius: 0.8vw;
   }
+}
+.cm_card_list > li a .photo_box > img {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cm_card_list > li a .photo_box > img.row {
+  height: 100%;
+  width: auto;
 }
 .cm_card_list > li a .photo_box .count_box {
   position: absolute;

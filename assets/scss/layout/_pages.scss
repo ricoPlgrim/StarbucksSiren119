@@ -181,15 +181,14 @@ section {
     }
 
     //차트페이지
-    .chart {
+    &.chart {
         .cm_date_contents {
             .date_setting {
                 @include vp(margin-top, 20px);
             }
         }
-
         .chart_wrap {
-            @include vp(margin, 40px 40px 0px);
+            @include vp(margin, 40px 40px 50px);
             @include vp(padding, 60px 60px 80px);
             @include vp(border-radius, 16px);
             background-color: $light-gray-4;
