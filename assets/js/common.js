@@ -117,6 +117,7 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);
 
         _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
+        _subDepsMenu.on( "click", commonUi.subDepsMenuClick );
 
         _searchInput.on("input", commonUi.inputTarget);
         _searchInput.on("focus", commonUi.inputFocusEvent);
@@ -294,12 +295,12 @@ var commonUi = {
             $(cHeader).removeClass('on');
         }
     },
-    twoDepsMenuClick: function (e) {
+    twoDepsMenuClick: function(e) {
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
         var menuDepth02 = $(this).parents().parents().find(".depth_02");
-
+    
         // 탭메뉴 클릭 시 활성화
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
@@ -309,9 +310,8 @@ var commonUi = {
             menuDepth02.show();
             menuDepth02.css("display", "flex");
         } else {
-            $(".board_list." + filterText).show();
-        }
-        
+            menuDepth02.hide();
+        }        
         commonUi.centerMenu(menuContainer, $(this));
     },
     subDepsMenuClick: function(){
