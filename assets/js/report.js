@@ -1,9 +1,9 @@
 /* global var*/
 var _w;
 var _report;
-var _detail;
 var _reportListBtn;
-var _selectBtn;
+var _timeBtn;
+var _dateBtn;
 var _selectItem;
 var _btnBookmark;
 
@@ -16,18 +16,20 @@ var reportUi = {
     },
     create: function(){
         _w = $( window );
-        _report = $(".report");
-        _detail = $(".detail");
-        _reportListBtn = _report.find(".form_list").find("li").not("li.text_box, li.select_box");
-        _selectBtn = _report.find(".form_list").find(".select_option");
-        _selectItem = _report.find(".option_list").find("p");
-        _btnBookmark = _detail.find(".btn_bookmark");
+        _report = $(".sub");
+        _reportListBtn = _report.find(".form_list li").filter(function() {
+            return !$(this).hasClass("text_box") && !$(this).hasClass("time_box") && !$(this).hasClass("date_box");
+        });
+        _timeBtn = _report.find(".form_list").find(".time_box");
+        _dateBtn = _report.find(".form_list").find(".date_box");
+        _btnBookmark = _report.find(".btn_bookmark");
     },
     addEvent: function(){
         reportUi.resizeEvent( null );
         _w.on( "resize", reportUi.resizeEvent );
         _reportListBtn.on("click", reportUi.reportBtnClick);
-        _selectBtn.on("click", reportUi.selectBtnClick);
+        _timeBtn.on("click", reportUi.timeBtnClick);
+        _dateBtn.on("click", reportUi.dateBtnClick);
         _btnBookmark.on("click", reportUi.bookmarkBtnClick);
     },
     loadEvent: function () {
@@ -40,31 +42,43 @@ var reportUi = {
     reportBtnClick: function(){
         $(this).toggleClass("on");
     },
-    selectBtnClick: function(){
-        var optionList = $(this).siblings(".option_list");
-        var selectBox = $(this).parents(".select_box");
-        var currentText = $(this).text();
+    timeBtnClick: function(){
+        var timeInput = $(this).find(".time_input");
+        var timeText = $(this).find(".time_display");  
 
-        optionList.toggleClass("active");
-        selectBox.addClass("on");
+        $(this).addClass("on");
+        timeInput.show();
 
-        optionList.find("p").each(function() {
-            $(this).text() === currentText ?  $(this).hide() : $(this).show();
+        timeInput.on("change", function() {
+            var selectedTime = $(this).val();
+                if (selectedTime) {
+                    var hourMinute = selectedTime.split(":");
+                        hours = parseInt(hourMinute[0]),
+                        minutes = hourMinute[1],
+                        period = hours >= 12 ? "오후" : "오전";
+                    
+                    var formattedHours = ("0" + hours).slice(-2);
+                    var formattedTime = `${period} ${formattedHours}시 ${minutes}분`;
+
+                timeText.text(formattedTime);
+                $(this).hide();
+            }
         });
-
-        _selectItem.on("click", reportUi.selectItemClick);
     },
-    selectItemClick: function(){
-        var selectBox = $(this).closest(".select_box");
-        var selectedText = $(this).text();
-        var optionList = selectBox.find(".option_list");
-        var selectOption = selectBox.find(".select_option");
+    dateBtnClick: function(){
+        var dateInput = $(this).find(".date_input");     
+        var dateText = $(this).find(".date_display");  
+        
+        $(this).addClass("on");
 
-        selectOption.text(selectedText);
-        selectBox.find(".option_list").removeClass("active");
+        dateInput.on("change", function() {
+            var selectedDate = new Date($(this).val()),
+                year = selectedDate.getFullYear(),
+                month = String(selectedDate.getMonth() + 1).padStart(2, '0'),
+                day = String(selectedDate.getDate()).padStart(2, '0');
 
-        optionList.find("p").each(function() {
-            $(this).text() === selectedText ? $(this).show() : $(this).hide();
+            var formattedDate = `${year}년 ${month}월 ${day}일`;
+            dateText.text(formattedDate);
         });
     },
     bookmarkBtnClick: function(){

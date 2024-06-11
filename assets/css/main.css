@@ -2218,6 +2218,7 @@ section.report .create_form .form_box .title01 {
 }
 section.report .create_form .form_box .form_list {
   display: flex;
+  align-items: center;
 }
 section.report .create_form .form_box .form_list.scroll {
   padding-bottom: 1px;
@@ -2230,6 +2231,7 @@ section.report .create_form .form_box .form_list.red li.on .text {
   color: #FF2E00;
 }
 section.report .create_form .form_box .form_list li {
+  position: relative;
   font-size: 26px;
   margin-right: 8px;
   color: rgba(0, 0, 0, 0.58);
@@ -2304,61 +2306,55 @@ section.report .create_form .form_box .form_list li.text_box .btn_delete {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  padding: 32px;
-  width: 32px;
-  height: 32px;
+  padding: 33px;
+  width: 33px;
+  height: 33px;
   background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-  background-size: 32px auto;
+  background-size: 33px auto;
   font-size: 0px;
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    padding: 4.2666666667vw;
+    padding: 4.4vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    width: 4.2666666667vw;
+    width: 4.4vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    height: 4.2666666667vw;
+    height: 4.4vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    background-size: 4.2666666667vw auto;
+    background-size: 4.4vw auto;
   }
 }
 section.report .create_form .form_box .form_list li.text_box .btn_delete.on {
   display: block;
 }
-section.report .create_form .form_box .form_list li.select_box {
+section.report .create_form .form_box .form_list li.time_box button {
   position: relative;
-}
-section.report .create_form .form_box .form_list li.select_box.on .select_option {
-  border: none;
-  color: #00A862;
-}
-section.report .create_form .form_box .form_list li.select_box .select_option {
-  position: relative;
-  padding: 24px 60px 24px 20px;
+  padding: 20px 60px 20px 20px;
   border: 1px solid rgba(0, 0, 0, 0.1215686275);
   border-radius: 12px;
+  cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option {
-    padding: 3.2vw 8vw 3.2vw 2.6666666667vw;
+  section.report .create_form .form_box .form_list li.time_box button {
+    padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option {
+  section.report .create_form .form_box .form_list li.time_box button {
     border-radius: 1.6vw;
   }
 }
-section.report .create_form .form_box .form_list li.select_box .select_option::after {
+section.report .create_form .form_box .form_list li.time_box button::after {
   content: "";
   position: absolute;
   top: 20px;
@@ -2369,83 +2365,54 @@ section.report .create_form .form_box .form_list li.select_box .select_option::a
   background-size: 24px auto;
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option::after {
+  section.report .create_form .form_box .form_list li.time_box button::after {
     top: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option::after {
+  section.report .create_form .form_box .form_list li.time_box button::after {
     right: 2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option::after {
+  section.report .create_form .form_box .form_list li.time_box button::after {
     width: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option::after {
+  section.report .create_form .form_box .form_list li.time_box button::after {
     height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .select_option::after {
+  section.report .create_form .form_box .form_list li.time_box button::after {
     background-size: 3.2vw auto;
   }
 }
-section.report .create_form .form_box .form_list li.select_box .option_list {
-  display: none;
+section.report .create_form .form_box .form_list li.time_box button .time_display {
+  padding: 0px;
+}
+section.report .create_form .form_box .form_list li.time_box.on {
+  border: 1px solid #00A862;
+}
+section.report .create_form .form_box .form_list li.time_box.on .time_display {
+  color: #00A862;
+  font-weight: 600;
+}
+section.report .create_form .form_box .form_list li .date_input, section.report .create_form .form_box .form_list li .time_input {
   position: absolute;
-  padding: 12px 55px 12px 20px;
-  top: 80px;
-  left: 0px;
-  height: 200px;
-  overflow-y: auto;
-  border: 1px solid rgba(0, 0, 0, 0.1215686275);
-  background-color: #fff;
-  border-radius: 12px;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 0px;
+  width: 100%;
+  border: 0;
+  opacity: 0;
+  z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list {
-    padding: 1.6vw 7.3333333333vw 1.6vw 2.6666666667vw;
+  section.report .create_form .form_box .form_list li .date_input, section.report .create_form .form_box .form_list li .time_input {
+    right: 0vw;
   }
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list {
-    top: 10.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list {
-    left: 0vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list {
-    height: 26.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list {
-    border-radius: 1.6vw;
-  }
-}
-section.report .create_form .form_box .form_list li.select_box .option_list p {
-  padding: 12px 0px;
-  line-height: 40px;
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list p {
-    padding: 1.6vw 0vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li.select_box .option_list p {
-    line-height: 5.3333333333vw;
-  }
-}
-section.report .create_form .form_box .form_list li.select_box .option_list.active {
-  display: block;
 }
 section.report .write_preview {
   margin: 0px 40px;
@@ -8878,61 +8845,18 @@ section.searh .searh_contents .search_list_box .no_list {
   color: #fff;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-#wrap {
+.main {
   background: #F6F6F6;
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-#wrap::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar {
-    width: 0.1333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar {
-    height: 0.1333333333vw;
-  }
-}
-#wrap::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-  border: 3px solid #f1f1f1;
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar-thumb {
-    border-radius: 1.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar-thumb {
-    border: 0.4vw solid #f1f1f1;
-  }
-}
-#wrap::-webkit-scrollbar-thumb:hover {
-  background: #333;
 }
 
 .sections .section_inner {
   position: relative;
-  padding: 0px 40px 40px;
+  padding: 0px 40px;
   transform: translateY(-40px);
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner {
-    padding: 0vw 5.3333333333vw 5.3333333333vw;
+    padding: 0vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9502,14 +9426,6 @@ html, body {
     top: 138.5333333333vw;
   }
 }
-.sections .section_inner.disaster.open {
-  min-height: 1580px;
-}
-@media screen and (max-width: 750px) {
-  .sections .section_inner.disaster.open {
-    min-height: 210.6666666667vw;
-  }
-}
 .sections .section_inner.disaster .menu_btn-list.left {
   z-index: 30;
 }
@@ -9709,11 +9625,11 @@ html, body {
   }
 }
 .sections .section_inner.open {
-  min-height: 1404px;
+  min-height: 1430px;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner.open {
-    min-height: 187.2vw;
+    min-height: 190.6666666667vw;
   }
 }
 .sections .section_inner .menu_view_list {
@@ -9980,10 +9896,6 @@ html, body {
 .sections .section_inner .setting_contents .setting_top {
   display: flex;
 }
-.sections .section_inner .setting_contents .setting_top .cm_check_box label {
-  color: rgba(0, 0, 0, 0.87);
-  opacity: 1;
-}
 .sections .section_inner .setting_contents .setting_top .cm_check_box label input[type=checkbox] {
   padding-left: 64px;
 }
@@ -9996,7 +9908,7 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.58);
   font-size: 26px;
   margin-left: 64px;
   padding-left: 48px;
@@ -10057,7 +9969,7 @@ html, body {
   position: relative;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(0, 0, 0, 0.58);
   font-size: 26px;
   margin-left: auto;
   padding-left: 48px;
@@ -10156,11 +10068,11 @@ html, body {
   }
 }
 .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-  width: 513px;
+  width: 514px;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-    width: 68.4vw;
+    width: 68.5333333333vw;
   }
 }
 .sections .section_inner .accident_content {

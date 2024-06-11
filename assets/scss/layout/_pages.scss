@@ -336,6 +336,7 @@ section {
 
                 .form_list {
                     display: flex;
+                    align-items: center;
 
                     &.scroll {
                         padding-bottom: 1px;
@@ -352,6 +353,7 @@ section {
                     }
 
                     li {
+                        position: relative;
                         @include vp(font-size, $f13);
                         @include vp(margin-right, 8px);
                         color: $black-58;
@@ -397,11 +399,11 @@ section {
                                 position: absolute;
                                 bottom: 0px;
                                 right: 0px;
-                                @include vp(padding, 32px);
-                                @include vp(width, 32px);
-                                @include vp(height, 32px);
+                                @include vp(padding, 33px);
+                                @include vp(width, 33px);
+                                @include vp(height, 33px);
                                 background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-                                @include vp(background-size, 32px auto);
+                                @include vp(background-size, 33px auto);
                                 font-size: 0px;
                                 cursor: pointer;
 
@@ -411,20 +413,13 @@ section {
                             }
                         }
 
-                        &.select_box {
-                            position: relative;
-
-                            &.on .select_option {
-                                border: none;
-                                color: $green;
-                            }
-
-                            .select_option {
+                        &.time_box {
+                            button {
                                 position: relative;
-                                @include vp(padding, 24px 60px 24px 20px);
+                                @include vp(padding, 20px 60px 20px 20px);
                                 border: 1px solid #0000001F;
                                 @include vp(border-radius, 12px);
-
+                                cursor: pointer;
                                 &::after {
                                     content: '';
                                     position: absolute;
@@ -435,29 +430,25 @@ section {
                                     background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
                                     @include vp(background-size, 24px auto);
                                 }
+                                .time_display {padding: 0px;}
                             }
-
-                            .option_list {
-                                display: none;
-                                position: absolute;
-                                @include vp(padding, 12px 55px 12px 20px);
-                                @include vp(top, 80px);
-                                @include vp(left, 0px);
-                                @include vp(height, 200px);
-                                overflow-y: auto;
-                                border: 1px solid #0000001F;
-                                background-color: $white;
-                                @include vp(border-radius, 12px);
-
-                                p {
-                                    @include vp(padding, 12px 0px);
-                                    @include vp(line-height, 40px);
-                                }
-
-                                &.active {
-                                    display: block;
-                                }
+                            &.on{
+                                border: 1px solid $green;
+                                .time_display {
+                                    color: $green;
+                                    font-weight: $fw6;
+                                }  
                             }
+                        }
+                        .date_input, .time_input {
+                            position: absolute;
+                            top: 50%;
+                            transform: translatey(-50%);
+                            @include vp(right, 0px);
+                            width: 100%;
+                            border: 0;
+                            opacity: 0;
+                            z-index: 10;
                         }
                     }
                 }
