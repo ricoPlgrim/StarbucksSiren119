@@ -439,7 +439,8 @@
     }
 }
 
-// 풀 팝업
+// 풀 팝업 01
+// 헤더 있음
 .layer_popup {
     display: none;
     position: fixed;
@@ -518,6 +519,106 @@
                     &.active {
                         background: $green;
                     }
+                }
+            }
+        }
+    }
+
+    // 풀팝업 02
+    // 헤더가 없는 경우
+    .pop_cont02 {
+        overflow-y:auto;
+        height: 100%;
+        .head_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn_close {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                background: url("../images/btn/btn_close.png") center center no-repeat;
+                @include vp(background-size, 56px auto);
+                @include vp(padding, 60px);
+                z-index: 999;
+            }
+        }
+        // 보고하기 공통 작성 가이드 팝업
+        .category_wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            @include vp( padding, 92px 40px 60px); 
+            background: #F7F7F7;;
+            h4 {
+                @include vp( padding-left, 148px); 
+                display: inline-flex;   
+                align-items: center;
+                @include vp( height, 108px); 
+                @include vp( font-size, $f16); 
+                font-weight: $fw6;
+                &.partner{
+                    background: url("../images/icons/icon_Partner.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+                &.disaster{
+                    background: url("../images/icons/icon_disaster.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+                &.foreign {
+                    background: url("../images/icons//icon_different_thing.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+                &.customer{
+                    background: url("../images/icons/icon__Customer.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+                &.fire{
+                    background: url("../images/icons/icon_fire.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+                &.food_safety{
+                    background: url("../images/icons/icon_food_safety.png") center left no-repeat;
+                    @include vp(background-size, 108px auto);
+                }
+            }
+            .btn_box {
+                @include vp( margin-top, 36px); 
+                display: flex;
+                gap: 10px;
+                button {
+                    background: $white;
+                    span { 
+                        @include vp( padding, 20px); 
+                        font-weight: $fw4;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+        .guide_list {
+            @include vp( margin, 20px 0px); 
+            @include vp( padding, 0px 40px); 
+            li {
+                @include vp( padding, 40px 0px); 
+                border-bottom: 1px solid $light-gray-3;
+                &:last-child {border-bottom: none;}
+                .title {
+                    @include vp( margin-bottom, 12px); 
+                    @include vp( font-size, $f15); 
+                    font-weight: $fw6;
+                }
+                .sub_title {
+                    @include vp( font-size, $f12); 
+                    color: $light-gray-8;
                 }
             }
         }
