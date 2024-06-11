@@ -24,6 +24,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Box sizing normalization */
