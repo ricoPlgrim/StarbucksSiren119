@@ -154,9 +154,9 @@ header {
 
     &.home {
         @include vp(height, 446px);
-        background-color: $thickGreen;
+        // background-color: $thickGreen;
+        background-color: red;
         @include vp(border-radius, 0 0 40px 40px);
-        overflow: hidden;
 
     }
 
