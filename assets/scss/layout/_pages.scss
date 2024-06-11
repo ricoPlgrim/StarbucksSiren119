@@ -434,10 +434,13 @@ section {
                             }
                             &.on{
                                 border: 1px solid $green;
-                                .time_display {
-                                    color: $green;
-                                    font-weight: $fw6;
-                                }  
+                                button {
+                                    border: none;
+                                    .time_display {
+                                        color: $green;
+                                        font-weight: $fw6;
+                                    }  
+                                }
                             }
                         }
                         .date_input, .time_input {

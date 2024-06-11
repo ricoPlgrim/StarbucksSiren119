@@ -2393,7 +2393,10 @@ section.report .create_form .form_box .form_list li.time_box button .time_displa
 section.report .create_form .form_box .form_list li.time_box.on {
   border: 1px solid #00A862;
 }
-section.report .create_form .form_box .form_list li.time_box.on .time_display {
+section.report .create_form .form_box .form_list li.time_box.on button {
+  border: none;
+}
+section.report .create_form .form_box .form_list li.time_box.on button .time_display {
   color: #00A862;
   font-weight: 600;
 }
