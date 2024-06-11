@@ -944,9 +944,20 @@ header .header_inner .header_sticky.active {
   }
 }
 header.home {
-  height: 200px;
-  background-color: black;
+  height: 446px;
+  max-height: 446px;
+  background-color: #006241;
   border-radius: 0 0 40px 40px;
+}
+@media screen and (max-width: 750px) {
+  header.home {
+    height: 59.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.home {
+    max-height: 59.4666666667vw;
+  }
 }
 @media screen and (max-width: 750px) {
   header.home {
