@@ -327,7 +327,6 @@ section {
                 display: flex;
                 align-items: center;
                 @include vp(margin-bottom, 40px);
-
                 .title01 {
                     @include vp(font-size, $f13);
                     @include vp(min-width, 132px);
@@ -343,6 +342,13 @@ section {
                         overflow-y: auto;
                         // &::-webkit-scrollbar{width: 3px; height:3px;}
                         // &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
+                    }
+                    &.red li.on {
+                        border: 1px solid #FF2E00;
+                
+                        .text {
+                            color: #FF2E00;
+                        }
                     }
 
                     li {
@@ -368,13 +374,14 @@ section {
                         .text {
                             @include vp(padding, 20px);
                             font-weight: $fw4;
+                            line-height: normal;
                         }
 
                         &.text_box {
                             position: relative;
 
                             input {
-                                @include vp(padding, 24px 30px);
+                                @include vp(padding, 16px 30px);
                                 @include vp(border-radius, 16px);
                                 @include vp(width, 536px);
                                 border: 1px solid #0000001F;
@@ -390,7 +397,7 @@ section {
                                 position: absolute;
                                 bottom: 0px;
                                 right: 0px;
-                                @include vp(padding, 40px);
+                                @include vp(padding, 32px);
                                 @include vp(width, 32px);
                                 @include vp(height, 32px);
                                 background: url("../images/btn/btn_login_delete.png") center center no-repeat;
@@ -403,84 +410,52 @@ section {
                                 }
                             }
                         }
-                    }
-                }
 
-                &.required {
-                    .title01 {
-                        position: relative;
-                        color: #FF2E00;
-                        font-weight: $fw6;
+                        &.select_box {
+                            position: relative;
 
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            @include vp(top, 0px);
-                            @include vp(width, 10px);
-                            @include vp(height, 10px);
-                            background: url("../images/icons/ico_required.png") center center no-repeat;
-                            @include vp(background-size, 10px auto);
-                        }
-                    }
+                            &.on .select_option {
+                                border: none;
+                                color: $green;
+                            }
 
-                    .form_list {
-                        li {
-                            &.on {
-                                border: 1px solid #FF2E00;
+                            .select_option {
+                                position: relative;
+                                @include vp(padding, 24px 60px 24px 20px);
+                                border: 1px solid #0000001F;
+                                @include vp(border-radius, 12px);
 
-                                .text {
-                                    color: #FF2E00;
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    @include vp(top, 20px);
+                                    @include vp(right, 16px);
+                                    @include vp(width, 24px);
+                                    @include vp(height, 32px);
+                                    background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
+                                    @include vp(background-size, 24px auto);
                                 }
                             }
 
-                            &.select_box {
-                                position: relative;
+                            .option_list {
+                                display: none;
+                                position: absolute;
+                                @include vp(padding, 12px 55px 12px 20px);
+                                @include vp(top, 80px);
+                                @include vp(left, 0px);
+                                @include vp(height, 200px);
+                                overflow-y: auto;
+                                border: 1px solid #0000001F;
+                                background-color: $white;
+                                @include vp(border-radius, 12px);
 
-                                &.on {
-                                    .select_option {
-                                        border: none;
-                                        color: #FF2E00;
-                                    }
+                                p {
+                                    @include vp(padding, 12px 0px);
+                                    @include vp(line-height, 40px);
                                 }
 
-                                .select_option {
-                                    position: relative;
-                                    @include vp(padding, 24px 60px 24px 20px);
-                                    border: 1px solid #0000001F;
-                                    @include vp(border-radius, 12px);
-
-                                    &::after {
-                                        content: '';
-                                        position: absolute;
-                                        @include vp(top, 20px);
-                                        @include vp(right, 16px);
-                                        @include vp(width, 24px);
-                                        @include vp(height, 32px);
-                                        background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
-                                        @include vp(background-size, 24px auto);
-                                    }
-                                }
-
-                                .option_list {
-                                    display: none;
-                                    position: absolute;
-                                    @include vp(padding, 12px 55px 12px 20px);
-                                    @include vp(top, 80px);
-                                    @include vp(left, 0px);
-                                    @include vp(height, 200px);
-                                    overflow-y: auto;
-                                    border: 1px solid #0000001F;
-                                    background-color: $white;
-                                    @include vp(border-radius, 12px);
-
-                                    p {
-                                        @include vp(padding, 12px 0px);
-                                        @include vp(line-height, 40px);
-                                    }
-
-                                    &.active {
-                                        display: block;
-                                    }
+                                &.active {
+                                    display: block;
                                 }
                             }
                         }
@@ -515,86 +490,114 @@ section {
             .preview_list {
                 @include vp(padding-top, 40px);
                 @include vp(padding-bottom, 80px);
-
+            
                 li {
                     @include vp(padding-bottom, 40px);
                     @include vp(margin-bottom, 40px);
                     border-bottom: 1px solid $light-gray-2;
-
+            
+                    &:first-child dl {
+                        padding-bottom: 0px;
+                    }
+            
                     &:last-child {
                         padding-bottom: 0px;
                         margin-bottom: 0px;
                         border-bottom: none;
                     }
-
-                    &:first-child {
-                        dl {
-                            padding-bottom: 0px;
-                        }
-                    }
-
+            
                     dl {
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         @include vp(line-height, 40px);
-                        @include vp(padding-bottom, 20px);
+                        @include vp(padding-bottom, 26px);
                         @include vp(font-size, $f13);
-
+            
                         dt {
+                            @include vp(min-width, 100px);
                             color: $black-58;
                         }
-
+            
                         dd {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: end;
+                            gap: 5px;
+            
                             span {
-                                @include vp(padding, 10px 10px 10px 52px);
+                                @include vp(padding, 12px 10px 12px 60px);
                                 display: inline-block;
                                 border: 1px solid $black;
-                                border-radius: 6px;
+                                @include vp(border-radius, 12px);
+                                @include vp(font-size, $f11);
                             }
-
-                            .emerg01 {
-                                background: url("../images/icons/ico_emergency01.png") center left no-repeat;
-                                @include vp(background-size, 40px auto);
-                                @include vp(background-position-x, 6px);
-                            }
-
-                            .emerg02 {
-                                background: url("../images/icons/ico_emergency02.png") center left no-repeat;
-                                @include vp(background-size, 40px auto);
-                                @include vp(background-position-x, 6px);
+            
+                            @for $i from 1 through 6 {
+                                .emerg0#{$i} {
+                                    background: url("../images/icons/ico_emergency0#{$i}.png") center left no-repeat;
+                                    @include vp(background-size, 40px auto);
+                                    @include vp(background-position-x, 10px);
+                                }
                             }
                         }
                     }
 
-                    textarea {
-                        @include vp(padding, 40px);
-                        @include vp(line-height, 40px);
-                        @include vp(font-size, $f13);
-                        @include vp(border-radius, 16px);
-                        @include vp(height, 252px);
-                        width: 100%;
+                    .text_wrap {
+                        position: relative;
+                        @include vp(padding, 40px 0px 40px 40px);
+                        @include vp(min-height, 270px);
                         border: 1px solid $light-gray-2;
                         background: $white;
-                        resize: none;
+                        @include vp(border-radius, 16px);
+                        overflow: hidden;
+                        overflow-y: auto;
+
+                        &::-webkit-scrollbar {
+                            width: 3px;
+                            height: 3px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            background: #888;
+                        }
+                        textarea {
+                            @include vp(padding-right, 40px);
+                            @include vp(line-height, 40px);
+                            @include vp(font-size, $f13);
+                            @include vp(height, 160px);
+                            width: 100%;
+                            color: #00000094;
+                            resize: none;
+                            outline: none;
+                            border: none;
+                            &::placeholder {color: $light-gray-1;}
+                        }
+                        .byte_num {
+                            position: absolute;
+                            @include vp(left, 40px);
+                            @include vp(height, 46px);
+                            @include vp(bottom, 6px);
+                            @include vp(font-size, $f13);
+                            color: $light-gray-1;
+                        }
                     }
-
-                    .chk01 {
-                        label {
-                            @include vp(font-size, $f15);
-                            font-weight: 700;
-
-                            input {
-                                @include vp(padding-right, 20px);
-                            }
+            
+                    .chk01 label {
+                        @include vp(font-size, $f15);
+                        font-weight: 700;
+            
+                        input {
+                            @include vp(padding-right, 0px);
                         }
                     }
                 }
             }
+            
         }
 
         .btn_report {
-            @include vp(margin, 40px);
+            @include vp(margin, 40px 40px 60px);
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -656,521 +659,459 @@ section {
         }
 
         .detail_wrap {
-            @include vp(margin, 0px 40px);
-
-            .detail_box {
-                @include vp(padding-bottom, 50px);
-                @include vp(margin-bottom, 40px);
+            @include vp( margin, 0px 40px); 
+            .detail_box{
+                @include vp( padding-bottom, 40px); 
+                @include vp( margin-bottom, 40px); 
                 border-bottom: 1px solid $light-gray-3;
-
                 &:nth-child(3) {
                     border-bottom: none;
                     padding-bottom: 0px;
                     margin-bottom: 0px;
                 }
-
                 .info_header {
-                    @include vp(margin-bottom, 32px);
+                    @include vp( margin-bottom,32px); 
                     display: flex;
                     align-items: center;
-
                     .badge {
-                        >span {
+                        > span {
                             display: inline-block;
-                            @include vp(margin-right, 8px);
-                            @include vp(font-size, 22px);
-                            @include vp(padding, 8px 16px);
-                            @include vp(border-radius, 12px);
-
+                            @include vp( margin-right, 8px); 
+                            @include vp( font-size, $f12); 
+                            @include vp( padding, 8px 16px); 
+                            @include vp( border-radius, 12px); 
                             &.done {
                                 color: $green;
                                 background: #EBFFF7;
                                 border: 1px solid $green;
                             }
-
                             &.urgency {
-                                color: $red;
+                                color: $orange;
                                 background: #FFF6F6;
-                                border: 1px solid #FF7A7A;
+                                border: 1px solid $orange;
                             }
-
                             &.general {
-                                color: $dark-gray;
-                                background: $light-gray-3;
-                                border: 1px solid $light-gray-2;
+                                color: $black;
+                                background: #F7F7F7;
+                                border: 1px solid $dark-gray;
                             }
                         }
                     }
-
                     .location {
-                        @include vp(margin-left, 12px);
-                        @include vp(font-size, $f12);
+                        @include vp( margin-left, 12px); 
+                        @include vp( font-size, $f12); 
                     }
                 }
-
                 .incident_box {
                     display: flex;
-
                     .text01 {
                         font-weight: $fw6;
-                        @include vp(font-size, $f15);
+                        @include vp( font-size, $f15); 
                         color: #000000DE;
-
                         &:first-child {
                             position: relative;
-                            @include vp(padding-right, 40px);
-
+                            @include vp( padding-right, 36px); 
                             &::before {
                                 content: '';
                                 position: absolute;
-                                @include vp(top, 4px);
-                                @include vp(right, 18px);
-                                @include vp(bottom, 0px);
-                                @include vp(width, 4px);
-                                @include vp(height, 26px);
+                                @include vp( top, 4px);
+                                @include vp( right, 16px);
+                                @include vp( bottom, 0px);
+                                @include vp( width, 4px);
+                                @include vp( height, 26px);
                                 background: #888888;
                             }
                         }
                     }
                 }
-
                 .detail_info {
-                    @include vp(margin-top, 20px);
+                    @include vp( margin-top, 16px);
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-
                     .date_box {
                         span {
-                            @include vp(margin-right, 20px);
-                            @include vp(font-size, $f12);
+                            @include vp( margin-right, 17px);
+                            @include vp( font-size, $f12); 
                             color: #888888;
-
                             &.comments {
-                                @include vp(padding-left, 32px);
+                                @include vp( padding-left, 32px);
                                 background: url("../images/icons/ico_rate_review.png") center left no-repeat;
-                                @include vp(background-size, 28px auto);
+                                @include vp(background-size, 28px auto); 
                             }
                         }
                     }
-
                     .tag_box {
                         span {
-                            @include vp(padding, 8px 16px);
-                            @include vp(margin-left, 8px);
-                            @include vp(font-size, 22px);
-                            @include vp(border-radius, 12px);
+                            @include vp( padding, 8px 16px);
+                            @include vp( margin-left, 8px);
+                            @include vp( font-size, 22px); 
+                            @include vp( border-radius, 12px);
                             color: $green;
                             background: #00a86224;
                         }
                     }
                 }
-
                 .report_info {
                     dl {
-                        display: flex;
+                        display: flex; 
                         align-items: center;
-                        @include vp(margin-bottom, 24px);
-                        @include vp(font-size, $f13);
+                        @include vp( margin-bottom, 28px); 
+                        @include vp( font-size, $f13);
                         text-align: center;
                         line-height: normal;
-
                         &:last-child {
                             margin-bottom: 0px;
                         }
-
                         &.emerge_box {
-                            @include vp(margin-bottom, 40px);
-
-                            &.emerge_box {
+                            @include vp( margin-bottom, 40px);
+                            dd {    
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 5px;
                                 span {
-                                    @include vp(padding, 10px 10px 10px 52px);
+                                    @include vp( padding, 12px 10px 12px 60px); 
                                     display: inline-block;
                                     border: 1px solid $black;
-                                    border-radius: 6px;
+                                    @include vp( border-radius, 12px);
+                                    @include vp( font-size, $f11);
                                 }
-
-                                .emerg01 {
-                                    background: url("../images/icons/ico_emergency01.png") center left no-repeat;
-                                    @include vp(background-size, 40px auto);
-                                    @include vp(background-position-x, 6px);
-                                }
-
-                                .emerg02 {
-                                    background: url("../images/icons/ico_emergency02.png") center left no-repeat;
-                                    @include vp(background-size, 40px auto);
-                                    @include vp(background-position-x, 6px);
+                                @for $i from 1 through 6 {
+                                    .emerg0#{$i} {
+                                        background: url("../images/icons/ico_emergency0#{$i}.png") center left no-repeat;
+                                        @include vp(background-size, 40px auto);
+                                        @include vp(background-position-x, 10px);
+                                    }
                                 }
                             }
                         }
-
                         dt {
-                            @include vp(margin-right, 70px);
-                            @include vp(min-width, 90px);
-                            color: #00000057;
+                            @include vp( margin-right, 70px); 
+                            @include vp( min-width, 90px); 
+                            color: $gray;
                             text-align: left;
                         }
-
                         dd {
                             a {
                                 color: $black;
                             }
-
                             &.border {
-                                border-bottom: 1px solid $black;
+                                span {border-bottom: 1px solid $black;}
                             }
                         }
                     }
                 }
-
                 .btn_box {
                     display: flex;
                     flex-direction: column;
-
                     span {
-                        @include vp(padding, 20px 20px 20px 60px);
-                        @include vp(border-radius, 12px);
+                        @include vp( padding, 20px 20px 20px 60px);
+                        @include vp( border-radius, 12px);
                         border: 1px solid $light-gray-3;
-                        @include vp(font-size, 18px);
+                        @include vp( font-size, 18px);
                         cursor: pointer;
-
                         &.btn01 {
                             background: url("../images/icons/ico_mobile.png") center left no-repeat;
-                            @include vp(background-size, 40px auto);
-                            @include vp(background-position-x, 8px);
+                            @include vp(background-size, 40px auto); 
+                            @include vp(background-position-x, 8px); 
                         }
-
                         &.btn02 {
-                            @include vp(margin-top, 12px);
+                            @include vp( margin-top, 12px);
                             background: url("../images/icons/ico_sms.png") center left no-repeat;
-                            @include vp(background-size, 40px auto);
-                            @include vp(background-position-x, 8px);
+                            @include vp(background-size, 40px auto); 
+                            @include vp(background-position-x, 8px); 
                         }
                     }
                 }
             }
-
             .notice {
-                @include vp(margin-top, 80px);
-                @include vp(margin-bottom, 40px);
-                @include vp(padding, 40px);
-                @include vp(border-radius, 16px);
-                background: #F7F7F7;
-                @include vp(line-height, 40px);
-                @include vp(font-size, $f13);
+                @include vp( margin-top, 80px); 
+                @include vp( margin-bottom, 40px);
+                @include vp( padding, 40px 40px 92px);
+                @include vp( border-radius, 16px);
+                @include vp( line-height, 40px);
+                @include vp( font-size, $f13);
+                background: $white;
+                border: 1px solid $light-gray-2;
                 color: #00000094;
             }
-
             .btn_wrap {
-                @include vp(margin-bottom, 80px);
+                @include vp( margin-bottom, 80px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 button {
-                    @include vp(width, 330px);
-                    @include vp(height, 84px);
-                    @include vp(border-radius, 16px);
-                    @include vp(font-size, $f15);
+                    @include vp( width, 330px);
+                    @include vp( height, 84px);
+                    @include vp( border-radius, 16px);
+                    @include vp( font-size, $f15);
                     font-weight: $fw6;
-
                     &:nth-child(1) {
-                        @include vp(margin-right, 10px);
+                        @include vp( margin-right, 10px);
                     }
                 }
             }
         }
 
         .comment_wrap {
-            @include vp(margin, 0px 40px 160px);
-
+            @include vp( margin, 0px 40px 160px); 
             &.comment-detail {
-                @include vp(padding-top, 60px);
-
+                @include vp( padding-top, 60px); 
                 .reply_box {
                     .text01 {
                         position: relative;
-                        @include vp(margin-bottom, 40px);
-                        @include vp(font-size, $f13);
-                        @include vp(line-height, 40px);
+                        @include vp( margin-bottom, 40px); 
+                        @include vp( font-size, $f13);
+                        @include vp( line-height, 40px);
                         color: #00000094;
                     }
-
                     .text02 {
                         display: flex;
                         align-items: center;
-                        @include vp(font-size, $f12);
-
+                        @include vp( font-size, $f12);
                         span {
                             display: inline-block;
-                            @include vp(margin-right, 14px);
-
+                            @include vp( margin-right, 14px);
                             &.user {
                                 .name {
                                     position: relative;
                                     cursor: pointer;
-
                                     &::before {
                                         content: '';
                                         position: absolute;
                                         left: 0px;
                                         right: 0px;
-                                        @include vp(bottom, 1px);
+                                        @include vp( bottom, 1px);
                                         background: $black;
                                         height: 1px;
                                     }
                                 }
                             }
-
-                            &.date,
-                            &.time {
+                            &.date, &.time {
                                 color: #00000057;
                             }
                         }
                     }
                 }
             }
-
             .comment_header {
-                @include vp(padding-bottom, 24px);
-                @include vp(margin-bottom, 48px);
-                @include vp(line-height, 40px);
+                @include vp( padding-bottom, 24px); 
+                @include vp( margin-bottom, 40px); 
+                @include vp( line-height, normal); 
                 border-bottom: 1px solid $black;
-
-                span {
-                    @include vp(font-size, $f15);
+                span{
+                    @include vp( font-size, $f15);
                     font-weight: $fw6;
-
                     .num {
-                        @include vp(margin-left, 6px);
+                        @include vp( margin-left, 6px); 
                     }
                 }
-            }
-
+            } 
             .comment_box {
-                @include vp(padding-bottom, 40px);
-                @include vp(margin-bottom, 48px);
+                @include vp( padding-bottom, 40px); 
+                @include vp( margin-bottom, 48px); 
                 border-bottom: 1px solid #00000052;
-
                 &:last-child {
                     border-bottom: none;
                 }
-
                 .info01 {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    @include vp(margin-bottom, 20px);
-                    @include vp(line-height, 48px);
-
+                    @include vp( margin-bottom, 20px);
+                    @include vp( line-height, 48px);
                     .user {
-                        @include vp(font-size, $f15);
+                        @include vp( font-size, $f15);
                         font-weight: $fw6;
-
                         .name {
                             position: relative;
                             cursor: pointer;
-
                             &::before {
                                 content: '';
                                 position: absolute;
                                 left: 0px;
                                 right: 0px;
-                                @include vp(bottom, 2px);
+                                @include vp( bottom, 2px);
                                 background: $black;
                                 height: 1px;
                             }
                         }
                     }
                 }
-
                 .info02 {
-                    @include vp(margin-bottom, 20px);
-                    @include vp(font-size, $f12);
+                    @include vp( margin-bottom, 20px);
+                    @include vp( font-size, $f12);
                     color: #888;
-
                     span {
-                        @include vp(margin-right, 20px);
-
-                        &.count {
+                        @include vp( margin-right, 20px);
+                        &.num {
                             color: #1BA085;
                         }
                     }
                 }
-
                 .info03 {
-                    @include vp(margin-bottom, 30px);
-                    @include vp(font-size, $f13);
-                    @include vp(line-height, 40px);
+                    position: relative;
+                    @include vp( margin-bottom, 30px);
+                    @include vp( font-size, $f13);
+                    @include vp( line-height, 40px);
                     color: #00000094;
+                    .edited {
+                        @include vp( margin-top, 10px);
+                        display: block;
+                        @include vp( font-size, $f13);
+                        @include vp( line-height, 40px);
+                        text-align: left;
+                        color: $gray;
+                    }
                 }
-
                 .btn_wrap {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-
                     .btn_recomment {
                         display: inline-flex;
                         align-items: center;
-                        @include vp(padding-left, 60px);
-                        @include vp(height, 48px);
+                        @include vp( padding-left, 60px);
+                        @include vp( height, 48px);                    
                         background: url("../images/icons/ico_edit_review.png") center left no-repeat;
                         @include vp(background-size, 48px 48px);
                         cursor: pointer;
-
                         span {
                             position: relative;
                             display: inline-block;
-                            @include vp(font-size, $f12);
-                            color: #00000094;
-
+                            @include vp( font-size, $f13);
+                            color: $black;
                             &::before {
                                 content: '';
                                 position: absolute;
                                 left: 0px;
                                 right: 0px;
-                                @include vp(bottom, 0px);
-                                background: #00000094;
+                                @include vp( bottom, 0px);
+                                background: $black;
                                 height: 1px;
                             }
                         }
                     }
-
                     .comment_edit {
                         span {
                             position: relative;
-                            @include vp(font-size, $f12);
-                            color: #00000094;
+                            @include vp( font-size, $f13);
+                            color: $black;
                             cursor: pointer;
-
-                            a {
-                                color: inherit;
-                            }
-
+                            a {color: inherit;}
                             &.btn_edit {
-                                @include vp(margin-right, 20px);
+                                @include vp( margin-right, 20px);
                             }
-
                             &::before {
                                 content: '';
                                 position: absolute;
                                 left: 0px;
                                 right: 0px;
-                                @include vp(bottom, 0px);
-                                background: #00000094;
+                                @include vp( bottom, 0px);
+                                background: $black;
                                 height: 1px;
                             }
                         }
                     }
                 }
-
                 .recomment_box {
                     position: relative;
-                    @include vp(padding-top, 40px);
-                    @include vp(margin-top, 22px);
+                    @include vp( padding-top, 40px); 
+                    @include vp( margin-top, 22px); 
                     border-top: 1px dashed #DDD;
-
                     &::before {
                         content: '';
                         position: absolute;
                         top: 0px;
-                        @include vp(left, -40px);
-                        @include vp(right, -40px);
-                        @include vp(bottom, -40px);
+                        @include vp( left, -40px); 
+                        @include vp( right, -40px); 
+                        @include vp( bottom, -40px); 
                         background: #F6F6F6;
                         z-index: -1;
                     }
-
-                    >li {
+                    > li {
                         position: relative;
-                        @include vp(padding-bottom, 40px);
-                        @include vp(margin-bottom, 40px);
+                        @include vp( padding-bottom, 40px); 
+                        @include vp( margin-bottom, 40px); 
                         border-bottom: 1px dashed $light-gray-2;
-
                         &:last-child {
                             padding-bottom: 0px;
                             margin-bottom: 0px;
                             border-bottom: none;
                         }
-
                         .text01 {
                             position: relative;
-                            @include vp(padding-left, 34px);
-                            @include vp(margin-bottom, 40px);
-                            @include vp(font-size, $f13);
-                            @include vp(line-height, 40px);
-                            color: #888;
-
+                            @include vp( padding-left, 34px); 
+                            @include vp( margin-bottom, 40px); 
+                            @include vp( font-size, $f13);
+                            @include vp( line-height, 40px);
+                            color: #00000094;
+                            .edited {
+                                @include vp( margin-top, 10px);
+                                display: block;
+                                @include vp( font-size, $f13);
+                                @include vp( line-height, 40px);
+                                text-align: left;
+                                color: $gray;
+                            }
                             .reply {
                                 position: absolute;
-                                @include vp(top, 8px);
+                                @include vp( top, 8px); 
                                 left: 0px;
-                                @include vp(width, 24px);
-                                @include vp(height, 24px);
+                                @include vp( width, 24px); 
+                                @include vp( height, 24px); 
                                 background: url("../images/icons/ico_reply.png") center left no-repeat;
-                                @include vp(background-size, 24px auto);
+                                @include vp(background-size, 24px auto); 
                             }
                         }
-
                         .text02 {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            @include vp(padding-left, 34px);
-                            @include vp(font-size, $f12);
-
+                            @include vp( padding-left, 34px); 
+                            @include vp( font-size, $f12);
                             .comment_info {
                                 span {
                                     display: inline-block;
-                                    @include vp(margin-right, 14px);
-
+                                    @include vp( margin-right, 14px);
                                     &.user {
                                         .name {
                                             position: relative;
                                             cursor: pointer;
-
                                             &::before {
                                                 content: '';
                                                 position: absolute;
                                                 left: 0px;
                                                 right: 0px;
-                                                @include vp(bottom, 0px);
+                                                @include vp( bottom, 0px);
                                                 background: $black;
                                                 height: 1px;
                                             }
                                         }
                                     }
-
-                                    &.date,
-                                    &.time {
-                                        color: #888;
+                                    &.date, &.time {
+                                        color: #00000057;
                                     }
                                 }
                             }
-
                             .comment_edit {
                                 span {
                                     position: relative;
-                                    @include vp(font-size, $f12);
-                                    color: #00000094;
+                                    @include vp( font-size, $f13);
+                                    @include vp( line-height, normal);
+                                    color: $black;
                                     cursor: pointer;
-
-                                    a {
-                                        color: inherit;
-                                    }
-
+                                    a {color: inherit;}
                                     &.btn_edit {
-                                        @include vp(margin-right, 20px);
+                                        @include vp( margin-right, 20px);
                                     }
-
                                     &::before {
                                         content: '';
                                         position: absolute;
                                         left: 0px;
                                         right: 0px;
-                                        @include vp(bottom, 0px);
-                                        background: #00000094;
+                                        @include vp( bottom, 2px);
+                                        background: $black;
                                         height: 1px;
                                     }
                                 }
@@ -1182,58 +1123,7 @@ section {
         }
 
     }
- 
-   
-    // 비주얼 상단 스와이퍼 팝업
-    .layer_popup {
-        .detail_pop_visual {
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow-x: hidden;
-            overflow-y: auto;
-
-            .swiper-pagination {
-                bottom: 23%;
-                left: 50%;
-                transform: translateX(-50%);
-                width: auto;
-            }
-
-            .swiper-pagination-bullet {
-                @include vp(margin, 0px 4px);
-                @include vp(width, 16px);
-                @include vp(height, 16px);
-                background: #FFFFFF80;
-                border: 1px solid #00000061;
-            }
-
-            .swiper-pagination-bullet-active {
-                background: $green;
-            }
-
-            .img_box {
-                position: relative;
-                overflow: hidden;
-
-                img {
-                    position: absolute;
-                    top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    width: 100%;
-                    height: auto;
-                }
-
-                &::before {
-                    content: '';
-                    display: block;
-                    padding-top: 100%;
-                }
-            }
-        }
-    }
-
+    
     //로그인
     &.login {
         @include vp(padding, 140px 40px);

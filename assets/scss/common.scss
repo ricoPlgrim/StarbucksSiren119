@@ -481,6 +481,46 @@
         @include vp(margin-top, 120px);
         overflow-y:auto;
         height: 100%;
+
+        // 비주얼 상단 확대보기 레이어 팝업
+        .detail_pop_visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            .slide_img {
+                overflow: hidden;
+                position: relative;
+                ul {
+                    @include vp( padding-bottom, 150px); 
+                    li {
+                        @include vp( margin-bottom, 40px); 
+                        &:last-child {@include vp( margin-bottom, 600px)}
+                    }
+                }
+            }
+            .pagination {
+                position: fixed;
+                top: 50%;
+                @include vp( right, 40px); 
+                transform: translateY(-50%);
+                @include vp( margin-top, -100px); 
+                display: inline-flex;
+                flex-direction: column;
+                gap: 8px;
+                .bullet {
+                    display: inline-block;
+                    @include vp( margin, 0px 4px); 
+                    @include vp( width, 16px); 
+                    @include vp( height, 16px); 
+                    border-radius: 50%;
+                    background: #FFFFFF80;
+                    border: 1px solid #00000061;
+                    &.active {
+                        background: $green;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1592,7 +1632,7 @@
             border: 1px solid $black;
 
             textarea {
-                @include vp(margin-bottom, -38px);
+                @include vp(margin-bottom, -30px);
             }
         }
 
