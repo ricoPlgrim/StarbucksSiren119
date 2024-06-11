@@ -2,13 +2,21 @@
 @import 'base/mixin';
 @import 'common';
 
-
-.main{
-    background: $light-gray-4; 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
+
+
 
 #wrap{
     background: $light-gray-4; 
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 

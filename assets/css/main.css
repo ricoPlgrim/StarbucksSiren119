@@ -946,9 +946,14 @@ header .header_inner .header_sticky.active {
   }
 }
 header.home {
-  height: 223px;
+  height: 446px;
   background-color: #006241;
   border-radius: 0 0 40px 40px;
+}
+@media screen and (max-width: 750px) {
+  header.home {
+    height: 59.4666666667vw;
+  }
 }
 @media screen and (max-width: 750px) {
   header.home {
@@ -8873,12 +8878,19 @@ section.searh .searh_contents .search_list_box .no_list {
   color: #fff;
 }
 
-.main {
-  background: #F6F6F6;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 #wrap {
   background: #F6F6F6;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .sections .section_inner {
