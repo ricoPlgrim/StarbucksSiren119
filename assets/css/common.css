@@ -13,12 +13,14 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html, body {
+  box-sizing: border-box;
+}
+
 body {
   text-size-adjust: 100%;
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100dvh;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeSpeed;
