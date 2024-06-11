@@ -479,7 +479,7 @@ html, body {
         }
 
         &.open{
-            @include vp(min-height, 1430px);
+            @include vp(min-height, 1480px);
         }
 
         .menu_view_list {
