@@ -4,7 +4,7 @@
 @import 'base/mixin';
 /* LAYOUT CSS */
 @import "layout/header";
-@import "layout/pages";
+@import "layout/pages"; 
 
 
 #wrap {
@@ -1543,3 +1543,108 @@
         background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.50) 49.54%, #FFF 95.91%);
     }
 }
+
+ //하단 고정 댓글
+ .cm_btn_comment {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    @include vp(padding, 20px 40px 60px);
+    background: $white;
+    box-shadow: 0 -1px 5px 0px $medium-gray;
+    z-index: 20;
+
+    .text_box {
+        position: relative;
+        @include vp(padding, 24px 10px 0px 28px);
+        @include vp(width, 526px);
+        @include vp(border-radius, 16px);
+        border: 1px solid $light-gray-2;
+        overflow: hidden;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background: #888;
+        }
+
+        &.on {
+            border: 1px solid $black;
+
+            textarea {
+                @include vp(margin-bottom, -38px);
+            }
+        }
+
+        textarea {
+            @include vp(padding-right, 80px);
+            @include vp(width, 124%);
+            @include vp(min-height, 56px);
+            @include vp(max-height, 200px);
+            @include vp(line-height, 40px);
+            @include vp(font-size, $f16);
+            color: $black;
+            outline: none;
+            resize: none;
+            border: none;
+            transform: scale(0.8125);
+            transform-origin: left top;
+        }
+
+        .byte_num {
+            display: none;
+            position: absolute;
+            @include vp(left, 28px);
+            @include vp(height, 64px);
+            @include vp(bottom, 0px);
+            @include vp(font-size, $f13);
+            color: $light-gray-1;
+
+            &.on {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .btn_delete {
+            display: none;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            @include vp(padding, 42px);
+            @include vp(width, 32px);
+            @include vp(height, 32px);
+            background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+            @include vp(background-size, 32px auto);
+            cursor: pointer;
+
+            &.on {
+                display: block;
+            }
+        }
+    }
+
+    button {
+        position: absolute;
+        @include vp(bottom, 60px);
+        @include vp(right, 40px);
+        @include vp(padding, 0px 44px);
+        @include vp(height, 80px);
+        @include vp(border-radius, 12px);
+        @include vp(font-size, $f13);
+        color: #ffffff94;
+        background: $light-gray-1;
+
+        &.on {
+            background: $green;
+            color: $white;
+        }
+    }
+}
+

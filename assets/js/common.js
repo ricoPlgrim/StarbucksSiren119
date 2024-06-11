@@ -97,33 +97,32 @@ var commonUi = {
         _w.on("scroll", commonUi.scrollEvent);
         _w.on("scroll", commonUi.headerScroll);
 
-        _gnbBtn.on("click", commonUi.gnbBtnClick);
-        _gnbCloseBtn.on("click", commonUi.gnbCloseClick);
-        _scrollTopButton.on("click", commonUi.scrollTopClick);
+        _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
+        _gnbCloseBtn.on("click", commonUi.gnbCloseClick); //gnb 닫기
+        _scrollTopButton.on("click", commonUi.scrollTopClick); //하단 스크롤탑 버튼 클릭
         // 하단 레이어 닫기 이벤트
-        _bottomSheetDim.add(_bottomSheetClose).on("click", function () {
+        _bottomSheetDim.add(_bottomSheetClose).on("click", function () { //하단 팝업 시트 닫기
             var popupId = $(this).closest(".bottom_sheet").attr("id");
             commonUi.bottomSheetHide(popupId);
         });
-        _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick);
+        _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick); //달력 버튼 온오프
 
-        _startDateInput.on("change", commonUi.startDateValue);
-        _endDateInput.on("change", commonUi.endDateValue);
+        _startDateInput.on("change", commonUi.startDateValue); //시작 달력값 벨류값 
+        _endDateInput.on("change", commonUi.endDateValue); // 끝 달력값 벨류값
 
-        _typeBtns.on("click", commonUi.typeBtnsClick);
-        // input, textarea 이벤트
-        _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);
-        // 팝업 버튼 클릭 이벤트
-        _popBtn.on("click", commonUi.popupItemClick);
+        _typeBtns.on("click", commonUi.typeBtnsClick); //탭 영역 활성화
+        _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);  // input, textarea 이벤트
+       
+        _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
-        _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick );
+        _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick ); //투댑스 버튼 클릭 이벤트
 
-        _searchInput.on("input", commonUi.inputTarget);
-        _searchInput.on("focus", commonUi.inputFocusEvent);
-        _searchInput.on("focusout", commonUi.inputFocusOutEvent);
-        _btnTextDelete.on("click", commonUi.inPutTextDeleteClick);
-        _loginInPut.on("input", commonUi.loginValueCheck);
-        _btnTypeClose.on("click", commonUi.btnTypeCloseClick);
+        _searchInput.on("input", commonUi.inputTarget); //인풋이벤트 
+        _searchInput.on("focus", commonUi.inputFocusEvent); //인풋 포커스 인 이벤트
+        _searchInput.on("focusout", commonUi.inputFocusOutEvent); //인풋 포커스 아웃 이벤트
+        _btnTextDelete.on("click", commonUi.inPutTextDeleteClick);  //인풋 벨류값 삭제
+        _loginInPut.on("input", commonUi.loginValueCheck); //로그인 인풋 벨류 체크
+        _btnTypeClose.on("click", commonUi.btnTypeCloseClick); //타입 버튼 삭제 이벤트
 
         commonUi.tabActivation();
   
