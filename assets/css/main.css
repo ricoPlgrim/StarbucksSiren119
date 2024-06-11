@@ -8888,12 +8888,12 @@ section.searh .searh_contents .search_list_box .no_list {
 
 .sections .section_inner {
   position: relative;
-  padding: 0px 40px;
+  padding: 0px 40px 40px;
   transform: translateY(-40px);
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner {
-    padding: 0vw 5.3333333333vw;
+    padding: 0vw 5.3333333333vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
