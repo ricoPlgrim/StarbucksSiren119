@@ -8874,18 +8874,12 @@ section.searh .searh_contents .search_list_box .no_list {
   color: #fff;
 }
 
-html, body {
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  overflow-y: auto;
-}
-
 .main {
   background: #F6F6F6;
-  -webkit-overflow-scrolling: auto;
+}
+
+#wrap {
+  background: #F6F6F6;
 }
 
 .sections .section_inner {
