@@ -262,7 +262,15 @@
         }
     }
 
-
+    &.setting{
+        .sheet_wrap{
+            .sheet_content{
+                .record_info_contents{
+                    @include vp(padding, 40px 60px 40px);
+                }
+            } 
+        } 
+    }
 
     &.filter {
         .sheet_wrap {

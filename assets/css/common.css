@@ -6032,6 +6032,14 @@ section.searh .searh_contents .search_list_box .no_list {
   pointer-events: all;
   z-index: 100;
 }
+.bottom_sheet.setting .sheet_wrap .sheet_content .record_info_contents {
+  padding: 40px 60px 40px;
+}
+@media screen and (max-width: 750px) {
+  .bottom_sheet.setting .sheet_wrap .sheet_content .record_info_contents {
+    padding: 5.3333333333vw 8vw 5.3333333333vw;
+  }
+}
 .bottom_sheet.filter .sheet_wrap .btn_sheet_close {
   display: block;
   width: 96px;
