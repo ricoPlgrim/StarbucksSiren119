@@ -66,6 +66,7 @@ header {
         }
 
         .header_sticky {
+            @include vp(padding-bottom, 112px);
             .header_switchbox {
                 position: relative;
                 z-index: 3;
@@ -153,8 +154,8 @@ header {
     }
 
     &.home {
-        @include vp(height, 446px);
-        @include vp(max-height, 446px);
+        // @include vp(height, 446px);
+        // @include vp(max-height, 446px);
         background-color: $thickGreen;
         @include vp(border-radius, 0 0 40px 40px);
 
