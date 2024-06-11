@@ -32,12 +32,6 @@
                 <div class="file_upload_wrap">
                     <div class="title01">사진</div>
                     <ul class="file_list">
-                        <!-- 이미지 추가 버튼 -->
-                        <li>
-                            <div class="btn_upload">
-                                <input type="file" name="file" id="imageFile" accept="image/*" multiple>
-                            </div>
-                        </li>
                         <!-- 추가된 이미지 -->
                         <li>
                             <div class="img_box"><img src="../assets/images/temp/report01.png" alt="업로드 이미지" /></div>
@@ -47,39 +41,50 @@
                             <div class="img_box"><img src="../assets/images/temp/report02.png" alt="업로드 이미지" /></div>
                             <span class="btn_delete"></span>
                         </li>
+                        <!-- 이미지 추가 버튼 -->
+                        <li>
+                            <div class="btn_upload">
+                                <input type="file" name="file" id="imageFile" accept="image/*" multiple>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="form_box required">
+                <div class="form_box">
                     <div class="title01">응급조치</div>
-                    <ul class="form_list scroll">
+                    <ul class="form_list scroll red">
                         <li>
                             <button class="cm_btn_round">
-                                <span class="text">고객대피</span>
+                                <span class="text">대피</span>
                             </button>
                         </li>
                         <li>
                             <button class="cm_btn_round">
-                                <span class="text">소방서 출동</span>
+                                <span class="text">소방 출동</span>
                             </button>
                         </li>
                     </ul>
                 </div>   
-                <div class="form_box required">
+                <div class="form_box">
                     <div class="title01">발생매장</div>
                     <ul class="form_list scroll">
                         <li>
                             <button class="cm_btn_round">
-                                <span class="text">Store1</span>
+                                <span class="text">건대스타시티</span>
                             </button>
                         </li>
                         <li>
                             <button class="cm_btn_round">
-                                <span class="text">Store2 출동</span>
+                                <span class="text">건대입구</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="cm_btn_round">
+                                <span class="text">건국클래식</span>
                             </button>
                         </li>
                     </ul>
                 </div>
-                <div class="form_box required">
+                <div class="form_box">
                     <div class="title01">발생시간</div>
                     <ul class="form_list">
                         <li>
@@ -127,7 +132,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="form_box required">
+                <div class="form_box">
                     <div class="title01">발생장소</div>
                     <ul class="form_list scroll">
                         <li>
@@ -251,8 +256,12 @@
                         <dl>
                             <dt>응급조치</dt>
                             <dd>
-                                <span class="emerg01">고객대피</span>
-                                <span class="emerg02">소방서</span>
+                                <span class="emerg01">대피</span>
+                                <span class="emerg02">소방 출동</span>
+                                <span class="emerg03">경찰 출동</span>
+                                <span class="emerg04">구급차 출동 출동</span>
+                                <span class="emerg05">이슈</span>
+                                <span class="emerg06">종결</span>
                             </dd>
                         </dl>
                    </li>
@@ -278,8 +287,11 @@
                             <dd>물품,기타</dd>
                         </dl>
                     </li>
-                    <li>
-                        <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
+                    <li >
+                        <div class="text_wrap">
+                            <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
+                            <span class="byte_num">0 / 1000byte</span>
+                        </div>
                     </li>
                     <li>
                         <div class="cm_check_box chk01">
