@@ -9,6 +9,7 @@ var _scrollTopButton;
 var _stickyTarget;
 var _popBtn;
 var _textFormBtn;
+var _wrap;
 
 var switchBox = $(".header_switchbox");
 if (switchBox.length > 0) {
@@ -85,12 +86,13 @@ var commonUi = {
         _btnTypeClose = $(".cm_btn_list").find(".btn_close");
         _rowScrolLBox = $( ".cm_btn_list" );
         _btnBookmark = $(".btn_bookmark");
+        _wrap = $( "#wrap" );
 
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
-        _w.on("scroll", commonUi.scrollEvent);
+        _wrap.on("scroll", commonUi.scrollEvent);
         _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
@@ -158,7 +160,7 @@ var commonUi = {
     },
 
     scrollTopClick: function () {
-        _htmlBody.animate({
+        _wrap.animate({
             scrollTop: 0
         }, 0);
         return false;
