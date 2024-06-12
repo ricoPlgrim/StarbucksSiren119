@@ -676,9 +676,9 @@
                         }
 
                         &.common {
-                            @include vp(border, 2px solid $gray);
-                            background: $light-gray-3;
-                            color: $dark-gray;
+                            @include vp(border, 2px solid $dark-gray);
+                            background: #F7F7F7;
+                            color: $black !important;
                         }
 
                         &.comment {
@@ -1067,8 +1067,8 @@
 }
 
 .cm_tab_bottom {
-    box-shadow: 0 -1px 5px 0px $light-gray-6;
-
+    box-shadow:  0 -1px 5px 0px $medium-gray;
+   
     .button_grop {
         .inner {
             @include vp(padding, 20px 0 20px 0);
