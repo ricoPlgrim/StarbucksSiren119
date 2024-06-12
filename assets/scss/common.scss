@@ -628,13 +628,12 @@
                 @include vp( margin-top, 36px); 
                 display: flex;
                 gap: 10px;
-                button,
+               
                 a {
                     background: $white;
-                    span { 
-                        @include vp( padding, 20px); 
+                    .text { 
+                        @include vp( padding, 18px); 
                         font-weight: $fw4;
-                        line-height: normal;
                     }
                 }
             }

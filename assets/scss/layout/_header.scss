@@ -177,8 +177,8 @@ header {
 
         .btn_back {
             background: url("../images/btn/btn_back.png") center center no-repeat;
-            @include vp(background-size, 96px auto);
-            @include vp(padding, 48px 50px);
+            @include vp(background-size, 54px auto);
+            @include vp(padding, 54px 54px);
         }
 
         h1 {
