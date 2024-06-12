@@ -159,12 +159,13 @@ html, body {
                                     @include vp(padding-left, 40px);
                                     color: $black-58;
                                     @include vp(font-size, $f13);
-                                    font-weight: $fw4; 
+                                    font-weight: $fw4;
+                                    @include vp(line-height, 30px); 
                                     cursor: pointer;
                                     &:before{
                                         content: '';
                                         position: absolute;
-                                        @include vp(top, 2px);
+                                        top:0;
                                         left:0;
                                         @include vp(width, 30px);
                                         @include vp(height, 30px);
@@ -174,22 +175,23 @@ html, body {
                                     a {color: inherit;}
                                 }
                             }
-                            .scroll_box{
-                                .type_list{
-                                    display: flex;
-                                    flex-wrap: wrap;
-                                    @include vp(margin-top, -28px);
-                                    li{
-                                        flex: 1 0 50%; 
-                                        box-sizing: border-box; 
-                                        text-align: left;
-                                        @include vp(margin-top, 28px);
-                                        a{
-                                            color: $black;
-                                            @include vp(font-size, $f13);
-                                            font-weight: $fw4; 
-                                            word-break: keep-all;
-                                        }
+                            .type_list{
+                                display: flex;
+                                flex-wrap: wrap;
+                                // @include vp(margin-top, -28px);
+                                li{
+                                    flex: 1 0 50%; 
+                                    box-sizing: border-box; 
+                                    text-align: left;
+                                    @include vp(margin-bottom, 28px);
+                                    a{
+                                        color: $black;
+                                        @include vp(font-size, $f13);
+                                        font-weight: $fw4; 
+                                        word-break: keep-all;
+                                    }
+                                    &:nth-last-child(-n+2) {
+                                        margin-bottom: 0; 
                                     }
                                 }
                             }
@@ -348,24 +350,24 @@ html, body {
                     z-index: 30;
                     .parther{
                         @include vp(width, 670px);
-                        @include vp(height, 324px);
+                        @include vp(height, 334px);
                     }
                     .disaster{
-                        @include vp(top, 347px);
+                        @include vp(top, 356px);
                     }
                     .different{
-                        @include vp(top, 693px);
+                        @include vp(top, 702px);
                     }
                 }
                 &.right{
                     .customer{
-                        @include vp(top, 347px);
+                        @include vp(top, 356px);
                     }
                     .fire{
-                        @include vp(top, 693px);
+                        @include vp(top, 702px);
                     }
                     .safety{
-                        @include vp(top, 1039px);
+                        @include vp(top, 1048px);
                     }
                 }
             }
@@ -373,48 +375,54 @@ html, body {
 
         &.disaster{
             &.open{
-                @include vp(min-height, 1580px);
+                @include vp(min-height, 1584px);
             }
             .menu_btn-list{
                 &.left{
                     z-index: 30;
                     .disaster{
                         @include vp(width, 670px);
-                        @include vp(height, 516px);
+                        @include vp(height, 538px);
                     }
                     .different{
-                        @include vp(top, 886px);
+                        @include vp(top, 908px);
                     }
                 }
                 &.right{
                     .fire{
-                        @include vp(top, 886px);
+                        @include vp(top, 908px);
                     }
                     .safety{
-                        @include vp(top, 1222px);
+                        @include vp(top, 1254px);
                     }
                 }
             }
         }
 
         &.different{
+            &.open{
+                @include vp(min-height, 1415px);
+            }
             .menu_btn-list{
                 &.left{
                     z-index: 30;
                     .different{
                         @include vp(width, 670px);
-                        @include vp(height, 336px);
+                        @include vp(height, 338px);
                     }
                 }
                 &.right{
                     .safety{
-                        @include vp(top, 1052px);
+                        @include vp(top, 1054px);
                     }
                 }
             }
         }
 
         &.customer{
+            &.open{
+                @include vp(min-height, 1464px);
+            }
             .menu_btn-list{
                 &.left{
                     .parther{
@@ -431,7 +439,7 @@ html, body {
                 &.right{
                     .customer{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 404px);
                         @include vp(left, -345px);
                     }
                     .fire{
@@ -445,16 +453,19 @@ html, body {
         }
 
         &.fire{
+            &.open{
+                @include vp(min-height, 1476px);
+            }
             .menu_btn-list{
                 &.left{
                     .parther{
                        
                     }
                     .disaster{
-                        @include vp(top, 766px);
+                        @include vp(top, 774px);
                     }
                     .different{
-                        @include vp(top, 1112px);
+                        @include vp(top, 1120px);
                     }
                 }
                 &.right{
@@ -463,28 +474,31 @@ html, body {
                     }
                     .fire{
                         @include vp(width, 670px);
-                        @include vp(height, 396px);
+                        @include vp(height, 404px);
                         @include vp(left, -345px);
                     }
                     .safety{
-                        @include vp(top, 766px);
+                        @include vp(top, 774px);
                     }
                 }
             }
         }
 
         &.safety{
+            &.open{
+                @include vp(min-height, 1456px);
+            }
             .menu_btn-list{
          
                 &.left{
                     .different{
-                        @include vp(top, 1110px);
+                        @include vp(top, 1092px);
                     }
                 }
                 &.right{
                     .safety{
                         @include vp(width, 670px);
-                        @include vp(height, 394px);
+                        @include vp(height, 376px);
                         @include vp(left, -345px);
                     }
                 } 
@@ -500,7 +514,7 @@ html, body {
             position: absolute;
             top: 0;
             @include vp(left, 40px);
-            @include vp(width, 670px);
+            @include vp(width, 670px); 
             z-index: 10;
             opacity: 0;
 

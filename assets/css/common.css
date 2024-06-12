@@ -6800,13 +6800,13 @@ section.searh .searh_contents .search_list_box .no_list {
   }
 }
 .cm_card_list > li a dl dt .badge.common {
-  border: 2px solid #999;
-  background: #EEE;
-  color: #333;
+  border: 2px solid #333;
+  background: #F7F7F7;
+  color: #000 !important;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dt .badge.common {
-    border: 0.2666666667vw solid #999;
+    border: 0.2666666667vw solid #333;
   }
 }
 .cm_card_list > li a dl dt .badge.comment {
