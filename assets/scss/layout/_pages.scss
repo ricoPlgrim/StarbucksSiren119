@@ -383,7 +383,7 @@ section {
                             position: relative;
 
                             input {
-                                @include vp(padding, 16px 30px);
+                                @include vp(padding, 16px 76px 16px 30px);
                                 @include vp(border-radius, 16px);
                                 @include vp(width, 536px);
                                 border: 1px solid #0000001F;
@@ -1142,10 +1142,10 @@ section {
                     position: relative;
 
                     input {
+                        @include vp(padding, 0px 84px 0px 40px);
                         @include vp(width, 670px);
                         @include vp(height, 100px);
                         @include vp(border-radius, 12px);
-                        @include vp(text-indent, 28px);
                         border: 1px solid $light-gray-1;
                         background: $white;
                         @include vp(font-size, $f13);
