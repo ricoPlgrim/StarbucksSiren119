@@ -2662,7 +2662,7 @@ section.report .write_preview .preview_list li dl dd .emerg06 {
 section.report .write_preview .preview_list li .text_wrap {
   position: relative;
   padding: 40px 0px 40px 40px;
-  min-height: 270px;
+  min-height: 296px;
   border: 1px solid #DDD;
   background: #fff;
   border-radius: 16px;
@@ -2676,7 +2676,7 @@ section.report .write_preview .preview_list li .text_wrap {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
-    min-height: 36vw;
+    min-height: 39.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -2730,7 +2730,7 @@ section.report .write_preview .preview_list li .text_wrap .byte_num {
   position: absolute;
   left: 40px;
   height: 46px;
-  bottom: 6px;
+  bottom: 24px;
   font-size: 26px;
   color: #AAA;
 }
@@ -2746,7 +2746,7 @@ section.report .write_preview .preview_list li .text_wrap .byte_num {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap .byte_num {
-    bottom: 0.8vw;
+    bottom: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3503,7 +3503,7 @@ section.detail .comment_wrap .comment_header span .num {
 section.detail .comment_wrap .comment_box {
   padding-bottom: 40px;
   margin-bottom: 48px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3215686275);
+  border-bottom: 1px solid #999;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box {
@@ -3590,14 +3590,14 @@ section.detail .comment_wrap .comment_box .info02 span.num {
 }
 section.detail .comment_wrap .comment_box .info03 {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 26px;
   line-height: 40px;
   color: rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .info03 {
-    margin-bottom: 4vw;
+    margin-bottom: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3726,7 +3726,7 @@ section.detail .comment_wrap .comment_box .btn_wrap .comment_edit span::before {
 section.detail .comment_wrap .comment_box .recomment_box {
   position: relative;
   padding-top: 40px;
-  margin-top: 22px;
+  margin-top: 40px;
   border-top: 1px dashed #DDD;
 }
 @media screen and (max-width: 750px) {
@@ -3736,7 +3736,7 @@ section.detail .comment_wrap .comment_box .recomment_box {
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .recomment_box {
-    margin-top: 2.9333333333vw;
+    margin-top: 5.3333333333vw;
   }
 }
 section.detail .comment_wrap .comment_box .recomment_box::before {
@@ -3788,7 +3788,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li:last-child {
 section.detail .comment_wrap .comment_box .recomment_box > li .text01 {
   position: relative;
   padding-left: 34px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 26px;
   line-height: 40px;
   color: rgba(0, 0, 0, 0.5803921569);
@@ -3800,7 +3800,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text01 {
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .recomment_box > li .text01 {
-    margin-bottom: 5.3333333333vw;
+    margin-bottom: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {

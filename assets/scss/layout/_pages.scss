@@ -540,7 +540,7 @@ section {
                     .text_wrap {
                         position: relative;
                         @include vp(padding, 40px 0px 40px 40px);
-                        @include vp(min-height, 270px);
+                        @include vp(min-height, 296px);
                         border: 1px solid $light-gray-2;
                         background: $white;
                         @include vp(border-radius, 16px);
@@ -571,7 +571,7 @@ section {
                             position: absolute;
                             @include vp(left, 40px);
                             @include vp(height, 46px);
-                            @include vp(bottom, 6px);
+                            @include vp(bottom, 24px);
                             @include vp(font-size, $f13);
                             color: $light-gray-1;
                         }
@@ -904,7 +904,7 @@ section {
             .comment_box {
                 @include vp( padding-bottom, 40px); 
                 @include vp( margin-bottom, 48px); 
-                border-bottom: 1px solid #00000052;
+                border-bottom: 1px solid $gray;
                 &:last-child {
                     border-bottom: none;
                 }
@@ -945,7 +945,7 @@ section {
                 }
                 .info03 {
                     position: relative;
-                    @include vp( margin-bottom, 30px);
+                    @include vp( margin-bottom, 20px);
                     @include vp( font-size, $f13);
                     @include vp( line-height, 40px);
                     color: #00000094;
@@ -1011,7 +1011,7 @@ section {
                 .recomment_box {
                     position: relative;
                     @include vp( padding-top, 40px); 
-                    @include vp( margin-top, 22px); 
+                    @include vp( margin-top, 40px); 
                     border-top: 1px dashed #DDD;
                     &::before {
                         content: '';
@@ -1036,7 +1036,7 @@ section {
                         .text01 {
                             position: relative;
                             @include vp( padding-left, 34px); 
-                            @include vp( margin-bottom, 40px); 
+                            @include vp( margin-bottom, 20px); 
                             @include vp( font-size, $f13);
                             @include vp( line-height, 40px);
                             color: #00000094;
