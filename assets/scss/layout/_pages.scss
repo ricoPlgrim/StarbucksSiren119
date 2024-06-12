@@ -1438,7 +1438,13 @@ section {
                     li {
                         @include vp(margin-left, 40px);
                         cursor: pointer;
-
+                        .cm_check_box{
+                            label{
+                                input[type=checkbox]{
+                                    @include vp(padding-left, 64px);
+                                }
+                            } 
+                        }
                         &:nth-child(3n+1) {
                             margin-left: 0;
                         }
@@ -1618,7 +1624,7 @@ section {
         .cm_check_box{
             label{
                 input[type=checkbox]{ 
-                    @include vp(padding-left, 56px);
+                    @include vp(padding-left, 64px);
                 }
             }
         }
