@@ -174,7 +174,7 @@ var commonUi = {
     },
 
     gnbCloseClick: function () {
-        _htmlBody.css("overflow", "auto");
+        _htmlBody.css("overflow", "");
         _gnb.css("display", "none");
     },
 
@@ -192,7 +192,7 @@ var commonUi = {
         var layerName = "#" + popupId;
 
         $(".sheet_wrap").removeClass("open");
-        $("html, body").css("overflow", "auto");
+        $("html, body").css("overflow", "");
 
         setTimeout(function () {
             $(layerName).removeClass("open");
