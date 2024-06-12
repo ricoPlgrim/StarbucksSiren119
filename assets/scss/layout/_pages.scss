@@ -876,10 +876,14 @@ section {
                 .reply_box {
                     .text01 {
                         position: relative;
-                        @include vp( margin-bottom, 40px); 
+                        @include vp( margin-bottom, 20px); 
                         @include vp( font-size, $f13);
                         @include vp( line-height, 40px);
                         color: #00000094;
+                        .edited {
+                            display: block;
+                            @include vp( margin-top, 10px);
+                        }
                     }
                     .text02 {
                         display: flex;

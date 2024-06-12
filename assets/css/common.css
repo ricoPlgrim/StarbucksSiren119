@@ -3461,14 +3461,14 @@ section.detail .comment_wrap.comment-detail {
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 26px;
   line-height: 40px;
   color: rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 {
-    margin-bottom: 5.3333333333vw;
+    margin-bottom: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3479,6 +3479,15 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 {
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 {
     line-height: 5.3333333333vw;
+  }
+}
+section.detail .comment_wrap.comment-detail .reply_box .text01 .edited {
+  display: block;
+  margin-top: 10px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .edited {
+    margin-top: 1.3333333333vw;
   }
 }
 section.detail .comment_wrap.comment-detail .reply_box .text02 {
