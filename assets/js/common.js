@@ -45,6 +45,12 @@ var _btnTypeList;
 var _rowScrolLBox;
 var _btnBookmark;
 
+var isAnimating = {
+    main: false,
+    sub: false
+};
+
+
 var commonUi = {
 
     init: function () {
@@ -92,8 +98,12 @@ var commonUi = {
     addEvent: function () {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
-        _wrap.on("scroll", commonUi.scrollEvent);
-        _w.on("scroll", commonUi.scrollEvent);
+        if ($("#wrap").hasClass("home")) {
+            _wrap.on("scroll", commonUi.scrollEvent);
+        } else {
+            _w.on("scroll", commonUi.scrollEvent);
+        }
+
         _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
@@ -162,12 +172,28 @@ var commonUi = {
     },
 
     scrollTopClick: function () {
-        _wrap.animate({
-            scrollTop: 0
-        }, 0);
-        return false;
+        if ($("#wrap").hasClass("home")) {
+            // 메인 페이지일 경우
+            commonUi.animateScroll(_wrap, 0, 'main');
+        } else {
+            // 서브 페이지일 경우
+            commonUi.animateScroll($('html, body'), 0, 'sub');
+        }
     },
 
+
+    animateScroll: function (target, duration, type) {
+        if (!isAnimating[type]) {
+            isAnimating[type] = true;
+            console.log( "111111" );
+            target.animate({
+                scrollTop: 0
+            }, duration, function() {
+                isAnimating[type] = false;
+            });
+        }
+    },
+  
     gnbBtnClick: function () {
         _gnb.css("display", "block");
         _htmlBody.css("overflow", "hidden");
@@ -207,7 +233,6 @@ var commonUi = {
     },
 
     startDateValue: function () {
-        console.log("qwelmwqklenmklwqnejkqwnejkwqnejkqwnjkeneq");
         var selectedDate = $(this).val();
         $(".date_start").find(".date_text").text(selectedDate);
     },
