@@ -5,7 +5,6 @@ var _reportListBtn;
 var _timeBtn;
 var _dateBtn;
 var _selectItem;
-var _btnBookmark;
 
 var reportUi = {
 
