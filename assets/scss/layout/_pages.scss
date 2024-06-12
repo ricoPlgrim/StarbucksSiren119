@@ -1683,8 +1683,6 @@ section {
                 text-align: center;
                 @include vp(font-size, $f15);
                 font-weight: $fw4;
-                height: 100vh;
-                height: 100dvh;
             }
 
             .status_message_box {
@@ -2015,7 +2013,7 @@ section {
             .panel_list{
                 >li{
                     .inner{
-                        @include vp(padding-bottom, 329px  !important); 
+                        @include vp(padding-bottom, 350px ); 
                     }
                 }
             }

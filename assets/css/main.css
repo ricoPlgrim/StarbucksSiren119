@@ -5051,8 +5051,6 @@ section.setting .cm_tab_panel .no_alerts {
   text-align: center;
   font-size: 30px;
   font-weight: 400;
-  height: 100vh;
-  height: 100dvh;
 }
 @media screen and (max-width: 750px) {
   section.setting .cm_tab_panel .no_alerts {
@@ -5695,11 +5693,11 @@ section.searh .searh_contents .search_list_box .no_list {
   }
 }
 section.filter .cm_tab_panel .panel_list > li .inner {
-  padding-bottom: 329px !important;
+  padding-bottom: 350px;
 }
 @media screen and (max-width: 750px) {
   section.filter .cm_tab_panel .panel_list > li .inner {
-    padding-bottom: 43.8666666667vw !important;
+    padding-bottom: 46.6666666667vw;
   }
 }
 
