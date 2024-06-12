@@ -185,7 +185,6 @@ var commonUi = {
     animateScroll: function (target, duration, type) {
         if (!isAnimating[type]) {
             isAnimating[type] = true;
-            console.log( "111111" );
             target.animate({
                 scrollTop: 0
             }, duration, function() {
