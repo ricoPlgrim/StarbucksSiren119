@@ -130,53 +130,51 @@ section {
                 >li {
                     .inner {
                         @include vp(padding, 48px 40px);
-
-                        .bookmark_contents {
-                            @include vp(padding-top, 234px);
-
-                            .title {
-                                color: $black;
-                                text-align: center;
-                                @include vp(font-size, $f15 );
-                                font-size: $f15;
-                                font-weight: $fw4;
-                                @include vp(margin-bottom, 20px);
-                            }
-
-                            .text {
-                                color: $gray;
-                                text-align: center;
-                                @include vp(font-size, $f13 );
-                                font-weight: $fw4;
-                                @include vp(line-height, 40px);
-                            }
-
-                            .btn_wrap {
-                                text-align: center;
-                                @include vp(margin-top, 80px);
-
-                                .cm_btn_round.on {
-                                    .text {
-                                        color: $green;
-                                        text-align: center;
-                                        @include vp(font-size, $f14 );
-                                        font-weight: $fw6;
-                                        @include vp(line-height, 40px);
-                                        @include vp(letter-spacing, 0.2px);
-                                    }
-                                }
-                            }
-
-                        }
+                      
                     }
+                }
+            }
+           
+        }
+        .bookmark_contents {
+            @include vp(padding-top, 234px);
+            min-height: 100vh;
+            min-height: 100dvh;
+            background-color: $light-gray-4;
+            .title {
+                color: $black;
+                text-align: center;
+                @include vp(font-size, $f15 );
+                font-size: $f15;
+                font-weight: $fw4;
+                @include vp(margin-bottom, 20px);
+            }
 
+            .text {
+                color: $gray;
+                text-align: center;
+                @include vp(font-size, $f13 );
+                font-weight: $fw4;
+                @include vp(line-height, 40px);
+            }
+
+            .btn_wrap {
+                text-align: center;
+                @include vp(margin-top, 80px);
+
+                .cm_btn_round.on {
+                    .text {
+                        color: $green;
+                        text-align: center;
+                        @include vp(font-size, $f14 );
+                        font-weight: $fw6;
+                        @include vp(line-height, 40px);
+                        @include vp(letter-spacing, 0.2px);
+                        
+                    }
                 }
             }
 
-            &.nolist {
-                min-height: 100vh;
-                min-height: 100dvh;
-            }
         }
     }
 
@@ -1630,7 +1628,7 @@ section {
             z-index: 10;
 
             .inner {
-                @include vp(padding, 40px 40px 86px 40px);
+                @include vp(padding, 40px 40px 60px 40px);
 
                 .cm_btn_round {
                     width: 100%;

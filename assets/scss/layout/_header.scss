@@ -26,7 +26,7 @@ header {
                 .btn_search {
                     display: block;
                     @include vp(width, 54px);
-                    @include vp(margin-right, 17px);
+                    @include vp(margin-right, 40px);
 
                 }
 
@@ -36,8 +36,8 @@ header {
                     @include vp(width, 54px);
                     .alarm_count{
                         position: absolute;
-                        @include vp(top, -10px);
-                        @include vp(right, -20px);
+                        @include vp(top, -11px);
+                        @include vp(right, -16px);
                         @include vp(width, 50px);
                         display: flex;
                         justify-content: space-around;

@@ -33,7 +33,8 @@ var alarmUi = {
     btnDisableAllClick: function(){
         if ($('#toggle1').is(':checked') || $('#toggle2').is(':checked') || $('#toggle3').is(':checked')) {
             $('.toggle_input').prop('checked', false);
-            alert( "전체 알림 해지했습니다." );
+            commonUi.openPopup("settingPop"); 
+            $( "#settingPop").find( ".text" ).text( "전체 알림 해지했습니다." );
         }
     },
 
@@ -41,7 +42,8 @@ var alarmUi = {
 
         if ($('#toggle1').is(':checked') || $('#toggle2').is(':checked')) {
             _btnAccident.prop('checked', false);
-            alert("사건 사고 알림 해지했습니다.");
+            commonUi.openPopup("settingPop"); 
+            $( "#settingPop").find( ".text" ).text( "사건 사고 알림 해지했습니다." );
         }
     },
 

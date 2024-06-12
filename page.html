@@ -1,13 +1,18 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks Siren119</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
 </head>
 
 <body class="page">
@@ -53,7 +58,7 @@
                     <td>2024-06-03</td>
                     <td>완료</td>
                     <td>
-                        
+                        셀렉트 박스 디자인 요청
                     </td>
                 </tr>
                 <tr>
@@ -127,10 +132,9 @@
                     <td><a href="index.html" target="_blank">home.html</a></td>
                     <td>이주연</td>
                     <td>2024-06-10</td>
-                    <td>완료</td>
+                    <td>진행중</td>
                     <td>
-                        툴팁 버튼 클릭 시 <br/>
-                        가이드 팝업 노출
+                        메뉴 상단 텍스트 옆 툴팁 버튼 클릭 시 팝업 노출
                     </td>
                 </tr>
                 <tr>
@@ -260,5 +264,17 @@
 
     </style>
 </body>
+<script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const table_container = document.querySelector('#table-scroll');
+        const table       = document.querySelector('.table');
+        const table_clone = table.cloneNode(true);
+
+        table_clone.classList.add('clone');
+        table_container.appendChild(table_clone);
+    });
+
+  
+</script>
 </html>
