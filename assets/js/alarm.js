@@ -5,6 +5,9 @@ var _btnDisableAll;
 var _btnDisable;
 var _btnAccident;
 
+var _btnAlCheck;
+var _btnRemoveAll;
+
 var alarmUi = {
 
     init: function () {
@@ -16,6 +19,8 @@ var alarmUi = {
         _btnDisableAll= _setting.find( ".btn_disableAll" );
         _btnDisable= _setting.find( ".btn_disable" );
         _btnAccident = _setting.find( ".accident" );
+        _btnAlCheck = _setting.find( ".situation" );
+        _btnRemoveAll = _setting.find( ".delete" );
 
 
     },
@@ -23,6 +28,8 @@ var alarmUi = {
         _btnDisableAll.on( "click", alarmUi.btnDisableAllClick );
         _btnDisable.on( "click", alarmUi.btnDisableClick );
         _btnAccident.on( "change", alarmUi.btnAccidentCheck );
+        _btnAlCheck.on( "click", alarmUi.btnAllCheck );
+        _btnRemoveAll.on( "click", alarmUi.btnRemoveAlltag );
 
     },
     loadEvent: function () {
@@ -52,8 +59,20 @@ var alarmUi = {
             _btnAccident.not(this).prop('checked', false);
         }
     },
-
-  
+    btnAllCheck: function(){
+        commonUi.bottomSheetHide('record');
+        if( $( ".history_list" ).find( "li" ).length > 0  ){
+            $( ".history_list" ).find( "li" ).addClass( "lead");
+        }
+    },
+    
+    btnRemoveAlltag: function(){
+        commonUi.bottomSheetHide('record');
+        if( $( ".alarm_list_box" ).length > 0  ){
+            $( ".alarm_list_box" ).remove();
+            $( ".no_alerts" ).css( "display", "block" );
+        }
+    }
     
 };
 

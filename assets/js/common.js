@@ -410,28 +410,6 @@ var commonUi = {
         }
     },
 
-    mainSwichCahge: function ($type) {
-        commonUi.gnbCloseClick();
-        var contents = $(".sections").find("section");
-        var roundBar = $(".switch_round");
-        if ($type == 0) {
-            _switchBoxBtns.removeClass("on");
-            _switchBoxBtns.eq(0).addClass("on");
-            contents.removeClass("on");
-            contents.eq(0).addClass("on");
-            roundBar.addClass("left")
-            roundBar.removeClass("right")
-        } else {
-            _switchBoxBtns.removeClass("on");
-            _switchBoxBtns.eq(1).addClass("on");
-            contents.removeClass("on");
-            contents.eq(1).addClass("on");
-            roundBar.removeClass("left")
-            roundBar.addClass("right")
-        }
-
-
-    },
 
     setTabIndex: function (index) {
         localStorage.setItem('tabIndex', index);
@@ -474,10 +452,8 @@ var commonUi = {
     },
 
     sendBunCehck: function () {
-        console.log( "여기체크되니?1111" );
         if ($(".message_box").length === 0 || $(".message_box").css("display") === "none") {
             _scrollTopButton.addClass("on");
-            console.log( "여기체크되니?2222" );
         } else {
             _scrollTopButton.removeClass("on");
         }

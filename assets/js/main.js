@@ -45,25 +45,38 @@ var mainUi = {
         
     },
 
-    switchBoxBtnClick: function () {
-        var index = $(this).index();
+    commonSwitchAction: function(index) {
         var contents = $(".sections").find("section");
-        var roundBar = $(this).parents(".switch_round");
-
+        var roundBar = $(".switch_round");
+        var messageBox = $(".message_box");
+    
         _switchBoxBtns.removeClass("on");
         _switchBoxBtns.eq(index).addClass("on");
         contents.removeClass("on");
         contents.eq(index).addClass("on");
+    
         if (index === 0) {
-            $( ".message_box" ).css( "display", "block"  )
+            messageBox.css("display", "block");
             commonUi.sendBunCehck();
             roundBar.removeClass("right").addClass("left");
         } else {
-            $( ".message_box" ).css( "display", "none"  )
+            messageBox.css("display", "none");
             commonUi.sendBunCehck();
             roundBar.removeClass("left").addClass("right");
         }
     },
+    
+    
+    mainSwichCahge: function ($type) {
+        commonUi.gnbCloseClick();
+        mainUi.commonSwitchAction($type);
+    },
+    
+    switchBoxBtnClick: function () {
+        var index = $(this).index();
+        mainUi.commonSwitchAction(index);
+    },
+   
  
     
 };
