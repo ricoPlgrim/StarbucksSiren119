@@ -93,6 +93,7 @@ var commonUi = {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
         _wrap.on("scroll", commonUi.scrollEvent);
+        // _w.on("scroll", commonUi.scrollEvent);
         _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
@@ -127,6 +128,7 @@ var commonUi = {
         _btnBookmark.on("click", commonUi.btnBookMarkClick);
         
         commonUi.tabActivation(); //탭영역 로드 체크 순서
+        commonUi.sendBunCehck();
   
     },
 
@@ -145,6 +147,7 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
+        console.log( _sT );
         if (_sT > 80) {
             _scrollTopButton.fadeIn();
         } else {
@@ -463,6 +466,14 @@ var commonUi = {
     btnBookMarkClick: function () {
         $(this).toggleClass("on");
     },
+
+    sendBunCehck: function(){
+        if ($(".message_box").length === 0) {
+            _scrollTopButton.addClass( "on" );
+        }else{
+            _scrollTopButton.removeClass( "on" );
+        }
+    }
 };
 
 

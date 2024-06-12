@@ -66,8 +66,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>파트너</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop01">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop01">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -93,8 +93,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>재해/시설</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop02">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop02">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -142,8 +142,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>이물</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop03">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop03">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -172,8 +172,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>고객</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop04">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop04">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -209,8 +209,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>화재</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop05">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop05">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -246,8 +246,8 @@
                                     <div class="inner">
                                         <div class="title_box">
                                             <h3>식품안전</h3>
-                                            <span class="read_text"><a href="javascript:;"
-                                                    data-target="guidePop06">상세분류를 선택하세요</a></span>
+                                            <div class="read_text"><a href="javascript:;"
+                                                    data-target="guidePop06">상세분류를 선택하세요</a></div>
                                         </div>
                                         <ul class="type_list">
                                             <li>
@@ -633,6 +633,8 @@
                 <span class="blind">상단으로 이동</span>
             </a>
         </aside>
+        
+        <!--재난 문자 버튼 -->
         <aside class="message_box">
             <a href="message/send_type2.html" class="btn_message">재난문자</a>
         </aside>
@@ -647,27 +649,33 @@
                 <div class="category_wrap">
                     <h4 class="partner">파트너</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">근무 중 사고</p>
-                            <p class="sub_title">파트너 근무 중 상해</p>
+                            <a href="report/index.html">
+                                <p class="title">근무 중 사고</p>
+                                <p class="sub_title">파트너 근무 중 상해</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">출퇴근 사고</p>
-                            <p class="sub_title">출퇴근 중 상해(매장, 밖)</p>
+                            <a href="report/index.html">
+                                <p class="title">출퇴근 사고</p>
+                                <p class="sub_title">출퇴근 중 상해(매장, 밖)</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">불만/분실/피해</p>
-                            <p class="sub_title">개인 지병으로 인한 근무 불가</p>
+                            <a href="report/index.html">
+                                <p class="title">불만/분실/피해</p>
+                                <p class="sub_title">개인 지병으로 인한 근무 불가</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -683,55 +691,75 @@
                 <div class="category_wrap">
                     <h4 class="disaster">재해/시설 안내</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">파손/누락</p>
-                            <p class="sub_title">매장 내·외부 시설물 심각한 파손, 탈락</p>
+                            <a href="report/index.html">
+                                <p class="title">파손/누락</p>
+                                <p class="sub_title">매장 내·외부 시설물 심각한 파손, 탈락</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">누수</p>
-                            <p class="sub_title">매장 내부 누수, 매장으로 인한 타 매장 누수</p>
+                            <a href="report/index.html">
+                                <p class="title">누수</p>
+                                <p class="sub_title">매장 내부 누수, 매장으로 인한 타 매장 누수</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">침수</p>
-                            <p class="sub_title">영업이 불가능할 정도의 침수(물에 잠김)</p>
+                            <a href="report/index.html">
+                                <p class="title">침수</p>
+                                <p class="sub_title">영업이 불가능할 정도의 침수(물에 잠김)</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">역류</p>
-                            <p class="sub_title">매장내부 배관에서 역류</p>
+                            <a href="report/index.html">
+                                <p class="title">역류</p>
+                                <p class="sub_title">매장내부 배관에서 역류</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">단전/정전</p>
-                            <p class="sub_title">단전, 정전</p>
+                            <a href="report/index.html">
+                                <p class="title">단전/정전</p>
+                                <p class="sub_title">단전, 정전</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">단수</p>
-                            <p class="sub_title">단수</p>
+                            <a href="report/index.html">
+                                <p class="title">단수</p>
+                                <p class="sub_title">단수</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">기타</p>
-                            <p class="sub_title">자연재해, DT차량고장 등</p>
+                            <a href="report/index.html">
+                                <p class="title">기타</p>
+                                <p class="sub_title">자연재해, DT차량고장 등</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">집회</p>
-                            <p class="sub_title">매장 내·외부 집회 발생</p>
+                            <a href="report/index.html">
+                                <p class="title">집회</p>
+                                <p class="sub_title">매장 내·외부 집회 발생</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">공사 및 점검</p>
-                            <p class="sub_title">외부 공사, 점검으로 인한 운영 영향 발생</p>
+                            <a href="report/index.html">
+                                <p class="title">공사 및 점검</p>
+                                <p class="sub_title">외부 공사, 점검으로 인한 운영 영향 발생</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">시스템</p>
-                            <p class="sub_title">UPS, POS등 내부 시스템의 이상발생</p>
+                            <a href="report/index.html">
+                                <p class="title">시스템</p>
+                                <p class="sub_title">UPS, POS등 내부 시스템의 이상발생</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -747,27 +775,33 @@
                 <div class="category_wrap">
                     <h4 class="foreign ">이물</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">음료(파트너 제조)</p>
-                            <p class="sub_title">고객이 파트너가 제조한 음료에서 이물 발견 시</p>
+                            <a href="report/index.html">
+                                <p class="title">음료(파트너 제조)</p>
+                                <p class="sub_title">고객이 파트너가 제조한 음료에서 이물 발견 시</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">푸드 등(협력사 제조)</p>
-                            <p class="sub_title">​고객이 협력사 제조상품(푸드, RTD 등)에서 이물 발견 시​</p>
+                            <a href="report/index.html">
+                                <p class="title">푸드 등(협력사 제조)</p>
+                                <p class="sub_title">​고객이 협력사 제조상품(푸드, RTD 등)에서 이물 발견 시​</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">기타</p>
-                            <p class="sub_title">고객이 식품과 함께 제공된 소모품 (컵, 빨대)등에서 이물 ···​</p>
+                            <a href="report/index.html">
+                                <p class="title">기타</p>
+                                <p class="sub_title">고객이 식품과 함께 제공된 소모품 (컵, 빨대)등에서 이물 ···​</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -783,39 +817,51 @@
                 <div class="category_wrap">
                     <h4 class="customer">고객​</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">상해</p>
-                            <p class="sub_title">매장 내부에서 고객이 다침</p>
+                            <a href="report/index.html">
+                                <p class="title">상해</p>
+                                <p class="sub_title">매장 내부에서 고객이 다침</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">불만/피해</p>
-                            <p class="sub_title">고객 단순불만(품질X)/고객자산 피해 발생</p>
+                            <a href="report/index.html">
+                                <p class="title">불만/피해</p>
+                                <p class="sub_title">고객 단순불만(품질X)/고객자산 피해 발생</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">난동</p>
-                            <p class="sub_title">고객이 매장내부에서 난동(욕설, 고성 등)</p>
+                            <a href="report/index.html">
+                                <p class="title">난동</p>
+                                <p class="sub_title">고객이 매장내부에서 난동(욕설, 고성 등)</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">절취</p>
-                            <p class="sub_title">고객이 매장 내부, 고객 소비품 등을 갈취</p>
+                            <a href="report/index.html">
+                                <p class="title">절취</p>
+                                <p class="sub_title">고객이 매장 내부, 고객 소비품 등을 갈취</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">기타</p>
-                            <p class="sub_title">고객 간 싸움/소동 발생, 기절 등</p>
+                            <a href="report/index.html">
+                                <p class="title">기타</p>
+                                <p class="sub_title">고객 간 싸움/소동 발생, 기절 등</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">분실/피해</p>
-                            <p class="sub_title">​고객 소지품 분실/ 고객자산 피해 발생​</p>
+                            <a href="report/index.html">
+                                <p class="title">분실/피해</p>
+                                <p class="sub_title">​고객 소지품 분실/ 고객자산 피해 발생​</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -831,39 +877,51 @@
                 <div class="category_wrap">
                     <h4 class="fire">화재​</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">매장 내 화재</p>
-                            <p class="sub_title">매장 내부에서 화재 발생</p>
+                            <a href="report/index.html">
+                                <p class="title">매장 내 화재</p>
+                                <p class="sub_title">매장 내부에서 화재 발생</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">입주건물 화재</p>
-                            <p class="sub_title">매장이 입점한 건물(지하 주차장, 타매장 등)에서 화재발생​</p>
+                            <a href="report/index.html">
+                                <p class="title">입주건물 화재</p>
+                                <p class="sub_title">매장이 입점한 건물(지하 주차장, 타매장 등)에서 화재발생​</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">매장 외부 화재</p>
-                            <p class="sub_title">매장 외부(쓰레기장, 화단, 옆건물)에서 화재 발생​</p>
+                            <a href="report/index.html">
+                                <p class="title">매장 외부 화재</p>
+                                <p class="sub_title">매장 외부(쓰레기장, 화단, 옆건물)에서 화재 발생​</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">화재 위험(연기, 불꽃 등)</p>
-                            <p class="sub_title">스파크, 연기, 탄 흔적 발견</p>
+                            <a href="report/index.html">
+                                <p class="title">화재 위험(연기, 불꽃 등)</p>
+                                <p class="sub_title">스파크, 연기, 탄 흔적 발견</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">경보기 오작동</p>
-                            <p class="sub_title">화재경보기 오작동(실제 화재 X)</p>
+                            <a href="report/index.html">
+                                <p class="title">경보기 오작동</p>
+                                <p class="sub_title">화재경보기 오작동(실제 화재 X)</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">기타</p>
-                            <p class="sub_title">단순 고객대피, 화재대피 훈련 등</p>
+                            <a href="report/index.html">
+                                <p class="title">기타</p>
+                                <p class="sub_title">단순 고객대피, 화재대피 훈련 등</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -879,31 +937,39 @@
                 <div class="category_wrap">
                     <h4 class="food_safety">식품안전</h4>
                     <div class="btn_box">
-                        <button class="cm_btn_round on" onclick="">
+                        <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
-                        </button>
-                        <button class="cm_btn_round on" onclick="">
+                        </a>
+                        <a href="board/index.html" class="cm_btn_round on" onclick="commonUi.setTabIndex(0)">
                             <span class="text">업무 가이드 보기</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
                 <div class="guide_wrap">
                     <ul class="guide_list">
                         <li>
-                            <p class="title">소비기한 경과품 판매</p>
-                            <p class="sub_title">매판매 시점 기준 소비기한 경과 제품을 패키지</p>
+                            <a href="report/index.html">
+                                <p class="title">소비기한 경과품 판매</p>
+                                <p class="sub_title">매판매 시점 기준 소비기한 경과 제품을 패키지</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">변질(곰팡이 등)</p>
-                            <p class="sub_title">고객이 육안 확인 시 반점, 얼룩 등이 보여 변질​​</p>
+                            <a href="report/index.html">
+                                <p class="title">변질(곰팡이 등)</p>
+                                <p class="sub_title">고객이 육안 확인 시 반점, 얼룩 등이 보여 변질​​</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">관능 요소 이상(맛/냄새/색상 이상 등)</p>
-                            <p class="sub_title">맛, 냄새, 색상 이상 등의 고객 클레임 접수 시​</p>
+                            <a href="report/index.html">
+                                <p class="title">관능 요소 이상(맛/냄새/색상 이상 등)</p>
+                                <p class="sub_title">맛, 냄새, 색상 이상 등의 고객 클레임 접수 시​</p>
+                            </a>
                         </li>
                         <li>
-                            <p class="title">기타(알러지 배탈 등)</p>
-                            <p class="sub_title">식품 섭취 후 알러지 반응, 배탈 증상 등의 고객 클···​</p>
+                            <a href="report/index.html">
+                                <p class="title">기타(알러지 배탈 등)</p>
+                                <p class="sub_title">식품 섭취 후 알러지 반응, 배탈 증상 등의 고객 클···​</p>
+                            </a>
                         </li>
                     </ul>
                 </div>

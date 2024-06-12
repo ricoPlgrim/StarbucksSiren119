@@ -455,6 +455,7 @@
     top: 0px;
     height: 100%;
     width: 100%;
+    @include vp(max-width, 750px);
     background: $white;
     z-index: 999;
     overflow: hidden;
@@ -490,7 +491,19 @@
         @include vp(margin-top, 120px);
         overflow-y:auto;
         height: 100%;
-
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            @include vp(width, 1px);
+            @include vp(height, 1px);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $light-gray-7;
+            @include vp( border-radius, 10px);
+            @include vp( border, 3px solid #f1f1f1);
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $dark-gray;
+        }
         // 비주얼 상단 확대보기 레이어 팝업
         .detail_pop_visual {
             position: relative;
@@ -537,6 +550,19 @@
     .pop_cont02 {
         overflow-y:auto;
         height: 100%;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar {
+            @include vp(width, 1px);
+            @include vp(height, 1px);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $light-gray-7;
+            @include vp( border-radius, 10px);
+            @include vp( border, 3px solid #f1f1f1);
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $dark-gray;
+        }
         .head_box {
             position: absolute;
             top: 0;
@@ -602,7 +628,8 @@
                 @include vp( margin-top, 36px); 
                 display: flex;
                 gap: 10px;
-                button {
+                button,
+                a {
                     background: $white;
                     span { 
                         @include vp( padding, 20px); 
@@ -617,17 +644,22 @@
             @include vp( padding, 0px 40px); 
             li {
                 @include vp( padding, 40px 0px); 
-                border-bottom: 1px solid $light-gray-3;
-                &:last-child {border-bottom: none;}
-                .title {
-                    @include vp( margin-bottom, 12px); 
-                    @include vp( font-size, $f15); 
-                    font-weight: $fw6;
+                @include vp( border-bottom, 2px solid $light-gray-3 !important) ;   
+                &:last-child {border-bottom: none  !important}
+                >a{
+                    color: $black;
+                    .title {
+                        @include vp( margin-bottom, 12px);  
+                        @include vp( font-size, $f15); 
+                        font-weight: $fw6;
+                    }
+                    .sub_title {
+                        @include vp( font-size, $f12); 
+                        color: $light-gray-8;
+                    }
                 }
-                .sub_title {
-                    @include vp( font-size, $f12); 
-                    color: $light-gray-8;
-                }
+             
+              
             }
         }
     }
@@ -1638,7 +1670,6 @@
             position: relative;
             @include vp(width, 330px);
             @include vp(height, 76px);
-            // @include vp(padding, 22px 40px);
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );

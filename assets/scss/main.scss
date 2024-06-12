@@ -135,7 +135,7 @@ html, body {
                                 @include vp(border-bottom, 2px solid $black);
                                 h3{
                                     position: relative;
-                                    @include vp(padding-left, 88px);
+                                    @include vp(padding-left, 68px);
                                     color: $black;
                                     @include vp(font-size, $f16);
                                     font-weight: $fw6;
@@ -144,18 +144,18 @@ html, body {
                                         content: '';
                                         display: block;
                                         position: absolute;
-                                        @include vp(top, -5px);
+                                        @include vp(top, -10px);
                                         left:0;
                                         @include vp(width, 48px);
                                         @include vp(height, 48px);
                                         background: url(../images/icons/icon_Partner.png) 0 0 no-repeat;
-                                        @include vp(background-size, 48px auto);
+                                        @include vp(background-size, 48px auto); 
                                     }
                                 }
                                 .read_text{
                                     position: relative;
                                     display: block;
-                                    @include vp(margin-left, 20px);
+                                    @include vp(margin-left, 40px);
                                     @include vp(padding-left, 40px);
                                     color: $black-58;
                                     @include vp(font-size, $f13);
@@ -551,7 +551,7 @@ html, body {
 
                         h3 {
                             position: relative;
-                            @include vp(padding-left, 68px);
+                            @include vp(padding-left, 68px); 
                             @include vp(font-size, $f16);
                             font-weight: $fw6;
 
@@ -656,12 +656,12 @@ html, body {
                     &::after{
                         content: '';
                         position: absolute;
-                        @include vp(top, 3px);
+                        top:0;
                         left:0;
-                        @include vp(width, 40px);
-                        @include vp(height, 40px);
-                        background: url("../images/btn/btn_pie_chart.png") 0 0 no-repeat;
-                        @include vp(background-size, 40px auto);
+                        @include vp(width, 44px);
+                        @include vp(height, 44px);
+                        background: url("../images/icons/icon_pie_chart.png") 0 0 no-repeat;
+                        @include vp(background-size, 44px auto);
                     }
                 }
                 .btn_filter{
@@ -676,13 +676,13 @@ html, body {
                     font-weight: $fw4;
                     &::after{
                         content: '';
-                        position: absolute;
-                        @include vp(top, 3px);
+                        position: absolute; 
+                        top:0;
                         left:0;
-                        @include vp(width, 40px);
-                        @include vp(height, 40px);
-                        background: url("../images/btn/btn_filter.png") 0 0 no-repeat;
-                        @include vp(background-size, 40px auto);
+                        @include vp(width, 44px);
+                        @include vp(height, 44px);
+                        background: url("../images/icons/icon_Filter.png") 0 0 no-repeat;
+                        @include vp(background-size, 44px auto);
                     }
                 }
             }
