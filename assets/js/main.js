@@ -34,6 +34,7 @@ var mainUi = {
         var className =  $(this).attr('class');
         var sectionInner = $(".section_inner");
         $( ".menu_box" ).removeClass( "on" );
+       
         if (sectionInner.hasClass(className)) {
             sectionInner.removeClass(className).removeClass('open');
            $( ".menu_box" ).removeClass( "on" );
@@ -53,16 +54,16 @@ var mainUi = {
         _switchBoxBtns.eq(index).addClass("on");
         contents.removeClass("on");
         contents.eq(index).addClass("on");
-
         if (index === 0) {
+            $( ".message_box" ).css( "display", "block"  )
+            commonUi.sendBunCehck();
             roundBar.removeClass("right").addClass("left");
         } else {
+            $( ".message_box" ).css( "display", "none"  )
+            commonUi.sendBunCehck();
             roundBar.removeClass("left").addClass("right");
         }
     },
-
-   
-
  
     
 };

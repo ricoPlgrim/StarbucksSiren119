@@ -147,7 +147,6 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
-        console.log(_sT);
         if (_sT > 80) {
             _scrollTopButton.fadeIn();
         } else {
@@ -340,6 +339,7 @@ var commonUi = {
     },
     openPopup: function (targetName) {
         var layerName = "#" + targetName;
+        var closeTimeout; 
 
         $("body").find(layerName).addClass("open");
         $("body").css("overflow", "hidden");
@@ -356,14 +356,15 @@ var commonUi = {
         });
 
         function closePopup(layerName) {
+            clearTimeout(closeTimeout);
             $("body").find(layerName).removeClass("open");
             $("body").css("overflow", "scroll");
         }
 
         //3초 이후 토스트 팝업 삭제
-        setTimeout(function () {
+        closeTimeout = setTimeout(function () {
             closePopup(layerName);
-        }, 3000)
+        }, 3000);
     },
 
 
@@ -473,8 +474,10 @@ var commonUi = {
     },
 
     sendBunCehck: function () {
-        if ($(".message_box").length === 0) {
+        console.log( "여기체크되니?1111" );
+        if ($(".message_box").length === 0 || $(".message_box").css("display") === "none") {
             _scrollTopButton.addClass("on");
+            console.log( "여기체크되니?2222" );
         } else {
             _scrollTopButton.removeClass("on");
         }

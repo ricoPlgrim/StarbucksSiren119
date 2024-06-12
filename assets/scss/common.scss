@@ -1222,7 +1222,9 @@
         width: 100%;
         @include vp(max-width, 750px);
         background: $white;
-
+        box-shadow: unset;
+        @include vp(border-top, 2px solid #eee);
+        box-shadow: 0 -1px 5px 0px #e5e5e5;
         .button_grop {
             &.bottom {
                 .inner {
