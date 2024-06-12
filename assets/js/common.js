@@ -77,23 +77,23 @@ var commonUi = {
         _endDateInput = $("#enddate");
         _typeBtns = $(".cm_tab_contents").find(".cm_type_list").find("li");
         _twoDepsMenu = $(".cm_tab_panel .buttons_list").find("li");
-        _subDepsMenu = $( ".cm_tab_panel .depth_02" ).find("li");
+        _subDepsMenu = $(".cm_tab_panel .depth_02").find("li");
         _searchInput = $(".search_input");
         _deleteAllBtn = $(".btn_all_delete");
         _btnTextDelete = $(".btn_text_delete");
         _inputBoxTarget = $(".input_box");
         _loginInPut = $(".login_box").find(".user_id");
         _btnTypeClose = $(".cm_btn_list").find(".btn_close");
-        _rowScrolLBox = $( ".cm_btn_list" );
+        _rowScrolLBox = $(".cm_btn_list");
         _btnBookmark = $(".btn_bookmark");
-        _wrap = $( "#wrap" );
+        _wrap = $("#wrap");
 
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
         _wrap.on("scroll", commonUi.scrollEvent);
-        // _w.on("scroll", commonUi.scrollEvent);
+        _w.on("scroll", commonUi.scrollEvent);
         _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
@@ -111,11 +111,11 @@ var commonUi = {
 
         _typeBtns.on("click", commonUi.typeBtnsClick); //탭 영역 활성화
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);  // input, textarea 이벤트
-       
+
         _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
-        _twoDepsMenu.on( "click", commonUi.twoDepsMenuClick ); //투댑스 버튼 클릭 이벤트
-        _subDepsMenu.on( "click", commonUi.subDepsMenuClick );
+        _twoDepsMenu.on("click", commonUi.twoDepsMenuClick); //투댑스 버튼 클릭 이벤트
+        _subDepsMenu.on("click", commonUi.subDepsMenuClick);
 
         _searchInput.on("input", commonUi.inputTarget); //인풋이벤트 
         _searchInput.on("focus", commonUi.inputFocusEvent); //인풋 포커스 인 이벤트
@@ -124,12 +124,12 @@ var commonUi = {
         _loginInPut.on("input", commonUi.loginValueCheck); //로그인 인풋 벨류 체크
         _btnTypeClose.on("click", commonUi.btnTypeCloseClick); //타입 버튼 삭제 이벤트
 
-        _rowScrolLBox.on( "scroll", commonUi.rowScrollBoxCheck );
+        _rowScrolLBox.on("scroll", commonUi.rowScrollBoxCheck);
         _btnBookmark.on("click", commonUi.btnBookMarkClick);
-        
+
         commonUi.tabActivation(); //탭영역 로드 체크 순서
         commonUi.sendBunCehck();
-  
+
     },
 
     loadEvent: function () {
@@ -138,7 +138,7 @@ var commonUi = {
     },
 
     resizeEvent: function () {
-        _typeBtns.each(function() {
+        _typeBtns.each(function () {
             if ($(this).hasClass("on")) {
                 commonUi.updateBarPosition($(this));
             }
@@ -147,7 +147,7 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
-        console.log( _sT );
+        console.log(_sT);
         if (_sT > 80) {
             _scrollTopButton.fadeIn();
         } else {
@@ -218,7 +218,7 @@ var commonUi = {
         $(".date_end").find(".date_text").text(selectedDate);
     },
 
-    updateBarPosition: function(button) {
+    updateBarPosition: function (button) {
         var offsetLeft = button.position().left;
         var bars = $(".cm_tab_contents").find(".bar");
         gsap.to(bars, {
@@ -298,26 +298,26 @@ var commonUi = {
             $(cHeader).removeClass('on');
         }
     },
-    twoDepsMenuClick: function(e) {
+    twoDepsMenuClick: function (e) {
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
         var menuDepth02 = $(this).parents().parents().find(".depth_02");
-    
+
         // 탭메뉴 클릭 시 활성화
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
 
         // 탭메뉴 하위 투뎁스 이벤트
-        if(index > 0) {
+        if (index > 0) {
             menuDepth02.show();
             menuDepth02.css("display", "flex");
         } else {
             menuDepth02.hide();
-        }        
+        }
         commonUi.centerMenu(menuContainer, $(this));
     },
-    subDepsMenuClick: function(){
+    subDepsMenuClick: function () {
         var index = $(this).index();
 
         $(this).siblings().removeClass("on");
@@ -359,6 +359,11 @@ var commonUi = {
             $("body").find(layerName).removeClass("open");
             $("body").css("overflow", "scroll");
         }
+
+        //3초 이후 토스트 팝업 삭제
+        setTimeout(function () {
+            closePopup(layerName);
+        }, 3000)
     },
 
 
@@ -396,26 +401,26 @@ var commonUi = {
     },
 
     btnTypeCloseClick: function () {
-        var btnGroup = $( this ).parents( ".btn_group" );
-        var liLength = $( ".cm_btn_list" ).find( "li" ).length; 
-        $( this ).parents( "li" ).remove();
-        if( liLength == 1 ){
+        var btnGroup = $(this).parents(".btn_group");
+        var liLength = $(".cm_btn_list").find("li").length;
+        $(this).parents("li").remove();
+        if (liLength == 1) {
             btnGroup.remove();
         }
     },
 
-    mainSwichCahge: function($type){
+    mainSwichCahge: function ($type) {
         commonUi.gnbCloseClick();
         var contents = $(".sections").find("section");
         var roundBar = $(".switch_round");
-        if( $type == 0){
+        if ($type == 0) {
             _switchBoxBtns.removeClass("on");
             _switchBoxBtns.eq(0).addClass("on");
             contents.removeClass("on");
             contents.eq(0).addClass("on");
             roundBar.addClass("left")
             roundBar.removeClass("right")
-        }else{
+        } else {
             _switchBoxBtns.removeClass("on");
             _switchBoxBtns.eq(1).addClass("on");
             contents.removeClass("on");
@@ -424,21 +429,21 @@ var commonUi = {
             roundBar.addClass("right")
         }
 
-     
+
     },
 
-    setTabIndex: function(index){
+    setTabIndex: function (index) {
         localStorage.setItem('tabIndex', index);
     },
 
-    tabActivation: function() {
+    tabActivation: function () {
         var path = window.location.pathname;
         var page = path.split("/").pop();
-    
+
         if (page === "index.html" && path.includes("/board/")) {
             var tabIndex = localStorage.getItem('tabIndex');
             if (tabIndex !== null) {
-                tabIndex = parseInt(tabIndex, 10); 
+                tabIndex = parseInt(tabIndex, 10);
                 var selectedButton = _typeBtns.eq(tabIndex);
                 commonUi.updateBarPosition(selectedButton);
 
@@ -453,13 +458,13 @@ var commonUi = {
         }
     },
 
-    rowScrollBoxCheck: function(){
+    rowScrollBoxCheck: function () {
         var scrollLeft = $(this).scrollLeft();
-        var dimd = $( ".btn_group" ).find( ".dimd" );
-        if( scrollLeft > 10 ){
-            dimd.css( "display", "none" );
-        }else{
-            dimd.css( "display", "block" );
+        var dimd = $(".btn_group").find(".dimd");
+        if (scrollLeft > 10) {
+            dimd.css("display", "none");
+        } else {
+            dimd.css("display", "block");
         }
     },
 
@@ -467,11 +472,11 @@ var commonUi = {
         $(this).toggleClass("on");
     },
 
-    sendBunCehck: function(){
+    sendBunCehck: function () {
         if ($(".message_box").length === 0) {
-            _scrollTopButton.addClass( "on" );
-        }else{
-            _scrollTopButton.removeClass( "on" );
+            _scrollTopButton.addClass("on");
+        } else {
+            _scrollTopButton.removeClass("on");
         }
     }
 };

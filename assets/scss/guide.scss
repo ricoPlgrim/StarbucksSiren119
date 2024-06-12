@@ -60,95 +60,92 @@
                     @include vp(padding, 40px);
 
                     .text_list {
-                        $font-sizes: ($f16, $f15, $f14, $f13, $f12);
+                        $font-sizes: (
+                            $f16,
+                            $f15,
+                            $f14,
+                            $f13,
+                            $f12
+                        );
+
+                    li {
+                        @each $size in $font-sizes {
+                            &:nth-child(#{index($font-sizes, $size)}) {
+                                p {
+                                    font-size: $size;
+                                    color: $black;
+                                    font-weight: $fw4;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .color_list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    @include vp(gap, 22px);
+
+                    .cricle {
+                        @include vp(width, 140px);
+                        @include vp(height, 140px);
+                        @include vp(border-radius, 100px);
+                    }
+
+                    p {
+                        @include vp(font-size, 20px);
+                        color: $black;
+                        text-align: center;
+                        @include vp(margin, 20px auto 0);
+                    }
+                }
+
+                .guide_line_list {
+                    &.row {
                         li {
-                            @each $size in $font-sizes {
-                                &:nth-child(#{index($font-sizes, $size)}) {
-                                    p {
-                                        font-size: $size;
-                                        color: $black;
-                                        font-weight: $fw4;
-                                    }
-                                }
+                            @include vp(margin-top, 36px);
+
+                            &:first-child {
+                                margin-top: 0;
                             }
                         }
                     }
 
-                    .color_list {
+                    &.vertical {
                         display: flex;
-                        flex-wrap: wrap;
-                        @include vp(gap, 22px);
+                        @include vp(margin-top, 40px);
 
-                        .cricle {
-                            @include vp(width, 140px);
-                            @include vp(height, 140px);
-                            @include vp(border-radius, 100px);
-                        }
+                        li {
+                            @include vp(margin-left, 100px);
 
-                        p {
-                            @include vp(font-size, 20px);
-                            color: $black;
-                            text-align: center;
-                            @include vp(margin, 20px auto 0);
-                        }
-                    }
-
-                    .guide_line_list {
-                        &.row {
-                            li {
-                                @include vp(margin-top, 36px);
-                                &:first-child {
-                                    margin-top: 0;
-                                }
+                            &:first-child {
+                                margin-left: 0;
                             }
                         }
-                        &.vertical{
-                            display: flex;
-                            @include vp(margin-top, 40px );    
-                            li{
-                                @include vp(margin-left, 100px);
-                                &:first-child {
-                                    margin-left: 0;
-                                }
-                            }
-                        }
-
                     }
-
-                    .buttons_list{
-                        li{
-                            display: flex;
-                            @include vp(gap, 30px );
-                        }
-                    }
-
-
 
                 }
 
-                &:first-child {
-                    margin-top: 0;
+                .buttons_list {
+                    li {
+                        display: flex;
+                        @include vp(gap, 30px);
+                    }
                 }
+
+
+
             }
 
+            &:first-child {
+                margin-top: 0;
+            }
         }
-    }
 
+    }
 }
 
-
-/*color 정의*/
-
-
-// $dark-gray: #333;
-// $light-gray-1: #AAA;
-// $light-gray-2: #DDD;
-// $light-gray-3: #EEE;
-// $green: #00A862;
-// $black-58: rgba(0, 0, 0, 0.58);
-// $gray: #999;
-// $medium-gray: #BBB;
-// $black-12: rgba(0, 0, 0, 0.12);
+}
 
 
 .radio_group {
@@ -161,80 +158,104 @@
 
         li {
             @include vp(margin-left, 24px);
+
             &:first-child {
                 margin-left: 0;
             }
         }
-     
-    } 
+
+    }
 }
 
 .toggle_list {
     display: flex;
     align-items: center;
 
-   
+
 }
 
 
-.page{
+.page {
     background-color: #f4f4f4;
-    #wrap{
-        max-width: 1280px;
+    font-family: 'Pretendard', sans-serif; 
+
+    h2 {
+        @include vp(padding, 24px 0);
+        @include vp(font-size, 36px );
+        text-align: center;
+        font-weight: 600;
     }
 
-    h1 {
-        text-align: left;
-        @include vp(margin, 30px 0);
-        @include vp(font-size, 40px);
+    th,
+    td {
+        vertical-align: middle;
+        text-align: center;
+        @include vp(font-size, 24px );
+        font-weight: 400;
+        border: 1px solid #0a9a7d;
     }
-    
-    table {
+
+    .table-scroll {
+        position: relative;
+        max-width: 1680px;
+        @media screen and (max-width: 1401px) {
+            max-width: 1400px;
+            
+        }
+        margin: auto;
+        overflow: hidden;
+        border-right: 1px solid #0a9a7d;
+        border-bottom: 1px solid #0a9a7d;
+    }
+
+    .table-wrap {
         width: 100%;
-        border-collapse: collapse;
-        @include vp(margin-bottom, 20px);
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        @include vp(margin-bottom, 40px );
     }
-    
-    thead {
-        background-color: #333;
+
+    .table-scroll table {
+        width: 100%;
+        margin: auto;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .table-scroll th,
+    .table-scroll td {
+        @include vp(padding, 20px );
+        white-space: nowrap;
+    }
+
+    .table-scroll th {
+        font-weight: 600;
+        background: #0a9a7d;
         color: #fff;
-    }
-    
-    thead th {
-        @include vp(line-height, 80px);
-        @include vp(font-size, 20px);
-        @include vp(width, 200px);
-        color: $white;
-        text-align: center;
-        background-color: $black;
-        &:first-child{
-            @include vp(width, 370px);
-        }
-        &:last-child{
-            text-align: center;
-        }
-       
-    }
-    
-  
-    tbody td {
-        text-align: center;
-        @include vp(padding, 20px);
-        @include vp(border-bottom, 2px solid #ddd);
-        @include vp(font-size, 20px);
-        &:last-child{
-            text-align: center;
-        }
-    }
-    
-    tbody tr:hover {
-        background-color: #f1f1f1;
+
     }
 
-    
+    .table-scroll td {
+        background: #fff;
+        a{ color: $black; text-decoration: none;}
+    }
+
+    .clone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+    }
+
+    .clone th,
+    .clone td {
+        visibility: hidden;
+    }
+
+    .clone .fixed-side {
+        /* border:1px solid #707070; */
+        visibility: visible;
+    }
+
+
+
 }
-
-
-

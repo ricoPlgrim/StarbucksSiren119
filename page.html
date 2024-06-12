@@ -1,263 +1,290 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks Siren119</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/ico">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+    </style>
 </head>
 
-<body class="page">
-    <main id="wrap">
-        <h1>퍼블리싱 페이지 목록 가이드</h1>
-        <table>
-            <caption class="blind">퍼블리싱 페이지 목록 표</caption>
-            <thead>
-                <tr>
-                    <th>페이지</th>
-                    <th>URL</th>
-                    <th>작성자</th>
-                    <th>마지막 수정 날짜</th>
-                    <th>상태</th>
-                    <th>메모</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>메인</td>
-                    <td><a href="index.html" target="_blank">/home</a></td>
-                    <td>허정원</td>
-                    <td>2024-05-24</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>검색페이지</td>
-                    <td><a href="searh/index.html" target="_blank">/search/index.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-05-24</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>보고 작성 페이지</td>
-                    <td><a href="report/index.html" target="_blank">/report/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
-                        셀렉트 박스 디자인 요청
-                    </td>
-                </tr>
-                <tr>
-                    <td>보고 수정 페이지</td>
-                    <td><a href="report/edit.html" target="_blank">/report/edit.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-05</td>
-                    <td>완료</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>보고 상세 페이지</td>
-                    <td><a href="detail/index.html" target="_blank">/detail/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>로그인 페이지</td>
-                    <td><a href="login/index.html" target="_blank">/login/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
+<body>
+    <div id="wrap" class="page" >
+        <h2>페이지 목록 가이드</h2>
+        <div id="table-scroll" class="table-scroll">
+            <div class="table-wrap">
+                <table class="table character-table">
+                    <thead>
+                        <tr>
+                            <th class="fixed-side" scope="col">페이지</th>
+                            <th scope="col">URL</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">작업날짜</th>
+                            <th scope="col">상태</th>
+                            <th scope="col">메모</th>
+                        </tr>
+                    </thead>
 
-                    </td>
-                </tr>
-                <tr>
-                    <td>댓글 페이지</td>
-                    <td><a href="comment/index.html" target="_blank">/comment/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>답글 페이지</td>
-                    <td><a href="reply/index.html" target="_blank">/reply/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>업무가이드/ 주요보고사례 페이지</td>
-                    <td><a href="board/index.html" target="_blank">/board/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-05</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>현황 통계 페이지</td>
-                    <td><a href="chart/index.html" target="_blank">/chart/index.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-05</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>보고하기 공통 작성 가이드 팝업</td>
-                    <td><a href="index.html" target="_blank">home.html</a></td>
-                    <td>이주연</td>
-                    <td>2024-06-10</td>
-                    <td>진행중</td>
-                    <td>
-                        메뉴 상단 텍스트 옆 툴팁 버튼 클릭 시 팝업 노출
-                    </td>
-                </tr>
-                <tr>
-                    <td>필터</td>
-                    <td><a href="filter/index.html" target="_blank">/filter/index.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-04</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>푸시 이력관리</td>
-                    <td><a href="push/history_list.html" target="_blank">/push/history_list.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>푸시 이력관리(알림내역x)</td>
-                    <td><a href="push/history_nolist.html" target="_blank">/push/history_nolist.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>푸시 이력관리(알림 off일때)</td>
-                    <td><a href="push/history_offpush.html" target="_blank">/push/history_offpush.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>게시물 조회 설정</td>
-                    <td><a href="push/postview.html" target="_blank">/push/postview.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>알림 설정</td>
-                    <td><a href="push/setting.html" target="_blank">/push/setting.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-03</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>북마크(리스트o)</td>
-                    <td><a href="bookmark/list.html" target="_blank">/bookmark/list.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-05</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>북마크(리스트x)</td>
-                    <td><a href="bookmark/nolist.html" target="_blank">/bookmark/nolist.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-05</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>재난 문자전송(수신팀 포함)</td>
-                    <td><a href="message/send_type1.html" target="_blank">/message/send_type1.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>재난 문자전송(미포함)</td>
-                    <td><a href="message/send_type2.html" target="_blank">/message/send_type2.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>수신팀 상세 지정(리스트 없을경우) </td>
-                    <td><a href="message/detail_type1.html" target="_blank">/message/detail_type1.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-                <tr>
-                    <td>수신팀 상세 지정(리스트 있을경우) </td>
-                    <td><a href="message/detail_type2.html" target="_blank">/message/detail_type2.html</a></td>
-                    <td>허정원</td>
-                    <td>2024-06-07</td>
-                    <td>완료</td>
-                    <td>
-                        &nbsp;
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
-    <style>
-
-    </style>
+                    <tbody>
+                        <tr>
+                            <td class="fixed-side">메인</td>
+                            <td><a href="index.html" target="_blank">/home</a></td>
+                            <td>허정원</td>
+                            <td>2024-05-24</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-side">검색페이지</td>
+                            <td><a href="searh/index.html" target="_blank">/search/index.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-05-24</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="fixed-side">보고 작성 페이지</td>
+                            <td><a href="report/index.html" target="_blank">/report/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                셀렉트 박스 디자인 요청
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">보고 작성 페이지</td>
+                            <td><a href="report/index.html" target="_blank">/report/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                셀렉트 박스 디자인 요청
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">보고 수정 페이지</td>
+                            <td><a href="report/edit.html" target="_blank">/report/edit.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-05</td>
+                            <td>완료</td>
+                            <td></td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">보고 상세 페이지</td>
+                            <td><a href="detail/index.html" target="_blank">/detail/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td></td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">로그인 페이지</td>
+                            <td><a href="login/index.html" target="_blank">/login/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">댓글 페이지</td>
+                            <td><a href="comment/index.html" target="_blank">/comment/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">답글 페이지</td>
+                            <td><a href="reply/index.html" target="_blank">/reply/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">업무가이드/ 주요보고사례 페이지</td>
+                            <td><a href="board/index.html" target="_blank">/board/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-05</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">현황 통계 페이지</td>
+                            <td><a href="chart/index.html" target="_blank">/chart/index.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-05</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">보고하기 공통 작성 가이드 팝업</td>
+                            <td><a href="index.html" target="_blank">home.html</a></td>
+                            <td>이주연</td>
+                            <td>2024-06-10</td>
+                            <td>진행중</td>
+                            <td>
+                                메뉴 상단 텍스트 옆 툴팁 버튼 클릭 시 팝업 노출
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">필터</td>
+                            <td><a href="filter/index.html" target="_blank">/filter/index.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-04</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">푸시 이력관리</td>
+                            <td><a href="push/history_list.html" target="_blank">/push/history_list.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">푸시 이력관리(알림내역x)</td>
+                            <td><a href="push/history_nolist.html" target="_blank">/push/history_nolist.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">푸시 이력관리(알림 off일때)</td>
+                            <td><a href="push/history_offpush.html" target="_blank">/push/history_offpush.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">게시물 조회 설정</td>
+                            <td><a href="push/postview.html" target="_blank">/push/postview.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">알림 설정</td>
+                            <td><a href="push/setting.html" target="_blank">/push/setting.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-03</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">북마크(리스트o)</td>
+                            <td><a href="bookmark/list.html" target="_blank">/bookmark/list.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-05</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">북마크(리스트x)</td>
+                            <td><a href="bookmark/nolist.html" target="_blank">/bookmark/nolist.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-05</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">재난 문자전송(수신팀 포함)</td>
+                            <td><a href="message/send_type1.html" target="_blank">/message/send_type1.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">재난 문자전송(미포함)</td>
+                            <td><a href="message/send_type2.html" target="_blank">/message/send_type2.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">수신팀 상세 지정(리스트 없을경우) </td>
+                            <td><a href="message/detail_type1.html" target="_blank">/message/detail_type1.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr class="scene_row">
+                            <td class="fixed-side">수신팀 상세 지정(리스트 있을경우) </td>
+                            <td><a href="message/detail_type2.html" target="_blank">/message/detail_type2.html</a></td>
+                            <td>허정원</td>
+                            <td>2024-06-07</td>
+                            <td>완료</td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
 
+    document.addEventListener('DOMContentLoaded', function() {
+        const table_container = document.querySelector('#table-scroll');
+        const table       = document.querySelector('.table');
+        const table_clone = table.cloneNode(true);
+
+        table_clone.classList.add('clone');
+        table_container.appendChild(table_clone);
+    });
+
+  
+</script>
 </html>

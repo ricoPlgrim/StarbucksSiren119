@@ -691,7 +691,7 @@ header .header_inner .header_top .utility_contents {
 header .header_inner .header_top .utility_contents .btn_search {
   display: block;
   width: 54px;
-  margin-right: 17px;
+  margin-right: 40px;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top .utility_contents .btn_search {
@@ -700,7 +700,7 @@ header .header_inner .header_top .utility_contents .btn_search {
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top .utility_contents .btn_search {
-    margin-right: 2.2666666667vw;
+    margin-right: 5.3333333333vw;
   }
 }
 header .header_inner .header_top .utility_contents .btn_alarm {
@@ -715,20 +715,20 @@ header .header_inner .header_top .utility_contents .btn_alarm {
 }
 header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
   position: absolute;
-  top: -10px;
-  right: -20px;
+  top: -11px;
+  right: -16px;
   width: 50px;
   display: flex;
   justify-content: space-around;
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
-    top: -1.3333333333vw;
+    top: -1.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   header .header_inner .header_top .utility_contents .btn_alarm .alarm_count {
-    right: -2.6666666667vw;
+    right: -2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1845,15 +1845,18 @@ section.bookmark .cm_tab_panel .panel_list > li .inner {
     padding: 6.4vw 5.3333333333vw;
   }
 }
-section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents {
+section.bookmark .bookmark_contents {
   padding-top: 234px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents {
+  section.bookmark .bookmark_contents {
     padding-top: 31.2vw;
   }
 }
-section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+section.bookmark .bookmark_contents .title {
   color: #000;
   text-align: center;
   font-size: 30px;
@@ -1862,16 +1865,16 @@ section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title
   margin-bottom: 20px;
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+  section.bookmark .bookmark_contents .title {
     font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .title {
+  section.bookmark .bookmark_contents .title {
     margin-bottom: 2.6666666667vw;
   }
 }
-section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+section.bookmark .bookmark_contents .text {
   color: #999;
   text-align: center;
   font-size: 26px;
@@ -1879,25 +1882,25 @@ section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text 
   line-height: 40px;
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+  section.bookmark .bookmark_contents .text {
     font-size: 3.4666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .text {
+  section.bookmark .bookmark_contents .text {
     line-height: 5.3333333333vw;
   }
 }
-section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap {
+section.bookmark .bookmark_contents .btn_wrap {
   text-align: center;
   margin-top: 80px;
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap {
+  section.bookmark .bookmark_contents .btn_wrap {
     margin-top: 10.6666666667vw;
   }
 }
-section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+section.bookmark .bookmark_contents .btn_wrap .cm_btn_round.on .text {
   color: #00A862;
   text-align: center;
   font-size: 28px;
@@ -1906,23 +1909,19 @@ section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_w
   letter-spacing: 0.2px;
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+  section.bookmark .bookmark_contents .btn_wrap .cm_btn_round.on .text {
     font-size: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+  section.bookmark .bookmark_contents .btn_wrap .cm_btn_round.on .text {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.bookmark .cm_tab_panel .panel_list > li .inner .bookmark_contents .btn_wrap .cm_btn_round.on .text {
+  section.bookmark .bookmark_contents .btn_wrap .cm_btn_round.on .text {
     letter-spacing: 0.0266666667vw;
   }
-}
-section.bookmark .cm_tab_panel.nolist {
-  min-height: 100vh;
-  min-height: 100dvh;
 }
 section.chart .cm_date_contents .date_setting {
   margin-top: 20px;
@@ -4877,11 +4876,11 @@ section.message .submit_box, section.message_detail .submit_box {
   }
 }
 section.message .submit_box .inner, section.message_detail .submit_box .inner {
-  padding: 40px 40px 86px 40px;
+  padding: 40px 40px 60px 40px;
 }
 @media screen and (max-width: 750px) {
   section.message .submit_box .inner, section.message_detail .submit_box .inner {
-    padding: 5.3333333333vw 5.3333333333vw 11.4666666667vw 5.3333333333vw;
+    padding: 5.3333333333vw 5.3333333333vw 8vw 5.3333333333vw;
   }
 }
 section.message .submit_box .inner .cm_btn_round, section.message_detail .submit_box .inner .cm_btn_round {
@@ -6054,6 +6053,7 @@ section.searh .searh_contents .search_list_box .no_list {
   bottom: 214px;
   left: 50%;
   transform: translateX(209px);
+  z-index: 10;
 }
 @media screen and (max-width: 750px) {
   .scrolltop_box {
@@ -6102,6 +6102,7 @@ section.searh .searh_contents .search_list_box .no_list {
   bottom: 82px;
   left: 50%;
   transform: translateX(75px);
+  z-index: 10;
 }
 @media screen and (max-width: 750px) {
   .message_box {

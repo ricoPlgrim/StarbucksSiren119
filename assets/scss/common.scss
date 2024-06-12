@@ -12,12 +12,30 @@
     @include vp(max-width, 750px);
     margin: 0 auto;
 
-    &.setting {
-        @include vp(padding-top, 112px);
-    }
+    // &.setting {
+    //     @include vp(padding-top, 112px);
+    // }
 
     &.sub {
         @include vp(padding-top, 112px);
+    }
+
+    &.etc{
+        .scrolltop_box{
+            @include vp(bottom, 314px);
+            &.on{
+                @include vp(bottom, 160px);
+            }
+        }
+      
+    }
+    &.report{
+        .scrolltop_box{
+            @include vp(bottom, 314px);
+            &.on{
+                @include vp(bottom, 160px);
+            }
+        }
     }
 }
 
@@ -300,7 +318,7 @@
     @include vp(bottom, 214px);
     left: 50%;
     transform: translateX(209px);
-
+    z-index: 10;
     @include breakpoint {
         transform: translateX(27.86666666666667vw);
     }
@@ -324,7 +342,7 @@
     @include vp(bottom, 82px);
     left: 50%;
     transform: translateX(75px);
-
+    z-index: 10;
     @include breakpoint {
         transform: translateX(10vw);
     }
@@ -374,17 +392,19 @@
         display: block;
     }
 
+   
+
     .pop_cont01 {
         @include vp(padding, 80px 40px);
         position: absolute;
-        top: 50%;
+        // top: 50%;
+        top: 45%; 
         @include vp(left, 40px);
         @include vp(right, 40px);
         transform: translate(0, -50%);
         @include vp(border-radius, 40px);
         background: $white;
         box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
-
         .text {
             @include vp(font-size, $f13);
             @include vp(line-height, 40px);
@@ -395,7 +415,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            @include vp(gap, 16px);
+            @include vp(gap, 16px); 
             @include vp(margin-top, 60px);
 
             button {
@@ -421,6 +441,7 @@
     top: 0px;
     min-height: 100vh;
     width: 100%;
+    @include vp(width, 750px); 
     z-index: 999;
 
     &.open {
