@@ -4602,11 +4602,19 @@ section.message_detail > .inner {
   }
 }
 section.message_detail > .inner .team_contents {
-  padding-top: 60px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents {
-    padding-top: 8vw;
+    padding-top: 2.6666666667vw;
+  }
+}
+section.message_detail > .inner .team_contents .select_title {
+  padding-top: 10px;
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .select_title {
+    padding-top: 1.3333333333vw;
   }
 }
 section.message_detail > .inner .team_contents .select_title .basic {
@@ -4649,11 +4657,11 @@ section.message_detail > .inner .team_contents .checkbox_list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .checkbox_list {
-    margin-top: 5.3333333333vw;
+    margin-top: 10.6666666667vw;
   }
 }
 section.message_detail > .inner .team_contents .checkbox_list li {

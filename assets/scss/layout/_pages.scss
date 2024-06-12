@@ -1434,9 +1434,10 @@ section {
             @include vp(padding, 0 40px);
 
             .team_contents {
-                @include vp(padding-top, 60px);
-
+                @include vp(padding-top, 20px);
+                
                 .select_title {
+                    @include vp(padding-top, 10px);
                     .basic {
                         color: $light-gray-1;
                         @include vp(font-size, $f15 );
@@ -1465,7 +1466,7 @@ section {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
-                    @include vp(margin-top, 40px);
+                    @include vp(margin-top, 80px);
 
                     li {
                         @include vp(margin-left, 40px);
