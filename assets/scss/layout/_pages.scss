@@ -227,7 +227,7 @@ section {
                     @include vp(background-size, 70px auto);
                 }
                 &.foreign {
-                    background: $white url("../images/icons//icon_different_thing.png") center center no-repeat;
+                    background: $white url("../images/icons/icon_different_thing.png") center center no-repeat;
                     @include vp(background-size, 70px auto);
                 }
                 &.customer{
@@ -269,6 +269,7 @@ section {
 
         .create_form {
             @include vp(padding-left, 40px);
+            overflow: hidden;
 
             .file_upload_wrap {
                 @include vp(margin-bottom, 60px);
@@ -402,14 +403,16 @@ section {
 
                         &.text_box {
                             position: relative;
+                            @include vp(height, 64px); 
 
                             input {
                                 @include vp(padding, 16px 76px 16px 30px);
                                 @include vp(border-radius, 16px);
-                                @include vp(width, 536px);
+                                @include vp(font-size, $f15); 
+                                @include vp(width, 120%); 
+                                transform: scale(0.89);
+                                transform-origin: left top;
                                 border: 1px solid #0000001F;
-                                width: 100%;
-
                                 &:focus {
                                     outline: 1px solid $black;
                                 }
@@ -418,13 +421,13 @@ section {
                             .btn_delete {
                                 display: none;
                                 position: absolute;
-                                bottom: 0px;
-                                right: 0px;
-                                @include vp(padding, 33px);
-                                @include vp(width, 33px);
-                                @include vp(height, 33px);
+                                top: 0px;
+                                @include vp(right, -14px);
+                                @include vp(padding, 32px 28px);
+                                @include vp(width, 32px);
+                                @include vp(height, 32px);
                                 background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-                                @include vp(background-size, 33px auto);
+                                @include vp(background-size, 32px auto);
                                 font-size: 0px;
                                 cursor: pointer;
 
@@ -852,18 +855,16 @@ section {
                 color: #00000094;
             }
             .btn_wrap {
-                @include vp( margin-bottom, 80px);
+                @include vp(margin-bottom, 80px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 button {
-                    @include vp( width, 330px);
+                    @include vp( width, 100%);
                     @include vp( height, 84px);
                     @include vp( border-radius, 16px);
-                    @include vp( font-size, $f15);
-                    font-weight: $fw6;
-                    &:nth-child(1) {
-                        @include vp( margin-right, 10px);
+                    .text {
+                        @include vp( font-size, $f14);
                     }
                 }
             }

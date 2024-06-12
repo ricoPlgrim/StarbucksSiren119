@@ -2032,7 +2032,7 @@ section.report .category_wrap .menu_icon.disaster {
   }
 }
 section.report .category_wrap .menu_icon.foreign {
-  background: #fff url("../images/icons//icon_different_thing.png") center center no-repeat;
+  background: #fff url("../images/icons/icon_different_thing.png") center center no-repeat;
   background-size: 70px auto;
 }
 @media screen and (max-width: 750px) {
@@ -2112,6 +2112,7 @@ section.report .category_wrap .category_box .category_info .text01 {
 }
 section.report .create_form {
   padding-left: 40px;
+  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   section.report .create_form {
@@ -2331,13 +2332,21 @@ section.report .create_form .form_box .form_list li .text {
 }
 section.report .create_form .form_box .form_list li.text_box {
   position: relative;
+  height: 64px;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box {
+    height: 8.5333333333vw;
+  }
 }
 section.report .create_form .form_box .form_list li.text_box input {
   padding: 16px 76px 16px 30px;
   border-radius: 16px;
-  width: 536px;
+  font-size: 30px;
+  width: 120%;
+  transform: scale(0.89);
+  transform-origin: left top;
   border: 1px solid rgba(0, 0, 0, 0.1215686275);
-  width: 100%;
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box input {
@@ -2351,7 +2360,12 @@ section.report .create_form .form_box .form_list li.text_box input {
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box input {
-    width: 71.4666666667vw;
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box input {
+    width: 120%;
   }
 }
 section.report .create_form .form_box .form_list li.text_box input:focus {
@@ -2360,34 +2374,39 @@ section.report .create_form .form_box .form_list li.text_box input:focus {
 section.report .create_form .form_box .form_list li.text_box .btn_delete {
   display: none;
   position: absolute;
-  bottom: 0px;
-  right: 0px;
-  padding: 33px;
-  width: 33px;
-  height: 33px;
+  top: 0px;
+  right: -14px;
+  padding: 32px 28px;
+  width: 32px;
+  height: 32px;
   background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-  background-size: 33px auto;
+  background-size: 32px auto;
   font-size: 0px;
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    padding: 4.4vw;
+    right: -1.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    width: 4.4vw;
+    padding: 4.2666666667vw 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    height: 4.4vw;
+    width: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box .btn_delete {
-    background-size: 4.4vw auto;
+    height: 4.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .btn_delete {
+    background-size: 4.2666666667vw auto;
   }
 }
 section.report .create_form .form_box .form_list li.text_box .btn_delete.on {
@@ -3409,15 +3428,13 @@ section.detail .detail_wrap .btn_wrap {
   }
 }
 section.detail .detail_wrap .btn_wrap button {
-  width: 330px;
+  width: 100%;
   height: 84px;
   border-radius: 16px;
-  font-size: 30px;
-  font-weight: 600;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .btn_wrap button {
-    width: 44vw;
+    width: 100%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3430,17 +3447,12 @@ section.detail .detail_wrap .btn_wrap button {
     border-radius: 2.1333333333vw;
   }
 }
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .btn_wrap button {
-    font-size: 4vw;
-  }
-}
-section.detail .detail_wrap .btn_wrap button:nth-child(1) {
-  margin-right: 10px;
+section.detail .detail_wrap .btn_wrap button .text {
+  font-size: 28px;
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .btn_wrap button:nth-child(1) {
-    margin-right: 1.3333333333vw;
+  section.detail .detail_wrap .btn_wrap button .text {
+    font-size: 3.7333333333vw;
   }
 }
 section.detail .comment_wrap {
@@ -6748,7 +6760,7 @@ section.searh .searh_contents .search_list_box .no_list {
   }
 }
 .layer_popup .pop_cont02 .category_wrap h4.foreign {
-  background: url("../images/icons//icon_different_thing.png") center left no-repeat;
+  background: url("../images/icons/icon_different_thing.png") center left no-repeat;
   background-size: 108px auto;
 }
 @media screen and (max-width: 750px) {
