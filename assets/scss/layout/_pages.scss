@@ -349,6 +349,7 @@ section {
                 display: flex;
                 align-items: center;
                 @include vp(margin-bottom, 40px);
+                &:last-child {@include vp(margin-bottom, 80px);}
                 .title01 {
                     @include vp(font-size, $f13);
                     @include vp(min-width, 132px);
@@ -403,6 +404,7 @@ section {
 
                         &.text_box {
                             position: relative;
+                            @include vp(width, 500px); 
                             @include vp(height, 64px); 
 
                             input {

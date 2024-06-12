@@ -2259,6 +2259,14 @@ section.report .create_form .form_box {
     margin-bottom: 5.3333333333vw;
   }
 }
+section.report .create_form .form_box:last-child {
+  margin-bottom: 80px;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box:last-child {
+    margin-bottom: 10.6666666667vw;
+  }
+}
 section.report .create_form .form_box .title01 {
   font-size: 26px;
   min-width: 132px;
@@ -2334,7 +2342,13 @@ section.report .create_form .form_box .form_list li .text {
 }
 section.report .create_form .form_box .form_list li.text_box {
   position: relative;
+  width: 500px;
   height: 64px;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box {
+    width: 66.6666666667vw;
+  }
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box .form_list li.text_box {
