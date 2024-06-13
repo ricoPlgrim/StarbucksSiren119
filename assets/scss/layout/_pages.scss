@@ -451,7 +451,6 @@ section {
                             }
 
                             .result_box {
-                                display: none;
                                 @include vp(padding, 28px);
                                 @include vp(width, 536px); 
                                 height: auto;
@@ -463,9 +462,6 @@ section {
                                 p {
                                     color: $black;
                                     @include vp(line-height, 40px);
-                                }
-                                &.on {
-                                    display: block;
                                 }
                             }
     

@@ -2487,7 +2487,6 @@ section.report .create_form .form_box .form_list li.text_box .btn_delete.on {
   display: block;
 }
 section.report .create_form .form_box .form_list li.text_box .result_box {
-  display: none;
   padding: 28px;
   width: 536px;
   height: auto;
@@ -2525,9 +2524,6 @@ section.report .create_form .form_box .form_list li.text_box .result_box p {
   section.report .create_form .form_box .form_list li.text_box .result_box p {
     line-height: 5.3333333333vw;
   }
-}
-section.report .create_form .form_box .form_list li.text_box .result_box.on {
-  display: block;
 }
 section.report .create_form .form_box .form_list li.result_box {
   padding: 28px;
