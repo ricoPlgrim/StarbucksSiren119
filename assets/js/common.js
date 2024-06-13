@@ -33,6 +33,7 @@ var _endDateInput;
 
 var _typeBtns;
 var _twoDepsMenu;
+var _twoDepsWrapMenu;
 var _subDepsMenu;
 
 var _searchInput;
@@ -86,6 +87,7 @@ var commonUi = {
         _endDateInput = $("#enddate");
         _typeBtns = $(".cm_tab_contents").find(".cm_type_list").find("li");
         _twoDepsMenu = $(".cm_tab_panel .buttons_list").find("li");
+        _twoDepsWrapMenu = $(".cm_type_twodeps .buttons_list").find("li");
         _subDepsMenu = $(".cm_tab_panel .depth_02").find("li");
         _searchInput = $(".search_input");
         _deleteAllBtn = $(".btn_all_delete");
@@ -129,6 +131,7 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
         _twoDepsMenu.on("click", commonUi.twoDepsMenuClick); //투댑스 버튼 클릭 이벤트
+        _twoDepsWrapMenu.on("click", commonUi.twoDepsWrapMenuClick); //투댑스 버튼 클릭 이벤트
         _subDepsMenu.on("click", commonUi.subDepsMenuClick);
 
         _searchInput.on("input", commonUi.inputTarget); //인풋이벤트 
@@ -277,6 +280,11 @@ var commonUi = {
         var tabPanelTarget = $(".cm_tab_panel").find(".item");
         tabPanelTarget.removeClass("on");
         tabPanelTarget.eq(index).addClass("on");
+        if( $( ".cm_full_wrap" ).length > 0 ){
+            $( ".cm_full_wrap" ).find( ".buttons_list" ).removeClass( "on" );
+            $( ".cm_full_wrap" ).find( ".buttons_list" ).eq(index).addClass( "on" );
+        }
+
     },
 
     textFormClick: function () {
@@ -332,11 +340,23 @@ var commonUi = {
         var cHeader = $("header.common");
         var headerHeight = cHeader.height();
 
-        if (winTop >= headerHeight) {
-            $(cHeader).addClass('on');
-        } else {
-            $(cHeader).removeClass('on');
+        if( !cHeader.hasClass( "not" )){
+            if (winTop >= headerHeight) {
+                $(cHeader).addClass('on');
+            } else {
+                $(cHeader).removeClass('on');
+            }
         }
+        
+        if (winTop >= $("section").offset().top ){
+            $(".cm_tab_contents").addClass('on');
+            $(".cm_tab_panel ").addClass('on');
+        } else {
+            $(".cm_tab_contents").removeClass('on');
+            $(".cm_tab_panel ").removeClass('on');
+        }
+
+        
     },
     twoDepsMenuClick: function (e) {
         e.preventDefault();
@@ -357,9 +377,28 @@ var commonUi = {
         }
         commonUi.centerMenu(menuContainer, $(this));
     },
+    twoDepsWrapMenuClick: function (e) {
+        console.log( "???" );
+        e.preventDefault();
+        var index = $(this).index();
+        var menuContainer = $(this).closest(".buttons_list");
+        var menuDepth02 = $(this).parents().parents().find(".depth_02");
+
+        // 탭메뉴 클릭 시 활성화
+        menuContainer.find("li").removeClass("on");
+        menuContainer.find("li").eq(index).addClass("on");
+
+        // 탭메뉴 하위 투뎁스 이벤트
+        if (index > 0) {
+            menuDepth02.show();
+            menuDepth02.css("display", "flex");
+        } else {
+            menuDepth02.hide();
+        }
+        commonUi.centerMenu(menuContainer, $(this));
+    },
     subDepsMenuClick: function () {
         var index = $(this).index();
-
         $(this).siblings().removeClass("on");
         $(this).addClass("on");
     },
