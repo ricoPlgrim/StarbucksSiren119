@@ -1826,11 +1826,11 @@ section.board .board_conts .text_wrap p {
     font-size: 3.4666666667vw;
   }
 }
-section.board .board_conts .img_wrap {
+section.board .board_conts .board_img_wrap {
   margin-top: 40px;
 }
 @media screen and (max-width: 750px) {
-  section.board .board_conts .img_wrap {
+  section.board .board_conts .board_img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
@@ -2226,7 +2226,7 @@ section.report .create_form .file_upload_wrap .file_list .img_box::before {
   display: block;
   padding-top: 100%;
 }
-section.report .create_form .file_upload_wrap .file_list .btn_delete {
+section.report .create_form .file_upload_wrap .file_list .file_delete {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -2237,17 +2237,17 @@ section.report .create_form .file_upload_wrap .file_list .btn_delete {
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .file_upload_wrap .file_list .btn_delete {
+  section.report .create_form .file_upload_wrap .file_list .file_delete {
     width: 7.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .file_upload_wrap .file_list .btn_delete {
+  section.report .create_form .file_upload_wrap .file_list .file_delete {
     height: 7.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .file_upload_wrap .file_list .btn_delete {
+  section.report .create_form .file_upload_wrap .file_list .file_delete {
     background-size: 7.2vw auto;
   }
 }
@@ -3489,6 +3489,20 @@ section.detail .comment_wrap.comment-detail {
     padding-top: 8vw;
   }
 }
+section.detail .comment_wrap.comment-detail .comment_header {
+  padding-bottom: 0px;
+}
+section.detail .comment_wrap.comment-detail .comment_box .info03 {
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .comment_box .info03 {
+    margin-bottom: 3.7333333333vw;
+  }
+}
+section.detail .comment_wrap.comment-detail .comment_box .btn_wrap {
+  justify-content: end;
+}
 section.detail .comment_wrap.comment-detail .reply_box .text01 {
   position: relative;
   margin-bottom: 20px;
@@ -3614,6 +3628,7 @@ section.detail .comment_wrap .comment_box {
   }
 }
 section.detail .comment_wrap .comment_box:last-child {
+  margin-bottom: 0px;
   border-bottom: none;
 }
 section.detail .comment_wrap .comment_box .info01 {
@@ -6899,10 +6914,16 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 .layer_popup .pop_cont02 .category_wrap .btn_box a .text {
   padding: 18px;
   font-weight: 400;
+  line-height: 28px;
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont02 .category_wrap .btn_box a .text {
     padding: 2.4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont02 .category_wrap .btn_box a .text {
+    line-height: 3.7333333333vw;
   }
 }
 .layer_popup .pop_cont02 .guide_list {
@@ -9286,7 +9307,7 @@ html, body {
   display: block;
   margin-bottom: 32px;
   width: 112px;
-  height: 110px;
+  height: 116px;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .thum::before {
@@ -9300,7 +9321,7 @@ html, body {
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .menu_btn-list > li .menu_box .thum::before {
-    height: 14.6666666667vw;
+    height: 15.4666666667vw;
   }
 }
 .sections .section_inner .menu_btn-list > li .menu_box .thum::after {

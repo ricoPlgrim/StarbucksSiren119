@@ -96,7 +96,7 @@ html, body {
                             display: block;
                             @include vp(margin-bottom, 32px);
                             @include vp(width, 112px);
-                            @include vp(height, 110px);
+                            @include vp(height, 116px);
                         }
                         &::after {
                             content: '';

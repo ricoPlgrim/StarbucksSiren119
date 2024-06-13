@@ -655,6 +655,7 @@
                     .text { 
                         @include vp( padding, 18px); 
                         font-weight: $fw4;
+                        @include vp( line-height, 28px); 
                     }
                 }
             }

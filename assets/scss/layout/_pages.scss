@@ -116,7 +116,7 @@ section {
                 }
             }
 
-            .img_wrap {
+            .board_img_wrap {
                 @include vp(margin-top, 40px);
             }
         }
@@ -336,7 +336,7 @@ section {
                         }
                     }
 
-                    .btn_delete {
+                    .file_delete {
                         position: absolute;
                         top: 0px;
                         right: 0px;
@@ -880,6 +880,11 @@ section {
             @include vp( margin, 0px 40px 160px); 
             &.comment-detail {
                 @include vp( padding-top, 60px); 
+                .comment_header {padding-bottom: 0px;}
+                .comment_box {
+                    .info03 {@include vp( margin-bottom, 28px); }
+                    .btn_wrap {justify-content: end;}
+                }
                 .reply_box {
                     .text01 {
                         position: relative;
@@ -939,6 +944,7 @@ section {
                 @include vp( margin-bottom, 40px); 
                 border-bottom: 1px solid $gray;
                 &:last-child {
+                    margin-bottom: 0px;
                     border-bottom: none;
                 }
                 .info01 {
