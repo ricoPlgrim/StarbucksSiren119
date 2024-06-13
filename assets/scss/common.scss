@@ -18,6 +18,7 @@
 
     &.sub {
         @include vp(padding-top, 112px);
+        &.not{ padding-top: 0; }
     }
 
     &.etc{
@@ -315,21 +316,34 @@
 .scrolltop_box {
     display: none;
     position: fixed;
-    @include vp(bottom, 214px);
+    @include vp(bottom, 164px);
     left: 50%;
-    transform: translateX(209px);
+    transform: translateX(261px);
     z-index: 10;
     @include breakpoint {
-        transform: translateX(27.86666666666667vw);
+        transform: translateX(34.8vw);
     }
 
     .btn_top {
         display: block;
-        @include vp(width, 136px);
-        @include vp(height, 136px);
-        background: url("../images/btn/btn_scrollTop.png") 0 0 no-repeat;
-        @include vp(background-size, 136px auto);
-        margin-left: auto;
+        @include vp(width, 92px);
+        @include vp(height, 92px);
+        @include vp(border, 4px solid $green);
+        @include vp(border-radius, 50px );
+        opacity: 0.6;
+        background: #fff;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .arrow{
+        position: absolute;
+        @include vp(top, 26px); 
+        @include vp(left, 26px);
+        z-index: 2;
+        @include vp(width, 40px);
+        @include vp(height, 40px);
+        background: url("../images/btn/btn_arrow.png") 0 0 no-repeat;
+        @include vp(background-size, 40px auto);
     }
 
     &.on {
@@ -339,40 +353,41 @@
 
 .message_box {
     position: fixed;
-    @include vp(bottom, 82px);
+    @include vp(bottom, 49px);
     left: 50%;
-    transform: translateX(75px);
+    transform: translateX(185px);
     z-index: 10;
     @include breakpoint {
-        transform: translateX(10vw);
+        transform: translateX(24.66666666666667vw);
     }
 
-    .btn_message {
+    .btn_message { 
         position: relative;
         display: block;
-        color: $orange;
+
         text-align: center;
-        @include vp(font-size, $f16);
-        font-weight: $fw6;
-        @include vp(width, 260px);
-        @include vp(height, 112px);
+        @include vp(width, 168px);
+        @include vp(height, 92px);
         @include vp(border-radius, 68px);
         @include vp(border, 4px solid $orange );
-        @include vp(line-height, 102px);
-        @include vp(padding-left, 68px);
-        background: $white;
+        @include vp(line-height, 84px);
+        background: #FFF6F6;
+        opacity: .6;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
-
-        &::after {
-            content: '';
-            position: absolute;
-            @include vp(top, 26px);
-            @include vp(left, 40px);
-            @include vp(width, 48px);
-            @include vp(height, 48px);
-            background: url("../images/icons/icon_email_read.png") 0 0 no-repeat;
-            @include vp(background-size, 48px auto);
-        }
+    }
+    .text{
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 2;
+        font-weight: $fw6;
+        @include vp(font-size, $f16);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $orange;
     }
 }
 
@@ -1042,6 +1057,17 @@
 
     }
 
+    .cm_type_twodeps{
+        .cm_full_wrap{ 
+            .buttons_list{
+                display: none;
+                &.on{
+                    display: flex;
+                }
+            }
+        }
+    }
+
     .bar {
         position: absolute;
         left: 0;
@@ -1061,6 +1087,16 @@
         .bar {
             @include vp(width, 250px);
         }
+    }
+    &.on{
+        position: fixed;
+        top:0;
+        left:50%;
+        width: 100%;
+        @include vp(max-width, 750px);
+        background: $white;
+        transform: translateX(-50%);
+        z-index: 100;
     }
 }
 
@@ -1116,6 +1152,10 @@
 
     &.cm_g {
         background: $light-gray-4;
+    }
+
+    &.on{
+        @include vp(padding-top, 85px);
     }
 }
 
@@ -1734,6 +1774,9 @@
                 border-radius: 8px;
                 @include vp(border, 2px solid $dark-gray );
                 background: $white;
+                span{
+                    opacity: 1;
+                }
             }
         }
     }

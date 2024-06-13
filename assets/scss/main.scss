@@ -617,7 +617,7 @@ html, body {
                     @include vp(margin-top, 692px);
                 }
 
-                &.on {
+                &.on { 
                     display: block;
                     @include vp(width, 670px);
                     @include vp(height, 394px);
@@ -626,32 +626,32 @@ html, body {
         }
 
         .setting_contents {
-            width: 100%;
+            width: 100%; 
             background: $white;
             @include vp(border-radius, 40px);
             @include vp(padding, 40px 40px 28px 40px);
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05); 
 
-            .setting_top {
-                display: flex;
-                .cm_check_box { 
+            .setting_top { 
+                display: flex; 
+                .cm_check_box {  
                     label {
                         color: $black-87;
-                        opacity: 1;
+                        opacity: 1; 
                         input[type="checkbox"] {
-                            @include vp(padding-left, 64px);
-                        }
+                            @include vp(padding-left, 64px); 
+                        } 
                     }
-                }
-                .btn_cart{
-                    position: relative;
+                } 
+                .btn_cart{ 
+                    position: relative; 
                     display: flex;
                     align-items: center;
                     color: $black-87;
                     @include vp(font-size, $f13);
-                    @include vp(margin-left, 64px);
+                    @include vp(margin-left, 64px); 
                     @include vp(padding-left, 48px);
-                    @include vp(line-height, 44px);
+                    @include vp(line-height, 44px); 
                     font-weight: $fw4;
                     &::after{
                         content: '';
@@ -670,11 +670,11 @@ html, body {
                     align-items: center;
                     color: $black-87;
                     @include vp(font-size, $f13);
-                    @include vp(margin-left, auto);
+                    @include vp(margin-left, auto); 
                     @include vp(padding-left, 48px);
                     @include vp(line-height, 44px);
                     font-weight: $fw4;
-                    &::after{
+                    &::after{ 
                         content: '';
                         position: absolute; 
                         top:0;
@@ -701,17 +701,31 @@ html, body {
                     @include vp(margin-right, 8px);
                     background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
                     @include vp(background-size, 68px auto);
-                }
+                } 
                 .cm_btn_list {
                     @include vp(width, 513px);
-                }
+                } 
             }
         }
 
-        .accident_content {
+        .accident_content { 
             @include vp(margin-top, 20px);
         }
-
+        .footer {
+            @include vp(padding-top, 1260px);
+            .logo{
+                @include vp(border-top, 2px solid $light-gray-3);
+                @include vp(padding-top, 40px);
+                text-align: center;
+                color: $medium-gray;
+                @include vp(font-size, $f10);
+                font-weight: $fw4;
+                @include vp(margin-bottom, 20px );
+            }
+            &.etc{
+                @include vp(padding-top, 160px);
+            }
+        }
         
     }
     section {
