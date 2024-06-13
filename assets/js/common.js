@@ -56,7 +56,6 @@ var commonUi = {
 
     init: function () {
         commonUi.loadEvent();
-        commonUi.imgPinchEvent();
     },
     create: function () {
         _w = $(window);
@@ -437,8 +436,8 @@ var commonUi = {
     },
 
     loginValueCheck: function () {
-        var userIdLength = $('.user_id').val().length;
-        var userPwLength = $('.user_pw').val().length;
+        var userIdLength = $(".user_id").val().length;
+        var userPwLength = $(".user_pw").val().length;
 
         if (userIdLength > 0 && userPwLength > 0) {
             $(".btn_login").addClass("on");
@@ -541,25 +540,6 @@ var commonUi = {
             }
         }
     },
-    imgPinchEvent: function() {
-        var imgBox = $(".img_wrap").find(".img_box")[0];
-        var hammertime = new Hammer(imgBox);
-
-        var scaleFactor = 1;
-        var lastScaleFactor = 1;
-
-        hammertime.get('pinch').set({ enable: true });
-
-        hammertime.on('pinch', function(ev) {
-            console.log('Pinch scale:', ev.scale);
-            scaleFactor = Math.max(1, Math.min(lastScaleFactor * ev.scale, 3));
-            $(imgBox).css('transform', 'scale(' + scaleFactor + ')');
-        });
-
-        hammertime.on('pinchend', function(ev) {
-            lastScaleFactor = scaleFactor;
-        });
-    }
 };
 
 
