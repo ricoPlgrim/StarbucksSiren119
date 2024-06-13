@@ -1834,6 +1834,9 @@ section.board .board_conts .img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
+section.bookmark .cm_type_list:after {
+  background: linear-gradient(0deg, #f5f5f5 9.03%, #e9e9e9 100%);
+}
 section.bookmark .cm_tab_panel {
   height: 100%;
 }
@@ -4623,11 +4626,19 @@ section.message_detail > .inner {
   }
 }
 section.message_detail > .inner .team_contents {
-  padding-top: 60px;
+  padding-top: 20px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents {
-    padding-top: 8vw;
+    padding-top: 2.6666666667vw;
+  }
+}
+section.message_detail > .inner .team_contents .select_title {
+  padding-top: 10px;
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .select_title {
+    padding-top: 1.3333333333vw;
   }
 }
 section.message_detail > .inner .team_contents .select_title .basic {
@@ -4670,11 +4681,11 @@ section.message_detail > .inner .team_contents .checkbox_list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 80px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .checkbox_list {
-    margin-top: 5.3333333333vw;
+    margin-top: 10.6666666667vw;
   }
 }
 section.message_detail > .inner .team_contents .checkbox_list li {
@@ -5701,6 +5712,14 @@ section.searh .searh_contents .search_list_box .no_list {
 @media screen and (max-width: 750px) {
   section.searh .searh_contents .search_list_box .no_list {
     font-size: 3.4666666667vw;
+  }
+}
+section.filter .cm_tab_panel .panel_list > li .inner {
+  padding-bottom: 350px;
+}
+@media screen and (max-width: 750px) {
+  section.filter .cm_tab_panel .panel_list > li .inner {
+    padding-bottom: 46.6666666667vw;
   }
 }
 
@@ -7881,10 +7900,18 @@ section.searh .searh_contents .search_list_box .no_list {
   width: 100%;
   max-width: 750px;
   background: #fff;
+  box-shadow: unset;
+  border-top: 2px solid #eee;
+  box-shadow: 0 -1px 5px 0px #e5e5e5;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_bottom.filter {
     max-width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_bottom.filter {
+    border-top: 0.2666666667vw solid #eee;
   }
 }
 .cm_tab_bottom.filter .button_grop.bottom .inner button {

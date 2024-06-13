@@ -45,6 +45,12 @@ var _btnTypeList;
 var _rowScrolLBox;
 var _btnBookmark;
 
+var isAnimating = {
+    main: false,
+    sub: false
+};
+
+
 var commonUi = {
 
     init: function () {
@@ -92,8 +98,12 @@ var commonUi = {
     addEvent: function () {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
-        _wrap.on("scroll", commonUi.scrollEvent);
-        _w.on("scroll", commonUi.scrollEvent);
+        if ($("#wrap").hasClass("home")) {
+            _wrap.on("scroll", commonUi.scrollEvent);
+        } else {
+            _w.on("scroll", commonUi.scrollEvent);
+        }
+
         _w.on("scroll", commonUi.headerScroll);
 
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
@@ -147,7 +157,6 @@ var commonUi = {
 
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
-        console.log(_sT);
         if (_sT > 80) {
             _scrollTopButton.fadeIn();
         } else {
@@ -163,19 +172,34 @@ var commonUi = {
     },
 
     scrollTopClick: function () {
-        _wrap.animate({
-            scrollTop: 0
-        }, 0);
-        return false;
+        if ($("#wrap").hasClass("home")) {
+            // 메인 페이지일 경우
+            commonUi.animateScroll(_wrap, 0, 'main');
+        } else {
+            // 서브 페이지일 경우
+            commonUi.animateScroll($('html, body'), 0, 'sub');
+        }
     },
 
+
+    animateScroll: function (target, duration, type) {
+        if (!isAnimating[type]) {
+            isAnimating[type] = true;
+            target.animate({
+                scrollTop: 0
+            }, duration, function() {
+                isAnimating[type] = false;
+            });
+        }
+    },
+  
     gnbBtnClick: function () {
         _gnb.css("display", "block");
         _htmlBody.css("overflow", "hidden");
     },
 
     gnbCloseClick: function () {
-        _htmlBody.css("overflow", "auto");
+        _htmlBody.css("overflow", "");
         _gnb.css("display", "none");
     },
 
@@ -193,7 +217,7 @@ var commonUi = {
         var layerName = "#" + popupId;
 
         $(".sheet_wrap").removeClass("open");
-        $("html, body").css("overflow", "auto");
+        $("html, body").css("overflow", "");
 
         setTimeout(function () {
             $(layerName).removeClass("open");
@@ -208,7 +232,6 @@ var commonUi = {
     },
 
     startDateValue: function () {
-        console.log("qwelmwqklenmklwqnejkqwnejkwqnejkqwnjkeneq");
         var selectedDate = $(this).val();
         $(".date_start").find(".date_text").text(selectedDate);
     },
@@ -340,6 +363,7 @@ var commonUi = {
     },
     openPopup: function (targetName) {
         var layerName = "#" + targetName;
+        var closeTimeout; 
 
         $("body").find(layerName).addClass("open");
         $("body").css("overflow", "hidden");
@@ -356,14 +380,15 @@ var commonUi = {
         });
 
         function closePopup(layerName) {
+            clearTimeout(closeTimeout);
             $("body").find(layerName).removeClass("open");
             $("body").css("overflow", "scroll");
         }
 
         //3초 이후 토스트 팝업 삭제
-        setTimeout(function () {
+        closeTimeout = setTimeout(function () {
             closePopup(layerName);
-        }, 3000)
+        }, 3000);
     },
 
 
@@ -410,28 +435,6 @@ var commonUi = {
         }
     },
 
-    mainSwichCahge: function ($type) {
-        commonUi.gnbCloseClick();
-        var contents = $(".sections").find("section");
-        var roundBar = $(".switch_round");
-        if ($type == 0) {
-            _switchBoxBtns.removeClass("on");
-            _switchBoxBtns.eq(0).addClass("on");
-            contents.removeClass("on");
-            contents.eq(0).addClass("on");
-            roundBar.addClass("left")
-            roundBar.removeClass("right")
-        } else {
-            _switchBoxBtns.removeClass("on");
-            _switchBoxBtns.eq(1).addClass("on");
-            contents.removeClass("on");
-            contents.eq(1).addClass("on");
-            roundBar.removeClass("left")
-            roundBar.addClass("right")
-        }
-
-
-    },
 
     setTabIndex: function (index) {
         localStorage.setItem('tabIndex', index);
@@ -474,7 +477,7 @@ var commonUi = {
     },
 
     sendBunCehck: function () {
-        if ($(".message_box").length === 0) {
+        if ($(".message_box").length === 0 || $(".message_box").css("display") === "none") {
             _scrollTopButton.addClass("on");
         } else {
             _scrollTopButton.removeClass("on");
