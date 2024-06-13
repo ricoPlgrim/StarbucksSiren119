@@ -1868,7 +1868,7 @@ section.board .board_conts .board_img_wrap {
   }
 }
 section.bookmark .cm_type_list:after {
-  background: linear-gradient(0deg, #f5f5f5 9.03%, #e9e9e9 100%);
+  background: linear-gradient(0deg, rgba(246, 246, 246, 0) 16.67%, #F2F2F2 100%);
 }
 section.bookmark .cm_tab_panel {
   height: 100%;
@@ -5762,6 +5762,23 @@ section.searh .searh_contents .search_list_box .no_list {
     font-size: 3.4666666667vw;
   }
 }
+section.searh .searh_contents .no_list {
+  padding-top: 280px;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  section.searh .searh_contents .no_list {
+    padding-top: 37.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.searh .searh_contents .no_list {
+    font-size: 4vw;
+  }
+}
 section.filter .cm_tab_panel .panel_list > li .inner {
   padding-bottom: 350px;
 }
@@ -7758,7 +7775,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 
 .cm_tab_bottom {
-  box-shadow: 0 -1px 5px 0px #BBB;
+  background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
 }
 .cm_tab_bottom .button_grop .inner {
   padding: 20px 0 20px 0;
