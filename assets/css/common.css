@@ -596,6 +596,42 @@ body {
   font-family: "Pretendard", sans-serif;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=date]::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+/* Internet Explorer */
+input[type=date]::-ms-clear {
+  display: none;
+}
+
+input[type=date]::-ms-expand {
+  display: none;
+}
+
+/* General fallback */
+input[type=date] {
+  position: relative;
+  z-index: 1;
+}
+
+input[type=date]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: white;
+}
+
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;

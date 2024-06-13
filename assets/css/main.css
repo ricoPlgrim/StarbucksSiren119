@@ -598,6 +598,42 @@ body {
   font-family: "Pretendard", sans-serif;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=date]::-moz-calendar-picker-indicator {
+  display: none;
+}
+
+/* Internet Explorer */
+input[type=date]::-ms-clear {
+  display: none;
+}
+
+input[type=date]::-ms-expand {
+  display: none;
+}
+
+/* General fallback */
+input[type=date] {
+  position: relative;
+  z-index: 1;
+}
+
+input[type=date]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: white;
+}
+
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
@@ -7914,12 +7950,21 @@ section.filter .cm_tab_panel .panel_list > li .inner {
     border-top: 0.2666666667vw solid #eee;
   }
 }
-.cm_tab_bottom.filter .button_grop.bottom .inner button {
+.cm_tab_bottom.filter .button_grop.bottom .inner .cm_btn_round {
   height: 100px;
 }
 @media screen and (max-width: 750px) {
-  .cm_tab_bottom.filter .button_grop.bottom .inner button {
+  .cm_tab_bottom.filter .button_grop.bottom .inner .cm_btn_round {
     height: 13.3333333333vw;
+  }
+}
+.cm_tab_bottom.filter .button_grop.bottom .inner .cm_btn_round .text {
+  font-size: 32px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  .cm_tab_bottom.filter .button_grop.bottom .inner .cm_btn_round .text {
+    font-size: 4.2666666667vw;
   }
 }
 .cm_tab_bottom.filter .dimd {
@@ -8659,7 +8704,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 .cm_date_contents .date_setting {
   display: flex;
   margin-top: 10px;
-  gap: 14px;
+  gap: 10px;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting {
@@ -8668,7 +8713,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting {
-    gap: 1.8666666667vw;
+    gap: 1.3333333333vw;
   }
 }
 .cm_date_contents .date_setting .date_start,
@@ -8680,6 +8725,8 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
@@ -8743,42 +8790,41 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 .cm_date_contents .date_setting .date_start input,
 .cm_date_contents .date_setting .date_end input {
   position: absolute;
-  top: 12px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 0;
   background: url("../images/icons/icon_calendar.png") 0 0 no-repeat;
   background-size: 48px auto;
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start input,
-  .cm_date_contents .date_setting .date_end input {
-    top: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start input,
-  .cm_date_contents .date_setting .date_end input {
-    right: 2.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start input,
-  .cm_date_contents .date_setting .date_end input {
-    width: 6.4vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_setting .date_start input,
-  .cm_date_contents .date_setting .date_end input {
-    height: 6.4vw;
-  }
+  background-position: 254px 12px;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start input,
   .cm_date_contents .date_setting .date_end input {
     background-size: 6.4vw auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_setting .date_start input,
+  .cm_date_contents .date_setting .date_end input {
+    background-position: 33.8666666667vw 1.6vw;
+  }
+}
+.cm_date_contents .date_setting .date_start.disabled,
+.cm_date_contents .date_setting .date_end.disabled {
+  pointer-events: none;
+}
+.cm_date_contents .date_setting .date_start.active,
+.cm_date_contents .date_setting .date_end.active {
+  border-radius: 8px;
+  border: 2px solid #333;
+  background: #fff;
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_setting .date_start.active,
+  .cm_date_contents .date_setting .date_end.active {
+    border: 0.2666666667vw solid #333;
   }
 }
 
