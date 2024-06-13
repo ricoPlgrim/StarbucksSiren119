@@ -1120,8 +1120,9 @@
 }
 
 .cm_tab_bottom {
-    box-shadow:  0 -1px 5px 0px $medium-gray;
-   
+    // box-shadow:  0 -1px 5px 0px $medium-gray;
+    background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+    
     .button_grop {
         .inner {
             @include vp(padding, 20px 0 20px 0);
