@@ -236,8 +236,21 @@ var commonUi = {
         var index = $(this).index();
         _bottomSheetDateList.removeClass("on");
         _bottomSheetDateList.eq(index).addClass("on");
-
+        //직접입력시
+        if (index == 3) {
+            commonUi.toggleDateFields(true);
+        } else {
+            commonUi.toggleDateFields(false);
+        }
     },
+     toggleDateFields: function (isActive) {
+        const action = isActive ? "removeClass" : "addClass";
+        const reverseAction = isActive ? "addClass" : "removeClass";
+        $(".date_start, .date_end").removeClass("disabled active");
+        $(".date_start, .date_end")[action]("disabled");
+        $(".date_start, .date_end")[reverseAction]("active");
+    },
+
 
     startDateValue: function () {
         var selectedDate = $(this).val();
