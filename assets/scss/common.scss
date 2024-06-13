@@ -1228,8 +1228,12 @@
         .button_grop {
             &.bottom {
                 .inner {
-                    button { 
+                    .cm_btn_round { 
                         @include vp(height, 100px);
+                        .text{
+                            @include vp(font-size, 32px); 
+                            font-weight: $fw7;
+                        }
                     }
                 }
             }
@@ -1685,7 +1689,7 @@
     .date_setting {
         display: flex;
         @include vp(margin-top, 10px);
-        @include vp(gap, 14px);
+        @include vp(gap, 10px);
 
         .date_start,
         .date_end {
@@ -1696,7 +1700,6 @@
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
             box-sizing: border-box;
-
             span {
                 @include vp(padding-left, 40px);
                 font-family: "Pretendard Variable";
@@ -1717,6 +1720,14 @@
                 border: 0;
                 background: url('../images/icons/icon_calendar.png') 0 0 no-repeat;
                 @include vp(background-size, 48px auto);
+            }
+            &.disabled{
+                pointer-events: none;
+            }
+            &.active{
+                border-radius: 8px;
+                @include vp(border, 2px solid $dark-gray );
+                background: $white;
             }
         }
     }
