@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <main id="wrap" class="sub">
-        <header class="common">
+    <main id="wrap" class="sub not">
+        <header class="common not">
             <button class="btn_back" onclick='history.back(-1); return false;'></button>
             <h1>북마크</h1>
         </header>
@@ -1429,12 +1429,13 @@
             </div>
         </section>
 
-        <aside class="scrolltop_box on">
+        <!--bottom buttons-->
+        <aside class="scrolltop_box ">
             <a href="javascript:;" class="btn_top">
                 <span class="blind">상단으로 이동</span>
             </a>
-        </aside>
-        <!--재난 문자 버튼 -->
+            <span class="arrow"></span>
+        </aside>  
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>

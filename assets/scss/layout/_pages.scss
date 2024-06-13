@@ -134,6 +134,9 @@ section {
         }
         .cm_tab_panel {
             height: 100%;
+            &.on{
+                @include vp(padding-top, 86px); 
+            }
             .panel_list {
                 >li {
                     .inner {

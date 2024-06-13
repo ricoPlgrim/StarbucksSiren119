@@ -1886,6 +1886,14 @@ section.bookmark .cm_type_list:after {
 section.bookmark .cm_tab_panel {
   height: 100%;
 }
+section.bookmark .cm_tab_panel.on {
+  padding-top: 86px;
+}
+@media screen and (max-width: 750px) {
+  section.bookmark .cm_tab_panel.on {
+    padding-top: 11.4666666667vw;
+  }
+}
 section.bookmark .cm_tab_panel .panel_list > li .inner {
   padding: 48px 40px;
 }
@@ -7783,7 +7791,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   display: none;
 }
 .cm_tab_contents .cm_type_twodeps .cm_full_wrap .buttons_list.on {
-  display: block;
+  display: flex;
 }
 .cm_tab_contents .bar {
   position: absolute;
@@ -7906,24 +7914,11 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   background: #F6F6F6;
 }
 .cm_tab_panel.on {
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  width: 100%;
-  max-width: 750px;
-  transform: translateX(-50%);
-  height: 100vh;
-  height: 100dvh;
-  overflow: auto;
+  padding-top: 198px;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_panel.on {
-    top: 13.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_tab_panel.on {
-    max-width: 100vw;
+    padding-top: 26.4vw;
   }
 }
 

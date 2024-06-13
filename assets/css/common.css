@@ -1884,6 +1884,14 @@ section.bookmark .cm_type_list:after {
 section.bookmark .cm_tab_panel {
   height: 100%;
 }
+section.bookmark .cm_tab_panel.on {
+  padding-top: 86px;
+}
+@media screen and (max-width: 750px) {
+  section.bookmark .cm_tab_panel.on {
+    padding-top: 11.4666666667vw;
+  }
+}
 section.bookmark .cm_tab_panel .panel_list > li .inner {
   padding: 48px 40px;
 }
@@ -7904,11 +7912,11 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   background: #F6F6F6;
 }
 .cm_tab_panel.on {
-  padding-top: 85px;
+  padding-top: 198px;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_panel.on {
-    padding-top: 11.3333333333vw;
+    padding-top: 26.4vw;
   }
 }
 
