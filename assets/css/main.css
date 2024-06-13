@@ -4080,48 +4080,69 @@ section.login .login_wrap .login_box {
     padding: 26.6666666667vw 10.6666666667vw 10.6666666667vw;
   }
 }
-section.login .login_wrap .login_box > div {
+section.login .login_wrap .login_box .text_box {
   position: relative;
-}
-section.login .login_wrap .login_box > div input {
-  padding: 0px 84px 0px 40px;
   width: 670px;
   height: 100px;
-  border-radius: 12px;
-  border: 1px solid #AAA;
-  background: #fff;
-  font-size: 26px;
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div input {
-    padding: 0vw 11.2vw 0vw 5.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div input {
+  section.login .login_wrap .login_box .text_box {
     width: 89.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div input {
+  section.login .login_wrap .login_box .text_box {
     height: 13.3333333333vw;
   }
 }
+section.login .login_wrap .login_box .text_box:first-child {
+  margin-bottom: 20px;
+}
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div input {
-    border-radius: 1.6vw;
+  section.login .login_wrap .login_box .text_box:first-child {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+section.login .login_wrap .login_box .text_box input {
+  padding: 16px 76px 16px 30px;
+  border-radius: 16px;
+  font-size: 30px;
+  width: 112%;
+  height: 114%;
+  transform: scale(0.89);
+  transform-origin: left top;
+  border: 1px solid rgba(0, 0, 0, 0.1215686275);
+}
+@media screen and (max-width: 750px) {
+  section.login .login_wrap .login_box .text_box input {
+    padding: 2.1333333333vw 10.1333333333vw 2.1333333333vw 4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div input {
-    font-size: 3.4666666667vw;
+  section.login .login_wrap .login_box .text_box input {
+    border-radius: 2.1333333333vw;
   }
 }
-section.login .login_wrap .login_box > div input:focus {
+@media screen and (max-width: 750px) {
+  section.login .login_wrap .login_box .text_box input {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.login .login_wrap .login_box .text_box input {
+    width: 112%;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.login .login_wrap .login_box .text_box input {
+    height: 114%;
+  }
+}
+section.login .login_wrap .login_box .text_box input:focus {
   outline: 1px solid #000;
   font-weight: 600;
 }
-section.login .login_wrap .login_box > div .btn_delete {
+section.login .login_wrap .login_box .text_box .btn_delete {
   display: none;
   position: absolute;
   top: 0px;
@@ -4134,35 +4155,27 @@ section.login .login_wrap .login_box > div .btn_delete {
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div .btn_delete {
+  section.login .login_wrap .login_box .text_box .btn_delete {
     padding: 6.6666666667vw 5.6vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div .btn_delete {
+  section.login .login_wrap .login_box .text_box .btn_delete {
     width: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div .btn_delete {
+  section.login .login_wrap .login_box .text_box .btn_delete {
     height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div .btn_delete {
+  section.login .login_wrap .login_box .text_box .btn_delete {
     background-size: 4.2666666667vw auto;
   }
 }
-section.login .login_wrap .login_box > div .btn_delete.on {
+section.login .login_wrap .login_box .text_box .btn_delete.on {
   display: block;
-}
-section.login .login_wrap .login_box > div:first-child {
-  margin-bottom: 20px;
-}
-@media screen and (max-width: 750px) {
-  section.login .login_wrap .login_box > div:first-child {
-    margin-bottom: 2.6666666667vw;
-  }
 }
 section.login .login_wrap .login_box .auto_login {
   margin-top: 28px;
@@ -4170,6 +4183,14 @@ section.login .login_wrap .login_box .auto_login {
 @media screen and (max-width: 750px) {
   section.login .login_wrap .login_box .auto_login {
     margin-top: 3.7333333333vw;
+  }
+}
+section.login .login_wrap .login_box .auto_login input {
+  padding-left: 64px;
+}
+@media screen and (max-width: 750px) {
+  section.login .login_wrap .login_box .auto_login input {
+    padding-left: 8.5333333333vw;
   }
 }
 section.login .login_wrap .login_btn {
@@ -4206,10 +4227,11 @@ section.login .login_wrap .login_btn button {
 }
 section.login .login_wrap .login_btn button:first-child {
   background: #AAA;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5803921569);
 }
 section.login .login_wrap .login_btn button:first-child.on {
   background: #00A862;
+  color: #fff;
 }
 section.login .login_wrap .login_btn button:last-child {
   margin-top: 20px;
@@ -5692,20 +5714,44 @@ section.searh .searh_contents .search_list_box .no_list {
     max-width: 100vw;
   }
 }
-#wrap.setting {
-  padding-top: 112px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.setting {
-    padding-top: 14.9333333333vw;
-  }
-}
 #wrap.sub {
   padding-top: 112px;
 }
 @media screen and (max-width: 750px) {
   #wrap.sub {
     padding-top: 14.9333333333vw;
+  }
+}
+#wrap.etc .scrolltop_box {
+  bottom: 314px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.etc .scrolltop_box {
+    bottom: 41.8666666667vw;
+  }
+}
+#wrap.etc .scrolltop_box.on {
+  bottom: 160px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.etc .scrolltop_box.on {
+    bottom: 21.3333333333vw;
+  }
+}
+#wrap.report .scrolltop_box {
+  bottom: 314px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.report .scrolltop_box {
+    bottom: 41.8666666667vw;
+  }
+}
+#wrap.report .scrolltop_box.on {
+  bottom: 160px;
+}
+@media screen and (max-width: 750px) {
+  #wrap.report .scrolltop_box.on {
+    bottom: 21.3333333333vw;
   }
 }
 
@@ -6312,7 +6358,7 @@ section.searh .searh_contents .search_list_box .no_list {
 .layer_m_popup .pop_cont01 {
   padding: 80px 40px;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 40px;
   right: 40px;
   transform: translate(0, -50%);
@@ -6414,7 +6460,13 @@ section.searh .searh_contents .search_list_box .no_list {
   top: 0px;
   min-height: 100vh;
   width: 100%;
+  width: 750px;
   z-index: 999;
+}
+@media screen and (max-width: 750px) {
+  .layer_toast {
+    width: 100vw;
+  }
 }
 .layer_toast.open {
   display: block;

@@ -82,7 +82,7 @@ var commonUi = {
         _deleteAllBtn = $(".btn_all_delete");
         _btnTextDelete = $(".btn_text_delete");
         _inputBoxTarget = $(".input_box");
-        _loginInPut = $(".login_box").find(".user_id");
+        _loginInPut = $(".login_box").find("input");
         _btnTypeClose = $(".cm_btn_list").find(".btn_close");
         _rowScrolLBox = $(".cm_btn_list");
         _btnBookmark = $(".btn_bookmark");
@@ -388,12 +388,13 @@ var commonUi = {
     inPutTextDeleteClick: function () {
         _searchInput.val("");
         $(this).css("display", "none");
-
     },
 
     loginValueCheck: function () {
-        var inputLength = $(this).val().length;
-        if (inputLength > 0) {
+        var userIdLength = $('.user_id').val().length;
+        var userPwLength = $('.user_pw').val().length;
+
+        if (userIdLength > 0 && userPwLength > 0) {
             $(".btn_login").addClass("on");
         } else {
             $(".btn_login").removeClass("on");

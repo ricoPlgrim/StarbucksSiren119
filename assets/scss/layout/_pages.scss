@@ -1164,18 +1164,22 @@ section {
         .login_wrap {
             .login_box {
                 @include vp(padding, 200px 80px 80px);
-
-                &>div {
+                .text_box {
                     position: relative;
-
+                    @include vp(width, 670px);
+                    @include vp(height, 100px);
+                    &:first-child {
+                        @include vp(margin-bottom, 20px);
+                    }
                     input {
-                        @include vp(padding, 0px 84px 0px 40px);
-                        @include vp(width, 670px);
-                        @include vp(height, 100px);
-                        @include vp(border-radius, 12px);
-                        border: 1px solid $light-gray-1;
-                        background: $white;
-                        @include vp(font-size, $f13);
+                        @include vp(padding, 16px 76px 16px 30px);
+                        @include vp(border-radius, 16px);
+                        @include vp(font-size, $f15);
+                        @include vp(width, 112%);
+                        @include vp(height, 114%);
+                        transform: scale(0.89);
+                        transform-origin: left top;
+                        border: 1px solid #0000001F;
 
                         &:focus {
                             outline: 1px solid $black;
@@ -1200,13 +1204,12 @@ section {
                         }
                     }
 
-                    &:first-child {
-                        @include vp(margin-bottom, 20px);
-                    }
                 }
-
                 .auto_login {
                     @include vp(margin-top, 28px);
+                    input{
+                        @include vp(padding-left, 64px);
+                    }
                 }
             }
 
@@ -1224,10 +1227,11 @@ section {
 
                     &:first-child {
                         background: $light-gray-1;
-                        color: $white;
+                        color: #FFFFFF94;
 
                         &.on {
                             background: $green;
+                            color: $white;
                         }
                     }
 
