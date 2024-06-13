@@ -45,9 +45,6 @@ var _btnTypeList;
 var _rowScrolLBox;
 var _btnBookmark;
 
-var _startDateBox;
-var _endDateBox;
-
 var isAnimating = {
     main: false,
     sub: false
@@ -97,8 +94,6 @@ var commonUi = {
         _btnBookmark = $(".btn_bookmark");
         _wrap = $("#wrap");
 
-        _startDateBox = $( ".date_start" );
-        _endDateBox = $( ".date_end" );
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
@@ -121,7 +116,6 @@ var commonUi = {
         });
         _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick); //달력 버튼 온오프
 
-        _startDateInput.on("click", commonUi.startDateOpen); //시작 달력값 벨류값 
         _startDateInput.on("change", commonUi.startDateValue); //시작 달력값 벨류값 
         _endDateInput.on("change", commonUi.endDateValue); // 끝 달력값 벨류값
 
@@ -143,9 +137,6 @@ var commonUi = {
         _rowScrolLBox.on("scroll", commonUi.rowScrollBoxCheck);
         _btnBookmark.on("click", commonUi.btnBookMarkClick);
 
-
-        _startDateBox.on( "click",   commonUi.startDateBoxClick );
-        _endDateBox.on( "click",   commonUi.endDateBoxClick );
         commonUi.tabActivation(); //탭영역 로드 체크 순서
         commonUi.sendBunCehck();
 
@@ -245,17 +236,13 @@ var commonUi = {
         }
     },
      toggleDateFields: function (isActive) {
-        var action = isActive ? "removeClass" : "addClass";
-        var reverseAction = isActive ? "addClass" : "removeClass";
+        const action = isActive ? "removeClass" : "addClass";
+        const reverseAction = isActive ? "addClass" : "removeClass";
         $(".date_start, .date_end").removeClass("disabled active");
         $(".date_start, .date_end")[action]("disabled");
         $(".date_start, .date_end")[reverseAction]("active");
     },
 
-    startDateOpen: function () {
-        var selectedDate = $(this).val();
-        $(".date_start").find(".date_text").text(selectedDate);
-    },
 
     startDateValue: function () {
         var selectedDate = $(this).val();
@@ -507,18 +494,6 @@ var commonUi = {
             _scrollTopButton.addClass("on");
         } else {
             _scrollTopButton.removeClass("on");
-        }
-    },
-
-
-    startDateBoxClick: function(){
-        if( $( this ).hasClass( "active" ) ){
-            _startDateInput.trigger("click");
-        }
-    },
-    endDateBoxClick: function(){
-        if( $( this ).hasClass( "active" ) ){
-            _endDateInput.trigger("click");
         }
     }
 };
