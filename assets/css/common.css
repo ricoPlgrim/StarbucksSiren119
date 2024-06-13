@@ -2377,6 +2377,8 @@ section.report .create_form .form_box .form_list li .text {
 }
 section.report .create_form .form_box .form_list li.text_box {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 500px;
   height: 64px;
 }
@@ -2462,6 +2464,86 @@ section.report .create_form .form_box .form_list li.text_box .btn_delete {
 }
 section.report .create_form .form_box .form_list li.text_box .btn_delete.on {
   display: block;
+}
+section.report .create_form .form_box .form_list li.text_box .result_box {
+  display: none;
+  padding: 28px;
+  width: 536px;
+  height: auto;
+  background: #fff;
+  z-index: 10;
+  border-radius: 16px;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .result_box {
+    padding: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .result_box {
+    width: 71.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .result_box {
+    border-radius: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .result_box {
+    border: 0.1333333333vw solid #000;
+  }
+}
+section.report .create_form .form_box .form_list li.text_box .result_box p {
+  color: #000;
+  line-height: 40px;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.text_box .result_box p {
+    line-height: 5.3333333333vw;
+  }
+}
+section.report .create_form .form_box .form_list li.text_box .result_box.on {
+  display: block;
+}
+section.report .create_form .form_box .form_list li.result_box {
+  padding: 28px;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -96px;
+  width: 534px;
+  height: auto;
+  background: #fff;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #000;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.result_box {
+    padding: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.result_box {
+    bottom: -12.8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.result_box {
+    width: 71.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list li.result_box {
+    border: 0.1333333333vw solid #000;
+  }
+}
+section.report .create_form .form_box .form_list li.result_box p {
+  color: #000;
+  line-height: normal;
 }
 section.report .create_form .form_box .form_list li.time_box button {
   position: relative;

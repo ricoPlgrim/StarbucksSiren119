@@ -408,6 +408,8 @@ section {
 
                         &.text_box {
                             position: relative;
+                            display: flex;
+                            flex-direction: column;
                             @include vp(width, 500px); 
                             @include vp(height, 64px); 
 
@@ -440,6 +442,44 @@ section {
                                 &.on {
                                     display: block;
                                 }
+                            }
+
+                            .result_box {
+                                display: none;
+                                @include vp(padding, 28px);
+                                @include vp(width, 536px); 
+                                height: auto;
+                                background: #fff;
+                                z-index: 10;
+                                @include vp(border-radius, 16px);
+                                background-color: $white;
+                                @include vp(border, 1px solid $black);
+                                p {
+                                    color: $black;
+                                    @include vp(line-height, 40px);
+                                }
+                                &.on {
+                                    display: block;
+                                }
+                            }
+    
+                        }
+
+                        &.result_box {
+                            @include vp(padding, 28px);
+                            position: absolute;
+                            left: 0px;
+                            right: 0px;
+                            @include vp(bottom, -96px);
+                            @include vp(width, 534px); 
+                            height: auto;
+                            background: #fff;
+                            z-index: 10;
+                            background-color: $white;
+                            @include vp(border, 1px solid $black);
+                            p {
+                                color: $black;
+                                line-height: normal;
                             }
                         }
 
