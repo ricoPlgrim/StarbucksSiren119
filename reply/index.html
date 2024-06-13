@@ -11,24 +11,159 @@
     <main id="wrap" class="sub">
         <header class="common">
             <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'></button>
-            <h1>답글 수정</h1>
+            <h1>답글 등록</h1>
         </header>
 
         <section class="detail">
-            <h2 class="blind">답글 수정 페이지</h2>
+            <h2 class="blind">답글 등록 페이지</h2>
             <div class="comment_wrap comment-detail">
-                <div class="reply_box">
-                    <div class="text01">
-                        5/8 해당사항 재확인 및 추가 공사 진행 <br/>
-                        옥상 인공잔디 제거 재확인 > 건조 후 바닥공사 진행, 천장마감 <br/>
-                        및 콘센트 원복 보수 진행
+                <div class="comment_header">
+                </div>
+                <div class="comment_box">
+                    <div class="info01">
+                        <span class="user"><span class="name">김스벅</span> · 운영10팀</span>
+                    </div>
+                    <div class="info02">
+                        <span class="date">2022.01.31</span>
+                        <span class="time">11:09</span>
+                        <span class="count">답글 <span class="num">3</span></span>
+                    </div>
+                    <div class="info03">
+                        5/7 정상영업 확인 완료 <br/>
+                        옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정 <br/>
+                        옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행 <br/>
+                        예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
                         <!-- 댓글 수정될 시 추가 -->
                         <span class="edited">(수정됨)</span>
                     </div>
-                    <div class="text02">
-                        <span class="user"><span class="name">고영민</span> · DM 운영 3팀</span>
-                        <span class="date">2024-05-08</span>
-                        <span class="time">12:45</span>
+                    <div class="btn_wrap">
+                        <div class="comment_edit">
+                            <span class="btn_edit">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    수정 / 삭제
+                                </a>
+                            </span>
+                        </div>  
+                    </div>
+                    <ul class="recomment_box">
+                        <li>
+                            <div class="text01">
+                                <span class="reply"></span>
+                                5/8 해당사항 재확인 및 추가 공사 진행
+                                옥상 인공잔디 제거 재확인 > 건조 후 바닥공사 진행
+                                천장마감 및 콘센트 원복 보수 진행
+                                 <!-- 댓글 수정될 시 추가 -->
+                                <span class="edited">(수정됨)</span>
+                            </div>
+                            <div class="text02">
+                                <div class="comment_info">
+                                    <span class="user"><span class="name">고영민</span>· DM 운영 3팀</span>
+                                    <span class="date">2024-05-08</span>
+                                    <span class="time">12:45</span>
+                               </div>
+                                <div class="comment_edit">
+                                    <span class="btn_edit">
+                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                            수정 / 삭제
+                                        </a>
+                                    </span>
+                                </div>  
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text01">
+                                <span class="reply"></span>
+                                5/10 추가 공사 진행확인
+                                바닥공사 완료 > 천장마감 및 콘센트 원복 보수 진행
+                                <!-- 댓글 수정될 시 추가 -->
+                                <span class="edited">(수정됨)</span>
+                            </div>
+                            <div class="text02">
+                                <div class="comment_info">
+                                    <span class="user"><span class="name">민영희</span>· DM 운영 3팀</span>
+                                    <span class="date">2024-05-10</span>
+                                    <span class="time">16:05</span>
+                               </div>
+                                <div class="comment_edit">
+                                    <span class="btn_edit">
+                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                            수정 / 삭제
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text01">
+                                <span class="reply"></span>
+                                5/11 공사 마감 확인완료
+                                천장마감 및 콘센트 원복 보수 완료
+                            </div>
+                            <div class="text02">
+                               <div class="comment_info">
+                                    <span class="user"><span class="name">오주연</span>· DM 운영 7팀</span>
+                                    <span class="date">2024-05-11</span>
+                                    <span class="time">09:38</span>
+                               </div>
+                               <div class="comment_edit">
+                                <span class="btn_edit">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                        수정 / 삭제
+                                    </a>
+                                </span>
+                            </div>  
+                            </div>
+                        </li>
+                    </ul>
+                </div> 
+                <div class="comment_box">
+                    <div class="info01">
+                        <span class="user"><span class="name">정재형</span> · DM 운영 16팀</span>
+                    </div>
+                    <div class="info02">
+                        <span class="date">2022.01.31</span>
+                        <span class="time">11:09</span>
+                        <span class="count">답글 <span class="num">3</span></span>
+                    </div>
+                    <div class="info03">
+                        5/7 정상영업 확인 완료
+                        옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정
+                        옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행
+                        예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
+                    </div>
+                    <div class="btn_wrap">
+                        <div class="comment_edit">
+                            <span class="btn_edit">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    수정 / 삭제
+                                </a>
+                            </span>
+                        </div>  
+                    </div>
+                </div>
+                <div class="comment_box">
+                    <div class="info01">
+                        <span class="user"><span class="name">김혜윤</span> · DM 운영 8팀</span>
+                    </div>
+                    <div class="info02">
+                        <span class="date">2022.01.31</span>
+                        <span class="time">11:09</span>
+                        <span class="count">답글 <span class="num">3</span></span>
+                    </div>
+                    <div class="info03">
+                        5/7 정상영업 확인 완료
+                        옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정
+                        옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행
+                        예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
+                    </div>
+                    <div class="btn_wrap">
+                        <div class="comment_edit">
+                            <span class="btn_edit">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    수정 / 삭제
+                                </a>
+                            </span>
+                        </div>  
                     </div>
                 </div> 
             </div>
@@ -52,10 +187,32 @@
             </div>
         </div>
 
+         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
+         <aside class="bottom_sheet" id="commentBtnPop">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="btn_comment_contents">
+                            <div class="btn_box">
+                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'">
+                                    <span class="btn_edit">수정</span>
+                                </button>
+                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                    <span class="btn_delete">삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
+
         <!-- 댓글 등록 토스트 팝업 -->
         <div class="layer_toast" id="commentCompletePop">
             <div class="pop_cont01">
-                <p class="text">답글이 수정되었습니다.</p>
+                <p class="text">답글이 등록되었습니다.</p>
             </div>
         </div>
 
