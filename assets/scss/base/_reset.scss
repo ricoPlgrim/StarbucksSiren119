@@ -584,7 +584,8 @@ template {
 
   body{ font-family: 'Pretendard', sans-serif;  }
 
-  input[type="date"]::-webkit-calendar-picker-indicator {
+ /* Chrome, Safari, Edge, Opera */
+input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
 }
@@ -602,19 +603,17 @@ input[type="date"]::-ms-expand {
     display: none;
 }
 
-/* General fallback */
 input[type="date"] {
     position: relative;
     z-index: 1;
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    font-size: 1em;
+    appearance: none;
 }
 
-// input[type="date"]::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     z-index: 2;
-//     background: white;
-// }
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

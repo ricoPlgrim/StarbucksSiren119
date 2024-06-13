@@ -596,6 +596,7 @@ body {
   font-family: "Pretendard", sans-serif;
 }
 
+/* Chrome, Safari, Edge, Opera */
 input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
@@ -615,10 +616,19 @@ input[type=date]::-ms-expand {
   display: none;
 }
 
-/* General fallback */
 input[type=date] {
   position: relative;
   z-index: 1;
+  background: none;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  font-size: 1em;
+  appearance: none;
+}
+
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 @font-face {
