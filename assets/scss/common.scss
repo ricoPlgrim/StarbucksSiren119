@@ -1661,18 +1661,19 @@
 
         li {
             @include vp(width, 160px);
+            @include vp(height, 80px);
             @include vp(border-radius, 8px);
             @include vp(border, 2px solid rgba(0, 0, 0, 0.12));
             box-sizing: border-box;
-
             button {
                 width: inherit;
-                @include vp(padding, 30px 22px);
+                // @include vp(padding, 30px 22px);
                 @include vp(font-size, $f14);
-                line-height: normal;
+                @include vp(line-height, 77px);
                 background: none;
                 font-weight: $fw6;
                 color: $black-58;
+                @include vp(letter-spacing, -1px);
             }
 
             &.on {
@@ -1695,7 +1696,7 @@
         .date_end {
             position: relative;
             @include vp(width, 330px);
-            @include vp(height, 76px);
+            @include vp(height, 80px);
             @include vp(border-radius, 12px);
             background: $light-gray-5;
             @include vp(border, 2px solid $black-12 );
@@ -1710,7 +1711,7 @@
                 font-weight: $fw4;
                 color: $black;
                 opacity: .6;
-                @include vp(line-height, 70px);
+                @include vp(line-height, 77px);
             }
 
             input {
