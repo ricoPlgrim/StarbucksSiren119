@@ -116,8 +116,11 @@ section {
                 }
             }
 
-            .img_wrap {
-                @include vp(margin-top, 40px);
+            .board_img_list {
+                @include vp(padding-bottom, 40px);
+                .img_wrap {
+                    @include vp(margin-top, 40px);
+                }
             }
         }
     }

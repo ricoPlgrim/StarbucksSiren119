@@ -1859,11 +1859,19 @@ section.board .board_conts .text_wrap p {
     font-size: 3.4666666667vw;
   }
 }
-section.board .board_conts .img_wrap {
+section.board .board_conts .board_img_list {
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 750px) {
+  section.board .board_conts .board_img_list {
+    padding-bottom: 5.3333333333vw;
+  }
+}
+section.board .board_conts .board_img_list .img_wrap {
   margin-top: 40px;
 }
 @media screen and (max-width: 750px) {
-  section.board .board_conts .img_wrap {
+  section.board .board_conts .board_img_list .img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
