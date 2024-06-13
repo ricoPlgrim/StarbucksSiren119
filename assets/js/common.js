@@ -10,7 +10,6 @@ var _stickyTarget;
 var _popBtn;
 var _textFormBtn;
 var _fileUploadBtn;
-var _boradImg;
 var _wrap;
 
 var switchBox = $(".header_switchbox");
@@ -57,6 +56,7 @@ var commonUi = {
 
     init: function () {
         commonUi.loadEvent();
+        commonUi.imgPinchEvent();
     },
     create: function () {
         _w = $(window);
@@ -72,8 +72,6 @@ var commonUi = {
         _textFormBtn = $(".text_box").find("input, textarea");
         // 사진 파일 업로드
         _fileUploadBtn = $(".file_upload_wrap").find("#imageFile");
-        // 게시물 이미지 
-        _boradImg = $(".board_img_wrap").find(".img_box");
 
         _switchBox = $(".header_switchbox");
         if (switchBox.length > 0) {
@@ -128,7 +126,6 @@ var commonUi = {
         _typeBtns.on("click", commonUi.typeBtnsClick); //탭 영역 활성화
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);  // input, textarea 이벤트
         _fileUploadBtn.on("change", commonUi.fileImgUpload); // 파일 업로드
-        _boradImg.on("touchstart", commonUi.boardImgPinch); // 이미지 pinch zoom
 
         _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
@@ -544,51 +541,24 @@ var commonUi = {
             }
         }
     },
-    boardImgPinch: function(e) {
-        var img = $(this).find("img");
-        var scaling = false;
-        var setDist = 0;
-        var imgWidth = img.width();
-        var imgHeight = img.height();
-    
-        if(e.originalEvent.touches.length  === 2){
-            scaling  = true;
-        }
-    
-        img.on("touchmove", function(e) {
-            if (scaling && e.originalEvent.touches.length === 2) {
-                var touch1 = e.originalEvent.touches[0];
-                var touch2 = e.originalEvent.touches[1];
-                var dist = Math.hypot(
-                    touch1.pageX - touch2.pageX,
-                    touch1.pageY - touch2.pageY
-                );
-                dist = Math.floor(dist / 20);
-    
-                if (setDist == 0) {
-                    setDist = dist;
-                }
-    
-                if (setDist < dist) {
-                    $(this).css("width", 1.1 * imgWidth);
-                    $(this).css("height", 1.1 * imgHeight);
-                    setDist = dist;
-                } else if (setDist > dist) {
-                    $(this).css("width", 0.9 * imgWidth);
-                    $(this).css("height", 0.9 * imgHeight);
-                    setDist = dist;
-                }
-    
-                imgWidth = $(this).width();
-                imgHeight = $(this).height();
-            }
-        });
-    
-        img.on("touchend", function() {
-            scaling = false;
-            setDist = 0;
+    imgPinchEvent: function() {
+        var imgBox = $(".img_wrap").find(".img_box")[0];
+        var hammertime = new Hammer(imgBox);
+
+        var scaleFactor = 1;
+        var lastScaleFactor = 1;
+
+        hammertime.get('pinch').set({ enable: true });
+
+        hammertime.on('pinch', function(ev) {
+            console.log('Pinch scale:', ev.scale);
+            scaleFactor = Math.max(1, Math.min(lastScaleFactor * ev.scale, 3));
+            $(imgBox).css('transform', 'scale(' + scaleFactor + ')');
         });
 
+        hammertime.on('pinchend', function(ev) {
+            lastScaleFactor = scaleFactor;
+        });
     }
 };
 

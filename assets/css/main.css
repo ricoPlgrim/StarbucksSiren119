@@ -1861,11 +1861,11 @@ section.board .board_conts .text_wrap p {
     font-size: 3.4666666667vw;
   }
 }
-section.board .board_conts .board_img_wrap {
+section.board .board_conts .img_wrap {
   margin-top: 40px;
 }
 @media screen and (max-width: 750px) {
-  section.board .board_conts .board_img_wrap {
+  section.board .board_conts .img_wrap {
     margin-top: 5.3333333333vw;
   }
 }
@@ -8671,6 +8671,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 .cm_date_contents .date_list li {
   width: 160px;
+  height: 80px;
   border-radius: 8px;
   border: 2px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -8678,6 +8679,11 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_list li {
     width: 21.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_list li {
+    height: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -8692,21 +8698,26 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 .cm_date_contents .date_list li button {
   width: inherit;
-  padding: 30px 22px;
   font-size: 28px;
-  line-height: normal;
+  line-height: 77px;
   background: none;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.58);
-}
-@media screen and (max-width: 750px) {
-  .cm_date_contents .date_list li button {
-    padding: 4vw 2.9333333333vw;
-  }
+  letter-spacing: -1px;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_list li button {
     font-size: 3.7333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_list li button {
+    line-height: 10.2666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_date_contents .date_list li button {
+    letter-spacing: -0.1333333333vw;
   }
 }
 .cm_date_contents .date_list li.on {
@@ -8740,7 +8751,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 .cm_date_contents .date_setting .date_end {
   position: relative;
   width: 330px;
-  height: 76px;
+  height: 80px;
   border-radius: 12px;
   background: #F4F4F4;
   border: 2px solid rgba(0, 0, 0, 0.12);
@@ -8757,7 +8768,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start,
   .cm_date_contents .date_setting .date_end {
-    height: 10.1333333333vw;
+    height: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -8781,7 +8792,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   font-weight: 400;
   color: #000;
   opacity: 0.6;
-  line-height: 70px;
+  line-height: 77px;
 }
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start span,
@@ -8804,7 +8815,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 @media screen and (max-width: 750px) {
   .cm_date_contents .date_setting .date_start span,
   .cm_date_contents .date_setting .date_end span {
-    line-height: 9.3333333333vw;
+    line-height: 10.2666666667vw;
   }
 }
 .cm_date_contents .date_setting .date_start input,
