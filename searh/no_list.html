@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Siren119</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+
+<body>
+    <main id="wrap" >
+        <section class="searh">
+            <h2 class="blind">검색영역 페이지</h2>
+            <div class="input_contents">
+                <div class="input_box">
+                    <input type="text"  placeholder="검색어를 입력해 주세요" class="search_input">
+                    <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                </div>
+                <button class="btn_cancel" onclick='history.back(-1); return false;'>취소</button>
+            </div>
+            <div class="searh_contents">
+                <p class="no_list">검색결과가 없습니다.</p>
+                   
+            </div>             
+        </section>
+        
+    </main>
+    <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/lib/gsap.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/common.js"></script>
+</body>
+
+</html>
