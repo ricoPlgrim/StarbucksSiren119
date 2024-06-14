@@ -9183,22 +9183,10 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   background: #fff;
   box-shadow: 0 -1px 5px 0px #BBB;
   z-index: 20;
-  min-height: 160px;
-  max-height: 312px;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     padding: 2.6666666667vw 5.3333333333vw 8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment {
-    min-height: 21.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment {
-    max-height: 41.6vw;
   }
 }
 .cm_btn_comment .text_box {
