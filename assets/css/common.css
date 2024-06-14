@@ -5859,7 +5859,7 @@ section.searh .searh_contents .search_list_box .no_list {
     font-size: 3.4666666667vw;
   }
 }
-section.searh .searh_contents .no_list {
+section.searh .searh_contents .result {
   padding-top: 280px;
   color: #000;
   text-align: center;
@@ -5867,12 +5867,12 @@ section.searh .searh_contents .no_list {
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  section.searh .searh_contents .no_list {
+  section.searh .searh_contents .result {
     padding-top: 37.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.searh .searh_contents .no_list {
+  section.searh .searh_contents .result {
     font-size: 4vw;
   }
 }
@@ -9203,6 +9203,8 @@ section.filter .cm_tab_panel .depth_03.on {
   min-height: 160px;
   max-height: 312px;
   overflow: hidden;
+  min-height: 160px;
+  max-height: 312px;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
