@@ -428,6 +428,7 @@ section {
                                 transform-origin: left top;
                                 border: 1px solid #0000001F;
                                 &:focus {
+                                    border: none;
                                     outline: 1px solid $black;
                                 }
                             }

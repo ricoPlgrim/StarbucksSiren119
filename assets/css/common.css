@@ -2441,6 +2441,7 @@ section.report .create_form .form_box .form_list li.text_box input {
   }
 }
 section.report .create_form .form_box .form_list li.text_box input:focus {
+  border: none;
   outline: 1px solid #000;
 }
 section.report .create_form .form_box .form_list li.text_box .btn_delete {
