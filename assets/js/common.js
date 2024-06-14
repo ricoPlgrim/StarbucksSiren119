@@ -118,7 +118,7 @@ var commonUi = {
         }
 
         _w.on("scroll", commonUi.headerScroll);
-
+``
         _gnbBtn.on("click", commonUi.gnbBtnClick); //gnb 버튼 클릭
         _gnbCloseBtn.on("click", commonUi.gnbCloseClick); //gnb 닫기
         _scrollTopButton.on("click", commonUi.scrollTopClick); //하단 스크롤탑 버튼 클릭

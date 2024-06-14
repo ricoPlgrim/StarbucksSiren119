@@ -8108,11 +8108,11 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   }
 }
 .cm_tab_bottom .button_grop.bottom .inner {
-  padding: 40px 40px 62px 40px;
+  padding: 40px 40px 20px 40px;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_bottom .button_grop.bottom .inner {
-    padding: 5.3333333333vw 5.3333333333vw 8.2666666667vw 5.3333333333vw;
+    padding: 5.3333333333vw 5.3333333333vw 2.6666666667vw 5.3333333333vw;
   }
 }
 .cm_tab_bottom .button_grop.bottom .inner button {

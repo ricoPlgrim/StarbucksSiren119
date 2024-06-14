@@ -1269,7 +1269,7 @@
 
         &.bottom {
             .inner {
-                @include vp(padding, 40px 40px 62px 40px);
+                @include vp(padding, 40px 40px 20px 40px);
 
                 button {
                     @include vp(height, 50px);

@@ -7955,14 +7955,6 @@ section.filter .cm_tab_panel .panel_list > li .inner {
     padding-top: 27.7333333333vw;
   }
 }
-.cm_tab_panel.on.depsOpen {
-  padding-top: 332px;
-}
-@media screen and (max-width: 750px) {
-  .cm_tab_panel.on.depsOpen {
-    padding-top: 44.2666666667vw;
-  }
-}
 
 .cm_tab_bottom {
   background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
