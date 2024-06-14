@@ -1839,17 +1839,25 @@
 
  //하단 고정 댓글
  .cm_btn_comment {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    @include vp(padding, 20px 40px 60px);
     position: fixed;
     left: 0px;
     right: 0px;
     bottom: 0px;
-    @include vp(padding, 20px 40px 60px);
     background: $white;
     box-shadow: 0 -1px 5px 0px $medium-gray;
     z-index: 20;
+    @include vp(min-height, 160px);
+    @include vp(max-height, 312px);
 
     .text_box {
-        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         @include vp(padding, 24px 10px 0px 28px);
         @include vp(width, 526px);
         @include vp(border-radius, 16px);
@@ -1869,64 +1877,56 @@
 
         &.on {
             border: 1px solid $black;
-
             textarea {
-                @include vp(margin-bottom, -30px);
+                @include vp(margin-bottom, -20px);
             }
         }
 
         textarea {
-            @include vp(padding-right, 80px);
-            @include vp(width, 124%);
+            @include vp(padding-right, 8px);
+            @include vp(width, 100%);
             @include vp(min-height, 56px);
-            @include vp(max-height, 200px);
+            @include vp(max-height, 162px);
             @include vp(line-height, 40px);
-            @include vp(font-size, $f16);
+            @include vp(font-size, $f15);
             color: $black;
             outline: none;
             resize: none;
             border: none;
-            transform: scale(0.8125);
+            transform: scale(0.9);
             transform-origin: left top;
         }
 
-        .byte_num {
-            display: none;
-            position: absolute;
-            @include vp(left, 28px);
-            @include vp(height, 64px);
-            @include vp(bottom, 0px);
-            @include vp(font-size, $f13);
-            color: $light-gray-1;
-
-            &.on {
-                display: flex;
-                align-items: center;
+        .text_box_footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            .byte_num {
+                display: none;
+                @include vp(font-size, $f13);
+                color: $light-gray-1;
+                &.on {
+                    display: block;
+                }
             }
-        }
-
-        .btn_delete {
-            display: none;
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            @include vp(padding, 42px);
-            @include vp(width, 32px);
-            @include vp(height, 32px);
-            background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-            @include vp(background-size, 32px auto);
-            cursor: pointer;
-
-            &.on {
-                display: block;
+    
+            .btn_delete {
+                display: none;
+                @include vp(padding, 32px);
+                @include vp(width, 32px);
+                @include vp(height, 32px);
+                background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+                @include vp(background-size, 32px auto);
+                cursor: pointer;
+                &.on {
+                    display: block;
+                }
             }
         }
     }
 
     button {
-        position: absolute;
-        @include vp(bottom, 60px);
-        @include vp(right, 40px);
         @include vp(padding, 0px 44px);
         @include vp(height, 80px);
         @include vp(border-radius, 12px);

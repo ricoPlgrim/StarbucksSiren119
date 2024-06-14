@@ -9134,22 +9134,40 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 
 .cm_btn_comment {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px 40px 60px;
   position: fixed;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  padding: 20px 40px 60px;
   background: #fff;
   box-shadow: 0 -1px 5px 0px #BBB;
   z-index: 20;
+  min-height: 160px;
+  max-height: 312px;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     padding: 2.6666666667vw 5.3333333333vw 8vw;
   }
 }
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    min-height: 21.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    max-height: 41.6vw;
+  }
+}
 .cm_btn_comment .text_box {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 24px 10px 0px 28px;
   width: 526px;
   border-radius: 16px;
@@ -9184,35 +9202,35 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   border: 1px solid #000;
 }
 .cm_btn_comment .text_box.on textarea {
-  margin-bottom: -30px;
+  margin-bottom: -20px;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box.on textarea {
-    margin-bottom: -4vw;
+    margin-bottom: -2.6666666667vw;
   }
 }
 .cm_btn_comment .text_box textarea {
-  padding-right: 80px;
-  width: 124%;
+  padding-right: 8px;
+  width: 100%;
   min-height: 56px;
-  max-height: 200px;
+  max-height: 162px;
   line-height: 40px;
-  font-size: 32px;
+  font-size: 30px;
   color: #000;
   outline: none;
   resize: none;
   border: none;
-  transform: scale(0.8125);
+  transform: scale(0.9);
   transform-origin: left top;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box textarea {
-    padding-right: 10.6666666667vw;
+    padding-right: 1.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box textarea {
-    width: 124%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9222,7 +9240,7 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box textarea {
-    max-height: 26.6666666667vw;
+    max-height: 21.6vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9232,48 +9250,31 @@ section.filter .cm_tab_panel .panel_list > li .inner {
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box textarea {
-    font-size: 4.2666666667vw;
+    font-size: 4vw;
   }
 }
-.cm_btn_comment .text_box .byte_num {
+.cm_btn_comment .text_box .text_box_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.cm_btn_comment .text_box .text_box_footer .byte_num {
   display: none;
-  position: absolute;
-  left: 28px;
-  height: 64px;
-  bottom: 0px;
   font-size: 26px;
   color: #AAA;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .byte_num {
-    left: 3.7333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .byte_num {
-    height: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .byte_num {
-    bottom: 0vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .byte_num {
+  .cm_btn_comment .text_box .text_box_footer .byte_num {
     font-size: 3.4666666667vw;
   }
 }
-.cm_btn_comment .text_box .byte_num.on {
-  display: flex;
-  align-items: center;
+.cm_btn_comment .text_box .text_box_footer .byte_num.on {
+  display: block;
 }
-.cm_btn_comment .text_box .btn_delete {
+.cm_btn_comment .text_box .text_box_footer .btn_delete {
   display: none;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  padding: 42px;
+  padding: 32px;
   width: 32px;
   height: 32px;
   background: url("../images/btn/btn_login_delete.png") center center no-repeat;
@@ -9281,48 +9282,35 @@ section.filter .cm_tab_panel .panel_list > li .inner {
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .btn_delete {
-    padding: 5.6vw;
+  .cm_btn_comment .text_box .text_box_footer .btn_delete {
+    padding: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .btn_delete {
+  .cm_btn_comment .text_box .text_box_footer .btn_delete {
     width: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .btn_delete {
+  .cm_btn_comment .text_box .text_box_footer .btn_delete {
     height: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .cm_btn_comment .text_box .btn_delete {
+  .cm_btn_comment .text_box .text_box_footer .btn_delete {
     background-size: 4.2666666667vw auto;
   }
 }
-.cm_btn_comment .text_box .btn_delete.on {
+.cm_btn_comment .text_box .text_box_footer .btn_delete.on {
   display: block;
 }
 .cm_btn_comment button {
-  position: absolute;
-  bottom: 60px;
-  right: 40px;
   padding: 0px 44px;
   height: 80px;
   border-radius: 12px;
   font-size: 26px;
   color: rgba(255, 255, 255, 0.5803921569);
   background: #AAA;
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment button {
-    bottom: 8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment button {
-    right: 5.3333333333vw;
-  }
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment button {

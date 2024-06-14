@@ -292,7 +292,6 @@ var commonUi = {
         var textForm = This.parent();
         var textArea = This.is("textarea");
         var byteNum = textForm.find(".byte_num");
-        var byteHeight = byteNum.height();
         var textFormHeight = textForm.height();
 
         if (This.val().length < 1) {
@@ -302,7 +301,6 @@ var commonUi = {
                 textForm.removeClass("on");
                 byteNum.removeClass("on");
                 This.css("height", "auto");
-                textForm.css("padding-bottom", 0);
                 $("body").css("padding-bottom", 0);
             }
         } else {
@@ -313,7 +311,6 @@ var commonUi = {
                 byteNum.addClass("on");
                 This.css("height", "auto");
                 This.height(this.scrollHeight);
-                textForm.css("padding-bottom", byteHeight + "px");
                 $("body").css("padding-bottom", textFormHeight);
             }
         }
@@ -325,7 +322,7 @@ var commonUi = {
         }
 
         function deleteText() {
-            var parent = $(this).parent();
+            var parent = $(this).parent().parent();
             var textArea = parent.find("textarea");
             var inputField = parent.find("input");
 
