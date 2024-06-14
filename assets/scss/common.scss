@@ -1117,7 +1117,36 @@
 }
 
 .cm_tab_panel {
+    .depth_02 {
+        display: none;
+        @include vp(padding, 28px 40px);
+        align-items: center;
+        gap: 4px;
+        background-color: $light-gray-4;
 
+        >li {
+            button {
+                background-color: $white;
+
+                span {
+                    @include vp(padding, 20px);
+                    line-height: normal;
+                    font-weight: $fw4;
+                }
+            }
+
+            &.on {
+                button {
+                    border: 1px solid $green;
+
+                    span {
+                        color: $green;
+                        font-weight: $fw6;
+                    }
+                }
+            }
+        }
+    }
     // @include vp(max-height, 240px );
     // overflow: auto;
     .panel_list {
@@ -1155,7 +1184,7 @@
     }
 
     &.on{
-        @include vp(padding-top, 198px); 
+        @include vp(padding-top, 208px); 
     }
 }
 

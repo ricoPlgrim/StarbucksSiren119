@@ -2072,6 +2072,7 @@ section {
             .panel_list{
                 >li{
                     .inner{
+                        @include vp(padding-top, 60px ); 
                         @include vp(padding-bottom, 350px ); 
                     }
                 }

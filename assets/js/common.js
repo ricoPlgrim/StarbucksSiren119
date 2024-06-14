@@ -47,6 +47,11 @@ var _btnTypeList;
 var _rowScrolLBox;
 var _btnBookmark;
 
+
+var _lastSelectedStartDate;;
+var _lastSelectedEndDate;
+
+
 var isAnimating = {
     main: false,
     sub: false
@@ -99,6 +104,9 @@ var commonUi = {
         _btnBookmark = $(".btn_bookmark");
         _wrap = $("#wrap");
 
+        _lastSelectedStartDate = null;
+        _lastSelectedEndDate = null;
+
     },
     addEvent: function () {
         commonUi.resizeEvent(null);
@@ -122,7 +130,9 @@ var commonUi = {
         _bottomSheetDateList.on("click", commonUi.bottomSheetDateListClick); //달력 버튼 온오프
 
         _startDateInput.on("change", commonUi.startDateValue); //시작 달력값 벨류값 
+        _startDateInput.on("blur", commonUi.startValueBlur); //시작 달력값 설정값 없을때 
         _endDateInput.on("change", commonUi.endDateValue); // 끝 달력값 벨류값
+        _endDateInput.on("blur", commonUi.endDateBlur); // 마지막 달력값 설정값 없을때 
 
         _typeBtns.on("click", commonUi.typeBtnsClick); //탭 영역 활성화
         _textFormBtn.on("click focus propertychange change keyup paste", commonUi.textFormClick);  // input, textarea 이벤트
@@ -131,7 +141,7 @@ var commonUi = {
         _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
         _twoDepsMenu.on("click", commonUi.twoDepsMenuClick); //투댑스 버튼 클릭 이벤트
-        _twoDepsWrapMenu.on("click", commonUi.twoDepsWrapMenuClick); //투댑스 버튼 클릭 이벤트
+        _twoDepsWrapMenu.on("click", commonUi.twoDepsWrapMenuClick); //상단 픽시드 고정 투댑스 버튼 클릭 이벤트
         _subDepsMenu.on("click", commonUi.subDepsMenuClick);
 
         _searchInput.on("input", commonUi.inputTarget); //인풋이벤트 
@@ -250,15 +260,42 @@ var commonUi = {
         $(".date_start, .date_end")[reverseAction]("active");
     },
 
-
+    // 시작 날짜 선택 시 _lastSelectedStartDate 저장
     startDateValue: function () {
-        var selectedDate = $(this).val();
-        $(".date_start").find(".date_text").text(selectedDate);
+        _lastSelectedStartDate = $(this).val();
+        commonUi.updateSelectedDates();
+    },
+    
+      // 시작 날짜 input이 포커스를 잃을 때, 만약 날짜가 선택되지 않았다면 마지막 선택한 날짜로 설정
+    startValueBlur: function(){
+        if (!$(this).val() && _lastSelectedStartDate) {
+            $(this).val(_lastSelectedStartDate);
+        }
+        commonUi.updateSelectedDates();
     },
 
     endDateValue: function () {
-        var selectedDate = $(this).val();
-        $(".date_end").find(".date_text").text(selectedDate);
+        _lastSelectedEndDate = $(this).val();
+        commonUi.updateSelectedDates();
+       
+    },
+
+    // 시작 날짜 input이 포커스를 잃을 때, 만약 날짜가 선택되지 않았다면 마지막 선택한 날짜로 설정
+    endDateValueBlur: function(){
+        if (!$(this).val() && _lastSelectedEndDate) {
+            $(this).val(_lastSelectedEndDate);
+        }
+        commonUi.updateSelectedDates();
+    },
+
+    updateSelectedDates: function() {
+        if (_lastSelectedStartDate) {
+            $(".date_start").find(".date_text").text(_lastSelectedStartDate);
+        } 
+
+        if (_lastSelectedEndDate) {
+            $(".date_end").find(".date_text").text(_lastSelectedEndDate);
+        } 
     },
 
     updateBarPosition: function (button) {
@@ -271,8 +308,8 @@ var commonUi = {
         });
     },
 
-    typeBtnsClick: function () {
-
+    typeBtnsClick: function (e) {
+        e.preventDefault();
         var index = $(this).index();
         $(this).addClass("on").siblings().removeClass("on");
         commonUi.updateBarPosition($(this));
@@ -348,15 +385,15 @@ var commonUi = {
             }
         }
         
-        if (winTop >= $("section").offset().top ){
-            $(".cm_tab_contents").addClass('on');
-            $(".cm_tab_panel ").addClass('on');
-        } else {
-            $(".cm_tab_contents").removeClass('on');
-            $(".cm_tab_panel ").removeClass('on');
+        if( cHeader.hasClass( "not" )){
+            if (winTop >= $("section").offset().top ){
+                $(".cm_tab_contents").addClass('on');
+                $(".cm_tab_panel ").addClass('on');
+            } else {
+                $(".cm_tab_contents").removeClass('on');
+                $(".cm_tab_panel ").removeClass('on');
+            }
         }
-
-        
     },
     twoDepsMenuClick: function (e) {
         e.preventDefault();
@@ -372,13 +409,14 @@ var commonUi = {
         if (index > 0) {
             menuDepth02.show();
             menuDepth02.css("display", "flex");
+
         } else {
             menuDepth02.hide();
+     
         }
         commonUi.centerMenu(menuContainer, $(this));
     },
     twoDepsWrapMenuClick: function (e) {
-        console.log( "???" );
         e.preventDefault();
         var index = $(this).index();
         var menuContainer = $(this).closest(".buttons_list");
