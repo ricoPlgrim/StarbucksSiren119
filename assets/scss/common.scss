@@ -1881,6 +1881,7 @@
     z-index: 20;
     @include vp(min-height, 160px);
     @include vp(max-height, 312px);
+    overflow: hidden;
 
     .text_box {
         display: flex;
