@@ -3761,6 +3761,7 @@ section.detail .comment_wrap .comment_box {
 }
 section.detail .comment_wrap .comment_box:last-child {
   margin-bottom: 0px;
+  padding-bottom: 10px;
   border-bottom: none;
 }
 section.detail .comment_wrap .comment_box .info01 {
@@ -7806,10 +7807,10 @@ section.filter .cm_tab_panel .depth_03.on {
     height: 1.6vw;
   }
 }
-.cm_tab_contents .cm_type_twodeps .cm_full_wrap .buttons_list {
+.cm_tab_contents .cm_type_twodepth .cm_full_wrap .buttons_list {
   display: none;
 }
-.cm_tab_contents .cm_type_twodeps .cm_full_wrap .buttons_list.on {
+.cm_tab_contents .cm_type_twodepth .cm_full_wrap .buttons_list.on {
   display: flex;
 }
 .cm_tab_contents .bar {
@@ -9204,7 +9205,6 @@ section.filter .cm_tab_panel .depth_03.on {
   z-index: 20;
   min-height: 160px;
   max-height: 312px;
-  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
