@@ -322,10 +322,7 @@ html, body {
                 @include vp(height, 96px);
                 margin: 0 auto;
             }
-
-            &.open {
-                // bottom:-690px;
-            }
+          
         }
     }
 }
@@ -1900,7 +1897,8 @@ html, body {
     right: 0px;
     bottom: 0px;
     background: $white;
-    box-shadow: 0 -1px 5px 0px $medium-gray;
+    @include vp(border-top, 2px solid #eee);
+    box-shadow: 0 -1px 5px 0px #e5e5e5;
     z-index: 20;
     @include vp(min-height, 160px);
     @include vp(max-height, 312px);
