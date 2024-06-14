@@ -2,31 +2,10 @@
 @import 'base/mixin';
 @import 'common';
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
 
 #wrap{
     background: $light-gray-4; 
-    height: 100vh;
-    height: 100dvh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    &::-webkit-scrollbar {
-        @include vp(width, 1px);
-        @include vp(height, 1px);
-    }
-    &::-webkit-scrollbar-thumb {
-        background: $light-gray-7;
-        @include vp( border-radius, 10px);
-        @include vp( border, 3px solid #f1f1f1);
-    }
-    &::-webkit-scrollbar-thumb:hover {
-        background: $dark-gray;
-    }
+  
 }
 
 

@@ -5910,15 +5910,58 @@ section.filter .cm_tab_panel .depth_03.on {
   display: block;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 #wrap {
   font-size: 0;
   max-width: 750px;
   margin: 0 auto;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 @media screen and (max-width: 750px) {
   #wrap {
     max-width: 100vw;
   }
+}
+#wrap::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+}
+@media screen and (max-width: 750px) {
+  #wrap::-webkit-scrollbar {
+    width: 0.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap::-webkit-scrollbar {
+    height: 0.1333333333vw;
+  }
+}
+#wrap::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+@media screen and (max-width: 750px) {
+  #wrap::-webkit-scrollbar-thumb {
+    border-radius: 1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #wrap::-webkit-scrollbar-thumb {
+    border: 0.4vw solid #f1f1f1;
+  }
+}
+#wrap::-webkit-scrollbar-thumb:hover {
+  background: #333;
 }
 #wrap.sub {
   padding-top: 112px;
@@ -9204,6 +9247,7 @@ section.filter .cm_tab_panel .depth_03.on {
   z-index: 20;
   min-height: 160px;
   max-height: 312px;
+  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
@@ -9394,51 +9438,8 @@ section.filter .cm_tab_panel .depth_03.on {
   color: #fff;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 #wrap {
   background: #F6F6F6;
-  height: 100vh;
-  height: 100dvh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-#wrap::-webkit-scrollbar {
-  width: 1px;
-  height: 1px;
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar {
-    width: 0.1333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar {
-    height: 0.1333333333vw;
-  }
-}
-#wrap::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 10px;
-  border: 3px solid #f1f1f1;
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar-thumb {
-    border-radius: 1.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  #wrap::-webkit-scrollbar-thumb {
-    border: 0.4vw solid #f1f1f1;
-  }
-}
-#wrap::-webkit-scrollbar-thumb:hover {
-  background: #333;
 }
 
 .sections .section_inner {
