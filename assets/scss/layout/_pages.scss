@@ -310,7 +310,7 @@ section {
                         @include vp(height, 210px);
                         background: $light-gray-3 url("../images/icons/ico_fileupload.png") no-repeat center;
                         @include vp(background-size, 48px auto);
-                        border-radius: 6px;
+                        @include vp(border-radius, 14px);
 
                         input {
                             width: 100%;
@@ -324,6 +324,7 @@ section {
                         @include vp(width, 210px);
                         @include vp(height, 210px);
                         overflow: hidden;
+                        @include vp(border-radius, 14px);
 
                         img {
                             position: absolute;
@@ -332,7 +333,6 @@ section {
                             transform: translate(0, -50%);
                             width: 100%;
                             height: auto;
-                            @include vp(border-radius, 12px);
                         }
 
                         &::before {
