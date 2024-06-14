@@ -273,7 +273,7 @@ var commonUi = {
                 textForm.removeClass("on");
                 byteNum.removeClass("on");
                 $this.css("height", "auto");
-                $("body").css("padding-bottom", 0);
+                $(".detail").css("padding-bottom", 0);
             }
         } else {
             textForm.find(".btn_delete").addClass("on");
@@ -283,7 +283,7 @@ var commonUi = {
                 byteNum.addClass("on");
                 $this.css("height", "auto");
                 $this.height(this.scrollHeight);
-                $("body").css("padding-bottom", textFormHeight);
+                $(".detail").css("padding-bottom", textFormHeight);
             }
         }
 
