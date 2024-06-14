@@ -2074,10 +2074,24 @@ section {
                     .inner{
                         @include vp(padding-top, 60px ); 
                         @include vp(padding-bottom, 350px ); 
+                        
                     }
                 }
             }
+            .depth_03{
+                display: none;
+                background: none;
+                padding:0;
+                .etc{
+                    text-align: center;
+                    @include vp(font-size, $f15 ); 
+                }
+                &.on{
+                    display: block;
+                }
+            }
         }
+        
     }
 }
 

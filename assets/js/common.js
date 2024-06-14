@@ -63,6 +63,7 @@ var commonUi = {
     init: function () {
         commonUi.loadEvent();
     },
+
     create: function () {
         _w = $(window);
         _htmlBody = $("html, body");
@@ -92,7 +93,7 @@ var commonUi = {
         _endDateInput = $("#enddate");
         _typeBtns = $(".cm_tab_contents").find(".cm_type_list").find("li");
         _twoDepsMenu = $(".cm_tab_panel .buttons_list").find("li");
-        _twoDepsWrapMenu = $(".cm_type_twodeps .buttons_list").find("li");
+        _twoDepsWrapMenu = $(".cm_type_twodepth .buttons_list").find("li");
         _subDepsMenu = $(".cm_tab_panel .depth_02").find("li");
         _searchInput = $(".search_input");
         _deleteAllBtn = $(".btn_all_delete");
@@ -108,6 +109,7 @@ var commonUi = {
         _lastSelectedEndDate = null;
 
     },
+
     addEvent: function () {
         commonUi.resizeEvent(null);
         _w.on("resize", commonUi.resizeEvent);
@@ -140,8 +142,16 @@ var commonUi = {
 
         _popBtn.on("click", commonUi.popupItemClick);  // 팝업 버튼 클릭 이벤트
 
-        _twoDepsMenu.on("click", commonUi.twoDepsMenuClick); //투댑스 버튼 클릭 이벤트
-        _twoDepsWrapMenu.on("click", commonUi.twoDepsWrapMenuClick); //상단 픽시드 고정 투댑스 버튼 클릭 이벤트
+        // 투댑스 버튼 클릭 이벤트
+        _twoDepsMenu.on("click", function(e) {
+            commonUi.handleMenuClick.call(this, e);
+        });
+
+        // 상단 픽시드 고정 투댑스 버튼 클릭 이벤트
+        _twoDepsWrapMenu.on("click", function(e) {
+            commonUi.handleMenuClick.call(this, e, true);
+        });
+
         _subDepsMenu.on("click", commonUi.subDepsMenuClick);
 
         _searchInput.on("input", commonUi.inputTarget); //인풋이벤트 
@@ -156,7 +166,6 @@ var commonUi = {
 
         commonUi.tabActivation(); //탭영역 로드 체크 순서
         commonUi.sendBunCehck();
-
     },
 
     loadEvent: function () {
@@ -390,46 +399,46 @@ var commonUi = {
             }
         }
     },
-    twoDepsMenuClick: function (e) {
-        e.preventDefault();
-        var index = $(this).index();
-        var menuContainer = $(this).closest(".buttons_list");
-        var menuDepth02 = $(this).parents().parents().find(".depth_02");
 
-        // 탭메뉴 클릭 시 활성화
+    handleMenuClick: function (e, wrapMenu = false) {
+        e.preventDefault();
+        var $this = $(this);
+        var index = $this.index();
+        var menuContainer = $this.closest(".buttons_list");
+        var menuDepth02 = $this.parents("section").find(".depth_02");
+    
+        // Activate the clicked menu item
         menuContainer.find("li").removeClass("on");
         menuContainer.find("li").eq(index).addClass("on");
-
-        // 탭메뉴 하위 투뎁스 이벤트
+    
+        // Handle 2-depth menu visibility
         if (index > 0) {
-            menuDepth02.show();
-            menuDepth02.css("display", "flex");
-
+            if (menuDepth02.length > 0) {
+                menuDepth02.show();
+                if (wrapMenu) {
+                    menuDepth02.css("display", "flex");
+                }
+            }
         } else {
-            menuDepth02.hide();
-     
+            if (menuDepth02.length > 0) {
+                menuDepth02.hide();
+            }
         }
-        commonUi.centerMenu(menuContainer, $(this));
-    },
-    twoDepsWrapMenuClick: function (e) {
-        e.preventDefault();
-        var index = $(this).index();
-        var menuContainer = $(this).closest(".buttons_list");
-        var menuDepth02 = $(this).parents().parents().find(".depth_02");
-
-        // 탭메뉴 클릭 시 활성화
-        menuContainer.find("li").removeClass("on");
-        menuContainer.find("li").eq(index).addClass("on");
-
-        // 탭메뉴 하위 투뎁스 이벤트
-        if (index > 0) {
-            menuDepth02.show();
-            menuDepth02.css("display", "flex");
-        } else {
-            menuDepth02.hide();
+    
+        // Handle additional 3-depth menu if present
+        if (!wrapMenu) {
+            var menuTypeDepth = $this.parents(".item").find(".depth_03");
+            if (menuTypeDepth.length > 0) {
+                menuTypeDepth.removeClass("on");
+                menuTypeDepth.eq(index).addClass("on");
+            }
         }
-        commonUi.centerMenu(menuContainer, $(this));
+    
+        commonUi.centerMenu(menuContainer, $this);
     },
+    
+    
+
     subDepsMenuClick: function () {
         var index = $(this).index();
         $(this).siblings().removeClass("on");

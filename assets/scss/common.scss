@@ -25,7 +25,7 @@
         .scrolltop_box{
             @include vp(bottom, 314px);
             &.on{
-                @include vp(bottom, 160px);
+                @include vp(bottom, 200px);
             }
         }
       
@@ -34,7 +34,7 @@
         .scrolltop_box{
             @include vp(bottom, 314px);
             &.on{
-                @include vp(bottom, 160px);
+                @include vp(bottom, 180px);
             }
         }
     }
@@ -361,7 +361,7 @@
         transform: translateX(24.66666666666667vw);
     }
 
-    .btn_message { 
+    .box_round { 
         position: relative;
         display: block;
 
@@ -1057,7 +1057,7 @@
 
     }
 
-    .cm_type_twodeps{
+    .cm_type_twodepth{
         .cm_full_wrap{ 
             .buttons_list{
                 display: none;
