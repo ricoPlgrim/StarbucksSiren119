@@ -6,6 +6,13 @@
 @import "layout/header";
 @import "layout/pages"; 
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 #wrap {
     font-size: 0;
     @include vp(max-width, 750px);

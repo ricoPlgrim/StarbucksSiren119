@@ -5909,6 +5909,13 @@ section.filter .cm_tab_panel .depth_03.on {
   display: block;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 #wrap {
   font-size: 0;
   max-width: 750px;
