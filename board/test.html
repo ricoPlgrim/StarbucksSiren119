@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <main id="wrap" class="sub not"> <!--not 클래스 추가시 padding-top 삭제-->
-        <header class="common not"> <!--not 클래스 추가시 fixed 삭제-->
+    <main id="wrap" class="sub">
+        <header class="common">
             <button class="btn_back" onclick='history.back(-1); return false;'></button>
         </header>
         <section class="board">
@@ -26,80 +26,58 @@
                     </li>
                     <div class="bar"></div>
                 </ul>
-                <div class="cm_type_twodeps">
-                    <div class="cm_full_wrap">
-                        <!-- depth 1 -->
-                        <ul class="buttons_list  on">
-                            <li class="on">
-                                <button>전체</button>
-                            </li>
-                            <li>
-                                <button>파트너</button>
-                            </li>
-                            <li>
-                                <button>고객</button>
-                            </li>
-                            <li>
-                                <button>재해/시설</button>
-                            </li>
-                            <li>
-                                <button>화재</button>
-                            </li>
-                            <li>
-                                <button>이물질</button>
-                            </li>
-                        </ul>
-                        <ul class="buttons_list">
-                            <li class="on">
-                                <button>전체</button>
-                            </li>
-                            <li>
-                                <button>파트너</button>
-                            </li>
-                            <li>
-                                <button>고객</button>
-                            </li>
-                            <li>
-                                <button>재해/시설</button>
-                            </li>
-                            <li>
-                                <button>화재</button>
-                            </li>
-                            <li>
-                                <button>이물질</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
             </div>
             <!--list클래스 추가시 백그라운드 변경-->
             <div class="cm_tab_panel list">
                 <div class="board_list_wrap">
-                    <ul class="depth_02">
-                        <li class="on">
-                            <button class="cm_btn_round">
-                                <span class="text">전체</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="cm_btn_round">
-                                <span class="text">근무중 사고</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="cm_btn_round">
-                                <span class="text">출퇴근사고</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button class="cm_btn_round">
-                                <span class="text">불만/분실/피해</span>
-                            </button>
-                        </li>
-                    </ul>
                     <ul class="panel_list">
                         <li class="item on">
+                            <div class="cm_full_wrap">
+                                <!-- depth 1 -->
+                                <ul class="buttons_list">
+                                    <li class="on">
+                                        <button>전체</button>
+                                    </li>
+                                    <li>
+                                        <button>파트너</button>
+                                    </li>
+                                    <li>
+                                        <button>고객</button>
+                                    </li>
+                                    <li>
+                                        <button>재해/시설</button>
+                                    </li>
+                                    <li>
+                                        <button>화재</button>
+                                    </li>
+                                    <li>
+                                        <button>이물질</button>
+                                    </li>
+                                </ul>
+                                <!-- depth 2 -->
+                                <ul class="depth_02">
+                                    <li class="on">
+                                        <button class="cm_btn_round">
+                                            <span class="text">전체</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">근무중 사고</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">출퇴근사고</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">불만/분실/피해</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                             <!-- 업무가이드 탭 메뉴 -->
                             <ul class="board_list">
                                 <li>
@@ -175,6 +153,52 @@
                             </ul>
                         </li>
                         <li class="item">
+                            <div class="cm_full_wrap">
+                                <!-- depth 1 -->
+                                <ul class="buttons_list">
+                                    <li class="on">
+                                        <button>전체</button>
+                                    </li>
+                                    <li>
+                                        <button>파트너</button>
+                                    </li>
+                                    <li>
+                                        <button>고객</button>
+                                    </li>
+                                    <li>
+                                        <button>재해/시설</button>
+                                    </li>
+                                    <li>
+                                        <button>화재</button>
+                                    </li>
+                                    <li>
+                                        <button>이물질</button>
+                                    </li>
+                                </ul>
+                                <!-- depth 2 -->
+                                <ul class="depth_02">
+                                    <li class="on">
+                                        <button class="cm_btn_round">
+                                            <span class="text">전체</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">근무중 사고</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">출퇴근사고</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">불만/분실/피해</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                             <!-- 주요보고사례 탭 메뉴 -->
                             <ul class="board_list">
                                 <li>
@@ -259,14 +283,11 @@
             </div>
         </section>
 
-        <!--bottom buttons-->
-        <aside class="scrolltop_box ">
+        <aside class="scrolltop_box on">
             <a href="javascript:;" class="btn_top">
                 <span class="blind">상단으로 이동</span>
             </a>
-            <span class="arrow"></span>
-        </aside>  
-        
+        </aside>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
