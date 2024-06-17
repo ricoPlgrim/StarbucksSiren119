@@ -26,8 +26,8 @@ var mainUi = {
                         <button class="cm_btn_round on tag"><span class="text">${value}</span></button>
                         <a href="javascript:;" class="btn_close tag_close"><span class="blind">삭제</span></a>
                     </li>`;
-                $('.cm_btn_list').append(listItem);
-            });
+                $('.main.cm_btn_list').append(listItem);
+            }); 
         } 
         if (_selectedValues.length === 0) {
             $('.main.btn_group').css('display', 'none');
