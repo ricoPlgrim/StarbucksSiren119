@@ -986,6 +986,14 @@ section {
                 @include vp( padding-bottom, 40px); 
                 @include vp( margin-bottom, 40px); 
                 border-bottom: 1px solid $gray;
+                &.deleted {
+                    p {
+                        @include vp( padding, 20px); 
+                        @include vp( font-size, $f13);
+                        color: $light-gray-1;
+                        text-align: center;
+                    }
+                }
                 &:last-child {
                     margin-bottom: 0px;
                     padding-bottom: 10px;
@@ -1111,6 +1119,14 @@ section {
                         @include vp( padding-bottom, 40px); 
                         @include vp( margin-bottom, 40px); 
                         border-bottom: 1px dashed $light-gray-2;
+                        &.deleted {
+                            p {
+                                @include vp( padding, 20px); 
+                                @include vp( font-size, $f13);
+                                color: $light-gray-1;
+                                text-align: center;
+                            }
+                        }
                         &:last-child {
                             padding-bottom: 0px;
                             margin-bottom: 0px;
