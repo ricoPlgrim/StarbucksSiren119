@@ -5955,6 +5955,9 @@ section.filter .cm_tab_panel .depth_03 .etc {
 section.filter .cm_tab_panel .depth_03.on {
   display: block;
 }
+section.filter .btn_group {
+  display: none;
+}
 
 html, body {
   height: 100%;
