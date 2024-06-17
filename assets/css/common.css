@@ -1004,11 +1004,18 @@ header.common {
   height: 112px;
   border-bottom: 1px solid #EEE;
   background-color: #fff;
+  width: 750px;
+  margin: 0 auto;
   z-index: 100;
 }
 @media screen and (max-width: 750px) {
   header.common {
     height: 14.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  header.common {
+    width: 100vw;
   }
 }
 header.common.on {
@@ -2271,12 +2278,14 @@ section.report .create_form .file_upload_wrap .file_list .img_box {
   }
 }
 section.report .create_form .file_upload_wrap .file_list .img_box img {
+  object-fit: cover;
+  object-position: center;
   position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
   width: 100%;
-  height: auto;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 section.report .create_form .file_upload_wrap .file_list .img_box::before {
   content: "";
@@ -7594,14 +7603,13 @@ html, body {
 }
 .cm_card_list > li a .photo_box > img {
   object-fit: cover;
+  object-position: center;
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.cm_card_list > li a .photo_box > img.row {
-  height: 100%;
-  width: auto;
 }
 .cm_card_list > li a .photo_box .count_box {
   position: absolute;
@@ -9254,6 +9262,8 @@ html, body {
   z-index: 20;
   min-height: 160px;
   max-height: 312px;
+  max-width: 750px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
@@ -9273,6 +9283,11 @@ html, body {
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     max-height: 41.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    max-width: 100vw;
   }
 }
 .cm_btn_comment .text_box {

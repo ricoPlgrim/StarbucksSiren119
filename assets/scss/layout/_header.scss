@@ -170,6 +170,8 @@ header {
         @include vp(height, 112px);
         border-bottom: 1px solid $light-gray-3;
         background-color: $white;
+        @include vp(width, 750px);
+        margin:0 auto;
         z-index: 100;
         &.on {
             box-shadow: 0 -1px 5px 0px $medium-gray;

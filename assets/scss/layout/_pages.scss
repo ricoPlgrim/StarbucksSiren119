@@ -327,12 +327,14 @@ section {
                         @include vp(border-radius, 14px);
 
                         img {
+                            object-fit: cover;  
+                            object-position: center;
                             position: absolute;
-                            top: 50%;
-                            left: 0;
-                            transform: translate(0, -50%);
                             width: 100%;
-                            height: auto;
+                            height: 100%;
+                            top: 50%; 
+                            left: 50%;
+                            transform: translate(-50%, -50%);  
                         }
 
                         &::before {
