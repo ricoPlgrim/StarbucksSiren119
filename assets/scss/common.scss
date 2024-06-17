@@ -908,17 +908,16 @@ html, body {
                 @include vp(right, 40px);
                 @include vp(border-radius, 6px);
                 overflow: hidden;
-                background:$light-gray-3;
+                background:$light-gray-3; 
                 >img{
-                    object-fit: cover;
+                    object-fit: cover; 
+                    object-position: center;
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, -50%);
-                    &.row{
-                        height: 100%;
-                        width: auto;
-                    }
+                    transform: translate(-50%, -50%); 
                 }
                 .count_box {
                     position: absolute;
@@ -1907,7 +1906,8 @@ html, body {
     z-index: 20;
     @include vp(min-height, 160px);
     @include vp(max-height, 312px);
-
+    @include vp(max-width, 750px);
+    margin:0 auto;
     .text_box {
         display: flex;
         flex-direction: column;
