@@ -72,14 +72,13 @@ var filterUi = {
             selectedValues.push(value);
         });
         localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
-        console.log(selectedValues); // 선택한 값들을 localStorage에 저장하고 콘솔에 출력합니다.
-        window.history.back();
+        window.history.go(-1);
     },
     btnResetClick: function () {
         $('input[type="checkbox"]').prop('checked', false);
         $('.cm_btn_list.etc').empty();
         $('.btn_group').css('display', 'none');
-        localStorage.removeItem('selectedValues');
+        localStorage.removeItem('selectedValues'); 
     },
 
     loadSelectedValues: function () {
