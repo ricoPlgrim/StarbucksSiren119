@@ -3540,7 +3540,7 @@ section.detail .detail_wrap .detail_box .btn_box span.btn02 {
     background-position-x: 1.0666666667vw;
   }
 }
-section.detail .detail_wrap .notice {
+section.detail .detail_wrap .textarea_conts {
   margin-top: 80px;
   margin-bottom: 40px;
   padding: 40px 40px 92px;
@@ -3552,32 +3552,32 @@ section.detail .detail_wrap .notice {
   color: rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     margin-top: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     margin-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     padding: 5.3333333333vw 5.3333333333vw 12.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     border-radius: 2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     font-size: 3.4666666667vw;
   }
 }

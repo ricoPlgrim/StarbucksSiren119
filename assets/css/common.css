@@ -3538,7 +3538,7 @@ section.detail .detail_wrap .detail_box .btn_box span.btn02 {
     background-position-x: 1.0666666667vw;
   }
 }
-section.detail .detail_wrap .notice {
+section.detail .detail_wrap .textarea_conts {
   margin-top: 80px;
   margin-bottom: 40px;
   padding: 40px 40px 92px;
@@ -3550,32 +3550,32 @@ section.detail .detail_wrap .notice {
   color: rgba(0, 0, 0, 0.5803921569);
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     margin-top: 10.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     margin-bottom: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     padding: 5.3333333333vw 5.3333333333vw 12.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     border-radius: 2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.detail .detail_wrap .notice {
+  section.detail .detail_wrap .textarea_conts {
     font-size: 3.4666666667vw;
   }
 }
@@ -5957,8 +5957,9 @@ section.filter .cm_tab_panel .depth_03.on {
 }
 
 html, body {
-  margin: 0 !important;
-  padding: 0 !important;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -9296,23 +9297,18 @@ html, body {
   left: 0px;
   right: 0px;
   bottom: 0px;
+  min-height: 160px;
+  max-height: 312px;
+  max-width: 750px;
+  transform: translateY(0);
   background: #fff;
   border-top: 2px solid #eee;
   box-shadow: 0 -1px 5px 0px #e5e5e5;
   z-index: 20;
-  min-height: 160px;
-  max-height: 312px;
-  max-width: 750px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     padding: 2.6666666667vw 5.3333333333vw 8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment {
-    border-top: 0.2666666667vw solid #eee;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9328,6 +9324,11 @@ html, body {
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     max-width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    border-top: 0.2666666667vw solid #eee;
   }
 }
 .cm_btn_comment .text_box {

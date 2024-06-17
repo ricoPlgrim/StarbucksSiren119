@@ -7,8 +7,9 @@
 @import "layout/pages"; 
 
 html, body {
-    margin: 0 !important;
-    padding: 0 !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
 }
 
@@ -1899,14 +1900,14 @@ html, body {
     left: 0px;
     right: 0px;
     bottom: 0px;
+    @include vp(min-height, 160px);
+    @include vp(max-height, 312px);
+    @include vp(max-width, 750px);
+    transform: translateY(0);
     background: $white;
     @include vp(border-top, 2px solid #eee);
     box-shadow: 0 -1px 5px 0px #e5e5e5;
     z-index: 20;
-    @include vp(min-height, 160px);
-    @include vp(max-height, 312px);
-    @include vp(max-width, 750px);
-    margin:0 auto;
     .text_box {
         display: flex;
         flex-direction: column;

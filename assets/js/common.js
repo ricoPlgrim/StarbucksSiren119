@@ -25,6 +25,7 @@ var commonUi = {
         _stickyTarget = $(".header_sticky");
         _popBtn = $("body").find("a, button"); // 팝업 버튼
         _textFormBtn = $(".text_box").find("input, textarea");   // 입렵폼 input, textarea
+        _textArea = $(".text_box").find("textarea");   // 입렵폼 textarea
         _fileUploadBtn = $(".file_upload_wrap").find("#imageFile");   // 사진 파일 업로드
 
         _switchBox = $(".header_switchbox");
@@ -79,6 +80,7 @@ var commonUi = {
 
         _typeBtns.on("click", this.typeBtnsClick);
         _textFormBtn.on("click focus propertychange change keyup paste", this.textFormClick);   // input, textarea 이벤트
+        _textArea.on("focusin focusout", this.handleTextFormFocus);  // 하단 textarea focus 업데이트
         _fileUploadBtn.on("change", this.fileImgUpload); // 파일 업로드
 
         _popBtn.on("click", this.popupItemClick);   // 팝업 버튼 클릭 이벤트
@@ -258,7 +260,13 @@ var commonUi = {
             $(".cm_full_wrap .buttons_list").eq(index).addClass("on");
         }
     },
-
+    handleTextFormFocus(e) {
+        if (e.type === "focusin") {
+            $(".cm_btn_comment").css("position", "absolute");
+          } else if (e.type === "focusout") {
+            $(".cm_btn_comment").css("position", "fixed");
+          }
+    },
     textFormClick: function () {
         var $this = $(this);
         var textForm = $this.parent();
