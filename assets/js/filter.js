@@ -72,7 +72,7 @@ var filterUi = {
             selectedValues.push(value);
         });
         localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
-        window.history.go(-1);
+        window.location.href = "../";
     },
     btnResetClick: function () {
         $('input[type="checkbox"]').prop('checked', false);
