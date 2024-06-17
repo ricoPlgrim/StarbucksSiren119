@@ -5957,9 +5957,8 @@ section.filter .cm_tab_panel .depth_03.on {
 }
 
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   overflow: hidden;
 }
 
