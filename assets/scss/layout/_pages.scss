@@ -1143,6 +1143,7 @@ section {
                                         background: $black;
                                         height: 1px;
                                     }
+                                    a {color: inherit;}
                                 }
                             }
                             &.date, &.time {
@@ -1197,12 +1198,13 @@ section {
                             &::before {
                                 content: '';
                                 position: absolute;
-                                left: 0px;
-                                right: 0px;
-                                @include vp( bottom, 2px);
+                                @include vp( left, 2px);
+                                @include vp( right, 4px);
+                                @include vp( bottom, 0px);
                                 background: $black;
                                 height: 1px;
                             }
+                            a {color: inherit;}
                         }
                     }
                 }
@@ -1390,6 +1392,7 @@ section {
                                                 background: $black;
                                                 height: 1px;
                                             }
+                                            a {color: inherit;}
                                         }
                                     }
                                     &.date, &.time {

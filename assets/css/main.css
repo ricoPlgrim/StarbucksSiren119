@@ -4131,6 +4131,9 @@ section.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name::
     bottom: 0.1333333333vw;
   }
 }
+section.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name a {
+  color: inherit;
+}
 section.detail .comment_wrap.comment-detail .reply_box .text02 span.date, section.detail .comment_wrap.comment-detail .reply_box .text02 span.time {
   color: rgba(0, 0, 0, 0.3411764706);
 }
@@ -4241,16 +4244,29 @@ section.detail .comment_wrap .comment_box .info01 .user .name {
 section.detail .comment_wrap .comment_box .info01 .user .name::before {
   content: "";
   position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 2px;
+  left: 2px;
+  right: 4px;
+  bottom: 0px;
   background: #000;
   height: 1px;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .info01 .user .name::before {
-    bottom: 0.2666666667vw;
+    left: 0.2666666667vw;
   }
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap .comment_box .info01 .user .name::before {
+    right: 0.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap .comment_box .info01 .user .name::before {
+    bottom: 0vw;
+  }
+}
+section.detail .comment_wrap .comment_box .info01 .user .name a {
+  color: inherit;
 }
 section.detail .comment_wrap .comment_box .info02 {
   margin-bottom: 20px;
@@ -4669,6 +4685,9 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_i
   section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.user .name::before {
     bottom: 0vw;
   }
+}
+section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.user .name a {
+  color: inherit;
 }
 section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.date, section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.time {
   color: rgba(0, 0, 0, 0.3411764706);

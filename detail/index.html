@@ -147,7 +147,11 @@
                 </div>
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user"><span class="name">김스벅</span> · 운영10팀</span>
+                        <span class="user">
+                            <span class="name">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">김스벅</a>
+                            </span>· 운영10팀
+                        </span>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -190,7 +194,9 @@
                             </div>
                             <div class="text02">
                                 <div class="comment_info">
-                                    <span class="user"><span class="name">고영민</span>· DM 운영 3팀</span>
+                                    <span class="user"><span class="name">
+                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">고영민</a>
+                                    </span>· DM 운영 3팀</span>
                                     <span class="date">2024-05-08</span>
                                     <span class="time">12:45</span>
                                </div>
@@ -200,7 +206,7 @@
                                     <span>이미지</span>
                                 </button>
                                 <span class="btn_edit">
-                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('recommentBtnPop')">
                                         수정 / 삭제
                                     </a>
                                 </span>
@@ -218,14 +224,17 @@
                                     <span class="date">2024-05-10</span>
                                     <span class="time">16:05</span>
                                </div>
-                                <div class="comment_edit">
-                                    <span class="btn_edit">
-                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
-                                            수정 / 삭제
-                                        </a>
-                                    </span>
-                                </div>
                             </div>
+                            <div class="comment_edit">
+                                <button class="btn_img" data-target="commentImgPop">
+                                    <span>이미지</span>
+                                </button>
+                                <span class="btn_edit">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('recommentBtnPop')">
+                                        수정 / 삭제
+                                    </a>
+                                </span>
+                            </div>   
                         </li>
                         <li>
                             <div class="text01">
@@ -238,15 +247,18 @@
                                     <span class="user"><span class="name">오주연</span>· DM 운영 7팀</span>
                                     <span class="date">2024-05-11</span>
                                     <span class="time">09:38</span>
-                               </div>
-                               <div class="comment_edit">
+                               </div> 
+                            </div>
+                            <div class="comment_edit">
+                                <button class="btn_img" data-target="commentImgPop">
+                                    <span>이미지</span>
+                                </button>
                                 <span class="btn_edit">
-                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('recommentBtnPop')">
                                         수정 / 삭제
                                     </a>
                                 </span>
                             </div>  
-                            </div>
                         </li>
                         <li class="deleted">
                             <p>삭제된 답글입니다</p>
@@ -255,7 +267,10 @@
                 </div> 
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user"><span class="name">정재형</span> · DM 운영 16팀</span>
+                        <span class="user">
+                            <span class="name">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">정재형</a>
+                            </span> · DM 운영 16팀</span>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -279,7 +294,10 @@
                 </div> 
                 <div class="comment_box">
                     <div class="info01">
-                        <span class="user"><span class="name">김혜윤</span> · DM 운영 8팀</span>
+                        <span class="user">
+                            <span class="name">
+                                <a href="javascript:;" onclick="commonUi.bottomSheetOpen('contactPop')">김혜윤</a>
+                            </span> · DM 운영 8팀</span>
                     </div>
                     <div class="info02">
                         <span class="date">2022.01.31</span>
@@ -308,35 +326,6 @@
             </a>
             <span class="arrow"></span>
         </aside>  
-
-
-        <!-- 하단 고정 댓글 버튼 -->
-        <aside class="cm_btn_comment">
-            <div class="text_box">
-                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
-                <ul class="file_list">
-                    <!-- 추가된 이미지 영역 -->
-                    <!-- <li>
-                        <div class="img_box">
-                            <img src="../assets/images/temp/@temp_01.png" alt="Uploaded Image">
-                        </div>
-                        <span class="file_delete"></span>
-                    </li> -->
-                </ul>
-                <div class="btn_box">
-                    <span class="byte_num">0 / 1000byte</span>
-                    <span class="btn_delete">내용 삭제</span>
-                </div>
-            </div>
-            <div class="btn_submit">
-                <div class="btn_upload">
-                    <span>이미지첨부</span>
-                    <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
-                </div>
-                <!-- 활성화되면 class="on" 추가 -->
-                <button data-target="commentCompletePop">등록</button>
-            </div>
-        </aside>
 
          <!-- 상단 이미지 확대보기 레이어 팝업 -->
          <div id="detailVisualPop" class="layer_popup view_img_popup">
@@ -409,7 +398,7 @@
         <!-- 댓글 삭제 레이어 팝업 -->
         <div id="commentDeletePop" class="layer_m_popup">
             <div class="pop_cont01">
-                <p class="text">댓글을 삭제하시겠습니까?</p>
+                <p class="text">작성하신 내용을 삭제하시겠습니까?</p>
                 <div class="btn_bottom">
                     <button class="cm_btn_round on">
                         <span class="text">취소</span>
@@ -447,6 +436,28 @@
 
         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
         <aside class="bottom_sheet" id="commentBtnPop">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="btn_comment_contents">
+                            <div class="btn_box">
+                                <button class="cm_btn_round on" onclick="location.href='../comment/edit.html'">
+                                    <span class="btn_edit">수정</span>
+                                </button>
+                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                    <span class="btn_delete">삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
+
+        <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
+        <aside class="bottom_sheet" id="recommentBtnPop">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
