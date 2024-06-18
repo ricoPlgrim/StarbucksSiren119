@@ -423,8 +423,12 @@ header {
                             }
                         }
                         &:last-child{
-                            flex: 0 1 calc(50% - 22px);
+                            flex: 0 1 calc(50% - 11px);
                             margin-bottom: 0;
+                            @include breakpoint {
+                                flex: 0 1 calc(50% - 1.4666vw);
+                            }
+        
                         }
                     }
                 }
