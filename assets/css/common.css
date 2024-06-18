@@ -9925,6 +9925,7 @@ html, body {
   width: 100px;
   height: 100px;
   border-radius: 12px;
+  overflow: hidden;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment .text_box .file_list .img_box {

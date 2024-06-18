@@ -1975,6 +1975,7 @@ html, body {
                 @include vp(width, 100px);
                 @include vp(height, 100px);
                 @include vp(border-radius, 12px);
+                overflow: hidden;
                 img {
                     object-fit: cover;
                     object-position: center;
