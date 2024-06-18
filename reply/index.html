@@ -11,14 +11,12 @@
     <main id="wrap" class="sub">
         <header class="common">
             <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'></button>
-            <h1>답글 등록</h1>
+            <h1>답글 달기</h1>
         </header>
 
         <section class="detail">
-            <h2 class="blind">답글 등록 페이지</h2>
+            <h2 class="blind">답글 달기 페이지</h2>
             <div class="comment_wrap comment-detail">
-                <div class="comment_header">
-                </div>
                 <div class="comment_box">
                     <div class="info01">
                         <span class="user"><span class="name">김스벅</span> · 운영10팀</span>
@@ -167,20 +165,29 @@
                     </div>
                 </div> 
             </div>
+        </section>
 
-             <!-- 하단 고정 댓글 버튼 -->
-             <aside class="cm_btn_comment">
-                <div class="text_box">
-                    <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
-                    <div class="text_box_footer">
-                        <span class="byte_num">0 / 1000byte</span>
-                        <span class="btn_delete">내용 삭제</span>
-                    </div>
+          <!-- 하단 고정 댓글 버튼 -->
+          <aside class="cm_btn_comment">
+            <div class="text_box">
+                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                <ul class="file_list">
+                    <!-- 추가된 이미지 영역 -->
+                </ul>
+                <div class="btn_box">
+                    <span class="byte_num">0 / 1000byte</span>
+                    <span class="btn_delete">내용 삭제</span>
+                </div>
+            </div>
+            <div class="btn_submit">
+                <div class="btn_upload">
+                    <span>이미지첨부</span>
+                    <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
                 </div>
                 <!-- 활성화되면 class="on" 추가 -->
                 <button data-target="commentCompletePop">등록</button>
-            </aside>
-        </section>
+            </div>
+        </aside>
 
         <!-- 댓글 알럿 레이어 팝업 -->
         <div id="commentPop" class="layer_m_popup">

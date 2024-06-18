@@ -163,9 +163,14 @@
                         <span class="edited">(수정됨)</span>
                     </div>
                     <div class="btn_wrap">
-                        <button class="btn_recomment" onclick="location.href='../reply/index.html'">
-                            <span>답글작성</span>
-                        </button>
+                        <div class="btn_box">
+                            <button class="btn_recomment" onclick="location.href='../reply/index.html'">
+                                <span>답글작성</span>
+                            </button>
+                            <button class="btn_img" data-target="commentImgPop">
+                                <span>이미지</span>
+                            </button>
+                        </div>
                         <div class="comment_edit">
                             <span class="btn_edit">
                                 <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
@@ -193,14 +198,17 @@
                                     <span class="date">2024-05-08</span>
                                     <span class="time">12:45</span>
                                </div>
-                                <div class="comment_edit">
-                                    <span class="btn_edit">
-                                        <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
-                                            수정 / 삭제
-                                        </a>
-                                    </span>
-                                </div>  
                             </div>
+                            <div class="comment_edit">
+                                <button class="btn_img" data-target="commentImgPop">
+                                    <span>이미지</span>
+                                </button>
+                                <span class="btn_edit">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                        수정 / 삭제
+                                    </a>
+                                </span>
+                            </div>  
                         </li>
                         <li>
                             <div class="text01">
@@ -307,18 +315,47 @@
             <span class="arrow"></span>
         </aside>  
 
+
+        <!-- 하단 고정 댓글 버튼 -->
+        <aside class="cm_btn_comment">
+            <div class="text_box">
+                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                <ul class="file_list">
+                    <!-- 추가된 이미지 영역 -->
+                    <!-- <li>
+                        <div class="img_box">
+                            <img src="../assets/images/temp/@temp_01.png" alt="Uploaded Image">
+                        </div>
+                        <span class="file_delete"></span>
+                    </li> -->
+                </ul>
+                <div class="btn_box">
+                    <span class="byte_num">0 / 1000byte</span>
+                    <span class="btn_delete">내용 삭제</span>
+                </div>
+            </div>
+            <div class="btn_submit">
+                <div class="btn_upload">
+                    <span>이미지첨부</span>
+                    <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
+                </div>
+                <!-- 활성화되면 class="on" 추가 -->
+                <button data-target="commentCompletePop">등록</button>
+            </div>
+        </aside>
+
          <!-- 상단 이미지 확대보기 레이어 팝업 -->
-         <div id="detailVisualPop" class="layer_popup">
+         <div id="detailVisualPop" class="layer_popup view_img_popup">
             <header>
                 <button class="btn_close"></button>
                 <div class="title">확대보기</div>
             </header>
             <div class="pop_cont01">
-                <div class="detail_pop_visual">
+                <div class="pop_img_wrap">
                     <div class="slide_img">
                         <ul>
                             <li>
-                                <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
+                                <div class="img_box"><img src="../assets/images/temp/temp_detail04.png" alt="" /></div>
                             </li>
                             <li>
                                 <div class="img_box"><img src="../assets/images/temp/temp_detail03.png" alt="" /></div>
@@ -328,6 +365,40 @@
                             </li>
                             <li>
                                 <div class="img_box"><img src="../assets/images/temp/temp_detail03.png" alt="" /></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pagination">
+                        <span class="bullet active"></span>
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
+                        <span class="bullet"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 상단 이미지 확대보기 레이어 팝업 -->
+        <div id="commentImgPop" class="layer_popup view_img_popup">
+            <header>
+                <button class="btn_close"></button>
+                <div class="title">이미지 보기</div>
+            </header>
+            <div class="pop_cont01">
+                <div class="pop_img_wrap">
+                    <div class="slide_img">
+                        <ul>
+                            <li>
+                                <div class="img_box"><img src="../assets/images/temp/@temp_03.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div class="img_box"><img src="../assets/images/temp/@temp_04.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div class="img_box"><img src="../assets/images/temp/@temp_05.png" alt="" /></div>
+                            </li>
+                            <li>
+                                <div class="img_box"><img src="../assets/images/temp/@temp_06.jpg" alt="" /></div>
                             </li>
                         </ul>
                     </div>

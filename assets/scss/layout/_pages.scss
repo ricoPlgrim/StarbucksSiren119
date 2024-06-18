@@ -420,6 +420,7 @@ section {
                             flex-direction: column;
                             @include vp(width, 500px); 
                             @include vp(height, 64px); 
+                            border: none;
 
                             input {
                                 @include vp(padding, 16px 76px 16px 30px);
@@ -922,24 +923,211 @@ section {
         }
 
         .comment_wrap {
-            @include vp( margin, 0px 40px 160px); 
+            @include vp( margin, 0px 40px 225px); 
             &.comment-detail {
                 @include vp( padding-top, 60px); 
                 .comment_header {padding-bottom: 0px;}
                 .comment_box {
-                    .info03 {@include vp( margin-bottom, 28px); }
-                    .btn_wrap {justify-content: end;}
+                    &.deleted {@include vp( margin-bottom, 70px);}
+                    .info03 {
+                        @include vp( margin-bottom, 28px); 
+                        .textarea_box {
+                            textarea {
+                                @include vp( line-height, 40px); 
+                                width: 100%;
+                                height: auto;
+                                @include vp( min-height, 120px); 
+                                @include vp( max-height, 710px); 
+                                color: #00000094;
+                                resize: none;
+                                outline: none;
+                                border: none;
+                            }
+                            .btn_box {
+                                @include vp( margin-top, 30px); 
+                                display: flex;
+                                justify-content: space-between;
+                                .btn_delete {
+                                    @include vp(padding, 32px);
+                                    @include vp(width, 32px);
+                                    @include vp(height, 32px);
+                                    background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+                                    @include vp(background-size, 32px auto);
+                                    cursor: pointer;
+                                    font-size: 0px;
+                                }
+                            }
+
+                        }
+                        .file_list {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                            width: 100%;
+                            li {
+                                @include vp(margin-top, 40px);
+                                position: relative;
+                            }
+                
+                            .img_box {
+                                position: relative;
+                                @include vp(width, 100px);
+                                @include vp(height, 100px);
+                
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(0, -50%);
+                                    @include vp(width, 100px);
+                                    @include vp(height, 100px);
+                                    @include vp(border-radius, 12px);
+                                }
+                
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    padding-top: 100%;
+                                }
+                            }
+                
+                            .file_delete {
+                                position: absolute;
+                                @include vp(top, -8.5px);
+                                @include vp(right, -8.5px);
+                                @include vp(width, 34px);
+                                @include vp(height, 34px);
+                                background: url("../images/btn/btn_file_delete02.png") no-repeat center;
+                                @include vp(background-size, 34px auto);
+                                cursor: pointer;
+                            }
+                        }
+                        .btn_wrap {
+                            @include vp(margin-top, 30px);
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
                 }
                 .reply_box {
+                    @include vp( margin-top, -80px); 
+                    background: $white;
                     .text01 {
                         position: relative;
+                        @include vp( padding, 28px);
                         @include vp( margin-bottom, 20px); 
                         @include vp( font-size, $f13);
                         @include vp( line-height, 40px);
+                        @include vp( border-radius, 16px);
+                        border: 1px solid $dark-gray;
                         color: #00000094;
                         .edited {
                             display: block;
                             @include vp( margin-top, 10px);
+                        }
+                        &.done {
+                            border: 1px solid $light-gray-2;
+                            textarea {opacity: .58}
+                        }
+                        .textarea_box {
+                            textarea {
+                                @include vp( line-height, 40px); 
+                                width: 100%;
+                                height: auto;
+                                @include vp( min-height, 120px); 
+                                @include vp( max-height, 710px); 
+                                color: $black;
+                                resize: none;
+                                outline: none;
+                                border: none;
+                            }
+                            .btn_box {
+                                @include vp( margin-top, 30px); 
+                                @include vp( margin-bottom, -28px); 
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                .btn_delete {
+                                    @include vp(padding, 32px);
+                                    @include vp( margin-right, -14px); 
+                                    @include vp(width, 32px);
+                                    @include vp(height, 32px);
+                                    background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+                                    @include vp(background-size, 32px auto);
+                                    cursor: pointer;
+                                    font-size: 0px;
+                                }
+                            }
+
+                        }
+                        .file_list {
+                            display: flex;
+                            flex-direction: row;
+                            gap: 10px;
+                            width: 100%;
+                            li {
+                                @include vp(margin-top, 40px);
+                                position: relative;
+                            }
+                
+                            .img_box {
+                                position: relative;
+                                @include vp(width, 100px);
+                                @include vp(height, 100px);
+                
+                                img {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(0, -50%);
+                                    @include vp(width, 100px);
+                                    @include vp(height, 100px);
+                                    @include vp(border-radius, 12px);
+                                }
+                
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    padding-top: 100%;
+                                }
+                            }
+                
+                            .file_delete {
+                                position: absolute;
+                                @include vp(top, -8.5px);
+                                @include vp(right, -8.5px);
+                                @include vp(width, 34px);
+                                @include vp(height, 34px);
+                                background: url("../images/btn/btn_file_delete02.png") no-repeat center;
+                                @include vp(background-size, 34px auto);
+                                cursor: pointer;
+                            }
+                        }
+                        .btn_wrap {
+                            @include vp(margin-top, 30px);
+                            display: flex;
+                            justify-content: space-between;
+                            .comment_edit {
+                                span {
+                                    position: relative;
+                                    @include vp( font-size, $f13);
+                                    color: $black;
+                                    cursor: pointer;
+                                    a {color: inherit;}
+                                    &.btn_edit {
+                                        @include vp( margin-right, 20px);
+                                    }
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        left: 0px;
+                                        right: 0px;
+                                        @include vp( bottom, 0px);
+                                        background: $black;
+                                        height: 1px;
+                                    }
+                                }
+                            }
                         }
                     }
                     .text02 {
@@ -1055,27 +1243,54 @@ section {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
-                    .btn_recomment {
-                        display: inline-flex;
-                        align-items: center;
-                        @include vp( padding-left, 60px);
-                        @include vp( height, 48px);                    
-                        background: url("../images/icons/ico_edit_review.png") center left no-repeat;
-                        @include vp(background-size, 48px 48px);
-                        cursor: pointer;
-                        span {
-                            position: relative;
-                            display: inline-block;
-                            @include vp( font-size, $f13);
-                            color: $black;
-                            &::before {
-                                content: '';
-                                position: absolute;
-                                left: 0px;
-                                right: 0px;
-                                @include vp( bottom, 0px);
-                                background: $black;
-                                height: 1px;
+                    .btn_box {
+                        .btn_recomment {
+                            display: inline-flex;
+                            align-items: center;
+                            @include vp( padding-left, 60px);
+                            @include vp( height, 48px);                    
+                            background: url("../images/icons/ico_edit_review.png") center left no-repeat;
+                            @include vp(background-size, 48px 48px);
+                            cursor: pointer;
+                            span {
+                                position: relative;
+                                display: inline-block;
+                                @include vp( font-size, $f13);
+                                color: $black;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0px;
+                                    right: 0px;
+                                    @include vp( bottom, 0px);
+                                    background: $black;
+                                    height: 1px;
+                                }
+                            }
+                        }
+                        .btn_img {
+                            display: inline-flex;
+                            align-items: center;
+                            @include vp( margin-left, 20px);
+                            @include vp( padding-left, 60px);
+                            @include vp( height, 48px);                    
+                            background: url("../images/btn/btn_img.png") center left no-repeat;
+                            @include vp(background-size, 48px 48px);
+                            cursor: pointer;
+                            span {
+                                position: relative;
+                                display: inline-block;
+                                @include vp( font-size, $f13);
+                                color: $black;
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0px;
+                                    right: 0px;
+                                    @include vp( bottom, 0px);
+                                    background: $black;
+                                    height: 1px;
+                                }
                             }
                         }
                     }
@@ -1189,26 +1404,56 @@ section {
                                     }
                                 }
                             }
-                            .comment_edit {
+                        }
+                        
+                        .comment_edit {
+                            @include vp( margin-top, 20px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .btn_img {
+                                display: inline-flex;
+                                align-items: center;
+                                @include vp( margin-left, 20px);
+                                @include vp( padding-left, 60px);
+                                @include vp( height, 48px);                    
+                                background: url("../images/btn/btn_img.png") center left no-repeat;
+                                @include vp(background-size, 48px 48px);
+                                cursor: pointer;
                                 span {
                                     position: relative;
+                                    display: inline-block;
                                     @include vp( font-size, $f13);
-                                    @include vp( line-height, normal);
                                     color: $black;
-                                    cursor: pointer;
-                                    a {color: inherit;}
-                                    &.btn_edit {
-                                        @include vp( margin-right, 20px);
-                                    }
                                     &::before {
                                         content: '';
                                         position: absolute;
                                         left: 0px;
                                         right: 0px;
-                                        @include vp( bottom, 2px);
+                                        @include vp( bottom, 0px);
                                         background: $black;
                                         height: 1px;
                                     }
+                                }
+                            }
+                            span {
+                                position: relative;
+                                @include vp( font-size, $f13);
+                                @include vp( line-height, normal);
+                                color: $black;
+                                cursor: pointer;
+                                a {color: inherit;}
+                                &.btn_edit {
+                                    @include vp( margin-right, 20px);
+                                }
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0px;
+                                    right: 0px;
+                                    @include vp( bottom, 2px);
+                                    background: $black;
+                                    height: 1px;
                                 }
                             }
                         }

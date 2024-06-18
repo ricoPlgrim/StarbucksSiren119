@@ -11,11 +11,11 @@
     <main id="wrap" class="sub">
         <header class="common">
             <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'></button>
-            <h1>댓글 수정</h1>
+            <h1>답글 수정</h1>
         </header>
 
         <section class="detail">
-            <h2 class="blind">댓글 수정 페이지</h2>
+            <h2 class="blind">답글 수정 완료 페이지</h2>
             <div class="comment_wrap comment-detail">
                 <div class="comment_box">
                     <div class="info01">
@@ -27,7 +27,15 @@
                         <span class="count">답글 <span class="num">3</span></span>
                     </div>
                     <div class="info03">
-                        <!-- 댓글 수정 완료 시 -->
+                        5/7 정상영업 확인 완료
+                        옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정
+                        옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행
+                        예정, 제빙기
+                    </div>
+                </div>
+                <div class="reply_box">
+                    <!-- 답글 수정 완료 시 complete 추가 -->
+                    <div class="text01 done">
                         <p>
                             5/7 정상영업 확인 완료 <br/>
                             옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정 <br/>
@@ -63,7 +71,7 @@
                             </div>  
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
 
             <!-- 하단 고정 댓글 버튼 -->
@@ -78,6 +86,28 @@
                 </div>
             </aside>
         </section>
+
+           <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
+           <aside class="bottom_sheet" id="commentBtnPop">
+            <div class="sheet_wrap">
+                <div class="sheet_content">
+                    <div class="sheet_top">
+                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <div class="btn_comment_contents">
+                            <div class="btn_box">
+                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'">
+                                    <span class="btn_edit">수정</span>
+                                </button>
+                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                    <span class="btn_delete">삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dimd"></div>
+        </aside>
 
         <!-- 댓글 알럿 레이어 팝업 -->
         <div id="commentPop" class="layer_m_popup">
@@ -97,32 +127,10 @@
             </div>
         </div>
 
-        <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
-        <aside class="bottom_sheet" id="commentBtnPop">
-            <div class="sheet_wrap">
-                <div class="sheet_content">
-                    <div class="sheet_top">
-                        <a href="javascript:;" class="btn_sheet_close"></a>
-                        <div class="btn_comment_contents">
-                            <div class="btn_box">
-                                <button class="cm_btn_round on" onclick="location.href='../comment/edit.html'">
-                                    <span class="btn_edit">수정</span>
-                                </button>
-                                <button class="cm_btn_round on" data-target="commentDeletePop">
-                                    <span class="btn_delete">삭제</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dimd"></div>
-        </aside>
-        
         <!-- 댓글 등록 토스트 팝업 -->
         <div class="layer_toast" id="commentCompletePop">
             <div class="pop_cont01">
-                <p class="text">댓글이 수정되었습니다.</p>
+                <p class="text">답글이 수정되었습니다.</p>
             </div>
         </div>
     </main>
