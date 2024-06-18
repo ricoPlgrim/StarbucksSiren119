@@ -565,8 +565,8 @@ html, body {
         &::-webkit-scrollbar-thumb:hover {
             background: $dark-gray;
         }
-        // 비주얼 상단 확대보기 레이어 팝업
-        .detail_pop_visual {
+        // 이미지 확대보기 레이어 팝업
+        .pop_img_wrap {
             position: relative;
             display: flex;
             align-items: center;
@@ -1890,12 +1890,11 @@ html, body {
     }
 }
 
-//하단 고정 댓글
-.cm_btn_comment {
+ //하단 고정 댓글
+ .cm_btn_comment {
     display: flex;
-    align-items: end;
-    justify-content: space-between;
-    @include vp(padding, 20px 40px 60px);
+    flex-direction: column;
+    @include vp(padding, 20px 40px);
     position: fixed;
     left: 0px;
     right: 0px;
@@ -1904,17 +1903,21 @@ html, body {
     @include vp(border-top, 2px solid #eee);
     box-shadow: 0 -1px 5px 0px #e5e5e5;
     z-index: 20;
-    @include vp(min-height, 160px);
-    @include vp(max-height, 312px);
-    @include vp(max-width, 750px);
-    margin:0 auto;
+    @include vp(min-height, 220px);
+    @include vp(max-height, 600px);
+    &.type02 {
+        @include vp(min-height, 120px);
+        @include vp(max-height, none);
+    }
+
     .text_box {
+        @include vp(margin-bottom, 20px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         @include vp(padding, 24px 10px 0px 28px);
-        @include vp(width, 526px);
+        @include vp(width, 670px);
         @include vp(border-radius, 16px);
         border: 1px solid $light-gray-2;
         overflow: hidden;
@@ -1941,7 +1944,7 @@ html, body {
             @include vp(padding-right, 8px);
             @include vp(width, 100%);
             @include vp(min-height, 56px);
-            @include vp(max-height, 162px);
+            @include vp(max-height, 200px);
             @include vp(line-height, 40px);
             @include vp(font-size, $f15);
             color: $black;
@@ -1952,7 +1955,51 @@ html, body {
             transform-origin: left top;
         }
 
-        .text_box_footer {
+        .file_list {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            width: 100%;
+            li {
+                @include vp(margin, 40px 0px 30px);
+                position: relative;
+            }
+
+            .img_box {
+                position: relative;
+                @include vp(width, 100px);
+                @include vp(height, 100px);
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    @include vp(width, 100px);
+                    @include vp(height, 100px);
+                    @include vp(border-radius, 12px);
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    padding-top: 100%;
+                }
+            }
+
+            .file_delete {
+                position: absolute;
+                @include vp(top, -8.5px);
+                @include vp(right, -8.5px);
+                @include vp(width, 34px);
+                @include vp(height, 34px);
+                background: url("../images/btn/btn_file_delete02.png") no-repeat center;
+                @include vp(background-size, 34px auto);
+                cursor: pointer;
+            }
+        }
+
+        .btn_box {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -1981,18 +2028,44 @@ html, body {
         }
     }
 
-    button {
-        @include vp(padding, 0px 44px);
-        @include vp(height, 80px);
-        @include vp(border-radius, 12px);
-        @include vp(font-size, $f13);
-        color: #ffffff94;
-        background: $light-gray-1;
+    .btn_submit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
-        &.on {
-            background: $green;
-            color: $white;
+        .btn_upload {
+            span {
+                display: inline-block;
+                @include vp(padding-left, 60px);
+                @include vp(font-size, $f13);
+                @include vp(height, 48px);
+                @include vp(line-height, 50px);
+                background: url("../images/btn/btn_add_photo.png") no-repeat center left;
+                @include vp(background-size, 48px auto);
+                text-decoration: underline;
+            }
+            input {
+                position: absolute;
+                @include vp(left, 40px);
+                @include vp(width, 178px);
+                @include vp(height, 48px);
+                opacity: 0;
+            }
+        }
+     
+        button {
+            @include vp(padding, 0px 44px);
+            @include vp(height, 80px);
+            @include vp(border-radius, 12px);
+            @include vp(font-size, $f13);
+            color: #ffffff94;
+            background: $light-gray-1;
+    
+            &.on {
+                background: $green;
+                color: $white;
+            }
         }
     }
 }
-
