@@ -196,10 +196,6 @@ var mainUi = {
         }else{
             $( ".accident_filter" ).css( "display", "none" );
         }
-        var oneDepsIndex = commonUi.selectedOneDepsIndex ; 
-        var twoDepsIndex = commonUi.selectedTwoDepsIndex ; 
-
-        console.log( oneDepsIndex, twoDepsIndex );
 
     },
 
