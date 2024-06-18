@@ -2042,7 +2042,7 @@ section {
 
         .alarm_list_box {
             .inner {
-                @include vp(padding, 48px 40px);
+                @include vp(padding, 60px 40px);
 
                 .lead_box {
                     @include vp(padding-left, 20px);
@@ -2060,93 +2060,69 @@ section {
                     @include vp(margin-top, 40px);
 
                     >li {
-                        @include vp(margin-top, 80px);
+                        &:first-child {
+                            @include vp(border-top, 2px solid $dark-gray);
+                        }
+                        a {
+                            display: block;
+                            .text_box {
+                                position: relative;
+                                @include vp(border-bottom, 2px solid $light-gray-3);
+                                @include vp(padding, 28px 12px 28px 20px);
 
-                        dl {
-                            >dt {
-                                color: $black;
-                                font-weight: $fw6;
-                                @include vp(font-size, $f15);
-                                @include vp(margin-bottom, 40px);
+                                .title {
+                                    color: $black;
+                                    @include vp(font-size, $f13);
+                                    font-weight: $fw4;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: flex;
+                                    align-items: center;
+                                    @include vp(margin-bottom, 10px);
+                                    .type,
+                                    .store{
+                                        @include vp(padding-right, 5px );
+                                    }
+                                    .text{
+                                        @include vp(padding-left, 5px );
+                                    }
+                                    &:before {
+                                        position: absolute;
+                                        @include vp(top, 40px);
+                                        left: 0;
+                                        content: '';
+                                        @include vp(width, 8px);
+                                        @include vp(height, 8px);
+                                        background: $green;
+                                        border-radius: 50%;
+                                    }
+                                }
+
+                                .date {
+                                    span {
+                                        color: $black;
+                                        @include vp(font-size, $f11);
+                                        font-weight: $fw4;
+                                    }
+                                }
+
                             }
-
-                            dd {
-                                .history_list {
-                                    @include vp(border-top, 2px solid $dark-gray);
-
-                                    >li {
-                                        a {
-                                            dl {
-                                                position: relative;
-
-                                                @include vp(border-bottom, 2px solid $light-gray-3);
-                                                @include vp(padding, 28px 12px 28px 20px);
-
-                                                >dt {
-                                                    color: $black;
-                                                    @include vp(font-size, $f13);
-                                                    margin-bottom: 0;
-                                                    font-weight: $fw4;
-                                                    white-space: nowrap;
-                                                    overflow: hidden;
-                                                    text-overflow: ellipsis;
-                                                    display: flex;
-                                                    align-items: center;
-                                                    @include vp(margin-bottom, 10px);
-
-                                                    &.on {
-                                                        &:before {
-                                                            position: absolute;
-                                                            @include vp(top, 40px);
-                                                            left: 0;
-                                                            content: '';
-                                                            @include vp(width, 8px);
-                                                            @include vp(height, 8px);
-                                                            background: $green;
-                                                            border-radius: 50%;
-                                                        }
-                                                    }
-                                                }
-
-                                                dd {
-                                                    span {
-                                                        color: $black;
-                                                        @include vp(font-size, $f11);
-                                                        font-weight: $fw4;
-                                                    }
-
-                                                }
-                                            }
-                                        }
-
-                                        &.lead {
-                                            a {
-                                                dl {
-                                                    dt {
-                                                        color: $light-gray-1;
-
-                                                        &.on {
-                                                            &:before {
-                                                                display: none;
-                                                            }
-                                                        }
-                                                    }
-
-                                                    dd {
-                                                        span {
-                                                            color: $light-gray-1;
-                                                        }
-                                                    }
-                                                }
-                                            }
+                        }
+                        &.lead{
+                            a{
+                                .text_box{
+                                    .title{ 
+                                        color: $light-gray-1;
+                                        &:before{ display: none;}
+                                    }
+                                    .date{
+                                        span{
+                                            color: $light-gray-1;
                                         }
                                     }
                                 }
                             }
-                        }
-
-                        &:first-child {
-                            margin-top: 0;
                         }
                     }
                 }
@@ -2156,7 +2132,7 @@ section {
         .lead_text{ 
             @include vp(margin-top, 20px );
             color: $gray;
-            @include vp(font-size, 48px 40px);
+            @include vp(font-size, 26px);
             font-size: $f13;
             font-weight: $fw4;
             @include vp(line-height, 40px);

@@ -268,7 +268,6 @@ var commonUi = {
     // 하단 fixed 댓글 입력창 이벤트
     textFormClick: function () {
         var This = $(this);
-        console.log(This)
         var textForm = This.parent();
         var byteNum = textForm.find(".byte_num");
         var textFormHeight = textForm.height();
