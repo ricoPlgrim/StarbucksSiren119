@@ -6901,11 +6901,11 @@ html, body {
   margin-top: 0;
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-  padding: 52px 44px 105px;
+  padding: 52px 44px 110px;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-    padding: 6.9333333333vw 5.8666666667vw 14vw;
+    padding: 6.9333333333vw 5.8666666667vw 14.6666666667vw;
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {
@@ -7494,40 +7494,40 @@ html, body {
 .layer_popup .pop_cont01::-webkit-scrollbar-thumb:hover {
   background: #333;
 }
-.layer_popup .pop_cont01 .view_img_wrap {
+.layer_popup .pop_cont01 .pop_img_wrap {
   position: relative;
   display: flex;
   align-items: center;
 }
-.layer_popup .pop_cont01 .view_img_wrap .slide_img {
+.layer_popup .pop_cont01 .pop_img_wrap .slide_img {
   overflow: hidden;
   position: relative;
 }
-.layer_popup .pop_cont01 .view_img_wrap .slide_img ul {
+.layer_popup .pop_cont01 .pop_img_wrap .slide_img ul {
   padding-bottom: 150px;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .slide_img ul {
+  .layer_popup .pop_cont01 .pop_img_wrap .slide_img ul {
     padding-bottom: 20vw;
   }
 }
-.layer_popup .pop_cont01 .view_img_wrap .slide_img ul li {
+.layer_popup .pop_cont01 .pop_img_wrap .slide_img ul li {
   margin-bottom: 40px;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .slide_img ul li {
+  .layer_popup .pop_cont01 .pop_img_wrap .slide_img ul li {
     margin-bottom: 5.3333333333vw;
   }
 }
-.layer_popup .pop_cont01 .view_img_wrap .slide_img ul li:last-child {
+.layer_popup .pop_cont01 .pop_img_wrap .slide_img ul li:last-child {
   margin-bottom: 600px;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .slide_img ul li:last-child {
+  .layer_popup .pop_cont01 .pop_img_wrap .slide_img ul li:last-child {
     margin-bottom: 80vw;
   }
 }
-.layer_popup .pop_cont01 .view_img_wrap .pagination {
+.layer_popup .pop_cont01 .pop_img_wrap .pagination {
   position: fixed;
   top: 50%;
   right: 40px;
@@ -7538,16 +7538,16 @@ html, body {
   gap: 8px;
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .pagination {
+  .layer_popup .pop_cont01 .pop_img_wrap .pagination {
     right: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .pagination {
+  .layer_popup .pop_cont01 .pop_img_wrap .pagination {
     margin-top: -13.3333333333vw;
   }
 }
-.layer_popup .pop_cont01 .view_img_wrap .pagination .bullet {
+.layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
   display: inline-block;
   margin: 0px 4px;
   width: 16px;
@@ -7557,21 +7557,21 @@ html, body {
   border: 1px solid rgba(0, 0, 0, 0.3803921569);
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .pagination .bullet {
+  .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
     margin: 0vw 0.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .pagination .bullet {
+  .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
     width: 2.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .layer_popup .pop_cont01 .view_img_wrap .pagination .bullet {
+  .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
     height: 2.1333333333vw;
   }
 }
-.layer_popup .pop_cont01 .view_img_wrap .pagination .bullet.active {
+.layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet.active {
   background: #00A862;
 }
 .layer_popup .pop_cont02 {
@@ -9862,6 +9862,21 @@ html, body {
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     min-height: 21.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    max-height: 41.6vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    max-width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    border-top: 0.2666666667vw solid #eee;
   }
 }
 @media screen and (max-width: 750px) {

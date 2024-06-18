@@ -6899,11 +6899,11 @@ html, body {
   margin-top: 0;
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-  padding: 52px 44px 105px;
+  padding: 52px 44px 110px;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents {
-    padding: 6.9333333333vw 5.8666666667vw 14vw;
+    padding: 6.9333333333vw 5.8666666667vw 14.6666666667vw;
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box {

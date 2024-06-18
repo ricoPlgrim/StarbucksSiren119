@@ -159,8 +159,6 @@
                         옥상 인공잔디 제거 완료 > 건조 후 바닥공사 진행예정 <br/>
                         옥상 공사 완료후, 천장마감 및 콘센트 원복 보수 진행 <br/>
                         예정, 제빙기 임시 콘센트 외부 연결 처리 후 내부 수리중.
-                        <!-- 댓글 수정될 시 추가 -->
-                        <span class="edited">(수정됨)</span>
                     </div>
                     <div class="btn_wrap">
                         <div class="btn_box">
@@ -189,8 +187,6 @@
                                 5/8 해당사항 재확인 및 추가 공사 진행
                                 옥상 인공잔디 제거 재확인 > 건조 후 바닥공사 진행
                                 천장마감 및 콘센트 원복 보수 진행
-                                 <!-- 댓글 수정될 시 추가 -->
-                                <span class="edited">(수정됨)</span>
                             </div>
                             <div class="text02">
                                 <div class="comment_info">
@@ -215,8 +211,6 @@
                                 <span class="reply"></span>
                                 5/10 추가 공사 진행확인
                                 바닥공사 완료 > 천장마감 및 콘센트 원복 보수 진행
-                                <!-- 댓글 수정될 시 추가 -->
-                                <span class="edited">(수정됨)</span>
                             </div>
                             <div class="text02">
                                 <div class="comment_info">
@@ -355,7 +349,7 @@
                     <div class="slide_img">
                         <ul>
                             <li>
-                                <div class="img_box"><img src="../assets/images/temp/temp_detail04.png" alt="" /></div>
+                                <div class="img_box"><img src="../assets/images/temp/temp_detail02.png" alt="" /></div>
                             </li>
                             <li>
                                 <div class="img_box"><img src="../assets/images/temp/temp_detail03.png" alt="" /></div>
@@ -484,13 +478,22 @@
         <aside class="cm_btn_comment">
             <div class="text_box">
                 <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
-                <div class="text_box_footer">
+                <ul class="file_list">
+                    <!-- 추가된 이미지 영역 -->
+                </ul>
+                <div class="btn_box">
                     <span class="byte_num">0 / 1000byte</span>
                     <span class="btn_delete">내용 삭제</span>
                 </div>
             </div>
-            <!-- 활성화되면 class="on" 추가 -->
-            <button data-target="commentCompletePop">등록</button>
+            <div class="btn_submit">
+                <div class="btn_upload">
+                    <span>이미지첨부</span>
+                    <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
+                </div>
+                <!-- 활성화되면 class="on" 추가 -->
+                <button data-target="commentCompletePop">등록</button>
+            </div>
         </aside>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
