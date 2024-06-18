@@ -61,8 +61,8 @@ var alarmUi = {
     },
     btnAllCheck: function(){
         commonUi.bottomSheetHide('record');
-        if( $( ".history_list" ).find( "li" ).length > 0  ){
-            $( ".history_list" ).find( "li" ).addClass( "lead");
+        if( $( ".alarm_list" ).find( "li" ).length > 0  ){
+            $( ".alarm_list" ).find( "li" ).addClass( "lead");
         }
     },
     
