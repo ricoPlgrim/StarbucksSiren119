@@ -11,7 +11,6 @@ var reportUi = {
     init: function () {
         reportUi.loadEvent();
         reportUi.detailSwiper();
-        reportUi.visualPopScroll(); 
     },
     create: function(){
         _w = $( window );
@@ -86,45 +85,6 @@ var reportUi = {
             });
         }
 	},
-    // 보고 상세 상단 확대보기 팝업 스크롤 이벤트
-    visualPopScroll: function(){
-        if ($("#detailVisualPop").length > 0) {
-            var detailVisualWrap = $("#detailVisualPop"),
-                slides = detailVisualWrap.find(".slide_img > ul > li"),
-                pagination = detailVisualWrap.find(".pagination"),
-                bullets = pagination.find(".bullet");
-    
-            function setController() {
-                var headH = detailVisualWrap.find("header").outerHeight(),
-                    scroll = detailVisualWrap.find(".pop_cont01").scrollTop() + headH,
-                    index = 0,
-                    totalH = 0,
-                    arrSlideH = [];
-    
-                slides.each(function () {
-                    totalH += $(this).outerHeight();
-                    arrSlideH.push(totalH);
-                });
-    
-                if (scroll >= arrSlideH[arrSlideH.length - 1]) {
-                    index = arrSlideH.length - 1;
-                } else {
-                    for (var i = 0; i < arrSlideH.length; i++) {
-                        var end = arrSlideH[i];
-                        if (scroll < end) {
-                            index = i;
-                            break;
-                        }
-                    }
-                }
-    
-                bullets.removeClass("active");
-                bullets.eq(index).addClass("active");
-            }
-    
-            detailVisualWrap.find(".pop_cont01").on("scroll", setController);
-        }
-    }
 };
 
 $(function () {
