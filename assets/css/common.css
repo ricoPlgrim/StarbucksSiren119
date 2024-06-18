@@ -1080,16 +1080,17 @@ header.common .btn_bookmark.on {
 }
 header.common .btn_close {
   position: absolute;
-  top: 12px;
+  top: 15px;
   right: 0px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
   padding: 40px;
+  margin-right: 20px;
   z-index: 999;
 }
 @media screen and (max-width: 750px) {
   header.common .btn_close {
-    top: 1.6vw;
+    top: 2vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1102,24 +1103,13 @@ header.common .btn_close {
     padding: 5.3333333333vw;
   }
 }
+@media screen and (max-width: 750px) {
+  header.common .btn_close {
+    margin-right: 2.6666666667vw;
+  }
+}
 header.not {
   position: relative;
-}
-header.setting .btn_close {
-  margin-left: auto;
-  background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
-  background-size: 96px auto;
-  padding: 48px 50px;
-}
-@media screen and (max-width: 750px) {
-  header.setting .btn_close {
-    background-size: 12.8vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  header.setting .btn_close {
-    padding: 6.4vw 6.6666666667vw;
-  }
 }
 header.push .btn_setting {
   margin-left: auto;
@@ -1134,22 +1124,6 @@ header.push .btn_setting {
 }
 @media screen and (max-width: 750px) {
   header.push .btn_setting {
-    padding: 6.4vw 6.6666666667vw;
-  }
-}
-header.filter .btn_close {
-  margin-left: auto;
-  background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
-  background-size: 96px auto;
-  padding: 48px 50px;
-}
-@media screen and (max-width: 750px) {
-  header.filter .btn_close {
-    background-size: 12.8vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  header.filter .btn_close {
     padding: 6.4vw 6.6666666667vw;
   }
 }
