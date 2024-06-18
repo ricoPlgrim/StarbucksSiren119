@@ -455,37 +455,30 @@ section {
                             }
 
                             .result_box {
-                                @include vp(padding, 28px);
+                                display: none;
+                                flex: 0 0 auto;
+                                flex-direction: column;
+                                @include vp(padding, 10px 20px); 
                                 @include vp(width, 536px); 
                                 height: auto;
+                                @include vp(min-height, 78px);
+                                @include vp(max-height, 275px);
                                 background: #fff;
                                 z-index: 10;
                                 @include vp(border-radius, 16px);
                                 background-color: $white;
                                 @include vp(border, 1px solid $black);
-                                p {
-                                    color: $black;
-                                    @include vp(line-height, 40px);
+                                overflow-y: auto;
+                                &.on {
+                                    display: flex;
                                 }
-                            }
-    
-                        }
-
-                        &.result_box {
-                            @include vp(padding, 28px);
-                            position: absolute;
-                            left: 0px;
-                            right: 0px;
-                            @include vp(bottom, -96px);
-                            @include vp(width, 534px); 
-                            height: auto;
-                            background: #fff;
-                            z-index: 10;
-                            background-color: $white;
-                            @include vp(border, 1px solid $black);
-                            p {
-                                color: $black;
-                                line-height: normal;
+                                > li {
+                                    color: $black;
+                                    @include vp(padding, 5px);
+                                    @include vp(line-height, 46px);
+                                    border: none;
+                                    a {color: inherit;}
+                                }
                             }
                         }
 

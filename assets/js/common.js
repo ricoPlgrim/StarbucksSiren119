@@ -1,5 +1,5 @@
 /* global variables */
-var _w, _htmlBody, _gnb, _gnbBtn, _gnbCloseBtn, _scrollTopButton, _stickyTarget, _popBtn, _textFormBtn, _commoninputBtn, _textArea, _fileUploadBtn, _wrap;
+var _w, _htmlBody, _gnb, _gnbBtn, _gnbCloseBtn, _scrollTopButton, _stickyTarget, _popBtn, _textFormBtn, _commoninputBtn, _textArea, _fileUploadBtn, _searchInputBtn, _wrap;
 var _switchBox, _switchBoxOffset, _marginTop, _totalOffsetTop, _bottomSheetDim, _bottomSheetClose, _bottomSheetDateList;
 var _startDateInput, _endDateInput, _typeBtns, _twoDepsMenu, _twoDepsWrapMenu, _subDepsMenu, _searchInput, _deleteAllBtn, _btnTextDelete, _inputBoxTarget, _loginInPut, _btnTypeList, _rowScrolLBox, _btnBookmark;
 var _lastSelectedStartDate, _lastSelectedEndDate;
@@ -26,6 +26,7 @@ var commonUi = {
         _stickyTarget = $(".header_sticky");
         _popBtn = $("body").find("a, button"); // 팝업 버튼
         _commoninputBtn = $(".text_box").find("input");  // 입렵폼 input
+        _searchInputBtn= $(".text_box").find("#search_input"); // 보고 작성 상품명 input
         _textFormBtn = $(".text_box").find("textarea");   // 하단 fixed textarea 폼
         _textArea =  $(".textarea_box").find("textarea");   // 댓글 답글 textarea 폼
         _fileUploadBtn = $(".btn_submit").find("#imgFileBtn");   // 사진 파일 업로드
@@ -84,6 +85,7 @@ var commonUi = {
         _commoninputBtn.on("input", this.inputFormClick); // input 이벤트
         _textFormBtn.on("click focus propertychange change keyup paste", this.textFormClick);  // 하단 고정 댓글 입력 이벤트
         _textArea.on("click focus propertychange change keyup paste", this.handleTextarea);  // 댓글, 답글 textarea 이벤트
+        _searchInputBtn.on("keyup", this.handleSearchItem);
         _fileUploadBtn.on("change", this.fileImgUpload); // 파일 업로드
 
         _popBtn.on("click", this.popupItemClick);   // 팝업 버튼 클릭 이벤트
@@ -356,6 +358,27 @@ var commonUi = {
         }
 
         $(".btn_delete").on("click", deleteText);
+    },
+    handleSearchItem: function() {
+        var textValue = $(this).val().toLowerCase();
+        var searchList = $(this).closest(".form_list").find(".result_box");
+        var list = searchList.find("li");
+
+        if (textValue === "") {
+            searchList.removeClass("on");
+            list.hide();
+        } else {
+            list.each(function() {
+                var result = $(this).text().toLowerCase();
+                if (result.indexOf(textValue) > -1) {
+                    $(this).show();
+                    searchList.addClass("on");
+                } else {
+                    $(this).hide();
+                    searchList.removeClass("on");
+                }
+            });
+        }
     },
     handleMenuClick: function (e, wrapMenu = false) {
         e.preventDefault();
