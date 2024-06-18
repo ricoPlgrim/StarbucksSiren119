@@ -1914,6 +1914,15 @@ section {
                 }
             }
         }
+
+        .lead_text{ 
+            @include vp(margin-top, 20px );
+            color: $gray;
+            @include vp(font-size, 48px 40px);
+            font-size: $f13;
+            font-weight: $fw4;
+            @include vp(line-height, 40px);
+        }
     }
 
     //검색페이지

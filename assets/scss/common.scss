@@ -633,11 +633,11 @@ html, body {
             z-index: 10;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: center; 
             .btn_close {
                 position: absolute;
                 top: 0px;
-                right: 0px;
+                @include vp( right, 20px );
                 background: url("../images/btn/btn_close.png") center center no-repeat;
                 @include vp(background-size, 56px auto);
                 @include vp(padding, 60px);
@@ -1598,6 +1598,7 @@ html, body {
         color: $black;
         opacity: .87;
         cursor: pointer;
+        word-break: break-all;
 
         input[type="checkbox"] {
             @include vp(padding-left, 84px);
@@ -1857,7 +1858,7 @@ html, body {
                 }
             }
 
-            .btn_close {
+            .typetag_close {
                 display: block;
                 position: absolute;
                 @include vp(top, 19px);

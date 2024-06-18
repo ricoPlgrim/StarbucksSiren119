@@ -5539,6 +5539,29 @@ section.setting .alarm_list_box .inner .alarm_list > li dl dd .history_list > li
 section.setting .alarm_list_box .inner .alarm_list > li:first-child {
   margin-top: 0;
 }
+section.setting .lead_text {
+  margin-top: 20px;
+  color: #999;
+  font-size: 48px 40px;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+}
+@media screen and (max-width: 750px) {
+  section.setting .lead_text {
+    margin-top: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.setting .lead_text {
+    font-size: 6.4vw 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.setting .lead_text {
+    line-height: 5.3333333333vw;
+  }
+}
 section.searh {
   background: #fff;
   height: 100vh;
@@ -7083,11 +7106,16 @@ html, body {
 .layer_popup .pop_cont02 .head_box .btn_close {
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: 20px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
   padding: 60px;
   z-index: 999;
+}
+@media screen and (max-width: 750px) {
+  .layer_popup .pop_cont02 .head_box .btn_close {
+    right: 2.6666666667vw;
+  }
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont02 .head_box .btn_close {
@@ -8667,6 +8695,7 @@ html, body {
   color: #000;
   opacity: 0.87;
   cursor: pointer;
+  word-break: break-all;
 }
 @media screen and (max-width: 750px) {
   .cm_check_box label {
@@ -9224,7 +9253,7 @@ html, body {
     line-height: 2.6666666667vw;
   }
 }
-.btn_group .cm_btn_list li .btn_close {
+.btn_group .cm_btn_list li .typetag_close {
   display: block;
   position: absolute;
   top: 19px;
@@ -9236,27 +9265,27 @@ html, body {
   z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .typetag_close {
     top: 2.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .typetag_close {
     right: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .typetag_close {
     width: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .typetag_close {
     height: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  .btn_group .cm_btn_list li .btn_close {
+  .btn_group .cm_btn_list li .typetag_close {
     background-size: 3.7333333333vw auto;
   }
 }

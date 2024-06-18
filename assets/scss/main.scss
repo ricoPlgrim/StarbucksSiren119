@@ -12,7 +12,7 @@
 .sections {
     .section_inner {
         position: relative; 
-        @include vp(padding, 0px 40px 40px);
+        @include vp(padding, 0px 40px 40px); 
         transform: translateY(-40px);
 
         @include breakpoint {
@@ -20,7 +20,7 @@
         }
         &:after{
             content: '';
-            display: block;
+            display: block; 
             clear: both;     
         }
         // @include vp(padding, 0 20px); 
