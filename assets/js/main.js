@@ -114,7 +114,7 @@ var mainUi = {
     //선택한 벨류값 세팅
     updateSelectedValues: function () {
         $('.cm_btn_list.etc').empty();
-        $('.accident_filter .cm_btn_list').empty(); // Clear the accident filter list before appending new items
+        $('.accident_filter .cm_btn_list').empty();
         $('input[type="checkbox"]:checked').each(function() {
             var text = $(this).data('value');
             var listItem = `<li>
@@ -156,7 +156,6 @@ var mainUi = {
 
     //닫기 버튼 클릭시 li 삭제 
     closeTag: function () {
-        console.log( "close?" );
         var text = $(this).siblings('.cm_btn_round').find('.text').text();
         $('input[type="checkbox"]').each(function() {
             if ($(this).data('value') === text) {
@@ -204,7 +203,7 @@ var mainUi = {
         $('input[type="checkbox"]').prop('checked', false);
         $('.cm_btn_list.etc').empty();
         $('.accident_filter .cm_btn_list').empty();
-        $('.accident.btn_group').css('display', 'none');
+        $('.accident_filter').css('display', 'none');
         $('.bottom_group').css('display', 'none');
         localStorage.removeItem('selectedValues');
       },

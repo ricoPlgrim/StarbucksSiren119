@@ -414,122 +414,58 @@ header {
                                 }
                             }
                         }
-    
+                        &.alarm{
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_contract_alarm.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
+                            }
+                        }
+                        &:last-child{
+                            flex: 0 1 calc(50% - 22px);
+                            margin-bottom: 0;
+                        }
                     }
                 }
             }
           
         }
 
-        .app_setting_content {
-            @include vp(margin-top, 8px);
-
-            .inner {
-                @include vp(padding, 0px 40px);
-
-                h3 {
-                    @include vp(margin-bottom, 40px);
-                    @include vp(font-size, 32px);
-                    color: $black;
-                    font-weight: 600;
-                }
-
-                .btn_list {
-                    display: flex;
-                    @include vp(column-gap, 22px);
-
-                    li {
-                        a {
-                            position: relative;
-                            text-align: center;
-                            justify-content: center;
-                            display: flex;
-                            align-items: center;
-                            @include vp(width, 324px);
-                            @include vp(height, 120px);
-                            @include vp(border-radius, 40px);
-                            background: #F7F7F7;
-                            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
-
-                            span {
-                                position: relative;
-                                @include vp(font-size, 26px);
-                                font-weight: 400;
-                                @include vp(padding-left, 68px);
-                                color: $black;
-
-                                &::before {
-                                    content: '';
-                                    position: absolute;
-                                    @include vp(top, -10px);
-                                    left: 0;
-                                    @include vp(width, 48px);
-                                    @include vp(height, 48px);
-                                }
-                            }
-                        }
-
-                        &.btn_alarm {
-                            a {
-                                span {
-                                    &::before {
-                                        background: url("../images/icons/icon_alert_b_24x24.png") 0 0 no-repeat;
-                                        @include vp(background-size, 48px auto);
-
-                                    }
-                                }
-                            }
-                        }
-
-                        &.btn_collections {
-                            a {
-                                span {
-                                    &::before {
-                                        background: url("../images/icons/icon_edit_calendar_24x24.png") 0 0 no-repeat;
-                                        @include vp(background-size, 48px auto);
-
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
         .logout_box {
-            @include vp(margin-top, 80px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @include vp(background-size, 48px auto);
-            @include vp(padding, 0 40px);
+            @include vp(margin, 200px 40px 0 40px);
+            @include vp(border-radius, 12px);
+            @include vp(border, 2px solid $black-12);
 
-            .inner {
-                @include vp(border-top, 1px solid $gray );
-                text-align: center;
-
-                .btn_logout {
-                    @include vp(margin, 60px 120px);
-
-                    span {
-                        position: relative;
-                        font-weight: 400;
-                        @include vp(font-size, 26px);
-                        @include vp(line-height, 32px);
-                        @include vp(padding-left, 68px);
-
-                        &:before {
-                            content: '';
-                            display: block;
-                            position: absolute;
-                            @include vp(width, 48px);
-                            @include vp(height, 48px);
-                            @include vp(top, -10px);
-                            left: 0;
-                            background: url("../images/icons/icon_logout.png") 0 0 no-repeat;
-                            @include vp(background-size, 48px auto);
-                        }
+            .btn_logout {
+                @include vp(margin, 32px 0);
+                width: 100%;
+                height: 100%;
+                span {
+                    position: relative;
+                    @include vp(font-size, $f14);
+                    @include vp(line-height, 32px);
+                    @include vp(padding-left, 68px);
+                    @include vp(letter-spacing, .1px);
+                    color:$black-58;
+                    font-weight: $fw6;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        @include vp(width, 48px);
+                        @include vp(height, 48px);
+                        @include vp(top, -10px);
+                        left: 0;
+                        background: url("../images/icons/icon_logout.png") 0 0 no-repeat;
+                        @include vp(background-size, 48px auto);
                     }
+                }
 
-                } 
-            }
+            } 
         }
     }
