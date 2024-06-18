@@ -895,7 +895,7 @@ section {
                     }
                 }
             }
-            .notice {
+            .textarea_conts {
                 @include vp( margin-top, 80px); 
                 @include vp( margin-bottom, 40px);
                 @include vp( padding, 40px 40px 92px);
@@ -2355,6 +2355,9 @@ section {
                     display: block;
                 }
             }
+        }
+        .btn_group{
+            display: none;
         }
         
     }

@@ -1,5 +1,7 @@
+@import 'base/reset';
 @import 'base/variables';
 @import 'base/mixin';
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .guide {
     background: #999;
@@ -177,11 +179,11 @@
 
 .page {
     background-color: #f4f4f4;
-    font-family: 'Pretendard', sans-serif; 
+    font-family: 'Pretendard', sans-serif;
 
     h2 {
         @include vp(padding, 24px 0);
-        @include vp(font-size, 36px );
+        @include vp(font-size, 36px);
         text-align: center;
         font-weight: 600;
     }
@@ -190,18 +192,20 @@
     td {
         vertical-align: middle;
         text-align: center;
-        @include vp(font-size, 24px );
-        font-weight: 400;
+        @include vp(font-size, 24px);
+        font-weight: $fw5;
         border: 1px solid #0a9a7d;
     }
 
     .table-scroll {
         position: relative;
         max-width: 1680px;
+
         @media screen and (max-width: 1401px) {
             max-width: 1400px;
-            
+
         }
+
         margin: auto;
         overflow: hidden;
         border-right: 1px solid #0a9a7d;
@@ -211,7 +215,7 @@
     .table-wrap {
         width: 100%;
         overflow: auto;
-        @include vp(margin-bottom, 40px );
+        @include vp(margin-bottom, 40px);
     }
 
     .table-scroll table {
@@ -223,7 +227,7 @@
 
     .table-scroll th,
     .table-scroll td {
-        @include vp(padding, 20px );
+        @include vp(padding, 20px);
         white-space: nowrap;
     }
 
@@ -236,7 +240,11 @@
 
     .table-scroll td {
         background: #fff;
-        a{ color: $black; text-decoration: none;}
+
+        a {
+            color: $black;
+            text-decoration: none;
+        }
     }
 
     .clone {
@@ -258,4 +266,139 @@
 
 
 
+}
+
+.define {
+    font-family: 'Noto Sans KR', sans-serif;
+    @include vp(max-width, 1200px);
+    @include vp(padding-bottom, 100px);
+    margin: 0 auto;
+
+
+    h1 {
+        @include vp(padding, 30px 60px 20px 0);
+        @include vp(margin-bottom, 30px);
+        @include vp(font-size, 30px);
+        font-weight: $fw7;
+        @include vp(border-bottom, 2px solid $light-gray-3);
+    }
+
+    section {
+        @include vp(margin-top, 50px);
+
+        h2 {
+            font-weight: $fw6;
+            @include vp(font-size, 24px);
+            @include vp(margin-bottom, 20px);
+        }
+
+        h3 {
+            align-items: center;
+            color: $thickGreen;
+            display: flex;
+            @include vp(font-size, 20px);
+            font-weight: $fw4;
+            margin-bottom: 15px;
+            @include vp(margin-bottom, 15px);
+            @include vp(padding-left, 15px);
+            position: relative;
+
+            &:before {
+                content: "";
+                background-color: $thickGreen;
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                @include vp(width, 4px);
+            }
+        }
+
+        .tabe_wrap {
+            @include vp(border-top, 1px solid $black);
+            @include vp(border-bottom, 1px solid $black);
+            overflow-x: auto;
+
+            .tbl {
+                border-collapse: collapse;
+                border-spacing: 0;
+                @include vp(font-size, 20px);
+                @include vp(min-width, 650px);
+                width: 100%;
+
+                tr {
+                    @include vp(border-top, 1px solid $light-gray-2);
+
+                    &:first-child {
+                        border-top: 0;
+                    }
+
+                    th,
+                    td {
+                        @include vp(border-left, 1px solid $light-gray-2);
+                        @include vp(border-right, 1px solid $light-gray-2);
+                        @include vp(padding, 20px);
+                        vertical-align: middle;
+                    }
+
+                    th {
+                        background-color: #f3f3f3;
+                        border-left: 0;
+
+                        &:last-child {
+                            border-right: 0;
+                        }
+                    }
+
+                    td {
+                        border-right: 0;
+                        a{
+                            color:$black;
+                        }
+                    }
+                }
+
+                &.etc {
+                    td {
+                        border-left: 0;
+                        @include vp(border-right, 1px solid $light-gray-2);
+                        &:last-child{
+                            border-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bullet_list {
+            @include vp(margin-bottom, 20px);
+
+            li {
+                position: relative;
+                font-weight: $fw5;
+                @include vp(padding, 0 0 0 10px);
+                @include vp(margin-top, 10px);
+                @include vp(font-size, 14px);
+                @include vp(line-height, 14px);
+                em{ font-weight: bold; color: $orange; }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    @include vp(top, 5px );
+                    @include vp(width, 4px );
+                    @include vp(height, 4px );
+                    display: block;
+                    background: $black;
+                    border-radius: 50%;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
 }

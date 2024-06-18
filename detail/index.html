@@ -131,7 +131,7 @@
                         </dl>
                     </div>
                 </div>
-                <div class="notice">
+                <div class="textarea_conts">
                     소비기한 경과 물품회수 조치 완료, 고객 환불 완료,고객 
                     컴플레인 없었음. 매장 진열 식품에 대한 소비기한 경과 여부 점검하여 추가 이슈 없었음을 확인 함.
                 </div>
@@ -479,6 +479,19 @@
                 <p class="text">댓글이 등록되었습니다.</p>
             </div>
         </div>
+
+        <!-- 하단 고정 댓글 버튼 -->
+        <aside class="cm_btn_comment">
+            <div class="text_box">
+                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                <div class="text_box_footer">
+                    <span class="byte_num">0 / 1000byte</span>
+                    <span class="btn_delete">내용 삭제</span>
+                </div>
+            </div>
+            <!-- 활성화되면 class="on" 추가 -->
+            <button data-target="commentCompletePop">등록</button>
+        </aside>
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/swiper.js"></script>
