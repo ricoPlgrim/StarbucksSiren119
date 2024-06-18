@@ -24,21 +24,6 @@ var mainUi = {
         _filter = $( "section.filter" );
         _btnApply = _filter.find( ".cm_btn_round.active" );
         _btnReset = _filter.find( ".cm_btn_round.on" );
-
-        // 선택된 벨류값이 있을 경우 
-        // if (_selectedValues && _selectedValues.length > 0) {
-        //     _selectedValues.forEach(function (value) {
-        //         var listItem = `<li>
-        //                 <button class="cm_btn_round on tag"><span class="text">${value}</span></button>
-        //                 <a href="javascript:;" class="btn_close tag_close"><span class="blind">삭제</span></a>
-        //             </li>`;
-        //         $('.cm_btn_list').append(listItem);
-        //     });
-        // } 
-        // if (_selectedValues.length === 0) {
-        //     $('.main.btn_group').css('display', 'none');
-        // }
-
         _btnReload = _main.find(".btn_refresh");
 
     },
@@ -47,9 +32,9 @@ var mainUi = {
         _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
         _docment.on('click', '.typeAll', mainUi.typeAllCheck);
         _docment.on('click', 'input[type="checkbox"]:not(.typeAll)', mainUi.typeNotCheck);
-        _docment.on('click', '.cm_btn_list .btn_close', mainUi.closeTag);
+        _docment.on('click', '.cm_btn_list .typetag_close', mainUi.closeTag);
         _btnApply.on( "click", mainUi.btnApplyClick );
-        // _btnReset.on( "click", mainUi.btnResetClick );
+        _btnReset.on( "click", mainUi.btnResetClick );
 
      
 
@@ -134,7 +119,7 @@ var mainUi = {
             var text = $(this).data('value');
             var listItem = `<li>
                 <button class="cm_btn_round on tag"><span class="text">${text}</span></button>
-                <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
             </li>`;
             $('.cm_btn_list.etc').append(listItem);
             $('.accident_filter .cm_btn_list').append(listItem);
@@ -222,6 +207,7 @@ var mainUi = {
         $('.cm_btn_list.etc').empty();
         $('.accident_filter .cm_btn_list').empty();
         $('.accident.btn_group').css('display', 'none');
+        $('.bottom_group').css('display', 'none');
         localStorage.removeItem('selectedValues');
       },
       
