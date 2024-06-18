@@ -1465,8 +1465,13 @@ header.filter .btn_close {
   }
 }
 .gnb nav .inner ul .icon:last-child {
-  flex: 0 1 calc(50% - 22px);
+  flex: 0 1 calc(50% - 11px);
   margin-bottom: 0;
+}
+@media screen and (max-width: 750px) {
+  .gnb nav .inner ul .icon:last-child {
+    flex: 0 1 calc(50% - 1.4666vw);
+  }
 }
 .gnb .logout_box {
   display: flex;
