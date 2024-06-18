@@ -193,6 +193,8 @@ var mainUi = {
         if (selectedValues.length > 0) {
             localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
             console.log(selectedValues); //선택한 벨류값들 setitem으로 값 넣기
+        }else{
+            $( ".accident_filter" ).css( "display", "none" );
         }
         var oneDepsIndex = commonUi.selectedOneDepsIndex ; 
         var twoDepsIndex = commonUi.selectedTwoDepsIndex ; 
