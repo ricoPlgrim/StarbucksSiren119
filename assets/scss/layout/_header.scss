@@ -204,7 +204,7 @@ header {
 
         .btn_close {
             position: absolute;
-            @include vp(top, 12px auto);
+            @include vp(top, 12px);
             right: 0px;
             background: url("../images/btn/btn_close.png") center center no-repeat;
             @include vp(background-size, 56px auto);

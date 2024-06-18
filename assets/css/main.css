@@ -1082,7 +1082,7 @@ header.common .btn_bookmark.on {
 }
 header.common .btn_close {
   position: absolute;
-  top: 12px auto;
+  top: 12px;
   right: 0px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
@@ -1091,7 +1091,7 @@ header.common .btn_close {
 }
 @media screen and (max-width: 750px) {
   header.common .btn_close {
-    top: 1.6vw auto;
+    top: 1.6vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9302,23 +9302,18 @@ html, body {
   left: 0px;
   right: 0px;
   bottom: 0px;
+  min-height: 160px;
+  max-height: 312px;
+  max-width: 750px;
+  transform: translateY(0);
   background: #fff;
   border-top: 2px solid #eee;
   box-shadow: 0 -1px 5px 0px #e5e5e5;
   z-index: 20;
-  min-height: 160px;
-  max-height: 312px;
-  max-width: 750px;
-  margin: 0 auto;
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     padding: 2.6666666667vw 5.3333333333vw 8vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .cm_btn_comment {
-    border-top: 0.2666666667vw solid #eee;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9334,6 +9329,11 @@ html, body {
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     max-width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    border-top: 0.2666666667vw solid #eee;
   }
 }
 .cm_btn_comment .text_box {
@@ -10772,6 +10772,9 @@ html, body {
     width: 68.4vw;
   }
 }
+.sections .section_inner .setting_contents .btn_group.accident_filter {
+  display: none;
+}
 .sections .section_inner .accident_content {
   margin-top: 20px;
 }
@@ -10830,4 +10833,70 @@ html, body {
 }
 .sections section.on {
   display: block;
+}
+
+#filterPopup {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup {
+    padding-top: 14.9333333333vw;
+  }
+}
+#filterPopup .head_box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  justify-content: space-between;
+  height: 112px;
+  width: 750px;
+  border-bottom: 2px solid #EEE;
+  background-color: #fff;
+  margin: 0 auto;
+  z-index: 100;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box {
+    height: 14.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box {
+    border-bottom: 0.2666666667vw solid #EEE;
+  }
+}
+#filterPopup .head_box h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box h1 {
+    font-size: 4vw;
+  }
+}
+#filterPopup .head_box .btn_close {
+  top: 14px;
+  padding: 40px;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box .btn_close {
+    top: 1.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box .btn_close {
+    padding: 5.3333333333vw;
+  }
 }

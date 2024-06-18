@@ -1080,7 +1080,7 @@ header.common .btn_bookmark.on {
 }
 header.common .btn_close {
   position: absolute;
-  top: 12px auto;
+  top: 12px;
   right: 0px;
   background: url("../images/btn/btn_close.png") center center no-repeat;
   background-size: 56px auto;
@@ -1089,7 +1089,7 @@ header.common .btn_close {
 }
 @media screen and (max-width: 750px) {
   header.common .btn_close {
-    top: 1.6vw auto;
+    top: 1.6vw;
   }
 }
 @media screen and (max-width: 750px) {
