@@ -6476,11 +6476,11 @@ html, body {
   }
 }
 #wrap.etc .scrolltop_box.on {
-  bottom: 200px;
+  bottom: 250px;
 }
 @media screen and (max-width: 750px) {
   #wrap.etc .scrolltop_box.on {
-    bottom: 26.6666666667vw;
+    bottom: 33.3333333333vw;
   }
 }
 #wrap.report .scrolltop_box {
@@ -6951,6 +6951,7 @@ html, body {
   left: 50%;
   transform: translateX(261px);
   z-index: 10;
+  cursor: pointer;
 }
 @media screen and (max-width: 750px) {
   .scrolltop_box {

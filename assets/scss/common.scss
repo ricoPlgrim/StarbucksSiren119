@@ -48,7 +48,7 @@ html, body {
         .scrolltop_box{
             @include vp(bottom, 314px);
             &.on{
-                @include vp(bottom, 200px);
+                @include vp(bottom, 250px);
             }
         }
       
@@ -345,6 +345,7 @@ html, body {
     left: 50%;
     transform: translateX(261px);
     z-index: 10;
+    cursor: pointer;
     @include breakpoint {
         transform: translateX(34.8vw);
     }
