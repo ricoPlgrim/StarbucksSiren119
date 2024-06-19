@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;" />
+    <meta name="virtual-keyboard" content="overlays-content">
+    <title>Fixed Element with Input</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .content {
+            height: 200vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .fixed-element {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            z-index: 1000;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p>Scroll down to see the fixed element at the bottom.</p>
+        <p>Tap the input field to see the effect when the keyboard appears.</p>
+    </div>
+    <div class="fixed-element">
+        <input type="text" placeholder="Focus on me">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function disableBodyScroll() {
+            $('body').css('overflow', 'hidden');
+        }
+
+        function enableBodyScroll() {
+            $('body').css('overflow', '');
+        }
+
+        $(document).on('focusin', 'input, textarea', function() {
+            disableBodyScroll();
+            if (window.visualViewport) {
+                $('body').css('height', window.visualViewport.height + 'px');
+                $('.fixed-element').css('bottom', `${window.visualViewport.height - window.innerHeight}px`);
+            } else {
+                $('body').css('height', window.innerHeight + 'px');
+            }
+        });
+
+        $(document).on('focusout', 'input, textarea', function() {
+            enableBodyScroll();
+            $('body').css('height', 'auto');
+            $('.fixed-element').css('bottom', '0');
+        });
+
+        $(window).on('resize', function() {
+            if ($(document.activeElement).is('input, textarea')) {
+                if (window.visualViewport) {
+                    $('body').css('height', window.visualViewport.height + 'px');
+                    $('.fixed-element').css('bottom', `${window.visualViewport.height - window.innerHeight}px`);
+                } else {
+                    $('body').css('height', window.innerHeight + 'px');
+                }
+            } else {
+                $('body').css('height', 'auto');
+                $('.fixed-element').css('bottom', '0');
+            }
+        });
+
+        // 초기 로드 시 높이 설정
+        if ($(document.activeElement).is('input, textarea')) {
+            if (window.visualViewport) {
+                $('body').css('height', window.visualViewport.height + 'px');
+                $('.fixed-element').css('bottom', `${window.visualViewport.height - window.innerHeight}px`);
+            } else {
+                $('body').css('height', window.innerHeight + 'px');
+            }
+        }
+    </script>
+</body>
+</html>

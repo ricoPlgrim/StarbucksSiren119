@@ -153,6 +153,14 @@ var commonUi = {
                 $(".cm_tab_contents, .cm_tab_panel").removeClass('on');
             }
         }
+        console.log( _sT, "화면 스크롤 넘겼니?", "=======>", document.body.offsetHeight );
+
+        // console.log( "스크롤값===>", "===>",  visualViewport.height)
+        if(_sT + visualViewport.height > document.body.offsetHeight - 2){ 
+            // alert( "여기 언제니?" );
+            // window.scrollTo(0, document.body.offsetHeight - visualViewport.height-1);
+        }
+
     },
 
     scrollTopClick: function () {
@@ -299,17 +307,6 @@ var commonUi = {
         }
 
         $(".btn_delete").on("click", deleteText);
-
-        if (e.type === 'focusin') {
-            if(  _w[0].innerHeight >  _w[0].visualViewport.height ){
-                console.log( "현재 브라우저보다 더 클떄"  );
-                alert( "현재 브라우저보다 더 클떄"  );
-            }
-            // 포커스 인 이벤트 처리
-        } else if (e.type === 'focusout') {
-        }
-
-
 
     },
     // 공통 input 이벤트
