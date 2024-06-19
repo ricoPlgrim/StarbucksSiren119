@@ -131,14 +131,6 @@ var commonUi = {
                 commonUi.updateBarPosition($(this));
             }
         });
-
-        //반응체크
-        if ($(document.activeElement).is('input, textarea')) {
-            alert( "반응" );
-            $('body').css('height', window.innerHeight + 'px');
-        } else {
-            $('body').css('height', 'auto');
-        }
     },
 
     scrollEvent: function () {
