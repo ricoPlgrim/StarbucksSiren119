@@ -129,6 +129,9 @@ var mainUi = {
         // accident filter에 태그가 없으면 숨김
         var accidentFilterHasTags = $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length === 0;
         $('.accident_filter').css('display', accidentFilterHasTags ? 'none' : 'flex');
+        if( $('.setting_contents').hasClass( "on" )){
+            $('.setting_contents').removeClass( "on" );
+        }
     },
 
     typeAllCheck: function () {
