@@ -117,7 +117,13 @@ var commonUi = {
         // this.sendBunCehck();  //재난문자 영역 있는지 체크
 
      
-
+        if ($(document.activeElement).is('input, textarea')) {
+            if (window.visualViewport) {
+                $('body').css('height', window.visualViewport.height + 'px');
+            } else {
+                $('body').css('height', window.innerHeight + 'px');
+            }
+        }
     },
 
     loadEvent: function () {
@@ -131,6 +137,17 @@ var commonUi = {
                 commonUi.updateBarPosition($(this));
             }
         });
+
+        if ($(document.activeElement).is('input, textarea')) {
+            if (window.visualViewport) {
+                $('body').css('height', window.visualViewport.height + 'px');
+            } else {
+                $('body').css('height', window.innerHeight + 'px');
+            }
+        } else {
+            $('body').css('height', 'auto');
+        }
+        
     },
 
     scrollEvent: function () {
