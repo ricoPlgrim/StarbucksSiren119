@@ -598,7 +598,6 @@ html, body {
                     @include vp( height, 16px); 
                     border-radius: 50%;
                     background: #FFFFFF80;
-                    border: 1px solid #00000061;
                     &.active {
                         background: $green;
                     }
