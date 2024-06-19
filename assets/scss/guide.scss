@@ -4,8 +4,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .guide {
-    background: #999;
-
+    background: $white;
     .guide_box {
         .guide_list {
             display: block;
@@ -16,6 +15,7 @@
                 background: $white;
                 overflow: hidden;
                 @include vp(margin-top, 40px);
+                @include vp(border, 2px solid $black);
 
                 .guide_top {
 
@@ -141,6 +141,9 @@
 
             &:first-child {
                 margin-top: 0;
+            }
+            &:last-child{
+                @include vp(margin-bottom, 100px);   
             }
         }
 
@@ -401,4 +404,19 @@
         }
 
     }
+}
+
+//가로 스크롤
+.temp1{
+    @include vp(width, 750px );
+}
+
+.test{ 
+     @include vp(font-size, 30px );
+     @include vp(width, 3000px );
+}
+
+.test2{
+    @include vp(font-size, 30px );
+    width: auto;
 }
