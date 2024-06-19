@@ -68,7 +68,6 @@ var mainUi = {
     commonSwitchAction: function (index) {
         var contents = $(".sections").find("section");
         var roundBar = $(".switch_round");
-        var messageBox = $(".message_box");
 
         _switchBoxBtns.removeClass("on");
         _switchBoxBtns.eq(index).addClass("on");
@@ -76,12 +75,8 @@ var mainUi = {
         contents.eq(index).addClass("on");
 
         if (index === 0) {
-            messageBox.css("display", "block");
-            commonUi.sendBunCehck();
             roundBar.removeClass("right").addClass("left");
         } else {
-            messageBox.css("display", "none");
-            commonUi.sendBunCehck();
             roundBar.removeClass("left").addClass("right");
         }
     },
@@ -189,8 +184,10 @@ var mainUi = {
             localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
             console.log(selectedValues); // 선택한 벨류값들 setitem으로 값 넣기
             $('.accident_filter').css('display', 'flex');
+            $( ".setting_contents" ).addClass( "on" );
         } else {
             $('.accident_filter').css('display', 'none');
+            $( ".setting_contents" ).removeClass( "on" );
         }
     },
     

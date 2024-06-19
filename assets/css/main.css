@@ -5007,7 +5007,7 @@ section.message .message_contents .inner .textarea_contents textarea {
   background: #fff;
   resize: none;
   font-weight: 400;
-  color: #AAA;
+  color: #000;
   border: 0;
   overflow-x: hidden;
 }
@@ -5063,6 +5063,14 @@ section.message .message_contents .inner .textarea_contents .byte_num {
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner .textarea_contents .byte_num {
     font-size: 3.4666666667vw;
+  }
+}
+section.message .message_contents .inner .textarea_contents.on {
+  border: 2px solid #000;
+}
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents.on {
+    border: 0.2666666667vw solid #000;
   }
 }
 section.message .receiver_contents {
@@ -6527,34 +6535,18 @@ html, body {
   padding-top: 0;
 }
 #wrap.etc .scrolltop_box {
-  bottom: 314px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.etc .scrolltop_box {
-    bottom: 41.8666666667vw;
-  }
-}
-#wrap.etc .scrolltop_box.on {
   bottom: 250px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.etc .scrolltop_box.on {
+  #wrap.etc .scrolltop_box {
     bottom: 33.3333333333vw;
   }
 }
 #wrap.report .scrolltop_box {
-  bottom: 314px;
-}
-@media screen and (max-width: 750px) {
-  #wrap.report .scrolltop_box {
-    bottom: 41.8666666667vw;
-  }
-}
-#wrap.report .scrolltop_box.on {
   bottom: 180px;
 }
 @media screen and (max-width: 750px) {
-  #wrap.report .scrolltop_box.on {
+  #wrap.report .scrolltop_box {
     bottom: 24vw;
   }
 }
@@ -7006,15 +6998,15 @@ html, body {
 .scrolltop_box {
   display: none;
   position: fixed;
-  bottom: 164px;
   left: 50%;
   transform: translateX(261px);
   z-index: 10;
+  bottom: 49px;
   cursor: pointer;
 }
 @media screen and (max-width: 750px) {
   .scrolltop_box {
-    bottom: 21.8666666667vw;
+    bottom: 6.5333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -7087,90 +7079,6 @@ html, body {
     background-size: 5.3333333333vw auto;
   }
 }
-.scrolltop_box.on {
-  bottom: 59px;
-}
-@media screen and (max-width: 750px) {
-  .scrolltop_box.on {
-    bottom: 7.8666666667vw;
-  }
-}
-
-.message_box {
-  position: fixed;
-  bottom: 49px;
-  left: 50%;
-  transform: translateX(185px);
-  z-index: 10;
-}
-@media screen and (max-width: 750px) {
-  .message_box {
-    bottom: 6.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .message_box {
-    transform: translateX(24.6666666667vw);
-  }
-}
-.message_box .box_round {
-  position: relative;
-  display: block;
-  text-align: center;
-  width: 168px;
-  height: 92px;
-  border-radius: 68px;
-  border: 4px solid #FF2E00;
-  line-height: 84px;
-  background: #FFF6F6;
-  opacity: 0.6;
-  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
-}
-@media screen and (max-width: 750px) {
-  .message_box .box_round {
-    width: 22.4vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .message_box .box_round {
-    height: 12.2666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .message_box .box_round {
-    border-radius: 9.0666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .message_box .box_round {
-    border: 0.5333333333vw solid #FF2E00;
-  }
-}
-@media screen and (max-width: 750px) {
-  .message_box .box_round {
-    line-height: 11.2vw;
-  }
-}
-.message_box .text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  font-weight: 600;
-  font-size: 32px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #FF2E00;
-}
-@media screen and (max-width: 750px) {
-  .message_box .text {
-    font-size: 4.2666666667vw;
-  }
-}
-
 .layer_m_popup {
   display: none;
   position: fixed;
@@ -9693,13 +9601,13 @@ html, body {
   position: relative;
 }
 .btn_group .cm_btn_list {
-  padding-bottom: 1px;
+  padding-bottom: 20px;
   display: flex;
   overflow-y: auto;
 }
 @media screen and (max-width: 750px) {
   .btn_group .cm_btn_list {
-    padding-bottom: 0.1333333333vw;
+    padding-bottom: 2.6666666667vw;
   }
 }
 .btn_group .cm_btn_list li {
@@ -11446,6 +11354,14 @@ html, body {
 }
 .sections .section_inner .setting_contents .btn_group.accident_filter {
   display: none;
+}
+.sections .section_inner .setting_contents.on {
+  padding: 40px 40px 8px 40px;
+}
+@media screen and (max-width: 750px) {
+  .sections .section_inner .setting_contents.on {
+    padding: 5.3333333333vw 5.3333333333vw 1.0666666667vw 5.3333333333vw;
+  }
 }
 .sections .section_inner .accident_content {
   margin-top: 20px;

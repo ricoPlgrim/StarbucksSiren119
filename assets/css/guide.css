@@ -1267,37 +1267,3 @@ input[type=date]::-webkit-outer-spin-button {
 .define section .bullet_list li:first-child {
   margin-top: 0;
 }
-
-.temp1 {
-  width: 750px;
-}
-@media screen and (max-width: 750px) {
-  .temp1 {
-    width: 100vw;
-  }
-}
-
-.test {
-  font-size: 30px;
-  width: 3000px;
-}
-@media screen and (max-width: 750px) {
-  .test {
-    font-size: 4vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  .test {
-    width: 400vw;
-  }
-}
-
-.test2 {
-  font-size: 30px;
-  width: auto;
-}
-@media screen and (max-width: 750px) {
-  .test2 {
-    font-size: 4vw;
-  }
-}

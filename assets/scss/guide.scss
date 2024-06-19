@@ -405,18 +405,3 @@
 
     }
 }
-
-//가로 스크롤
-.temp1{
-    @include vp(width, 750px );
-}
-
-.test{ 
-     @include vp(font-size, 30px );
-     @include vp(width, 3000px );
-}
-
-.test2{
-    @include vp(font-size, 30px );
-    width: auto;
-}

@@ -1626,7 +1626,7 @@ section {
                         background: $white;
                         resize: none;
                         font-weight: $fw4;
-                        color: $light-gray-1;
+                        color: $black;
                         border: 0;
                         overflow-x: hidden;
                     }
@@ -1639,6 +1639,9 @@ section {
                         @include vp(font-size, $f13);
                         font-size: $f11;
                         font-weight: $fw4;
+                    }
+                    &.on{
+                        @include vp(border, 2px solid $black);
                     }
                 }
             }

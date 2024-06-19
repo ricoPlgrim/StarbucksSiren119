@@ -392,14 +392,14 @@
                 }
                 &.right{
                     .safety{
-                        @include vp(top, 1054px);
+                        @include vp(top, 1054px); 
                     }
                 }
             }
         }
 
         &.customer{
-            &.open{
+            &.open{ 
                 @include vp(min-height, 1464px);
             }
             .menu_btn-list{
@@ -408,10 +408,10 @@
                         @include vp(top, 416px);
                        
                     }
-                    .disaster{
+                    .disaster{ 
                         @include vp(top, 764px);
                     }
-                    .different{
+                    .different{ 
                         @include vp(top, 1100px);
                     }
                 }
@@ -687,6 +687,9 @@
                 &.accident_filter{
                     display: none;    
                 }
+            }
+            &.on{
+                @include vp(padding, 40px 40px 8px 40px);
             }
         }
 
