@@ -360,7 +360,7 @@ section {
             .form_box {
                 display: flex;
                 align-items: center;
-                @include vp(margin-bottom, 40px);
+                @include vp(margin-bottom, 32px);
                 &:last-child {@include vp(margin-bottom, 80px);}
                 .title01 {
                     @include vp(font-size, $f13);
@@ -374,7 +374,7 @@ section {
                     align-items: center;
 
                     &.scroll {
-                        padding-bottom: 1px;
+                        @include vp(padding-bottom, 12px);
                         overflow-y: auto;
                         // &::-webkit-scrollbar{width: 3px; height:3px;}
                         // &::-webkit-scrollbar-thumb {border-radius: 10px; background: #888;}
@@ -701,10 +701,12 @@ section {
                 @include vp(height, 16px);
                 background: #FFFFFF80;
                 border: 1px solid #00000061;
+                opacity: 1;
             }
 
             .swiper-pagination-bullet-active {
                 background: $green;
+                border: none;
             }
 
             // .img_box {

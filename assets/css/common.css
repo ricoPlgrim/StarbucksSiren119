@@ -2195,11 +2195,11 @@ section.report .create_form .file_upload_wrap .file_list .file_delete {
 section.report .create_form .form_box {
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 @media screen and (max-width: 750px) {
   section.report .create_form .form_box {
-    margin-bottom: 5.3333333333vw;
+    margin-bottom: 4.2666666667vw;
   }
 }
 section.report .create_form .form_box:last-child {
@@ -2231,8 +2231,13 @@ section.report .create_form .form_box .form_list {
   align-items: center;
 }
 section.report .create_form .form_box .form_list.scroll {
-  padding-bottom: 1px;
+  padding-bottom: 12px;
   overflow-y: auto;
+}
+@media screen and (max-width: 750px) {
+  section.report .create_form .form_box .form_list.scroll {
+    padding-bottom: 1.6vw;
+  }
 }
 section.report .create_form .form_box .form_list.red li.on {
   border: 1px solid #FF2E00;
@@ -2940,6 +2945,7 @@ section.detail .detail_visual .swiper-pagination-bullet {
   height: 16px;
   background: rgba(255, 255, 255, 0.5019607843);
   border: 1px solid rgba(0, 0, 0, 0.3803921569);
+  opacity: 1;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_visual .swiper-pagination-bullet {
@@ -2958,6 +2964,7 @@ section.detail .detail_visual .swiper-pagination-bullet {
 }
 section.detail .detail_visual .swiper-pagination-bullet-active {
   background: #00A862;
+  border: none;
 }
 section.detail .detail_wrap {
   margin: 0px 40px;
@@ -6488,6 +6495,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
 }
 
 #wrap {
@@ -7435,6 +7444,7 @@ html, body {
   height: 16px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5019607843);
+  border: 1px solid rgba(0, 0, 0, 0.3803921569);
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
@@ -7453,6 +7463,7 @@ html, body {
 }
 .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet.active {
   background: #00A862;
+  border: none;
 }
 .layer_popup .pop_cont02 {
   overflow-y: auto;
@@ -9729,8 +9740,8 @@ html, body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  width: 100%;
-  transform: translateY(0);
+  width: 750px;
+  margin: 0 auto;
   background: #fff;
   border-top: 2px solid #eee;
   box-shadow: 0 -1px 5px 0px #e5e5e5;
@@ -9741,6 +9752,11 @@ html, body {
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
     padding: 2.6666666667vw 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .cm_btn_comment {
+    width: 100vw;
   }
 }
 @media screen and (max-width: 750px) {
