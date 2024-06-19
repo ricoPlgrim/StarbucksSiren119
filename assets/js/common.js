@@ -326,6 +326,7 @@ var commonUi = {
         var This = $(this);
         var textBox = This.closest(".detail");
         var submitBtn = textBox.find(".btn_submit").find("button");
+        var footerH = textBox.find(".btn_box").outerHeight();
         
         if (This.val().length < 1) {
             submitBtn.removeClass("on");
@@ -333,6 +334,9 @@ var commonUi = {
         } else {
             submitBtn.addClass("on");
             This.height(this.scrollHeight);
+            if (this.scrollHeight > this.clientHeight) {
+                This.css("margin-bottom", -footerH);
+            }
         }
         
         function clearText(textValue) {

@@ -932,13 +932,13 @@ section {
                             flex-direction: column;
                             justify-content: center;
                             textarea {
-                                width: 100%;
-                                height: auto;
+                                width: 115%;
+                                @include vp(margin-bottom, -24px); 
                                 @include vp( min-height, 140px); 
                                 @include vp( max-height, 710px); 
                                 @include vp( line-height, 46px); 
-                                @include vp(font-size, $f13);
-                                transform: scale(0.99);
+                                @include vp(font-size, $f16);
+                                transform: scale(0.875);
                                 transform-origin: left top;
                                 color: #00000094;
                                 resize: none;
@@ -946,8 +946,9 @@ section {
                                 border: none;
                             }
                             .btn_box {
-                                @include vp( margin-top, 30px); 
+                                @include vp(padding-top, 30px); 
                                 display: flex;
+                                align-items: center;
                                 justify-content: space-between;
                                 .btn_delete {
                                     @include vp(padding, 32px);
@@ -959,7 +960,6 @@ section {
                                     font-size: 0px;
                                 }
                             }
-
                         }
                         .file_list {
                             display: flex;
@@ -967,7 +967,7 @@ section {
                             gap: 10px;
                             width: 100%;
                             li {
-                                @include vp(margin-top, 30px);
+                                @include vp(margin-top, 40px);
                                 position: relative;
                             }
                 
@@ -1046,21 +1046,21 @@ section {
                             flex-direction: column;
                             justify-content: center;
                             textarea {
-                                width: 100%;
-                                height: auto;
+                                width: 115%;
+                                @include vp(margin-bottom, -24px); 
                                 @include vp( min-height, 140px); 
                                 @include vp( max-height, 710px); 
-                                color: $black;
+                                @include vp( line-height, 46px); 
+                                @include vp(font-size, $f16);
+                                transform: scale(0.875);
+                                transform-origin: left top;
+                                color: #00000094;
                                 resize: none;
                                 outline: none;
                                 border: none;
-                                @include vp(font-size, $f13);
-                                @include vp( line-height, 45px); 
-                                transform: scale(0.99);
-                                transform-origin: left top;
                             }
                             .btn_box {
-                                @include vp( margin-bottom, -28px); 
+                                @include vp( padding-top, 30px); 
                                 display: flex;
                                 align-items: center;
                                 justify-content: space-between;
@@ -1084,7 +1084,6 @@ section {
                             width: 100%;
                             li {
                                 @include vp(margin-top, 40px);
-                                @include vp(margin-bottom, 30px);
                                 position: relative;
                             }
                 

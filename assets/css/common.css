@@ -3533,18 +3533,23 @@ section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box {
   justify-content: center;
 }
 section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box textarea {
-  width: 100%;
-  height: auto;
+  width: 115%;
+  margin-bottom: -24px;
   min-height: 140px;
   max-height: 710px;
   line-height: 46px;
-  font-size: 26px;
-  transform: scale(0.99);
+  font-size: 32px;
+  transform: scale(0.875);
   transform-origin: left top;
   color: rgba(0, 0, 0, 0.5803921569);
   resize: none;
   outline: none;
   border: none;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box textarea {
+    margin-bottom: -3.2vw;
+  }
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box textarea {
@@ -3563,17 +3568,18 @@ section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box t
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box textarea {
-    font-size: 3.4666666667vw;
+    font-size: 4.2666666667vw;
   }
 }
 section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box .btn_box {
-  margin-top: 30px;
+  padding-top: 30px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box .btn_box {
-    margin-top: 4vw;
+    padding-top: 4vw;
   }
 }
 section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box .btn_box .btn_delete {
@@ -3612,12 +3618,12 @@ section.detail .comment_wrap.comment-detail .comment_box .info03 .file_list {
   width: 100%;
 }
 section.detail .comment_wrap.comment-detail .comment_box .info03 .file_list li {
-  margin-top: 30px;
+  margin-top: 40px;
   position: relative;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .comment_box .info03 .file_list li {
-    margin-top: 4vw;
+    margin-top: 5.3333333333vw;
   }
 }
 section.detail .comment_wrap.comment-detail .comment_box .info03 .file_list .img_box {
@@ -3799,18 +3805,23 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box {
   justify-content: center;
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
-  width: 100%;
-  height: auto;
+  width: 115%;
+  margin-bottom: -24px;
   min-height: 140px;
   max-height: 710px;
-  color: #000;
+  line-height: 46px;
+  font-size: 32px;
+  transform: scale(0.875);
+  transform-origin: left top;
+  color: rgba(0, 0, 0, 0.5803921569);
   resize: none;
   outline: none;
   border: none;
-  font-size: 26px;
-  line-height: 45px;
-  transform: scale(0.99);
-  transform-origin: left top;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
+    margin-bottom: -3.2vw;
+  }
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
@@ -3824,23 +3835,23 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box tex
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
-    font-size: 3.4666666667vw;
+    line-height: 6.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
-    line-height: 6vw;
+    font-size: 4.2666666667vw;
   }
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .btn_box {
-  margin-bottom: -28px;
+  padding-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .btn_box {
-    margin-bottom: -3.7333333333vw;
+    padding-top: 4vw;
   }
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .btn_box .btn_delete {
@@ -3886,17 +3897,11 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .file_list {
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .file_list li {
   margin-top: 40px;
-  margin-bottom: 30px;
   position: relative;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .file_list li {
     margin-top: 5.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .comment_wrap.comment-detail .reply_box .text01 .file_list li {
-    margin-bottom: 4vw;
   }
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .file_list .img_box {
@@ -7512,7 +7517,6 @@ html, body {
   height: 16px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5019607843);
-  border: 1px solid rgba(0, 0, 0, 0.3803921569);
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
