@@ -129,6 +129,13 @@ var commonUi = {
                 commonUi.updateBarPosition($(this));
             }
         });
+
+        if(  _w[0].innerHeight <  _w[0].visualViewport.height ){
+            console.log( "현재 브라우저보다 더 클떄"  );
+            alert( "현재 브라우저보다 더 클떄"  );
+        }
+
+    
     },
 
     scrollEvent: function () {
@@ -296,6 +303,18 @@ var commonUi = {
         }
 
         $(".btn_delete").on("click", deleteText);
+
+        if (e.type === 'focusin') {
+            if(  _w[0].innerHeight <  _w[0].visualViewport.height ){
+                console.log( "현재 브라우저보다 더 클떄"  );
+                alert( "현재 브라우저보다 더 클떄"  );
+            }
+            // 포커스 인 이벤트 처리
+        } else if (e.type === 'focusout') {
+        }
+
+
+
     },
     // 공통 input 이벤트
     inputFormClick: function() {
