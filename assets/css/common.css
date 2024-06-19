@@ -2835,6 +2835,9 @@ section.report .write_preview .preview_list li .text_wrap textarea {
 section.report .write_preview .preview_list li .text_wrap textarea::placeholder {
   color: #AAA;
 }
+section.report .write_preview .preview_list li .text_wrap textarea:focus {
+  color: #000;
+}
 section.report .write_preview .preview_list li .text_wrap .byte_num {
   position: absolute;
   left: 40px;
@@ -3571,6 +3574,9 @@ section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box t
     font-size: 4.2666666667vw;
   }
 }
+section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box textarea:focus {
+  color: #000;
+}
 section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box .btn_box {
   padding-top: 30px;
   display: flex;
@@ -3842,6 +3848,9 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box tex
   section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
     font-size: 4.2666666667vw;
   }
+}
+section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea:focus {
+  color: #000;
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .btn_box {
   padding-top: 30px;

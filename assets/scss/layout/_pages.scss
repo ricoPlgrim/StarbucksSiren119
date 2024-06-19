@@ -636,6 +636,9 @@ section {
                             outline: none;
                             border: none;
                             &::placeholder {color: $light-gray-1;}
+                            &:focus {
+                                color: $black;
+                            }
                         }
                         .byte_num {
                             position: absolute;
@@ -944,6 +947,9 @@ section {
                                 resize: none;
                                 outline: none;
                                 border: none;
+                                &:focus {
+                                    color: $black;
+                                }
                             }
                             .btn_box {
                                 @include vp(padding-top, 30px); 
@@ -1058,6 +1064,9 @@ section {
                                 resize: none;
                                 outline: none;
                                 border: none;
+                                &:focus {
+                                    color: $black;
+                                }
                             }
                             .btn_box {
                                 @include vp( padding-top, 30px); 
@@ -1597,7 +1606,7 @@ section {
                 @include vp(padding, 60px 40px 120px 40px);
 
                 .textarea_contents {
-                    position: relative; 
+                    position: relative;
                     @include vp(margin-top, 40px);
                     @include vp(height, 280px);
                     @include vp(border-radius, 16px);
