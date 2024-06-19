@@ -153,6 +153,7 @@ var commonUi = {
                 $(".cm_tab_contents, .cm_tab_panel").removeClass('on');
             }
         }
+
     },
 
     scrollTopClick: function () {

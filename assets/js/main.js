@@ -35,6 +35,7 @@ var mainUi = {
         _docment.on('click', '.cm_btn_list .typetag_close', mainUi.closeTag);
         _btnApply.on( "click", mainUi.btnApplyClick );
         _btnReset.on( "click", mainUi.btnResetClick );
+        _btnReload.on( "click", mainUi.btnResetClick );
 
      
 
@@ -196,14 +197,12 @@ var mainUi = {
         $('input[type="checkbox"]').prop('checked', false);
         $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();
         $('.accident_filter, .bottom_group').css('display', 'none');
+        if( $( ".setting_contents" ).hasClass( "on" )){
+            $( ".setting_contents" ).removeClass( "on" );
+        }
         localStorage.removeItem('selectedValues');
     },
       
-     //새로고침
-    reloadBtnClick: function () {
-        location.reload();
-    },
-
 };
 
 
