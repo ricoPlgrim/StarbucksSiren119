@@ -85,7 +85,7 @@ var commonUi = {
 
         _typeBtns.on("click", this.typeBtnsClick);
         _commoninputBtn.on("input", this.inputFormClick); // input 이벤트
-        _textFormBtn.on("click focus propertychange change keyup paste", this.textFormClick);  // 하단 고정 댓글 입력 이벤트
+        _textFormBtn.on("click focus focusout propertychange change keyup paste", this.textFormClick);  // 하단 고정 댓글 입력 이벤트
         _textArea.on("click focus propertychange change keyup paste", this.handleTextarea);  // 댓글, 답글 textarea 이벤트
         _searchInputBtn.on("keyup", this.handleSearchItem);
         _fileUploadBtn.on("change", this.fileImgUpload); // 파일 업로드
@@ -259,11 +259,19 @@ var commonUi = {
         }
     },
     // 하단 fixed 댓글 입력창 이벤트
-    textFormClick: function () {
+    textFormClick: function (e) {
         var This = $(this);
         var textForm = This.parent();
         var byteNum = textForm.find(".byte_num");
         var textFormHeight = textForm.height();
+        
+        var bodyWrapH = _w[0].innerHeight;
+        $( "html, body" ).css( "height", bodyWrapH );
+          // 포커스 아웃 이벤트 처리
+        if (e.type === 'focusout') {
+            $( "html, body" ).css( "height", "" );
+          
+        }
 
         if (This.val().length < 1) {
             textForm.find(".btn_delete").removeClass("on");
@@ -300,7 +308,6 @@ var commonUi = {
     inputFormClick: function() {
         var This = $(this);
         var inputForm = This.parent();
-
         if (This.val().length < 1) {
             inputForm.find(".btn_delete").removeClass("on");
             inputForm.parent().find("button").removeClass("on");
@@ -331,6 +338,7 @@ var commonUi = {
         var submitBtn = textBox.find(".btn_submit").find("button");
         var footerH = textBox.find(".btn_box").outerHeight();
         
+
         if (This.val().length < 1) {
             submitBtn.removeClass("on");
             This.css("height", "auto");
