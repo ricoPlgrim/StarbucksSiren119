@@ -48,7 +48,7 @@ html, body {
         .scrolltop_box{
             @include vp(bottom, 314px);
             &.on{
-                @include vp(bottom, 200px);
+                @include vp(bottom, 250px);
             }
         }
       
@@ -345,6 +345,7 @@ html, body {
     left: 50%;
     transform: translateX(261px);
     z-index: 10;
+    cursor: pointer;
     @include breakpoint {
         transform: translateX(34.8vw);
     }
@@ -1972,15 +1973,17 @@ html, body {
                 position: relative;
                 @include vp(width, 100px);
                 @include vp(height, 100px);
-
+                @include vp(border-radius, 12px);
+                overflow: hidden;
                 img {
+                    object-fit: cover;
+                    object-position: center;
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
                     top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    @include vp(width, 100px);
-                    @include vp(height, 100px);
-                    @include vp(border-radius, 12px);
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
 
                 &::before {

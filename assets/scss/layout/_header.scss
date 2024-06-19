@@ -204,27 +204,18 @@ header {
 
         .btn_close {
             position: absolute;
-            @include vp(top, 12px);
+            @include vp(top, 15px);
             right: 0px;
             background: url("../images/btn/btn_close.png") center center no-repeat;
             @include vp(background-size, 56px auto);
             @include vp(padding, 40px);
+            @include vp(margin-right, 20px);
             z-index: 999;
         } 
     }
 
     &.not{
         position: relative;
-    }
-    
-    &.setting{
-        .btn_close {
-            margin-left:auto;
-            background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
-            @include vp(background-size, 96px auto);
-            @include vp(padding, 48px 50px);
-        }
-        // @include vp(border-bottom, 2px solid $light-gray-2 );
     }
 
     &.push{
@@ -236,15 +227,7 @@ header {
         }
         // @include vp(border-bottom, 2px solid $light-gray-2 );
     }
-
-    &.filter{
-        .btn_close{
-            margin-left:auto;
-            background: url("../images/btn/btn_clsoe_b.png") center center no-repeat;
-            @include vp(background-size, 96px auto);
-            @include vp(padding, 48px 50px);
-        }
-    }
+    
 }
 
 
@@ -423,8 +406,12 @@ header {
                             }
                         }
                         &:last-child{
-                            flex: 0 1 calc(50% - 22px);
+                            flex: 0 1 calc(50% - 11px);
                             margin-bottom: 0;
+                            @include breakpoint {
+                                flex: 0 1 calc(50% - 1.4666vw);
+                            }
+        
                         }
                     }
                 }

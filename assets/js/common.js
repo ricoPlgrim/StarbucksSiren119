@@ -149,17 +149,7 @@ var commonUi = {
     },
 
     scrollTopClick: function () {
-        var target = $("#wrap").hasClass("home") ? _wrap : $('html, body');
-        commonUi.animateScroll(target, 0, $("#wrap").hasClass("home") ? 'main' : 'sub');
-    },
-
-    animateScroll: function (target, duration, type) {
-        if (!isAnimating[type]) {
-            isAnimating[type] = true;
-            target.animate({ scrollTop: 0 }, duration, function () {
-                isAnimating[type] = false;
-            });
-        }
+        _wrap.animate({ scrollTop: 0 }, 100);
     },
 
     gnbBtnClick: function () {

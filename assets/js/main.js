@@ -113,48 +113,47 @@ var mainUi = {
 
     //선택한 벨류값 세팅
     updateSelectedValues: function () {
-        $('.cm_btn_list.etc').empty();
-        $('.accident_filter .cm_btn_list').empty();
-        $('input[type="checkbox"]:checked').each(function() {
+        // 이전 리스트 항목을 지움
+        $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();
+    
+        // 체크된 체크박스를 반복하면서 리스트 항목을 추가
+        $('input[type="checkbox"]:checked').each(function () {
             var text = $(this).data('value');
             var listItem = `<li>
                 <button class="cm_btn_round on tag"><span class="text">${text}</span></button>
                 <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
             </li>`;
-            $('.cm_btn_list.etc').append(listItem);
-            $('.accident_filter .cm_btn_list').append(listItem);
+            $('.cm_btn_list.etc, .accident_filter .cm_btn_list').append(listItem);
         });
-        if ($('.cm_btn_list.etc .cm_btn_round.on.tag').length > 0 || $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length > 0){
-            $('.bottom_group').css('display', 'block');
-        }else{
-            $('.bottom_group').css('display', 'none');
-        }
-
-        if(  $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length == 0 ){
-            $( ".accident_filter " ).css( "display", "none" )
-        }
+    
+        // 태그의 존재 여부에 따라 bottom_group의 표시 여부를 토글
+        var hasTags = $('.cm_btn_list.etc .cm_btn_round.on.tag').length > 0 || $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length > 0;
+        $('.bottom_group').css('display', hasTags ? 'block' : 'none');
+    
+        // accident filter에 태그가 없으면 숨김
+        var accidentFilterHasTags = $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length === 0;
+        $('.accident_filter').css('display', accidentFilterHasTags ? 'none' : 'flex');
     },
 
     typeAllCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
+            // 동일 그룹의 다른 모든 체크박스를 체크 해제
             $('.checkbox_list[data-group="' + group + '"] input[type="checkbox"]').not(this).prop('checked', false);
         }
-
         mainUi.updateSelectedValues();
     },
-
-
+    
     typeNotCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
+            // 동일 그룹의 "typeAll" 체크박스를 체크 해제
             $('.checkbox_list[data-group="' + group + '"] .typeAll').prop('checked', false);
         }
         mainUi.updateSelectedValues();
     },
-
-
-    //닫기 버튼 클릭시 li 삭제 
+    
+    // 닫기 버튼 클릭 시 li 삭제
     closeTag: function () {
         var text = $(this).siblings('.cm_btn_round').find('.text').text();
         $('input[type="checkbox"]').each(function() {
@@ -166,56 +165,47 @@ var mainUi = {
         mainUi.updateSelectedValues();
     },
 
-    //적용하기
-    btnApplyClick: function(){
+    btnApplyClick: function () {
         var selectedValues = [];
-        $('.cm_btn_list.etc li').each(function() {
+    
+        // .cm_btn_list.etc에서 선택된 값을 수집
+        $('.cm_btn_list.etc li').each(function () {
             var value = $(this).find('.text').text();
             if (!selectedValues.includes(value)) {
                 selectedValues.push(value);
             }
         });
-        
-        //메인화면 필터 리스트 태그 
-        $('.accident_filter .cm_btn_list li').each(function() {
+    
+        // .accident_filter .cm_btn_list에서 선택된 값을 수집하고 표시 업데이트
+        $('.accident_filter .cm_btn_list li').each(function () {
             var value = $(this).find('.text').text();
             if (!selectedValues.includes(value)) {
                 selectedValues.push(value);
             }
-            if( value && value.length > 0){
-                $( ".accident_filter" ).css( "display", "flex" );
-            }else{
-                $( ".accident_filter" ).css( "display", "none" );
-            }
         });
-
+    
+        // 값의 존재 여부에 따라 표시 업데이트
         if (selectedValues.length > 0) {
             localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
-            console.log(selectedValues); //선택한 벨류값들 setitem으로 값 넣기
-        }else{
-            $( ".accident_filter" ).css( "display", "none" );
+            console.log(selectedValues); // 선택한 벨류값들 setitem으로 값 넣기
+            $('.accident_filter').css('display', 'flex');
+        } else {
+            $('.accident_filter').css('display', 'none');
         }
-
     },
-
-    //벨류값 초기화
-    btnResetClick: function(){
+    
+    // 벨류값 초기화
+    btnResetClick: function () {
         $('input[type="checkbox"]').prop('checked', false);
-        $('.cm_btn_list.etc').empty();
-        $('.accident_filter .cm_btn_list').empty();
-        $('.accident_filter').css('display', 'none');
-        $('.bottom_group').css('display', 'none');
+        $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();
+        $('.accident_filter, .bottom_group').css('display', 'none');
         localStorage.removeItem('selectedValues');
-      },
+    },
       
      //새로고침
     reloadBtnClick: function () {
         location.reload();
     },
-
-    
-
-
 
 };
 
