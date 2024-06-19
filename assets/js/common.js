@@ -115,6 +115,9 @@ var commonUi = {
         _textAreaBox.on( "focusin focusout", this.textBoxForcusEvent );
         this.tabActivation();  //탭영역 로드 체크 순서
         // this.sendBunCehck();  //재난문자 영역 있는지 체크
+
+     
+
     },
 
     loadEvent: function () {
@@ -128,6 +131,14 @@ var commonUi = {
                 commonUi.updateBarPosition($(this));
             }
         });
+
+        //반응체크
+        if ($(document.activeElement).is('input, textarea')) {
+            alert( "반응" );
+            $('body').css('height', window.innerHeight + 'px');
+        } else {
+            $('body').css('height', 'auto');
+        }
     },
 
     scrollEvent: function () {
@@ -300,7 +311,6 @@ var commonUi = {
     inputFormClick: function() {
         var This = $(this);
         var inputForm = This.parent();
-
         if (This.val().length < 1) {
             inputForm.find(".btn_delete").removeClass("on");
             inputForm.parent().find("button").removeClass("on");
@@ -331,6 +341,7 @@ var commonUi = {
         var submitBtn = textBox.find(".btn_submit").find("button");
         var footerH = textBox.find(".btn_box").outerHeight();
         
+
         if (This.val().length < 1) {
             submitBtn.removeClass("on");
             This.css("height", "auto");
