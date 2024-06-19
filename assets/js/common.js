@@ -130,11 +130,7 @@ var commonUi = {
             }
         });
 
-        if(  _w[0].innerHeight <  _w[0].visualViewport.height ){
-            console.log( "현재 브라우저보다 더 클떄"  );
-            alert( "현재 브라우저보다 더 클떄"  );
-        }
-
+       
     
     },
 
