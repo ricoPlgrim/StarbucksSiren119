@@ -3,6 +3,7 @@ var _w, _htmlBody, _gnb, _gnbBtn, _gnbCloseBtn, _scrollTopButton, _stickyTarget,
 var _switchBox, _switchBoxOffset, _marginTop, _totalOffsetTop, _bottomSheetDim, _bottomSheetClose, _bottomSheetDateList;
 var _startDateInput, _endDateInput, _typeBtns, _twoDepsMenu, _twoDepsWrapMenu, _subDepsMenu, _searchInput, _deleteAllBtn, _btnTextDelete, _inputBoxTarget, _loginInPut, _btnTypeList, _rowScrolLBox, _btnBookmark;
 var _lastSelectedStartDate, _lastSelectedEndDate;
+var _textAreaBox;
 
 var isAnimating = {
     main: false,
@@ -31,6 +32,7 @@ var commonUi = {
         _textArea =  $(".textarea_box").find("textarea");   // 댓글 답글 textarea 폼
         _fileUploadBtn = $(".btn_submit").find("#imgFileBtn");   // 사진 파일 업로드
 
+        _textAreaBox = $( ".textarea_area" ).find("textarea");
         _switchBox = $(".header_switchbox");
         if (_switchBox.length > 0) {
             _switchBoxOffset = _switchBox.offset().top;
@@ -109,9 +111,10 @@ var commonUi = {
 
         _rowScrolLBox.on("scroll", this.rowScrollBoxCheck);
         _btnBookmark.on("click", this.btnBookMarkClick); 
- 
+        
+        _textAreaBox.on( "focusin focusout", this.textBoxForcusEvent );
         this.tabActivation();  //탭영역 로드 체크 순서
-        this.sendBunCehck();  //재난문자 영역 있는지 체크
+        // this.sendBunCehck();  //재난문자 영역 있는지 체크
     },
 
     loadEvent: function () {
@@ -529,13 +532,7 @@ var commonUi = {
         $(this).toggleClass("on");
     },
 
-    sendBunCehck: function () {
-        if ($(".message_box").length === 0 || $(".message_box").css("display") === "none") {
-            _scrollTopButton.addClass("on");
-        } else {
-            _scrollTopButton.removeClass("on");
-        }
-    },
+ 
 
     fileImgUpload: function(e) {
         var files = e.target.files;
@@ -614,6 +611,19 @@ var commonUi = {
 
             viewImglWrap.find(".pop_cont01").on("scroll", setController);
         });
+    },
+
+    textBoxForcusEvent: function(e){
+
+        if (e.type === 'focusin') {
+            $( this ).parents( ".textarea_contents" ).addClass( "on" );
+            console.log('Input field has gained focus');
+            // 포커스 인 이벤트 처리
+        } else if (e.type === 'focusout') {
+            $( this ).parents( ".textarea_contents" ).removeClass( "on" );
+            console.log('Input field has lost focus');
+            // 포커스 아웃 이벤트 처리
+        }
     }
 };
 

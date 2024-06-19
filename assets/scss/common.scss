@@ -35,10 +35,6 @@ html, body {
     }
 
 
-    // &.setting {
-    //     @include vp(padding-top, 112px);
-    // }
-
     &.sub {
         @include vp(padding-top, 112px);
         &.not{ padding-top: 0; }
@@ -46,19 +42,13 @@ html, body {
 
     &.etc{
         .scrolltop_box{
-            @include vp(bottom, 314px);
-            &.on{
-                @include vp(bottom, 250px);
-            }
+            @include vp(bottom, 250px);
         }
       
     }
     &.report{
         .scrolltop_box{
-            @include vp(bottom, 314px);
-            &.on{
-                @include vp(bottom, 180px);
-            }
+            @include vp(bottom, 180px);
         }
     }
 }
@@ -341,13 +331,13 @@ html, body {
 .scrolltop_box {
     display: none;
     position: fixed;
-    @include vp(bottom, 164px);
     left: 50%;
     transform: translateX(261px);
     z-index: 10;
+    @include vp(bottom, 49px);
     cursor: pointer;
     @include breakpoint {
-        transform: translateX(34.8vw);
+        transform: translateX(34.8vw); 
     }
 
     .btn_top {
@@ -373,49 +363,11 @@ html, body {
     }
 
     &.on {
-        @include vp(bottom, 59px);
+     
     }
 }
 
-.message_box {
-    position: fixed;
-    @include vp(bottom, 49px);
-    left: 50%;
-    transform: translateX(185px);
-    z-index: 10;
-    @include breakpoint {
-        transform: translateX(24.66666666666667vw);
-    }
 
-    .box_round { 
-        position: relative;
-        display: block;
-
-        text-align: center;
-        @include vp(width, 168px);
-        @include vp(height, 92px);
-        @include vp(border-radius, 68px);
-        @include vp(border, 4px solid $orange );
-        @include vp(line-height, 84px);
-        background: #FFF6F6;
-        opacity: .6;
-        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
-    }
-    .text{
-        position: absolute;
-        top:0;
-        left:0;
-        z-index: 2;
-        font-weight: $fw6;
-        @include vp(font-size, $f16);
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $orange;
-    }
-}
 
 
 // 팝업
@@ -1841,10 +1793,9 @@ html, body {
 .btn_group {
     position: relative;
     .cm_btn_list {
-        @include vp(padding-bottom, 1px);
+        @include vp(padding-bottom, 20px);
         display: flex;
         overflow-y: auto;
-
         li {
             position: relative;
             text-wrap: nowrap;
@@ -2075,58 +2026,4 @@ html, body {
     }
 }
 
-//스크롤바 
-.cm_scroll_wrap{
-    width: auto;
-    height: auto;
-    overflow: hidden;
-    &.row{
-        width: 100%;    
-        overflow-x:scroll;
-        &::-webkit-scrollbar {
-            width: 100%;
-            @include vp(height, 4px);
-        }
-        &::-webkit-scrollbar-track { 
-            background: $light-gray-3;
-            opacity: 0.3;
-        }
-        &::-webkit-scrollbar-thumb { 
-            @include vp(border-radius, 20px);
-            background: $light-gray-7;
-        }
-        &::-webkit-scrollbar-button {
-            display: none;
-        }
-        &::-webkit-scrollbar-track,
-        &::-webkit-scrollbar-thumb{
-            @include vp(border-radius, 20px);
-        }
-    }
-    &.vertical {
-        @include vp(width, 700px);
-        @include vp(height, 600px);
-        overflow-y:scroll;
-        &::-webkit-scrollbar {
-            height: 100%;
-            @include vp(width, 4px);
-        }
-        &::-webkit-scrollbar-track { 
-            background: $light-gray-3;
-            opacity: 0.3;
-        }
-        &::-webkit-scrollbar-thumb { 
-            @include vp(border-radius, 20px);
-            background: $light-gray-7;
-        }
-        &::-webkit-scrollbar-button {
-            display: none;
-        }
-        &::-webkit-scrollbar-track,
-        &::-webkit-scrollbar-thumb{
-            @include vp(border-radius, 20px);
-        }
-    }
-    
-      
-}
+
