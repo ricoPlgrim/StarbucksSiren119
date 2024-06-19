@@ -4976,7 +4976,7 @@ section.message .message_contents .inner .textarea_contents {
     border: 0.2666666667vw solid #DDD;
   }
 }
-section.message .message_contents .inner .textarea_contents .textarea_box {
+section.message .message_contents .inner .textarea_contents .textarea_area {
   position: relative;
   height: 220px;
   max-height: 220px;
@@ -4984,17 +4984,17 @@ section.message .message_contents .inner .textarea_contents .textarea_box {
   border: 2px solid transparent;
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_box {
+  section.message .message_contents .inner .textarea_contents .textarea_area {
     height: 29.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_box {
+  section.message .message_contents .inner .textarea_contents .textarea_area {
     max-height: 29.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_box {
+  section.message .message_contents .inner .textarea_contents .textarea_area {
     border: 0.2666666667vw solid transparent;
   }
 }

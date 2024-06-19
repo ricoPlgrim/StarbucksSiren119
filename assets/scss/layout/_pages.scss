@@ -1597,13 +1597,13 @@ section {
                 @include vp(padding, 60px 40px 120px 40px);
 
                 .textarea_contents {
-                    position: relative;
+                    position: relative; 
                     @include vp(margin-top, 40px);
                     @include vp(height, 280px);
                     @include vp(border-radius, 16px);
                     @include vp(border, 2px solid $light-gray-2);
 
-                    .textarea_box {
+                    .textarea_area {
                         position: relative;
                         @include vp(height, 220px);
                         @include vp(max-height, 220px);

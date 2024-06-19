@@ -635,7 +635,7 @@ input[type=date]::-webkit-outer-spin-button {
 /* 정리중 */
 /*폰트 사이즈*/
 .guide {
-  background: #999;
+  background: #fff;
 }
 .guide .guide_box .guide_list {
   display: block;
@@ -646,6 +646,7 @@ input[type=date]::-webkit-outer-spin-button {
   background: #fff;
   overflow: hidden;
   margin-top: 40px;
+  border: 2px solid #000;
 }
 @media screen and (max-width: 750px) {
   .guide .guide_box .guide_list > li {
@@ -655,6 +656,11 @@ input[type=date]::-webkit-outer-spin-button {
 @media screen and (max-width: 750px) {
   .guide .guide_box .guide_list > li {
     margin-top: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li {
+    border: 0.2666666667vw solid #000;
   }
 }
 .guide .guide_box .guide_list > li .guide_top {
@@ -857,6 +863,14 @@ input[type=date]::-webkit-outer-spin-button {
 }
 .guide .guide_box .guide_list > li:first-child {
   margin-top: 0;
+}
+.guide .guide_box .guide_list > li:last-child {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li:last-child {
+    margin-bottom: 13.3333333333vw;
+  }
 }
 
 .radio_group {
@@ -1252,4 +1266,38 @@ input[type=date]::-webkit-outer-spin-button {
 }
 .define section .bullet_list li:first-child {
   margin-top: 0;
+}
+
+.temp1 {
+  width: 750px;
+}
+@media screen and (max-width: 750px) {
+  .temp1 {
+    width: 100vw;
+  }
+}
+
+.test {
+  font-size: 30px;
+  width: 3000px;
+}
+@media screen and (max-width: 750px) {
+  .test {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .test {
+    width: 400vw;
+  }
+}
+
+.test2 {
+  font-size: 30px;
+  width: auto;
+}
+@media screen and (max-width: 750px) {
+  .test2 {
+    font-size: 4vw;
+  }
 }
