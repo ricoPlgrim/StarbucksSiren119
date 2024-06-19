@@ -153,14 +153,6 @@ var commonUi = {
                 $(".cm_tab_contents, .cm_tab_panel").removeClass('on');
             }
         }
-        console.log( _sT, "화면 스크롤 넘겼니?", "=======>", document.body.offsetHeight );
-
-        // console.log( "스크롤값===>", "===>",  visualViewport.height)
-        if(_sT + visualViewport.height > document.body.offsetHeight - 2){ 
-            // alert( "여기 언제니?" );
-            // window.scrollTo(0, document.body.offsetHeight - visualViewport.height-1);
-        }
-
     },
 
     scrollTopClick: function () {
