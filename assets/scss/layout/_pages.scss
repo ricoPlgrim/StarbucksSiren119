@@ -921,16 +921,25 @@ section {
                 @include vp( padding-top, 60px); 
                 .comment_header {padding-bottom: 0px;}
                 .comment_box {
-                    &.deleted {@include vp( margin-bottom, 70px);}
+                    &.deleted {
+                        @include vp( margin-top, 200px); 
+                        @include vp( margin-bottom, 70px);
+                    }
                     .info03 {
                         @include vp( margin-bottom, 28px); 
                         .textarea_box {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
                             textarea {
-                                @include vp( line-height, 40px); 
                                 width: 100%;
                                 height: auto;
-                                @include vp( min-height, 120px); 
+                                @include vp( min-height, 140px); 
                                 @include vp( max-height, 710px); 
+                                @include vp( line-height, 46px); 
+                                @include vp(font-size, $f13);
+                                transform: scale(0.99);
+                                transform-origin: left top;
                                 color: #00000094;
                                 resize: none;
                                 outline: none;
@@ -958,7 +967,7 @@ section {
                             gap: 10px;
                             width: 100%;
                             li {
-                                @include vp(margin-top, 40px);
+                                @include vp(margin-top, 30px);
                                 position: relative;
                             }
                 
@@ -1005,6 +1014,16 @@ section {
                 .reply_box {
                     @include vp( margin-top, -80px); 
                     background: $white;
+                    &.deleted {
+                        @include vp( padding-top, 40px); 
+                        border-top: 1px dashed $light-gray-2;
+                        p {
+                            @include vp( padding, 20px); 
+                            @include vp( font-size, $f13);
+                            color: $light-gray-1;
+                            text-align: center;
+                        }
+                    }
                     .text01 {
                         position: relative;
                         @include vp( padding, 28px);
@@ -1023,19 +1042,24 @@ section {
                             textarea {opacity: .58}
                         }
                         .textarea_box {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
                             textarea {
-                                @include vp( line-height, 40px); 
                                 width: 100%;
                                 height: auto;
-                                @include vp( min-height, 120px); 
+                                @include vp( min-height, 140px); 
                                 @include vp( max-height, 710px); 
                                 color: $black;
                                 resize: none;
                                 outline: none;
                                 border: none;
+                                @include vp(font-size, $f13);
+                                @include vp( line-height, 45px); 
+                                transform: scale(0.99);
+                                transform-origin: left top;
                             }
                             .btn_box {
-                                @include vp( margin-top, 30px); 
                                 @include vp( margin-bottom, -28px); 
                                 display: flex;
                                 align-items: center;
@@ -1060,6 +1084,7 @@ section {
                             width: 100%;
                             li {
                                 @include vp(margin-top, 40px);
+                                @include vp(margin-bottom, 30px);
                                 position: relative;
                             }
                 

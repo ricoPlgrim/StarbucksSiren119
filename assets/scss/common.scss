@@ -1900,9 +1900,7 @@ html, body {
     left: 0px;
     right: 0px;
     bottom: 0px;
-    @include vp(min-height, 160px);
-    @include vp(max-height, 312px);
-    @include vp(max-width, 750px);
+    width: 100%;
     transform: translateY(0);
     background: $white;
     @include vp(border-top, 2px solid #eee);
