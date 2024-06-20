@@ -17,13 +17,13 @@
         </header>
         <section class="message">
             <div class="message_contents">
-                <div class="inner">
+                <div class="inner"> 
                     <h2 class="title">문자내용</h2>
                     <div class="textarea_contents">
-                        <div class="textarea_area">
+                        <div class="text_wrap">
                             <textarea rows="1" cols="2" placeholder="내용을 입력해 주세요."></textarea>
+                            <span class="byte_num"><span>0</span> / 3000byte</span>
                         </div>
-                        <span class="byte_num"><span>0</span> / 3000byte</span>
                     </div>
                 </div>
             </div>
@@ -166,11 +166,11 @@
 
                             <div class="team_list_contents">
                                 <!--현재 리스트가 없을경우  nodata엘리먼트 노출-->
-                                <ul class="team_list">
+                                <ul class="team_list check_list">
                                     <li>
                                         <div class="checkbox_container">
-                                            <input type="checkbox" id="checkbox1">
-                                            <label for="checkbox1"><span>대표이사</span></label>
+                                            <input type="checkbox" id="allTeam">
+                                            <label for="allTeam"><span>전체</span></label>
                                         </div>
                                     </li>
                                     <li>
@@ -209,8 +209,6 @@
                                             <label for="checkbox6"><span>디지털사업팀</span></label>
                                         </div>
                                     </li>
-
-
                                 </ul>
 
                                 <!-- <p class="nodata">
