@@ -93,7 +93,6 @@ header {
                         opacity: .3;
                         width: 50%;
                         height: 100%;
-                        // margin-top: 11px;
                         text-align: center;
                         z-index: 4;
 
@@ -111,7 +110,7 @@ header {
                         @include vp(height, 77px);
                         @include vp(border-radius, 100px);
                         background: $black;
-                        @include vp(border, 1px solid $black);
+                        @include vp(border, 2px solid $black);
                         transition: left 0.2s ease-in-out;
                     }
 
@@ -168,7 +167,7 @@ header {
         top: 0px;
         justify-content: space-between;
         @include vp(height, 112px);
-        border-bottom: 1px solid $light-gray-3;
+        @include vp(border-bottom, 2px solid $light-gray-3);
         background-color: $white;
         @include vp(width, 750px);
         margin:0 auto;
