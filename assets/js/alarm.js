@@ -8,6 +8,7 @@ var _btnAccident;
 var _btnAlCheck;
 var _btnRemoveAll;
 
+
 var alarmUi = {
 
     init: function () {
@@ -21,6 +22,7 @@ var alarmUi = {
         _btnAccident = _setting.find( ".accident" );
         _btnAlCheck = _setting.find( ".situation" );
         _btnRemoveAll = _setting.find( ".delete" );
+        _appointed = $( "#appointed" );
 
 
     },
@@ -72,7 +74,7 @@ var alarmUi = {
             $( ".alarm_list_box" ).remove();
             $( ".no_alerts" ).css( "display", "block" );
         }
-    }
+    },
     
 };
 

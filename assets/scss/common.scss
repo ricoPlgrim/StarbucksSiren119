@@ -13,7 +13,7 @@ html, body {
     padding: 0;
     overflow: hidden;
     min-height: -webkit-fill-available;
-    height: -webkit-fill-available;
+    height: -webkit-fill-available; 
 }
 
 body{
@@ -2030,6 +2030,41 @@ body{
                 background: $green;
                 color: $white;
             }
+        }
+    }
+}
+
+
+
+//필터, 수신자 팝업
+#filterPopup,
+#teamDetailPopup{
+    @include vp(padding-top, 112px );
+    .head_box{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        justify-content: space-between;
+        @include vp(height, 112px);
+        @include vp(width, 750px);
+        @include vp(border-bottom, 2px solid $light-gray-3 );
+        background-color: $white;
+        margin: 0 auto;
+        z-index: 100;
+        h1{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include vp(font-size, 30px);
+            font-weight: $fw7;
+        }
+        .btn_close{
+            @include vp(top, 14px);
+            @include vp(padding, 40px);
         }
     }
 }
