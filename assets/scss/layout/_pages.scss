@@ -602,8 +602,8 @@ section {
 
                     .text_wrap {
                         position: relative;
-                        @include vp(padding, 40px 0px 40px 40px);
-                        @include vp(min-height, 296px);
+                        @include vp(padding, 40px 20px 40px 40px);
+                        @include vp(min-height, 280px);
                         border: 1px solid $light-gray-2;
                         background: $white;
                         @include vp(border-radius, 16px);
@@ -619,11 +619,13 @@ section {
                             background: #888;
                         }
                         textarea {
-                            @include vp(padding-right, 40px);
-                            @include vp(line-height, 40px);
-                            @include vp(font-size, $f13);
+                            @include vp(padding-right, 20px);
+                            width: 115%;
                             @include vp(height, 160px);
-                            width: 100%;
+                            @include vp(line-height, 40px);
+                            @include vp(font-size, $f15);
+                            transform: scale(0.875);
+                            transform-origin: left top;
                             color: #00000094;
                             resize: none;
                             outline: none;
@@ -634,6 +636,8 @@ section {
                             }
                         }
                         .byte_num {
+                            display: inline-flex;
+                            align-items: center;
                             position: absolute;
                             @include vp(left, 40px);
                             @include vp(height, 46px);

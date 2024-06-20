@@ -262,25 +262,25 @@ var commonUi = {
     },
     // 하단 fixed 댓글 입력창 이벤트
     textFormClick: function (e) {
-        var This = $(this);
-        var textForm = This.parent();
+        var that = $(this);
+        var textForm = that.parent();
         var byteNum = textForm.find(".byte_num");
         var textFormHeight = textForm.height();
 
-        if (This.val().length < 1) {
+        if (that.val().length < 1) {
             textForm.find(".btn_delete").removeClass("on");
             textForm.parent().find("button").removeClass("on");
             textForm.removeClass("on");
             byteNum.removeClass("on");
-            This.css("height", "auto");
+            that.css("height", "auto");
             $(".detail").css("padding-bottom", 0);
         } else {
             textForm.find(".btn_delete").addClass("on");
             textForm.parent().find("button").addClass("on");
             textForm.addClass("on");
             byteNum.addClass("on");
-            This.css("height", "auto");
-            This.height(this.scrollHeight);
+            that.css("height", "auto");
+            that.height(this.scrollHeight);
             $(".detail").css("padding-bottom", textFormHeight);
         }
 
@@ -301,9 +301,9 @@ var commonUi = {
     },
     // 공통 input 이벤트
     inputFormClick: function() {
-        var This = $(this);
-        var inputForm = This.parent();
-        if (This.val().length < 1) {
+        var that = $(this);
+        var inputForm = that.parent();
+        if (that.val().length < 1) {
             inputForm.find(".btn_delete").removeClass("on");
             inputForm.parent().find("button").removeClass("on");
             inputForm.removeClass("on");
@@ -328,20 +328,20 @@ var commonUi = {
     },
     // 댓글 답글 영역 textarea
     handleTextarea: function() {
-        var This = $(this);
-        var textBox = This.closest(".detail");
+        var that = $(this);
+        var textBox = that.closest(".detail");
         var submitBtn = textBox.find(".btn_submit").find("button");
         var footerH = textBox.find(".btn_box").outerHeight();
         
 
-        if (This.val().length < 1) {
+        if (that.val().length < 1) {
             submitBtn.removeClass("on");
-            This.css("height", "auto");
+            that.css("height", "auto");
         } else {
             submitBtn.addClass("on");
-            This.height(this.scrollHeight);
+            that.height(this.scrollHeight);
             if (this.scrollHeight > this.clientHeight) {
-                This.css("margin-bottom", -footerH);
+                that.css("margin-bottom", -footerH);
             }
         }
         
@@ -358,9 +358,11 @@ var commonUi = {
 
         $(".btn_delete").on("click", deleteText);
     },
+    // 보고 작성 상품명 검색 인풋
     handleSearchItem: function() {
-        var textValue = $(this).val().toLowerCase();
-        var searchList = $(this).closest(".form_list").find(".result_box");
+        var searchInput = $(this);
+        var textValue = searchInput.val().toLowerCase();
+        var searchList = searchInput.closest(".form_list").find(".result_box");
         var list = searchList.find("li");
 
         if (textValue === "") {
@@ -378,6 +380,17 @@ var commonUi = {
                 }
             });
         }
+
+        function clickSearchItem() {
+            var selectedText = $(this).text();
+
+            $(this).removeClass("on");
+            searchInput.val(selectedText);
+            $(this).parent().removeClass("on");
+            $(this).hide();
+        }
+
+        list.on("click", clickSearchItem);
     },
     handleMenuClick: function (e, wrapMenu = false) {
         e.preventDefault();
@@ -534,8 +547,6 @@ var commonUi = {
     btnBookMarkClick: function () {
         $(this).toggleClass("on");
     },
-
- 
 
     fileImgUpload: function(e) {
         var files = e.target.files;

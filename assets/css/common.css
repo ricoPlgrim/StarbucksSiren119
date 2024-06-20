@@ -2685,8 +2685,8 @@ section.report .write_preview .preview_list li dl.emerge_box dd span {
 }
 section.report .write_preview .preview_list li .text_wrap {
   position: relative;
-  padding: 40px 0px 40px 40px;
-  min-height: 296px;
+  padding: 40px 20px 40px 40px;
+  min-height: 280px;
   border: 1px solid #DDD;
   background: #fff;
   border-radius: 16px;
@@ -2695,12 +2695,12 @@ section.report .write_preview .preview_list li .text_wrap {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
-    padding: 5.3333333333vw 0vw 5.3333333333vw 5.3333333333vw;
+    padding: 5.3333333333vw 2.6666666667vw 5.3333333333vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
-    min-height: 39.4666666667vw;
+    min-height: 37.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -2717,11 +2717,13 @@ section.report .write_preview .preview_list li .text_wrap::-webkit-scrollbar-thu
   background: #888;
 }
 section.report .write_preview .preview_list li .text_wrap textarea {
-  padding-right: 40px;
-  line-height: 40px;
-  font-size: 26px;
+  padding-right: 20px;
+  width: 115%;
   height: 160px;
-  width: 100%;
+  line-height: 40px;
+  font-size: 30px;
+  transform: scale(0.875);
+  transform-origin: left top;
   color: rgba(0, 0, 0, 0.5803921569);
   resize: none;
   outline: none;
@@ -2729,7 +2731,12 @@ section.report .write_preview .preview_list li .text_wrap textarea {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap textarea {
-    padding-right: 5.3333333333vw;
+    padding-right: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap textarea {
+    height: 21.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -2739,12 +2746,7 @@ section.report .write_preview .preview_list li .text_wrap textarea {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap textarea {
-    font-size: 3.4666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li .text_wrap textarea {
-    height: 21.3333333333vw;
+    font-size: 4vw;
   }
 }
 section.report .write_preview .preview_list li .text_wrap textarea::placeholder {
@@ -2754,6 +2756,8 @@ section.report .write_preview .preview_list li .text_wrap textarea:focus {
   color: #000;
 }
 section.report .write_preview .preview_list li .text_wrap .byte_num {
+  display: inline-flex;
+  align-items: center;
   position: absolute;
   left: 40px;
   height: 46px;
