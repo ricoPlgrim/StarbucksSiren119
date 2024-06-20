@@ -8,7 +8,7 @@ var _btnReset;
 var filterUi = {
 
     init: function () {
-        filterUi.loadEvent();
+        this.loadEvent();
     },
     create: function () {
         _docment = $(document);
@@ -18,18 +18,18 @@ var filterUi = {
     },
     addEvent: function () {
 
-        _docment.on('click', '.typeAll', filterUi.typeAllCheck);
-        _docment.on('click', 'input[type="checkbox"]:not(.typeAll)', filterUi.typeNotCheck);
-        _docment.on('click', '.cm_btn_list .btn_close', filterUi.closeTag);
-        _btnApply.on( "click", filterUi.btnApplyClick );
-        _btnReset.on( "click", filterUi.btnResetClick );
+        _docment.on('click', '.typeAll', this.typeAllCheck);
+        _docment.on('click', 'input[type="checkbox"]:not(.typeAll)', this.typeNotCheck);
+        _docment.on('click', '.cm_btn_list .btn_close', this.closeTag);
+        _btnApply.on( "click", this.btnApplyClick );
+        _btnReset.on( "click", this.btnResetClick );
 
 
     },
 
     loadEvent: function () {
-        filterUi.create();
-        filterUi.addEvent();
+        this.create();
+        this.addEvent();
     },
 
     updateSelectedValues: function () {
@@ -93,18 +93,12 @@ var filterUi = {
             console.log(selectedValues); //선택한 벨류값들 setitem으로 값 넣기
         }
 
-
-
     },
 
     btnResetClick: function(){
-      // Uncheck all checkboxes
       $('input[type="checkbox"]').prop('checked', false);
-      // Clear the appended list items
       $('.cm_btn_list.etc').empty();
-      // Hide the button group
       $('.btn_group').css('display', 'none');
-      // Clear local storage
       localStorage.removeItem('selectedValues');
     }
 };

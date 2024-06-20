@@ -1378,7 +1378,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.speaker a::before {
-  background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_speaker.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1387,7 +1387,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.edit a::before {
-  background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_edit.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1396,7 +1396,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.chart a::before {
-  background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_chart.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1405,7 +1405,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.bookmark a::before {
-  background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_bookmark.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1414,7 +1414,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.collections a::before {
-  background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_collections.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1423,7 +1423,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.menubook a::before {
-  background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_menubook.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1432,7 +1432,7 @@ header.push .btn_setting {
   }
 }
 .gnb nav .inner ul .icon.alarm a::before {
-  background: url("../images/icons/icon_contract_alarm.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_gnb_alarm.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -1440,13 +1440,13 @@ header.push .btn_setting {
     background-size: 6.4vw auto;
   }
 }
-.gnb nav .inner ul .icon:last-child {
-  flex: 0 1 calc(50% - 11px);
-  margin-bottom: 0;
+.gnb nav .inner ul .icon.message a::before {
+  background: url("../images/icons/icon_gnb_message.png") 0 0 no-repeat;
+  background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
-  .gnb nav .inner ul .icon:last-child {
-    flex: 0 1 calc(50% - 1.4666vw);
+  .gnb nav .inner ul .icon.message a::before {
+    background-size: 6.4vw auto;
   }
 }
 .gnb .logout_box {
@@ -1454,7 +1454,7 @@ header.push .btn_setting {
   justify-content: center;
   align-items: center;
   background-size: 48px auto;
-  margin: 200px 40px 0 40px;
+  margin: 146px 40px 0 40px;
   border-radius: 12px;
   border: 2px solid rgba(0, 0, 0, 0.12);
 }
@@ -1465,7 +1465,7 @@ header.push .btn_setting {
 }
 @media screen and (max-width: 750px) {
   .gnb .logout_box {
-    margin: 26.6666666667vw 5.3333333333vw 0 5.3333333333vw;
+    margin: 19.4666666667vw 5.3333333333vw 0 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1981,7 +1981,7 @@ section.report .category_wrap .menu_icon.foreign {
   }
 }
 section.report .category_wrap .menu_icon.customer {
-  background: #fff url("../images/icons/icon__Customer.png") center center no-repeat;
+  background: #fff url("../images/icons/icon_customer.png") center center no-repeat;
   background-size: 70px auto;
 }
 @media screen and (max-width: 750px) {
@@ -2032,7 +2032,7 @@ section.report .category_wrap .category_box .category_info {
 section.report .category_wrap .category_box .category_info .text01 {
   padding-right: 30px;
   margin-right: 8px;
-  background: url("../images/icons/ico_arrow_right.png") center right no-repeat;
+  background: url("../images/icons/icon_arrow_right.png") center right no-repeat;
   background-size: 12px auto;
 }
 @media screen and (max-width: 750px) {
@@ -2103,7 +2103,7 @@ section.report .create_form .file_upload_wrap .file_list .btn_upload {
   display: block;
   width: 210px;
   height: 210px;
-  background: #EEE url("../images/icons/ico_fileupload.png") no-repeat center;
+  background: #EEE url("../images/icons/icon_fileupload.png") no-repeat center;
   background-size: 48px auto;
   border-radius: 14px;
 }
@@ -2474,7 +2474,7 @@ section.report .create_form .form_box .form_list li.time_box button::after {
   right: 16px;
   width: 24px;
   height: 32px;
-  background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
+  background: url("../images/icons/icon_arrow_down.png") center right no-repeat;
   background-size: 24px auto;
 }
 @media screen and (max-width: 750px) {
@@ -2686,7 +2686,7 @@ section.report .write_preview .preview_list li dl dd span {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg01 {
-  background: url("../images/icons/ico_emergency01.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency01.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -2701,7 +2701,7 @@ section.report .write_preview .preview_list li dl dd .emerg01 {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg02 {
-  background: url("../images/icons/ico_emergency02.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency02.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -2716,7 +2716,7 @@ section.report .write_preview .preview_list li dl dd .emerg02 {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg03 {
-  background: url("../images/icons/ico_emergency03.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency03.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -2731,7 +2731,7 @@ section.report .write_preview .preview_list li dl dd .emerg03 {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg04 {
-  background: url("../images/icons/ico_emergency04.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency04.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -2746,7 +2746,7 @@ section.report .write_preview .preview_list li dl dd .emerg04 {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg05 {
-  background: url("../images/icons/ico_emergency05.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency05.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -2761,7 +2761,7 @@ section.report .write_preview .preview_list li dl dd .emerg05 {
   }
 }
 section.report .write_preview .preview_list li dl dd .emerg06 {
-  background: url("../images/icons/ico_emergency06.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency06.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3147,7 +3147,7 @@ section.detail .detail_wrap .detail_box .detail_info .date_box span {
 }
 section.detail .detail_wrap .detail_box .detail_info .date_box span.comments {
   padding-left: 32px;
-  background: url("../images/icons/ico_rate_review.png") center left no-repeat;
+  background: url("../images/icons/icon_rate_review_g.png") center left no-repeat;
   background-size: 28px auto;
 }
 @media screen and (max-width: 750px) {
@@ -3383,7 +3383,7 @@ section.detail .detail_wrap .detail_box .btn_box span {
   }
 }
 section.detail .detail_wrap .detail_box .btn_box span.btn01 {
-  background: url("../images/icons/ico_mobile.png") center left no-repeat;
+  background: url("../images/icons/icon_mobile.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 8px;
 }
@@ -3399,7 +3399,7 @@ section.detail .detail_wrap .detail_box .btn_box span.btn01 {
 }
 section.detail .detail_wrap .detail_box .btn_box span.btn02 {
   margin-top: 12px;
-  background: url("../images/icons/ico_sms.png") center left no-repeat;
+  background: url("../images/icons/icon_sms.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 8px;
 }
@@ -4302,7 +4302,7 @@ section.detail .comment_wrap .comment_box .btn_wrap .btn_box .btn_recomment {
   align-items: center;
   padding-left: 60px;
   height: 48px;
-  background: url("../images/icons/ico_edit_review.png") center left no-repeat;
+  background: url("../images/icons/icon_edit_review.png") center left no-repeat;
   background-size: 48px 48px;
   cursor: pointer;
 }
@@ -4572,7 +4572,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text01 .reply {
   left: 0px;
   width: 24px;
   height: 24px;
-  background: url("../images/icons/ico_reply.png") center left no-repeat;
+  background: url("../images/icons/icon_reply.png") center left no-repeat;
   background-size: 24px auto;
 }
 @media screen and (max-width: 750px) {
@@ -6492,10 +6492,17 @@ section.filter .btn_group {
 }
 
 html, body {
+  position: relative;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  min-height: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+body {
+  touch-action: pan-y;
 }
 
 #wrap {
@@ -6726,7 +6733,7 @@ html, body {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.mail {
-  background: url("../images/icons/ico_mail.png") center left no-repeat;
+  background: url("../images/icons/icon_mail.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
@@ -6735,7 +6742,7 @@ html, body {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.phone {
-  background: url("../images/icons/ico_call.png") center left no-repeat;
+  background: url("../images/icons/icon_call.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
@@ -6744,7 +6751,7 @@ html, body {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .btn_contact > button span.txt {
-  background: url("../images/icons/ico_text.png") center left no-repeat;
+  background: url("../images/icons/icon_text.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
@@ -6932,7 +6939,7 @@ html, body {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_edit {
-  background: url("../images/icons/ico_edit.png") center left no-repeat;
+  background: url("../images/icons/icon_edit.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
@@ -6941,7 +6948,7 @@ html, body {
   }
 }
 .bottom_sheet .sheet_wrap .sheet_content .btn_comment_contents .btn_box > button span.btn_delete {
-  background: url("../images/icons/ico_delete.png") center left no-repeat;
+  background: url("../images/icons/icon_delete_g.png") center left no-repeat;
   background-size: 40px auto;
 }
 @media screen and (max-width: 750px) {
@@ -7601,7 +7608,7 @@ html, body {
   }
 }
 .layer_popup .pop_cont02 .category_wrap h4.customer {
-  background: url("../images/icons/icon__Customer.png") center left no-repeat;
+  background: url("../images/icons/icon_customer.png") center left no-repeat;
   background-size: 108px auto;
 }
 @media screen and (max-width: 750px) {
@@ -10538,7 +10545,7 @@ html, body {
   }
 }
 .sections .section_inner .menu_btn-list > li.customer .thum:before {
-  background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_customer.png") 0 0 no-repeat;
   background-size: 112px auto;
 }
 @media screen and (max-width: 750px) {
@@ -10547,7 +10554,7 @@ html, body {
   }
 }
 .sections .section_inner .menu_btn-list > li.customer .menu_box .menu .inner .title_box h3:before {
-  background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+  background: url("../images/icons/icon_customer.png") 0 0 no-repeat;
   background-size: 48px auto;
 }
 @media screen and (max-width: 750px) {
@@ -11372,11 +11379,11 @@ html, body {
   }
 }
 .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-  width: 513px;
+  width: 512px;
 }
 @media screen and (max-width: 750px) {
   .sections .section_inner .setting_contents .btn_group .cm_btn_list {
-    width: 68.4vw;
+    width: 68.2666666667vw;
   }
 }
 .sections .section_inner .setting_contents .btn_group.accident_filter {

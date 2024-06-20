@@ -231,7 +231,7 @@ section {
                 &.partner{
                     background: $white url("../images/icons/icon_Partner.png") center center no-repeat;
                     @include vp(background-size, 70px auto);
-                }
+                }  
                 &.disaster{
                     background: $white url("../images/icons/icon_disaster.png") center center no-repeat;
                     @include vp(background-size, 70px auto);
@@ -241,7 +241,7 @@ section {
                     @include vp(background-size, 70px auto);
                 }
                 &.customer{
-                    background: $white url("../images/icons/icon__Customer.png") center center no-repeat;
+                    background: $white url("../images/icons/icon_customer.png") center center no-repeat; 
                     @include vp(background-size, 70px auto);
                 }
                 &.fire{
@@ -270,7 +270,7 @@ section {
                     .text01 {
                         @include vp(padding-right, 30px);
                         @include vp(margin-right, 8px);
-                        background: url("../images/icons/ico_arrow_right.png") center right no-repeat;
+                        background: url("../images/icons/icon_arrow_right.png") center right no-repeat; 
                         @include vp(background-size, 12px auto);
                     }
                 }
@@ -308,7 +308,7 @@ section {
                         display: block;
                         @include vp(width, 210px);
                         @include vp(height, 210px);
-                        background: $light-gray-3 url("../images/icons/ico_fileupload.png") no-repeat center;
+                        background: $light-gray-3 url("../images/icons/icon_fileupload.png") no-repeat center;
                         @include vp(background-size, 48px auto);
                         @include vp(border-radius, 14px);
 
@@ -492,11 +492,11 @@ section {
                                 &::after {
                                     content: '';
                                     position: absolute;
-                                    @include vp(top, 20px);
+                                    @include vp(top, 20px); 
                                     @include vp(right, 16px);
                                     @include vp(width, 24px);
                                     @include vp(height, 32px);
-                                    background: url("../images/icons/ico_arrow_down.png") center right no-repeat;
+                                    background: url("../images/icons/icon_arrow_down.png") center right no-repeat;
                                     @include vp(background-size, 24px auto);
                                 }
                                 .time_display {padding: 0px;}
@@ -599,7 +599,7 @@ section {
             
                             @for $i from 1 through 6 {
                                 .emerg0#{$i} {
-                                    background: url("../images/icons/ico_emergency0#{$i}.png") center left no-repeat;
+                                    background: url("../images/icons/icon_emergency0#{$i}.png") center left no-repeat;
                                     @include vp(background-size, 40px auto);
                                     @include vp(background-position-x, 10px);
                                 }
@@ -805,7 +805,7 @@ section {
                             color: #888888;
                             &.comments {
                                 @include vp( padding-left, 32px);
-                                background: url("../images/icons/ico_rate_review.png") center left no-repeat;
+                                background: url("../images/icons/icon_rate_review_g.png") center left no-repeat;
                                 @include vp(background-size, 28px auto); 
                             }
                         }
@@ -880,13 +880,13 @@ section {
                         @include vp( font-size, 18px);
                         cursor: pointer;
                         &.btn01 {
-                            background: url("../images/icons/ico_mobile.png") center left no-repeat;
+                            background: url("../images/icons/icon_mobile.png") center left no-repeat;
                             @include vp(background-size, 40px auto); 
                             @include vp(background-position-x, 8px); 
                         }
                         &.btn02 {
                             @include vp( margin-top, 12px);
-                            background: url("../images/icons/ico_sms.png") center left no-repeat;
+                            background: url("../images/icons/icon_sms.png") center left no-repeat;
                             @include vp(background-size, 40px auto); 
                             @include vp(background-position-x, 8px); 
                         }
@@ -1279,7 +1279,7 @@ section {
                             align-items: center;
                             @include vp( padding-left, 60px);
                             @include vp( height, 48px);                    
-                            background: url("../images/icons/ico_edit_review.png") center left no-repeat;
+                            background: url("../images/icons/icon_edit_review.png") center left no-repeat;
                             @include vp(background-size, 48px 48px);
                             cursor: pointer;
                             span {
@@ -1400,7 +1400,7 @@ section {
                                 left: 0px;
                                 @include vp( width, 24px); 
                                 @include vp( height, 24px); 
-                                background: url("../images/icons/ico_reply.png") center left no-repeat;
+                                background: url("../images/icons/icon_reply.png") center left no-repeat;
                                 @include vp(background-size, 24px auto); 
                             }
                         }

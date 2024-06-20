@@ -11,7 +11,7 @@ var _btnRemoveAll;
 var alarmUi = {
 
     init: function () {
-        alarmUi.loadEvent();
+        this.loadEvent();
     },
     create: function () {
         _w = $(window);
@@ -25,16 +25,16 @@ var alarmUi = {
 
     },
     addEvent: function () {
-        _btnDisableAll.on( "click", alarmUi.btnDisableAllClick );
-        _btnDisable.on( "click", alarmUi.btnDisableClick );
-        _btnAccident.on( "change", alarmUi.btnAccidentCheck );
-        _btnAlCheck.on( "click", alarmUi.btnAllCheck );
-        _btnRemoveAll.on( "click", alarmUi.btnRemoveAlltag );
+        _btnDisableAll.on( "click", this.btnDisableAllClick );
+        _btnDisable.on( "click", this.btnDisableClick );
+        _btnAccident.on( "change", this.btnAccidentCheck );
+        _btnAlCheck.on( "click", this.btnAllCheck );
+        _btnRemoveAll.on( "click", this.btnRemoveAlltag );
 
     },
     loadEvent: function () {
-        alarmUi.create();
-        alarmUi.addEvent();
+        this.create();
+        this.addEvent();
     },
 
     btnDisableAllClick: function(){

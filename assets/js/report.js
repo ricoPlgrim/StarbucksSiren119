@@ -9,8 +9,8 @@ var _selectItem;
 var reportUi = {
 
     init: function () {
-        reportUi.loadEvent();
-        reportUi.detailSwiper();
+        this.loadEvent();
+        this.detailSwiper();
     },
     create: function(){
         _w = $( window );
@@ -22,19 +22,15 @@ var reportUi = {
         _dateBtn = _report.find(".form_list").find(".date_box");
     },
     addEvent: function(){
-        reportUi.resizeEvent( null );
-        _w.on( "resize", reportUi.resizeEvent );
-        _reportListBtn.on("click", reportUi.reportBtnClick);
-        _timeBtn.on("click", reportUi.timeBtnClick);
-        _dateBtn.on("click", reportUi.dateBtnClick);
+        _reportListBtn.on("click", this.reportBtnClick);
+        _timeBtn.on("click", this.timeBtnClick);
+        _dateBtn.on("click", this.dateBtnClick);
     },
     loadEvent: function () {
-        reportUi.create();
-        reportUi.addEvent();
+        this.create();
+        this.addEvent();
     },
-    resizeEvent: function(){
-        console.log("window resize");
-    },
+   
     reportBtnClick: function(){
         $(this).toggleClass("on");
     },

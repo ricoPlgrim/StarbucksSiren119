@@ -205,17 +205,17 @@
                 &.customer {
                     .thum {
                         &:before {
-                            background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+                            background: url("../images/icons/icon_customer.png") 0 0 no-repeat;
                             @include vp(background-size, 112px auto);
                         }
                     }
                     .menu_box{
                         .menu{
                             .inner{
-                                .title_box{
+                                .title_box{ 
                                     h3{
                                         &:before{
-                                            background: url("../images/icons/icon__Customer.png") 0 0 no-repeat;
+                                            background: url("../images/icons/icon_customer.png") 0 0 no-repeat;
                                             @include vp(background-size, 48px auto);
                                         }
                                     }
@@ -672,7 +672,7 @@
                 align-items: flex-start;
                 flex-wrap:wrap;
                 justify-content: flex-start;
-                @include vp(margin-top, 28px);
+                @include vp(margin-top, 28px); 
                 .btn_refresh{
                     display: inline-flex;
                     @include vp(width, 68px);
@@ -682,7 +682,7 @@
                     @include vp(background-size, 68px auto);
                 } 
                 .cm_btn_list {
-                    @include vp(width, 513px);
+                    @include vp(width, 512px);
                 } 
                 &.accident_filter{
                     display: none;    

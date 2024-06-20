@@ -347,7 +347,7 @@ header {
                         &.speaker {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_speaker_notes.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_speaker.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -356,7 +356,7 @@ header {
                         &.edit {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_contract_edit.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_edit.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -365,7 +365,7 @@ header {
                         &.chart {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_chart_bars.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_chart.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -374,7 +374,7 @@ header {
                         &.bookmark {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_bookmark_added.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_bookmark.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -383,7 +383,7 @@ header {
                         &.collections {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_collections_bookmark.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_collections.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -392,7 +392,7 @@ header {
                         &.menubook {
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_menu_book.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_menubook.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
@@ -400,18 +400,18 @@ header {
                         &.alarm{
                             a {
                                 &::before {
-                                    background: url("../images/icons/icon_contract_alarm.png") 0 0 no-repeat;
+                                    background: url("../images/icons/icon_gnb_alarm.png") 0 0 no-repeat;
                                     @include vp(background-size, 48px auto);
                                 }
                             }
                         }
-                        &:last-child{
-                            flex: 0 1 calc(50% - 11px);
-                            margin-bottom: 0;
-                            @include breakpoint {
-                                flex: 0 1 calc(50% - 1.4666vw);
+                        &.message{
+                            a {
+                                &::before {
+                                    background: url("../images/icons/icon_gnb_message.png") 0 0 no-repeat;
+                                    @include vp(background-size, 48px auto);
+                                }
                             }
-        
                         }
                     }
                 }
@@ -424,7 +424,7 @@ header {
             justify-content: center;
             align-items: center;
             @include vp(background-size, 48px auto);
-            @include vp(margin, 200px 40px 0 40px);
+            @include vp(margin, 146px 40px 0 40px);
             @include vp(border-radius, 12px);
             @include vp(border, 2px solid $black-12);
 

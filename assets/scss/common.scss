@@ -140,17 +140,17 @@ body{
                             font-weight: $fw6;
 
                             &.mail {
-                                background: url("../images/icons/ico_mail.png") center left no-repeat;
+                                background: url("../images/icons/icon_mail.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
 
                             &.phone {
-                                background: url("../images/icons/ico_call.png") center left no-repeat;
+                                background: url("../images/icons/icon_call.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
 
                             &.txt {
-                                background: url("../images/icons/ico_text.png") center left no-repeat;
+                                background: url("../images/icons/icon_text.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
                         }
@@ -255,12 +255,12 @@ body{
                             color: $green;
 
                             &.btn_edit {
-                                background: url("../images/icons/ico_edit.png") center left no-repeat;
+                                background: url("../images/icons/icon_edit.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
 
                             &.btn_delete {
-                                background: url("../images/icons/ico_delete.png") center left no-repeat;
+                                background: url("../images/icons/icon_delete_g.png") center left no-repeat;
                                 @include vp(background-size, 40px auto);
                             }
                         }
@@ -620,7 +620,7 @@ body{
                 @include vp( height, 108px); 
                 @include vp( font-size, $f16); 
                 font-weight: $fw6;
-                &.partner{
+                &.partner{ 
                     background: url("../images/icons/icon_Partner.png") center left no-repeat;
                     @include vp(background-size, 108px auto);
                 }
@@ -633,7 +633,7 @@ body{
                     @include vp(background-size, 108px auto);
                 }
                 &.customer{
-                    background: url("../images/icons/icon__Customer.png") center left no-repeat;
+                    background: url("../images/icons/icon_customer.png") center left no-repeat;
                     @include vp(background-size, 108px auto);
                 }
                 &.fire{
