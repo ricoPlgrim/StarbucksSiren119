@@ -2690,7 +2690,7 @@ section.report .write_preview .preview_list li .text_wrap {
   position: relative;
   padding: 40px 20px 40px 40px;
   min-height: 280px;
-  border: 1px solid #DDD;
+  border: 2px solid #DDD;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -2708,7 +2708,20 @@ section.report .write_preview .preview_list li .text_wrap {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
+    border: 0.2666666667vw solid #DDD;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap {
     border-radius: 2.1333333333vw;
+  }
+}
+section.report .write_preview .preview_list li .text_wrap.on {
+  border: 2px solid #000;
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap.on {
+    border: 0.2666666667vw solid #000;
   }
 }
 section.report .write_preview .preview_list li .text_wrap::-webkit-scrollbar {

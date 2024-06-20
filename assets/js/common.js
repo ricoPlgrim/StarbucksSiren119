@@ -32,7 +32,7 @@ var commonUi = {
         _textArea =  $(".textarea_box").find("textarea");   // 댓글 답글 textarea 폼
         _fileUploadBtn = $(".btn_submit").find("#imgFileBtn");   // 사진 파일 업로드
 
-        _textAreaBox = $( ".textarea_area" ).find("textarea");
+        _textAreaBox = $( ".text_wrap" ).find("textarea");
         _switchBox = $(".header_switchbox");
         if (_switchBox.length > 0) {
             _switchBoxOffset = _switchBox.offset().top;
@@ -628,13 +628,12 @@ var commonUi = {
     },
 
     textBoxForcusEvent: function(e){
-
         if (e.type === 'focusin') {
-            $( this ).parents( ".textarea_contents" ).addClass( "on" );
+            $( this ).parents( ".text_wrap" ).addClass( "on" );
             console.log('Input field has gained focus');
             // 포커스 인 이벤트 처리
         } else if (e.type === 'focusout') {
-            $( this ).parents( ".textarea_contents" ).removeClass( "on" );
+            $( this ).parents( ".text_wrap" ).removeClass( "on" );
             console.log('Input field has lost focus');
             // 포커스 아웃 이벤트 처리
         }

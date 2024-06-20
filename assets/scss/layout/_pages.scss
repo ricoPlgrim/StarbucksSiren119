@@ -603,11 +603,14 @@ section {
                         position: relative;
                         @include vp(padding, 40px 20px 40px 40px);
                         @include vp(min-height, 280px);
-                        border: 1px solid $light-gray-2;
+                        @include vp(border, 2px solid $light-gray-2);
                         background: $white;
                         @include vp(border-radius, 16px);
                         overflow: hidden;
                         overflow-y: auto;
+                        &.on {
+                            @include vp(border, 2px solid $black);
+                        }
 
                         &::-webkit-scrollbar {
                             width: 3px;
