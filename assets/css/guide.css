@@ -861,6 +861,92 @@ input[type=date]::-webkit-outer-spin-button {
     gap: 4vw;
   }
 }
+.guide .guide_box .guide_list > li .guide_bottom .header_list > li {
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .header_list > li {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li {
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li {
+    padding-bottom: 2.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .write_preview {
+  margin: 0px;
+  background: none;
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .write_preview .preview_list {
+  padding: 0px;
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment {
+  position: static;
+  background: none;
+  box-shadow: none;
+  border-top: none;
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment:first-child {
+  min-height: 140px;
+  margin-bottom: -40px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment:first-child {
+    min-height: 18.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment:first-child {
+    margin-bottom: -5.3333333333vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 .btn_submit {
+  width: 160px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 .btn_submit {
+    width: 21.3333333333vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 .btn_submit button {
+  width: 140px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 .btn_submit button {
+    width: 18.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_btn_comment.type02 .btn_submit button {
+    margin-bottom: 2.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .form_box {
+  margin-bottom: 0px;
+  margin-top: 2px;
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_date_contents {
+  padding: 0px;
+  padding-left: 40px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_date_contents {
+    padding-left: 5.3333333333vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_date_contents .date_setting {
+  flex-direction: column;
+}
 .guide .guide_box .guide_list > li:first-child {
   margin-top: 0;
 }

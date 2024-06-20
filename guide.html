@@ -300,37 +300,68 @@
                         <div class="cm_tab_contents">
                             <ul class="cm_type_list">
                                 <li class="on">
-                                    <button type="button">Tab</button>
+                                    <button type="button">Tab1</button>
                                 </li>
                                 <li>
-                                    <button type="button">Tab</button>
+                                    <button type="button">Tab2</button>
                                 </li>
-                                <li>
-                                    <button type="button">Tab</button>
-                                </li>
-                                <li>
-                                    <button type="button">Tab</button>
-                                </li>
+                                <div class="bar"></div>
                             </ul>
-                            <div class="bar"></div>
-
-
+                            <div class="cm_type_twodepth">
+                                <div class="cm_full_wrap">
+                                    <!-- depth 1 -->
+                                    <ul class="buttons_list on">
+                                        <li class="on">
+                                            <button>tab1</button>
+                                        </li>
+                                        <li>
+                                            <button>tab2</button>
+                                        </li>
+                                        <li>
+                                            <button>tab3</button>
+                                        </li>
+                                    </ul>
+                                    <ul class="buttons_list">
+                                        <li class="on">
+                                            <button>tab1</button>
+                                        </li>
+                                        <li>
+                                            <button>tab2</button>
+                                        </li>
+                                        <li>
+                                            <button>tab3</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+            
                         </div>
-                        <div class="cm_tab_panel_contents">
-                            <ul class="cm_tab_panel">
-                                <li class="on">
-                                    컨텐츠1
-                                </li>
-                                <li>
-                                    컨텐츠2
-                                </li>
-                                <li>
-                                    컨텐츠3
-                                </li>
-                                <li>
-                                    컨텐츠4
-                                </li>
-                            </ul>
+                        <!--list클래스 추가시 백그라운드 변경-->
+                        <div class="cm_tab_panel list">
+                            <div class="board_list_wrap">
+                                <ul class="depth_02">
+                                    <li class="on">
+                                        <button class="cm_btn_round">
+                                            <span class="text">depth_02</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">depth_02</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">depth_02</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button class="cm_btn_round">
+                                            <span class="text">depth_02</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -389,19 +420,57 @@
                         </div>
                     </div>
                     <div class="guide_bottom">
-                        <header class="common" style="position:relative">
-                            <button class="btn_back"></button>
-                            <h1>보고작성</h1>
-                        </header>
-
-                        <header class="common" style="position:relative">
-                            <button class="btn_back"></button>
-                            <h1>보고상세</h1>
-                            <!-- 북마크 활성화 class="on" -->
-                            <button class="btn_bookmark"></button>
-                        </header>
-
-
+                        <ul class="header_list">
+                            <li>
+                                <header class="common" style="position:relative">
+                                    <button class="btn_back"></button>
+                                    <h1>Title</h1>
+                                </header>
+                            </li>
+                            <li>
+                                <header class="common" style="position:relative">
+                                    <button class="btn_back"></button>
+                                    <h1>Title</h1>
+                                    <!-- 북마크 활성화 class="on" -->
+                                    <button class="btn_bookmark"></button>
+                                </header>
+                            </li>
+                            <li>         
+                                <header class="common push" style="position: static;">
+                                    <button class="btn_back" onclick='history.back(-1); return false;'></button>
+                                    <h1>Push 이력관리</h1>
+                                    <button class="btn_setting" onclick="commonUi.bottomSheetOpen('record')"></button>
+                                </header>
+                            </li>
+                            <li>
+                                <section class="searh" style="height: 50px;">
+                                    <div class="input_contents">
+                                        <div class="input_box">
+                                            <input type="text"  placeholder="검색어를 입력해 주세요" class="search_input">
+                                            <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                                        </div>
+                                        <button class="btn_cancel" onclick='history.back(-1); return false;'>취소</button>
+                                    </div>          
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="gnb" style="display:block; position: static; height: 50px; transform: unset;">
+                                    <div class="contents">
+                                        <div class="gnb_top">
+                                            <a href="push/history-list.html" class="btn_alarm">
+                                                <span class="alarm_count">
+                                                    <span class="count">9</span>
+                                                </span>
+                                                <img src="assets/images/icons/icon_alarm.png" alt="알림 아이콘">
+                                            </a>
+                                            <button type="button" class="btn_close">
+                                                <span class="blind">닫기</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </li>
+                        </ul>
                     </div>
                 </li>
                 <!--하단 레이어 팝업 정의-->
@@ -492,7 +561,170 @@
                         </aside>
                     </div>
                 </li>
-       
+                <!--검색창 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Search</h3>
+                            <p>
+                                검색을 통해 사용자는 키워드나 문구를 입력하고 관련 정보를 얻을 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <section class="searh" style="height: 50px;">
+                            <div class="input_contents" style="border-bottom: none;">
+                                <div class="input_box">
+                                    <input type="text"  placeholder="검색어를 입력해 주세요" class="search_input">
+                                    <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                                </div>
+                            </div>          
+                        </section>
+                    </div>
+                </li>
+                <!--텍스트 필드 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Text Fields</h3>
+                            <p>
+                                텍스트 필드를 사용하면 사용자가 UI에 텍스트를
+                                입력할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <ul class="field-list">
+                            <li>
+                                <section class="report">
+                                    <div class="write_preview">
+                                        <ul class="preview_list">
+                                            <li>
+                                                <div class="text_wrap">
+                                                    <textarea placeholder="보다 자세한 상황 파악을 위해 상세내용을 입력해 주세요."></textarea>
+                                                    <span class="byte_num">0 / 1000byte</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <aside class="cm_btn_comment">
+                                    <div class="text_box">
+                                        <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                                        <div class="btn_box">
+                                            <span class="byte_num">0 / 1000byte</span>
+                                            <span class="btn_delete">내용 삭제</span>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </li>
+                            <li>
+                                <aside class="cm_btn_comment">
+                                    <div class="text_box">
+                                        <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                                        <ul class="file_list">
+                                            <!-- 추가된 이미지 영역 -->
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="./assets/images/temp/@temp_01.png" alt="Uploaded Image">
+                                                </div>
+                                                <span class="file_delete"></span>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="./assets/images/temp/@temp_02.png" alt="Uploaded Image">
+                                                </div>
+                                                <span class="file_delete"></span>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="./assets/images/temp/@temp_03.png" alt="Uploaded Image">
+                                                </div>
+                                                <span class="file_delete"></span>
+                                            </li>
+                                        </ul>
+                                        <div class="btn_box">
+                                            <span class="byte_num">0 / 1000byte</span>
+                                            <span class="btn_delete">내용 삭제</span>
+                                        </div>
+                                    </div>
+                                </aside>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--인풋 필드 정의-->
+                <li>
+                    <div class="guide_top">
+                        <div class="text_box">
+                            <h2>
+                                <img src="assets/images/guide/guide_logo.png" alt="">
+                            </h2>
+                            <h3>Input Fields</h3>
+                            <p>
+                                텍스트 필드를 사용하면 사용자가 UI에 텍스트를 
+                                입력할 수 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="guide_bottom">
+                        <ul class="field-list">
+                            <li>
+                                <aside class="cm_btn_comment type02">
+                                    <div class="text_box">
+                                        <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
+                                        <div class="btn_box">
+                                            <span class="byte_num">0 / 1000byte</span>
+                                            <span class="btn_delete">내용 삭제</span>
+                                        </div>
+                                    </div>
+                                    <div class="btn_submit">
+                                        <!-- 활성화되면 class="on" 추가 -->
+                                        <button data-target="commentCompletePop">등록</button>
+                                    </div>
+                                </aside>
+                            </li>
+                            <li>
+                                <section class="report">
+                                    <div class="create_form">
+                                        <div class="form_box">
+                                            <ul class="form_list">
+                                                <li class="text_box">
+                                                    <input type="text" placeholder="사이즈를 기재해주세요">
+                                                    <span class="btn_delete">내용 삭제</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </li>
+                            <li>
+                                <div class="cm_date_contents">
+                                    <div class="date_setting">
+                                        <div class="date_start disabled"> <!--disabled 버튼 막기-->
+                                            <span class="date_text">2024-04-13</span>
+                                            <input type="date" name="startdate" id="startdate" value="2018-07-22" min="2018-01-01"
+                                                max="2018-12-31">
+                                        </div>
+                                        <div class="date_start active">
+                                            <span class="date_text">2024-04-13</span>
+                                            <input type="date" name="startdate" id="startdate" value="2018-07-22" min="2018-01-01"
+                                                max="2018-12-31">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </section>
     </main>

@@ -1618,7 +1618,6 @@ section.board .cm_full_wrap .depth_02 {
   padding: 28px 40px;
   align-items: center;
   gap: 4px;
-  background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
   section.board .cm_full_wrap .depth_02 {
@@ -1632,6 +1631,7 @@ section.board .cm_full_wrap .depth_02 > li button span {
   padding: 20px;
   line-height: normal;
   font-weight: 400;
+  text-wrap: nowrap;
 }
 @media screen and (max-width: 750px) {
   section.board .cm_full_wrap .depth_02 > li button span {
@@ -8447,6 +8447,7 @@ body {
   align-items: center;
   gap: 4px;
   background-color: #F6F6F6;
+  overflow-x: auto;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_panel .depth_02 {
@@ -8460,6 +8461,7 @@ body {
   padding: 20px;
   line-height: normal;
   font-weight: 400;
+  text-wrap: nowrap;
 }
 @media screen and (max-width: 750px) {
   .cm_tab_panel .depth_02 > li button span {
