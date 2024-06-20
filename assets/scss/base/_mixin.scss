@@ -88,7 +88,7 @@ $vw-px-only: false !default;
     }
 } 
 
-
+ 
 //transform 사용할경우
 @mixin breakpoint {
     @media screen and (max-width: $mobile) {
@@ -97,5 +97,9 @@ $vw-px-only: false !default;
   }
   
 
-
+ @mixin full-height {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 100vh;
+  }
   

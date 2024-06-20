@@ -23,8 +23,7 @@ body{
     font-size: 0;
     @include vp(max-width, 750px);
     margin: 0 auto;
-    height: 100vh;
-    height: 100dvh;
+    @include full-height;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     &::-webkit-scrollbar {
@@ -353,7 +352,7 @@ body{
         @include vp(border, 4px solid $green);
         @include vp(border-radius, 50px );
         opacity: 0.6;
-        background: #fff;
+        background: $white;
         box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
     }
 
@@ -382,7 +381,7 @@ body{
     display: none;
     position: fixed;
     top: 0px;
-    min-height: 100vh;
+    @include full-height;
     width: 100%;
     background: rgba(0, 0, 0, 0.38);
     z-index: 999;
@@ -438,7 +437,7 @@ body{
     display: none;
     position: fixed;
     top: 0px;
-    min-height: 100vh;
+    @include full-height;
     width: 100%;
     @include vp(width, 750px); 
     z-index: 999;
@@ -552,7 +551,7 @@ body{
                 .bullet {
                     display: inline-block;
                     @include vp( margin, 0px 4px); 
-                    @include vp( width, 16px); 
+                    @include vp( width, 16px);  
                     @include vp( height, 16px); 
                     border-radius: 50%;
                     background: #FFFFFF80;

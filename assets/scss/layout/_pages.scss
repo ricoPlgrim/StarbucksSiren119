@@ -149,8 +149,7 @@ section {
         }
         .bookmark_contents {
             @include vp(padding-top, 234px);
-            min-height: 100vh;
-            min-height: 100dvh;
+            @include full-height;
             background-color: $light-gray-4;
             .title {
                 color: $black;
@@ -539,7 +538,7 @@ section {
                 h3 {
                     @include vp(padding-bottom, 40px);
                     @include vp(font-size, $f15);
-                    font-weight: 700;
+                    font-weight: $fw7;
                     border-bottom: 1px solid $dark-gray;
 
                     span {
@@ -649,7 +648,7 @@ section {
             
                     .chk01 label {
                         @include vp(font-size, $f15);
-                        font-weight: 700;
+                        font-weight: $fw7;
             
                         input {
                             @include vp(padding-right, 0px);
@@ -669,7 +668,7 @@ section {
             button {
                 @include vp(padding, 32px 0px);
                 @include vp(font-size, 36px);
-                font-weight: 700;
+                font-weight: $fw7;
                 color: $white;
                 border-radius: 8px;
                 background: $green;
@@ -1493,7 +1492,7 @@ section {
         flex-direction: column;
         align-items: center;
         background: #F6F6F6;
-        min-height: 100vh;
+        @include full-height;
         overflow: hidden;
 
         .logo {
@@ -1558,12 +1557,12 @@ section {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-
+ 
                 button {
                     @include vp(width, 670px);
                     @include vp(height, 100px);
                     @include vp(font-size, $f16);
-                    font-weight: 700;
+                    font-weight: $fw7;
                     @include vp(border-radius, 12px);
 
                     &:first-child {
@@ -2135,8 +2134,7 @@ section {
     //검색페이지
     &.searh{ 
         background: $white;  
-        height: 100vh;
-        height: 100dvh;
+        @include full-height;
         @include vp(padding-bottom, 100px ); 
         .input_contents{
             display: flex;
@@ -2212,7 +2210,7 @@ section {
             }   
             .btn_cancel{
                 color: $black-72;
-                @include vp(font-size, 32px ); 
+                @include vp(font-size, $f16 ); 
                 @include vp(line-height, 32px ); 
                 @include vp(margin-left, 20px ); 
                 font-style: normal;
@@ -2226,13 +2224,13 @@ section {
                 align-items: center;
                 justify-content: space-between;
                 h3{
-                    @include vp(font-size, 32px ); 
+                    @include vp(font-size, $f16 ); 
                     @include vp(line-height, 32px ); 
                     font-weight: $fw6;
                 }
                 .btn_all_delete{
                     position: relative;;
-                    @include vp(font-size, 24px ); 
+                    @include vp(font-size, $f12 ); 
                     @include vp(line-height, 28px ); 
                     color: $black;
                     font-weight: $fw4;
@@ -2263,7 +2261,7 @@ section {
                         &.title{
                             @include vp(min-width, 190px ); 
                             @include vp(max-width, 490px ); 
-                            @include vp(font-size, 26px ); 
+                            @include vp(font-size, $f13 ); 
                             @include vp(line-height, 30px ); 
                             font-weight: $fw4;
                             color: $black;
@@ -2288,7 +2286,7 @@ section {
                     display: none;
                     color: #aaa;
                     text-align: left;
-                    @include vp(font-size, 26px ); 
+                    @include vp(font-size, $f13 ); 
                     font-weight: $fw4;
 
                 }

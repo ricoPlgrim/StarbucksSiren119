@@ -1786,8 +1786,9 @@ section.bookmark .cm_tab_panel .panel_list > li .inner {
 }
 section.bookmark .bookmark_contents {
   padding-top: 234px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
-  min-height: 100dvh;
   background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
@@ -4584,6 +4585,8 @@ section.login {
   flex-direction: column;
   align-items: center;
   background: #F6F6F6;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -5821,6 +5824,7 @@ section.searh {
   background: #fff;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
   padding-bottom: 100px;
 }
 @media screen and (max-width: 750px) {
@@ -6259,6 +6263,7 @@ body {
   margin: 0 auto;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -6859,6 +6864,8 @@ body {
   display: none;
   position: fixed;
   top: 0px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.38);
@@ -6970,6 +6977,8 @@ body {
   display: none;
   position: fixed;
   top: 0px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   width: 100%;
   width: 750px;
@@ -9874,15 +9883,18 @@ body {
   color: #fff;
 }
 
-#filterPopup {
+#filterPopup,
+#teamDetailPopup {
   padding-top: 112px;
 }
 @media screen and (max-width: 750px) {
-  #filterPopup {
+  #filterPopup,
+  #teamDetailPopup {
     padding-top: 14.9333333333vw;
   }
 }
-#filterPopup .head_box {
+#filterPopup .head_box,
+#teamDetailPopup .head_box {
   position: fixed;
   display: flex;
   align-items: center;
@@ -9899,21 +9911,25 @@ body {
   z-index: 100;
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
     height: 14.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
     width: 100vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
     border-bottom: 0.2666666667vw solid #EEE;
   }
 }
-#filterPopup .head_box h1 {
+#filterPopup .head_box h1,
+#teamDetailPopup .head_box h1 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -9921,21 +9937,25 @@ body {
   font-weight: 700;
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box h1 {
+  #filterPopup .head_box h1,
+  #teamDetailPopup .head_box h1 {
     font-size: 4vw;
   }
 }
-#filterPopup .head_box .btn_close {
+#filterPopup .head_box .btn_close,
+#teamDetailPopup .head_box .btn_close {
   top: 14px;
   padding: 40px;
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box .btn_close {
+  #filterPopup .head_box .btn_close,
+  #teamDetailPopup .head_box .btn_close {
     top: 1.8666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  #filterPopup .head_box .btn_close {
+  #filterPopup .head_box .btn_close,
+  #teamDetailPopup .head_box .btn_close {
     padding: 5.3333333333vw;
   }
 }

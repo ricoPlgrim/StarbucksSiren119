@@ -86,9 +86,9 @@ header {
                         display: block;
                         position: relative;
                         float: left;
-                        @include vp(font-size, 30px);
+                        @include vp(font-size, $f15);
                         @include vp(line-height, 77px);
-                        font-weight: 600;
+                        font-weight: $fw6;
                         color: $black;
                         opacity: .3;
                         width: 50%;
@@ -187,8 +187,8 @@ header {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            @include vp(font-size, 30px);
-            font-weight: 700;
+            @include vp(font-size, $f15);
+            font-weight: $fw7;
         }
         
         .btn_bookmark {
@@ -326,11 +326,11 @@ header {
                         a {
                             position: relative;
                             display: inline-block;
-                            @include vp(font-size, 32px);
-                            @include vp(padding-left, 64px);
+                            @include vp(font-size, $f16);
+                            @include vp(padding-left, 64px); 
                             @include vp(line-height, 32px);
                             color: $black;
-                            font-weight: 600;
+                            font-weight: $fw6;
     
                             &::before {
                                 content: '';
