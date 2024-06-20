@@ -2514,7 +2514,8 @@ section.report .create_form .form_box .form_list li.time_box.on button .time_dis
   color: #00A862;
   font-weight: 600;
 }
-section.report .create_form .form_box .form_list li .date_input, section.report .create_form .form_box .form_list li .time_input {
+section.report .create_form .form_box .form_list li .date_input,
+section.report .create_form .form_box .form_list li .time_input {
   position: absolute;
   top: 50%;
   transform: translatey(-50%);
@@ -2525,7 +2526,8 @@ section.report .create_form .form_box .form_list li .date_input, section.report 
   z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  section.report .create_form .form_box .form_list li .date_input, section.report .create_form .form_box .form_list li .time_input {
+  section.report .create_form .form_box .form_list li .date_input,
+  section.report .create_form .form_box .form_list li .time_input {
     right: 0vw;
   }
 }
@@ -2778,7 +2780,7 @@ section.report .write_preview .preview_list li .text_wrap {
   position: relative;
   padding: 40px 0px 40px 40px;
   min-height: 296px;
-  border: 1px solid #DDD;
+  border: 2px solid #DDD;
   background: #fff;
   border-radius: 16px;
   overflow: hidden;
@@ -2792,6 +2794,11 @@ section.report .write_preview .preview_list li .text_wrap {
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
     min-height: 39.4666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap {
+    border: 0.2666666667vw solid #DDD;
   }
 }
 @media screen and (max-width: 750px) {
@@ -4969,130 +4976,107 @@ section.message .message_contents .inner {
 section.message .message_contents .inner .textarea_contents {
   position: relative;
   margin-top: 40px;
-  height: 280px;
-  border-radius: 16px;
-  border: 2px solid #DDD;
 }
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner .textarea_contents {
     margin-top: 5.3333333333vw;
   }
 }
+section.message .message_contents .inner .textarea_contents .text_wrap {
+  padding: 40px 0px 40px 40px;
+  min-height: 252px;
+  border: 2px solid #DDD;
+  background: #fff;
+  border-radius: 32px;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 16px;
+}
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents {
-    height: 37.3333333333vw;
+  section.message .message_contents .inner .textarea_contents .text_wrap {
+    padding: 5.3333333333vw 0vw 5.3333333333vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents {
-    border-radius: 2.1333333333vw;
+  section.message .message_contents .inner .textarea_contents .text_wrap {
+    min-height: 33.6vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents {
+  section.message .message_contents .inner .textarea_contents .text_wrap {
     border: 0.2666666667vw solid #DDD;
   }
 }
-section.message .message_contents .inner .textarea_contents .textarea_area {
-  position: relative;
-  height: 220px;
-  max-height: 220px;
-  overflow: auto;
-  border: 2px solid transparent;
-}
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_area {
-    height: 29.3333333333vw;
+  section.message .message_contents .inner .textarea_contents .text_wrap {
+    border-radius: 2.1333333333vw;
   }
 }
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_area {
-    max-height: 29.3333333333vw;
-  }
+section.message .message_contents .inner .textarea_contents .text_wrap::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
 }
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .textarea_area {
-    border: 0.2666666667vw solid transparent;
-  }
+section.message .message_contents .inner .textarea_contents .text_wrap::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
 }
-section.message .message_contents .inner .textarea_contents textarea {
-  position: absolute;
-  top: -22px;
-  left: -78px;
-  padding: 28px 28px 48px 28px;
+section.message .message_contents .inner .textarea_contents .text_wrap textarea {
+  padding-right: 40px;
   line-height: 40px;
-  border-radius: 16px;
-  font-size: 32px;
-  transform: scale(0.8125);
-  width: 123.4%;
-  height: 120%;
-  background: #fff;
+  font-size: 26px;
+  height: 138px;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5803921569);
   resize: none;
-  font-weight: 400;
-  color: #000;
-  border: 0;
-  overflow-x: hidden;
+  outline: none;
+  border: none;
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
-    top: -2.9333333333vw;
+  section.message .message_contents .inner .textarea_contents .text_wrap textarea {
+    padding-right: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
-    left: -10.4vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
-    padding: 3.7333333333vw 3.7333333333vw 6.4vw 3.7333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
+  section.message .message_contents .inner .textarea_contents .text_wrap textarea {
     line-height: 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
-    border-radius: 2.1333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents textarea {
-    font-size: 4.2666666667vw;
-  }
-}
-section.message .message_contents .inner .textarea_contents .byte_num {
-  position: absolute;
-  bottom: 28px;
-  right: 28px;
-  color: #AAA;
-  font-size: 26px;
-  font-size: 22px;
-  font-weight: 400;
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .byte_num {
-    bottom: 3.7333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .byte_num {
-    right: 3.7333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents .byte_num {
+  section.message .message_contents .inner .textarea_contents .text_wrap textarea {
     font-size: 3.4666666667vw;
   }
 }
-section.message .message_contents .inner .textarea_contents.on {
-  border: 2px solid #000;
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents .text_wrap textarea {
+    height: 18.4vw;
+  }
+}
+section.message .message_contents .inner .textarea_contents .text_wrap textarea::placeholder {
+  color: #AAA;
+}
+section.message .message_contents .inner .textarea_contents .text_wrap textarea:focus {
+  color: #000;
+}
+section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  font-size: 26px;
+  color: #AAA;
 }
 @media screen and (max-width: 750px) {
-  section.message .message_contents .inner .textarea_contents.on {
-    border: 0.2666666667vw solid #000;
+  section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
+    left: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
+    bottom: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
+    font-size: 3.4666666667vw;
   }
 }
 section.message .receiver_contents {
