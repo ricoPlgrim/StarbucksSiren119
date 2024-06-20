@@ -129,9 +129,6 @@ var commonUi = {
                 commonUi.updateBarPosition($(this));
             }
         });
-
-
-    
     },
 
     scrollEvent: function () {

@@ -603,6 +603,7 @@
                             <li class="icon menubook"><a href="board/index.html"   onclick="commonUi.setTabIndex(0)">업무가이드</a></li>
                             <li class="icon collections"><a href="board/index.html" onclick="commonUi.setTabIndex(1)">주요 보고사례</a></li>
                             <li class="icon alarm"><a href="push/setting.html">알림설정</a></li>
+                            <li class="icon message"><a href="message/send_type1.html">재난문자 전송</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -1075,7 +1076,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all1234">
-                                                        <input type="checkbox" name="type2-1" id="all1234" class="typeAll"
+                                                        <input type="checkbox" name="type2" id="all1234" class="typeAll"
                                                             data-value="파트너 전체" />전체
                                                     </label>
                                                 </div>
@@ -1083,7 +1084,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="ss1">
-                                                        <input type="checkbox" name="type2-1" id="ss1" data-value="근무중 사고" />근무중
+                                                        <input type="checkbox" name="type2" id="ss1" data-value="근무중 사고" />근무중
                                                         사고
                                                     </label>
                                                 </div>
@@ -1091,7 +1092,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="ss2">
-                                                        <input type="checkbox" name="type2-1" id="ss2" data-value="출퇴근 사고" />출퇴근
+                                                        <input type="checkbox" name="type2" id="ss2" data-value="출퇴근 사고" />출퇴근
                                                         사고
                                                     </label>
                                                 </div>
@@ -1099,7 +1100,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="ss3">
-                                                        <input type="checkbox" name="type2-1" id="ss3"
+                                                        <input type="checkbox" name="type2" id="ss3"
                                                             data-value="불만/분실/피해" />불만/분실/피해
                                                     </label>
                                                 </div>
@@ -1112,7 +1113,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all12345">
-                                                        <input type="checkbox" name="type2-2" id="all12345" class="typeAll"
+                                                        <input type="checkbox" name="type3" id="all12345" class="typeAll"
                                                             data-value="고객 전체" />전체
                                                     </label>
                                                 </div>
@@ -1120,14 +1121,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas1">
-                                                        <input type="checkbox" name="type2-2" id="sas1" data-value="상해" />상해
+                                                        <input type="checkbox" name="type3" id="sas1" data-value="상해" />상해
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas2">
-                                                        <input type="checkbox" name="type2-2" id="sas2"
+                                                        <input type="checkbox" name="type3" id="sas2"
                                                             data-value="불만/피해" />불만/피해
                                                     </label>
                                                 </div>
@@ -1135,21 +1136,21 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas3">
-                                                        <input type="checkbox" name="type2-2" id="sas3" data-value="난동" />난동
+                                                        <input type="checkbox" name="type3" id="sas3" data-value="난동" />난동
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas4">
-                                                        <input type="checkbox" name="type2-2" id="sas4" data-value="절취" />절취
+                                                        <input type="checkbox" name="type3" id="sas4" data-value="절취" />절취
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas5">
-                                                        <input type="checkbox" name="type2-2" id="sas5"
+                                                        <input type="checkbox" name="type3" id="sas5"
                                                             data-value="분실/피해" />분실/피해
                                                     </label>
                                                 </div>
@@ -1157,7 +1158,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sas6">
-                                                        <input type="checkbox" name="type2-2" id="sas6" data-value="기타" />기타
+                                                        <input type="checkbox" name="type3" id="sas6" data-value="기타" />기타
                                                     </label>
                                                 </div>
                                             </li>
@@ -1169,7 +1170,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all123456">
-                                                        <input type="checkbox" name="type2-3" id="all123456" class="typeAll"
+                                                        <input type="checkbox" name="type4" id="all123456" class="typeAll"
                                                             data-value="재해/시설 전체" />전체
                                                     </label>
                                                 </div>
@@ -1177,7 +1178,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs1">
-                                                        <input type="checkbox" name="type2-3" id="sazs1"
+                                                        <input type="checkbox" name="type4" id="sazs1"
                                                             data-value="파손/탈락" />파손/탈락
                                                     </label>
                                                 </div>
@@ -1185,35 +1186,35 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs2">
-                                                        <input type="checkbox" name="type2-3" id="sazs2" data-value="누수" />누수
+                                                        <input type="checkbox" name="type4" id="sazs2" data-value="누수" />누수
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs3">
-                                                        <input type="checkbox" name="type2-3" id="sazs3" data-value="침수" />침수
+                                                        <input type="checkbox" name="type4" id="sazs3" data-value="침수" />침수
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs4">
-                                                        <input type="checkbox" name="type2-3" id="sazs4" data-value="절취" />절취
+                                                        <input type="checkbox" name="type4" id="sazs4" data-value="절취" />절취
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs5">
-                                                        <input type="checkbox" name="type2-3" id="sazs5" data-value="역류" />역류
+                                                        <input type="checkbox" name="type4" id="sazs5" data-value="역류" />역류
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs6">
-                                                        <input type="checkbox" name="type2-3" id="sazs6"
+                                                        <input type="checkbox" name="type4" id="sazs6"
                                                             data-value="단전/정전" />단전/정전
                                                     </label>
                                                 </div>
@@ -1221,21 +1222,21 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs7">
-                                                        <input type="checkbox" name="type2-3" id="sazs7" data-value="단수" />단수
+                                                        <input type="checkbox" name="type4" id="sazs7" data-value="단수" />단수
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs8">
-                                                        <input type="checkbox" name="type2-3" id="sazs8" data-value="집회" />집회
+                                                        <input type="checkbox" name="type4" id="sazs8" data-value="집회" />집회
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs9">
-                                                        <input type="checkbox" name="type2-3" id="sazs9"
+                                                        <input type="checkbox" name="type4" id="sazs9"
                                                             data-value="공사 및 점검" />공사 및 점검
                                                     </label>
                                                 </div>
@@ -1243,7 +1244,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazs10">
-                                                        <input type="checkbox" name="type2-3" id="sazs10" data-value="시스템" />시스템
+                                                        <input type="checkbox" name="type4" id="sazs10" data-value="시스템" />시스템
                                                     </label>
                                                 </div>
                                             </li>
@@ -1255,7 +1256,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all1234567">
-                                                        <input type="checkbox" name="type2-4" id="all1234567" class="typeAll"
+                                                        <input type="checkbox" name="type5" id="all1234567" class="typeAll"
                                                             data-value="화재 전체" />전체
                                                     </label>
                                                 </div>
@@ -1263,7 +1264,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs1">
-                                                        <input type="checkbox" name="type2-4" id="sazqs1"
+                                                        <input type="checkbox" name="type5" id="sazqs1"
                                                             data-value="매장 내 화재" />매장 내 화재
                                                     </label>
                                                 </div>
@@ -1271,7 +1272,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs2">
-                                                        <input type="checkbox" name="type2-4" id="sazqs2" data-value="입주 건물 화재" />입주
+                                                        <input type="checkbox" name="type5" id="sazqs2" data-value="입주 건물 화재" />입주
                                                         건물 화재
                                                     </label>
                                                 </div>
@@ -1279,7 +1280,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs3">
-                                                        <input type="checkbox" name="type2-4" id="sazqs3" data-value="매장 외부 화재" />매장
+                                                        <input type="checkbox" name="type5" id="sazqs3" data-value="매장 외부 화재" />매장
                                                         외부 화재
                                                     </label>
                                                 </div>
@@ -1287,7 +1288,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs4">
-                                                        <input type="checkbox" name="type2-4" id="sazqs4" data-value="화재 위험(연기, 불꽃 등)" />화재
+                                                        <input type="checkbox" name="type5" id="sazqs4" data-value="화재 위험(연기, 불꽃 등)" />화재
                                                         위험(연기, 불꽃 등)
                                                     </label>
                                                 </div>
@@ -1295,7 +1296,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs5">
-                                                        <input type="checkbox" name="type2-4" id="sazqs5" data-value="경보기 오작동" />경보기
+                                                        <input type="checkbox" name="type5" id="sazqs5" data-value="경보기 오작동" />경보기
                                                         오작동
                                                     </label>
                                                 </div>
@@ -1303,7 +1304,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqs6">
-                                                        <input type="checkbox" name="type2-4" id="sazqs6" data-value="기타" />기타
+                                                        <input type="checkbox" name="type5" id="sazqs6" data-value="기타" />기타
                                                     </label>
                                                 </div>
                                             </li>
@@ -1314,7 +1315,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all12345678">
-                                                        <input type="checkbox" name="type2-5" id="all12345678" class="typeAll"
+                                                        <input type="checkbox" name="type6" id="all12345678" class="typeAll"
                                                             data-value="이물 전체" />전체
                                                     </label>
                                                 </div>
@@ -1322,7 +1323,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsd1">
-                                                        <input type="checkbox" name="type2-5" id="sazqsd1"
+                                                        <input type="checkbox" name="type6" id="sazqsd1"
                                                             data-value="음료(파트너제조)" />음료(파트너제조)
                                                     </label>
                                                 </div>
@@ -1330,7 +1331,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsd2">
-                                                        <input type="checkbox" name="type2-5" id="sazqsd2" data-value="푸드 등(협력사 제조)" />푸드
+                                                        <input type="checkbox" name="type6" id="sazqsd2" data-value="푸드 등(협력사 제조)" />푸드
                                                         등(협력사 제조)
                                                     </label>
                                                 </div>
@@ -1338,7 +1339,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsd3">
-                                                        <input type="checkbox" name="type2-5" id="sazqsd3" data-value="기타" />기타
+                                                        <input type="checkbox" name="type6" id="sazqsd3" data-value="기타" />기타
                                                     </label>
                                                 </div>
                                             </li>
@@ -1350,7 +1351,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all123456789">
-                                                        <input type="checkbox" name="type2-5" id="all123456789" class="typeAll"
+                                                        <input type="checkbox" name="type7" id="all123456789" class="typeAll"
                                                             data-value="식품안전 전체" />전체
                                                     </label>
                                                 </div>
@@ -1358,7 +1359,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsdg1">
-                                                        <input type="checkbox" name="type2-5" id="sazqsdg1"
+                                                        <input type="checkbox" name="type7" id="sazqsdg1"
                                                             data-value="소비기한 경과품 판매" />소비기한 경과품 판매
                                                     </label>
                                                 </div>
@@ -1366,7 +1367,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsdg2">
-                                                        <input type="checkbox" name="type2-5" id="sazqsdg2"
+                                                        <input type="checkbox" name="type7" id="sazqsdg2"
                                                             data-value="변질(공팜이 등)" />변질(공팜이 등)
                                                     </label>
                                                 </div>
@@ -1374,7 +1375,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsdg3">
-                                                        <input type="checkbox" name="type2-5" id="sazqsdg3"
+                                                        <input type="checkbox" name="type7" id="sazqsdg3"
                                                             data-value="기타(알러지 배탈 등)" />기타(알러지 배탈 등)
                                                     </label>
                                                 </div>
@@ -1382,7 +1383,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="sazqsdg4">
-                                                        <input type="checkbox" name="type2-5" id="sazqsdg4" data-value="관능 요소 이상(맛/냄새/색상 이상 등)" />관능
+                                                        <input type="checkbox" name="type7" id="sazqsdg4" data-value="관능 요소 이상(맛/냄새/색상 이상 등)" />관능
                                                         요소 이상(맛/냄새/색상 이상 등)
                                                     </label>
                                                 </div>
@@ -1438,7 +1439,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all999">
-                                                        <input type="checkbox" name="type3-1" id="all999" class="typeAll"
+                                                        <input type="checkbox" name="type8" id="all999" class="typeAll"
                                                             data-value="운영1팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1446,14 +1447,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k2">
-                                                        <input type="checkbox" name="type3-1" id="k2" data-value="논현/삼성" />논현/삼성
+                                                        <input type="checkbox" name="type8" id="k2" data-value="논현/삼성" />논현/삼성
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k3">
-                                                        <input type="checkbox" name="type3-1" id="k3"
+                                                        <input type="checkbox" name="type8" id="k3"
                                                             data-value="압구정/신사" />압구정/신사
                                                     </label>
                                                 </div>
@@ -1461,49 +1462,49 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k4">
-                                                        <input type="checkbox" name="type3-1" id="k4" data-value="역삼" />역삼
+                                                        <input type="checkbox" name="type8" id="k4" data-value="역삼" />역삼
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k5">
-                                                        <input type="checkbox" name="type3-1" id="k5" data-value="삼성" />삼성
+                                                        <input type="checkbox" name="type8" id="k5" data-value="삼성" />삼성
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k6">
-                                                        <input type="checkbox" name="type3-1" id="k6" data-value="반포/방배" />반포/방배
+                                                        <input type="checkbox" name="type8" id="k6" data-value="반포/방배" />반포/방배
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k7">
-                                                        <input type="checkbox" name="type3-1" id="k7" data-value="관악" />관악
+                                                        <input type="checkbox" name="type8" id="k7" data-value="관악" />관악
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k8">
-                                                        <input type="checkbox" name="type3-1" id="k8" data-value="도곡/수서" />도곡/수서
+                                                        <input type="checkbox" name="type8" id="k8" data-value="도곡/수서" />도곡/수서
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k9">
-                                                        <input type="checkbox" name="type3-1" id="k9" data-value="강남대로" />강남대로
+                                                        <input type="checkbox" name="type8" id="k9" data-value="강남대로" />강남대로
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k10">
-                                                        <input type="checkbox" name="type3-1" id="k10" data-value="청담" />청담
+                                                        <input type="checkbox" name="type8" id="k10" data-value="청담" />청담
                                                     </label>
                                                 </div>
                                             </li>
@@ -1515,7 +1516,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991">
-                                                        <input type="checkbox" name="type3-2" id="all9991" class="typeAll"
+                                                        <input type="checkbox" name="type9" id="all9991" class="typeAll"
                                                             data-value="운영2팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1523,14 +1524,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk2">
-                                                        <input type="checkbox" name="type3-2" id="kk2" data-value="송파" />송파
+                                                        <input type="checkbox" name="type9" id="kk2" data-value="송파" />송파
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk3">
-                                                        <input type="checkbox" name="type3-2" id="kk3"
+                                                        <input type="checkbox" name="type9" id="kk3"
                                                             data-value="성남/광주" />성남/광주
                                                     </label>
                                                 </div>
@@ -1538,7 +1539,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk4">
-                                                        <input type="checkbox" name="type3-2" id="kk4"
+                                                        <input type="checkbox" name="type9" id="kk4"
                                                             data-value="분당판교/이매" />분당판교/이매
                                                     </label>
                                                 </div>
@@ -1546,7 +1547,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk5">
-                                                        <input type="checkbox" name="type3-2" id="kk5"
+                                                        <input type="checkbox" name="type9" id="kk5"
                                                             data-value="하남/미사" />하남/미사
                                                     </label>
                                                 </div>
@@ -1554,7 +1555,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk6">
-                                                        <input type="checkbox" name="type3-2" id="kk6"
+                                                        <input type="checkbox" name="type9" id="kk6"
                                                             data-value="분당정자/미금" />분당정자/미금
                                                     </label>
                                                 </div>
@@ -1562,14 +1563,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="kk7">
-                                                        <input type="checkbox" name="type3-2" id="kk7" data-value="안양" />안양
+                                                        <input type="checkbox" name="type9" id="kk7" data-value="안양" />안양
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k8">
-                                                        <input type="checkbox" name="type3-2" id="k8"
+                                                        <input type="checkbox" name="type9" id="k8"
                                                             data-value="분당서현/야탑" />분당서현/야탑
                                                     </label>
                                                 </div>
@@ -1577,14 +1578,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k9">
-                                                        <input type="checkbox" name="type3-2" id="k9" data-value="여주/이천" />여주/이천
+                                                        <input type="checkbox" name="type9" id="k9" data-value="여주/이천" />여주/이천
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k10">
-                                                        <input type="checkbox" name="type3-2" id="k10"
+                                                        <input type="checkbox" name="type9" id="k10"
                                                             data-value="문정/가락" />문정/가락
                                                     </label>
                                                 </div>
@@ -1592,7 +1593,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k11">
-                                                        <input type="checkbox" name="type3-2" id="k11"
+                                                        <input type="checkbox" name="type9" id="k11"
                                                             data-value="산본/안양" />산본/안양
                                                     </label>
                                                 </div>
@@ -1600,7 +1601,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k12">
-                                                        <input type="checkbox" name="type3-2" id="k12"
+                                                        <input type="checkbox" name="type9" id="k12"
                                                             data-value="과천/평촌" />과천/평촌
                                                     </label>
                                                 </div>
@@ -1608,14 +1609,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k13">
-                                                        <input type="checkbox" name="type3-2" id="k13" data-value="잠실" />잠실
+                                                        <input type="checkbox" name="type9" id="k13" data-value="잠실" />잠실
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="k14">
-                                                        <input type="checkbox" name="type3-2" id="k14" data-value="강동" />강동
+                                                        <input type="checkbox" name="type9" id="k14" data-value="강동" />강동
                                                     </label>
                                                 </div>
                                             </li>
@@ -1627,7 +1628,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dqw">
-                                                        <input type="checkbox" name="type3-3" id="all9991dqw" class="typeAll"
+                                                        <input type="checkbox" name="type10" id="all9991dqw" class="typeAll"
                                                             data-value="운영3팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1635,14 +1636,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a70">
-                                                        <input type="checkbox" name="type3-3" id="a70" data-value="용인수지" />용인수지
+                                                        <input type="checkbox" name="type10" id="a70" data-value="용인수지" />용인수지
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a71">
-                                                        <input type="checkbox" name="type3-3" id="a71"
+                                                        <input type="checkbox" name="type10" id="a71"
                                                             data-value="평택/안성" />평택/안성
                                                     </label>
                                                 </div>
@@ -1650,14 +1651,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a72">
-                                                        <input type="checkbox" name="type3-3" id="a72" data-value="용인처인" />용인처인
+                                                        <input type="checkbox" name="type10" id="a72" data-value="용인처인" />용인처인
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a73">
-                                                        <input type="checkbox" name="type3-3" id="a73"
+                                                        <input type="checkbox" name="type10" id="a73"
                                                             data-value="수원/팔달" />수원/팔달
                                                     </label>
                                                 </div>
@@ -1665,7 +1666,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a74">
-                                                        <input type="checkbox" name="type3-3" id="a74"
+                                                        <input type="checkbox" name="type10" id="a74"
                                                             data-value="서수원/화성" />서수원/화성
                                                     </label>
                                                 </div>
@@ -1673,49 +1674,49 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a75">
-                                                        <input type="checkbox" name="type3-3" id="a75" data-value="수원영통" />수원영통
+                                                        <input type="checkbox" name="type10" id="a75" data-value="수원영통" />수원영통
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a76">
-                                                        <input type="checkbox" name="type3-3" id="a76" data-value="동탄서부" />동탄서부
+                                                        <input type="checkbox" name="type10" id="a76" data-value="동탄서부" />동탄서부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a77">
-                                                        <input type="checkbox" name="type3-3" id="a77" data-value="용인기흥" />용인기흥
+                                                        <input type="checkbox" name="type10" id="a77" data-value="용인기흥" />용인기흥
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a78">
-                                                        <input type="checkbox" name="type3-3" id="a78" data-value="평택오산" />평택오산
+                                                        <input type="checkbox" name="type10" id="a78" data-value="평택오산" />평택오산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a79">
-                                                        <input type="checkbox" name="type3-3" id="a79" data-value="수원광교" />수원광교
+                                                        <input type="checkbox" name="type10" id="a79" data-value="수원광교" />수원광교
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a799">
-                                                        <input type="checkbox" name="type3-3" id="a799" data-value="동탄동부" />동탄동부
+                                                        <input type="checkbox" name="type10" id="a799" data-value="동탄동부" />동탄동부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a7999">
-                                                        <input type="checkbox" name="type3-3" id="a7999" data-value="평택" />평택
+                                                        <input type="checkbox" name="type10" id="a7999" data-value="평택" />평택
                                                     </label>
                                                 </div>
                                             </li>
@@ -1728,7 +1729,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991da">
-                                                        <input type="checkbox" name="type3-4" id="all9991da" class="typeAll"
+                                                        <input type="checkbox" name="type11" id="all9991da" class="typeAll"
                                                             data-value="운영4팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1736,21 +1737,21 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a60">
-                                                        <input type="checkbox" name="type3-4" id="a60" data-value="인천공항" />인천공항
+                                                        <input type="checkbox" name="type11" id="a60" data-value="인천공항" />인천공항
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a61">
-                                                        <input type="checkbox" name="type3-4" id="a61" data-value="인천남동" />인천남동
+                                                        <input type="checkbox" name="type11" id="a61" data-value="인천남동" />인천남동
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a62">
-                                                        <input type="checkbox" name="type3-4" id="a62"
+                                                        <input type="checkbox" name="type11" id="a62"
                                                             data-value="인천미추홀" />인천미추홀
                                                     </label>
                                                 </div>
@@ -1758,28 +1759,28 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a63">
-                                                        <input type="checkbox" name="type3-4" id="a63" data-value="안산" />안산
+                                                        <input type="checkbox" name="type11" id="a63" data-value="안산" />안산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a64">
-                                                        <input type="checkbox" name="type3-4" id="a64" data-value="광명" />광명
+                                                        <input type="checkbox" name="type11" id="a64" data-value="광명" />광명
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a65">
-                                                        <input type="checkbox" name="type3-4" id="a65" data-value="부천서부" />부천서부
+                                                        <input type="checkbox" name="type11" id="a65" data-value="부천서부" />부천서부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a66">
-                                                        <input type="checkbox" name="type3-4" id="a66"
+                                                        <input type="checkbox" name="type11" id="a66"
                                                             data-value="인천부평/계양" />인천부평/계양
                                                     </label>
                                                 </div>
@@ -1787,21 +1788,21 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a67">
-                                                        <input type="checkbox" name="type3-4" id="a67" data-value="김포" />김포
+                                                        <input type="checkbox" name="type11" id="a67" data-value="김포" />김포
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a68">
-                                                        <input type="checkbox" name="type3-4" id="a68" data-value="인천송도" />인천송도
+                                                        <input type="checkbox" name="type11" id="a68" data-value="인천송도" />인천송도
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a69">
-                                                        <input type="checkbox" name="type3-4" id="a69"
+                                                        <input type="checkbox" name="type11" id="a69"
                                                             data-value="김포/인천서구" />김포/인천서구
                                                     </label>
                                                 </div>
@@ -1809,14 +1810,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a699">
-                                                        <input type="checkbox" name="type3-4" id="a699" data-value="부천동부" />부천동부
+                                                        <input type="checkbox" name="type11" id="a699" data-value="부천동부" />부천동부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a6999">
-                                                        <input type="checkbox" name="type3-4" id="a6999" data-value="시흥" />시흥
+                                                        <input type="checkbox" name="type11" id="a6999" data-value="시흥" />시흥
                                                     </label>
                                                 </div>
                                             </li>
@@ -1829,7 +1830,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dx">
-                                                        <input type="checkbox" name="type3-5" id="all9991dx" class="typeAll"
+                                                        <input type="checkbox" name="type12" id="all9991dx" class="typeAll"
                                                             data-value="운영5팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1837,35 +1838,35 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a50">
-                                                        <input type="checkbox" name="type3-5" id="a50" data-value="소공" />소공
+                                                        <input type="checkbox" name="type12" id="a50" data-value="소공" />소공
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a51">
-                                                        <input type="checkbox" name="type3-5" id="a51" data-value="마포" />마포
+                                                        <input type="checkbox" name="type12" id="a51" data-value="마포" />마포
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a52">
-                                                        <input type="checkbox" name="type3-5" id="a52" data-value="종로" />종로
+                                                        <input type="checkbox" name="type12" id="a52" data-value="종로" />종로
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a53">
-                                                        <input type="checkbox" name="type3-5" id="a53" data-value="광화문" />광화문
+                                                        <input type="checkbox" name="type12" id="a53" data-value="광화문" />광화문
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a54">
-                                                        <input type="checkbox" name="type3-5" id="a54"
+                                                        <input type="checkbox" name="type12" id="a54"
                                                             data-value="명동/충무로" />명동/충무로
                                                     </label>
                                                 </div>
@@ -1873,28 +1874,28 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a55">
-                                                        <input type="checkbox" name="type3-5" id="a55" data-value="용산" />용산
+                                                        <input type="checkbox" name="type12" id="a55" data-value="용산" />용산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a56">
-                                                        <input type="checkbox" name="type3-5" id="a56" data-value="신촌" />신촌
+                                                        <input type="checkbox" name="type12" id="a56" data-value="신촌" />신촌
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a57">
-                                                        <input type="checkbox" name="type3-5" id="a57" data-value="충정로" />충정로
+                                                        <input type="checkbox" name="type12" id="a57" data-value="충정로" />충정로
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a58">
-                                                        <input type="checkbox" name="type3-5" id="a58"
+                                                        <input type="checkbox" name="type12" id="a58"
                                                             data-value="합정/상암" />합정/상암
                                                     </label>
                                                 </div>
@@ -1902,7 +1903,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a59">
-                                                        <input type="checkbox" name="type3-5" id="a59"
+                                                        <input type="checkbox" name="type12" id="a59"
                                                             data-value="남대문/회현" />남대문/회현
                                                     </label>
                                                 </div>
@@ -1910,14 +1911,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a599">
-                                                        <input type="checkbox" name="type3-5" id="a599" data-value="을지로" />을지로
+                                                        <input type="checkbox" name="type12" id="a599" data-value="을지로" />을지로
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a5999">
-                                                        <input type="checkbox" name="type3-5" id="a5999"
+                                                        <input type="checkbox" name="type12" id="a5999"
                                                             data-value="한남/성동" />한남/성동
                                                     </label>
                                                 </div>
@@ -1930,7 +1931,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxx">
-                                                        <input type="checkbox" name="type3-6" id="all9991dxx" class="typeAll"
+                                                        <input type="checkbox" name="type13" id="all9991dxx" class="typeAll"
                                                             data-value="운영6팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -1938,63 +1939,63 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a40">
-                                                        <input type="checkbox" name="type3-6" id="a40" data-value="여의도" />여의도
+                                                        <input type="checkbox" name="type13" id="a40" data-value="여의도" />여의도
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a41">
-                                                        <input type="checkbox" name="type3-6" id="a41" data-value="구로" />구로
+                                                        <input type="checkbox" name="type13" id="a41" data-value="구로" />구로
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a42">
-                                                        <input type="checkbox" name="type3-6" id="a42" data-value="일산서구" />일산서구
+                                                        <input type="checkbox" name="type13" id="a42" data-value="일산서구" />일산서구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a43">
-                                                        <input type="checkbox" name="type3-6" id="a43" data-value="파주" />파주
+                                                        <input type="checkbox" name="type13" id="a43" data-value="파주" />파주
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a44">
-                                                        <input type="checkbox" name="type3-6" id="a44" data-value="강서" />강서
+                                                        <input type="checkbox" name="type13" id="a44" data-value="강서" />강서
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a45">
-                                                        <input type="checkbox" name="type3-6" id="a45" data-value="목동" />목동
+                                                        <input type="checkbox" name="type13" id="a45" data-value="목동" />목동
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a46">
-                                                        <input type="checkbox" name="type3-6" id="a46" data-value="가산" />가산
+                                                        <input type="checkbox" name="type13" id="a46" data-value="가산" />가산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a47">
-                                                        <input type="checkbox" name="type3-6" id="a47" data-value="일산동구" />일산동구
+                                                        <input type="checkbox" name="type13" id="a47" data-value="일산동구" />일산동구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a48">
-                                                        <input type="checkbox" name="type3-6" id="a48"
+                                                        <input type="checkbox" name="type13" id="a48"
                                                             data-value="서여의도/당산" />서여의도/당산
                                                     </label>
                                                 </div>
@@ -2002,7 +2003,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a49">
-                                                        <input type="checkbox" name="type3-6" id="a49"
+                                                        <input type="checkbox" name="type13" id="a49"
                                                             data-value="고양/덕양" />고양/덕양
                                                     </label>
                                                 </div>
@@ -2010,14 +2011,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a499">
-                                                        <input type="checkbox" name="type3-6" id="a499" data-value="은평" />은평
+                                                        <input type="checkbox" name="type13" id="a499" data-value="은평" />은평
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a4999">
-                                                        <input type="checkbox" name="type3-6" id="a4999"
+                                                        <input type="checkbox" name="type13" id="a4999"
                                                             data-value="화곡/등촌" />화곡/등촌
                                                     </label>
                                                 </div>
@@ -2025,14 +2026,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a49999">
-                                                        <input type="checkbox" name="type3-6" id="a49999" data-value="영등포" />영등포
+                                                        <input type="checkbox" name="type13" id="a49999" data-value="영등포" />영등포
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a499999">
-                                                        <input type="checkbox" name="type3-6" id="a499999"
+                                                        <input type="checkbox" name="type13" id="a499999"
                                                             data-value="목동/선유도" />목동/선유도
                                                     </label>
                                                 </div>
@@ -2045,7 +2046,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxxa">
-                                                        <input type="checkbox" name="type3-7" id="all9991dxxa" class="typeAll"
+                                                        <input type="checkbox" name="type14" id="all9991dxxa" class="typeAll"
                                                             data-value="운영7팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -2053,21 +2054,21 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a30">
-                                                        <input type="checkbox" name="type3-7" id="a30" data-value="남양주" />남양주
+                                                        <input type="checkbox" name="type14" id="a30" data-value="남양주" />남양주
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a31">
-                                                        <input type="checkbox" name="type3-7" id="a31" data-value="광진" />광진
+                                                        <input type="checkbox" name="type14" id="a31" data-value="광진" />광진
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a32">
-                                                        <input type="checkbox" name="type3-7" id="a32"
+                                                        <input type="checkbox" name="type14" id="a32"
                                                             data-value="양주/포천" />양주/포천
                                                     </label>
                                                 </div>
@@ -2075,42 +2076,42 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a33">
-                                                        <input type="checkbox" name="type3-7" id="a33" data-value="노원" />노원
+                                                        <input type="checkbox" name="type14" id="a33" data-value="노원" />노원
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a34">
-                                                        <input type="checkbox" name="type3-7" id="a34" data-value="강북" />강북
+                                                        <input type="checkbox" name="type14" id="a34" data-value="강북" />강북
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a35">
-                                                        <input type="checkbox" name="type3-7" id="a35" data-value="동대문" />동대문
+                                                        <input type="checkbox" name="type14" id="a35" data-value="동대문" />동대문
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a36">
-                                                        <input type="checkbox" name="type3-7" id="a36"
+                                                        <input type="checkbox" name="type14" id="a36"
                                                             data-value="성수/자양" />성수/자양 </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a37">
-                                                        <input type="checkbox" name="type3-7" id="a37" data-value="의정부" />의정부
+                                                        <input type="checkbox" name="type14" id="a37" data-value="의정부" />의정부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a38">
-                                                        <input type="checkbox" name="type3-7" id="a38"
+                                                        <input type="checkbox" name="type14" id="a38"
                                                             data-value="왕십리/신당" />왕십리/신당
                                                     </label>
                                                 </div>
@@ -2118,7 +2119,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a39">
-                                                        <input type="checkbox" name="type3-7" id="a39"
+                                                        <input type="checkbox" name="type14" id="a39"
                                                             data-value="구리/다산" />구리/다산
                                                     </label>
                                                 </div>
@@ -2126,14 +2127,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a399">
-                                                        <input type="checkbox" name="type3-7" id="a399" data-value="중랑" />중랑
+                                                        <input type="checkbox" name="type14" id="a399" data-value="중랑" />중랑
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a3999">
-                                                        <input type="checkbox" name="type3-7" id="a3999"
+                                                        <input type="checkbox" name="type14" id="a3999"
                                                             data-value="의정부/별내" />의정부/별내
                                                     </label>
                                                 </div>
@@ -2146,7 +2147,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxxagq">
-                                                        <input type="checkbox" name="type3-8" id="all9991dxxagq" class="typeAll"
+                                                        <input type="checkbox" name="type15" id="all9991dxxagq" class="typeAll"
                                                             data-value="운영8팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -2154,14 +2155,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a20">
-                                                        <input type="checkbox" name="type3-8" id="a20" data-value="청주서부" />청주서부
+                                                        <input type="checkbox" name="type15" id="a20" data-value="청주서부" />청주서부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a21">
-                                                        <input type="checkbox" name="type3-8" id="a21"
+                                                        <input type="checkbox" name="type15" id="a21"
                                                             data-value="충남/천안불당" />충남/천안불당
                                                     </label>
                                                 </div>
@@ -2169,7 +2170,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a22">
-                                                        <input type="checkbox" name="type3-8" id="a22"
+                                                        <input type="checkbox" name="type15" id="a22"
                                                             data-value="대전서구/관평" />대전서구/관평
                                                     </label>
                                                 </div>
@@ -2177,7 +2178,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a23">
-                                                        <input type="checkbox" name="type3-8" id="a23"
+                                                        <input type="checkbox" name="type15" id="a23"
                                                             data-value="원주/동해" />원주/동해
                                                     </label>
                                                 </div>
@@ -2185,7 +2186,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a24">
-                                                        <input type="checkbox" name="type3-8" id="a24"
+                                                        <input type="checkbox" name="type15" id="a24"
                                                             data-value="아산/서산" />아산/서산
                                                     </label>
                                                 </div>
@@ -2193,35 +2194,35 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a25">
-                                                        <input type="checkbox" name="type3-8" id="a25" data-value="충북" />충북
+                                                        <input type="checkbox" name="type15" id="a25" data-value="충북" />충북
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a26">
-                                                        <input type="checkbox" name="type3-8" id="a26" data-value="대전둔산" />대전둔산
+                                                        <input type="checkbox" name="type15" id="a26" data-value="대전둔산" />대전둔산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a27">
-                                                        <input type="checkbox" name="type3-8" id="a27" data-value="대전유성" />대전유성
+                                                        <input type="checkbox" name="type15" id="a27" data-value="대전유성" />대전유성
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a28">
-                                                        <input type="checkbox" name="type3-8" id="a28" data-value="청주동부" />청주동부
+                                                        <input type="checkbox" name="type15" id="a28" data-value="청주동부" />청주동부
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a29">
-                                                        <input type="checkbox" name="type3-8" id="a29"
+                                                        <input type="checkbox" name="type15" id="a29"
                                                             data-value="대전동구/대덕" />대전동구/대덕
                                                     </label>
                                                 </div>
@@ -2229,7 +2230,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a299">
-                                                        <input type="checkbox" name="type3-8" id="a299"
+                                                        <input type="checkbox" name="type15" id="a299"
                                                             data-value="강릉/속초" />강릉/속초
                                                     </label>
                                                 </div>
@@ -2237,7 +2238,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a2999">
-                                                        <input type="checkbox" name="type3-8" id="a2999"
+                                                        <input type="checkbox" name="type15" id="a2999"
                                                             data-value="천안동남" />천안동남
                                                     </label>
                                                 </div>
@@ -2245,7 +2246,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a29999">
-                                                        <input type="checkbox" name="type3-8" id="a29999"
+                                                        <input type="checkbox" name="type15" id="a29999"
                                                             data-value="대전중구/관저" />대전중구/관저
                                                     </label>
                                                 </div>
@@ -2253,7 +2254,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a299999">
-                                                        <input type="checkbox" name="type3-8" id="a299999"
+                                                        <input type="checkbox" name="type15" id="a299999"
                                                             data-value="세종/공주" />세종/공주
                                                     </label>
                                                 </div>
@@ -2261,7 +2262,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a2999999">
-                                                        <input type="checkbox" name="type3-8" id="a2999999" data-value="춘천" />춘천
+                                                        <input type="checkbox" name="type15" id="a2999999" data-value="춘천" />춘천
                                                     </label>
                                                 </div>
                                             </li>
@@ -2273,7 +2274,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxxagq10">
-                                                        <input type="checkbox" name="type3-9" id="all9991dxxagq10" class="typeAll"
+                                                        <input type="checkbox" name="type16" id="all9991dxxagq10" class="typeAll"
                                                             data-value="운영9팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -2281,7 +2282,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a10">
-                                                        <input type="checkbox" name="type3-9" id="a10"
+                                                        <input type="checkbox" name="type16" id="a10"
                                                             data-value="부산해운대" />부산해운대
                                                     </label>
                                                 </div>
@@ -2289,14 +2290,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a11">
-                                                        <input type="checkbox" name="type3-9" id="a11" data-value="부산센텀" />부산센텀
+                                                        <input type="checkbox" name="type16" id="a11" data-value="부산센텀" />부산센텀
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a12">
-                                                        <input type="checkbox" name="type3-9" id="a12"
+                                                        <input type="checkbox" name="type16" id="a12"
                                                             data-value="창원/진해" />창원/진해
                                                     </label>
                                                 </div>
@@ -2304,7 +2305,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a13">
-                                                        <input type="checkbox" name="type3-9" id="a13"
+                                                        <input type="checkbox" name="type16" id="a13"
                                                             data-value="부산사하/명지" />부산사하/명지
                                                     </label>
                                                 </div>
@@ -2312,7 +2313,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a14">
-                                                        <input type="checkbox" name="type3-9" id="a14"
+                                                        <input type="checkbox" name="type16" id="a14"
                                                             data-value="부산금정/동래" />부산금정/동래
                                                     </label>
                                                 </div>
@@ -2320,7 +2321,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a15">
-                                                        <input type="checkbox" name="type3-9" id="a15"
+                                                        <input type="checkbox" name="type16" id="a15"
                                                             data-value="창원/마산" />창원/마산
                                                     </label>
                                                 </div>
@@ -2328,7 +2329,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a16">
-                                                        <input type="checkbox" name="type3-9" id="a16"
+                                                        <input type="checkbox" name="type16" id="a16"
                                                             data-value="부산해운대/기장" />부산해운대/기장
                                                     </label>
                                                 </div>
@@ -2336,14 +2337,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a17">
-                                                        <input type="checkbox" name="type3-9" id="a17" data-value="부산연제" />부산연제
+                                                        <input type="checkbox" name="type16" id="a17" data-value="부산연제" />부산연제
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a18">
-                                                        <input type="checkbox" name="type3-9" id="a18"
+                                                        <input type="checkbox" name="type16" id="a18"
                                                             data-value="부산서면/동구" />부산서면/동구
                                                     </label>
                                                 </div>
@@ -2351,7 +2352,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a19">
-                                                        <input type="checkbox" name="type3-9" id="a19"
+                                                        <input type="checkbox" name="type16" id="a19"
                                                             data-value="부산수영/남구" />부산수영/남구
                                                     </label>
                                                 </div>
@@ -2359,7 +2360,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a199">
-                                                        <input type="checkbox" name="type3-9" id="a199"
+                                                        <input type="checkbox" name="type16" id="a199"
                                                             data-value="부산중구/서구" />부산중구/서구
                                                     </label>
                                                 </div>
@@ -2367,14 +2368,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a1999">
-                                                        <input type="checkbox" name="type3-9" id="a1999" data-value="김해" />김해
+                                                        <input type="checkbox" name="type16" id="a1999" data-value="김해" />김해
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a19999">
-                                                        <input type="checkbox" name="type3-9" id="a19999"
+                                                        <input type="checkbox" name="type16" id="a19999"
                                                             data-value="부산금정/양산" />부산금정/양산
                                                     </label>
                                                 </div>
@@ -2382,7 +2383,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a199999">
-                                                        <input type="checkbox" name="type3-9" id="a199999"
+                                                        <input type="checkbox" name="type16" id="a199999"
                                                             data-value="부산사상/북구" />부산사상/북구
                                                     </label>
                                                 </div>
@@ -2390,14 +2391,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a1999999">
-                                                        <input type="checkbox" name="type3-9" id="a1999999" data-value="진주" />진주
+                                                        <input type="checkbox" name="type16" id="a1999999" data-value="진주" />진주
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a199999991">
-                                                        <input type="checkbox" name="type3-9" id="a199999991"
+                                                        <input type="checkbox" name="type16" id="a199999991"
                                                             data-value="부산서면/진구" />부산서면/진구
                                                     </label>
                                                 </div>
@@ -2405,7 +2406,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a2999999123">
-                                                        <input type="checkbox" name="type3-9" id="a2999999123"
+                                                        <input type="checkbox" name="type16" id="a2999999123"
                                                             data-value="부산서면/진구" />부산서면/진구
                                                     </label>
                                                 </div>
@@ -2413,7 +2414,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a1999999999">
-                                                        <input type="checkbox" name="type3-9" id="a1999999999"
+                                                        <input type="checkbox" name="type16" id="a1999999999"
                                                             data-value="창원/김해" />창원/김해
                                                     </label>
                                                 </div>
@@ -2421,7 +2422,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a19999999999">
-                                                        <input type="checkbox" name="type3-9" id="a19999999999"
+                                                        <input type="checkbox" name="type16" id="a19999999999"
                                                             data-value="창원/거제" />창원/거제
                                                     </label>
                                                 </div>
@@ -2434,7 +2435,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxxagqf">
-                                                        <input type="checkbox" name="type3-10" id="all9991dxxagqf" class="typeAll"
+                                                        <input type="checkbox" name="type17" id="all9991dxxagqf" class="typeAll"
                                                             data-value="운영10팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -2442,56 +2443,56 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a00">
-                                                        <input type="checkbox" name="type3-10" id="a00" data-value="대구중구" />대구중구
+                                                        <input type="checkbox" name="type17" id="a00" data-value="대구중구" />대구중구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a01">
-                                                        <input type="checkbox" name="type3-10" id="a01" data-value="울산남구" />울산남구
+                                                        <input type="checkbox" name="type17" id="a01" data-value="울산남구" />울산남구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a02">
-                                                        <input type="checkbox" name="type3-10" id="a02" data-value="대구달서" />대구달서
+                                                        <input type="checkbox" name="type17" id="a02" data-value="대구달서" />대구달서
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a03">
-                                                        <input type="checkbox" name="type3-10" id="a03" data-value="대구수성" />대구수성
+                                                        <input type="checkbox" name="type17" id="a03" data-value="대구수성" />대구수성
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a04">
-                                                        <input type="checkbox" name="type3-10" id="a04" data-value="대구북구" />대구북구
+                                                        <input type="checkbox" name="type17" id="a04" data-value="대구북구" />대구북구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a05">
-                                                        <input type="checkbox" name="type3-10" id="a05" data-value="포항" />포항
+                                                        <input type="checkbox" name="type17" id="a05" data-value="포항" />포항
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a06">
-                                                        <input type="checkbox" name="type3-10" id="a06" data-value="울산동구" />울산동구
+                                                        <input type="checkbox" name="type17" id="a06" data-value="울산동구" />울산동구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a07">
-                                                        <input type="checkbox" name="type3-10" id="a07"
+                                                        <input type="checkbox" name="type17" id="a07"
                                                             data-value="구미/김천" />구미/김천
                                                     </label>
                                                 </div>
@@ -2499,14 +2500,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a08">
-                                                        <input type="checkbox" name="type3-10" id="a08" data-value="대구동구" />대구동구
+                                                        <input type="checkbox" name="type17" id="a08" data-value="대구동구" />대구동구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a09">
-                                                        <input type="checkbox" name="type3-10" id="a09"
+                                                        <input type="checkbox" name="type17" id="a09"
                                                             data-value="대구달서/안동" />대구달서/안동
                                                     </label>
                                                 </div>
@@ -2514,7 +2515,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a099">
-                                                        <input type="checkbox" name="type3-10" id="a099"
+                                                        <input type="checkbox" name="type17" id="a099"
                                                             data-value="대구수성/남구" />대구수성/남구
                                                     </label>
                                                 </div>
@@ -2522,7 +2523,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="a0999">
-                                                        <input type="checkbox" name="type3-10" id="a0999"
+                                                        <input type="checkbox" name="type17" id="a0999"
                                                             data-value="경주/포항" />경주/포항
                                                     </label>
                                                 </div>
@@ -2535,7 +2536,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="all9991dxxagqfst">
-                                                        <input type="checkbox" name="type3-11" id="all9991dxxagqfst" class="typeAll"
+                                                        <input type="checkbox" name="type18" id="all9991dxxagqfst" class="typeAll"
                                                             data-value="운영11팀 전체" />전체
                                                     </label>
                                                 </div>
@@ -2543,14 +2544,14 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e00">
-                                                        <input type="checkbox" name="type3-11" id="e00" data-value="광주광산" />광주광산
+                                                        <input type="checkbox" name="type18" id="e00" data-value="광주광산" />광주광산
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e01">
-                                                        <input type="checkbox" name="type3-11" id="e01"
+                                                        <input type="checkbox" name="type18" id="e01"
                                                             data-value="여수/광양" />여수/광양
                                                     </label>
                                                 </div>
@@ -2558,7 +2559,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e02">
-                                                        <input type="checkbox" name="type3-11" id="e02"
+                                                        <input type="checkbox" name="type18" id="e02"
                                                             data-value="목포/나주" />목포/나주
                                                     </label>
                                                 </div>
@@ -2566,7 +2567,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e03">
-                                                        <input type="checkbox" name="type3-11" id="e03"
+                                                        <input type="checkbox" name="type18" id="e03"
                                                             data-value="제주/서북" />제주/서북
                                                     </label>
                                                 </div>
@@ -2574,35 +2575,35 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e04">
-                                                        <input type="checkbox" name="type3-11" id="e04" data-value="광주북구" />광주북구
+                                                        <input type="checkbox" name="type18" id="e04" data-value="광주북구" />광주북구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e05">
-                                                        <input type="checkbox" name="type3-11" id="e05" data-value="광주남구" />광주남구
+                                                        <input type="checkbox" name="type18" id="e05" data-value="광주남구" />광주남구
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e06">
-                                                        <input type="checkbox" name="type3-11" id="e06" data-value="광주동남" />광주동남
+                                                        <input type="checkbox" name="type18" id="e06" data-value="광주동남" />광주동남
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e07">
-                                                        <input type="checkbox" name="type3-11" id="e07" data-value="제주서남" />제주서남
+                                                        <input type="checkbox" name="type18" id="e07" data-value="제주서남" />제주서남
                                                     </label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e08">
-                                                        <input type="checkbox" name="type3-11" id="e08"
+                                                        <input type="checkbox" name="type18" id="e08"
                                                             data-value="전주/군산" />전주/군산
                                                     </label>
                                                 </div>
@@ -2610,7 +2611,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e09">
-                                                        <input type="checkbox" name="type3-11" id="e09"
+                                                        <input type="checkbox" name="type18" id="e09"
                                                             data-value="전주/익산동" />전주/익산
                                                     </label>
                                                 </div>
@@ -2618,7 +2619,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e099">
-                                                        <input type="checkbox" name="type3-11" id="e099"
+                                                        <input type="checkbox" name="type18" id="e099"
                                                             data-value="전주서구" />전주서구
                                                     </label>
                                                 </div>
@@ -2626,7 +2627,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e0999">
-                                                        <input type="checkbox" name="type3-11" id="e0999"
+                                                        <input type="checkbox" name="type18" id="e0999"
                                                             data-value="제주동북" />제주동북
                                                     </label>
                                                 </div>
@@ -2634,7 +2635,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e09999">
-                                                        <input type="checkbox" name="type3-11" id="e09999"
+                                                        <input type="checkbox" name="type18" id="e09999"
                                                             data-value="광주서구" />광주서구
                                                     </label>
                                                 </div>
@@ -2642,7 +2643,7 @@
                                             <li>
                                                 <div class="cm_check_box">
                                                     <label for="e099999">
-                                                        <input type="checkbox" name="type3-11" id="e099999"
+                                                        <input type="checkbox" name="type18" id="e099999"
                                                             data-value="광주동구/순천" />광주동구/순천
                                                     </label>
                                                 </div>
@@ -2660,28 +2661,28 @@
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="all2">
-                                                    <input type="checkbox" name="type4-1"  data-value="매장타입별 전체" id="all2" class="typeAll" />전체 
+                                                    <input type="checkbox" name="type19"  data-value="매장타입별 전체" id="all2" class="typeAll" />전체 
                                                 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="q1">
-                                                    <input type="checkbox" name="type4-1"  data-value="CORE" id="q1" />CORE
+                                                    <input type="checkbox" name="type19"  data-value="CORE" id="q1" />CORE
                                                 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="q2">
-                                                    <input type="checkbox" name="type4-1"  data-value="DT" id="q2" />DT
+                                                    <input type="checkbox" name="type19"  data-value="DT" id="q2" />DT
                                                 </label>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="q3">
-                                                    <input type="checkbox" name="type4-1" data-value="리저브" id="q3" />리저브
+                                                    <input type="checkbox" name="type19" data-value="리저브" id="q3" />리저브
                                                 </label>
                                             </div>
                                         </li>

@@ -27,24 +27,21 @@ var mainUi = {
         _btnReload = _main.find(".btn_refresh");
 
     },
+
     addEvent: function () {
-        _menuBtnlist.on("click", mainUi.menuBtnListClick);
-        _switchBoxBtns.on("click", mainUi.switchBoxBtnClick);
-        _docment.on('click', '.typeAll', mainUi.typeAllCheck);
-        _docment.on('click', 'input[type="checkbox"]:not(.typeAll)', mainUi.typeNotCheck);
-        _docment.on('click', '.cm_btn_list .typetag_close', mainUi.closeTag);
-        _btnApply.on( "click", mainUi.btnApplyClick );
-        _btnReset.on( "click", mainUi.btnResetClick );
-        _btnReload.on( "click", mainUi.btnResetClick );
-
-     
-
-
-
+        _menuBtnlist.on("click", this.menuBtnListClick);
+        _switchBoxBtns.on("click", this.switchBoxBtnClick);
+        _docment.on('click', '.typeAll', this.typeAllCheck);
+        _docment.on('click', 'input[type="checkbox"]:not(.typeAll)', this.typeNotCheck);
+        _docment.on('click', '.cm_btn_list .typetag_close', this.closeTag);
+        _btnApply.on( "click", this.btnApplyClick );
+        _btnReset.on( "click", this.btnResetClick );
+        _btnReload.on( "click", this.btnResetClick );
     },
+
     loadEvent: function () {
-        mainUi.create();
-        mainUi.addEvent();
+        this.create();
+        this.addEvent();
     },
 
     updateLocalStorage: function (values) {
@@ -81,7 +78,6 @@ var mainUi = {
             roundBar.removeClass("left").addClass("right");
         }
     },
-
 
     mainSwichCahge: function ($type) {
         commonUi.gnbCloseClick();
@@ -207,8 +203,6 @@ var mainUi = {
     },
       
 };
-
-
 
 $(function () {
     mainUi.init();

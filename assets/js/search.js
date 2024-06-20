@@ -12,7 +12,7 @@ var _nolistText;
 var searchUi = {
 
     init: function () {
-        searchUi.loadEvent();
+        this.loadEvent();
     },
     create: function(){
         _w = $( window );
@@ -27,14 +27,14 @@ var searchUi = {
 
     },
     addEvent: function(){
-        _deleteAllBtn.on( "click", searchUi.deleteAllBtnClick );
-        _btnSearhDelete.on( "click", searchUi.btnSearhListDeleteClick );
-        _btnCancel.on( "click", searchUi.btnCancelClick );
+        _deleteAllBtn.on( "click", this.deleteAllBtnClick );
+        _btnSearhDelete.on( "click", this.btnSearhListDeleteClick );
+        _btnCancel.on( "click", this.btnCancelClick );
     },
 
     loadEvent: function () {
-        searchUi.create();
-        searchUi.addEvent();
+        this.create();
+        this.addEvent();
     },
    
     //전체 삭제 이벤트 
@@ -47,7 +47,6 @@ var searchUi = {
   
     //최근 검색어 리스트 삭제버튼 클릭
     btnSearhListDeleteClick: function(){
-     
        $( this ).parents("li").remove();
        if( _searchListBox.find( "li" ).length == 0 ){
         _searchListBox.remove();
