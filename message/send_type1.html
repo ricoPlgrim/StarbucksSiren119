@@ -35,64 +35,40 @@
                         <ul class="checkbox_list">
                             <li>
                                 <div class="cm_check_box">
-                                    <label for="entire">
-                                        <input type="checkbox" name="check" id="entire" />전체
+                                    <label for="all">
+                                        <input type="checkbox" name="check" id="all" />전체
                                     </label>
                                 </div>
                             </li>
                             <li>
                                 <div class="cm_check_box">
-                                    <label for="supportcenter ">
-                                        <input type="checkbox" name="check" id="supportcenter" />지원센터
-                                    </label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cm_check_box">
-                                    <label for="operate">
-                                        <input type="checkbox" name="check" id="operate" />운영팀
-                                    </label>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cm_check_box">
-                                    <label for="dm">
-                                        <input type="checkbox" name="check" id="dm" />DM
+                                    <label for="appointed">
+                                        <input type="checkbox" name="check" id="appointed" checked />상세지정
                                     </label>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="team_contents">
-                        <p class="text">수신팀을 상세 지정하시려면 선택하세요.</p>
-                        <a href="detail_type1.html" class="btn_team"></a> 
-                    </div>
-                    <div class="button_grop">
-                        <div class="inner">
-                            <ul class="btn_list">
-                                <li>
-                                    <button class="tag">전략기획본부</button>
-                                    <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
-                                </li>
-                                <li>
-                                    <button class="tag">사업기획팀</button>
-                                    <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
-                                </li>
-                                <li>
-                                    <button class="tag">데이터사이언스팀</button>
-                                    <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
-                                </li>
-                                <li>
-                                    <button class="tag">운영팀</button>
-                                    <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
-                                </li>
-                                <li>
-                                    <button class="tag">DM</button>
-                                    <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
-                                </li>
-                             
-                            </ul>
-                        </div>
+                        <h4 class="text_title">수신팀을 상세 지정하시려면 선택하세요.</h4>
+                        <ul class="team_list">
+                            <li>
+                                <p class="text">전략기획본부</p>
+                                <a href="javascript:;" class="btn_team_close"></a>
+                            </li>
+                            <li>
+                                <p class="text">기획담당</p>
+                                <a href="javascript:;" class="btn_team_close"></a>
+                            </li>
+                            <li>
+                                <p class="text">사업기획팀</p>
+                                <a href="javascript:;" class="btn_team_close"></a>
+                            </li>
+                            <li>
+                                <p class="text">이커머스사업팀</p>
+                                <a href="javascript:;" class="btn_team_close"></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -118,7 +94,7 @@
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>
     <script src="../assets/js/lib/gsap.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/alarm.js"></script>
+    <script src="../assets/js/message.js"></script>
 </body>
 
 </html>

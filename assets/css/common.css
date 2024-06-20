@@ -4781,11 +4781,11 @@ section.message .title {
   }
 }
 section.message .message_contents .inner {
-  padding: 60px 40px 120px 40px;
+  padding: 60px 40px 80px 40px;
 }
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner {
-    padding: 8vw 5.3333333333vw 16vw 5.3333333333vw;
+    padding: 8vw 5.3333333333vw 10.6666666667vw 5.3333333333vw;
   }
 }
 section.message .message_contents .inner .textarea_contents {
@@ -4982,171 +4982,84 @@ section.message .receiver_contents .inner .check_box .checkbox_list li:nth-child
 }
 section.message .receiver_contents .inner .team_contents {
   position: relative;
+}
+section.message .receiver_contents .inner .team_contents .text_title {
+  position: relative;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 30px;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  section.message .receiver_contents .inner .team_contents .text_title {
+    font-size: 4vw;
+  }
+}
+section.message .receiver_contents .inner .team_contents .team_list {
+  margin-top: 40px;
+  border-top: 2px solid #333;
+}
+@media screen and (max-width: 750px) {
+  section.message .receiver_contents .inner .team_contents .team_list {
+    margin-top: 5.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.message .receiver_contents .inner .team_contents .team_list {
+    border-top: 0.2666666667vw solid #333;
+  }
+}
+section.message .receiver_contents .inner .team_contents .team_list li {
   display: flex;
   align-items: center;
+  padding: 36px 0;
+  border-bottom: 2px solid #EEE;
 }
-section.message .receiver_contents .inner .team_contents .text {
-  position: relative;
-  display: inline-flex;
-  color: #00A862;
+@media screen and (max-width: 750px) {
+  section.message .receiver_contents .inner .team_contents .team_list li {
+    padding: 4.8vw 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.message .receiver_contents .inner .team_contents .team_list li {
+    border-bottom: 0.2666666667vw solid #EEE;
+  }
+}
+section.message .receiver_contents .inner .team_contents .team_list li .text {
+  color: #000;
   font-size: 30px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .team_contents .text {
+  section.message .receiver_contents .inner .team_contents .team_list li .text {
     font-size: 4vw;
   }
 }
-section.message .receiver_contents .inner .team_contents .text:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #00A862;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .team_contents .text:before {
-    height: 0.2666666667vw;
-  }
-}
-section.message .receiver_contents .inner .team_contents .btn_team {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 64px;
+section.message .receiver_contents .inner .team_contents .team_list li .btn_team_close {
   margin-left: auto;
-  background: url("../images/btn/btn_plus_g.png") 0 0 no-repeat;
-  background-size: 64px auto;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .team_contents .btn_team {
-    width: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .team_contents .btn_team {
-    height: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .team_contents .btn_team {
-    background-size: 8.5333333333vw auto;
-  }
-}
-section.message .receiver_contents .inner .button_grop .inner {
-  padding: 20px 0 20px 0;
-  position: relative;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner {
-    padding: 2.6666666667vw 0 2.6666666667vw 0;
-  }
-}
-section.message .receiver_contents .inner .button_grop .inner .btn_list {
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list {
-    gap: 1.0666666667vw;
-  }
-}
-section.message .receiver_contents .inner .button_grop .inner .btn_list li {
-  position: relative;
-  flex: 0 0 auto;
-}
-section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-  position: relative;
-  font-size: 24px;
-  padding: 20px 60px 20px 20px;
-  height: 64px;
-  font-weight: 500;
-  color: #00A862;
-  letter-spacing: 0.1px;
-  text-align: center;
-  border-radius: 12px;
-  border: 2px solid #00A862;
-  background-color: #fff;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    font-size: 3.2vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    padding: 2.6666666667vw 8vw 2.6666666667vw 2.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    height: 8.5333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    letter-spacing: 0.0133333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .tag {
-    border: 0.2666666667vw solid #00A862;
-  }
-}
-section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
-  display: block;
-  position: absolute;
-  top: 19px;
-  right: 20px;
+  margin-right: 20px;
   width: 28px;
   height: 28px;
-  background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
+  background: url("../images/btn/btn_team_clsoe.png") 0 0 no-repeat;
   background-size: 28px auto;
-  z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
-    top: 2.5333333333vw;
+  section.message .receiver_contents .inner .team_contents .team_list li .btn_team_close {
+    margin-right: 2.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
-    right: 2.6666666667vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+  section.message .receiver_contents .inner .team_contents .team_list li .btn_team_close {
     width: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+  section.message .receiver_contents .inner .team_contents .team_list li .btn_team_close {
     height: 3.7333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .button_grop .inner .btn_list li .btn_close {
+  section.message .receiver_contents .inner .team_contents .team_list li .btn_team_close {
     background-size: 3.7333333333vw auto;
-  }
-}
-section.message_detail {
-  padding-bottom: 300px;
-}
-@media screen and (max-width: 750px) {
-  section.message_detail {
-    padding-bottom: 40vw;
   }
 }
 section.message_detail > .inner {
@@ -5157,20 +5070,12 @@ section.message_detail > .inner {
     padding: 0 5.3333333333vw;
   }
 }
-section.message_detail > .inner .team_contents {
-  padding-top: 20px;
-}
-@media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents {
-    padding-top: 2.6666666667vw;
-  }
-}
 section.message_detail > .inner .team_contents .select_title {
-  padding-top: 10px;
+  padding-top: 60px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .select_title {
-    padding-top: 1.3333333333vw;
+    padding-top: 8vw;
   }
 }
 section.message_detail > .inner .team_contents .select_title .basic {
@@ -5213,11 +5118,11 @@ section.message_detail > .inner .team_contents .checkbox_list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .checkbox_list {
-    margin-top: 10.6666666667vw;
+    margin-top: 8vw;
   }
 }
 section.message_detail > .inner .team_contents .checkbox_list li {
@@ -5239,6 +5144,14 @@ section.message_detail > .inner .team_contents .checkbox_list li .cm_check_box l
 }
 section.message_detail > .inner .team_contents .checkbox_list li:nth-child(3n+1) {
   margin-left: 0;
+}
+section.message_detail > .inner .team_contents .checkbox_list.on {
+  margin-top: 40px;
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .checkbox_list.on {
+    margin-top: 5.3333333333vw;
+  }
 }
 section.message_detail > .inner .team_contents .input_contents {
   display: flex;
@@ -5419,10 +5332,16 @@ section.message_detail > .inner .team_contents .input_contents .input_box .btn_t
 }
 section.message_detail > .inner .team_contents .team_list_contents {
   margin-top: 60px;
+  padding-bottom: 206px;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .team_list_contents {
     margin-top: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .team_list_contents {
+    padding-bottom: 27.4666666667vw;
   }
 }
 section.message_detail > .inner .team_contents .team_list_contents .team_list li {
@@ -5495,6 +5414,10 @@ section.message_detail > .inner .team_contents .team_list_contents .team_list li
   section.message_detail > .inner .team_contents .team_list_contents .team_list li .checkbox_container label::after {
     background-size: 8.5333333333vw auto;
   }
+}
+section.message_detail > .inner .team_contents .team_list_contents .team_list li:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 section.message_detail > .inner .team_contents .team_list_contents .nodata {
   margin-top: 280px;
@@ -9947,4 +9870,81 @@ body {
 .cm_btn_comment .btn_submit button.on {
   background: #00A862;
   color: #fff;
+}
+
+#filterPopup,
+#teamDetailPopup {
+  padding-top: 112px;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup,
+  #teamDetailPopup {
+    padding-top: 14.9333333333vw;
+  }
+}
+#filterPopup .head_box,
+#teamDetailPopup .head_box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  justify-content: space-between;
+  height: 112px;
+  width: 750px;
+  border-bottom: 2px solid #EEE;
+  background-color: #fff;
+  margin: 0 auto;
+  z-index: 100;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
+    height: 14.9333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box,
+  #teamDetailPopup .head_box {
+    border-bottom: 0.2666666667vw solid #EEE;
+  }
+}
+#filterPopup .head_box h1,
+#teamDetailPopup .head_box h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 700;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box h1,
+  #teamDetailPopup .head_box h1 {
+    font-size: 4vw;
+  }
+}
+#filterPopup .head_box .btn_close,
+#teamDetailPopup .head_box .btn_close {
+  top: 14px;
+  padding: 40px;
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box .btn_close,
+  #teamDetailPopup .head_box .btn_close {
+    top: 1.8666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  #filterPopup .head_box .btn_close,
+  #teamDetailPopup .head_box .btn_close {
+    padding: 5.3333333333vw;
+  }
 }

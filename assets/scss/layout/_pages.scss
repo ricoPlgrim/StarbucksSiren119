@@ -1596,7 +1596,7 @@ section {
 
         .message_contents {
             .inner {
-                @include vp(padding, 60px 40px 120px 40px);
+                @include vp(padding, 60px 40px 80px 40px);
 
                 .textarea_contents {
                     position: relative;
@@ -1683,84 +1683,36 @@ section {
 
                 .team_contents {
                     position: relative;
-                    display: flex;
-                    align-items: center;
 
-                    .text {
+                    .text_title {
                         position: relative;
-                        display: inline-flex;
-                        color: $green;
+                        color: $black-87;
                         @include vp(font-size, $f15);
-                        font-weight: $fw4;
-
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            @include vp(height, 2px);
-                            background: $green;
-                        }
+                        font-weight: $fw6;
                     }
-
-                    .btn_team {
-                        content: '';
-                        display: block;
-                        @include vp(width, 64px);
-                        @include vp(height, 64px);
-                        margin-left: auto;
-                        background: url("../images/btn/btn_plus_g.png") 0 0 no-repeat;
-                        @include vp(background-size, 64px auto);
-                    }
-                }
-
-                .button_grop {
-                    .inner {
-                        @include vp(padding, 20px 0 20px 0);
-                        position: relative;
-
-                        .btn_list {
-                            width: 100%;
-                            position: relative;
+                    .team_list{
+                        @include vp(margin-top, 40px);
+                        @include vp(border-top, 2px solid $dark-gray);
+                   
+                       li{
                             display: flex;
-                            flex-wrap: wrap;
-                            flex-direction: row;
-                            @include vp(gap, 8px);
                             align-items: center;
-
-                            li {
-                                position: relative;
-                                flex: 0 0 auto;
-
-                                .tag {
-                                    position: relative;
-                                    @include vp(font-size, $f12);
-                                    @include vp(padding, 20px 60px 20px 20px);
-                                    @include vp(height, 64px);
-                                    font-weight: $fw5;
-                                    color: $green;
-                                    @include vp(letter-spacing, .1px);
-                                    text-align: center;
-                                    @include vp(border-radius, 12px);
-                                    @include vp(border, 2px solid $green);
-                                    background-color: $white;
-
-                                }
-
-                                .btn_close {
-                                    display: block;
-                                    position: absolute;
-                                    @include vp(top, 19px);
-                                    @include vp(right, 20px);
-                                    @include vp(width, 28px);
-                                    @include vp(height, 28px);
-                                    background: url("../images/btn/btn_close_green.png") 0 0 no-repeat;
-                                    @include vp(background-size, 28px auto);
-                                    z-index: 10;
-                                }
+                            @include vp(padding, 36px 0 );
+                            @include vp(border-bottom, 2px solid  $light-gray-3);
+                            .text{
+                                color: $black;
+                                @include vp(font-size, $f15);
+                                font-weight: $fw4;
                             }
-                        }
+                            .btn_team_close{
+                                margin-left:auto;
+                                @include vp(margin-right,  20px);
+                                @include vp(width, 28px);
+                                @include vp(height, 28px);
+                                background: url("../images/btn/btn_team_clsoe.png") 0 0 no-repeat;
+                                @include vp(background-size, 28px auto);
+                            }
+                       }
                     }
                 }
             }
@@ -1771,16 +1723,16 @@ section {
 
     //수신팀 상세 지정 페이지
     &.message_detail {
-        @include vp(padding-bottom, 300px);
+        // @include vp(padding-bottom, 300px);
 
         >.inner {
             @include vp(padding, 0 40px);
 
             .team_contents {
-                @include vp(padding-top, 20px);
+                // @include vp(padding-top, 20px);
                 
                 .select_title {
-                    @include vp(padding-top, 10px);
+                    @include vp(padding-top, 60px);
                     .basic {
                         color: $light-gray-1;
                         @include vp(font-size, $f15 );
@@ -1809,7 +1761,7 @@ section {
                     display: flex;
                     align-items: center;
                     flex-wrap: wrap;
-                    @include vp(margin-top, 80px);
+                    @include vp(margin-top, 60px);
 
                     li {
                         @include vp(margin-left, 40px);
@@ -1824,6 +1776,10 @@ section {
                         &:nth-child(3n+1) {
                             margin-left: 0;
                         }
+                    }
+
+                    &.on{
+                        @include vp(margin-top, 40px);
                     }
                 }
 
@@ -1906,6 +1862,7 @@ section {
 
                 .team_list_contents {
                     @include vp(margin-top, 60px);
+                    @include vp(padding-bottom, 206px);
 
                     .team_list {
                         li {
@@ -1944,6 +1901,10 @@ section {
                                     }
                                 }
 
+                            }
+                            &:last-child{
+                                 margin-bottom:0; 
+                                border-bottom: 0;
                             }
                         }
                     }
