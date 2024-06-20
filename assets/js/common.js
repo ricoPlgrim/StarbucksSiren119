@@ -495,6 +495,10 @@ var commonUi = {
         var liLength = $(".cm_btn_list li").length;
         $(this).parents("li").remove();
         if (liLength == 1) {
+            //수신팀 상세지정 위에 텍스트 삭제 
+            if( $( this ).parents( ".select_title" )){
+                $( ".select_title" ).remove();
+            }
             btnGroup.remove();
         }
     },
