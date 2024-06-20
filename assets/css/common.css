@@ -1784,8 +1784,9 @@ section.bookmark .cm_tab_panel .panel_list > li .inner {
 }
 section.bookmark .bookmark_contents {
   padding-top: 234px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
-  min-height: 100dvh;
   background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
@@ -4757,6 +4758,8 @@ section.login {
   flex-direction: column;
   align-items: center;
   background: #F6F6F6;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   overflow: hidden;
 }
@@ -5994,6 +5997,7 @@ section.searh {
   background: #fff;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
   padding-bottom: 100px;
 }
 @media screen and (max-width: 750px) {
@@ -6432,6 +6436,7 @@ body {
   margin: 0 auto;
   height: 100vh;
   height: 100dvh;
+  min-height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 }
@@ -7032,6 +7037,8 @@ body {
   display: none;
   position: fixed;
   top: 0px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.38);
@@ -7143,6 +7150,8 @@ body {
   display: none;
   position: fixed;
   top: 0px;
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   width: 100%;
   width: 750px;
