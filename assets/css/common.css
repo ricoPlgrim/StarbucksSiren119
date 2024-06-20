@@ -1618,6 +1618,7 @@ section.board .cm_full_wrap .depth_02 {
   padding: 28px 40px;
   align-items: center;
   gap: 4px;
+  background-color: #F6F6F6;
 }
 @media screen and (max-width: 750px) {
   section.board .cm_full_wrap .depth_02 {
@@ -1631,7 +1632,6 @@ section.board .cm_full_wrap .depth_02 > li button span {
   padding: 20px;
   line-height: normal;
   font-weight: 400;
-  text-wrap: nowrap;
 }
 @media screen and (max-width: 750px) {
   section.board .cm_full_wrap .depth_02 > li button span {
@@ -3243,7 +3243,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-  background: url("../images/icons/ico_emergency01.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency01.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3258,7 +3258,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-  background: url("../images/icons/ico_emergency02.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency02.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3273,7 +3273,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-  background: url("../images/icons/ico_emergency03.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency03.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3288,7 +3288,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-  background: url("../images/icons/ico_emergency04.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency04.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3303,7 +3303,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-  background: url("../images/icons/ico_emergency05.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency05.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
@@ -3318,7 +3318,7 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-  background: url("../images/icons/ico_emergency06.png") center left no-repeat;
+  background: url("../images/icons/icon_emergency06.png") center left no-repeat;
   background-size: 40px auto;
   background-position-x: 10px;
 }
