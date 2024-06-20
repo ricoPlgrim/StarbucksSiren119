@@ -2666,7 +2666,6 @@ section.report .write_preview .preview_list li dl.emerge_box dd {
   gap: 5px;
 }
 section.report .write_preview .preview_list li dl.emerge_box dd span {
-  position: relative;
   padding: 12px 10px;
   display: inline-block;
   font-size: 24px;
@@ -2935,7 +2934,7 @@ section.detail .detail_wrap .detail_box .info_header .badge > span {
   display: inline-block;
   margin-right: 8px;
   font-size: 24px;
-  padding: 8px 16px;
+  padding: 7px 15px;
   border-radius: 12px;
 }
 @media screen and (max-width: 750px) {
@@ -2950,7 +2949,7 @@ section.detail .detail_wrap .detail_box .info_header .badge > span {
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .info_header .badge > span {
-    padding: 1.0666666667vw 2.1333333333vw;
+    padding: 0.9333333333vw 2vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3148,16 +3147,15 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd {
   gap: 5px;
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-  padding: 12px 10px 12px 60px;
+  padding: 12px 10px;
   display: inline-block;
   font-size: 24px;
   border: 1px solid #000;
   border-radius: 12px;
-  font-size: 22px;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-    padding: 1.6vw 1.3333333333vw 1.6vw 8vw;
+    padding: 1.6vw 1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3168,101 +3166,6 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
     border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-    font-size: 2.9333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-  background: url("../images/icons/ico_emergency01.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-  background: url("../images/icons/ico_emergency02.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-  background: url("../images/icons/ico_emergency03.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-  background: url("../images/icons/ico_emergency04.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-  background: url("../images/icons/ico_emergency05.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-  background: url("../images/icons/ico_emergency06.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-    background-position-x: 1.3333333333vw;
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl dt {

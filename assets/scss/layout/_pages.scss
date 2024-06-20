@@ -624,12 +624,11 @@ section {
                                 flex-wrap: wrap;
                                 gap: 5px;
                                 span {
-                                    position: relative;
-                                    @include vp(padding, 12px 10px);
+                                    @include vp( padding, 12px 10px); 
                                     display: inline-block;
                                     @include vp(font-size, $f12);
                                     border: 1px solid $black;
-                                    @include vp(border-radius, 12px);
+                                    @include vp( border-radius, 12px);
                                 }
                             }
                         }
@@ -793,7 +792,7 @@ section {
                             display: inline-block;
                             @include vp(margin-right, 8px);
                             @include vp(font-size, $f12);
-                            @include vp(padding, 8px 16px);
+                            @include vp(padding, 7px 15px);
                             @include vp(border-radius, 12px);
 
                             &.done {
@@ -899,21 +898,12 @@ section {
                                 display: flex;
                                 flex-wrap: wrap;
                                 gap: 5px;
-
                                 span {
-                                    @include vp( padding, 12px 10px 12px 60px); 
+                                    @include vp( padding, 12px 10px); 
                                     display: inline-block;
                                     @include vp(font-size, $f12);
                                     border: 1px solid $black;
                                     @include vp( border-radius, 12px);
-                                    @include vp( font-size, $f11);
-                                }
-                                @for $i from 1 through 6 {
-                                    .emerg0#{$i} {
-                                        background: url("../images/icons/ico_emergency0#{$i}.png") center left no-repeat;
-                                        @include vp(background-size, 40px auto);
-                                        @include vp(background-position-x, 10px);
-                                    }
                                 }
                             }
                         }
