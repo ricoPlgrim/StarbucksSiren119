@@ -628,6 +628,7 @@ section {
                                     @include vp(font-size, $f12);
                                     @include vp(border, 2px solid $black);
                                     @include vp(border-radius, 12px);
+                                    line-height: normal;
                                 }
                             }
                         }
@@ -635,7 +636,7 @@ section {
 
                     .text_wrap {
                         position: relative;
-                        @include vp(padding, 40px 0px 40px 40px);
+                        @include vp(padding, 40px 20px 40px 40px);
                         @include vp(min-height, 296px);
                         @include vp(border, 2px solid $light-gray-2);
                         background: $white;

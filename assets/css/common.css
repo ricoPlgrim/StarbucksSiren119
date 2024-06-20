@@ -2723,6 +2723,7 @@ section.report .write_preview .preview_list li dl.emerge_box dd span {
   font-size: 24px;
   border: 2px solid #000;
   border-radius: 12px;
+  line-height: normal;
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li dl.emerge_box dd span {
@@ -2746,7 +2747,7 @@ section.report .write_preview .preview_list li dl.emerge_box dd span {
 }
 section.report .write_preview .preview_list li .text_wrap {
   position: relative;
-  padding: 40px 0px 40px 40px;
+  padding: 40px 20px 40px 40px;
   min-height: 296px;
   border: 2px solid #DDD;
   background: #fff;
@@ -2756,7 +2757,7 @@ section.report .write_preview .preview_list li .text_wrap {
 }
 @media screen and (max-width: 750px) {
   section.report .write_preview .preview_list li .text_wrap {
-    padding: 5.3333333333vw 0vw 5.3333333333vw 5.3333333333vw;
+    padding: 5.3333333333vw 2.6666666667vw 5.3333333333vw 5.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
