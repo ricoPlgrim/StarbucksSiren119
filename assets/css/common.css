@@ -2655,122 +2655,32 @@ section.report .write_preview .preview_list li dl dt {
     min-width: 13.3333333333vw;
   }
 }
-section.report .write_preview .preview_list li dl dd {
+section.report .write_preview .preview_list li dl.emerge_box dd {
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
   gap: 5px;
 }
-section.report .write_preview .preview_list li dl dd span {
-  padding: 12px 10px 12px 60px;
+section.report .write_preview .preview_list li dl.emerge_box dd span {
+  position: relative;
+  padding: 12px 10px;
   display: inline-block;
+  font-size: 24px;
   border: 1px solid #000;
   border-radius: 12px;
-  font-size: 22px;
 }
 @media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd span {
-    padding: 1.6vw 1.3333333333vw 1.6vw 8vw;
+  section.report .write_preview .preview_list li dl.emerge_box dd span {
+    padding: 1.6vw 1.3333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd span {
+  section.report .write_preview .preview_list li dl.emerge_box dd span {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li dl.emerge_box dd span {
     border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd span {
-    font-size: 2.9333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg01 {
-  background: url("../images/icons/icon_emergency01.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg01 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg01 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg02 {
-  background: url("../images/icons/icon_emergency02.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg02 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg02 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg03 {
-  background: url("../images/icons/icon_emergency03.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg03 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg03 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg04 {
-  background: url("../images/icons/icon_emergency04.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg04 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg04 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg05 {
-  background: url("../images/icons/icon_emergency05.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg05 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg05 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.report .write_preview .preview_list li dl dd .emerg06 {
-  background: url("../images/icons/icon_emergency06.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg06 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.report .write_preview .preview_list li dl dd .emerg06 {
-    background-position-x: 1.3333333333vw;
   }
 }
 section.report .write_preview .preview_list li .text_wrap {
@@ -3189,14 +3099,14 @@ section.detail .detail_wrap .detail_box .detail_info .tag_box span {
 section.detail .detail_wrap .detail_box .report_info dl {
   display: flex;
   align-items: center;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-size: 26px;
   text-align: center;
   line-height: normal;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl {
-    margin-bottom: 3.7333333333vw;
+    margin-bottom: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -3208,11 +3118,11 @@ section.detail .detail_wrap .detail_box .report_info dl:last-child {
   margin-bottom: 0px;
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl.emerge_box {
-    margin-bottom: 5.3333333333vw;
+    margin-bottom: 3.2vw;
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd {
@@ -3221,115 +3131,26 @@ section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd {
   gap: 5px;
 }
 section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-  padding: 12px 10px 12px 60px;
+  position: relative;
+  padding: 12px 10px;
   display: inline-block;
+  font-size: 24px;
   border: 1px solid #000;
   border-radius: 12px;
-  font-size: 22px;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-    padding: 1.6vw 1.3333333333vw 1.6vw 8vw;
+    padding: 1.6vw 1.3333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
+    font-size: 3.2vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
     border-radius: 1.6vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd span {
-    font-size: 2.9333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-  background: url("../images/icons/icon_emergency01.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg01 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-  background: url("../images/icons/icon_emergency02.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg02 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-  background: url("../images/icons/icon_emergency03.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg03 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-  background: url("../images/icons/icon_emergency04.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg04 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-  background: url("../images/icons/icon_emergency05.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg05 {
-    background-position-x: 1.3333333333vw;
-  }
-}
-section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-  background: url("../images/icons/icon_emergency06.png") center left no-repeat;
-  background-size: 40px auto;
-  background-position-x: 10px;
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-    background-size: 5.3333333333vw auto;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.detail .detail_wrap .detail_box .report_info dl.emerge_box dd .emerg06 {
-    background-position-x: 1.3333333333vw;
   }
 }
 section.detail .detail_wrap .detail_box .report_info dl dt {

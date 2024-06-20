@@ -583,25 +583,18 @@ section {
                             color: $black-58;
                         }
             
-                        dd {
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: end;
-                            gap: 5px;
-            
-                            span {
-                                @include vp(padding, 12px 10px 12px 60px);
-                                display: inline-block;
-                                border: 1px solid $black;
-                                @include vp(border-radius, 12px);
-                                @include vp(font-size, $f11);
-                            }
-            
-                            @for $i from 1 through 6 {
-                                .emerg0#{$i} {
-                                    background: url("../images/icons/icon_emergency0#{$i}.png") center left no-repeat;
-                                    @include vp(background-size, 40px auto);
-                                    @include vp(background-position-x, 10px);
+                        &.emerge_box {
+                            dd {    
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 5px;
+                                span {
+                                    position: relative;
+                                    @include vp(padding, 12px 10px);
+                                    display: inline-block;
+                                    @include vp(font-size, $f12);
+                                    border: 1px solid $black;
+                                    @include vp(border-radius, 12px);
                                 }
                             }
                         }
@@ -825,7 +818,7 @@ section {
                     dl {
                         display: flex; 
                         align-items: center;
-                        @include vp( margin-bottom, 28px); 
+                        @include vp( margin-bottom, 24px); 
                         @include vp( font-size, $f13);
                         text-align: center;
                         line-height: normal;
@@ -833,24 +826,18 @@ section {
                             margin-bottom: 0px;
                         }
                         &.emerge_box {
-                            @include vp( margin-bottom, 40px);
+                            @include vp( margin-bottom, 24px);
                             dd {    
                                 display: flex;
                                 flex-wrap: wrap;
                                 gap: 5px;
                                 span {
-                                    @include vp( padding, 12px 10px 12px 60px); 
+                                    position: relative;
+                                    @include vp(padding, 12px 10px);
                                     display: inline-block;
+                                    @include vp(font-size, $f12);
                                     border: 1px solid $black;
-                                    @include vp( border-radius, 12px);
-                                    @include vp( font-size, $f11);
-                                }
-                                @for $i from 1 through 6 {
-                                    .emerg0#{$i} {
-                                        background: url("../images/icons/icon_emergency0#{$i}.png") center left no-repeat;
-                                        @include vp(background-size, 40px auto);
-                                        @include vp(background-position-x, 10px);
-                                    }
+                                    @include vp(border-radius, 12px);
                                 }
                             }
                         }
