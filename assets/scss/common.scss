@@ -242,7 +242,7 @@ body{
                         @include vp(padding, 20px 0px);
                         @include vp(width, 670px);
                         @include vp(border-radius, 12px);
-                        border: 1px solid $green;
+                        @include vp(border, 2px solid $green);
                         background: $white;
                         text-align: center;
                         cursor: pointer;
@@ -555,7 +555,8 @@ body{
                     @include vp( height, 16px); 
                     border-radius: 50%;
                     background: #FFFFFF80;
-                    border: 1px solid #00000061;
+                    @include vp( border, 2px solid #00000061); 
+                    border-radius: 50%;
                     &.active {
                         background: $green;
                         border: none;
@@ -1122,7 +1123,7 @@ body{
 
             &.on {
                 button {
-                    border: 1px solid $green;
+                    @include vp(border, 2px solid $green);
 
                     span {
                         color: $green;
@@ -1882,7 +1883,7 @@ body{
         @include vp(padding, 24px 10px 0px 28px);
         @include vp(width, 670px);
         @include vp(border-radius, 16px);
-        border: 1px solid $light-gray-2;
+        @include vp(border, 2px solid $light-gray-2);
         overflow: hidden;
         overflow-y: auto;
 
@@ -1897,7 +1898,7 @@ body{
         }
 
         &.on {
-            border: 1px solid $black;
+            @include vp(border, 2px solid $black);
             textarea {
                 @include vp(margin-bottom, -20px);
             }
