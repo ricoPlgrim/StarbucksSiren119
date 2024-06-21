@@ -5346,14 +5346,6 @@ section.message_detail > .inner .team_contents .checkbox_list li .cm_check_box l
 section.message_detail > .inner .team_contents .checkbox_list li:nth-child(3n+1) {
   margin-left: 0;
 }
-section.message_detail > .inner .team_contents .checkbox_list.on {
-  margin-top: 40px;
-}
-@media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .checkbox_list.on {
-    margin-top: 5.3333333333vw;
-  }
-}
 section.message_detail > .inner .team_contents .input_contents {
   display: flex;
   align-items: center;
@@ -5388,7 +5380,7 @@ section.message_detail > .inner .team_contents .input_contents .input_box > inpu
   font-size: 32px;
   transform: scale(0.8125);
   letter-spacing: 0.5px;
-  padding: 45px 60px 50px 95px;
+  padding: 45px 90px 50px 95px;
   box-sizing: border-box;
   border: 2px solid #BBB;
   border-radius: 12px;
@@ -5423,7 +5415,7 @@ section.message_detail > .inner .team_contents .input_contents .input_box > inpu
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .input_contents .input_box > input {
-    padding: 6vw 8vw 6.6666666667vw 12.6666666667vw;
+    padding: 6vw 12vw 6.6666666667vw 12.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -5437,14 +5429,14 @@ section.message_detail > .inner .team_contents .input_contents .input_box > inpu
   }
 }
 section.message_detail > .inner .team_contents .input_contents .input_box > input::placeholder {
-  color: #bbb;
-  font-size: 26px;
+  color: #BBB;
+  font-size: 30px;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
   section.message_detail > .inner .team_contents .input_contents .input_box > input::placeholder {
-    font-size: 3.4666666667vw;
+    font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -5643,6 +5635,30 @@ section.message_detail > .inner .team_contents .team_list_contents .nodata {
   section.message_detail > .inner .team_contents .team_list_contents .nodata {
     line-height: 5.8666666667vw;
   }
+}
+section.message_detail > .inner .team_contents .cm_type_twodepth {
+  display: none;
+  margin-top: 24px;
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .cm_type_twodepth {
+    margin-top: 3.2vw;
+  }
+}
+section.message_detail > .inner .team_contents .cm_type_twodepth .cm_full_wrap {
+  margin-top: 0;
+  border-bottom: 0;
+}
+section.message_detail > .inner .team_contents .cm_type_twodepth .cm_full_wrap .buttons_list {
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  section.message_detail > .inner .team_contents .cm_type_twodepth .cm_full_wrap .buttons_list {
+    padding-bottom: 2.6666666667vw;
+  }
+}
+section.message_detail > .inner .team_contents .cm_type_twodepth .cm_full_wrap .buttons_list li:first-child {
+  margin-left: 0;
 }
 section.message .submit_box, section.message_detail .submit_box {
   position: fixed;
