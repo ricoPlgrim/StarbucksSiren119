@@ -6554,10 +6554,6 @@ html, body {
   height: -webkit-fill-available;
 }
 
-body {
-  touch-action: pan-y;
-}
-
 #wrap {
   font-size: 0;
   max-width: 750px;

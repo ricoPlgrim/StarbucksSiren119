@@ -16,9 +16,6 @@ html, body {
     height: -webkit-fill-available; 
 }
 
-body{
-    touch-action: pan-y; 
-}
 #wrap {
     font-size: 0;
     @include vp(max-width, 750px);
