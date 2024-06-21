@@ -113,9 +113,7 @@ var commonUi = {
         _btnBookmark.on("click", this.btnBookMarkClick); 
         
         _textAreaBox.on( "focusin focusout", this.textBoxForcusEvent );
-        this.tabActivation();  //탭영역 로드 체크 순서
-        // this.sendBunCehck();  //재난문자 영역 있는지 체크
-       
+        this.tabActivation();  //탭영역 로드 체크 순서       
     },
 
     loadEvent: function () {

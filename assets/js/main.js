@@ -105,16 +105,24 @@ var mainUi = {
 
     //선택한 벨류값 세팅
     updateSelectedValues: function () {
+
+       //벨류값 0일떄  setting_contents 클래스 on 패딩값 지움
+       if(  $('.filter_checkbox:checked').length == 0 ){
+         if( $( ".setting_contents" ).hasClass( "on" )){
+            $( ".setting_contents" ).removeClass( "on" );
+         }
+       }
         // 이전 리스트 항목을 지움
-        $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();
-    
+       $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();
+        
         // 체크된 체크박스를 반복하면서 리스트 항목을 추가
-        $('input[type="checkbox"]:checked').each(function () {
+       $('.filter_checkbox:checked').each(function () {
             var text = $(this).data('value');
             var listItem = `<li>
                 <button class="cm_btn_round on tag"><span class="text">${text}</span></button>
                 <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
             </li>`;
+
             $('.cm_btn_list.etc, .accident_filter .cm_btn_list').append(listItem);
         });
     
@@ -125,9 +133,9 @@ var mainUi = {
         // accident filter에 태그가 없으면 숨김
         var accidentFilterHasTags = $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length === 0;
         $('.accident_filter').css('display', accidentFilterHasTags ? 'none' : 'flex');
-        if( $('.setting_contents').hasClass( "on" )){
-            $('.setting_contents').removeClass( "on" );
-        }
+        // if( $('.setting_contents').hasClass( "on" )){
+        //     $('.setting_contents').removeClass( "on" );
+        // }
     },
 
     typeAllCheck: function () {
@@ -151,7 +159,7 @@ var mainUi = {
     // 닫기 버튼 클릭 시 li 삭제
     closeTag: function () {
         var text = $(this).siblings('.cm_btn_round').find('.text').text();
-        $('input[type="checkbox"]').each(function() {
+        $('input[type="checkbox"]').each(function( index, item) {
             if ($(this).data('value') === text) {
                 $(this).prop('checked', false);
             }
