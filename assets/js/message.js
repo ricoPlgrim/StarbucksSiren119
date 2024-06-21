@@ -9,6 +9,7 @@ var _allCheckboxes;
 var _teamCheckBox;
 var _twodepth;
 var _teamDetailPopup;
+var _teamListBtn;
 
 var alarmUi = {
 
@@ -25,13 +26,15 @@ var alarmUi = {
         _allCheckboxes = _teamDetailPopup.find('.team_list input[type=checkbox]').not('#allTeam');
         _teamCheckBox = _teamDetailPopup.find( ".team_checkbox" );
         _twodepth = _teamDetailPopup.find( ".cm_type_twodepth" );
+        _teamListBtn = _message.find( ".btn_team_close" );
     },
     addEvent: function () {
         _appointed.on( "change", this.appointedChage );
         _checkboxes.on( "change", this.checkboxChage );
         _allTeam.on( "change", this.allTeamClick );
         _allCheckboxes.on( "change", this.allCheckboxesChange );
-        _teamCheckBox.on('change', this.teamCheckBoxChage );
+        _teamCheckBox.on('change', this.teamCheckBoxChange );
+        _teamListBtn.on( "click", this.teamListBtnClick );
     },
     loadEvent: function () {
         this.create();
@@ -63,16 +66,29 @@ var alarmUi = {
         }
     },
 
-    teamCheckBoxChage: function(){
+    teamCheckBoxChange: function(){
         // 체크박스의 부모 라벨 요소를 찾습니다.
         var label = $(this).closest('label');
         var labelText = label.text().trim();
-        console.log( labelText == "DM" );
+        if ($(this).is(':checked')) {
+            _teamCheckBox.not(this).prop('checked', false);
+        }
         if ($(this).is(':checked') && labelText == "DM"){
             _twodepth.css( "display", "block" )
         } else {
             _twodepth.css( "display", "none" )
         }
+    },
+
+    teamListBtnClick: function(){
+        var that = $( this ).parents( "li" );
+        var list = _message.find( ".team_list" ).find( "li" );
+        var contents = _message.find( ".team_contents" );
+        that.remove();
+        if( list.length-1 == 0 ){
+            contents.remove();
+        }
+       
     }
     
 };
