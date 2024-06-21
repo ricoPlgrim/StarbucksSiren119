@@ -131,16 +131,86 @@
                 .buttons_list {
                     li {
                         display: flex;
-                        @include vp(gap, 30px);
+                        @include vp(gap, 20px);
                     }
                 }
+                .bottom_sheet_button {
+                    @include vp(margin-top, 20px);
+                    display: flex;
+                    flex-wrap: wrap;
+                    @include vp(gap, 20px);
+                    button {
+                        @include vp(padding, 24px 20px);
+                        @include vp(width, 320px);
+                        text-align: center;
+                        > span {
+                            display: inline-block;
+                            @include vp(padding-left, 60px);
+                            @include vp(font-size, $f15);
+                            color: $green;
+                            font-weight: $fw6;
+                            &.phone {
+                                background: url("../images/icons/icon_call.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
 
+                            &.txt {
+                                background: url("../images/icons/icon_text.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+                            &.btn_edit {
+                                background: url("../images/icons/icon_edit.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+
+                            &.btn_delete {
+                                background: url("../images/icons/icon_delete_g.png") center left no-repeat;
+                                @include vp(background-size, 40px auto);
+                            }
+                        }
+                    }
+                }
+                .checkbox_list {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    .checkbox_container {
+                        input[type="checkbox"] {
+                            display: none;
+    
+                            &:checked+label::after {
+                                background: url("../images/btn/btn_check_round_on.png") 0 0 no-repeat;
+                                @include vp(background-size, 64px auto);
+                            }
+                        }
+    
+                        label {
+                            display: flex;
+                            width: 100%;
+                            cursor: pointer;
+                            color: $black;
+                            @include vp(font-size, $f15);
+                            font-weight: $fw4;
+                            align-items: center;
+    
+                            &::after {
+                                content: "";
+                                display: block;
+                                @include vp(width, 64px);
+                                @include vp(height, 64px);
+                                border-radius: 50%;
+                                background: url("../images/btn/btn_check_round_off.png") 0 0 no-repeat;
+                                @include vp(background-size, 64px auto);
+                            }
+                        }
+    
+                    }
+                }
                 .header_list {
                     > li {
                         @include vp(margin-bottom, 20px);
                     }
                 }
-
                 .field-list {
                     > li {
                         @include vp(padding-bottom, 20px);
@@ -185,9 +255,91 @@
                         }
                     }
                 }
+                .pagination {
+                    @include vp( padding, 30px); 
+                    display: inline-flex;
+                    flex-direction: row;
+                    gap: 8px;
+                    .bullet {
+                        display: inline-block;
+                        @include vp( margin, 0px 4px); 
+                        @include vp( width, 16px);  
+                        @include vp( height, 16px); 
+                        border-radius: 50%;
+                        background: #FFFFFF80;
+                        @include vp( border, 2px solid #00000061); 
+                        border-radius: 50%;
+                        &.active {
+                            background: $green;
+                            border: none;
+                        }
+                    }
+                }
+                .badge {
+                    >span {
+                        display: inline-block;
+                        @include vp(margin-right, 8px);
+                        @include vp(font-size, $f12);
+                        @include vp(padding, 7px 15px);
+                        @include vp(border-radius, 12px);
 
+                        &.done {
+                            color: $green;
+                            background: #EBFFF7;
+                            @include vp(border, 2px solid $green );
+                        }
 
+                        &.urgency {
+                            color: $orange;
+                            background: #FFF6F6;
+                            @include vp(border, 2px solid $orange );
+                        }
 
+                        &.general {
+                            color: $black;
+                            background: #F7F7F7;
+                            @include vp(border, 2px solid $dark-gray );
+                        }
+                    }
+                }
+                .icon_box {
+                    display: flex;   
+                    align-items: center;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                    > li {
+                        span {
+                            display: inline-block;
+                            @include vp( width, 128px); 
+                            @include vp( height, 128px); 
+                            &.partner{ 
+                                background: url("../images/icons/icon_Partner.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                            &.disaster{
+                                background: url("../images/icons/icon_disaster.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                            &.foreign {
+                                background: url("../images/icons/icon_different_thing.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                            &.customer{
+                                background: url("../images/icons/icon_customer.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                            &.fire{
+                                background: url("../images/icons/icon_fire.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                            &.food_safety{
+                                background: url("../images/icons/icon_food_safety.png") center left no-repeat;
+                                @include vp(background-size, 128px auto);
+                            }
+                        }
+                    }
+                }
+                
             }
 
             &:first-child {

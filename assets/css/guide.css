@@ -854,11 +854,150 @@ input[type=date]::-webkit-outer-spin-button {
 }
 .guide .guide_box .guide_list > li .guide_bottom .buttons_list li {
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 @media screen and (max-width: 750px) {
   .guide .guide_box .guide_list > li .guide_bottom .buttons_list li {
-    gap: 4vw;
+    gap: 2.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button {
+    margin-top: 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button {
+    gap: 2.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button {
+  padding: 24px 20px;
+  width: 320px;
+  text-align: center;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button {
+    padding: 3.2vw 2.6666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button {
+    width: 42.6666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span {
+  display: inline-block;
+  padding-left: 60px;
+  font-size: 30px;
+  color: #00A862;
+  font-weight: 600;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span {
+    padding-left: 8vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span {
+    font-size: 4vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.phone {
+  background: url("../images/icons/icon_call.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.phone {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.txt {
+  background: url("../images/icons/icon_text.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.txt {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.btn_edit {
+  background: url("../images/icons/icon_edit.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.btn_edit {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.btn_delete {
+  background: url("../images/icons/icon_delete_g.png") center left no-repeat;
+  background-size: 40px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .bottom_sheet_button button > span.btn_delete {
+    background-size: 5.3333333333vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .checkbox_list {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container input[type=checkbox] {
+  display: none;
+}
+.guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container input[type=checkbox]:checked + label::after {
+  background: url("../images/btn/btn_check_round_on.png") 0 0 no-repeat;
+  background-size: 64px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container input[type=checkbox]:checked + label::after {
+    background-size: 8.5333333333vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label {
+    font-size: 4vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: url("../images/btn/btn_check_round_off.png") 0 0 no-repeat;
+  background-size: 64px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label::after {
+    width: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label::after {
+    height: 8.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .checkbox_list .checkbox_container label::after {
+    background-size: 8.5333333333vw auto;
   }
 }
 .guide .guide_box .guide_list > li .guide_bottom .header_list > li {
@@ -946,6 +1085,183 @@ input[type=date]::-webkit-outer-spin-button {
 }
 .guide .guide_box .guide_list > li .guide_bottom .field-list > li .cm_date_contents .date_setting {
   flex-direction: column;
+}
+.guide .guide_box .guide_list > li .guide_bottom .pagination {
+  padding: 30px;
+  display: inline-flex;
+  flex-direction: row;
+  gap: 8px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .pagination {
+    padding: 4vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .pagination .bullet {
+  display: inline-block;
+  margin: 0px 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5019607843);
+  border: 2px solid rgba(0, 0, 0, 0.3803921569);
+  border-radius: 50%;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .pagination .bullet {
+    margin: 0vw 0.5333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .pagination .bullet {
+    width: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .pagination .bullet {
+    height: 2.1333333333vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .pagination .bullet {
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.3803921569);
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .pagination .bullet.active {
+  background: #00A862;
+  border: none;
+}
+.guide .guide_box .guide_list > li .guide_bottom .badge > span {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 24px;
+  padding: 7px 15px;
+  border-radius: 12px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span {
+    margin-right: 1.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span {
+    font-size: 3.2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span {
+    padding: 0.9333333333vw 2vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span {
+    border-radius: 1.6vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .badge > span.done {
+  color: #00A862;
+  background: #EBFFF7;
+  border: 2px solid #00A862;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span.done {
+    border: 0.2666666667vw solid #00A862;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .badge > span.urgency {
+  color: #FF2E00;
+  background: #FFF6F6;
+  border: 2px solid #FF2E00;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span.urgency {
+    border: 0.2666666667vw solid #FF2E00;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .badge > span.general {
+  color: #000;
+  background: #F7F7F7;
+  border: 2px solid #333;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .badge > span.general {
+    border: 0.2666666667vw solid #333;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span {
+  display: inline-block;
+  width: 128px;
+  height: 128px;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span {
+    width: 17.0666666667vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span {
+    height: 17.0666666667vw;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.partner {
+  background: url("../images/icons/icon_Partner.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.partner {
+    background-size: 17.0666666667vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.disaster {
+  background: url("../images/icons/icon_disaster.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.disaster {
+    background-size: 17.0666666667vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.foreign {
+  background: url("../images/icons/icon_different_thing.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.foreign {
+    background-size: 17.0666666667vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.customer {
+  background: url("../images/icons/icon_customer.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.customer {
+    background-size: 17.0666666667vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.fire {
+  background: url("../images/icons/icon_fire.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.fire {
+    background-size: 17.0666666667vw auto;
+  }
+}
+.guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.food_safety {
+  background: url("../images/icons/icon_food_safety.png") center left no-repeat;
+  background-size: 128px auto;
+}
+@media screen and (max-width: 750px) {
+  .guide .guide_box .guide_list > li .guide_bottom .icon_box > li span.food_safety {
+    background-size: 17.0666666667vw auto;
+  }
 }
 .guide .guide_box .guide_list > li:first-child {
   margin-top: 0;
