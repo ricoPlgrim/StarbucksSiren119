@@ -7,8 +7,8 @@ var _appointed;
 var _allTeam;
 var _allCheckboxes;
 var _teamCheckBox;
-var _messageDetail;
 var _twodepth;
+var _teamDetailPopup;
 
 var alarmUi = {
 
@@ -18,13 +18,13 @@ var alarmUi = {
     create: function () {
         _w = $(window);
         _message = $( ".message" );
-        _messageDetail = $( ".message_detail" );
+        _teamDetailPopup = $( "#teamDetailPopup" );
         _appointed = _message.find( "#appointed" );
         _checkboxes = _message.find('input[type=checkbox][name=check]');
-        _allTeam =  _message.find( "#allTeam" );
-        _allCheckboxes = _message.find('.team_list input[type=checkbox]').not('#allTeam');
-        _teamCheckBox = _messageDetail.find( ".team_checkbox" );
-        _twodepth = _messageDetail.find( ".cm_type_twodepth" );
+        _allTeam =  _teamDetailPopup.find( "#allTeam" );
+        _allCheckboxes = _teamDetailPopup.find('.team_list input[type=checkbox]').not('#allTeam');
+        _teamCheckBox = _teamDetailPopup.find( ".team_checkbox" );
+        _twodepth = _teamDetailPopup.find( ".cm_type_twodepth" );
     },
     addEvent: function () {
         _appointed.on( "change", this.appointedChage );
@@ -41,9 +41,7 @@ var alarmUi = {
     appointedChage: function(){
         if ($(this).is(':checked')) {
             commonUi.openPopup( "teamDetailPopup" );
-            console.log('체크박스가 체크되었습니다.');
         } else {
-            console.log('체크박스가 체크 해제되었습니다.');
         }
     },
 
