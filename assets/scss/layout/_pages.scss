@@ -74,13 +74,14 @@ section {
 
         .board_list_wrap {
             .board_list {
+                @include vp(margin, 0 40px 80px);
                 >li {
-                    @include vp(padding, 48px 0px);
-                    @include vp(margin, 0 40px);
+                    @include vp(padding, 20px 0px);
                     @include vp(border-bottom, 2px solid  $light-gray-3);
 
                     &:first-child {
-                        @include vp(margin-top, 12px);
+                        @include vp(padding-top, 0px);
+                        @include vp(margin-top, 60px);
                     }
 
                     a {
@@ -1785,7 +1786,7 @@ section {
                     @include vp(margin-top, 40px);
                     .text_wrap {
                         @include vp(padding, 40px 0px 40px 40px);
-                        @include vp(min-height, 252px);
+                        @include vp(min-height, 480px);
                         @include vp(border, 2px solid $light-gray-2 );
                         background: $white;
                         border-radius: $f16;
@@ -1806,7 +1807,7 @@ section {
                             @include vp(padding-right, 40px);
                             @include vp(line-height, 40px);
                             @include vp(font-size, $f13);
-                            @include vp(height, 138px);
+                            @include vp(height, 320px);
                             width: 100%;
                             color: #00000094;
                             resize: none;
@@ -1843,9 +1844,7 @@ section {
                 @include vp(padding, 0 40px);
 
                 .title {
-                    @include vp(padding-bottom, 40px);
                     @include vp(margin-bottom, 40px);
-                    @include vp(border-bottom, 2px solid $light-gray-2);
                 }
 
                 .check_box {

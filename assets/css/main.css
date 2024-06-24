@@ -1657,19 +1657,21 @@ section.board .cm_full_wrap .depth_02 > li.on button span {
   color: #00A862;
   font-weight: 600;
 }
+section.board .board_list_wrap .board_list {
+  margin: 0 40px 80px;
+}
+@media screen and (max-width: 750px) {
+  section.board .board_list_wrap .board_list {
+    margin: 0 5.3333333333vw 10.6666666667vw;
+  }
+}
 section.board .board_list_wrap .board_list > li {
-  padding: 48px 0px;
-  margin: 0 40px;
+  padding: 20px 0px;
   border-bottom: 2px solid #EEE;
 }
 @media screen and (max-width: 750px) {
   section.board .board_list_wrap .board_list > li {
-    padding: 6.4vw 0vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.board .board_list_wrap .board_list > li {
-    margin: 0 5.3333333333vw;
+    padding: 2.6666666667vw 0vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1678,11 +1680,17 @@ section.board .board_list_wrap .board_list > li {
   }
 }
 section.board .board_list_wrap .board_list > li:first-child {
-  margin-top: 12px;
+  padding-top: 0px;
+  margin-top: 60px;
 }
 @media screen and (max-width: 750px) {
   section.board .board_list_wrap .board_list > li:first-child {
-    margin-top: 1.6vw;
+    padding-top: 0vw;
+  }
+}
+@media screen and (max-width: 750px) {
+  section.board .board_list_wrap .board_list > li:first-child {
+    margin-top: 8vw;
   }
 }
 section.board .board_list_wrap .board_list > li a {
@@ -5016,7 +5024,7 @@ section.message .message_contents .inner .textarea_contents {
 }
 section.message .message_contents .inner .textarea_contents .text_wrap {
   padding: 40px 0px 40px 40px;
-  min-height: 252px;
+  min-height: 480px;
   border: 2px solid #DDD;
   background: #fff;
   border-radius: 32px;
@@ -5031,7 +5039,7 @@ section.message .message_contents .inner .textarea_contents .text_wrap {
 }
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner .textarea_contents .text_wrap {
-    min-height: 33.6vw;
+    min-height: 64vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -5056,7 +5064,7 @@ section.message .message_contents .inner .textarea_contents .text_wrap textarea 
   padding-right: 40px;
   line-height: 40px;
   font-size: 26px;
-  height: 138px;
+  height: 320px;
   width: 100%;
   color: rgba(0, 0, 0, 0.5803921569);
   resize: none;
@@ -5080,7 +5088,7 @@ section.message .message_contents .inner .textarea_contents .text_wrap textarea 
 }
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner .textarea_contents .text_wrap textarea {
-    height: 18.4vw;
+    height: 42.6666666667vw;
   }
 }
 section.message .message_contents .inner .textarea_contents .text_wrap textarea::placeholder {
@@ -5136,23 +5144,11 @@ section.message .receiver_contents .inner {
   }
 }
 section.message .receiver_contents .inner .title {
-  padding-bottom: 40px;
   margin-bottom: 40px;
-  border-bottom: 2px solid #DDD;
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .title {
-    padding-bottom: 5.3333333333vw;
-  }
 }
 @media screen and (max-width: 750px) {
   section.message .receiver_contents .inner .title {
     margin-bottom: 5.3333333333vw;
-  }
-}
-@media screen and (max-width: 750px) {
-  section.message .receiver_contents .inner .title {
-    border-bottom: 0.2666666667vw solid #DDD;
   }
 }
 section.message .receiver_contents .inner .check_box {
