@@ -5,7 +5,7 @@ var _btnDisableAll;
 var _btnDisable;
 var _btnAccident;
 
-var _btnAlCheck;
+var _btnAllCheck;
 var _btnRemoveAll;
 
 
@@ -20,7 +20,7 @@ var alarmUi = {
         _btnDisableAll= _setting.find( ".btn_disableAll" );
         _btnDisable= _setting.find( ".btn_disable" );
         _btnAccident = _setting.find( ".accident" );
-        _btnAlCheck = _setting.find( ".situation" );
+        _btnAllCheck = _setting.find( ".situation" );
         _btnRemoveAll = _setting.find( ".delete" );
         _appointed = $( "#appointed" );
 
@@ -30,12 +30,12 @@ var alarmUi = {
         _btnDisableAll.on( "click", this.btnDisableAllClick );
         _btnDisable.on( "click", this.btnDisableClick );
         _btnAccident.on( "change", this.btnAccidentCheck );
-        _btnAlCheck.on( "click", this.btnAllCheck );
+        _btnAllCheck.on( "click", this.btnAllCheck );
         _btnRemoveAll.on( "click", this.btnRemoveAlltag );
 
     },
     loadEvent: function () {
-        this.create();
+        this.create(); 
         this.addEvent();
     },
 

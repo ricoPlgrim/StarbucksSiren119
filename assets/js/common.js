@@ -1,6 +1,6 @@
 /* global variables */
 var _w, _htmlBody, _gnb, _gnbBtn, _gnbCloseBtn, _scrollTopButton, _stickyTarget, _popBtn, _textFormBtn, _commoninputBtn, _textArea, _fileUploadBtn, _searchInputBtn, _wrap;
-var _switchBox, _switchBoxOffset, _marginTop, _totalOffsetTop, _bottomSheetDim, _bottomSheetClose, _bottomSheetDateList;
+var _switchBox, _switchBoxOffset, _marginTop, _totalOffsetTop, _bottomSheetDim, _bottomSheetClose, _dateBtnList;
 var _startDateInput, _endDateInput, _typeBtns, _twoDepsMenu, _twoDepsWrapMenu, _subDepsMenu, _searchInput, _deleteAllBtn, _btnTextDelete, _inputBoxTarget, _loginInPut, _btnTypeList, _rowScrolLBox, _btnBookmark;
 var _lastSelectedStartDate, _lastSelectedEndDate;
 var _textAreaBox;
@@ -42,7 +42,7 @@ var commonUi = {
 
         _bottomSheetDim = $(".bottom_sheet .dimd");
         _bottomSheetClose = $(".bottom_sheet .btn_sheet_close");
-        _bottomSheetDateList = $(".cm_date_contents .date_list li");
+        _dateBtnList = $(".cm_date_contents .date_list li");
         _startDateInput = $("#startdate");
         _endDateInput = $("#enddate");
         _typeBtns = $(".cm_tab_contents .cm_type_list li");
@@ -76,7 +76,7 @@ var commonUi = {
             var popupId = $(this).closest(".bottom_sheet").attr("id");
             commonUi.bottomSheetHide(popupId);
         });
-        _bottomSheetDateList.on("click", this.bottomSheetDateListClick); //달력 버튼 온오프
+        _dateBtnList.on("click", this.btnDateListClick); //달력 버튼 온오프
 
         _startDateInput.on("change", this.startDateValue);; //시작 달력값 벨류값 
         _startDateInput.on("blur", this.startValueBlur);  //시작 달력값 설정값 없을때 
@@ -183,10 +183,10 @@ var commonUi = {
         }, 100);
     },
 
-    bottomSheetDateListClick: function () {
+    btnDateListClick: function () {
         var index = $(this).index();
-        _bottomSheetDateList.removeClass("on");
-        _bottomSheetDateList.eq(index).addClass("on");
+        _dateBtnList.removeClass("on");
+        _dateBtnList.eq(index).addClass("on");
         index === 3 ? commonUi.toggleDateFields(true) : commonUi.toggleDateFields(false);
     },
 

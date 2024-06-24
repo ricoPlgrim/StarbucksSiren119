@@ -44,8 +44,7 @@ var alarmUi = {
     appointedChage: function(){
         if ($(this).is(':checked')) {
             commonUi.openPopup( "teamDetailPopup" );
-        } else {
-        }
+        } 
     },
 
     checkboxChage: function(){
