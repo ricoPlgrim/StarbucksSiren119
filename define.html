@@ -29,31 +29,31 @@
                         <tr>
                             <th>문서 및 버전</th>
                             <td>
-                                <div >HTML5, CSS3, JavaScript </div>
+                                <div>HTML5, CSS3, JavaScript, jquery </div>
                             </td>
                         </tr>
                         <tr>
                             <th>인코딩</th>
                             <td>
-                                <div >UTF-8</div>
+                                <div>UTF-8</div>
                             </td>
                         </tr>
                         <tr>
                             <th>웹 유형</th>
                             <td>
-                                <div >Mobile</div>
+                                <div>Mobile</div>
                             </td>
                         </tr>
                         <tr>
                             <th>크로스 브라우징</th>
                             <td>
-                                <div >ie, chrome, firefox, safari</div>
+                                <div>ie, chrome, firefox, safari</div>
                             </td>
                         </tr>
                         <tr>
                             <th>해상도 기준 / 디자인 너비</th>
                             <td>
-                                <div >750px / auto</div>
+                                <div>750px / 750px~320px</div>
                             </td>
                         </tr>
                     </tbody>
@@ -62,7 +62,7 @@
         </section>
         <section>
             <h2>구조</h2>
-            <h3>파일 / 폴더 규칙</h3> 
+            <h3>파일 / 폴더 규칙</h3>
             <ul class="bullet_list">
                 <li>현황판은 웹스타일가이드에 포함하지 않고 <em>페이지제작</em> 링크만 연결한다</li>
                 <li>가이드 Assets폴더는 _(언더바)를 붙힌다.(사이트폴더와의 구분 및 고정적 의미를 적용)</li>
@@ -85,62 +85,60 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td >
-                                <div >폰트</div>
-                            </td>
-                            <td >
-                                <div >base</div>
+                            <td>
+                                <div>폰트</div>
                             </td>
                             <td>
-                                <div >
+                                <div>base</div>
+                            </td>
+                            <td>
+                                <div>
                                     <ul>
-                                        <li >_font.scss</li>
+                                        <li>_font.scss</li>
                                     </ul>
                                 </div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
-                                        <li >웹폰트 - 가져오기</li>
+                                        <li>웹폰트 - 가져오기</li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td >
-                                <div >CSS</div>
+                            <td>
+                                <div>CSS</div>
                             </td>
-                            <td >
+                            <td>
                                 <div>&nbsp;</div>
                             </td>
                             <td>
-                                <div >main.css</div>
+                                <div>main.css</div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
-                                        <li >스타일 - 가져오기</li>
+                                        <li>스타일 - 가져오기</li>
                                     </ul>
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td >
-                                <div >SCSS</div>
+                            <td>
+                                <div>SCSS</div>
                             </td>
                             <td>
-                                <div >scss/base</div>
-                                <div >scss/layout</div>
+                                <div>scss/base</div>
+                                <div>scss/layout</div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <li>base/_fonts.scss</li>
                                         <li>base/_mixin.scss</li>
                                         <li>base/_reset.scss</li>
                                         <li>base/_variables.scss</li>
-                                        <li>base/_reset.scss</li>
-
                                         <li>layout/_header.scss</li>
                                         <li>layout/_pages.scss</li>
                                         <li>common.scss</li>
@@ -151,7 +149,7 @@
                                 </div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <li>폰트 가져오기</li>
                                         <li>믹스인</li>
@@ -175,26 +173,30 @@
                                 <div>lib</div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
-                                        <li >lib/ gsap.js</li>
-                                        <li >lib/ jquery-3.7.1.min</li>
-                                        <li >lib/ swiper</li>
-                                        <li >alarm.js</li>
-                                        <li >common.js</li>
-                                        <li >main.js</li>
-                                        <li >define.js</li>
-                                        <li >search.js</li>
+                                        <li>lib/ gsap.js</li>
+                                        <li>lib/ jquery-3.7.1.min</li>
+                                        <li>lib/ swiper</li>
+                                        <li>alarm.js</li>
+                                        <li>common.js</li>
+                                        <li>filter.js</li>
+                                        <li>main.js</li>
+                                        <li>message.js</li>
+                                        <li>report.js</li>
+                                        <li>search.js</li>
                                     </ul>
                                 </div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <li> LIB 폴더 스크립트 - 가져오기</li>
                                         <li> alarm.js - 알림설정 스크립트 가져오기</li>
                                         <li> common.js - 공통 ui 스크립트 가져오기</li>
+                                        <li> filter.js - 필터팝업 페이지 스크립트 가져오기</li>
                                         <li> main.js - 메인 ui 스크립트 가져오기</li>
+                                        <li> message.js - 재난문자 페이지 스크립트 가져오기</li>
                                         <li> report.js - 보고사항페에지 ui 스크립트 가져오기</li>
                                         <li> search.js - 검색 input ui 스크립트 가져오기</li>
                                     </ul>
@@ -209,22 +211,24 @@
                                 <div>&nbsp;</div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <li>btn</li>
-                                        <li>header</li>
+                                        <li>guide</li>
                                         <li>icons</li>
+                                        <li>logo</li>
                                         <li>temp</li>
                                     </ul>
                                 </div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <li>버튼이미지</li>
-                                        <li>헤더여역 이미지</li>
+                                        <li>가이드페이지 이미지</li>
                                         <li>아이콘 이미지</li>
-                                        <li>테스트용 이미지</li>
+                                        <li>로고 이미지</li>
+                                        <li>테스트 이미지</li>
                                     </ul>
                                 </div>
                             </td>
@@ -243,31 +247,35 @@
                                         <li><a href="board/detail02.html" target="_blank">board/detail02.html</a></li>
                                         <li><a href="board/index.html" target="_blank">board/index.html</a> </li>
                                         <li><a href="bookmark/list.html" target="_blank">bookmark/list.html</a> </li>
-                                        <li><a href="bookmark/no-list.html" target="_blank">bookmark/no-list.html</a> </li>
+                                        <li><a href="bookmark/no-list.html" target="_blank">bookmark/no-list.html</a>
+                                        </li>
                                         <li><a href="chart/index.html" target="_blank">chart/index.html</a></li>
-                                        <li><a href="comment/index.html<" target="_blank">comment/index.html</a></li>
+                                        <li><a href="comment/index.html" target="_blank">comment/index.html</a></li>
                                         <li><a href="detail/index.html" target="_blank">detail/index.html</a></li>
-                                        <li><a href="filter/index.html" target="_blank">filter/index.html</a></li>
                                         <li><a href="login/index.html" target="_blank">login/index.html</a> </li>
-                                        <li><a href="message/detail_type1.html" target="_blank">message/detail_type1.html</a></li>
-                                        <li><a href="message/detail_type2.html" target="_blank">message/detail_type2.html</a></li>
-                                        <li><a href="message/send_type1.html" target="_blank">message/send_type1.html</a></li>
-                                        <li><a href="message/send_type2.html" target="_blank">message/send_type2.html</a></li>
+                                        <li><a href="message/send_type1.html"
+                                                target="_blank">message/send_type1.html</a></li>
+                                        <li><a href="message/send_type2.html"
+                                                target="_blank">message/send_type2.html</a></li>
                                         <li><a href="popup/popup01.html" target="_blank">popup/popup01.html</a></li>
                                         <li><a href="popup/popup02.html" target="_blank">popup/popup02.html</a></li>
-                                        <li><a href="popup/toast.html" target="_blank">board/index.html</a></li>
-                                        <li><a href="push/history_no-list.html" target="_blank">push/history_no-list.html</a> </li>
-                                        <li><a href="push/history_offpush.html" target="_blank">bpush/history_offpush.html</a> </li>
-                                        <li><a href="push/history-list.html" target="_blank">push/history-list.html</a></li>
-                                        <li><a href="push/postview.html" target="_blank"> push/postview.html</a> </li>
+                                        <li><a href="popup/toast.html" target="_blank">popup/toast.html</a></li>
+                                        <li><a href="push/history_no-list.html"
+                                                target="_blank">push/history_no-list.html</a> </li>
+                                        <li><a href="push/history_offpush.html"
+                                                target="_blank">bpush/history_offpush.html</a> </li>
+                                        <li><a href="push/history-list.html" target="_blank">push/history-list.html</a>
+                                        </li>
                                         <li><a href="push/setting.html" target="_blank"> push/setting.html</a></li>
                                         <li><a href="reply/edit.html" target="_blank">reply/edit.html</a> </li>
                                         <li><a href="reply/index.html" target="_blank"> reply/index.html</a> </li>
                                         <li><a href="report/edit.html" target="_blank">report/edit.html</a> </li>
                                         <li><a href="report/index.html" target="_blank">report/index.html</a></li>
-                                        <li><a href="report/no-result.html" target="_blank">report/no-result.html</a> </li>
+                                        <li><a href="report/no-result.html" target="_blank">report/no-result.html</a>
+                                        </li>
                                         <li><a href="report/result.html" target="_blank">report/result.html</a></li>
                                         <li><a href="searh/index.html" target="_blank">searh/index.html</a></li>
+                                        <li><a href="searh/no-list.html" target="_blank">searh/no-list.html</a></li>
                                         <li><a href="define.html" target="_blank">define.html</a></li>
                                         <li><a href="guide.html" target="_blank">guide.html</a></li>
                                         <li><a href="index.html" target="_blank">index.html</a></li>
@@ -277,43 +285,43 @@
                                 </div>
                             </td>
                             <td>
-                                <div >
+                                <div>
                                     <ul>
                                         <ul>
-                                            <li >업무가이드 상세페이지</li>
-                                            <li >주요보고사례 상세페이지</li>
-                                            <li >업무가이드/주요보고사례 리스트 페이지</li>
-                                            <li >북마크 리스트 페이지</li>
-                                            <li >북마크 리스트 없을경우 페이지 </li>
-                                            <li >현황통계 페이지</li>
-                                            <li >댓글수정 페이지</li>
-                                            <li >필터 페이지</li>
-                                            <li >로그인 페이지</li>
-                                            <li >수신팀 상세 지정 검색결과 없을 경우 페이지 </li>
-                                            <li >수신팀 상세 지정 리스트 페이지 </li>
-                                            <li >재난문자 전송 리스트 페이지 </li>
-                                            <li >재난문자 전송 리스트 없을 경우 페이지 </li>
-                                            <li >중앙 팝업 레이어 페이지 </li>
-                                            <li >풀팝업 팝업 레이어 페이지 </li>
-                                            <li >토스트 팝업 레이어 페이지 </li>
-                                            <li >푸쉬이력 리스트 없을 경우 페이지 </li>
-                                            <li >푸쉬이력 알람설정 페이지 </li>
-                                            <li >푸쉬이력 리스트 페이지 </li>
-                                            <li >게시물 이력 조회  설정 페이지 </li>
-                                            <li >알림설정 페이지 </li>
-                                            <li >답글 수정 페이지 </li>
-                                            <li >답글 등록 페이지 </li>
-                                            <li >보고 수정 페이지 </li>
-                                            <li >보고 작성 페이지 </li>
-                                            <li >보고 작성 결과 페이지 </li>
-                                            <li >보고 작성 결과 없을 경우 페이지 </li>
-                                            <li >검색 영역 페이지 </li>
-                                            <li >검색 영역 리스트 없을 경우 페이지 </li>
-                                            <li >퍼블리싱 정책 및 구조 페이지</li>
-                                            <li >퍼블리싱 가이드 페이지</li>
-                                            <li >메인페이지</li>
-                                            <li >페이지 목록 가이드 페이지</li>
-                                            <li >퍼블리싱 템플릿 페이지</li>
+                                            <li>업무가이드 상세페이지</li>
+                                            <li>주요보고사례 상세페이지</li>
+                                            <li>업무가이드/주요보고사례 리스트 페이지</li>
+
+                                            <li>북마크 리스트 페이지</li>
+                                            <li>북마크 리스트 없을경우 페이지 </li>
+                                            <li>현황통계 페이지</li>
+                                            <li>댓글수정 페이지</li>
+                                            <li>보고상세 페이지</li>
+
+                                            <li>로그인 페이지</li>
+                                            <li>재난문자 전송 리스트 페이지 </li>
+                                            <li>재난문자 전송 리스트 없을 경우 페이지 </li>
+                                            <li>중앙 팝업 레이어 페이지 </li>
+                                            <li>풀팝업 팝업 레이어 페이지 </li>
+                                            <li>토스트 팝업 레이어 페이지 </li>
+
+                                            <li>푸쉬이력 리스트 없을 경우 페이지 </li>
+                                            <li>푸쉬이력 알람설정 페이지 </li>
+                                            <li>푸쉬이력 리스트 페이지 </li>
+                                            <li>알림설정 페이지 </li>
+                                            <li>답글 수정 페이지 </li>
+                                            <li>답글 등록 페이지 </li>
+                                            <li>보고 수정 페이지 </li>
+                                            <li>보고 작성 페이지</li>
+                                            <li>보고 작성(상품평-검색 결과 없을 시)</li>
+                                            <li>보고 작성(상품평-검색 결과 있을 시)</li>
+                                            <li>검색 영역 페이지 </li>
+                                            <li>검색 영역 리스트 없을 경우 페이지 </li>
+                                            <li>퍼블리싱 정책 및 구조 페이지</li>
+                                            <li>퍼블리싱 가이드 페이지</li>
+                                            <li>메인페이지</li>
+                                            <li>페이지 목록 가이드 페이지</li>
+                                            <li>퍼블리싱 템플릿 페이지</li>
                                         </ul>
                                     </ul>
                                 </div>
