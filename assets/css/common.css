@@ -2630,7 +2630,8 @@ section.report .write_preview .preview_header h3 {
 }
 section.report .write_preview .preview_header h3 span {
   padding-left: 20px;
-  color: rgba(0, 0, 0, 0.5607843137);
+  color: rgba(0, 0, 0, 0.58);
+  font-weight: 400;
   font-size: 22px;
 }
 @media screen and (max-width: 750px) {
@@ -2940,8 +2941,8 @@ section.detail .detail_visual .swiper-pagination-bullet {
   margin: 0px 4px;
   width: 16px;
   height: 16px;
-  background: #fff;
-  border: 2px solid #000;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.38);
   opacity: 1;
 }
 @media screen and (max-width: 750px) {
@@ -2961,7 +2962,7 @@ section.detail .detail_visual .swiper-pagination-bullet {
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_visual .swiper-pagination-bullet {
-    border: 0.2666666667vw solid #000;
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.38);
   }
 }
 section.detail .detail_visual .swiper-pagination-bullet-active {
@@ -3088,7 +3089,7 @@ section.detail .detail_wrap .detail_box .incident_box {
 section.detail .detail_wrap .detail_box .incident_box .text01 {
   font-weight: 600;
   font-size: 30px;
-  color: rgba(0, 0, 0, 0.8705882353);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .incident_box .text01 {
@@ -4235,7 +4236,7 @@ section.detail .comment_wrap .comment_box .info02 span {
   }
 }
 section.detail .comment_wrap .comment_box .info02 span.num {
-  color: #1BA085;
+  color: #00A862;
 }
 section.detail .comment_wrap .comment_box .info03 {
   position: relative;
@@ -4470,7 +4471,7 @@ section.detail .comment_wrap .comment_box .recomment_box::before {
   left: -40px;
   right: -40px;
   bottom: -40px;
-  background: #F6F6F6;
+  background: #F7F7F7;
   z-index: -1;
 }
 @media screen and (max-width: 750px) {
@@ -4663,7 +4664,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_i
   color: inherit;
 }
 section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.date, section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.time {
-  color: #000;
+  color: #999;
 }
 section.detail .comment_wrap .comment_box .recomment_box > li .comment_edit {
   margin-top: 20px;
@@ -4788,7 +4789,7 @@ section.login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F6F6F6;
+  background: #F7F7F7;
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
@@ -7410,8 +7411,8 @@ html, body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #fff;
-  border: 2px solid #000;
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.38);
   border-radius: 50%;
 }
 @media screen and (max-width: 750px) {
@@ -7431,7 +7432,7 @@ html, body {
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
-    border: 0.2666666667vw solid #000;
+    border: 0.2666666667vw solid rgba(0, 0, 0, 0.38);
   }
 }
 .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet.active {
@@ -7680,7 +7681,7 @@ html, body {
 }
 .layer_popup .pop_cont02 .guide_list li > a .sub_title {
   font-size: 24px;
-  color: #666;
+  color: rgba(0, 0, 0, 0.58);
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont02 .guide_list li > a .sub_title {
@@ -9724,7 +9725,7 @@ html, body {
   margin: 0 auto;
   background: #fff;
   border-top: 2px solid #EEE;
-  box-shadow: 0 -1px 5px 0px #e5e5e5;
+  box-shadow: 0 -1px 5px 0px #BBB;
   z-index: 20;
   min-height: 220px;
   max-height: 600px;

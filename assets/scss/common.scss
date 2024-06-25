@@ -94,7 +94,7 @@ html, body {
                         @include vp(border-radius, 100px);
                         @include vp(width, 68px);
                         @include vp(height, 8px);
-                        background: rgba(0, 0, 0, 0.38);
+                        background: $black-38;
                     }
                 }
             }
@@ -380,7 +380,7 @@ html, body {
     top: 0px;
     @include full-height;
     width: 100%;
-    background: rgba(0, 0, 0, 0.38);
+    background: $black-38;
     z-index: 999;
 
     &.open {
@@ -551,8 +551,8 @@ html, body {
                     @include vp( width, 16px);  
                     @include vp( height, 16px); 
                     border-radius: 50%;
-                    background: $white;
-                    @include vp( border, 2px solid $black); 
+                    background: rgba(255, 255, 255, 0.5);
+                    @include vp( border, 2px solid $black-38); 
                     border-radius: 50%;
                     &.active {
                         background: $green;
@@ -673,7 +673,7 @@ html, body {
                     }
                     .sub_title {
                         @include vp( font-size, $f12); 
-                        color: $light-gray-8;
+                        color: $black-58;
                     }
                 }
              
@@ -1861,7 +1861,7 @@ html, body {
     margin: 0 auto;
     background: $white;
     @include vp(border-top, 2px solid $light-gray-3);
-    box-shadow: 0 -1px 5px 0px #e5e5e5;
+    box-shadow: 0 -1px 5px 0px $light-gray-6;
     z-index: 20;
     @include vp(min-height, 220px);
     @include vp(max-height, 600px);

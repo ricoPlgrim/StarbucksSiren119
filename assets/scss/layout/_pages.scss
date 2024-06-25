@@ -576,7 +576,8 @@ section {
 
                     span {
                         @include vp(padding-left, 20px);
-                        color: #0000008F;
+                        color: $black-58;
+                        font-weight: $fw4;
                         @include vp(font-size, 22px);
                     }
                 }
@@ -741,8 +742,8 @@ section {
                 @include vp(margin, 0px 4px);
                 @include vp(width, 16px);
                 @include vp(height, 16px);
-                background: $white;
-                @include vp(border, 2px solid $black);
+                background: rgba(255, 255, 255, 0.5);
+                @include vp(border, 2px solid $black-38);
                 opacity: 1;
             }
 
@@ -828,7 +829,7 @@ section {
                     .text01 {
                         font-weight: $fw6;
                         @include vp(font-size, $f15);
-                        color: #000000DE;
+                        color: $black;
 
                         &:first-child {
                             position: relative;
@@ -1378,7 +1379,7 @@ section {
                         @include vp(margin-right, 20px);
 
                         &.num {
-                            color: #1BA085;
+                            color: $green;
                         }
                     }
                 }
@@ -1503,7 +1504,7 @@ section {
                         @include vp(left, -40px);
                         @include vp(right, -40px);
                         @include vp(bottom, -40px);
-                        background: $light-gray-4;
+                        background: $light-gray-9;
                         z-index: -1;
                     }
 
@@ -1591,7 +1592,7 @@ section {
 
                                     &.date,
                                     &.time {
-                                        color: $black;
+                                        color: $gray;
                                     }
                                 }
                             }
@@ -1670,7 +1671,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: $light-gray-4;
+        background: $light-gray-9;
         @include full-height;
         overflow: hidden;
 
