@@ -12,12 +12,12 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_back" onclick='history.back(-1); return false;'  aria-label="뒤로가기"></button>
+            <button class="btn_back" onclick='history.back(-1); return false;' aria-label="뒤로가기"></button>
             <h1>재난문자 전송</h1>
         </header>
         <section class="message">
             <div class="message_contents">
-                <div class="inner"> 
+                <div class="inner">
                     <h2 class="title">문자내용</h2>
                     <div class="textarea_contents">
                         <div class="text_wrap">
@@ -43,7 +43,7 @@
                             <li>
                                 <div class="cm_check_box">
                                     <label for="appointed">
-                                        <input type="checkbox" name="check" id="appointed" checked/>상세지정
+                                        <input type="checkbox" name="check" id="appointed" checked />상세지정
                                     </label>
                                 </div>
                             </li>
@@ -54,7 +54,7 @@
                         <ul class="team_list">
                             <li>
                                 <p class="text">전략기획본부</p>
-                                <a href="javascript:;" class="btn_team_close"  aria-label="전략기획본부 삭제"></a>
+                                <a href="javascript:;" class="btn_team_close" aria-label="전략기획본부 삭제"></a>
                             </li>
                             <li>
                                 <p class="text">기획담당</p>
@@ -62,7 +62,7 @@
                             </li>
                             <li>
                                 <p class="text">사업기획팀</p>
-                                <a href="javascript:;" class="btn_team_close"  aria-label="사업기획팀 삭제"></a>
+                                <a href="javascript:;" class="btn_team_close" aria-label="사업기획팀 삭제"></a>
                             </li>
                             <li>
                                 <p class="text">이커머스사업팀</p>
@@ -90,51 +90,63 @@
                 </div>
                 <section class="message_detail">
                     <h2 class="blind">수신팀 상세 지정 페이지</h2>
-                    <div class="inner">
-                        <div class="team_contents">
-                            <!--select_title 엘리먼트가 노출 되면 checkbox_list클래스에 on처리 -->
-                            <div class="select_title">
-                                <em class="select_team">03개 팀 선택</em>
-                                <div class="btn_group">
-                                    <div class="inner">
-                                        <ul class="cm_btn_list">
-                                            <li>
-                                                <button class="cm_btn_round on tag"><span class="text">전략기획본부</span></button>
-                                                <a href="javascript:;" class="typetag_close"  aria-label="전략기획본부 삭제"><span class="blind">삭제</span></a>
-                                            </li>
-                                            <li>
-                                                <button class="cm_btn_round on tag"><span class="text">사업기획팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"  aria-label="사업기획팀 삭제"><span class="blind">삭제</span></a>
-                                            </li>
-                                            <li>
-                                                <button class="cm_btn_round on tag"><span class="text">데이터사이언스팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"  aria-label="데이터사이언스팀 삭제"><span class="blind">삭제</span></a>
-                                            </li>
-                                            <li>
-                                                <button class="cm_btn_round on tag"><span class="text">운영팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"  aria-label="운영팀 삭제"><span class="blind">삭제</span></a>
-                                            </li>
-                                            <li>
-                                                <button class="cm_btn_round on tag"><span class="text">DM</span></button>
-                                                <a href="javascript:;" class="typetag_close"  aria-label="DM 삭제"><span class="blind">삭제</span></a>
-                                            </li>
-                                        </ul>
-                                        <div class="dimd"></div>
-                                    </div>
+                    <div class="team_contents">
+                        <!--select_title 엘리먼트가 노출 되면 checkbox_list클래스에 on처리 -->
+                        <div class="select_title">
+                            <em class="select_team">03개 팀 선택</em>
+                            <div class="btn_group">
+                                <div class="inner">
+                                    <button class="cm_btn_refresh" aria-label="새로고침"><span
+                                            class="blind">새로고침</span></button>
+                                    <ul class="cm_btn_list">
+                                        <li>
+                                            <button class="cm_btn_round on tag"><span
+                                                    class="text">전략기획본부</span></button>
+                                            <a href="javascript:;" class="typetag_close" aria-label="전략기획본부 삭제"><span
+                                                    class="blind">삭제</span></a>
+                                        </li>
+                                        <li>
+                                            <button class="cm_btn_round on tag"><span class="text">사업기획팀</span></button>
+                                            <a href="javascript:;" class="typetag_close" aria-label="사업기획팀 삭제"><span
+                                                    class="blind">삭제</span></a>
+                                        </li>
+                                        <li>
+                                            <button class="cm_btn_round on tag"><span
+                                                    class="text">데이터사이언스팀</span></button>
+                                            <a href="javascript:;" class="typetag_close" aria-label="데이터사이언스팀 삭제"><span
+                                                    class="blind">삭제</span></a>
+                                        </li>
+                                        <li>
+                                            <button class="cm_btn_round on tag"><span class="text">운영팀</span></button>
+                                            <a href="javascript:;" class="typetag_close" aria-label="운영팀 삭제"><span
+                                                    class="blind">삭제</span></a>
+                                        </li>
+                                        <li>
+                                            <button class="cm_btn_round on tag"><span class="text">DM</span></button>
+                                            <a href="javascript:;" class="typetag_close" aria-label="DM 삭제"><span
+                                                    class="blind">삭제</span></a>
+                                        </li>
+                                    </ul>
+                                    <div class="dimd"></div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="inner">
                             <ul class="checkbox_list on"> <!--on추가시 마진 간격변경-->
                                 <li>
                                     <div class="cm_check_box">
                                         <label for="operate11">
-                                            <input type="checkbox" name="teamCheck" class="team_checkbox" id="operate11" />지원센터
+                                            <input type="checkbox" name="teamCheck" class="team_checkbox"
+                                                id="operate11" />지원센터
                                         </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="cm_check_box">
                                         <label for="operate">
-                                            <input type="checkbox" name="teamCheck" class="team_checkbox" id="operate" />운영팀
+                                            <input type="checkbox" name="teamCheck" class="team_checkbox"
+                                                id="operate" />운영팀
                                         </label>
                                     </div>
                                 </li>
@@ -192,12 +204,13 @@
                             <div class="input_contents">
                                 <div class="input_box">
                                     <form action="" method="get">
-                                        <input type="text" placeholder="팀명을 검색하세요." class="search_input" aria-label="팀명 검색">
-                                        <button type="button" class="btn_text_delete" aria-label="검색어 삭제"><span class="blind">검색어 삭제</span></button>
+                                        <input type="text" placeholder="팀명을 검색하세요." class="search_input"
+                                            aria-label="팀명 검색">
+                                        <button type="button" class="btn_text_delete" aria-label="검색어 삭제"><span
+                                                class="blind">검색어 삭제</span></button>
                                     </form>
                                 </div>
                             </div>
-
                             <div class="team_list_contents">
                                 <!--현재 리스트가 없을경우  nodata엘리먼트 노출-->
                                 <ul class="team_list check_list">
@@ -246,16 +259,19 @@
                                 </ul>
 
                                 <!-- <p class="nodata">
-                                    수신자 그룹을 선택하거나 팀명을 검색하여<br />
-                                    수신팀을 상세 지정할 수 있습니다.
-                                </p> -->
+                                        수신자 그룹을 선택하거나 팀명을 검색하여<br />
+                                        수신팀을 상세 지정할 수 있습니다.
+                                    </p> -->
 
                             </div>
 
-
-
-
                         </div>
+
+
+
+
+
+
                     </div>
                     <div class="submit_box">
                         <div class="inner">

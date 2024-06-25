@@ -1916,8 +1916,7 @@ section {
     &.message_detail {
         // @include vp(padding-bottom, 300px);
 
-        >.inner {
-            @include vp(padding, 0 40px);
+            //
 
             .team_contents {
                 // @include vp(padding-top, 20px);
@@ -1932,6 +1931,7 @@ section {
                     }
 
                     .select_team {
+                        @include vp(padding, 0 40px);
                         display: block;
                         color: $black-87;
                         @include vp(margin-bottom, 40px);
@@ -1939,10 +1939,20 @@ section {
                         font-weight: $fw6;
                     }
 
-                    .button_grop {
+                    .btn_group {
+                        @include vp(padding, 0 0 0 40px);
                         .inner {
-                            @include vp(padding-top, 40px);
+                            display: flex;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            padding:0;
                             position: relative;
+                            .cm_btn_list{
+                                display: flex;
+                                overflow-y: auto;
+                                @include vp(width, 630px);
+                            }
 
                         }
                     }
@@ -2131,7 +2141,9 @@ section {
                
 
             }
-        }
+            .inner{
+                @include vp(padding, 0 40px);
+            }
     }
 
     &.message,

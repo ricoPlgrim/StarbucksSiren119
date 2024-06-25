@@ -23,7 +23,7 @@ var mainUi = {
         _filter = $( "section.filter" );
         _btnApply = _filter.find( ".cm_btn_round.active" );
         _btnReset = _filter.find( ".cm_btn_round.on" );
-        _btnReload = _main.find(".btn_refresh");
+        _btnReload = _main.find(".cm_btn_refresh");
 
     },
 

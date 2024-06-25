@@ -2067,4 +2067,12 @@ html, body {
     }
 }
 
+.cm_btn_refresh{
+    display: inline-flex;
+    @include vp(width, 68px);
+    @include vp(height, 64px);
+    @include vp(margin-right, 8px);
+    background: url("../images/btn/btn_refresh.png") 0 0 no-repeat;
+    @include vp(background-size, 68px auto);
+}   
 
