@@ -207,7 +207,7 @@ section {
             @include vp(margin, 40px 40px 50px);
             @include vp(padding, 60px 60px 80px);
             @include vp(border-radius, 16px);
-            background-color: $light-gray-4;
+            background-color: $light-gray-9; 
 
             h3 {
                 @include vp(margin-bottom, 40px);
@@ -666,7 +666,7 @@ section {
                             @include vp(font-size, $f15);
                             transform: scale(0.875);
                             transform-origin: left top;
-                            color: #00000094;
+                            color: $black;
                             resize: none;
                             outline: none;
                             border: none;
@@ -741,8 +741,8 @@ section {
                 @include vp(margin, 0px 4px);
                 @include vp(width, 16px);
                 @include vp(height, 16px);
-                background: #FFFFFF80;
-                @include vp(border, 2px solid #00000061);
+                background: $white;
+                @include vp(border, 2px solid $black);
                 opacity: 1;
             }
 
@@ -966,7 +966,7 @@ section {
                 @include vp(font-size, $f13);
                 background: $white;
                 @include vp(border, 2px solid $light-gray-2);
-                color: #00000094;
+                color: $black;
             }
 
             .btn_wrap {
@@ -1020,7 +1020,7 @@ section {
                                 @include vp(font-size, $f16);
                                 transform: scale(0.875);
                                 transform-origin: left top;
-                                color: #00000094;
+                                color: $black;
                                 resize: none;
                                 outline: none;
                                 border: none;
@@ -1124,7 +1124,7 @@ section {
                         @include vp(line-height, 40px);
                         @include vp(border-radius, 16px);
                         @include vp(border, 2px solid $dark-gray);
-                        color: #00000094;
+                        color: $black;
 
                         .edited {
                             display: block;
@@ -1153,7 +1153,7 @@ section {
                                 @include vp(font-size, $f16);
                                 transform: scale(0.875);
                                 transform-origin: left top;
-                                color: #00000094;
+                                color: $black;
                                 resize: none;
                                 outline: none;
                                 border: none;
@@ -1294,7 +1294,7 @@ section {
 
                             &.date,
                             &.time {
-                                color: #00000057;
+                                color: $black;
                             }
                         }
                     }
@@ -1388,7 +1388,7 @@ section {
                     @include vp(margin-bottom, 20px);
                     @include vp(font-size, $f13);
                     @include vp(line-height, 40px);
-                    color: #00000094;
+                    color: $black;
 
                     .edited {
                         @include vp(margin-top, 10px);
@@ -1534,7 +1534,7 @@ section {
                             @include vp(margin-bottom, 20px);
                             @include vp(font-size, $f13);
                             @include vp(line-height, 40px);
-                            color: #00000094;
+                            color: $black;
 
                             .edited {
                                 @include vp(margin-top, 10px);
@@ -1591,7 +1591,7 @@ section {
 
                                     &.date,
                                     &.time {
-                                        color: #00000057;
+                                        color: $black;
                                     }
                                 }
                             }
@@ -1751,7 +1751,7 @@ section {
 
                     &:first-child {
                         background: $light-gray-1;
-                        color: #FFFFFF94;
+                        color: $white;
 
                         &.on {
                             background: $green;
@@ -1762,7 +1762,7 @@ section {
                     &:last-child {
                         @include vp(margin-top, 20px);
                         @include vp(border, 2px solid #0000001F);
-                        color: #00000094;
+                        color: $black;
                     }
                 }
             }
@@ -1809,7 +1809,7 @@ section {
                             @include vp(font-size, $f13);
                             @include vp(height, 320px);
                             width: 100%;
-                            color: #00000094;
+                            color: $black;
                             resize: none;
                             outline: none;
                             border: none;

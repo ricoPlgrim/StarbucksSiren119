@@ -266,8 +266,8 @@
                         @include vp( width, 16px);  
                         @include vp( height, 16px); 
                         border-radius: 50%;
-                        background: #FFFFFF80;
-                        @include vp( border, 2px solid #00000061); 
+                        background: $white;
+                        @include vp( border, 2px solid $black); 
                         border-radius: 50%;
                         &.active {
                             background: $green;

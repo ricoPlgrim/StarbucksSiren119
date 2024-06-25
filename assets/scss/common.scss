@@ -162,8 +162,8 @@ html, body {
 
                         dt {
                             @include vp(min-width, 146px);
-                            text-align: left;
-                            color: #00000057;
+                            text-align: left; 
+                            color: $black;
                         }
                     }
                 }
@@ -551,8 +551,8 @@ html, body {
                     @include vp( width, 16px);  
                     @include vp( height, 16px); 
                     border-radius: 50%;
-                    background: #FFFFFF80;
-                    @include vp( border, 2px solid #00000061); 
+                    background: $white;
+                    @include vp( border, 2px solid $black); 
                     border-radius: 50%;
                     &.active {
                         background: $green;
@@ -721,8 +721,8 @@ html, body {
 
                         &.emergency {
                             background: #FFF6F6;
-                            @include vp(border, 2px solid #FF7F7F);
-                            color: $red;
+                            @include vp(border, 2px solid $orange);
+                            color: $orange;
                         }
 
                         &.common {
@@ -1103,7 +1103,7 @@ html, body {
         @include vp(padding, 28px 40px);
         align-items: center;
         gap: 4px;
-        background-color: $light-gray-4;
+        background-color: $light-gray-9;
         overflow-x: auto;
 
         >li {
@@ -1172,7 +1172,6 @@ html, body {
 }
 
 .cm_tab_bottom {
-    // box-shadow:  0 -1px 5px 0px $medium-gray;
     background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
     
     .button_grop {
@@ -1378,7 +1377,7 @@ html, body {
     }
 
     &.gd {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, $medium-gray 100%);
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 0%, $light-gray-6 100%);
         opacity: 0.8;
         @include vp(height, 12px);
     }
@@ -1429,7 +1428,7 @@ html, body {
 }
 
 .cm-mg {
-    background-color: $medium-gray;
+    background-color: $light-gray-6;
 }
 
 .cm-bk12 {
@@ -2022,7 +2021,7 @@ html, body {
             @include vp(height, 80px);
             @include vp(border-radius, 12px);
             @include vp(font-size, $f13);
-            color: #ffffff94;
+            color: $white;
             background: $light-gray-1;
     
             &.on {

@@ -1895,7 +1895,7 @@ section.chart .chart_wrap {
   margin: 40px 40px 50px;
   padding: 60px 60px 80px;
   border-radius: 16px;
-  background-color: #F6F6F6;
+  background-color: #F7F7F7;
 }
 @media screen and (max-width: 750px) {
   section.chart .chart_wrap {
@@ -2807,7 +2807,7 @@ section.report .write_preview .preview_list li .text_wrap textarea {
   font-size: 30px;
   transform: scale(0.875);
   transform-origin: left top;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
   resize: none;
   outline: none;
   border: none;
@@ -2940,8 +2940,8 @@ section.detail .detail_visual .swiper-pagination-bullet {
   margin: 0px 4px;
   width: 16px;
   height: 16px;
-  background: rgba(255, 255, 255, 0.5019607843);
-  border: 2px solid rgba(0, 0, 0, 0.3803921569);
+  background: #fff;
+  border: 2px solid #000;
   opacity: 1;
 }
 @media screen and (max-width: 750px) {
@@ -2961,7 +2961,7 @@ section.detail .detail_visual .swiper-pagination-bullet {
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_visual .swiper-pagination-bullet {
-    border: 0.2666666667vw solid rgba(0, 0, 0, 0.3803921569);
+    border: 0.2666666667vw solid #000;
   }
 }
 section.detail .detail_visual .swiper-pagination-bullet-active {
@@ -3372,7 +3372,7 @@ section.detail .detail_wrap .textarea_conts {
   font-size: 26px;
   background: #fff;
   border: 2px solid #DDD;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .textarea_conts {
@@ -3503,7 +3503,7 @@ section.detail .comment_wrap.comment-detail .comment_box .info03 .textarea_box t
   font-size: 32px;
   transform: scale(0.875);
   transform-origin: left top;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
   resize: none;
   outline: none;
   border: none;
@@ -3727,7 +3727,7 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 {
   line-height: 40px;
   border-radius: 16px;
   border: 2px solid #333;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 {
@@ -3793,7 +3793,7 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box tex
   font-size: 32px;
   transform: scale(0.875);
   transform-origin: left top;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
   resize: none;
   outline: none;
   border: none;
@@ -4063,7 +4063,7 @@ section.detail .comment_wrap.comment-detail .reply_box .text02 span.user .name a
   color: inherit;
 }
 section.detail .comment_wrap.comment-detail .reply_box .text02 span.date, section.detail .comment_wrap.comment-detail .reply_box .text02 span.time {
-  color: rgba(0, 0, 0, 0.3411764706);
+  color: #000;
 }
 section.detail .comment_wrap .comment_header {
   padding-bottom: 20px;
@@ -4242,7 +4242,7 @@ section.detail .comment_wrap .comment_box .info03 {
   margin-bottom: 20px;
   font-size: 26px;
   line-height: 40px;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .info03 {
@@ -4536,7 +4536,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text01 {
   margin-bottom: 20px;
   font-size: 26px;
   line-height: 40px;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap .comment_box .recomment_box > li .text01 {
@@ -4663,7 +4663,7 @@ section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_i
   color: inherit;
 }
 section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.date, section.detail .comment_wrap .comment_box .recomment_box > li .text02 .comment_info span.time {
-  color: rgba(0, 0, 0, 0.3411764706);
+  color: #000;
 }
 section.detail .comment_wrap .comment_box .recomment_box > li .comment_edit {
   margin-top: 20px;
@@ -4972,7 +4972,7 @@ section.login .login_wrap .login_btn button {
 }
 section.login .login_wrap .login_btn button:first-child {
   background: #AAA;
-  color: rgba(255, 255, 255, 0.5803921569);
+  color: #fff;
 }
 section.login .login_wrap .login_btn button:first-child.on {
   background: #00A862;
@@ -4981,7 +4981,7 @@ section.login .login_wrap .login_btn button:first-child.on {
 section.login .login_wrap .login_btn button:last-child {
   margin-top: 20px;
   border: 2px solid rgba(0, 0, 0, 0.1215686275);
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.login .login_wrap .login_btn button:last-child {
@@ -5064,7 +5064,7 @@ section.message .message_contents .inner .textarea_contents .text_wrap textarea 
   font-size: 26px;
   height: 320px;
   width: 100%;
-  color: rgba(0, 0, 0, 0.5803921569);
+  color: #000;
   resize: none;
   outline: none;
   border: none;
@@ -6737,7 +6737,7 @@ html, body {
 .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl dt {
   min-width: 146px;
   text-align: left;
-  color: rgba(0, 0, 0, 0.3411764706);
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   .bottom_sheet .sheet_wrap .sheet_content .staff_info_contents .staff_info dl dt {
@@ -7410,8 +7410,8 @@ html, body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5019607843);
-  border: 2px solid rgba(0, 0, 0, 0.3803921569);
+  background: #fff;
+  border: 2px solid #000;
   border-radius: 50%;
 }
 @media screen and (max-width: 750px) {
@@ -7431,7 +7431,7 @@ html, body {
 }
 @media screen and (max-width: 750px) {
   .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet {
-    border: 0.2666666667vw solid rgba(0, 0, 0, 0.3803921569);
+    border: 0.2666666667vw solid #000;
   }
 }
 .layer_popup .pop_cont01 .pop_img_wrap .pagination .bullet.active {
@@ -7772,12 +7772,12 @@ html, body {
 }
 .cm_card_list > li a dl dt .badge.emergency {
   background: #FFF6F6;
-  border: 2px solid #FF7F7F;
-  color: #FF0000;
+  border: 2px solid #FF2E00;
+  color: #FF2E00;
 }
 @media screen and (max-width: 750px) {
   .cm_card_list > li a dl dt .badge.emergency {
-    border: 0.2666666667vw solid #FF7F7F;
+    border: 0.2666666667vw solid #FF2E00;
   }
 }
 .cm_card_list > li a dl dt .badge.common {
@@ -8415,7 +8415,7 @@ html, body {
   padding: 28px 40px;
   align-items: center;
   gap: 4px;
-  background-color: #F6F6F6;
+  background-color: #F7F7F7;
   overflow-x: auto;
 }
 @media screen and (max-width: 750px) {
@@ -10080,7 +10080,7 @@ html, body {
   height: 80px;
   border-radius: 12px;
   font-size: 26px;
-  color: rgba(255, 255, 255, 0.5803921569);
+  color: #fff;
   background: #AAA;
 }
 @media screen and (max-width: 750px) {

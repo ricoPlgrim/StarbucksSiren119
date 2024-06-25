@@ -4,7 +4,7 @@
 
 
 #wrap{
-    background: $light-gray-4; 
+    background: $light-gray-9; 
   
 }
 
@@ -34,13 +34,13 @@
             z-index: 20;
 
             &:first-child {
-                @include vp(margin-right, 20px );
+                @include vp(margin-right, 20px );  
             }
 
             >li {
                 position: absolute;
                 display: flex;
-                justify-content: center;
+                justify-content: center; 
                 align-items: center;
                 top:0;
                 left:0;
@@ -136,7 +136,7 @@
                                     display: block;
                                     @include vp(margin-left, 40px);
                                     @include vp(padding-left, 40px);
-                                    color: $black-58;
+                                    color: $light-gray-6;
                                     @include vp(font-size, $f13);
                                     font-weight: $fw4;
                                     @include vp(line-height, 30px); 
@@ -702,7 +702,7 @@
                 @include vp(border-top, 2px solid $light-gray-3);
                 @include vp(padding-top, 40px);
                 text-align: center;
-                color: $medium-gray;
+                color: $light-gray-6;
                 @include vp(font-size, $f10);
                 font-weight: $fw4;
                 @include vp(margin-bottom, 20px );
