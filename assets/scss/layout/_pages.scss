@@ -2460,6 +2460,7 @@ section {
                     @include vp(font-size, $f16 );
                     @include vp(line-height, 32px);
                     font-weight: $fw6;
+                    color: $black;
                 }
 
                 .btn_all_delete {
@@ -2469,7 +2470,7 @@ section {
                     @include vp(line-height, 28px);
                     color: $black;
                     font-weight: $fw4;
-                    opacity: .5;
+                    opacity: .85;
 
                     &::after {
                         content: '';
@@ -2479,7 +2480,7 @@ section {
                         width: 100%;
                         background-color: $black;
                         @include vp(height, 2px);
-                        opacity: .5;
+                        opacity: .85;
                     }
                 }
             }
@@ -2505,7 +2506,6 @@ section {
                                 @include vp(line-height, 30px);
                                 font-weight: $fw4;
                                 color: $black;
-                                opacity: .8;
                             }
 
                             &.btn_searh_delete {

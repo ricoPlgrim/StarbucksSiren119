@@ -615,8 +615,8 @@
                 display: flex; 
                 .cm_check_box {  
                     label {
-                        color: $black-87;
-                        opacity: 1; 
+                        color: $black;
+                        opacity: 1;  
                         input[type="checkbox"] {
                             @include vp(padding-left, 64px); 
                         } 
@@ -626,7 +626,7 @@
                     position: relative; 
                     display: flex;
                     align-items: center;
-                    color: $black-87;
+                    color: $black;
                     @include vp(font-size, $f13);
                     @include vp(margin-left, 64px); 
                     @include vp(padding-left, 48px);
@@ -647,7 +647,7 @@
                     position: relative;
                     display: flex;
                     align-items: center;
-                    color: $black-87;
+                    color: $black;
                     @include vp(font-size, $f13);
                     @include vp(margin-left, auto); 
                     @include vp(padding-left, 48px);

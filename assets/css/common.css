@@ -6258,6 +6258,7 @@ section.searh .searh_contents .search_top h3 {
   font-size: 32px;
   line-height: 32px;
   font-weight: 600;
+  color: #000;
 }
 @media screen and (max-width: 750px) {
   section.searh .searh_contents .search_top h3 {
@@ -6275,7 +6276,7 @@ section.searh .searh_contents .search_top .btn_all_delete {
   line-height: 28px;
   color: #000;
   font-weight: 400;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 @media screen and (max-width: 750px) {
   section.searh .searh_contents .search_top .btn_all_delete {
@@ -6295,7 +6296,7 @@ section.searh .searh_contents .search_top .btn_all_delete::after {
   width: 100%;
   background-color: #000;
   height: 2px;
-  opacity: 0.5;
+  opacity: 0.85;
 }
 @media screen and (max-width: 750px) {
   section.searh .searh_contents .search_top .btn_all_delete::after {
@@ -6332,7 +6333,6 @@ section.searh .searh_contents .search_list_box .search_list li a.title {
   line-height: 30px;
   font-weight: 400;
   color: #000;
-  opacity: 0.8;
 }
 @media screen and (max-width: 750px) {
   section.searh .searh_contents .search_list_box .search_list li a.title {
