@@ -12,7 +12,7 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_back" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" onclick='history.back(-1); return false;' aria-label="뒤로가기 버튼" aria-label="뒤로가기 버튼"></button>
             <h1>현황.통계</h1>
         </header>
         <section class="chart">
@@ -21,13 +21,12 @@
                 <div class="date_setting">
                     <div class="date_start  active">
                         <span class="date_text">2024-04-13</span>
-                        <input type="date" name="startdate" id="startdate" value="2018-07-22" min="2018-01-01"
-                            max="2018-12-31">
+                        <input type="date" name="startdate" id="startdate" value="2024-04-13" min="2024-01-01" max="2024-12-31">
+                     
                     </div> 
                     <div class="date_end active">
                         <span class="date_text">2024-04-13</span>
-                        <input type="date" name="enddate" id="enddate" value="2018-07-22" min="2018-01-01"
-                            max="2018-12-31">
+                        <input type="date" name="enddate" id="enddate" value="2024-04-13" min="2024-01-01" max="2024-12-31">
                     </div>
                 </div>
 
@@ -35,7 +34,7 @@
             <div class="chart_wrap"> 
                 <h3>카테고리별 현황 분포​</h3>
                 <!-- 차트 영역 -->
-                <img src="../assets/images/temp/@temp_chart_img.png" alt="차트 이미지">
+                <img src="../assets/images/temp/@temp_chart_img.png" alt="카테고리별 현황 분포 차트 이미지">
             </div>
         </section>
         <!--bottom buttons-->

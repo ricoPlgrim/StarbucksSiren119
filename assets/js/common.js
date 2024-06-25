@@ -121,6 +121,7 @@ var commonUi = {
         this.addEvent();
     },
 
+      // 창 크기 조절 이벤트    
     resizeEvent: function () {
         _typeBtns.each(function () {
             if ($(this).hasClass("on")) {
@@ -129,6 +130,7 @@ var commonUi = {
         });
     },
 
+    // 스크롤 이벤트 처리
     scrollEvent: function () {
         var _sT = $(this).scrollTop();
         var cHeader = $("header.common");
@@ -151,20 +153,24 @@ var commonUi = {
 
     },
 
+    // 스크롤탑 버튼 클릭 이벤트
     scrollTopClick: function () {
         _wrap.animate({ scrollTop: 0 }, 100);
     },
 
+    // gnb 버튼 클릭 이벤트
     gnbBtnClick: function () {
         _gnb.css("display", "block");
         _htmlBody.css("overflow", "hidden");
     },
 
+    // gnb 닫기 버튼 클릭 이벤트
     gnbCloseClick: function () {
         _htmlBody.css("overflow", "");
         _gnb.css("display", "none");
     },
 
+     // 하단 시트 팝업 열기
     bottomSheetOpen: function (popupId) {
         var layerName = "#" + popupId;
         $(layerName).addClass("open");
@@ -174,6 +180,7 @@ var commonUi = {
         }, 50);
     },
 
+     // 하단 시트 팝업 닫기
     bottomSheetHide: function (popupId) {
         var layerName = "#" + popupId;
         $(".sheet_wrap").removeClass("open");
@@ -183,6 +190,7 @@ var commonUi = {
         }, 100);
     },
 
+     // 달력 버튼 클릭 이벤트
     btnDateListClick: function () {
         var index = $(this).index();
         _dateBtnList.removeClass("on");
@@ -190,6 +198,7 @@ var commonUi = {
         index === 3 ? commonUi.toggleDateFields(true) : commonUi.toggleDateFields(false);
     },
 
+      // 날짜 필드 활성화/비활성화
     toggleDateFields: function (isActive) {
         var action = isActive ? "removeClass" : "addClass";
         var reverseAction = isActive ? "addClass" : "removeClass";
@@ -198,13 +207,13 @@ var commonUi = {
         $(".date_start, .date_end")[reverseAction]("active");
     },
 
-   
+    // 시작 날짜 변경 이벤트
     startDateValue: function () {  // 시작 날짜 선택 시 _lastSelectedStartDate 저장
         _lastSelectedStartDate = $(this).val();
         commonUi.updateSelectedDates();
     },
 
-  
+    // 시작 날짜 input 블러 이벤트
     startValueBlur: function () {  // 시작 날짜 input이 포커스를 잃을 때, 만약 날짜가 선택되지 않았다면 마지막 선택한 날짜로 설정
         if (!$(this).val() && _lastSelectedStartDate) {
             $(this).val(_lastSelectedStartDate);
@@ -212,11 +221,13 @@ var commonUi = {
         commonUi.updateSelectedDates();
     },
 
+     // 종료 날짜 변경 이벤트
     endDateValue: function () {
         _lastSelectedEndDate = $(this).val();
         commonUi.updateSelectedDates();
     },
-    
+
+     // 종료 날짜 input 블러 이벤트
     endDateBlur: function () {
         if (!$(this).val() && _lastSelectedEndDate) { // 시작 날짜 input이 포커스를 잃을 때, 만약 날짜가 선택되지 않았다면 마지막 선택한 날짜로 설정
             $(this).val(_lastSelectedEndDate);
@@ -224,6 +235,7 @@ var commonUi = {
         commonUi.updateSelectedDates();
     },
 
+    // 선택된 날짜 업데이트
     updateSelectedDates: function () { //날짜 텍스트 표시
         if (_lastSelectedStartDate) {
             $(".date_start .date_text").text(_lastSelectedStartDate);
@@ -233,7 +245,8 @@ var commonUi = {
         }
     },
 
-    updateBarPosition: function (button) {    //상단 탭 바 에니메이션 
+    // 상단 탭 바 애니메이션 업데이트
+    updateBarPosition: function (button) {   
         var offsetLeft = button.position().left;
         var bars = $(".cm_tab_contents .bar");
         gsap.to(bars, {
@@ -243,6 +256,7 @@ var commonUi = {
         });
     },
 
+     // 타입 버튼 클릭 이벤트
     typeBtnsClick: function (e) {
         e.preventDefault();
         var index = $(this).index();
@@ -258,6 +272,7 @@ var commonUi = {
             $(".cm_full_wrap .buttons_list").eq(index).addClass("on");
         }
     },
+
     // 하단 fixed 댓글 입력창 이벤트
     textFormClick: function (e) {
         var that = $(this);
@@ -297,6 +312,7 @@ var commonUi = {
         $(".btn_delete").on("click", deleteText);
 
     },
+
     // 공통 input 이벤트
     inputFormClick: function() {
         var that = $(this);
@@ -324,6 +340,7 @@ var commonUi = {
 
         $(".btn_delete").on("click", deleteText);
     },
+
     // 댓글 답글 영역 textarea
     handleTextarea: function() {
         var that = $(this);
@@ -356,6 +373,7 @@ var commonUi = {
 
         $(".btn_delete").on("click", deleteText);
     },
+
     // 보고 작성 상품명 검색 인풋
     handleSearchItem: function() {
         var searchInput = $(this);
@@ -390,6 +408,8 @@ var commonUi = {
 
         list.on("click", clickSearchItem);
     },
+
+     // 메뉴 클릭 이벤트 핸들러
     handleMenuClick: function (e, wrapMenu = false) {
         e.preventDefault();
         var $this = $(this);
@@ -420,11 +440,13 @@ var commonUi = {
         commonUi.centerMenu(menuContainer, $this);
     },
 
+     // 하위 메뉴 클릭 이벤트
     subDepsMenuClick: function () {
         $(this).siblings().removeClass("on");
         $(this).addClass("on");
     },
 
+    // 메뉴 가운데로 이동
     centerMenu: function (menuContainer, menuItem) {
         var containerWidth = menuContainer.outerWidth();
         var itemOffsetLeft = menuItem.offset().left;
@@ -436,11 +458,13 @@ var commonUi = {
         }, 300);
     },
 
+     // 팝업 아이템 클릭 이벤트
     popupItemClick: function () {     // 레이어 팝업 이벤트
         var targetName = $(this).data("target");
         if (targetName) commonUi.openPopup(targetName);
     },
 
+    // 팝업 열기
     openPopup: function (targetName) {
         var layerName = "#" + targetName;
         var popupType = $(layerName).attr("class");
@@ -472,24 +496,29 @@ var commonUi = {
         }
     },
 
+     // 검색어 입력 이벤트
     inputTarget: function () {  //검색어 입력시 한글자이상 버튼 삭제 버튼 노출
         var inputLength = $(this).val().length;
         _btnTextDelete.css("display", inputLength > 0 ? "block" : "none");
     },
 
+    // 인풋 포커스 이벤트
     inputFocusEvent: function () {
         _inputBoxTarget.addClass('active');
     },
 
+    // 인풋 포커스 아웃 이벤트
     inputFocusOutEvent: function () {
         _inputBoxTarget.removeClass('active');
     },
 
+    // 인풋 텍스트 삭제 클릭 이벤트
     inPutTextDeleteClick: function () {
         _searchInput.val("");
         $(this).css("display", "none");
     },
 
+    // 로그인 입력값 체크
     loginValueCheck: function () {
         var userIdLength = $(".user_id").val().length;
         var userPwLength = $(".user_pw").val().length;
@@ -501,6 +530,7 @@ var commonUi = {
         }
     },
 
+    // 타입 버튼 닫기 클릭 이벤트
     btnTypeCloseClick: function () {
         var btnGroup = $(this).parents(".btn_group");
         var liLength = $(".cm_btn_list li").length;
@@ -514,10 +544,12 @@ var commonUi = {
         }
     },
 
+     // 탭 인덱스 설정
     setTabIndex: function (index) {
         localStorage.setItem('tabIndex', index);
     },
 
+    // 탭 활성화
     tabActivation: function () {
         var path = window.location.pathname;
         var page = path.split("/").pop();
@@ -540,16 +572,19 @@ var commonUi = {
         }
     },
 
+     // 행 스크롤 박스 체크
     rowScrollBoxCheck: function () {
         var scrollLeft = $(this).scrollLeft();
         var dimd = $(".btn_group .dimd");
         dimd.css("display", scrollLeft > 10 ? "none" : "block");
     },
 
+    // 북마크 버튼 클릭 이벤트
     btnBookMarkClick: function () {
         $(this).toggleClass("on");
     },
 
+     // 파일 이미지 업로드 처리
     fileImgUpload: function(e) {
         var files = e.target.files;
 
@@ -629,6 +664,7 @@ var commonUi = {
         });
     },
 
+     // 텍스트 상자 포커스 이벤트
     textBoxForcusEvent: function(e){
         if (e.type === 'focusin') {
             $( this ).parents( ".text_wrap" ).addClass( "on" );

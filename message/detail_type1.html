@@ -12,7 +12,7 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_back" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" onclick='history.back(-1); return false;' aria-label="뒤로가기"></button>
             <h1>수신팀 상세 지정</h1>
         </header>
         <section class="message_detail">
@@ -20,36 +20,38 @@
             <div class="inner">
                 <div class="team_contents">
                   
-                    <!-- <div class="select_title">
+                    <!-- 
+                        <div class="select_title">
                         <em class="select_team">03개 팀 선택 확인</em>
                         <div class="btn_group">
                             <div class="inner">
                                 <ul class="cm_btn_list">
                                     <li>
                                         <button class="cm_btn_round on tag"><span class="text">전략기획본부</span></button>
-                                        <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
+                                        <a href="javascript:;" class="typetag_close"  aria-label="전략기획본부 삭제"><span class="blind">삭제</span></a>
                                     </li>
                                     <li>
                                         <button class="cm_btn_round on tag"><span class="text">사업기획팀</span></button>
-                                        <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
+                                        <a href="javascript:;" class="typetag_close" aria-label="사업기획팀 삭제"><span class="blind">삭제</span></a>
                                     </li>
                                     <li>
                                         <button class="cm_btn_round on tag"><span class="text">데이터사이언스팀</span></button>
-                                        <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
+                                        <a href="javascript:;" class="typetag_close" aria-label="데이터사이언스팀 삭제"><span class="blind">삭제</span></a>
                                     </li>
                                     <li>
                                         <button class="cm_btn_round on tag"><span class="text">운영팀</span></button>
-                                        <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
+                                        <a href="javascript:;" class="typetag_close" aria-label="운영팀 삭제"><span class="blind">삭제</span></a>
                                     </li>
                                     <li>
                                         <button class="cm_btn_round on tag"><span class="text">DM</span></button>
-                                        <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
+                                        <a href="javascript:;" class="typetag_close"  aria-label="DM 삭제"><span class="blind">삭제</span></a>
                                     </li>
                                 </ul>
                                 <div class="dimd"></div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
+                 -->
 
                     <!--select_title 엘리먼트가 노출 되면 checkbox_list클래스에 on처리 -->
 
@@ -78,8 +80,10 @@
                     </ul>
                     <div class="input_contents">
                         <div class="input_box">
-                            <input type="text"  placeholder="팀명을 검색하세요." class="search_input">
-                            <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                            <form action="" method="get">
+                                <input type="text" placeholder="팀명을 검색하세요." class="search_input" aria-label="팀명 검색">
+                                <button type="button" class="btn_text_delete" aria-label="검색어 삭제"><span class="blind">검색어 삭제</span></button>
+                            </form>
                         </div>
                     </div>
                     <div class="team_list_contents">
@@ -97,11 +101,14 @@
         <!-- 하단 파트너 연락처 레이어 팝업 -->
 
 
-        <aside class="scroll_top_box">
-            <a href="javascript:;">
+        <!--bottom buttons-->
+        <aside class="scrolltop_box ">
+            <a href="javascript:;" class="btn_top" aria-label="상단으로 이동">
                 <span class="blind">상단으로 이동</span>
             </a>
-        </aside>
+            <span class="arrow"></span>
+        </aside>  
+
 
     </main>
     <script src="../assets/js/lib/jquery-3.7.1.min.js"></script>

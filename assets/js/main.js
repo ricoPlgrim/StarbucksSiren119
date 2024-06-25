@@ -1,4 +1,4 @@
-var _w;
+/* global var*/
 var _menuBtnlist;
 var _main;
 var _switchBoxBtns;
@@ -15,7 +15,6 @@ var mainUi = {
         this.loadEvent();
     },
     create: function () {
-        _w = $(window);
         _main = $("main");
         _menuBtnlist = _main.find(".menu_btn-list").find("li");
         _switchBoxBtns = _main.find(".switch_round > a");
@@ -44,10 +43,12 @@ var mainUi = {
         this.addEvent();
     },
 
+    //로컬 스토리지를 업데이트
     updateLocalStorage: function (values) {
         localStorage.setItem('selectedValues', JSON.stringify(values));
     },
 
+    // 메뉴 버튼 클릭 이벤트 핸들러
     menuBtnListClick: function () {
         var className = $(this).attr('class');
         var sectionInner = $(".section_inner");
@@ -62,7 +63,7 @@ var mainUi = {
         }
 
     },
-
+  // 공통 스위치 액션 함수
     commonSwitchAction: function (index) {
         var contents = $(".sections").find("section");
         var roundBar = $(".switch_round");
@@ -79,16 +80,19 @@ var mainUi = {
         }
     },
 
+     // 메인 스위치 변경 함수
     mainSwichCahge: function ($type) {
         commonUi.gnbCloseClick();
         mainUi.commonSwitchAction($type);
     },
 
+    // 스위치 박스 버튼 클릭 이벤트 핸들러
     switchBoxBtnClick: function () {
         var index = $(this).index();
         mainUi.commonSwitchAction(index);
     },
 
+     // 태그 닫기 클릭 이벤트 핸들러
     tagCloseClick: function () {
         var text = $(this).siblings('.cm_btn_round').find('.text').text();
         $(this).parent('li').remove();
@@ -106,7 +110,7 @@ var mainUi = {
     //선택한 벨류값 세팅
     updateSelectedValues: function () {
 
-       //벨류값 0일떄  setting_contents 클래스 on 패딩값 지움
+      // 값이 0일 때 setting_contents 클래스에서 on 패딩 값을 제거
        if(  $('.filter_checkbox:checked').length == 0 ){
          if( $( ".setting_contents" ).hasClass( "on" )){
             $( ".setting_contents" ).removeClass( "on" );
@@ -133,11 +137,9 @@ var mainUi = {
         // accident filter에 태그가 없으면 숨김
         var accidentFilterHasTags = $('.accident_filter .cm_btn_list .cm_btn_round.on.tag').length === 0;
         $('.accident_filter').css('display', accidentFilterHasTags ? 'none' : 'flex');
-        // if( $('.setting_contents').hasClass( "on" )){
-        //     $('.setting_contents').removeClass( "on" );
-        // }
     },
 
+     // 모든 체크박스를 선택하는 함수
     typeAllCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
@@ -147,6 +149,7 @@ var mainUi = {
         mainUi.updateSelectedValues();
     },
     
+     // 특정 체크박스를 선택 해제하는 함수
     typeNotCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
@@ -156,7 +159,7 @@ var mainUi = {
         mainUi.updateSelectedValues();
     },
     
-    // 닫기 버튼 클릭 시 li 삭제
+     // 닫기 버튼 클릭 시 li를 삭제하는 함수
     closeTag: function () {
         var text = $(this).siblings('.cm_btn_round').find('.text').text();
         $('input[type="checkbox"]').each(function( index, item) {
@@ -168,6 +171,7 @@ var mainUi = {
         mainUi.updateSelectedValues();
     },
 
+    // 적용 버튼 클릭 시 이벤트 
     btnApplyClick: function () {
         var selectedValues = [];
     
@@ -179,7 +183,7 @@ var mainUi = {
             }
         });
     
-        // .accident_filter .cm_btn_list에서 선택된 값을 수집하고 표시 업데이트
+         // .accident_filter .cm_btn_list에서 선택된 값을 수집하고 표시를 업데이트
         $('.accident_filter .cm_btn_list li').each(function () {
             var value = $(this).find('.text').text();
             if (!selectedValues.includes(value)) {
@@ -199,7 +203,7 @@ var mainUi = {
         }
     },
     
-    // 벨류값 초기화
+    // 값을 초기화하는 함수
     btnResetClick: function () {
         $('input[type="checkbox"]').prop('checked', false);
         $('.cm_btn_list.etc, .accident_filter .cm_btn_list').empty();

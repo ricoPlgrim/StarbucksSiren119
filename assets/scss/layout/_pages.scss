@@ -15,7 +15,7 @@ section {
                 left: 0;
                 width: 100%;
                 @include vp(height, 12px);
-                background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+                background: linear-gradient(0deg, #FFF 9.03%, $light-gray-4 100%);
             }
 
             li {
@@ -481,7 +481,7 @@ section {
                                 height: auto;
                                 @include vp(min-height, 78px);
                                 @include vp(max-height, 275px);
-                                background: #fff;
+                                background: $white;
                                 z-index: 10;
                                 @include vp(border-radius, 16px);
                                 background-color: $white;
@@ -655,7 +655,7 @@ section {
 
                         &::-webkit-scrollbar-thumb {
                             border-radius: 10px;
-                            background: #888;
+                            background: $light-gray-7;
                         }
 
                         textarea {
@@ -842,7 +842,7 @@ section {
                                 @include vp(bottom, 0px);
                                 @include vp(width, 4px);
                                 @include vp(height, 26px);
-                                background: #888888;
+                                background: $light-gray-7;
                             }
                         }
                     }
@@ -858,7 +858,7 @@ section {
                         span {
                             @include vp(margin-right, 17px);
                             @include vp(font-size, $f12);
-                            color: #888888;
+                            color: $light-gray-7;
 
                             &.comments {
                                 @include vp(padding-left, 32px);
@@ -1372,7 +1372,7 @@ section {
                 .info02 {
                     @include vp(margin-bottom, 20px);
                     @include vp(font-size, $f12);
-                    color: #888;
+                    color: $light-gray-7;
 
                     span {
                         @include vp(margin-right, 20px);
@@ -1503,7 +1503,7 @@ section {
                         @include vp(left, -40px);
                         @include vp(right, -40px);
                         @include vp(bottom, -40px);
-                        background: #F6F6F6;
+                        background: $light-gray-4;
                         z-index: -1;
                     }
 
@@ -1670,7 +1670,7 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: #F6F6F6;
+        background: $light-gray-4;
         @include full-height;
         overflow: hidden;
 
@@ -1800,7 +1800,7 @@ section {
 
                         &::-webkit-scrollbar-thumb {
                             border-radius: 10px;
-                            background: #888;
+                            background: $light-gray-7;
                         }
 
                         textarea {
@@ -1983,7 +1983,7 @@ section {
                         width: 100%;
                         @include vp(height, 80px);
 
-                        >input {
+                        input {
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -2185,7 +2185,7 @@ section {
                 left: 0;
                 width: 100%;
                 @include vp(height, 12px);
-                background: linear-gradient(0deg, #FFF 9.03%, #F6F6F6 100%);
+                background: linear-gradient(0deg, #FFF 9.03%, $light-gray-4 100%);
             }
         }
 
@@ -2393,7 +2393,7 @@ section {
                     font-weight: $fw4;
 
                     &::placeholder {
-                        color: #bbb;
+                        color: $light-gray-6;
                         @include vp(font-size, $f15 );
                         transform-origin: left center;
                         @include vp(letter-spacing, .5px);
@@ -2526,7 +2526,7 @@ section {
 
                 .no_list {
                     display: none;
-                    color: #aaa;
+                    color: $light-gray-1;
                     text-align: left;
                     @include vp(font-size, $f13 );
                     font-weight: $fw4;

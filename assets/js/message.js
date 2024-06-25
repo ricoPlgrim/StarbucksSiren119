@@ -1,7 +1,4 @@
-
 /* global var*/
-var _w;
-
 var _message;
 var _appointed;
 var _allTeam;
@@ -17,7 +14,6 @@ var alarmUi = {
         this.loadEvent();
     },
     create: function () {
-        _w = $(window);
         _message = $( ".message" );
         _teamDetailPopup = $( "#teamDetailPopup" );
         _appointed = _message.find( "#appointed" );
@@ -41,30 +37,35 @@ var alarmUi = {
         this.addEvent();
     },
 
+    // 지정된 체크박스 변경 이벤트
     appointedChage: function(){
         if ($(this).is(':checked')) {
             commonUi.openPopup( "teamDetailPopup" );
         } 
     },
 
+    // 체크박스 변경 이벤트
     checkboxChage: function(){
         if ($(this).is(':checked')) {
             $('input[type=checkbox][name=check]').not(this).prop('checked', false);
         }
     },
 
+    // 전체 팀 체크박스 클릭 이벤트
     allTeamClick: function(){
         if ($(this).is(':checked')) {
             $('.team_list.check_list input[type=checkbox]').not(this).prop('checked', false);
         }
     },
 
+     // 개별 팀 체크박스 변경 이벤트
     allCheckboxesChange: function(){
         if ($(this).is(':checked')) {
             $('#allTeam').prop('checked', false);
         }
     },
 
+    // 팀 체크박스 변경 이벤트
     teamCheckBoxChange: function(){
         // 체크박스의 부모 라벨 요소를 찾습니다.
         var label = $(this).closest('label');
@@ -79,6 +80,7 @@ var alarmUi = {
         }
     },
 
+    // 팀 목록 버튼 클릭 이벤트
     teamListBtnClick: function(){
         var that = $( this ).parents( "li" );
         var list = _message.find( ".team_list" ).find( "li" );

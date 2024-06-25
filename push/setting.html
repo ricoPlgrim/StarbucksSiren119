@@ -10,7 +10,7 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_close" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" onclick='history.back(-1); return false;' aria-label="뒤로가기"></button>
             <h1>알림설정</h1>
         </header>
         <section class="setting">
@@ -20,12 +20,12 @@
                     <ul class="setting_list">
                         <li>
                             <h3>전체 알림</h3>
-                            <a href="javascript:;" class="btn_disableAll">전체 끄기</a>
+                            <a href="javascript:;" class="btn_disableAll" aria-label="전체 알림 끄기">전체 끄기</a>
                         </li>
                         <li>
                             <dl>
                                 <dt>사건·사고 등록 알림​</dt>
-                                <dd><a href="javascript:;" class="btn_disable off">전체 끄기</a></dd>
+                                <dd><a href="javascript:;" class="btn_disable off" aria-label="사건·사고 등록 알림 끄기">전체 끄기</a></dd>
                             </dl>
                         </li>
                         <li>
@@ -33,7 +33,7 @@
                                 <dt>전체사고 알림​</dt>
                                 <dd>
                                     <div class="cm_toggle_container">
-                                        <input type="checkbox" id="toggle1" class="toggle_input accident">
+                                        <input type="checkbox" id="toggle1" class="toggle_input accident" aria-label="전체사고 알림 켜기">
                                         <label for="toggle1" class="toggle_label"></label>
                                     </div>
                                 </dd>
@@ -44,7 +44,7 @@
                                 <dt>긴급사고만 알림​</dt>
                                 <dd>
                                     <div class="cm_toggle_container">
-                                        <input type="checkbox" id="toggle2" class="toggle_input accident">
+                                        <input type="checkbox" id="toggle2" class="toggle_input accident"  aria-label="긴급사고만 알림 켜기">
                                         <label for="toggle2" class="toggle_label"></label>
                                     </div>
                                 </dd>
@@ -52,10 +52,10 @@
                         </li>
                         <li class="last">
                             <dl>
-                                <dt>댓글, 답글 알림</dt>
+                                <dt>댓글, 답글 알림</dt>
                                 <dd>
                                     <div class="cm_toggle_container">
-                                        <input type="checkbox" id="toggle3" class="toggle_input">
+                                        <input type="checkbox" id="toggle3" class="toggle_input" aria-label="댓글, 답글 알림 켜기">
                                         <label for="toggle3" class="toggle_label"></label>
                                     </div>
                                 </dd>
@@ -71,7 +71,7 @@
             </div>
         </section>
            <!-- 수정 완료 알럿 팝업 -->
-           <div class="layer_toast" id="settingPop">
+           <div class="layer_toast" id="settingPop"  role="status" aria-live="polite">
             <div class="pop_cont01">
                 <p class="text"></p>
             </div>

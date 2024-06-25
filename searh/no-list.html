@@ -15,14 +15,14 @@
             <h2 class="blind">검색영역 페이지</h2>
             <div class="input_contents">
                 <div class="input_box">
-                    <input type="text"  placeholder="검색어를 입력해 주세요" class="search_input">
-                    <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                    <label for="searchInput" class="blind">검색어 입력</label>
+                    <input type="text" id="searchInput" placeholder="검색어를 입력해 주세요" class="search_input">
+                    <button class="btn_text_delete" aria-label="검색어 삭제"><span class="blind">검색어 삭제</span></button>
                 </div>
-                <button class="btn_cancel" onclick='history.back(-1); return false;'>취소</button>
+                <button class="btn_cancel" onclick='history.back(-1); return false;'  aria-label="취소">취소</button>
             </div>
             <div class="searh_contents">
-                <p class="result">검색결과가 없습니다.</p>
-                   
+                <p class="result" aria-live="polite">검색결과가 없습니다.</p>
             </div>             
         </section>
         

@@ -1,6 +1,5 @@
 
 /* global var*/
-var _w;
 var _docment;
 var _btnApply;
 var _btnReset;
@@ -11,7 +10,7 @@ var filterUi = {
         this.loadEvent();
     },
     create: function () {
-        _docment = $(document);
+        _docment = $( document );
         _btnApply = $( ".filter" ).find( ".cm_btn_round.active" );
         _btnReset = $( ".filter" ).find( ".cm_btn_round.on" );
 
@@ -32,13 +31,14 @@ var filterUi = {
         this.addEvent();
     },
 
+    // 선택된 값을 업데이트
     updateSelectedValues: function () {
         $('.cm_btn_list.etc').empty();
         $('input[type="checkbox"]:checked').each(function() {
             var text = $(this).data('value');
             var listItem = `<li>
                 <button class="cm_btn_round on tag"><span class="text">${text}</span></button>
-                <a href="javascript:;" class="btn_close"><span class="blind">삭제</span></a>
+                <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
             </li>`;
             $('.cm_btn_list.etc').append(listItem);
         });
@@ -49,7 +49,7 @@ var filterUi = {
         }
     },
 
-
+ // "모두 선택" 체크박스 클릭 이벤트
     typeAllCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
@@ -59,7 +59,7 @@ var filterUi = {
         filterUi.updateSelectedValues();
     },
 
-
+    // 특정 체크박스 클릭 이벤트
     typeNotCheck: function () {
         var group = $(this).closest('.checkbox_list').data('group');
         if ($(this).is(':checked')) {
@@ -95,6 +95,7 @@ var filterUi = {
 
     },
 
+    // 리셋 버튼 클릭 시 이벤트
     btnResetClick: function(){
       $('input[type="checkbox"]').prop('checked', false);
       $('.cm_btn_list.etc').empty();

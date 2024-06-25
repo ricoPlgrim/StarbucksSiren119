@@ -10,14 +10,14 @@
 <body>
     <main id="wrap">
         <!-- 중앙 레이어 팝업 (버튼 있음)-->
-        <div class="layer_m_popup open">
+        <div class="layer_m_popup open"  role="dialog" aria-labelledby="popupTitle" aria-modal="true">
             <div class="pop_cont01">
                 <p class="text">팝업 컨텐츠</p>
                 <div class="btn_bottom">
-                    <button class="cm_btn_round on">
+                    <button class="cm_btn_round on" aria-label="취소">
                         <span class="text">취소</span>
                     </button>
-                    <button class="cm_btn_round active">
+                    <button class="cm_btn_round active"  aria-label="삭제">
                         <span class="text">삭제</span>
                     </button>
                 </div>

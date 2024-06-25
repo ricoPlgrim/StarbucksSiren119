@@ -10,7 +10,7 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'  aria-label="뒤로가기 버튼"></button>
             <h1>댓글 수정</h1>
         </header>
 
@@ -40,7 +40,7 @@
                             </ul>
                             <div class="btn_box">
                                 <span class="byte_num">0 / 1000byte</span>
-                                <span class="btn_delete">내용 삭제</span>
+                                <span class="btn_delete"  aria-label="내용 삭제">내용 삭제</span>
                             </div>
                         </div>
                     </div>
@@ -55,23 +55,23 @@
                         <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
                     </div>
                     <!-- 활성화되면 class="on" 추가 -->
-                    <button data-target="commentCompletePop">수정</button>
+                    <button data-target="commentCompletePop"  aria-label="댓글 수정">수정</button>
                 </div>
             </aside>
         </section>
 
         <!-- 댓글 알럿 레이어 팝업 -->
-        <div id="commentPop" class="layer_m_popup">
+        <div id="commentPop" class="layer_m_popup" role="dialog" aria-labelledby="commentPopLabel" aria-hidden="true">
             <div class="pop_cont01">
                 <p class="text">
                     댓글 작성을 종료하시겠습니까? <br/>
                     작성중인 내용은 저장되지 않습니다.
                 </p>
                 <div class="btn_bottom">
-                    <button class="cm_btn_round on">
+                    <button class="cm_btn_round on" aria-label="계속 작성">
                         <span class="text">계속 작성</span>
                     </button>
-                    <button class="cm_btn_round active">
+                    <button class="cm_btn_round active" aria-label="작성 종료">
                         <span class="text">작성 종료</span>
                     </button>
                 </div>
@@ -79,7 +79,7 @@
         </div>
         
         <!-- 댓글 등록 토스트 팝업 -->
-        <div class="layer_toast" id="commentCompletePop">
+        <div class="layer_toast" id="commentCompletePop"  role="alert">
             <div class="pop_cont01">
                 <p class="text">댓글이 수정되었습니다.</p>
             </div>

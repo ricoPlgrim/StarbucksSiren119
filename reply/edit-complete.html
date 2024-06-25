@@ -10,7 +10,7 @@
 <body>
     <main id="wrap" class="sub">
         <header class="common">
-            <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" data-target="commentPop" onclick='history.back(-1); return false;' aria-label="뒤로가기"></button>
             <h1>답글 수정</h1>
         </header>
 
@@ -66,7 +66,7 @@
                             <span class="byte_num">0 / 1000byte</span>
                             <div class="comment_edit">
                                 <span class="btn_edit">
-                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')">
+                                    <a href="javascript:;" onclick="commonUi.bottomSheetOpen('commentBtnPop')"  aria-label="수정 또는 삭제">
                                         수정 / 삭제
                                     </a>
                                 </span>
@@ -84,23 +84,23 @@
                         <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple disabled>
                     </div>
                     <!-- 활성화되면 class="on" 추가 -->
-                    <button data-target="commentCompletePop" disabled>수정</button>
+                    <button data-target="commentCompletePop" disabled  aria-label="수정">수정</button>
                 </div>
             </aside>
         </section>
 
         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
-        <aside class="bottom_sheet" id="commentBtnPop">
+        <aside class="bottom_sheet" id="commentBtnPop"  role="dialog" aria-labelledby="commentBtnPopTitle" aria-modal="true">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
-                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <a href="javascript:;" class="btn_sheet_close"  aria-label="닫기"></a>
                         <div class="btn_comment_contents">
                             <div class="btn_box">
-                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'">
+                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'" aria-label="수정">
                                     <span class="btn_edit">수정</span>
                                 </button>
-                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                <button class="cm_btn_round on" data-target="commentDeletePop" aria-label="삭제">
                                     <span class="btn_delete">삭제</span>
                                 </button>
                             </div>
@@ -112,17 +112,17 @@
         </aside>
 
         <!-- 댓글 알럿 레이어 팝업 -->
-        <div id="commentPop" class="layer_m_popup">
+        <div id="commentPop" class="layer_m_popup" role="dialog" aria-labelledby="commentPopTitle" aria-modal="true">
             <div class="pop_cont01">
                 <p class="text">
                     댓글 작성을 종료하시겠습니까? <br/>
                     작성중인 내용은 저장되지 않습니다.
                 </p>
                 <div class="btn_bottom">
-                    <button class="cm_btn_round on">
+                    <button class="cm_btn_round on" aria-label="계속 작성">
                         <span class="text">계속 작성</span>
                     </button>
-                    <button class="cm_btn_round active">
+                    <button class="cm_btn_round active" aria-label="작성 종료">
                         <span class="text">작성 종료</span>
                     </button>
                 </div>
@@ -130,21 +130,21 @@
         </div>
 
         <!-- 댓글 등록 토스트 팝업 -->
-        <div class="layer_toast" id="commentCompletePop">
+        <div class="layer_toast" id="commentCompletePop" role="status" aria-live="polite">
             <div class="pop_cont01">
                 <p class="text">답글이 수정되었습니다.</p>
             </div>
         </div>
 
          <!-- 댓글 삭제 레이어 팝업 -->
-         <div id="commentDeletePop" class="layer_m_popup">
+         <div id="commentDeletePop" class="layer_m_popup" role="dialog" aria-labelledby="commentDeletePopTitle" aria-modal="true">
             <div class="pop_cont01">
                 <p class="text">작성하신 내용을 삭제하시겠습니까?</p>
                 <div class="btn_bottom">
-                    <button class="cm_btn_round on">
+                    <button class="cm_btn_round on" aria-label="취소">
                         <span class="text">취소</span>
                     </button>
-                    <button class="cm_btn_round active">
+                    <button class="cm_btn_round active" aria-label="삭제">
                         <span class="text">삭제</span>
                     </button>
                 </div>

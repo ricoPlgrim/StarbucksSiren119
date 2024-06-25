@@ -3112,7 +3112,7 @@ section.detail .detail_wrap .detail_box .incident_box .text01:first-child::befor
   bottom: 0px;
   width: 4px;
   height: 26px;
-  background: #888888;
+  background: #888;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .incident_box .text01:first-child::before {
@@ -3153,7 +3153,7 @@ section.detail .detail_wrap .detail_box .detail_info {
 section.detail .detail_wrap .detail_box .detail_info .date_box span {
   margin-right: 17px;
   font-size: 24px;
-  color: #888888;
+  color: #888;
 }
 @media screen and (max-width: 750px) {
   section.detail .detail_wrap .detail_box .detail_info .date_box span {
@@ -5362,7 +5362,7 @@ section.message_detail > .inner .team_contents .input_contents .input_box {
     height: 10.6666666667vw;
   }
 }
-section.message_detail > .inner .team_contents .input_contents .input_box > input {
+section.message_detail > .inner .team_contents .input_contents .input_box input {
   position: absolute;
   top: 0;
   left: 0;
@@ -5384,66 +5384,66 @@ section.message_detail > .inner .team_contents .input_contents .input_box > inpu
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     top: -1.2vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     left: -10.1333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     border-radius: 1.6vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     font-size: 4.2666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     letter-spacing: 0.0666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     padding: 6vw 12vw 6.6666666667vw 12.6666666667vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     border: 0.2666666667vw solid #BBB;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input {
+  section.message_detail > .inner .team_contents .input_contents .input_box input {
     border-radius: 1.6vw;
   }
 }
-section.message_detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+section.message_detail > .inner .team_contents .input_contents .input_box input::placeholder {
   color: #BBB;
   font-size: 30px;
   letter-spacing: 0.5px;
   font-weight: 400;
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+  section.message_detail > .inner .team_contents .input_contents .input_box input::placeholder {
     font-size: 4vw;
   }
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input::placeholder {
+  section.message_detail > .inner .team_contents .input_contents .input_box input::placeholder {
     letter-spacing: 0.0666666667vw;
   }
 }
-section.message_detail > .inner .team_contents .input_contents .input_box > input:focus {
+section.message_detail > .inner .team_contents .input_contents .input_box input:focus {
   border: 2px solid #000;
 }
 @media screen and (max-width: 750px) {
-  section.message_detail > .inner .team_contents .input_contents .input_box > input:focus {
+  section.message_detail > .inner .team_contents .input_contents .input_box input:focus {
     border: 0.2666666667vw solid #000;
   }
 }
@@ -6122,7 +6122,7 @@ section.searh .input_contents .input_box > input {
   }
 }
 section.searh .input_contents .input_box > input::placeholder {
-  color: #bbb;
+  color: #BBB;
   font-size: 30px;
   transform-origin: left center;
   letter-spacing: 0.5px;
@@ -6387,7 +6387,7 @@ section.searh .searh_contents .search_list_box .search_list li:first-child {
 }
 section.searh .searh_contents .search_list_box .no_list {
   display: none;
-  color: #aaa;
+  color: #AAA;
   text-align: left;
   font-size: 26px;
   font-weight: 400;
@@ -8692,7 +8692,7 @@ html, body {
   max-width: 750px;
   background: #fff;
   box-shadow: unset;
-  border-top: 2px solid #eee;
+  border-top: 2px solid #EEE;
   box-shadow: 0 -1px 5px 0px #e5e5e5;
 }
 @media screen and (max-width: 750px) {
@@ -8702,7 +8702,7 @@ html, body {
 }
 @media screen and (max-width: 750px) {
   .cm_tab_bottom.filter {
-    border-top: 0.2666666667vw solid #eee;
+    border-top: 0.2666666667vw solid #EEE;
   }
 }
 .cm_tab_bottom.filter .button_grop.bottom .inner .cm_btn_round {
@@ -9723,7 +9723,7 @@ html, body {
   width: 750px;
   margin: 0 auto;
   background: #fff;
-  border-top: 2px solid #eee;
+  border-top: 2px solid #EEE;
   box-shadow: 0 -1px 5px 0px #e5e5e5;
   z-index: 20;
   min-height: 220px;
@@ -9741,7 +9741,7 @@ html, body {
 }
 @media screen and (max-width: 750px) {
   .cm_btn_comment {
-    border-top: 0.2666666667vw solid #eee;
+    border-top: 0.2666666667vw solid #EEE;
   }
 }
 @media screen and (max-width: 750px) {

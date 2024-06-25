@@ -103,31 +103,31 @@
                                             <li>
                                                 <button class="cm_btn_round on tag"><span
                                                         class="text">전략기획본부</span></button>
-                                                <a href="javascript:;" class="typetag_close"><span
+                                                <a href="javascript:;" class="typetag_close"  aria-label="전략기획본부 삭제"><span
                                                         class="blind">삭제</span></a>
                                             </li>
                                             <li>
                                                 <button class="cm_btn_round on tag"><span
                                                         class="text">사업기획팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"><span
+                                                <a href="javascript:;" class="typetag_close"  aria-label="사업기획팀 삭제"><span
                                                         class="blind">삭제</span></a>
                                             </li>
                                             <li>
                                                 <button class="cm_btn_round on tag"><span
                                                         class="text">데이터사이언스팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"><span
+                                                <a href="javascript:;" class="typetag_close"  aria-label="데이터사이언스팀 삭제"><span
                                                         class="blind">삭제</span></a>
                                             </li>
                                             <li>
                                                 <button class="cm_btn_round on tag"><span
                                                         class="text">운영팀</span></button>
-                                                <a href="javascript:;" class="typetag_close"><span
+                                                <a href="javascript:;" class="typetag_close"  aria-label="운영팀 삭제"><span
                                                         class="blind">삭제</span></a>
                                             </li>
                                             <li>
                                                 <button class="cm_btn_round on tag"><span
                                                         class="text">DM</span></button>
-                                                <a href="javascript:;" class="typetag_close"><span
+                                                <a href="javascript:;" class="typetag_close"  aria-label="DM 삭제"><span
                                                         class="blind">삭제</span></a>
                                             </li>
                                         </ul>
@@ -161,8 +161,10 @@
 
                             <div class="input_contents">
                                 <div class="input_box">
-                                    <input type="text" placeholder="팀명을 검색하세요." class="search_input">
-                                    <button class="btn_text_delete"><span class="blind">검색어 삭제</span></button>
+                                    <form action="" method="get">
+                                        <input type="text" placeholder="팀명을 검색하세요." class="search_input" aria-label="팀명 검색">
+                                        <button type="button" class="btn_text_delete" aria-label="검색어 삭제"><span class="blind">검색어 삭제</span></button>
+                                    </form>
                                 </div>
                             </div>
 

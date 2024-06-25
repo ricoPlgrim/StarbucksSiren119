@@ -1,10 +1,8 @@
 
 /* global var*/
-var _w;
 var _btnDisableAll;
 var _btnDisable;
 var _btnAccident;
-
 var _btnAllCheck;
 var _btnRemoveAll;
 
@@ -15,7 +13,6 @@ var alarmUi = {
         this.loadEvent();
     },
     create: function () {
-        _w = $(window);
         _setting = $( ".setting" );
         _btnDisableAll= _setting.find( ".btn_disableAll" );
         _btnDisable= _setting.find( ".btn_disable" );
@@ -39,6 +36,7 @@ var alarmUi = {
         this.addEvent();
     },
 
+     // 전체 알림 해지 버튼 클릭 이벤트 핸들러
     btnDisableAllClick: function(){
         if ($('#toggle1').is(':checked') || $('#toggle2').is(':checked') || $('#toggle3').is(':checked')) {
             $('.toggle_input').prop('checked', false);
@@ -47,8 +45,8 @@ var alarmUi = {
         }
     },
 
+    // 특정 알림 해지 버튼 클릭 이벤트 핸들러
     btnDisableClick: function(){
-
         if ($('#toggle1').is(':checked') || $('#toggle2').is(':checked')) {
             _btnAccident.prop('checked', false);
             commonUi.openPopup("settingPop"); 
@@ -56,11 +54,14 @@ var alarmUi = {
         }
     },
 
+    // 사고 알림 체크박스 변경 이벤트 핸들러
     btnAccidentCheck: function(){
         if ($(this).is(':checked')) {
             _btnAccident.not(this).prop('checked', false);
         }
     },
+
+     // 전체 체크 버튼 클릭 이벤트 핸들러
     btnAllCheck: function(){
         commonUi.bottomSheetHide('record');
         if( $( ".alarm_list" ).find( "li" ).length > 0  ){
@@ -68,6 +69,7 @@ var alarmUi = {
         }
     },
     
+     // 전체 삭제 버튼 클릭 이벤트 핸들러
     btnRemoveAlltag: function(){
         commonUi.bottomSheetHide('record');
         if( $( ".alarm_list_box" ).length > 0  ){

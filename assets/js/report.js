@@ -1,5 +1,4 @@
 /* global var*/
-var _w;
 var _report;
 var _reportListBtn;
 var _timeBtn;
@@ -13,7 +12,6 @@ var reportUi = {
         this.detailSwiper();
     },
     create: function(){
-        _w = $( window );
         _report = $(".sub");
         _reportListBtn = _report.find(".form_list li").filter(function() {
             return !$(this).hasClass("text_box") && !$(this).hasClass("time_box") && !$(this).hasClass("date_box");
@@ -31,9 +29,12 @@ var reportUi = {
         this.addEvent();
     },
    
+    // 리포트 버튼 클릭 이벤트
     reportBtnClick: function(){
         $(this).toggleClass("on");
     },
+
+    // 시간 버튼 클릭 이벤트
     timeBtnClick: function(){
         var timeInput = $(this).find(".time_input");
         var timeText = $(this).find(".time_display");  
@@ -55,6 +56,8 @@ var reportUi = {
             }
         });
     },
+
+    // 날짜 버튼 클릭 이벤트
     dateBtnClick: function(){
         var dateInput = $(this).find(".date_input");     
         var dateText = $(this).find(".date_display");  
@@ -71,6 +74,8 @@ var reportUi = {
             dateText.text(formattedDate);
         });
     },
+
+     // 상세 스와이퍼 설정
     detailSwiper: function(){
         if ($(".detail_swiper").length) {
             new Swiper(".detail_swiper", {

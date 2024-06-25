@@ -11,7 +11,7 @@
 <body>
     <main id="wrap" class="sub etc">
         <header class="common">
-            <button class="btn_back" onclick='history.back(-1); return false;'></button>
+            <button class="btn_back" onclick='history.back(-1); return false;'  aria-label="뒤로가기 버튼"></button>
             <h1>보고상세</h1>
             <!-- 북마크 활성화 class="on" -->
             <button class="btn_bookmark"></button>
@@ -23,22 +23,22 @@
             <div class="detail_visual detail_swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)" data-target="detailVisualPop">
+                        <a href="javascript:void(0)" data-target="detailVisualPop"  aria-label="상세 이미지 보기"></a>>
                             <div class="img_box"><img src="../assets/images/temp/temp_detail01.png" alt="" /></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)" data-target="detailVisualPop">
+                        <a href="javascript:void(0)" data-target="detailVisualPop"  aria-label="상세 이미지 보기">
                             <div class="img_box"><img src="../assets/images/temp/temp_detail01.png" alt="" /></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)" data-target="detailVisualPop">
+                        <a href="javascript:void(0)" data-target="detailVisualPop"  aria-label="상세 이미지 보기">
                             <div class="img_box"><img src="../assets/images/temp/temp_detail01.png" alt="" /></div>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="javascript:void(0)" data-target="detailVisualPop">
+                        <a href="javascript:void(0)" data-target="detailVisualPop"  aria-label="상세 이미지 보기">
                             <div class="img_box"><img src="../assets/images/temp/temp_detail01.png" alt="" /></div>
                         </a>
                     </div>
@@ -324,9 +324,9 @@
         </aside>  
 
          <!-- 상단 이미지 확대보기 레이어 팝업 -->
-         <div id="detailVisualPop" class="layer_popup view_img_popup">
+         <div id="detailVisualPop" class="layer_popup view_img_popup"  role="dialog" aria-labelledby="detailVisualPopLabel" aria-hidden="true">
             <header>
-                <button class="btn_close"></button>
+                <button class="btn_close"  aria-label="닫기"></button>
                 <div class="title">확대보기</div>
             </header>
             <div class="pop_cont01">
@@ -358,9 +358,9 @@
         </div>
 
         <!-- 상단 이미지 확대보기 레이어 팝업 -->
-        <div id="commentImgPop" class="layer_popup view_img_popup">
+        <div id="commentImgPop" class="layer_popup view_img_popup"  role="dialog" aria-labelledby="commentImgPopLabel" aria-hidden="true">
             <header>
-                <button class="btn_close"></button>
+                <button class="btn_close"  aria-label="닫기"></button>
                 <div class="title">이미지 보기</div>
             </header>
             <div class="pop_cont01">
@@ -392,14 +392,14 @@
         </div>
 
         <!-- 댓글 삭제 레이어 팝업 -->
-        <div id="commentDeletePop" class="layer_m_popup">
+        <div id="commentDeletePop" class="layer_m_popup" role="dialog" aria-labelledby="commentDeletePopLabel" aria-hidden="true">
             <div class="pop_cont01">
                 <p class="text">작성하신 내용을 삭제하시겠습니까?</p>
                 <div class="btn_bottom">
-                    <button class="cm_btn_round on">
+                    <button class="cm_btn_round on" aria-label="취소">
                         <span class="text">취소</span>
                     </button>
-                    <button class="cm_btn_round active">
+                    <button class="cm_btn_round active" aria-label="삭제">
                         <span class="text">삭제</span>
                     </button>
                 </div>
@@ -407,7 +407,7 @@
         </div>
 
         <!-- 하단 파트너 연락처 레이어 팝업 -->
-        <aside class="bottom_sheet" id="contactPop">
+        <aside class="bottom_sheet" id="contactPop"  role="dialog" aria-labelledby="contactPopLabel" aria-hidden="true">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
@@ -431,17 +431,17 @@
         </aside>
 
         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
-        <aside class="bottom_sheet" id="commentBtnPop">
+        <aside class="bottom_sheet" id="commentBtnPop" role="dialog" aria-labelledby="commentBtnPopLabel" aria-hidden="true">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
                         <a href="javascript:;" class="btn_sheet_close"></a>
                         <div class="btn_comment_contents">
                             <div class="btn_box">
-                                <button class="cm_btn_round on" onclick="location.href='../comment/edit.html'">
+                                <button class="cm_btn_round on" onclick="location.href='../comment/edit.html'" aria-label="댓글 수정">
                                     <span class="btn_edit">수정</span>
                                 </button>
-                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                <button class="cm_btn_round on" data-target="commentDeletePop" aria-label="댓글 삭제" >
                                     <span class="btn_delete">삭제</span>
                                 </button>
                             </div>
@@ -453,17 +453,17 @@
         </aside>
 
         <!-- 하단 댓글 수정/ 삭제 레이어 팝업 -->
-        <aside class="bottom_sheet" id="recommentBtnPop">
+        <aside class="bottom_sheet" id="recommentBtnPop" role="dialog" aria-labelledby="recommentBtnPopLabel" aria-hidden="true">
             <div class="sheet_wrap">
                 <div class="sheet_content">
                     <div class="sheet_top">
-                        <a href="javascript:;" class="btn_sheet_close"></a>
+                        <a href="javascript:;" class="btn_sheet_close"  aria-label="닫기"></a>
                         <div class="btn_comment_contents">
                             <div class="btn_box">
-                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'">
+                                <button class="cm_btn_round on" onclick="location.href='../reply/edit.html'" aria-label="답글 수정">
                                     <span class="btn_edit">수정</span>
                                 </button>
-                                <button class="cm_btn_round on" data-target="commentDeletePop">
+                                <button class="cm_btn_round on" data-target="commentDeletePop" aria-label="답글 삭제">
                                     <span class="btn_delete">삭제</span>
                                 </button>
                             </div>
@@ -475,7 +475,7 @@
         </aside>
 
         <!-- 댓글 등록 토스트 팝업 -->
-        <div class="layer_toast" id="commentCompletePop">
+        <div class="layer_toast" id="commentCompletePop"  role="dialog" aria-labelledby="commentCompletePopLabel" aria-hidden="true">
             <div class="pop_cont01">
                 <p class="text">댓글이 등록되었습니다.</p>
             </div>

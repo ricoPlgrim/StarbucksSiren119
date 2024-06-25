@@ -483,7 +483,7 @@ html, body {
         top: 0;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: $white;
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -586,7 +586,7 @@ html, body {
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #fff;
+            background-color: $white;
             z-index: 10;
             display: flex;
             justify-content: center;
@@ -609,7 +609,7 @@ html, body {
             align-items: center;
             text-align: center;
             @include vp( padding, 92px 40px 60px); 
-            background: #F7F7F7;;
+            background: #F7F7F7;
             h4 {
                 @include vp( padding-left, 148px); 
                 display: inline-flex;   
@@ -1277,7 +1277,7 @@ html, body {
         @include vp(max-width, 750px);
         background: $white;
         box-shadow: unset;
-        @include vp(border-top, 2px solid #eee);
+        @include vp(border-top, 2px solid $light-gray-3);
         box-shadow: 0 -1px 5px 0px #e5e5e5;
         .button_grop {
             &.bottom {
@@ -1861,7 +1861,7 @@ html, body {
     @include vp(width, 750px);
     margin: 0 auto;
     background: $white;
-    @include vp(border-top, 2px solid #eee);
+    @include vp(border-top, 2px solid $light-gray-3);
     box-shadow: 0 -1px 5px 0px #e5e5e5;
     z-index: 20;
     @include vp(min-height, 220px);
@@ -1891,7 +1891,7 @@ html, body {
 
         &::-webkit-scrollbar-thumb {
             border-radius: 10px;
-            background: #888;
+            background: $light-gray-7;
         }
 
         &.on {
