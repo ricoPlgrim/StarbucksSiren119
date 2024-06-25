@@ -622,13 +622,13 @@
 
         <!-- 보고하기 공통 작성 가이드 팝업 -->
         <!-- 파트너 안내 -->
-        <div class="layer_popup" id="guidePop01">
+        <div class="layer_popup" id="guidePop01" role="dialog" aria-labelledby="guidePop01Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close" aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="partner">파트너</h4>
+                    <h4 class="partner"  id="guidePop01Title">파트너</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -664,13 +664,13 @@
         </div>
 
         <!-- 재해/시설 안내 -->
-        <div class="layer_popup" id="guidePop02">
+        <div class="layer_popup" id="guidePop02" role="dialog" aria-labelledby="guidePop02Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close"  aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="disaster">재해/시설 안내</h4>
+                    <h4 class="disaster" id="guidePop02Title">재해/시설 안내</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -748,13 +748,13 @@
         </div>
 
         <!-- 이물 안내 -->
-        <div class="layer_popup" id="guidePop03">
+        <div class="layer_popup" id="guidePop03"  role="dialog" aria-labelledby="guidePop03Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close" aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="foreign ">이물</h4>
+                    <h4 class="foreign"  id="guidePop03Title">이물</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -790,13 +790,13 @@
         </div>
 
         <!-- 고객 안내 -->
-        <div class="layer_popup" id="guidePop04">
+        <div class="layer_popup" id="guidePop04" role="dialog" aria-labelledby="guidePop04Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close"  aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="customer">고객​</h4>
+                    <h4 class="customer" id="guidePop04Title">고객​</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -850,13 +850,13 @@
         </div>
 
         <!-- 화재​ -->
-        <div class="layer_popup" id="guidePop05">
+        <div class="layer_popup" id="guidePop05"  role="dialog" aria-labelledby="guidePop05Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close" aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="fire">화재​</h4>
+                    <h4 class="fire" id="guidePop05Title">화재​</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="commonUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -910,13 +910,13 @@
         </div>
 
         <!-- 식품안전 -->
-        <div class="layer_popup" id="guidePop06">
+        <div class="layer_popup" id="guidePop06"  role="dialog" aria-labelledby="guidePop06Title" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <button class="btn_close"></button>
+                    <button class="btn_close" aria-label="닫기"></button>
                 </div>
                 <div class="category_wrap">
-                    <h4 class="food_safety">식품안전</h4>
+                    <h4 class="food_safety" id="guidePop06Title">식품안전</h4>
                     <div class="btn_box">
                         <a href="board/index.html" class="cm_btn_round on"  onclick="mainUi.setTabIndex(1)">
                             <span class="text">주요보고 사례 보기</span>
@@ -958,11 +958,11 @@
         </div>
 
         <!--필터 팝업-->
-        <div class="layer_popup" id="filterPopup">
+        <div class="layer_popup" id="filterPopup"  role="dialog" aria-labelledby="filterPopupTitle" aria-hidden="true">
             <div class="pop_cont02">
                 <div class="head_box">
-                    <h1>필터</h1>
-                    <button class="btn_close"></button>
+                    <h1 id="filterPopupTitle">필터</h1>
+                    <button class="btn_close"  aria-label="닫기"></button>
                 </div>
                 <section class="filter">
                     <h2 class="blind">필터 페이지</h2>
@@ -971,37 +971,39 @@
                             <li class="on">
                                 <button type="bytton">월별 </button>
                             </li>
-                            <li>
+                            <li >
                                 <button type="bytton">1개월</button>
                             </li>
-                            <li>
+                            <li >
                                 <button type="bytton">3개월</button>
                             </li>
-                            <li>
+                            <li >
                                 <button type="bytton">직접입력</button>
                             </li>
                         </ul>
                         <div class="date_setting">
                             <div class="date_start disabled"> <!--disabled 버튼 막기-->
+                                <label for="startdate" class="blind">시작 날짜</label>
                                 <span class="date_text">2024-04-13</span>
-                                <input type="date" name="startdate" id="startdate" value="2024-04-13" min="2024-01-01" max="2024-12-31">
+                                <input type="date" name="startdate" id="startdate" value="2024-04-13" min="2024-01-01" max="2024-12-31" aria-label="시작 날짜">
                             </div>
                             <div class="date_end disabled"> <!--disabled 버튼 막기-->
+                                <label for="enddate" class="blind">종료 날짜</label>
                                 <span class="date_text">2024-04-13</span>
-                                <input type="date" name="enddate" id="enddate" value="2024-04-13" min="2024-01-01" max="2024-12-31">
+                                <input type="date" name="enddate" id="enddate" value="2024-04-13" min="2024-01-01" max="2024-12-31" aria-label="종료 날짜">
                             </div>
                         </div>
         
                     </div>
                     <div class="cm_tab_contents">
-                        <ul class="cm_type_list">
-                            <li class="on">
+                        <ul class="cm_type_list" role="tablist" aria-label="필터 타입 선택">
+                            <li class="on" >
                                 <button type="button">긴급/일반</button>
                             </li>
                             <li>
                                 <button type="button">사고 유형별</button>
                             </li>
-                            <li>
+                            <li> 
                                 <button type="button">DM</button>
                             </li>
                             <li>
@@ -1015,7 +1017,7 @@
                             <!--긴급/일반-->
                             <li class="item on">
                                 <div class="inner">
-                                    <ul class="checkbox_list"  data-group="type1">
+                                    <ul class="checkbox_list"  data-group="type1" aria-label="긴급/일반 필터">
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="typeAll">
@@ -1065,7 +1067,7 @@
                                     </ul>
                                 </div>
                                 <div class="inner">
-                                    <div class="depth_03 on">
+                                    <div class="depth_03 on" aria-label="파트너 필터" >
                                         <ul class="checkbox_list"  data-group="type2">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1102,7 +1104,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03" aria-label="고객 필터">
                                         <ul class="checkbox_list" data-group="type3">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1159,7 +1161,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03" aria-label="재해/시설 필터">
                                         <ul class="checkbox_list" data-group="type4">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1245,7 +1247,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="화재 필터">
                                         <ul class="checkbox_list" data-group="type5">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1304,7 +1306,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="이물 필터">
                                         <ul class="checkbox_list" data-group="type6">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1340,7 +1342,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03" aria-label="식품안전 필터">
                                         <ul class="checkbox_list" data-group="type7">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1428,7 +1430,7 @@
                                 </div>
                                 <div class="inner">
         
-                                    <div class="depth_03 on">
+                                    <div class="depth_03 on"  aria-label="운영1팀 필터">
                                         <ul class="checkbox_list" data-group="type8">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1505,7 +1507,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영2팀 필터">
                                         <ul class="checkbox_list" data-group="type9">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1617,7 +1619,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영3팀 필터">
                                         <ul class="checkbox_list" data-group="type10">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1718,7 +1720,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영4팀 필터">
                                         <ul class="checkbox_list" data-group="type11">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1819,7 +1821,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영5팀 필터">
                                         <ul class="checkbox_list" data-group="type12">
                                             <li>
                                                 <div class="cm_check_box">
@@ -1920,7 +1922,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영6팀 필터">
                                         <ul class="checkbox_list" data-group="type13">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2035,7 +2037,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영7팀 필터">
                                         <ul class="checkbox_list" data-group="type14">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2136,7 +2138,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영8팀 필터">
                                         <ul class="checkbox_list" data-group="type15">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2263,7 +2265,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영9팀 필터">
                                         <ul class="checkbox_list" data-group="type16">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2424,7 +2426,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영10팀 필터">
                                         <ul class="checkbox_list" data-group="type17">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2525,7 +2527,7 @@
                                         </ul>
                                     </div>
         
-                                    <div class="depth_03">
+                                    <div class="depth_03"  aria-label="운영11팀 필터">
                                         <ul class="checkbox_list" data-group="type18">
                                             <li>
                                                 <div class="cm_check_box">
@@ -2651,7 +2653,7 @@
                             <!--매장 타입-->
                             <li class="item">
                                 <div class="inner">
-                                    <ul class="checkbox_list" data-group="type19">
+                                    <ul class="checkbox_list" data-group="type19"  aria-label="매장 타입 필터">
                                         <li>
                                             <div class="cm_check_box">
                                                 <label for="all2">
@@ -2688,7 +2690,7 @@
                     <div class="cm_tab_bottom filter">
                         <!--체크 벨류값 노출 엘리먼트-->
                         <div class="bottom_group btn_group">
-                            <ul class="cm_btn_list etc">
+                            <ul class="cm_btn_list etc" aria-label="선택된 필터 목록">
                                 <!-- <li>
                                     <button class="cm_btn_round on tag"><span class="text">긴급</span></button>
                                     <a href="javascript:;" class="typetag_close"><span class="blind">삭제</span></a>
@@ -2714,11 +2716,11 @@
                         </div>
                         <div class="button_grop bottom">
                             <div class="inner">
-                                <button class="cm_btn_round on" >
+                                <button class="cm_btn_round on"  aria-label="초기화">
                                     <span class="text">초기화</span>
                                 </button>
                                 <!--on클래스 추가시 border font 색상 변경-->
-                                <button class="cm_btn_round active btn_close"  >
+                                <button class="cm_btn_round active btn_close" aria-label="적용" >
                                     <span class="text">적용</span>
                                 </button>
                             </div>
