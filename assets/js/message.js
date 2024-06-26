@@ -87,7 +87,11 @@ var alarmUi = {
         var contents = _message.find( ".team_contents" );
         that.remove();
         if( list.length-1 == 0 ){
+            if (_appointed.prop('checked')) {
+                _appointed.prop('checked', false);
+            } 
             contents.remove();
+
         }
        
     }

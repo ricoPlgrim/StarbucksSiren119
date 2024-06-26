@@ -5552,18 +5552,18 @@ section.message_detail .team_contents .team_list_contents {
   }
 }
 section.message_detail .team_contents .team_list_contents .team_list li {
-  padding-bottom: 36px;
-  margin-bottom: 36px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
   border-bottom: 2px solid #EEE;
 }
 @media screen and (max-width: 750px) {
   section.message_detail .team_contents .team_list_contents .team_list li {
-    padding-bottom: 4.8vw;
+    padding-bottom: 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.message_detail .team_contents .team_list_contents .team_list li {
-    margin-bottom: 4.8vw;
+    margin-bottom: 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -8923,6 +8923,46 @@ html, body {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
+.cm-ddd {
+  background-color: #DDD;
+}
+
+.cm-green {
+  background-color: #00A862;
+}
+
+.cm-black58 {
+  background-color: rgba(0, 0, 0, 0.58);
+}
+
+.cm-999 {
+  background-color: #999;
+}
+
+.cm-888 {
+  background-color: #888;
+}
+
+.cm-bbb {
+  background-color: #BBB;
+}
+
+.cm-lg9 {
+  background-color: #F7F7F7;
+}
+
+.cm-orange {
+  background-color: #FF2E00;
+}
+
+.cm-black38 {
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+.cm-black12 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
 /*라디오 박스*/
 .cm_radio_box {
   display: block;
@@ -9297,7 +9337,7 @@ html, body {
   }
 }
 .cm_setting_cotnents .inner .setting_list > li a {
-  color: rgba(0, 0, 0, 0.87);
+  color: #333;
   font-size: 26px;
   line-height: 24px;
   font-weight: 400;

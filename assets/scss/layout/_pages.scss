@@ -2067,8 +2067,8 @@ section {
 
                     .team_list {
                         li {
-                            @include vp(padding-bottom, 36px);
-                            @include vp(margin-bottom, 36px);
+                            @include vp(padding-bottom, 22px);
+                            @include vp(margin-bottom, 22px);
                             @include vp(border-bottom, 2px solid $light-gray-3 );
 
                             .checkbox_container {

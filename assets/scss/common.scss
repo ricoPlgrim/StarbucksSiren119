@@ -1392,10 +1392,6 @@ html, body {
 
 
 /*color 정의*/
-.cm-g {
-    background-color: $gray;
-}
-
 .cm-b {
     background-color: $black;
 }
@@ -1416,25 +1412,40 @@ html, body {
     background-color: $white;
 }
 
-.cm-g {
+.cm-ddd{
+    background-color: $light-gray-2;
+}
+
+.cm-green{
     background-color: $green;
 }
 
-.cm-bk58 {
+.cm-black58{
     background-color: $black-58;
 }
-
-.cm-g {
-    background-color: $gray;
+.cm-999{
+    background-color:$gray;
+}
+.cm-888{
+    background-color:$light-gray-7;
+}
+.cm-bbb{
+    background-color:$light-gray-6;
+}
+.cm-lg9{ 
+    background-color:$light-gray-9;
+}
+.cm-orange{  
+    background-color:$orange;
+}
+.cm-black38{ 
+    background-color:$black-38;
+}
+.cm-black12{ 
+    background-color:$black-12;
 }
 
-.cm-mg {
-    background-color: $light-gray-6;
-}
 
-.cm-bk12 {
-    background-color: $black-12;
-}
 
 
 /*라디오 박스*/
@@ -1645,9 +1656,9 @@ html, body {
                 }
 
                 a {
-                    color: $black-87;
+                    color: $dark-gray;
                     @include vp(font-size, $f13);
-                    @include vp(line-height, $f12);
+                    @include vp(line-height, $f12); 
                     font-weight: $fw4;
                 }
 
