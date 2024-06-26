@@ -194,7 +194,6 @@ var mainUi = {
         // 값의 존재 여부에 따라 표시 업데이트
         if (selectedValues.length > 0) {
             localStorage.setItem('selectedValues', JSON.stringify(selectedValues));
-            console.log(selectedValues); // 선택한 벨류값들 setitem으로 값 넣기
             $('.accident_filter').css('display', 'flex');
             $( ".setting_contents" ).addClass( "on" );
         } else {

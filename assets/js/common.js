@@ -113,6 +113,7 @@ var commonUi = {
         _btnBookmark.on("click", this.btnBookMarkClick); 
         
         _textAreaBox.on( "focusin focusout", this.textBoxForcusEvent );
+        _textAreaBox.on( "input", this.textBoxTextCheck );
         this.tabActivation();  //탭영역 로드 체크 순서       
     },
 
@@ -668,13 +669,27 @@ var commonUi = {
     textBoxForcusEvent: function(e){
         if (e.type === 'focusin') {
             $( this ).parents( ".text_wrap" ).addClass( "on" );
-            console.log('Input field has gained focus');
             // 포커스 인 이벤트 처리
         } else if (e.type === 'focusout') {
             $( this ).parents( ".text_wrap" ).removeClass( "on" );
-            console.log('Input field has lost focus');
             // 포커스 아웃 이벤트 처리
         }
+    },
+
+    textBoxTextCheck: function(){
+        var maxLength = $(this).parents(".text_wrap").find(".byte").text();  
+        console.log( maxLength );
+        maxLength = parseInt(maxLength, 10);   
+        var text = $(this).val();
+        var charCount = text.length;
+        var byteNum = $( this ).parents( ".text_wrap" ).find( ".count" );
+
+        if (charCount > maxLength) {
+            alert(maxLength + '자를 초과할 수 없습니다.');
+            $(this).val(text.substring(0, maxLength));
+            charCount = maxLength;
+        }
+        byteNum.text(charCount);
     }
 };
 
