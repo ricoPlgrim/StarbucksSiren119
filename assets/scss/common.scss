@@ -2022,7 +2022,7 @@ html, body {
                 }
             }
             .btn_box {
-                display: flex;
+                display: flex; 
                 align-items: center;
                 justify-content: space-between;
                 width: 100%;
@@ -2030,6 +2030,7 @@ html, body {
                     display: block;
                     @include vp(font-size, $f13);
                     color: $light-gray-1;
+                 
                 }
         
                 .btn_delete {

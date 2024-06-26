@@ -690,6 +690,13 @@ section {
                             @include vp(bottom, 24px);
                             @include vp(font-size, $f13);
                             color: $light-gray-1;
+                            .count{
+                                @include vp(margin-right, 5px);
+                            }
+                            .byte{
+                                @include vp(margin-left, 5px);
+                            }
+
                         }
                     }
 
@@ -1095,7 +1102,7 @@ section {
                         }
 
                         .btn_wrap {
-                            @include vp(margin-top, 30px);
+                            @include vp(margin-top, 30px); 
                             display: flex;
                             justify-content: space-between;
                         }
@@ -1144,7 +1151,12 @@ section {
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-
+                            .count{
+                                @include vp(margin-right, 5px);
+                            }
+                            .byte{
+                                @include vp(margin-left, 5px);
+                            }
                             textarea {
                                 width: 115%;
                                 @include vp(margin-bottom, -24px);
@@ -1233,7 +1245,12 @@ section {
                             @include vp(margin-top, 30px);
                             display: flex;
                             justify-content: space-between;
-
+                            .count{
+                                @include vp(margin-right, 5px);
+                            }
+                            .byte{
+                                @include vp(margin-left, 5px);
+                            }
                             .comment_edit {
                                 span {
                                     position: relative;
@@ -1830,6 +1847,12 @@ section {
                             @include vp(bottom, 40px);
                             @include vp(font-size, $f13);
                             color: $light-gray-1;
+                            .count{
+                                @include vp(margin-right, 5px);
+                            }
+                            .byte{
+                                @include vp(margin-left, 5px);
+                            }
                         }
                         &.on{
                             @include vp(border, 2px solid $black );

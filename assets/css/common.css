@@ -2869,6 +2869,22 @@ section.report .write_preview .preview_list li .text_wrap .byte_num {
     font-size: 3.4666666667vw;
   }
 }
+section.report .write_preview .preview_list li .text_wrap .byte_num .count {
+  margin-right: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap .byte_num .count {
+    margin-right: 0.6666666667vw;
+  }
+}
+section.report .write_preview .preview_list li .text_wrap .byte_num .byte {
+  margin-left: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.report .write_preview .preview_list li .text_wrap .byte_num .byte {
+    margin-left: 0.6666666667vw;
+  }
+}
 section.report .write_preview .preview_list li .chk01 label {
   font-size: 30px;
   font-weight: 700;
@@ -3785,6 +3801,22 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box {
   flex-direction: column;
   justify-content: center;
 }
+section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .count {
+  margin-right: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .count {
+    margin-right: 0.6666666667vw;
+  }
+}
+section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .byte {
+  margin-left: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box .byte {
+    margin-left: 0.6666666667vw;
+  }
+}
 section.detail .comment_wrap.comment-detail .reply_box .text01 .textarea_box textarea {
   width: 115%;
   margin-bottom: -24px;
@@ -3975,6 +4007,22 @@ section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap {
 @media screen and (max-width: 750px) {
   section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap {
     margin-top: 4vw;
+  }
+}
+section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap .count {
+  margin-right: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap .count {
+    margin-right: 0.6666666667vw;
+  }
+}
+section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap .byte {
+  margin-left: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap .byte {
+    margin-left: 0.6666666667vw;
   }
 }
 section.detail .comment_wrap.comment-detail .reply_box .text01 .btn_wrap .comment_edit span {
@@ -5117,6 +5165,22 @@ section.message .message_contents .inner .textarea_contents .text_wrap .byte_num
 @media screen and (max-width: 750px) {
   section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
     font-size: 3.4666666667vw;
+  }
+}
+section.message .message_contents .inner .textarea_contents .text_wrap .byte_num .count {
+  margin-right: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents .text_wrap .byte_num .count {
+    margin-right: 0.6666666667vw;
+  }
+}
+section.message .message_contents .inner .textarea_contents .text_wrap .byte_num .byte {
+  margin-left: 5px;
+}
+@media screen and (max-width: 750px) {
+  section.message .message_contents .inner .textarea_contents .text_wrap .byte_num .byte {
+    margin-left: 0.6666666667vw;
   }
 }
 section.message .message_contents .inner .textarea_contents .text_wrap.on {

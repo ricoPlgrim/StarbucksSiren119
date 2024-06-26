@@ -669,7 +669,7 @@
             .btn_group {
                 position: relative; 
                 display: flex;
-                align-items: flex-start;
+                align-items: flex-start; 
                 flex-wrap:wrap;
                 justify-content: flex-start;
                 @include vp(margin-top, 28px);  
