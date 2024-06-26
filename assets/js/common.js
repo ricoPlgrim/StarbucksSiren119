@@ -599,6 +599,9 @@ var commonUi = {
             var listItem = $('<li><div class="img_box"><img src="' + src + '" alt="Uploaded Image"></div><span class="file_delete"></span></li>');
 
             listItem.find(".file_delete").on('click', function () {
+                if($( ".text_box" ).hasClass( "on" )){
+                    $( ".text_box" ).removeClass( "on" );
+                }
                 $(this).closest("li").remove();
             });
 
