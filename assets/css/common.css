@@ -8877,10 +8877,6 @@ html, body {
 }
 
 /*color 정의*/
-.cm-g {
-  background-color: #999;
-}
-
 .cm-b {
   background-color: #000;
 }
@@ -8901,23 +8897,43 @@ html, body {
   background-color: #fff;
 }
 
-.cm-g {
+.cm-ddd {
+  background-color: #DDD;
+}
+
+.cm-green {
   background-color: #00A862;
 }
 
-.cm-bk58 {
+.cm-black58 {
   background-color: rgba(0, 0, 0, 0.58);
 }
 
-.cm-g {
+.cm-999 {
   background-color: #999;
 }
 
-.cm-mg {
+.cm-888 {
+  background-color: #888;
+}
+
+.cm-bbb {
   background-color: #BBB;
 }
 
-.cm-bk12 {
+.cm-lg9 {
+  background-color: #F7F7F7;
+}
+
+.cm-orange {
+  background-color: #FF2E00;
+}
+
+.cm-black38 {
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+.cm-black12 {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
