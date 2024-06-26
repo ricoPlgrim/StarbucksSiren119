@@ -1715,9 +1715,9 @@ section {
                         @include vp(padding, 16px 76px 16px 30px);
                         @include vp(border-radius, 16px);
                         @include vp(font-size, $f15);
-                        @include vp(width, 112%);
+                        @include vp(width, 114%);
                         @include vp(height, 114%);
-                        transform: scale(0.89);
+                        transform: scale(0.875);
                         transform-origin: left top;
                         @include vp(border, 2px solid #0000001F);
 

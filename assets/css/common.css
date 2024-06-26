@@ -4891,9 +4891,9 @@ section.login .login_wrap .login_box .text_box input {
   padding: 16px 76px 16px 30px;
   border-radius: 16px;
   font-size: 30px;
-  width: 112%;
+  width: 114%;
   height: 114%;
-  transform: scale(0.89);
+  transform: scale(0.875);
   transform-origin: left top;
   border: 2px solid rgba(0, 0, 0, 0.1215686275);
 }
@@ -4914,7 +4914,7 @@ section.login .login_wrap .login_box .text_box input {
 }
 @media screen and (max-width: 750px) {
   section.login .login_wrap .login_box .text_box input {
-    width: 112%;
+    width: 114%;
   }
 }
 @media screen and (max-width: 750px) {
