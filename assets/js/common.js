@@ -85,7 +85,7 @@ var commonUi = {
 
         _typeBtns.on("click", this.typeBtnsClick);
         _commoninputBtn.on("input", this.inputFormClick); // input 이벤트
-        _textFormBtn.on("click focus propertychange change keyup paste", this.textFormClick);  // 하단 고정 댓글 입력 이벤트
+        _textFormBtn.on("focus propertychange change keyup paste", this.textFormClick);  // 하단 고정 댓글 입력 이벤트
         _textArea.on("click focus propertychange change keyup paste", this.handleTextarea);  // 댓글, 답글 textarea 이벤트
         _searchInputBtn.on("keyup", this.handleSearchItem);
         _fileUploadBtn.on("change", this.fileImgUpload); // 파일 업로드
@@ -275,34 +275,29 @@ var commonUi = {
     },
 
     // 하단 fixed 댓글 입력창 이벤트
-    textFormClick: function (e) {
-        var that = $(this);
-        var textForm = that.parent();
-        var byteNum = textForm.find(".byte_num");
+    textFormClick: function () {
+        var textForm = $(this).closest(".text_box");
         var textFormHeight = textForm.height();
-
-        if (that.val().length < 1) {
-            textForm.find(".btn_delete").removeClass("on");
-            textForm.parent().find("button").removeClass("on");
+        var textLength = $(this).val().length;
+        var imgFile = textForm.find(".file_list li");
+    
+        if (textLength < 1 && imgFile.length === 0) {
             textForm.removeClass("on");
-            byteNum.removeClass("on");
-            that.css("height", "auto");
+            textForm.parent().find("button").removeClass("on");
+            $(this).css("height", "auto");
             $(".detail").css("padding-bottom", 0);
         } else {
-            textForm.find(".btn_delete").addClass("on");
-            textForm.parent().find("button").addClass("on");
             textForm.addClass("on");
-            byteNum.addClass("on");
-            that.css("height", "auto");
-            that.height(this.scrollHeight);
+            textForm.parent().find("button").addClass("on");
+            $(this).css("height", "auto").height(this.scrollHeight);
             $(".detail").css("padding-bottom", textFormHeight);
         }
-
+    
         function clearText(textValue) {
             textValue.val("").focus();
             textValue.css("height", "auto");
         }
-
+    
         function deleteText() {
             var textArea = $(this).closest(".text_box").find("textarea");
             if (textArea.length > 0) {
@@ -310,10 +305,16 @@ var commonUi = {
             }
         }
 
+        function textFocus() {
+            textForm.addClass("on");
+            textForm.parent().find("button").addClass("on");
+            $(this).css("height", "auto");
+        }
+    
+        $(this).on("click", textFocus);
         $(".btn_delete").on("click", deleteText);
-
+        
     },
-
     // 공통 input 이벤트
     inputFormClick: function() {
         var that = $(this);
@@ -348,9 +349,9 @@ var commonUi = {
         var textBox = that.closest(".detail");
         var submitBtn = textBox.find(".btn_submit").find("button");
         var footerH = textBox.find(".btn_box").outerHeight();
-        
+        var imgFile = textBox.find(".file_list li");        
 
-        if (that.val().length < 1) {
+        if (that.val().length < 1  && imgFile.length === 0) {
             submitBtn.removeClass("on");
             that.css("height", "auto");
         } else {

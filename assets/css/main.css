@@ -6300,7 +6300,7 @@ section.searh .searh_contents .search_top .btn_all_delete {
   position: relative;
   font-size: 24px;
   line-height: 28px;
-  color: #000;
+  color: rgba(0, 0, 0, 0.58);
   font-weight: 400;
   opacity: 0.85;
 }
@@ -6320,7 +6320,7 @@ section.searh .searh_contents .search_top .btn_all_delete::after {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.58);
   height: 2px;
   opacity: 0.85;
 }

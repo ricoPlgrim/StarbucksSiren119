@@ -2481,7 +2481,7 @@ section {
                     ;
                     @include vp(font-size, $f12 );
                     @include vp(line-height, 28px);
-                    color: $black;
+                    color: $black-58;
                     font-weight: $fw4;
                     opacity: .85;
 
@@ -2491,7 +2491,7 @@ section {
                         bottom: 0;
                         left: 0;
                         width: 100%;
-                        background-color: $black;
+                        background-color: $black-58;
                         @include vp(height, 2px);
                         opacity: .85;
                     }

@@ -161,17 +161,19 @@
             </div>
         </section>
 
-          <!-- 하단 고정 댓글 버튼 -->
-          <aside class="cm_btn_comment">
+        <!-- 하단 고정 댓글 버튼 -->
+        <aside class="cm_btn_comment">
             <div class="text_box">
-                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"  aria-label="댓글 입력"></textarea>
+                <textarea rows="1" cols="2" placeholder="댓글을 입력하세요"></textarea>
                 <ul class="file_list">
                     <!-- 추가된 이미지 영역 -->
                 </ul>
                 <div class="btn_box">
                     <span class="byte_num">0 / 1000byte</span>
-                    <button class="btn_delete" aria-label="내용 삭제">내용 삭제</button>
+                    <span class="btn_delete">내용 삭제</span>
                 </div>
+                <!-- 디폴트 상태 버튼 -->
+                <button class="disabled_btn">등록</button>
             </div>
             <div class="btn_submit">
                 <div class="btn_upload">
@@ -179,7 +181,7 @@
                     <input type="file" name="file" id="imgFileBtn" accept="image/*" multiple>
                 </div>
                 <!-- 활성화되면 class="on" 추가 -->
-                <button data-target="commentCompletePop" aria-label="등록">등록</button>
+                <button data-target="commentCompletePop">등록</button>
             </div>
         </aside>
 

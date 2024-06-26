@@ -108,6 +108,7 @@ html, body {
                     @include vp(font-size, $f15);
                     text-align: center;
                     font-weight: $fw6;
+                    color: $black-87;
                 }
 
                 .info {
@@ -1862,21 +1863,60 @@ html, body {
     @include vp(border-top, 2px solid $light-gray-3);
     box-shadow: 0 -1px 5px 0px $light-gray-6;
     z-index: 20;
-    @include vp(min-height, 220px);
+    @include vp(min-height, 190px);
     @include vp(max-height, 600px);
+    // textarea 없는 타입
     &.type02 {
         @include vp(min-height, 120px);
         @include vp(max-height, none);
+        .btn_submit {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+    
+            .btn_upload {
+                span {
+                    display: inline-block;
+                    @include vp(padding-left, 60px);
+                    @include vp(font-size, $f13);
+                    @include vp(height, 48px);
+                    @include vp(line-height, 50px);
+                    background: url("../images/btn/btn_add_photo.png") no-repeat center left;
+                    @include vp(background-size, 48px auto);
+                    text-decoration: underline;
+                }
+                input {
+                    position: absolute;
+                    @include vp(left, 40px);
+                    @include vp(width, 178px);
+                    @include vp(height, 48px);
+                    opacity: 0;
+                }
+            }
+         
+            button {
+                @include vp(padding, 0px 44px);
+                @include vp(height, 80px);
+                @include vp(border-radius, 12px);
+                @include vp(font-size, $f13);
+                color: $white;
+                background: $light-gray-1;
+        
+                &.on {
+                    background: $green;
+                    color: $white;
+                }
+            }
+        }
     }
-
     .text_box {
-        @include vp(margin-bottom, 20px);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         @include vp(padding, 24px 10px 0px 28px);
-        @include vp(width, 670px);
+        @include vp(width, 520px);
         @include vp(border-radius, 16px);
         @include vp(border, 2px solid $light-gray-2);
         overflow: hidden;
@@ -1890,13 +1930,6 @@ html, body {
         &::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background: $light-gray-7;
-        }
-
-        &.on {
-            @include vp(border, 2px solid $black);
-            textarea {
-                @include vp(margin-bottom, -20px);
-            }
         }
 
         textarea {
@@ -1913,84 +1946,98 @@ html, body {
             transform: scale(0.9);
             transform-origin: left top;
         }
-
-        .file_list {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            width: 100%;
-            li {
-                @include vp(margin, 40px 0px 30px);
-                position: relative;
-            }
-
-            .img_box {
-                position: relative;
-                @include vp(width, 100px);
-                @include vp(height, 100px);
-                @include vp(border-radius, 12px);
-                overflow: hidden;
-                img {
-                    object-fit: cover;
-                    object-position: center;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-
-                &::before {
-                    content: '';
-                    display: block;
-                    padding-top: 100%;
-                }
-            }
-
-            .file_delete {
-                position: absolute;
-                @include vp(top, -8.5px);
-                @include vp(right, -8.5px);
-                @include vp(width, 34px);
-                @include vp(height, 34px);
-                background: url("../images/btn/btn_file_delete02.png") no-repeat center;
-                @include vp(background-size, 34px auto);
-                cursor: pointer;
-            }
+        .disabled_btn {
+            position: absolute;
+            @include vp(top, 20px);
+            @include vp(right, 40px);
+            @include vp(padding, 0px 44px); 
+            @include vp(height, 80px);
+            @include vp(border-radius, 12px); 
+            @include vp(font-size, $f13);
+            color: #ffffff94;
+            background: $light-gray-1;
         }
-
-        .btn_box {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            .byte_num {
-                display: none;
-                @include vp(font-size, $f13);
-                color: $light-gray-1;
-                &.on {
-                    display: block;
+        
+        &.on {
+            @include vp(margin-bottom, 20px);
+            @include vp(width, 670px);
+            @include vp(border, 2px solid $black);
+            textarea {
+                @include vp(margin-bottom, -20px);
+            } 
+            .file_list {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+                li {
+                    @include vp(margin, 40px 0px 30px);
+                    position: relative;
+                }
+    
+                .img_box {
+                    position: relative;
+                    @include vp(width, 100px);
+                    @include vp(height, 100px);
+                    @include vp(border-radius, 12px);
+                    overflow: hidden;
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+    
+                    &::before {
+                        content: '';
+                        display: block;
+                        padding-top: 100%;
+                    }
+                }
+    
+                .file_delete {
+                    position: absolute;
+                    @include vp(top, -8.5px);
+                    @include vp(right, -8.5px);
+                    @include vp(width, 34px);
+                    @include vp(height, 34px);
+                    background: url("../images/btn/btn_file_delete02.png") no-repeat center;
+                    @include vp(background-size, 34px auto);
+                    cursor: pointer;
                 }
             }
-    
-            .btn_delete {
-                display: none;
-                @include vp(padding, 32px);
-                @include vp(width, 32px);
-                @include vp(height, 32px);
-                background: url("../images/btn/btn_login_delete.png") center center no-repeat;
-                @include vp(background-size, 32px auto);
-                cursor: pointer;
-                &.on {
+            .btn_box {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                .byte_num {
                     display: block;
+                    @include vp(font-size, $f13);
+                    color: $light-gray-1;
                 }
+        
+                .btn_delete {
+                    display: block;
+                    @include vp(padding, 32px);
+                    @include vp(width, 32px);
+                    @include vp(height, 32px);
+                    background: url("../images/btn/btn_login_delete.png") center center no-repeat;
+                    @include vp(background-size, 32px auto);
+                    cursor: pointer;
+                }
+            }
+            .disabled_btn {
+                display: none;
             }
         }
     }
-
     .btn_submit {
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: space-between;
         width: 100%;
@@ -2028,6 +2075,9 @@ html, body {
                 color: $white;
             }
         }
+    }
+    .text_box.on + .btn_submit {
+        display: flex;
     }
 }
 
