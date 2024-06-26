@@ -280,7 +280,23 @@ var commonUi = {
         var textFormHeight = textForm.height();
         var textLength = $(this).val().length;
         var imgFile = textForm.find(".file_list li");
-    
+
+        var maxLength = $(this).parents(".text_box").find(".byte").text();  
+        console.log( maxLength );
+        maxLength = parseInt(maxLength, 10);   
+        var text = $(this).val();
+        var charCount = text.length;
+        var byteNum = $( this ).parents( ".text_box" ).find( ".count" );
+
+        if (charCount > maxLength) {
+            alert(maxLength + '자를 초과할 수 없습니다.');
+            $(this).val(text.substring(0, maxLength));
+            charCount = maxLength;
+        }
+        byteNum.text(charCount);
+
+
+
         if (textLength < 1 && imgFile.length === 0) {
             textForm.removeClass("on");
             textForm.parent().find("button").removeClass("on");
@@ -620,7 +636,7 @@ var commonUi = {
             var textForm = $(".text_box");
             var textArea = textForm.find("textarea").val().length;
             var imgFiles = textForm.find(".file_list li").length;
-            
+
             if(textForm.hasClass("on") && textArea < 1 && imgFiles ===  0 ){
                 textForm.removeClass("on");
             }
@@ -689,7 +705,6 @@ var commonUi = {
 
     textBoxTextCheck: function(){
         var maxLength = $(this).parents(".text_wrap").find(".byte").text();  
-        console.log( maxLength );
         maxLength = parseInt(maxLength, 10);   
         var text = $(this).val();
         var charCount = text.length;
