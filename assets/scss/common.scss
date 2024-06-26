@@ -1644,9 +1644,9 @@ html, body {
                 }
 
                 a {
-                    color: $black-87;
+                    color: $dark-gray;
                     @include vp(font-size, $f13);
-                    @include vp(line-height, $f12);
+                    @include vp(line-height, $f12); 
                     font-weight: $fw4;
                 }
 

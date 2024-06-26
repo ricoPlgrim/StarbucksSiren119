@@ -5550,18 +5550,18 @@ section.message_detail .team_contents .team_list_contents {
   }
 }
 section.message_detail .team_contents .team_list_contents .team_list li {
-  padding-bottom: 36px;
-  margin-bottom: 36px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
   border-bottom: 2px solid #EEE;
 }
 @media screen and (max-width: 750px) {
   section.message_detail .team_contents .team_list_contents .team_list li {
-    padding-bottom: 4.8vw;
+    padding-bottom: 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
   section.message_detail .team_contents .team_list_contents .team_list li {
-    margin-bottom: 4.8vw;
+    margin-bottom: 2.9333333333vw;
   }
 }
 @media screen and (max-width: 750px) {
@@ -9295,7 +9295,7 @@ html, body {
   }
 }
 .cm_setting_cotnents .inner .setting_list > li a {
-  color: rgba(0, 0, 0, 0.87);
+  color: #333;
   font-size: 26px;
   line-height: 24px;
   font-weight: 400;
