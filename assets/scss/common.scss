@@ -1554,7 +1554,6 @@ html, body {
         @include vp(font-size, $f13);
         font-weight: $fw4;
         color: $black;
-        opacity: .87;
         cursor: pointer;
         word-break: break-all;
 
@@ -1638,7 +1637,7 @@ html, body {
                 @include vp(padding-top, 48px);
 
                 h3 {
-                    color: $black-87;
+                    color: $black;
                     @include vp(font-size, $f15);
                     @include vp(line-height, $f12);
                     font-weight: $fw7;
@@ -1665,7 +1664,7 @@ html, body {
                     justify-content: space-between;
 
                     dt {
-                        color: $black-87;
+                        color: $black;
                         @include vp(font-size, $f15);
                         font-weight: $fw4;
                         @include vp(line-height, $f12);
@@ -1752,7 +1751,7 @@ html, body {
             @include vp(width, 330px);
             @include vp(height, 80px);
             @include vp(border-radius, 12px);
-            background: $light-gray-5;
+            background: $light-gray-9;
             @include vp(border, 2px solid $black-12 );
             box-sizing: border-box;
             display: flex;

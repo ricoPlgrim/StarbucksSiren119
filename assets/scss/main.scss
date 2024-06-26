@@ -665,14 +665,14 @@
                     }
                 }
             }
-
+ 
             .btn_group {
                 position: relative;
                 display: flex;
                 align-items: flex-start;
                 flex-wrap:wrap;
                 justify-content: flex-start;
-                @include vp(margin-top, 28px); 
+                @include vp(margin-top, 28px);  
               
                 .cm_btn_list {
                     @include vp(width, 512px);
