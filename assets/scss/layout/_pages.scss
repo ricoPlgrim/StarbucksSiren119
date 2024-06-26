@@ -1824,6 +1824,7 @@ section {
                             }
                         }
                         .byte_num {
+                            display: inline-flex;
                             position: absolute;
                             @include vp(left, 40px);
                             @include vp(bottom, 40px);

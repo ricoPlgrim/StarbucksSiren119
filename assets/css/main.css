@@ -5099,6 +5099,7 @@ section.message .message_contents .inner .textarea_contents .text_wrap textarea:
   color: #000;
 }
 section.message .message_contents .inner .textarea_contents .text_wrap .byte_num {
+  display: inline-flex;
   position: absolute;
   left: 40px;
   bottom: 40px;
