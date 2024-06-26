@@ -308,7 +308,6 @@ var commonUi = {
         function textFocus() {
             textForm.addClass("on");
             textForm.parent().find("button").addClass("on");
-            $(this).css("height", "auto");
         }
     
         $(this).on("click", textFocus);
