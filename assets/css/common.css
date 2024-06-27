@@ -10019,7 +10019,7 @@ html, body {
   outline: none;
   resize: none;
   border: none;
-  transform: scale(0.9);
+  transform: scale(0.875);
   transform-origin: left top;
 }
 @media screen and (max-width: 750px) {
